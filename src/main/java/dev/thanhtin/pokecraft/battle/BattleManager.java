@@ -46,10 +46,15 @@ public class BattleManager implements Listener {
             else plugin.battleUi().open(player, existing);
             return;
         }
+        if (plugin.pvp().get(player) != null) {
+            player.sendMessage(Component.text("You are in a duel right now.", NamedTextColor.RED));
+            return;
+        }
         if (isWildInBattle(wildEntity.getUniqueId())) {
             player.sendMessage(Component.text("That pokemon is already battling someone else.", NamedTextColor.RED));
             return;
         }
+        if (plugin.rides().isRiding(player)) plugin.rides().dismount(player);
         PokemonInstance wild = plugin.entities().readData(wildEntity);
         if (wild == null) return;
         PokemonInstance mine = plugin.parties().get(player).firstAlive();
@@ -359,31 +364,25 @@ public class BattleManager implements Listener {
         PokemonSpecies mySpecies = plugin.species().getSpecies(battle.playerPokemon.speciesId);
         if (battle.wildEntity.isValid()) battle.wildEntity.remove();
 
-        double mult = plugin.getConfig().getDouble("battle.exp-multiplier", 1.0);
+        double mult = plugin.getConfig().getDouble("battle.exp-multiplier", 1.0)
+                * plugin.marriage().expMultiplier(player);
         long gained = Math.round(wildSpecies.expYield * battle.wildPokemon.level / 7.0 * mult);
         int levels = battle.playerPokemon.addExp(mySpecies, gained);
 
+        long money = plugin.economy().wildBattleReward(battle.wildPokemon.level);
+        plugin.economy().deposit(player.getUniqueId(), money);
+        plugin.economy().addWildWin(player.getUniqueId());
+
         player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1f, 1f);
         player.sendMessage(Component.text("Wild " + wildSpecies.name + " fainted! +"
-                + gained + " EXP", NamedTextColor.GREEN));
+                + gained + " EXP, +" + plugin.economy().format(money), NamedTextColor.GREEN));
         if (levels > 0) {
             player.sendMessage(Component.text(battle.playerPokemon.displayName(mySpecies)
                     + " grew to Lv." + battle.playerPokemon.level + "!", NamedTextColor.GOLD));
-            checkEvolution(player, battle.playerPokemon, mySpecies);
+            plugin.evolutions().tryLevelEvolve(player, battle.playerPokemon, mySpecies);
         }
         plugin.parties().saveParty(player.getUniqueId());
         player.closeInventory();
-    }
-
-    private void checkEvolution(Player player, PokemonInstance p, PokemonSpecies species) {
-        if (species.evolution == null || p.level < species.evolution.level) return;
-        PokemonSpecies target = plugin.species().getSpecies(species.evolution.to);
-        if (target == null) return; // evolution species file not installed yet
-        p.speciesId = target.id;
-        p.moves = PokemonInstance.latestMoves(target, p.level);
-        p.currentHp = Math.min(p.currentHp, p.maxHp(target));
-        player.sendMessage(Component.text("What? " + species.name + " is evolving... It became "
-                + target.name + "!", NamedTextColor.LIGHT_PURPLE));
     }
 
     public void flee(Player player) {

@@ -23,3 +23,37 @@ battle:
 bedrock:
   # use native Bedrock forms (Cumulus) for battle menu when Floodgate is present
   use-forms: true
+
+economy:
+  starting-balance: 500
+  # money for winning a wild battle = wild level * this
+  wild-win-per-level: 5.0
+
+shop:
+  prices:
+    poke-ball: 200        # bundle of 8
+    great-ball: 600       # bundle of 8
+    ultra-ball: 1500      # bundle of 8
+    potion: 150
+    super-potion: 400
+    hyper-potion: 1000
+    thunder-stone: 3000
+
+pvp:
+  win-reward: 250
+  max-distance: 50        # blocks between challenger and target
+
+marriage:
+  exp-bonus: 1.1          # battle exp multiplier while the spouse is online
+
+daycare:
+  max-slots: 2
+  exp-per-minute: 20
+  breed-check-seconds: 60
+  breed-chance: 0.15      # per check, when 2 compatible pokemon are deposited
+  breed-shiny-rate: 2048  # 1 / N for bred babies (better than wild 1/4096)
+
+ride:
+  speed: 0.45
+  fly-speed: 0.6
+  allow-fly: true         # FLYING-type pokemon can fly with their rider

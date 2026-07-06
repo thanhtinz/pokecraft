@@ -86,7 +86,7 @@ public class PcGui implements Listener {
         if (!(e.getInventory().getHolder() instanceof Holder holder)) return;
         e.setCancelled(true);
         if (!(e.getWhoClicked() instanceof Player player)) return;
-        if (plugin.battles().get(player) != null) return;
+        if (plugin.battles().get(player) != null || plugin.pvp().get(player) != null) return;
         int raw = e.getRawSlot();
         if (raw < 0 || raw >= 54) return;
 

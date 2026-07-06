@@ -26,7 +26,7 @@ public class SpeciesRegistry {
             "charmander", "charmeleon", "charizard",
             "squirtle", "wartortle", "blastoise",
             "pidgey", "pidgeotto", "pidgeot",
-            "pikachu");
+            "pikachu", "raichu");
 
     public void load() {
         species.clear();
@@ -65,4 +65,13 @@ public class SpeciesRegistry {
     public PokemonSpecies getSpecies(String id) { return species.get(id); }
     public MoveData getMove(String id) { return moves.get(id); }
     public Collection<PokemonSpecies> all() { return species.values(); }
+
+    /** Map of species id -> the species it evolves FROM (for breeding). */
+    public Map<String, String> childToParent() {
+        Map<String, String> map = new LinkedHashMap<>();
+        for (PokemonSpecies s : species.values()) {
+            if (s.evolution != null && s.evolution.to != null) map.put(s.evolution.to, s.id);
+        }
+        return map;
+    }
 }

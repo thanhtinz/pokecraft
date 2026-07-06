@@ -15,13 +15,15 @@
 - [x] Mid-battle switching + forced switch on faint
 - [x] Full evolution lines for the starter species + capture status bonus
 - [x] Active despawn timer, passive wild AI, CI + unit tests
-- [ ] PvP trainer battles (challenge system, battle arena teleport)
-- [ ] Pokecenter blocks (heal station) and Pokemart shop GUI
+- [x] PvP trainer battles (challenge system)
+- [x] Pokemart shop GUI + potions + evolution stones
+- [x] Economy (PokeDollars), leaderboards, marriage, daycare + breeding, riding
+- [ ] Pokecenter blocks (heal station)
 - [ ] Held items, natures affecting spawn odds
 
 ## Phase 3
 - Trainer NPCs with Citizens integration, gym leaders + badges
-- Breeding + eggs, day/night + weather spawn conditions
+- Egg items + hatching, day/night + weather spawn conditions
 - Legendary spawn events with server broadcasts
 - Trading GUI between players (Bedrock-safe)
 

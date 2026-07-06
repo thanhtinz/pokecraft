@@ -39,7 +39,13 @@ GeyserModelEngine ext      <- Geyser extension: renders the SAME ME models
 | battle    | Turn-based 1v1 wild battles: priority/speed order, stat stages, status conditions, PP/Struggle, switching, exp/level/evolution |
 | ui        | Chest GUIs (Geyser auto-translates these for Bedrock) |
 | bedrock   | Floodgate detection + native Cumulus SimpleForm battle menu |
-| command   | /poke party, pc, nickname, release, give, spawn, heal, reload |
+| command   | /poke party, pc, shop, balance, pay, top, duel, marry, daycare, ride, ... |
+| economy   | PokeDollar balances + caught/wins stats (players table) |
+| shop      | Pokemart GUI: balls, potions, evolution stones |
+| item      | Usable items (potions, stones) with party-picker GUI |
+| social    | Marriage: propose/accept/divorce, online-spouse EXP bonus |
+| daycare   | Passive EXP + breeding (base form baby, IV inheritance) |
+| ride      | Mount your pokemon, look-steering, flying for FLYING types |
 
 ## Key design decisions
 

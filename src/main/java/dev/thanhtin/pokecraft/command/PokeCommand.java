@@ -50,6 +50,20 @@ public class PokeCommand implements TabExecutor {
             }
             case "nickname" -> nickname(player, args);
             case "release" -> release(player, args);
+            case "balance", "bal", "money" -> player.sendMessage(Component.text(
+                    "Balance: " + plugin.economy().format(plugin.economy().balance(player.getUniqueId())),
+                    NamedTextColor.GOLD));
+            case "pay" -> pay(player, args);
+            case "shop" -> {
+                if (inBattle(player)) return true;
+                plugin.shop().open(player);
+            }
+            case "top" -> top(player, args);
+            case "duel" -> duel(player, args);
+            case "marry" -> marry(player, args);
+            case "divorce" -> plugin.marriage().divorce(player);
+            case "daycare" -> daycare(player, args);
+            case "ride" -> ride(player, args);
             case "give" -> {
                 if (!player.hasPermission("pokecraft.admin")) return noPerm(player);
                 PokeballItem.BallType type = PokeballItem.BallType.POKE_BALL;
@@ -93,11 +107,152 @@ public class PokeCommand implements TabExecutor {
                 plugin.species().load();
                 player.sendMessage(Component.text("PokeCraft reloaded.", NamedTextColor.GREEN));
             }
-            default -> player.sendMessage(Component.text(
-                    "/poke [party|pc|nickname <slot> <name>|release <party|pc> <n>|give <ball>|spawn <species> [lvl]|heal|reload]",
-                    NamedTextColor.YELLOW));
+            default -> {
+                player.sendMessage(Component.text(
+                        "/poke [party|pc|shop|balance|pay|top|duel|marry|divorce|daycare|ride|nickname|release]",
+                        NamedTextColor.YELLOW));
+                player.sendMessage(Component.text(
+                        "admin: /poke [give <ball>|spawn <species> [lvl]|heal|reload]",
+                        NamedTextColor.GRAY));
+            }
         }
         return true;
+    }
+
+    private void pay(Player player, String[] args) {
+        if (args.length < 3) {
+            player.sendMessage(Component.text("Usage: /poke pay <player> <amount>", NamedTextColor.RED));
+            return;
+        }
+        Player target = plugin.getServer().getPlayerExact(args[1]);
+        if (target == null) {
+            player.sendMessage(Component.text("Player not online: " + args[1], NamedTextColor.RED));
+            return;
+        }
+        if (target.getUniqueId().equals(player.getUniqueId())) {
+            player.sendMessage(Component.text("You can't pay yourself.", NamedTextColor.RED));
+            return;
+        }
+        long amount = parseInt(args[2], 0);
+        if (amount <= 0) {
+            player.sendMessage(Component.text("Amount must be positive.", NamedTextColor.RED));
+            return;
+        }
+        if (!plugin.economy().withdraw(player.getUniqueId(), amount)) {
+            player.sendMessage(Component.text("Not enough money.", NamedTextColor.RED));
+            return;
+        }
+        plugin.economy().deposit(target.getUniqueId(), amount);
+        player.sendMessage(Component.text("Sent " + plugin.economy().format(amount) + " to "
+                + target.getName() + ".", NamedTextColor.GREEN));
+        target.sendMessage(Component.text(player.getName() + " sent you "
+                + plugin.economy().format(amount) + ".", NamedTextColor.GREEN));
+    }
+
+    private void top(Player player, String[] args) {
+        String category = args.length > 1 ? args[1].toLowerCase(Locale.ROOT) : "caught";
+        String column = switch (category) {
+            case "money", "balance" -> "balance";
+            case "wins", "wild" -> "wild_wins";
+            case "pvp" -> "pvp_wins";
+            default -> "caught";
+        };
+        String title = switch (column) {
+            case "balance" -> "Richest trainers";
+            case "wild_wins" -> "Most wild battles won";
+            case "pvp_wins" -> "Best duelists";
+            default -> "Top catchers";
+        };
+        var entries = plugin.storage().top(column, 10);
+        player.sendMessage(Component.text("=== " + title + " ===", NamedTextColor.GOLD));
+        if (entries.isEmpty()) {
+            player.sendMessage(Component.text("No entries yet.", NamedTextColor.GRAY));
+            return;
+        }
+        for (int i = 0; i < entries.size(); i++) {
+            var e = entries.get(i);
+            String value = column.equals("balance") ? plugin.economy().format(e.value())
+                    : String.valueOf(e.value());
+            player.sendMessage(Component.text("  " + (i + 1) + ". " + e.name() + " - " + value,
+                    NamedTextColor.YELLOW));
+        }
+        player.sendMessage(Component.text("Categories: /poke top [caught|money|wins|pvp]",
+                NamedTextColor.GRAY));
+    }
+
+    private void duel(Player player, String[] args) {
+        if (args.length < 2) {
+            player.sendMessage(Component.text("Usage: /poke duel <player|accept|deny>", NamedTextColor.RED));
+            return;
+        }
+        switch (args[1].toLowerCase(Locale.ROOT)) {
+            case "accept" -> plugin.pvp().accept(player);
+            case "deny" -> plugin.pvp().deny(player);
+            default -> {
+                Player target = plugin.getServer().getPlayerExact(args[1]);
+                if (target == null) {
+                    player.sendMessage(Component.text("Player not online: " + args[1], NamedTextColor.RED));
+                    return;
+                }
+                plugin.pvp().challenge(player, target);
+            }
+        }
+    }
+
+    private void marry(Player player, String[] args) {
+        if (args.length < 2) {
+            player.sendMessage(Component.text("Usage: /poke marry <player|accept|deny>", NamedTextColor.RED));
+            return;
+        }
+        switch (args[1].toLowerCase(Locale.ROOT)) {
+            case "accept" -> plugin.marriage().accept(player);
+            case "deny" -> plugin.marriage().deny(player);
+            default -> {
+                Player target = plugin.getServer().getPlayerExact(args[1]);
+                if (target == null) {
+                    player.sendMessage(Component.text("Player not online: " + args[1], NamedTextColor.RED));
+                    return;
+                }
+                plugin.marriage().propose(player, target);
+            }
+        }
+    }
+
+    private void daycare(Player player, String[] args) {
+        if (inBattle(player)) return;
+        String sub = args.length > 1 ? args[1].toLowerCase(Locale.ROOT) : "status";
+        switch (sub) {
+            case "deposit" -> {
+                if (args.length < 3) {
+                    player.sendMessage(Component.text("Usage: /poke daycare deposit <slot 1-6>",
+                            NamedTextColor.RED));
+                    return;
+                }
+                plugin.daycare().deposit(player, parseInt(args[2], 0) - 1);
+            }
+            case "withdraw" -> {
+                if (args.length < 3) {
+                    player.sendMessage(Component.text("Usage: /poke daycare withdraw <1|2>",
+                            NamedTextColor.RED));
+                    return;
+                }
+                plugin.daycare().withdraw(player, parseInt(args[2], 0) - 1);
+            }
+            default -> plugin.daycare().status(player);
+        }
+    }
+
+    private void ride(Player player, String[] args) {
+        if (args.length < 2) {
+            if (plugin.rides().isRiding(player)) {
+                plugin.rides().dismount(player);
+            } else {
+                player.sendMessage(Component.text("Usage: /poke ride <slot 1-6> (sneak to dismount)",
+                        NamedTextColor.RED));
+            }
+            return;
+        }
+        plugin.rides().ride(player, parseInt(args[1], 0) - 1);
     }
 
     private void nickname(Player player, String[] args) {
@@ -160,7 +315,7 @@ public class PokeCommand implements TabExecutor {
     }
 
     private boolean inBattle(Player player) {
-        if (plugin.battles().get(player) != null) {
+        if (plugin.battles().get(player) != null || plugin.pvp().get(player) != null) {
             player.sendMessage(Component.text("Finish your battle first.", NamedTextColor.RED));
             return true;
         }
@@ -180,15 +335,23 @@ public class PokeCommand implements TabExecutor {
     public List<String> onTabComplete(CommandSender sender, Command cmd, String label, String[] args) {
         List<String> out = new ArrayList<>();
         if (args.length == 1) {
-            out.addAll(List.of("party", "pc", "nickname", "release", "give", "spawn", "heal", "reload"));
+            out.addAll(List.of("party", "pc", "shop", "balance", "pay", "top", "duel", "marry",
+                    "divorce", "daycare", "ride", "nickname", "release", "give", "spawn", "heal", "reload"));
         } else if (args.length == 2 && args[0].equalsIgnoreCase("spawn")) {
             plugin.species().all().forEach(s -> out.add(s.id));
         } else if (args.length == 2 && args[0].equalsIgnoreCase("give")) {
             for (PokeballItem.BallType t : PokeballItem.BallType.values()) out.add(t.name().toLowerCase(Locale.ROOT));
         } else if (args.length == 2 && args[0].equalsIgnoreCase("release")) {
             out.addAll(List.of("party", "pc"));
-        } else if (args.length == 2 && args[0].equalsIgnoreCase("nickname")) {
+        } else if (args.length == 2 && (args[0].equalsIgnoreCase("nickname") || args[0].equalsIgnoreCase("ride"))) {
             out.addAll(List.of("1", "2", "3", "4", "5", "6"));
+        } else if (args.length == 2 && args[0].equalsIgnoreCase("top")) {
+            out.addAll(List.of("caught", "money", "wins", "pvp"));
+        } else if (args.length == 2 && (args[0].equalsIgnoreCase("duel") || args[0].equalsIgnoreCase("marry"))) {
+            out.addAll(List.of("accept", "deny"));
+            plugin.getServer().getOnlinePlayers().forEach(p -> out.add(p.getName()));
+        } else if (args.length == 2 && args[0].equalsIgnoreCase("daycare")) {
+            out.addAll(List.of("status", "deposit", "withdraw"));
         }
         return out;
     }

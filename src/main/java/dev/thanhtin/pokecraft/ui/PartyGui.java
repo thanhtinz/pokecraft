@@ -115,7 +115,7 @@ public class PartyGui implements Listener {
         if (!(e.getInventory().getHolder() instanceof Holder)) return;
         e.setCancelled(true);
         if (!(e.getWhoClicked() instanceof Player player)) return;
-        if (plugin.battles().get(player) != null) return; // battle GUI owns clicks in battle
+        if (plugin.battles().get(player) != null || plugin.pvp().get(player) != null) return;
         int raw = e.getRawSlot();
         UUID id = player.getUniqueId();
         PlayerParty party = plugin.parties().get(player);

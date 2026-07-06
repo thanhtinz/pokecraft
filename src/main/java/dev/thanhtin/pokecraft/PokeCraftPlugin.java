@@ -1,19 +1,28 @@
 package dev.thanhtin.pokecraft;
 
 import dev.thanhtin.pokecraft.battle.BattleManager;
+import dev.thanhtin.pokecraft.battle.pvp.PvpBattleManager;
+import dev.thanhtin.pokecraft.daycare.DaycareManager;
+import dev.thanhtin.pokecraft.economy.EconomyManager;
 import dev.thanhtin.pokecraft.bedrock.BedrockSupport;
 import dev.thanhtin.pokecraft.capture.CaptureListener;
 import dev.thanhtin.pokecraft.capture.PokeballItem;
 import dev.thanhtin.pokecraft.command.PokeCommand;
 import dev.thanhtin.pokecraft.entity.PokemonEntityManager;
 import dev.thanhtin.pokecraft.entity.WildEntityListener;
+import dev.thanhtin.pokecraft.item.UsableItems;
 import dev.thanhtin.pokecraft.party.PartyManager;
+import dev.thanhtin.pokecraft.pokemon.EvolutionService;
+import dev.thanhtin.pokecraft.ride.RideManager;
+import dev.thanhtin.pokecraft.shop.ShopGui;
+import dev.thanhtin.pokecraft.social.MarriageManager;
 import dev.thanhtin.pokecraft.spawn.SpawnManager;
 import dev.thanhtin.pokecraft.species.SpeciesRegistry;
 import dev.thanhtin.pokecraft.storage.StorageManager;
 import dev.thanhtin.pokecraft.ui.BattleGui;
 import dev.thanhtin.pokecraft.ui.PartyGui;
 import dev.thanhtin.pokecraft.ui.PcGui;
+import dev.thanhtin.pokecraft.ui.PvpGui;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class PokeCraftPlugin extends JavaPlugin {
@@ -28,6 +37,15 @@ public class PokeCraftPlugin extends JavaPlugin {
     private PartyGui partyGui;
     private BattleGui battleGui;
     private PcGui pcGui;
+    private PvpGui pvpGui;
+    private PvpBattleManager pvpManager;
+    private EconomyManager economyManager;
+    private MarriageManager marriageManager;
+    private EvolutionService evolutionService;
+    private UsableItems usableItems;
+    private ShopGui shopGui;
+    private DaycareManager daycareManager;
+    private RideManager rideManager;
 
     @Override
     public void onEnable() {
@@ -53,6 +71,15 @@ public class PokeCraftPlugin extends JavaPlugin {
         partyGui = new PartyGui(this);
         battleGui = new BattleGui(this);
         pcGui = new PcGui(this);
+        pvpGui = new PvpGui(this);
+        pvpManager = new PvpBattleManager(this);
+        economyManager = new EconomyManager(this);
+        marriageManager = new MarriageManager(this);
+        evolutionService = new EvolutionService(this);
+        usableItems = new UsableItems(this);
+        shopGui = new ShopGui(this);
+        daycareManager = new DaycareManager(this);
+        rideManager = new RideManager(this);
         spawnManager = new SpawnManager(this);
 
         getServer().getPluginManager().registerEvents(partyManager, this);
@@ -62,18 +89,28 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(partyGui, this);
         getServer().getPluginManager().registerEvents(battleGui, this);
         getServer().getPluginManager().registerEvents(pcGui, this);
+        getServer().getPluginManager().registerEvents(pvpGui, this);
+        getServer().getPluginManager().registerEvents(pvpManager, this);
+        getServer().getPluginManager().registerEvents(economyManager, this);
+        getServer().getPluginManager().registerEvents(usableItems, this);
+        getServer().getPluginManager().registerEvents(shopGui, this);
+        getServer().getPluginManager().registerEvents(rideManager, this);
 
         PokeCommand command = new PokeCommand(this);
         getCommand("poke").setExecutor(command);
         getCommand("poke").setTabCompleter(command);
 
         spawnManager.start();
+        daycareManager.start();
+        rideManager.start();
         getLogger().info("[OK] PokeCraft enabled");
     }
 
     @Override
     public void onDisable() {
         if (spawnManager != null) spawnManager.stop();
+        if (daycareManager != null) daycareManager.stop();
+        if (rideManager != null) rideManager.stop();
         if (partyManager != null) partyManager.saveAll();
         if (storageManager != null) storageManager.shutdown();
         getLogger().info("[OK] PokeCraft disabled");
@@ -89,4 +126,13 @@ public class PokeCraftPlugin extends JavaPlugin {
     public PartyGui partyUi() { return partyGui; }
     public PcGui pcUi() { return pcGui; }
     public BattleGui battleUi() { return battleGui; }
+    public PvpGui pvpUi() { return pvpGui; }
+    public PvpBattleManager pvp() { return pvpManager; }
+    public EconomyManager economy() { return economyManager; }
+    public MarriageManager marriage() { return marriageManager; }
+    public EvolutionService evolutions() { return evolutionService; }
+    public UsableItems items() { return usableItems; }
+    public ShopGui shop() { return shopGui; }
+    public DaycareManager daycare() { return daycareManager; }
+    public RideManager rides() { return rideManager; }
 }

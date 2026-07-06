@@ -96,6 +96,29 @@ public class PokemonEntityManager {
         }
     }
 
+    /**
+     * Spawns a rideable owned pokemon (no wild tag: ignored by capture,
+     * battles and the despawn sweep). Caller is responsible for removal.
+     */
+    public LivingEntity spawnMount(PokemonSpecies species, PokemonInstance instance, Location loc) {
+        EntityType base = EntityType.valueOf(
+                plugin.getConfig().getString("capture.base-entity", "HUSK").toUpperCase(Locale.ROOT));
+        LivingEntity entity = (LivingEntity) loc.getWorld().spawnEntity(loc, base);
+        entity.setSilent(true);
+        entity.setPersistent(false);
+        entity.setInvulnerable(true);
+        if (entity instanceof Mob mob) {
+            mob.setTarget(null);
+            mob.setAware(false); // no AI wandering - the rider steers
+        }
+        if (entity instanceof org.bukkit.entity.Zombie zombie) zombie.setAdult();
+        entity.customName(net.kyori.adventure.text.Component.text(
+                instance.displayName(species) + " Lv." + instance.level));
+        entity.setCustomNameVisible(true);
+        applyModel(entity, species.modelId);
+        return entity;
+    }
+
     /** Epoch millis when the wild entity spawned, or 0 when unknown. */
     public long spawnTime(Entity entity) {
         Long t = entity.getPersistentDataContainer().get(keySpawnTime, PersistentDataType.LONG);

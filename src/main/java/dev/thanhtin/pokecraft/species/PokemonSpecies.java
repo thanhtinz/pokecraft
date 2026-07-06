@@ -18,8 +18,11 @@ public class PokemonSpecies {
     public SpawnInfo spawn;
 
     public static class Evolution {
+        /** Level-based evolution threshold (ignored when {@link #item} is set). */
         public int level;
         public String to;
+        /** Usable item id (e.g. "thunder_stone") that triggers this evolution. */
+        public String item;
     }
 
     public static class SpawnInfo {

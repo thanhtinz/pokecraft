@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-07-06 (Phase 2 - battle depth + PC box)
+Last updated: 2026-07-06 (Phase 2+ - PvP, economy, social, daycare, riding)
 
 ## Legend
 - [x] Done - implemented in this build
@@ -22,8 +22,8 @@ Last updated: 2026-07-06 (Phase 2 - battle depth + PC box)
 - [x] Shiny roll (config `battle.shiny-rate`, default 1/4096)
 - [x] Move secondary effects: stat stage changes + status infliction w/ chance
 - [x] Move priority (Quick Attack)
-- [~] Species dataset: 13 species (full bulbasaur/charmander/squirtle/pidgey
-      evolution lines + pikachu)
+- [~] Species dataset: 14 species (4 evolution line + pikachu/raichu)
+- [x] Tiến hóa bằng đá (evolution.item trong species JSON, Thunder Stone -> raichu)
 - [~] Move dataset: 29 moves
 - [ ] EVs (effort values)
 - [ ] Abilities
@@ -83,9 +83,10 @@ Last updated: 2026-07-06 (Phase 2 - battle depth + PC box)
 - [x] Run/flee
 - [x] Switch pokemon giữa trận (mất lượt); faint thì bắt buộc chọn pokemon mới
       qua GUI (Java + Bedrock form)
-- [ ] PvP trainer battle
+- [x] PvP duel 1v1 (/poke duel): 2 người chọn move đồng thời, resolve theo
+      priority/speed, đủ status/stages/PP/switch/forfeit, thưởng tiền người thắng
 - [ ] Trainer NPC battle (Citizens)
-- [ ] Dùng item giữa trận (ball ném được, potion chưa có)
+- [ ] Dùng item giữa trận (ball ném được; potion chỉ dùng ngoài trận)
 - [ ] Battle theo turn timeout (chống AFK)
 - [ ] Stat stages cho accuracy/evasion
 
@@ -101,9 +102,46 @@ Last updated: 2026-07-06 (Phase 2 - battle depth + PC box)
 - [x] /poke nickname, /poke release (xác nhận 2 lần trong 15s)
 - [ ] Trade giữa 2 player
 
+## Economy / Shop
+
+- [x] PokeDollar per player (bảng players, số dư khởi điểm config)
+- [x] Thưởng tiền khi thắng wild battle (level * config) và PvP
+- [x] /poke balance, /poke pay <player> <amount>
+- [x] Pokemart GUI (/poke shop): ball bundle, 3 loại potion, Thunder Stone
+- [x] Potion dùng ngoài trận (right-click -> chọn pokemon; hồi được cả pokemon đã faint)
+- [ ] Vault integration
+- [ ] Bán đồ / bán pokemon lấy tiền
+
+## Leaderboard
+
+- [x] /poke top [caught|money|wins|pvp] - top 10 từ DB
+
+## Social
+
+- [x] Kết hôn: /poke marry <player|accept|deny>, /poke divorce
+- [x] Bonus EXP battle (config marriage.exp-bonus) khi vợ/chồng cùng online
+- [ ] Quà cưới / teleport tới vợ chồng
+
+## Daycare / Breeding
+
+- [x] /poke daycare deposit|withdraw|status (tối đa 2 slot, config)
+- [x] EXP thụ động theo phút khi gửi (config exp-per-minute)
+- [x] Lai tạo: 2 pokemon cùng dòng tiến hóa -> có xác suất ra con non Lv.1
+      dạng gốc (base form), thừa hưởng 3 IV từ bố mẹ, shiny rate x2
+- [ ] Egg item + đi bộ để nở (hiện nở ngay)
+- [ ] Giới tính / everstone / ditto
+
+## Riding
+
+- [x] /poke ride <slot> - cưỡi pokemon của mình, đi theo hướng nhìn
+- [x] Pokemon hệ FLYING bay được (config ride.allow-fly)
+- [x] Sneak để xuống, tự dismount khi vào battle/quit
+- [ ] Điều khiển WASD thật (cần saddle-entity hack), tốc độ theo chỉ số Speed
+
 ## Commands / Admin
 
-- [x] /poke party (mở GUI), /poke pc
+- [x] /poke party (mở GUI), /poke pc, /poke shop
+- [x] /poke balance | pay | top | duel | marry | divorce | daycare | ride
 - [x] /poke nickname <slot> <name|off>
 - [x] /poke release <party|pc> <n> (confirm)
 - [x] /poke give <ball> - admin
@@ -111,8 +149,7 @@ Last updated: 2026-07-06 (Phase 2 - battle depth + PC box)
 - [x] /poke heal - admin (full HP + PP + status)
 - [x] /poke reload - admin
 - [x] Tab completion
-- [ ] Pokecenter block (heal station cho player thường)
-- [ ] Pokemart shop GUI
+- [ ] Pokecenter block (heal station cho player thường - hiện dùng potion mua ở shop)
 - [ ] Web admin panel + REST API
 
 ## Infrastructure
@@ -122,7 +159,7 @@ Last updated: 2026-07-06 (Phase 2 - battle depth + PC box)
 - [x] plugin.yml softdepend: ModelEngine, floodgate, Geyser-Spigot
 - [x] Docs riêng: ARCHITECTURE / SETUP / ROADMAP / STATUS
 - [x] Unit tests (JUnit 5): DamageCalculator, ExperienceCurve, PokemonInstance,
-      type chart (23 tests)
+      type chart, Breeding (27 tests)
 - [x] CI workflow (GitHub Actions: build jar + test + upload artifact)
 - [~] Compile verify: logic thuần đã verify local; full build chạy trên CI
       (sandbox dev chặn repo PaperMC)
