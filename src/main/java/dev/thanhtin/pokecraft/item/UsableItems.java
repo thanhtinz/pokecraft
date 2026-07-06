@@ -156,7 +156,7 @@ public class UsableItems implements Listener {
             hand.setAmount(hand.getAmount() - 1);
             plugin.parties().saveParty(player.getUniqueId());
         }
-        plugin.getServer().getScheduler().runTask(plugin, player::closeInventory);
+        plugin.getServer().getScheduler().runTask(plugin, (Runnable) () -> player.closeInventory());
     }
 
     /** @return true if the item was consumed */
