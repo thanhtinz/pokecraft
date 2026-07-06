@@ -1,0 +1,9 @@
+{
+  "id": "blastoise", "dex": 9, "name": "Blastoise",
+  "types": ["WATER"],
+  "baseStats": { "hp": 79, "atk": 83, "def": 100, "spa": 85, "spd": 105, "spe": 78 },
+  "catchRate": 45, "expYield": 239, "modelId": "blastoise",
+  "learnset": { "1": ["tackle"], "4": ["water_gun"], "7": ["tail_whip"], "10": ["withdraw"], "16": ["bite"], "24": ["bubble_beam"], "36": ["hydro_pump"], "42": ["ice_beam"] },
+  "evolution": null,
+  "spawn": null
+}

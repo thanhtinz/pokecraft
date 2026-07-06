@@ -43,6 +43,8 @@ public class SpawnManager {
         int rMax = plugin.getConfig().getInt("spawning.spawn-radius-max", 32);
         int despawn = plugin.getConfig().getInt("spawning.despawn-distance", 64);
 
+        despawnSweep();
+
         for (Player player : plugin.getServer().getOnlinePlayers()) {
             int nearby = 0;
             for (Entity e : player.getNearbyEntities(despawn, despawn, despawn)) {
@@ -61,6 +63,33 @@ public class SpawnManager {
             int shinyRate = plugin.getConfig().getInt("battle.shiny-rate", 4096);
             PokemonInstance instance = PokemonInstance.generate(species, level, shinyRate);
             plugin.entities().spawnWild(species, instance, loc);
+        }
+    }
+
+    /** Remove wild pokemon that are too old or too far from every player. */
+    private void despawnSweep() {
+        long maxAgeMillis = plugin.getConfig().getInt("spawning.despawn-seconds", 300) * 1000L;
+        int distance = plugin.getConfig().getInt("spawning.despawn-distance", 64);
+        long distanceSq = (long) distance * distance;
+        long now = System.currentTimeMillis();
+
+        for (World world : plugin.getServer().getWorlds()) {
+            for (Entity entity : world.getEntities()) {
+                if (!plugin.entities().isWild(entity)) continue;
+                if (plugin.battles().isWildInBattle(entity.getUniqueId())) continue;
+
+                long spawnTime = plugin.entities().spawnTime(entity);
+                boolean tooOld = maxAgeMillis > 0 && spawnTime > 0 && now - spawnTime > maxAgeMillis;
+
+                boolean nearPlayer = false;
+                for (Player player : world.getPlayers()) {
+                    if (player.getLocation().distanceSquared(entity.getLocation()) <= distanceSq) {
+                        nearPlayer = true;
+                        break;
+                    }
+                }
+                if (tooOld || !nearPlayer) entity.remove();
+            }
         }
     }
 

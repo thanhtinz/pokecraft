@@ -22,6 +22,14 @@ dependencies {
     compileOnly("org.geysermc.floodgate:api:2.2.4-SNAPSHOT")
     // Gson + SQLite JDBC are bundled inside Paper at runtime (Gson) and shaded here for SQLite
     implementation("org.xerial:sqlite-jdbc:3.46.1.3")
+
+    testImplementation(platform("org.junit:junit-bom:5.10.2"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 tasks.jar {

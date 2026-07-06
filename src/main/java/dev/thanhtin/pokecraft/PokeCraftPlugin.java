@@ -6,12 +6,14 @@ import dev.thanhtin.pokecraft.capture.CaptureListener;
 import dev.thanhtin.pokecraft.capture.PokeballItem;
 import dev.thanhtin.pokecraft.command.PokeCommand;
 import dev.thanhtin.pokecraft.entity.PokemonEntityManager;
+import dev.thanhtin.pokecraft.entity.WildEntityListener;
 import dev.thanhtin.pokecraft.party.PartyManager;
 import dev.thanhtin.pokecraft.spawn.SpawnManager;
 import dev.thanhtin.pokecraft.species.SpeciesRegistry;
 import dev.thanhtin.pokecraft.storage.StorageManager;
 import dev.thanhtin.pokecraft.ui.BattleGui;
 import dev.thanhtin.pokecraft.ui.PartyGui;
+import dev.thanhtin.pokecraft.ui.PcGui;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class PokeCraftPlugin extends JavaPlugin {
@@ -25,6 +27,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private BedrockSupport bedrockSupport;
     private PartyGui partyGui;
     private BattleGui battleGui;
+    private PcGui pcGui;
 
     @Override
     public void onEnable() {
@@ -49,12 +52,16 @@ public class PokeCraftPlugin extends JavaPlugin {
         bedrockSupport = new BedrockSupport(this);
         partyGui = new PartyGui(this);
         battleGui = new BattleGui(this);
+        pcGui = new PcGui(this);
         spawnManager = new SpawnManager(this);
 
         getServer().getPluginManager().registerEvents(partyManager, this);
+        getServer().getPluginManager().registerEvents(battleManager, this);
         getServer().getPluginManager().registerEvents(new CaptureListener(this), this);
+        getServer().getPluginManager().registerEvents(new WildEntityListener(this), this);
         getServer().getPluginManager().registerEvents(partyGui, this);
         getServer().getPluginManager().registerEvents(battleGui, this);
+        getServer().getPluginManager().registerEvents(pcGui, this);
 
         PokeCommand command = new PokeCommand(this);
         getCommand("poke").setExecutor(command);
@@ -80,5 +87,6 @@ public class PokeCraftPlugin extends JavaPlugin {
     public PokeballItem pokeballs() { return pokeballItem; }
     public BedrockSupport bedrock() { return bedrockSupport; }
     public PartyGui partyUi() { return partyGui; }
+    public PcGui pcUi() { return pcGui; }
     public BattleGui battleUi() { return battleGui; }
 }

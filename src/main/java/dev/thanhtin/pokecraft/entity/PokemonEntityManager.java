@@ -25,6 +25,7 @@ public class PokemonEntityManager {
     private final Gson gson = new Gson();
     public final NamespacedKey keyWild;
     public final NamespacedKey keyData;
+    public final NamespacedKey keySpawnTime;
 
     private boolean modelEngine;
     private Method mCreateModeledEntity;
@@ -35,6 +36,7 @@ public class PokemonEntityManager {
         this.plugin = plugin;
         this.keyWild = new NamespacedKey(plugin, "wild");
         this.keyData = new NamespacedKey(plugin, "data");
+        this.keySpawnTime = new NamespacedKey(plugin, "spawn_time");
         hookModelEngine();
     }
 
@@ -65,12 +67,14 @@ public class PokemonEntityManager {
             mob.setTarget(null);
             mob.setAware(true);
         }
+        if (entity instanceof org.bukkit.entity.Zombie zombie) zombie.setAdult();
         entity.customName(net.kyori.adventure.text.Component.text(
                 instance.displayName(species) + " Lv." + instance.level));
         entity.setCustomNameVisible(true);
 
         entity.getPersistentDataContainer().set(keyWild, PersistentDataType.BYTE, (byte) 1);
         entity.getPersistentDataContainer().set(keyData, PersistentDataType.STRING, gson.toJson(instance));
+        entity.getPersistentDataContainer().set(keySpawnTime, PersistentDataType.LONG, System.currentTimeMillis());
 
         applyModel(entity, species.modelId);
         return entity;
@@ -90,6 +94,12 @@ public class PokemonEntityManager {
         } catch (Exception e) {
             plugin.getLogger().warning("[WARN] Failed to apply model " + modelId + ": " + e.getMessage());
         }
+    }
+
+    /** Epoch millis when the wild entity spawned, or 0 when unknown. */
+    public long spawnTime(Entity entity) {
+        Long t = entity.getPersistentDataContainer().get(keySpawnTime, PersistentDataType.LONG);
+        return t == null ? 0L : t;
     }
 
     public boolean isWild(Entity entity) {

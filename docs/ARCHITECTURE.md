@@ -36,10 +36,10 @@ GeyserModelEngine ext      <- Geyser extension: renders the SAME ME models
 | spawn     | Biome-weighted wild spawning around players, per-player cap |
 | entity    | Base entity spawning, PDC tagging, ModelEngine reflection hook |
 | capture   | Pokeball items (snowball + CustomModelData), capture formula |
-| battle    | Turn-based 1v1 wild battles, gen damage formula, full 18-type chart, exp/level/evolution |
+| battle    | Turn-based 1v1 wild battles: priority/speed order, stat stages, status conditions, PP/Struggle, switching, exp/level/evolution |
 | ui        | Chest GUIs (Geyser auto-translates these for Bedrock) |
 | bedrock   | Floodgate detection + native Cumulus SimpleForm battle menu |
-| command   | /poke party, give, spawn, heal, reload |
+| command   | /poke party, pc, nickname, release, give, spawn, heal, reload |
 
 ## Key design decisions
 
@@ -61,15 +61,21 @@ GeyserModelEngine ext      <- Geyser extension: renders the SAME ME models
 Player punches wild pokemon
   -> BattleManager.startWildBattle
   -> BattleGui.open (or Bedrock form)
-  -> player picks move -> speed check -> DamageCalculator (STAB, type chart,
-     crit, 0.85-1.0 roll) -> both sides act -> reopen menu
-  -> faint: exp (yield * level / 7), level-up, learnset refresh, evolution check
+  -> player picks move/switch -> order: priority then effective speed
+     (stages, paralysis) -> pre-attack check (sleep/freeze/paralysis)
+     -> DamageCalculator (STAB, type chart, stat stages, burn, crit,
+        0.85-1.0 roll) -> secondary effects (stages, status)
+     -> end of turn: burn/poison residual -> reopen menu
+  -> player faint: forced switch GUI (battle continues) or defeat
+  -> wild faint: exp (yield * level / 7), level-up, learnset refresh,
+     evolution check
 ```
 
 ## Capture formula (simplified gen-style)
 
 ```
-chance = catchRate * ballBonus * (1.6 - currentHp/maxHp) / 255
+chance = catchRate * ballBonus * statusBonus * (1.6 - currentHp/maxHp) / 255
 ```
-Master Ball always succeeds. Damaging a pokemon in battle first raises the
-catch chance because the entity's PDC data is updated after every hit.
+statusBonus: x2 for sleep/freeze, x1.5 for other statuses. Master Ball always
+succeeds. Damaging a pokemon in battle first raises the catch chance because
+the entity's PDC data is updated after every hit.

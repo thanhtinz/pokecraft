@@ -2,7 +2,9 @@ package dev.thanhtin.pokecraft.bedrock;
 
 import dev.thanhtin.pokecraft.PokeCraftPlugin;
 import dev.thanhtin.pokecraft.battle.Battle;
+import dev.thanhtin.pokecraft.battle.BattleManager;
 import dev.thanhtin.pokecraft.battle.MoveData;
+import dev.thanhtin.pokecraft.party.PlayerParty;
 import dev.thanhtin.pokecraft.pokemon.PokemonInstance;
 import dev.thanhtin.pokecraft.species.PokemonSpecies;
 import org.bukkit.entity.Player;
@@ -53,57 +55,117 @@ public class BedrockSupport {
         }
     }
 
+    private boolean formsEnabled(Player player) {
+        return floodgate && plugin.getConfig().getBoolean("bedrock.use-forms", true) && isBedrock(player);
+    }
+
     /** @return true if a native form was sent (caller should skip the chest GUI) */
     public boolean tryOpenBattleForm(Player player, Battle battle) {
-        if (!floodgate || !plugin.getConfig().getBoolean("bedrock.use-forms", true)) return false;
-        if (!isBedrock(player)) return false;
+        if (!formsEnabled(player)) return false;
         try {
             PokemonSpecies mySpecies = plugin.species().getSpecies(battle.playerPokemon.speciesId);
             PokemonSpecies wildSpecies = plugin.species().getSpecies(battle.wildPokemon.speciesId);
             PokemonInstance mine = battle.playerPokemon;
             PokemonInstance wild = battle.wildPokemon;
 
-            List<String> buttonMoves = new ArrayList<>();
+            List<Runnable> actions = new ArrayList<>();
             Class<?> simpleForm = Class.forName("org.geysermc.cumulus.form.SimpleForm");
             Object builder = simpleForm.getMethod("builder").invoke(null);
             Class<?> builderClass = builder.getClass();
 
             invoke(builderClass, builder, "title", mine.displayName(mySpecies) + " vs " + wild.displayName(wildSpecies));
             invoke(builderClass, builder, "content",
-                    "Your HP: " + mine.currentHp + "/" + mine.maxHp(mySpecies)
-                            + "\nWild HP: " + wild.currentHp + "/" + wild.maxHp(wildSpecies));
+                    "Your HP: " + mine.currentHp + "/" + mine.maxHp(mySpecies) + statusSuffix(mine)
+                            + "\nWild HP: " + wild.currentHp + "/" + wild.maxHp(wildSpecies) + statusSuffix(wild));
+            boolean anyPp = false;
             for (String moveId : mine.moves) {
                 MoveData m = plugin.species().getMove(moveId);
                 if (m == null) continue;
-                invoke(builderClass, builder, "button", m.name + " (" + m.type + " " + m.power + ")");
-                buttonMoves.add(moveId);
+                int pp = mine.ppFor(m);
+                if (pp <= 0) continue;
+                anyPp = true;
+                invoke(builderClass, builder, "button",
+                        m.name + " (" + m.type + " " + m.power + ") PP " + pp + "/" + m.pp);
+                actions.add(() -> plugin.battles().useMove(player, moveId));
             }
-            invoke(builderClass, builder, "button", "Run");
-
-            Method validResult = findMethod(builderClass, "validResultHandler", Consumer.class);
-            Consumer<Object> handler = response -> {
-                try {
-                    int idx = (int) response.getClass().getMethod("clickedButtonId").invoke(response);
-                    plugin.getServer().getScheduler().runTask(plugin, () -> {
-                        if (idx >= 0 && idx < buttonMoves.size()) {
-                            plugin.battles().useMove(player, buttonMoves.get(idx));
-                        } else {
-                            plugin.battles().flee(player);
-                        }
-                    });
-                } catch (Exception ex) {
-                    plugin.getLogger().warning("[WARN] Bedrock form response failed: " + ex.getMessage());
+            if (!anyPp) {
+                invoke(builderClass, builder, "button", "Struggle (no PP left)");
+                actions.add(() -> plugin.battles().useMove(player, BattleManager.STRUGGLE_ID));
+            }
+            invoke(builderClass, builder, "button", "Switch Pokemon");
+            actions.add(() -> {
+                if (!tryOpenSwitchForm(player, battle, false)) {
+                    plugin.battleUi().openSwitchMenu(player, battle, false);
                 }
-            };
-            validResult.invoke(builder, handler);
+            });
+            invoke(builderClass, builder, "button", "Run");
+            actions.add(() -> plugin.battles().flee(player));
 
-            Object form = builderClass.getMethod("build").invoke(builder);
-            mSendForm.invoke(floodgateApi, player.getUniqueId(), form);
+            sendForm(player, simpleForm, builder, builderClass, actions);
             return true;
         } catch (Exception e) {
             plugin.getLogger().warning("[WARN] Bedrock form failed, falling back to chest GUI: " + e.getMessage());
             return false;
         }
+    }
+
+    /** @return true if a native switch form was sent */
+    public boolean tryOpenSwitchForm(Player player, Battle battle, boolean forced) {
+        if (!formsEnabled(player)) return false;
+        try {
+            List<Runnable> actions = new ArrayList<>();
+            Class<?> simpleForm = Class.forName("org.geysermc.cumulus.form.SimpleForm");
+            Object builder = simpleForm.getMethod("builder").invoke(null);
+            Class<?> builderClass = builder.getClass();
+
+            invoke(builderClass, builder, "title", forced ? "Choose your next pokemon" : "Switch pokemon");
+            invoke(builderClass, builder, "content", forced
+                    ? "Your pokemon fainted - pick a replacement."
+                    : "Switching gives the wild pokemon a free hit.");
+            PlayerParty party = plugin.parties().get(player);
+            for (int i = 0; i < PlayerParty.SIZE; i++) {
+                PokemonInstance p = party.get(i);
+                if (p == null || p.currentHp <= 0 || p == battle.playerPokemon) continue;
+                PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
+                final int slot = i;
+                invoke(builderClass, builder, "button",
+                        p.displayName(species) + " Lv." + p.level + " (" + p.currentHp + "/" + p.maxHp(species) + ")");
+                actions.add(() -> plugin.battles().switchPokemon(player, slot));
+            }
+            if (!forced) {
+                invoke(builderClass, builder, "button", "Back");
+                actions.add(() -> plugin.battleUi().open(player, battle));
+            }
+
+            sendForm(player, simpleForm, builder, builderClass, actions);
+            return true;
+        } catch (Exception e) {
+            plugin.getLogger().warning("[WARN] Bedrock switch form failed, falling back to chest GUI: " + e.getMessage());
+            return false;
+        }
+    }
+
+    private void sendForm(Player player, Class<?> simpleForm, Object builder,
+                          Class<?> builderClass, List<Runnable> actions) throws Exception {
+        Method validResult = findMethod(builderClass, "validResultHandler", Consumer.class);
+        Consumer<Object> handler = response -> {
+            try {
+                int idx = (int) response.getClass().getMethod("clickedButtonId").invoke(response);
+                plugin.getServer().getScheduler().runTask(plugin, () -> {
+                    if (idx >= 0 && idx < actions.size()) actions.get(idx).run();
+                });
+            } catch (Exception ex) {
+                plugin.getLogger().warning("[WARN] Bedrock form response failed: " + ex.getMessage());
+            }
+        };
+        validResult.invoke(builder, handler);
+
+        Object form = builderClass.getMethod("build").invoke(builder);
+        mSendForm.invoke(floodgateApi, player.getUniqueId(), form);
+    }
+
+    private String statusSuffix(PokemonInstance p) {
+        return p.status == null ? "" : " [" + p.status.tag + "]";
     }
 
     private void invoke(Class<?> cls, Object obj, String name, String arg) throws Exception {

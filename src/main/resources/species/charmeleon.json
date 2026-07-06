@@ -1,0 +1,9 @@
+{
+  "id": "charmeleon", "dex": 5, "name": "Charmeleon",
+  "types": ["FIRE"],
+  "baseStats": { "hp": 58, "atk": 64, "def": 58, "spa": 80, "spd": 65, "spe": 80 },
+  "catchRate": 45, "expYield": 142, "modelId": "charmeleon",
+  "learnset": { "1": ["scratch", "growl"], "4": ["ember"], "17": ["fire_spin"], "24": ["slash"], "34": ["flamethrower"] },
+  "evolution": { "level": 36, "to": "charizard" },
+  "spawn": null
+}

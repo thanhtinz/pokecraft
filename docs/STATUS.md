@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-07-06 (Phase 1 scaffold)
+Last updated: 2026-07-06 (Phase 2 - battle depth + PC box)
 
 ## Legend
 - [x] Done - implemented in this build
@@ -13,14 +13,18 @@ Last updated: 2026-07-06 (Phase 1 scaffold)
 
 - [x] Species registry loaded from JSON (`plugins/PokeCraft/species/*.json`)
 - [x] Move registry loaded from JSON (`moves/moves.json`)
+- [x] Bundled species/moves auto-extracted when missing (per file)
 - [x] Full 18-type effectiveness chart (super effective / not very / immune)
 - [x] Base stats (HP/Atk/Def/SpA/SpD/Spe) per species
 - [x] Gen 3+ stat formula with IVs (0-31) and natures (25 natures, +10%/-10%)
 - [x] Exp curve medium-fast (level^3), max level 100
 - [x] Learnset per level, auto-keeps 4 newest moves
 - [x] Shiny roll (config `battle.shiny-rate`, default 1/4096)
-- [~] Species dataset: only 5 mẫu (bulbasaur, charmander, squirtle, pidgey, pikachu)
-- [~] Move dataset: only 14 moves
+- [x] Move secondary effects: stat stage changes + status infliction w/ chance
+- [x] Move priority (Quick Attack)
+- [~] Species dataset: 13 species (full bulbasaur/charmander/squirtle/pidgey
+      evolution lines + pikachu)
+- [~] Move dataset: 29 moves
 - [ ] EVs (effort values)
 - [ ] Abilities
 - [ ] Held items
@@ -31,7 +35,8 @@ Last updated: 2026-07-06 (Phase 1 scaffold)
 - [x] Biome-weighted wild spawn quanh player (interval, radius, cap trong config)
 - [x] Level range per species per spawn entry
 - [x] Ground-check + height-check khi chọn vị trí spawn
-- [~] Despawn: entity không persistent nên tự mất khi unload chunk, chưa có timer chủ động (config `despawn-seconds` đã khai báo nhưng chưa dùng)
+- [x] Active despawn sweep: `despawn-seconds` (tuổi tối đa) + `despawn-distance`
+      (xa mọi player) - bỏ qua pokemon đang trong battle
 - [ ] Điều kiện spawn theo thời gian (ngày/đêm) và thời tiết
 - [ ] Spawn dưới nước / trên không (hiện chỉ spawn trên mặt đất)
 - [ ] Legendary spawn event + broadcast
@@ -40,8 +45,10 @@ Last updated: 2026-07-06 (Phase 1 scaffold)
 
 - [x] ModelEngine hook qua reflection (softdepend, không crash khi thiếu)
 - [x] Fallback vanilla base entity (HUSK, đổi được trong config) + nametag
+- [x] Wild entity không bốc cháy ban ngày, không tấn công/chase player,
+      không nhận damage môi trường, luôn là zombie trưởng thành
 - [x] Floodgate detection qua reflection
-- [x] Native Bedrock SimpleForm (Cumulus) cho battle menu
+- [x] Native Bedrock SimpleForm (Cumulus) cho battle menu + switch menu (PP, status)
 - [x] Chest GUI fallback cho mọi client (Geyser tự dịch)
 - [ ] Model .bbmodel cho pokemon (phải tự làm trong BlockBench - KHÔNG rip asset)
 - [ ] Bedrock custom item texture cho pokeball (Geyser custom item mappings)
@@ -52,52 +59,58 @@ Last updated: 2026-07-06 (Phase 1 scaffold)
 
 - [x] 4 loại ball (Poke/Great/Ultra/Master) - snowball + CustomModelData + PDC
 - [x] Công thức bắt scale theo catchRate, ball bonus, HP còn lại
+- [x] Status condition bonus (SLP/FRZ x2, BRN/PAR/PSN x1.5)
 - [x] Master Ball luôn thành công
-- [x] Damage trong battle được sync vào entity PDC nên đánh yếu trước sẽ dễ bắt hơn
+- [x] Damage + status trong battle sync vào entity PDC (đánh yếu/gây status dễ bắt hơn)
+- [x] Bắt thành công khi đang battle sẽ kết thúc battle sạch sẽ
 - [x] Party đầy thì tự chuyển vào PC box
 - [ ] Animation ném ball / ball rung 3 lần
-- [ ] Status condition bonus (ngủ/tê liệt tăng tỉ lệ bắt)
 - [ ] Craft recipe cho pokeball
 
 ## Battle
 
-- [x] Battle hoang dã 1v1 (đấm pokemon hoang để mở)
-- [x] Speed check quyết định lượt đánh trước
+- [x] Battle hoang dã 1v1 (đấm pokemon hoang để mở, đấm lại để mở lại menu)
+- [x] Turn order: move priority trước, rồi speed (tính stat stages + paralysis)
 - [x] Damage formula gen-style: STAB, type chart, crit 1/24, roll 0.85-1.0
+- [x] Stat stages -6..+6 (Growl/Tail Whip/Growth/Withdraw/Agility...)
+- [x] Status conditions: BURN (1/16, halve physical), POISON (1/8),
+      PARALYSIS (speed 1/2, 25% skip), SLEEP (1-3 turns), FREEZE (20% thaw)
+- [x] PP tracking per move, hết PP toàn bộ thì Struggle (recoil 1/4 max HP)
 - [x] Accuracy check / miss
-- [x] Wild AI chọn move ngẫu nhiên
+- [x] Wild AI chọn move ngẫu nhiên trong số move còn PP
 - [x] Exp khi thắng (yield * level / 7 * multiplier), level up giữa trận
-- [x] Evolution theo level sau khi thắng
+- [x] Evolution theo level sau khi thắng (đủ species cho 4 evolution line)
 - [x] Run/flee
-- [~] Faint: chỉ báo đổi pokemon bằng cách đấm lại, chưa có GUI switch giữa trận
+- [x] Switch pokemon giữa trận (mất lượt); faint thì bắt buộc chọn pokemon mới
+      qua GUI (Java + Bedrock form)
 - [ ] PvP trainer battle
 - [ ] Trainer NPC battle (Citizens)
-- [ ] Status conditions (burn/paralysis/sleep/poison/freeze)
-- [ ] Stat stages (Growl hiện là STATUS nhưng chưa có effect thật)
-- [ ] PP tracking (đã có field pp trong MoveData nhưng chưa trừ)
-- [ ] Switch pokemon giữa trận, dùng item giữa trận
+- [ ] Dùng item giữa trận (ball ném được, potion chưa có)
 - [ ] Battle theo turn timeout (chống AFK)
+- [ ] Stat stages cho accuracy/evasion
 
 ## Party / Storage
 
 - [x] Party 6 slot + PC box per player
 - [x] Cache in-memory, load async khi join, save async khi quit + khi tắt server
 - [x] SQLite mặc định (shaded JDBC), MySQL qua config
-- [x] Pokemon lưu dạng JSON row, index theo owner
-- [x] Party GUI xem thông tin (HP, type, nature, moves)
-- [ ] PC box GUI (data đã lưu slot -1, chưa có giao diện)
-- [ ] Đổi thứ tự party, release, đặt nickname
+- [x] Pokemon lưu dạng JSON row, index theo owner (PP/status persist)
+- [x] Party GUI: xem chi tiết (HP, type, nature, exp, moves+PP, status),
+      click-chọn rồi click slot khác để đổi chỗ, gửi vào PC, mở PC box
+- [x] PC box GUI phân trang (45/trang), click để rút về party
+- [x] /poke nickname, /poke release (xác nhận 2 lần trong 15s)
 - [ ] Trade giữa 2 player
 
 ## Commands / Admin
 
-- [x] /poke party (mở GUI)
+- [x] /poke party (mở GUI), /poke pc
+- [x] /poke nickname <slot> <name|off>
+- [x] /poke release <party|pc> <n> (confirm)
 - [x] /poke give <ball> - admin
 - [x] /poke spawn <species> [level] - admin
-- [x] /poke heal - admin
+- [x] /poke heal - admin (full HP + PP + status)
 - [x] /poke reload - admin
 - [x] Tab completion
-- [ ] /poke pc, /poke stats <slot>, /poke nickname
 - [ ] Pokecenter block (heal station cho player thường)
 - [ ] Pokemart shop GUI
 - [ ] Web admin panel + REST API
@@ -105,22 +118,23 @@ Last updated: 2026-07-06 (Phase 1 scaffold)
 ## Infrastructure
 
 - [x] Gradle build (Java 21, Paper 1.21.4 API, repos: PaperMC/Lumine/OpenCollab)
+- [x] Gradle wrapper committed
 - [x] plugin.yml softdepend: ModelEngine, floodgate, Geyser-Spigot
 - [x] Docs riêng: ARCHITECTURE / SETUP / ROADMAP / STATUS
-- [ ] Compile verify (sandbox chặn Maven Central - build lần đầu trên máy)
-- [ ] Unit tests cho DamageCalculator + ExperienceCurve
-- [ ] CI workflow (GitHub Actions build jar)
+- [x] Unit tests (JUnit 5): DamageCalculator, ExperienceCurve, PokemonInstance,
+      type chart (23 tests)
+- [x] CI workflow (GitHub Actions: build jar + test + upload artifact)
+- [~] Compile verify: logic thuần đã verify local; full build chạy trên CI
+      (sandbox dev chặn repo PaperMC)
 
 ---
 
 ## Known issues / notes
 
-1. `despawn-seconds` và `despawn-distance` trong config chưa được SpawnManager
-   dùng làm despawn chủ động - wild pokemon dựa vào chunk unload.
-2. Growl và các move STATUS chưa có hiệu ứng (cần stat stages).
-3. Evolution chỉ hoạt động khi file species đích tồn tại (ivysaur, charmeleon,
-   wartortle, pidgeotto chưa có JSON - bắt buộc thêm trước khi test evolution).
-4. Base entity HUSK sẽ bốc cháy ban ngày nếu không có model che -
-   cân nhắc đổi sang entity khác hoặc set fire ticks = 0 nếu thấy cháy.
-5. Chưa verify compile (Maven bị chặn trong sandbox) - `./gradlew build`
-   lần đầu trên máy, gửi log nếu lỗi.
+1. Growl-type stat moves không có chance rời (hiệu ứng stat luôn áp dụng khi
+   trúng); statusChance chỉ áp dụng cho status condition.
+2. Status của wild pokemon tồn tại qua PDC; status của party pokemon persist
+   trong DB (đúng thiết kế - heal ở /poke heal).
+3. Base entity HUSK đã được chặn combust/target/damage - không cần đổi entity.
+4. Bedrock form khi bị dismiss lúc bắt buộc switch: đấm lại wild pokemon để
+   mở lại menu chọn.

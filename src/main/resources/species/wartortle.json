@@ -1,0 +1,9 @@
+{
+  "id": "wartortle", "dex": 8, "name": "Wartortle",
+  "types": ["WATER"],
+  "baseStats": { "hp": 59, "atk": 63, "def": 80, "spa": 65, "spd": 80, "spe": 58 },
+  "catchRate": 45, "expYield": 142, "modelId": "wartortle",
+  "learnset": { "1": ["tackle"], "4": ["water_gun"], "7": ["tail_whip"], "10": ["withdraw"], "16": ["bite"], "24": ["bubble_beam"] },
+  "evolution": { "level": 36, "to": "blastoise" },
+  "spawn": null
+}

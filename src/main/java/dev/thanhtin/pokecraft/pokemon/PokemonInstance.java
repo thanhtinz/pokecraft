@@ -1,10 +1,13 @@
 package dev.thanhtin.pokecraft.pokemon;
 
+import dev.thanhtin.pokecraft.battle.MoveData;
 import dev.thanhtin.pokecraft.species.PokemonSpecies;
 import dev.thanhtin.pokecraft.species.StatBlock;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -20,6 +23,11 @@ public class PokemonInstance {
     public boolean shiny;
     public List<String> moves; // up to 4 move ids
     public UUID owner;         // null = wild
+    /** Remaining PP per move id. Missing entry = full PP. */
+    public Map<String, Integer> pp;
+    public StatusCondition status;
+    /** Turns of sleep remaining while {@link #status} == SLEEP. */
+    public int sleepTurns;
 
     public static PokemonInstance generate(PokemonSpecies species, int level, int shinyRate) {
         PokemonInstance p = new PokemonInstance();
@@ -71,6 +79,26 @@ public class PokemonInstance {
     public String displayName(PokemonSpecies species) {
         String base = nickname != null && !nickname.isEmpty() ? nickname : species.name;
         return shiny ? base + " (Shiny)" : base;
+    }
+
+    public int ppFor(MoveData move) {
+        if (move == null) return 0;
+        if (pp == null) pp = new HashMap<>();
+        return pp.getOrDefault(move.id, move.pp);
+    }
+
+    public void usePp(MoveData move) {
+        if (move == null) return;
+        if (pp == null) pp = new HashMap<>();
+        pp.put(move.id, Math.max(0, ppFor(move) - 1));
+    }
+
+    /** Full restore: HP, PP and status. */
+    public void heal(PokemonSpecies species) {
+        currentHp = maxHp(species);
+        status = null;
+        sleepTurns = 0;
+        if (pp != null) pp.clear();
     }
 
     /** @return levels gained */

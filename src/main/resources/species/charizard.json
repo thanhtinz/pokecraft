@@ -1,0 +1,9 @@
+{
+  "id": "charizard", "dex": 6, "name": "Charizard",
+  "types": ["FIRE", "FLYING"],
+  "baseStats": { "hp": 78, "atk": 84, "def": 78, "spa": 109, "spd": 85, "spe": 100 },
+  "catchRate": 45, "expYield": 240, "modelId": "charizard",
+  "learnset": { "1": ["scratch", "growl"], "4": ["ember"], "17": ["fire_spin"], "24": ["slash"], "34": ["flamethrower"], "36": ["wing_attack"] },
+  "evolution": null,
+  "spawn": null
+}

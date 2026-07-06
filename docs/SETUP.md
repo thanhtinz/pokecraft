@@ -41,7 +41,8 @@ from Maven Central / PaperMC / Lumine / OpenCollab repos.
 ## Adding species
 
 Create plugins/PokeCraft/species/<id>.json following the bundled examples
-(bulbasaur, charmander, squirtle, pidgey, pikachu), then /poke reload.
+(13 species: the bulbasaur/charmander/squirtle/pidgey lines + pikachu),
+then /poke reload.
 
 ## Quick test
 
@@ -50,5 +51,9 @@ Create plugins/PokeCraft/species/<id>.json following the bundled examples
 /poke spawn pikachu 5 # spawn a wild pikachu
 punch it              # opens battle menu
 throw a pokeball      # capture attempt
-/poke party           # view party
+/poke party           # view/reorder party, deposit to PC
+/poke pc              # PC box (click to withdraw)
+/poke nickname 1 Bob  # rename slot 1 ("off" clears)
+/poke release pc 3    # release (run twice to confirm)
+/poke heal            # full HP/PP/status restore (admin)
 ```

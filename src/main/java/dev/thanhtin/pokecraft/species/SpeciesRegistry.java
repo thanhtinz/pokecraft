@@ -20,14 +20,22 @@ public class SpeciesRegistry {
         this.plugin = plugin;
     }
 
+    /** Species shipped in the jar, extracted to the data folder when missing. */
+    private static final List<String> BUNDLED_SPECIES = List.of(
+            "bulbasaur", "ivysaur", "venusaur",
+            "charmander", "charmeleon", "charizard",
+            "squirtle", "wartortle", "blastoise",
+            "pidgey", "pidgeotto", "pidgeot",
+            "pikachu");
+
     public void load() {
         species.clear();
         moves.clear();
         File speciesDir = new File(plugin.getDataFolder(), "species");
         File movesFile = new File(plugin.getDataFolder(), "moves/moves.json");
 
-        if (!speciesDir.exists()) {
-            for (String s : List.of("bulbasaur", "charmander", "squirtle", "pidgey", "pikachu")) {
+        for (String s : BUNDLED_SPECIES) {
+            if (!new File(speciesDir, s + ".json").exists()) {
                 plugin.saveResource("species/" + s + ".json", false);
             }
         }

@@ -1,0 +1,9 @@
+{
+  "id": "pidgeotto", "dex": 17, "name": "Pidgeotto",
+  "types": ["NORMAL", "FLYING"],
+  "baseStats": { "hp": 63, "atk": 60, "def": 55, "spa": 50, "spd": 50, "spe": 71 },
+  "catchRate": 120, "expYield": 122, "modelId": "pidgeotto",
+  "learnset": { "1": ["tackle"], "5": ["gust"], "9": ["quick_attack"], "17": ["wing_attack"], "27": ["agility"] },
+  "evolution": { "level": 36, "to": "pidgeot" },
+  "spawn": { "biomes": ["FOREST", "BIRCH_FOREST", "WINDSWEPT_HILLS"], "weight": 4, "minLevel": 18, "maxLevel": 26 }
+}

@@ -44,4 +44,50 @@ public class PlayerParty {
     public PokemonInstance[] rawSlots() { return Arrays.copyOf(slots, SIZE); }
     public List<PokemonInstance> pc() { return pcBox; }
     public boolean isEmpty() { return party().isEmpty() && pcBox.isEmpty(); }
+
+    public void swap(int a, int b) {
+        if (a < 0 || a >= SIZE || b < 0 || b >= SIZE) return;
+        PokemonInstance tmp = slots[a];
+        slots[a] = slots[b];
+        slots[b] = tmp;
+    }
+
+    /** Move a party member to the PC box. @return the moved pokemon, or null */
+    public PokemonInstance depositToPc(int slot) {
+        PokemonInstance p = get(slot);
+        if (p == null) return null;
+        slots[slot] = null;
+        pcBox.add(p);
+        return p;
+    }
+
+    /** Move a PC pokemon to the first free party slot. @return the party slot, or -1 if full */
+    public int withdrawFromPc(int pcIndex) {
+        if (pcIndex < 0 || pcIndex >= pcBox.size()) return -1;
+        for (int i = 0; i < SIZE; i++) {
+            if (slots[i] == null) {
+                slots[i] = pcBox.remove(pcIndex);
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public PokemonInstance removeFromParty(int slot) {
+        PokemonInstance p = get(slot);
+        if (p != null) slots[slot] = null;
+        return p;
+    }
+
+    public PokemonInstance removeFromPc(int pcIndex) {
+        if (pcIndex < 0 || pcIndex >= pcBox.size()) return null;
+        return pcBox.remove(pcIndex);
+    }
+
+    /** Number of pokemon currently in the party. */
+    public int partySize() {
+        int n = 0;
+        for (PokemonInstance p : slots) if (p != null) n++;
+        return n;
+    }
 }

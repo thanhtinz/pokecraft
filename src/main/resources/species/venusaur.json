@@ -1,0 +1,9 @@
+{
+  "id": "venusaur", "dex": 3, "name": "Venusaur",
+  "types": ["GRASS", "POISON"],
+  "baseStats": { "hp": 80, "atk": 82, "def": 83, "spa": 100, "spd": 100, "spe": 80 },
+  "catchRate": 45, "expYield": 236, "modelId": "venusaur",
+  "learnset": { "1": ["tackle", "growl"], "3": ["vine_whip"], "9": ["razor_leaf"], "13": ["poison_sting"], "20": ["sleep_powder"], "25": ["growth"], "32": ["solar_beam"], "38": ["sludge_bomb"] },
+  "evolution": null,
+  "spawn": null
+}

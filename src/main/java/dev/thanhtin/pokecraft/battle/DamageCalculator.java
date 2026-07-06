@@ -1,6 +1,7 @@
 package dev.thanhtin.pokecraft.battle;
 
 import dev.thanhtin.pokecraft.pokemon.PokemonInstance;
+import dev.thanhtin.pokecraft.pokemon.StatusCondition;
 import dev.thanhtin.pokecraft.species.PokemonSpecies;
 import dev.thanhtin.pokecraft.species.PokemonType;
 
@@ -12,8 +13,18 @@ public final class DamageCalculator {
 
     public record Result(int damage, double effectiveness, boolean critical, boolean missed) {}
 
-    public static Result calculate(PokemonInstance attacker, PokemonSpecies attackerSpecies,
-                                   PokemonInstance defender, PokemonSpecies defenderSpecies,
+    /** Multiplier for a stat stage in -6..+6 (gen-style (2+s)/2 or 2/(2-s)). */
+    public static double stageMultiplier(int stage) {
+        int s = Math.max(-6, Math.min(6, stage));
+        return s >= 0 ? (2.0 + s) / 2.0 : 2.0 / (2.0 - s);
+    }
+
+    /**
+     * @param attackerStages/defenderStages per-battle stat stages indexed like
+     *        {@link PokemonInstance#stat} (1=atk 2=def 3=spa 4=spd 5=spe); may be null.
+     */
+    public static Result calculate(PokemonInstance attacker, PokemonSpecies attackerSpecies, int[] attackerStages,
+                                   PokemonInstance defender, PokemonSpecies defenderSpecies, int[] defenderStages,
                                    MoveData move) {
         ThreadLocalRandom rnd = ThreadLocalRandom.current();
         if (move.accuracy < 100 && rnd.nextInt(100) >= move.accuracy) {
@@ -24,8 +35,13 @@ public final class DamageCalculator {
         }
 
         boolean physical = move.category == MoveData.Category.PHYSICAL;
-        int atk = attacker.stat(attackerSpecies, physical ? 1 : 3);
-        int def = defender.stat(defenderSpecies, physical ? 2 : 4);
+        int atkIndex = physical ? 1 : 3;
+        int defIndex = physical ? 2 : 4;
+        double atk = attacker.stat(attackerSpecies, atkIndex)
+                * stageMultiplier(attackerStages == null ? 0 : attackerStages[atkIndex]);
+        double def = defender.stat(defenderSpecies, defIndex)
+                * stageMultiplier(defenderStages == null ? 0 : defenderStages[defIndex]);
+        if (physical && attacker.status == StatusCondition.BURN) atk *= 0.5;
 
         double effectiveness = 1.0;
         for (PokemonType t : defenderSpecies.types) {
@@ -36,7 +52,7 @@ public final class DamageCalculator {
         double crit = critical ? 1.5 : 1.0;
         double random = rnd.nextDouble(0.85, 1.0);
 
-        double base = ((2.0 * attacker.level / 5.0 + 2.0) * move.power * atk / Math.max(1, def)) / 50.0 + 2.0;
+        double base = ((2.0 * attacker.level / 5.0 + 2.0) * move.power * atk / Math.max(1.0, def)) / 50.0 + 2.0;
         int damage = (int) Math.max(effectiveness == 0 ? 0 : 1,
                 Math.floor(base * stab * effectiveness * crit * random));
         return new Result(damage, effectiveness, critical, false);

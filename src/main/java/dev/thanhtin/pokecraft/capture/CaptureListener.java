@@ -58,13 +58,15 @@ public class CaptureListener implements Listener {
         double hpFraction = hit instanceof LivingEntity le && instance.maxHp(species) > 0
                 ? Math.max(0.05, (double) instance.currentHp / instance.maxHp(species))
                 : 1.0;
-        // Simplified capture formula: catchRate scaled by ball bonus and remaining HP
-        double chance = Math.min(1.0, (species.catchRate * type.bonus * (1.6 - hpFraction)) / 255.0);
+        // Simplified capture formula: catchRate scaled by ball bonus, remaining HP and status
+        double statusBonus = instance.status == null ? 1.0 : instance.status.catchBonus();
+        double chance = Math.min(1.0, (species.catchRate * type.bonus * statusBonus * (1.6 - hpFraction)) / 255.0);
         boolean success = type == PokeballItem.BallType.MASTER_BALL
                 || ThreadLocalRandom.current().nextDouble() < chance;
 
         if (success) {
             hit.remove();
+            plugin.battles().onWildCaptured(player);
             instance.owner = player.getUniqueId();
             instance.currentHp = Math.max(1, instance.currentHp);
             int slot = plugin.parties().get(player).add(instance);

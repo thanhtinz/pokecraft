@@ -11,7 +11,7 @@ softdepend:
 commands:
   poke:
     description: PokeCraft main command
-    usage: /poke <party|pc|spawn|give|battle|reload>
+    usage: /poke <party|pc|nickname|release|give|spawn|heal|reload>
     aliases: [pokemon, pc]
 permissions:
   pokecraft.admin:
