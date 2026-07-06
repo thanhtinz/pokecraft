@@ -1,0 +1,18 @@
+name: PokeCraft
+version: '0.1.0'
+main: dev.thanhtin.pokecraft.PokeCraftPlugin
+api-version: '1.21'
+author: thanhtinz
+description: Server-side Pokemon plugin. Geyser/Bedrock compatible via ModelEngine + GeyserModelEngine.
+softdepend:
+  - ModelEngine
+  - floodgate
+  - Geyser-Spigot
+commands:
+  poke:
+    description: PokeCraft main command
+    usage: /poke <party|pc|spawn|give|battle|reload>
+    aliases: [pokemon, pc]
+permissions:
+  pokecraft.admin:
+    default: op

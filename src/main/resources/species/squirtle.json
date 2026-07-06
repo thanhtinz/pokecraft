@@ -1,0 +1,9 @@
+{
+  "id": "squirtle", "dex": 7, "name": "Squirtle",
+  "types": ["WATER"],
+  "baseStats": { "hp": 44, "atk": 48, "def": 65, "spa": 50, "spd": 64, "spe": 43 },
+  "catchRate": 45, "expYield": 63, "modelId": "squirtle",
+  "learnset": { "1": ["tackle"], "4": ["water_gun"], "13": ["bubble_beam"] },
+  "evolution": { "level": 16, "to": "wartortle" },
+  "spawn": { "biomes": ["BEACH", "RIVER", "OCEAN", "SWAMP"], "weight": 8, "minLevel": 3, "maxLevel": 8 }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "pidgey", "dex": 16, "name": "Pidgey",
+  "types": ["NORMAL", "FLYING"],
+  "baseStats": { "hp": 40, "atk": 45, "def": 40, "spa": 35, "spd": 35, "spe": 56 },
+  "catchRate": 255, "expYield": 50, "modelId": "pidgey",
+  "learnset": { "1": ["tackle"], "5": ["gust"], "9": ["quick_attack"] },
+  "evolution": { "level": 18, "to": "pidgeotto" },
+  "spawn": { "biomes": ["PLAINS", "FOREST", "SUNFLOWER_PLAINS", "MEADOW"], "weight": 20, "minLevel": 2, "maxLevel": 6 }
+}

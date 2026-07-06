@@ -1,0 +1,9 @@
+{
+  "id": "charmander", "dex": 4, "name": "Charmander",
+  "types": ["FIRE"],
+  "baseStats": { "hp": 39, "atk": 52, "def": 43, "spa": 60, "spd": 50, "spe": 65 },
+  "catchRate": 45, "expYield": 62, "modelId": "charmander",
+  "learnset": { "1": ["scratch", "growl"], "4": ["ember"], "12": ["flamethrower"] },
+  "evolution": { "level": 16, "to": "charmeleon" },
+  "spawn": { "biomes": ["DESERT", "BADLANDS", "SAVANNA"], "weight": 8, "minLevel": 3, "maxLevel": 8 }
+}

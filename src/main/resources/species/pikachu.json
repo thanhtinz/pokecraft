@@ -1,0 +1,9 @@
+{
+  "id": "pikachu", "dex": 25, "name": "Pikachu",
+  "types": ["ELECTRIC"],
+  "baseStats": { "hp": 35, "atk": 55, "def": 40, "spa": 50, "spd": 50, "spe": 90 },
+  "catchRate": 190, "expYield": 112, "modelId": "pikachu",
+  "learnset": { "1": ["thunder_shock", "growl"], "6": ["quick_attack"], "15": ["thunderbolt"] },
+  "evolution": null,
+  "spawn": { "biomes": ["FOREST", "DARK_FOREST", "BAMBOO_JUNGLE"], "weight": 4, "minLevel": 4, "maxLevel": 10 }
+}

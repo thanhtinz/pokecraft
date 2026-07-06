@@ -1,0 +1,25 @@
+storage:
+  # sqlite | mysql (mysql: fill jdbc url below)
+  type: sqlite
+  mysql-url: "jdbc:mysql://localhost:3306/pokecraft?user=root&password=secret"
+
+spawning:
+  enabled: true
+  interval-ticks: 200        # spawn attempt every 10s
+  max-wild-per-player: 4
+  spawn-radius-min: 12
+  spawn-radius-max: 32
+  despawn-distance: 64
+  despawn-seconds: 300
+
+capture:
+  # base entity used under ModelEngine models
+  base-entity: HUSK
+
+battle:
+  exp-multiplier: 1.0
+  shiny-rate: 4096           # 1 / N
+
+bedrock:
+  # use native Bedrock forms (Cumulus) for battle menu when Floodgate is present
+  use-forms: true
