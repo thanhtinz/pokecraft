@@ -138,6 +138,19 @@ Last updated: 2026-07-06 (Phase 2+ - PvP, economy, social, daycare, riding)
 - [x] Sneak để xuống, tự dismount khi vào battle/quit
 - [ ] Điều khiển WASD thật (cần saddle-entity hack), tốc độ theo chỉ số Speed
 
+## In-game Menu (PC + Mobile)
+
+- [x] Item menu (Nether Star) phát khi join, right-click/tap để mở panel
+      (không cần gõ lệnh; chest GUI nên Bedrock/Geyser dùng được luôn)
+- [x] Hub: Party / PC Box / Shop / Daycare / Ride / Duel / Leaderboard /
+      Marriage / Balance
+- [x] GUI chọn người chơi cho Duel (lọc theo khoảng cách) và Marry
+- [x] GUI chọn pokemon để cưỡi; GUI daycare gửi/rút trực quan
+- [x] Leaderboard panel: top 10 của 4 hạng mục trong lore
+- [x] Nút Accept ngay trên menu khi có lời thách đấu / cầu hôn đang chờ
+- [x] /poke (không tham số) và /poke menu cũng mở panel
+- [ ] Custom UI texture pack (hiện dùng icon vanilla item)
+
 ## Commands / Admin
 
 - [x] /poke party (mở GUI), /poke pc, /poke shop

@@ -78,6 +78,18 @@ public class PvpBattleManager implements Listener {
         return true;
     }
 
+    /** Name of the player whose (unexpired) challenge targets this player, or null. */
+    public String pendingChallengerName(Player target) {
+        long now = System.currentTimeMillis();
+        for (Map.Entry<UUID, Challenge> e : challenges.entrySet()) {
+            if (!e.getValue().target().equals(target.getUniqueId())) continue;
+            if (now - e.getValue().at() > CHALLENGE_TIMEOUT_MILLIS) continue;
+            Player challenger = plugin.getServer().getPlayer(e.getKey());
+            if (challenger != null) return challenger.getName();
+        }
+        return null;
+    }
+
     public void accept(Player player) {
         for (Map.Entry<UUID, Challenge> e : challenges.entrySet()) {
             Challenge c = e.getValue();

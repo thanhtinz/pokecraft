@@ -58,6 +58,18 @@ public class MarriageManager {
                 + "within 60s (or /poke marry deny).", NamedTextColor.LIGHT_PURPLE));
     }
 
+    /** Name of the player whose (unexpired) proposal targets this player, or null. */
+    public String pendingProposerName(Player target) {
+        long now = System.currentTimeMillis();
+        for (Map.Entry<UUID, Proposal> e : proposals.entrySet()) {
+            if (!e.getValue().target().equals(target.getUniqueId())) continue;
+            if (now - e.getValue().at() > PROPOSAL_TIMEOUT_MILLIS) continue;
+            Player proposer = plugin.getServer().getPlayer(e.getKey());
+            if (proposer != null) return proposer.getName();
+        }
+        return null;
+    }
+
     public void accept(Player player) {
         UUID accepter = player.getUniqueId();
         for (Map.Entry<UUID, Proposal> e : proposals.entrySet()) {

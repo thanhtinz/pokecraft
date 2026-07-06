@@ -53,6 +53,11 @@ daycare:
   breed-chance: 0.15      # per check, when 2 compatible pokemon are deposited
   breed-shiny-rate: 2048  # 1 / N for bred babies (better than wild 1/4096)
 
+menu:
+  # give every player a menu item in the hotbar (right-click/tap to open panel)
+  give-item: true
+  item-slot: 8
+
 ride:
   speed: 0.45
   fly-speed: 0.6

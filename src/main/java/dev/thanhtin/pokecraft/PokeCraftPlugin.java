@@ -21,7 +21,12 @@ import dev.thanhtin.pokecraft.species.SpeciesRegistry;
 import dev.thanhtin.pokecraft.storage.StorageManager;
 import dev.thanhtin.pokecraft.ui.BattleGui;
 import dev.thanhtin.pokecraft.ui.PartyGui;
+import dev.thanhtin.pokecraft.ui.DaycareGui;
+import dev.thanhtin.pokecraft.ui.LeaderboardGui;
+import dev.thanhtin.pokecraft.ui.MainMenuGui;
 import dev.thanhtin.pokecraft.ui.PcGui;
+import dev.thanhtin.pokecraft.ui.PlayerPickerGui;
+import dev.thanhtin.pokecraft.ui.RidePickerGui;
 import dev.thanhtin.pokecraft.ui.PvpGui;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -38,6 +43,11 @@ public class PokeCraftPlugin extends JavaPlugin {
     private BattleGui battleGui;
     private PcGui pcGui;
     private PvpGui pvpGui;
+    private MainMenuGui mainMenuGui;
+    private PlayerPickerGui playerPickerGui;
+    private RidePickerGui ridePickerGui;
+    private DaycareGui daycareGui;
+    private LeaderboardGui leaderboardGui;
     private PvpBattleManager pvpManager;
     private EconomyManager economyManager;
     private MarriageManager marriageManager;
@@ -72,6 +82,11 @@ public class PokeCraftPlugin extends JavaPlugin {
         battleGui = new BattleGui(this);
         pcGui = new PcGui(this);
         pvpGui = new PvpGui(this);
+        mainMenuGui = new MainMenuGui(this);
+        playerPickerGui = new PlayerPickerGui(this);
+        ridePickerGui = new RidePickerGui(this);
+        daycareGui = new DaycareGui(this);
+        leaderboardGui = new LeaderboardGui(this);
         pvpManager = new PvpBattleManager(this);
         economyManager = new EconomyManager(this);
         marriageManager = new MarriageManager(this);
@@ -90,6 +105,11 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(battleGui, this);
         getServer().getPluginManager().registerEvents(pcGui, this);
         getServer().getPluginManager().registerEvents(pvpGui, this);
+        getServer().getPluginManager().registerEvents(mainMenuGui, this);
+        getServer().getPluginManager().registerEvents(playerPickerGui, this);
+        getServer().getPluginManager().registerEvents(ridePickerGui, this);
+        getServer().getPluginManager().registerEvents(daycareGui, this);
+        getServer().getPluginManager().registerEvents(leaderboardGui, this);
         getServer().getPluginManager().registerEvents(pvpManager, this);
         getServer().getPluginManager().registerEvents(economyManager, this);
         getServer().getPluginManager().registerEvents(usableItems, this);
@@ -127,6 +147,11 @@ public class PokeCraftPlugin extends JavaPlugin {
     public PcGui pcUi() { return pcGui; }
     public BattleGui battleUi() { return battleGui; }
     public PvpGui pvpUi() { return pvpGui; }
+    public MainMenuGui mainMenu() { return mainMenuGui; }
+    public PlayerPickerGui playerPickerUi() { return playerPickerGui; }
+    public RidePickerGui ridePickerUi() { return ridePickerGui; }
+    public DaycareGui daycareUi() { return daycareGui; }
+    public LeaderboardGui leaderboardUi() { return leaderboardGui; }
     public PvpBattleManager pvp() { return pvpManager; }
     public EconomyManager economy() { return economyManager; }
     public MarriageManager marriage() { return marriageManager; }

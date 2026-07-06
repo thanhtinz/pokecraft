@@ -39,10 +39,11 @@ public class PokeCommand implements TabExecutor {
             return true;
         }
         if (args.length == 0) {
-            plugin.partyUi().open(player);
+            plugin.mainMenu().open(player);
             return true;
         }
         switch (args[0].toLowerCase(Locale.ROOT)) {
+            case "menu" -> plugin.mainMenu().open(player);
             case "party" -> plugin.partyUi().open(player);
             case "pc" -> {
                 if (inBattle(player)) return true;
@@ -335,7 +336,7 @@ public class PokeCommand implements TabExecutor {
     public List<String> onTabComplete(CommandSender sender, Command cmd, String label, String[] args) {
         List<String> out = new ArrayList<>();
         if (args.length == 1) {
-            out.addAll(List.of("party", "pc", "shop", "balance", "pay", "top", "duel", "marry",
+            out.addAll(List.of("menu", "party", "pc", "shop", "balance", "pay", "top", "duel", "marry",
                     "divorce", "daycare", "ride", "nickname", "release", "give", "spawn", "heal", "reload"));
         } else if (args.length == 2 && args[0].equalsIgnoreCase("spawn")) {
             plugin.species().all().forEach(s -> out.add(s.id));
