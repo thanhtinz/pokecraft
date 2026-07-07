@@ -110,6 +110,7 @@ public class ShopGui implements Listener {
     }
 
     public void open(Player player) {
+        if (openBuyForm(player)) return;
         Holder holder = new Holder();
         long balance = plugin.economy().balance(player.getUniqueId());
         Inventory inv = plugin.getServer().createInventory(holder, 36,
@@ -150,8 +151,81 @@ public class ShopGui implements Listener {
         player.openInventory(inv);
     }
 
+    // ---------- native Bedrock forms ----------
+
+    private boolean openBuyForm(Player player) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        long balance = plugin.economy().balance(player.getUniqueId());
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "Sell items", () -> openSell(player)));
+        for (Entry entry : entries) {
+            long cost = price(entry);
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    entry.label() + " - " + plugin.economy().format(cost),
+                    () -> buy(player, entry)));
+        }
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+        return plugin.bedrock().openForm(player, "Pokemart",
+                "Balance: " + plugin.economy().format(balance), buttons);
+    }
+
+    private boolean openSellForm(Player player) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        long balance = plugin.economy().balance(player.getUniqueId());
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+        ItemStack[] contents = player.getInventory().getContents();
+        for (int slot = 0; slot < contents.length; slot++) {
+            long unit = sellPrice(contents[slot]);
+            if (unit <= 0) continue;
+            final int s = slot;
+            String name = contents[slot].getType().name().toLowerCase().replace('_', ' ');
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "Sell " + name + " - " + plugin.economy().format(unit),
+                    () -> sellOne(player, s)));
+        }
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "Back to Pokemart", () -> open(player)));
+        return plugin.bedrock().openForm(player, "Sell items",
+                buttons.size() == 1 ? "You have nothing to sell."
+                        : "Balance: " + plugin.economy().format(balance), buttons);
+    }
+
+    private void buy(Player player, Entry entry) {
+        long cost = price(entry);
+        if (!plugin.economy().withdraw(player.getUniqueId(), cost)) {
+            player.sendMessage(Component.text("Not enough money (need "
+                    + plugin.economy().format(cost) + ").", NamedTextColor.RED));
+            return;
+        }
+        var leftovers = player.getInventory().addItem(entry.factory().apply(plugin));
+        leftovers.values().forEach(item ->
+                player.getWorld().dropItemNaturally(player.getLocation(), item));
+        player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1f, 1.2f);
+        player.sendMessage(Component.text("Bought " + entry.label() + " for "
+                + plugin.economy().format(cost) + ".", NamedTextColor.GREEN));
+        plugin.getServer().getScheduler().runTask(plugin, () -> open(player)); // refresh balance
+    }
+
+    private void sellOne(Player player, int slot) {
+        ItemStack actual = player.getInventory().getItem(slot);
+        long unit = sellPrice(actual);
+        if (actual == null || unit <= 0) { // inventory changed under us
+            plugin.getServer().getScheduler().runTask(plugin, () -> openSell(player));
+            return;
+        }
+        if (actual.getAmount() <= 1) player.getInventory().setItem(slot, null);
+        else actual.setAmount(actual.getAmount() - 1);
+        plugin.economy().deposit(player.getUniqueId(), unit);
+        player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1f, 1.4f);
+        player.sendMessage(Component.text("Sold 1 item for " + plugin.economy().format(unit) + ".",
+                NamedTextColor.GREEN));
+        plugin.getServer().getScheduler().runTask(plugin, () -> openSell(player));
+    }
+
     /** Sell screen: lists the sellable items the player is carrying. */
     public void openSell(Player player) {
+        if (openSellForm(player)) return;
         SellHolder holder = new SellHolder();
         long balance = plugin.economy().balance(player.getUniqueId());
         Inventory inv = plugin.getServer().createInventory(holder, 54,
@@ -240,20 +314,7 @@ public class ShopGui implements Listener {
         int raw = e.getRawSlot();
         int index = raw - 9;
         if (index < 0 || index >= entries.size()) return;
-        Entry entry = entries.get(index);
-        long cost = price(entry);
-        if (!plugin.economy().withdraw(player.getUniqueId(), cost)) {
-            player.sendMessage(Component.text("Not enough money (need "
-                    + plugin.economy().format(cost) + ").", NamedTextColor.RED));
-            return;
-        }
-        var leftovers = player.getInventory().addItem(entry.factory().apply(plugin));
-        leftovers.values().forEach(item ->
-                player.getWorld().dropItemNaturally(player.getLocation(), item));
-        player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1f, 1.2f);
-        player.sendMessage(Component.text("Bought " + entry.label() + " for "
-                + plugin.economy().format(cost) + ".", NamedTextColor.GREEN));
-        plugin.getServer().getScheduler().runTask(plugin, () -> open(player)); // refresh balance
+        buy(player, entries.get(index));
     }
 
     private void handleSell(Player player, ItemStack clicked) {
@@ -261,18 +322,6 @@ public class ShopGui implements Listener {
         Integer slot = clicked.getItemMeta().getPersistentDataContainer()
                 .get(keySellSlot, PersistentDataType.INTEGER);
         if (slot == null) return;
-        ItemStack actual = player.getInventory().getItem(slot);
-        long unit = sellPrice(actual);
-        if (actual == null || unit <= 0) { // inventory changed under us
-            plugin.getServer().getScheduler().runTask(plugin, () -> openSell(player));
-            return;
-        }
-        if (actual.getAmount() <= 1) player.getInventory().setItem(slot, null);
-        else actual.setAmount(actual.getAmount() - 1);
-        plugin.economy().deposit(player.getUniqueId(), unit);
-        player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1f, 1.4f);
-        player.sendMessage(Component.text("Sold 1 item for " + plugin.economy().format(unit) + ".",
-                NamedTextColor.GREEN));
-        plugin.getServer().getScheduler().runTask(plugin, () -> openSell(player));
+        sellOne(player, slot);
     }
 }

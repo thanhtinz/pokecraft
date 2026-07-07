@@ -60,6 +60,38 @@ public class BedrockSupport {
         return floodgate && plugin.getConfig().getBoolean("bedrock.use-forms", true) && isBedrock(player);
     }
 
+    /** A labelled button for a generic native form. */
+    public record FormButton(String label, Runnable action) {}
+
+    /**
+     * Generic native SimpleForm: a title, some content text, and a list of
+     * buttons. Any chest GUI can offer a native-form version on Bedrock by
+     * building its buttons and calling this. @return true if the form was sent.
+     */
+    public boolean openForm(Player player, String title, String content, List<FormButton> buttons) {
+        if (!formsEnabled(player)) return false;
+        try {
+            List<Runnable> actions = new ArrayList<>();
+            Class<?> simpleForm = Class.forName("org.geysermc.cumulus.form.SimpleForm");
+            Object builder = simpleForm.getMethod("builder").invoke(null);
+            Class<?> builderClass = builder.getClass();
+
+            invoke(builderClass, builder, "title", title);
+            if (content != null && !content.isEmpty()) {
+                invoke(builderClass, builder, "content", content);
+            }
+            for (FormButton b : buttons) {
+                invoke(builderClass, builder, "button", b.label());
+                actions.add(b.action() == null ? () -> {} : b.action());
+            }
+            sendForm(player, simpleForm, builder, builderClass, actions);
+            return true;
+        } catch (Exception e) {
+            plugin.getLogger().warning("[WARN] Bedrock form failed, falling back to chest GUI: " + e.getMessage());
+            return false;
+        }
+    }
+
     /** @return true if a native form was sent (caller should skip the chest GUI) */
     public boolean tryOpenBattleForm(Player player, Battle battle) {
         if (!formsEnabled(player)) return false;

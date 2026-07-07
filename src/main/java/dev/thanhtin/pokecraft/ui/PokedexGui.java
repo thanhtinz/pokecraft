@@ -48,6 +48,9 @@ public class PokedexGui implements Listener {
 
         int pages = Math.max(1, (all.size() + PAGE_SIZE - 1) / PAGE_SIZE);
         int current = Math.max(0, Math.min(page, pages - 1));
+
+        if (openForm(player, all, dex, caught, current, pages)) return;
+
         Holder holder = new Holder(current);
         Inventory inv = plugin.getServer().createInventory(holder, 54,
                 Component.text("Pokedex " + caught + "/" + all.size()
@@ -66,6 +69,59 @@ public class PokedexGui implements Listener {
                 + dex.size() + " of " + all.size()));
         if (current < pages - 1) inv.setItem(53, button(Material.ARROW, "Next page"));
         player.openInventory(inv);
+    }
+
+    /** Native Bedrock pokedex: a paged button list. @return true if the form was sent. */
+    private boolean openForm(Player player, List<PokemonSpecies> all, Map<String, Boolean> dex,
+                             long caught, int current, int pages) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+        int start = current * PAGE_SIZE;
+        for (int i = 0; i < PAGE_SIZE && start + i < all.size(); i++) {
+            PokemonSpecies species = all.get(start + i);
+            Boolean state = dex.get(species.id);
+            String num = "#" + String.format("%03d", species.dex) + " ";
+            String label = state == null ? num + "???"
+                    : !state ? num + species.name + " (seen)"
+                    : num + species.name + " ✔";
+            PokemonSpecies caughtSp = Boolean.TRUE.equals(state) ? species : null;
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(label,
+                    caughtSp == null ? null : () -> showEntryForm(player, caughtSp, current)));
+        }
+        if (current > 0) {
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "← Previous page", () -> open(player, current - 1)));
+        }
+        if (current < pages - 1) {
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "Next page →", () -> open(player, current + 1)));
+        }
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+        return plugin.bedrock().openForm(player, "Pokedex",
+                "Caught " + caught + " / " + all.size() + "  -  page "
+                        + (current + 1) + "/" + pages, buttons);
+    }
+
+    /** Detail form for one caught species. */
+    private void showEntryForm(Player player, PokemonSpecies species, int backPage) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Type: ").append(species.types).append("\n");
+        sb.append("HP ").append(species.baseStats.hp).append("  Atk ").append(species.baseStats.atk)
+                .append("  Def ").append(species.baseStats.def).append("\n");
+        sb.append("SpA ").append(species.baseStats.spa).append("  SpD ").append(species.baseStats.spd)
+                .append("  Spe ").append(species.baseStats.spe).append("\n");
+        for (PokemonSpecies.Evolution evo : species.allEvolutions()) {
+            PokemonSpecies to = plugin.species().getSpecies(evo.to);
+            if (to == null) continue;
+            sb.append("Evolves into ").append(to.name)
+                    .append(evo.item != null ? " (" + evo.item.replace('_', ' ') + ")"
+                            : " at Lv." + evo.level).append("\n");
+        }
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = List.of(
+                new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                        "Back", () -> open(player, backPage)));
+        plugin.bedrock().openForm(player, "#" + String.format("%03d", species.dex) + " " + species.name,
+                sb.toString(), buttons);
     }
 
     private ItemStack entry(PokemonSpecies species, Boolean state) {
