@@ -130,6 +130,11 @@ menu:
   give-item: true
   item-slot: 8
 
+items:
+  # dedicated carryable items that open a single panel each (not the shared menu)
+  give-pokedex: true   # a Pokedex book - right-click/tap to open the Pokedex
+  give-party: true     # a Team bundle - right-click/tap to view your party
+
 ride:
   speed: 0.45
   fly-speed: 0.6

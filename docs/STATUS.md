@@ -188,6 +188,9 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 
 - [x] Item menu (Nether Star) phát khi join, right-click/tap để mở panel
       (không cần gõ lệnh; chest GUI nên Bedrock/Geyser dùng được luôn)
+- [x] Item riêng cho từng tính năng (không dồn hết vào 1 panel): Pokedex là
+      cuốn sổ (BOOK), Team là túi (BUNDLE) - phát khi join, right-click/tap mở
+      thẳng panel tương ứng; cấu hình items.give-pokedex / items.give-party
 - [x] Hub: Party / PC Box / Shop / Daycare / Ride / Duel / Trade / Leaderboard /
       Pokedex / Marriage / Balance
 - [x] GUI chọn người chơi cho Duel (lọc theo khoảng cách) và Marry
