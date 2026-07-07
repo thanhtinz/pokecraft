@@ -19,31 +19,45 @@
   "modelId": "numel",
   "learnset": {
     "1": [
-      "scratch"
+      "growl",
+      "tackle",
+      "magnitude"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+    "5": [
       "ember"
     ],
-    "14": [
-      "sand_tomb"
+    "8": [
+      "focus_energy"
     ],
-    "20": [
-      "fire_spin"
+    "12": [
+      "bulldoze"
     ],
-    "32": [
-      "dig"
+    "15": [
+      "flame_burst"
     ],
-    "40": [
-      "fire_punch"
+    "19": [
+      "amnesia"
     ],
-    "48": [
-      "earthquake"
+    "22": [
+      "lava_plume"
     ],
     "26": [
-      "calm_mind"
+      "earth_power"
+    ],
+    "29": [
+      "curse"
+    ],
+    "31": [
+      "take_down"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "43": [
+      "flamethrower"
+    ],
+    "47": [
+      "double_edge"
     ]
   },
   "evolution": null,

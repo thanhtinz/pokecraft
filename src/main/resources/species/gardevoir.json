@@ -19,28 +19,51 @@
   "modelId": "gardevoir",
   "learnset": {
     "1": [
-      "tackle"
+      "healing_wish",
+      "growl",
+      "confusion",
+      "double_team",
+      "heal_pulse",
+      "misty_terrain",
+      "disarming_voice",
+      "dazzling_gleam",
+      "captivate",
+      "mystical_fire",
+      "charm",
+      "lucky_chant"
     ],
-    "4": [
+    "9": [
       "hypnosis"
     ],
-    "8": [
-      "confusion"
+    "12": [
+      "draining_kiss"
     ],
-    "14": [
-      "fairy_wind"
+    "15": [
+      "teleport"
     ],
-    "20": [
+    "18": [
       "psybeam"
     ],
-    "32": [
-      "dazzling_gleam"
+    "23": [
+      "life_dew"
     ],
-    "40": [
+    "28": [
+      "wish"
+    ],
+    "35": [
+      "calm_mind"
+    ],
+    "42": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "49": [
+      "moonblast"
+    ],
+    "56": [
+      "dream_eater"
+    ],
+    "63": [
+      "future_sight"
     ]
   },
   "evolution": null,

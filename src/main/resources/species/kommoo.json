@@ -19,31 +19,51 @@
   "modelId": "kommoo",
   "learnset": {
     "1": [
-      "scratch"
+      "clanging_scales",
+      "sky_uppercut",
+      "belly_drum",
+      "autotomize",
+      "tackle",
+      "leer",
+      "bide",
+      "protect",
+      "dragon_tail"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "scary_face"
     ],
-    "8": [
-      "twister"
-    ],
-    "14": [
-      "karate_chop"
+    "16": [
+      "headbutt"
     ],
     "20": [
-      "dragon_breath"
+      "work_up"
+    ],
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "iron_defense"
     ],
     "32": [
-      "low_kick"
-    ],
-    "40": [
       "dragon_claw"
     ],
-    "48": [
-      "brick_break"
+    "38": [
+      "noble_roar"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "dragon_dance"
+    ],
+    "52": [
+      "outrage"
+    ],
+    "60": [
+      "close_combat"
+    ],
+    "68": [
+      "clangorous_soul"
+    ],
+    "76": [
+      "boomburst"
     ]
   },
   "evolution": null,

@@ -18,28 +18,44 @@
   "modelId": "kingler",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "mud_sport",
+      "bubble",
+      "leer",
+      "harden",
+      "metal_claw",
+      "wide_guard",
+      "hammer_arm",
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "12": [
+      "mud_shot"
+    ],
+    "16": [
+      "protect"
     ],
     "20": [
-      "waterfall"
+      "bubble_beam"
     ],
-    "32": [
-      "surf"
+    "24": [
+      "stomp"
     ],
-    "40": [
-      "hydro_pump"
+    "31": [
+      "flail"
     ],
-    "26": [
+    "36": [
+      "razor_shell"
+    ],
+    "42": [
+      "slam"
+    ],
+    "48": [
       "swords_dance"
+    ],
+    "54": [
+      "crabhammer"
+    ],
+    "60": [
+      "guillotine"
     ]
   },
   "evolution": null,

@@ -19,31 +19,47 @@
   "modelId": "ironbundle",
   "learnset": {
     "1": [
-      "scratch"
+      "present",
+      "electric_terrain"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "water_gun"
+    "7": [
+      "powder_snow"
     ],
     "14": [
-      "ice_shard"
+      "whirlpool"
     ],
-    "20": [
-      "bubble_beam"
+    "21": [
+      "take_down"
     ],
-    "32": [
-      "aurora_beam"
+    "28": [
+      "drill_peck"
     ],
-    "40": [
-      "waterfall"
+    "35": [
+      "helping_hand"
     ],
-    "48": [
+    "42": [
+      "freeze_dry"
+    ],
+    "49": [
+      "flip_turn"
+    ],
+    "56": [
       "ice_beam"
     ],
-    "26": [
+    "63": [
       "agility"
+    ],
+    "70": [
+      "snowscape"
+    ],
+    "77": [
+      "hydro_pump"
+    ],
+    "84": [
+      "aurora_veil"
+    ],
+    "91": [
+      "blizzard"
     ]
   },
   "evolution": null,

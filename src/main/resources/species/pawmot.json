@@ -19,31 +19,55 @@
   "modelId": "pawmot",
   "learnset": {
     "1": [
-      "pound"
+      "revival_blessing",
+      "scratch",
+      "growl",
+      "wild_charge"
     ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
+    "3": [
       "thunder_shock"
     ],
-    "20": [
-      "low_kick"
+    "6": [
+      "quick_attack"
     ],
-    "32": [
+    "8": [
+      "charge"
+    ],
+    "12": [
+      "nuzzle"
+    ],
+    "15": [
+      "dig"
+    ],
+    "19": [
+      "bite"
+    ],
+    "23": [
       "spark"
     ],
-    "40": [
-      "brick_break"
+    "25": [
+      "arm_thrust"
     ],
-    "48": [
-      "thunderbolt"
+    "29": [
+      "thunder_wave"
     ],
-    "26": [
-      "swords_dance"
+    "33": [
+      "slam"
+    ],
+    "39": [
+      "entrainment"
+    ],
+    "44": [
+      "close_combat"
+    ],
+    "49": [
+      "discharge"
+    ],
+    "54": [
+      "agility"
+    ],
+    "60": [
+      "double_shock"
     ]
   },
   "evolution": null,

@@ -19,31 +19,52 @@
   "modelId": "gougingfire",
   "learnset": {
     "1": [
-      "tackle"
+      "stomp",
+      "leer",
+      "incinerate",
+      "sunny_day",
+      "double_kick",
+      "ancient_power",
+      "noble_roar"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "ember"
+    "7": [
+      "fire_fang"
     ],
     "14": [
-      "twister"
+      "howl"
     ],
-    "20": [
-      "fire_spin"
+    "21": [
+      "bite"
     ],
-    "32": [
-      "dragon_breath"
-    ],
-    "40": [
-      "fire_punch"
-    ],
-    "48": [
+    "28": [
       "dragon_claw"
     ],
-    "26": [
-      "harden"
+    "35": [
+      "crush_claw"
+    ],
+    "42": [
+      "morning_sun"
+    ],
+    "49": [
+      "burning_bulwark"
+    ],
+    "56": [
+      "dragon_rush"
+    ],
+    "63": [
+      "fire_blast"
+    ],
+    "70": [
+      "lava_plume"
+    ],
+    "77": [
+      "outrage"
+    ],
+    "84": [
+      "flare_blitz"
+    ],
+    "91": [
+      "raging_fury"
     ]
   },
   "evolution": null,

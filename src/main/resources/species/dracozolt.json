@@ -19,31 +19,41 @@
   "modelId": "dracozolt",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
+      "tackle",
       "thunder_shock"
     ],
+    "7": [
+      "charge"
+    ],
     "14": [
-      "twister"
+      "aerial_ace"
     ],
-    "20": [
-      "spark"
+    "21": [
+      "ancient_power"
     ],
-    "32": [
-      "dragon_breath"
+    "28": [
+      "pluck"
     ],
-    "40": [
-      "thunderbolt"
+    "35": [
+      "dragon_tail"
     ],
-    "48": [
-      "dragon_claw"
+    "42": [
+      "stomp"
     ],
-    "26": [
-      "swords_dance"
+    "49": [
+      "slam"
+    ],
+    "56": [
+      "discharge"
+    ],
+    "63": [
+      "bolt_beak"
+    ],
+    "70": [
+      "dragon_pulse"
+    ],
+    "77": [
+      "dragon_rush"
     ]
   },
   "evolution": null,

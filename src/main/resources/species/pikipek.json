@@ -19,31 +19,43 @@
   "modelId": "pikipek",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "growl"
-    ],
-    "8": [
       "peck"
     ],
-    "14": [
-      "quick_attack"
+    "3": [
+      "growl"
     ],
-    "20": [
-      "gust"
+    "7": [
+      "echoed_voice"
     ],
-    "32": [
-      "hyper_fang"
+    "9": [
+      "rock_smash"
     ],
-    "40": [
-      "wing_attack"
+    "13": [
+      "supersonic"
     ],
-    "48": [
-      "mega_punch"
+    "15": [
+      "pluck"
     ],
-    "26": [
-      "swords_dance"
+    "19": [
+      "roost"
+    ],
+    "21": [
+      "fury_attack"
+    ],
+    "25": [
+      "screech"
+    ],
+    "27": [
+      "drill_peck"
+    ],
+    "31": [
+      "bullet_seed"
+    ],
+    "33": [
+      "feather_dance"
+    ],
+    "37": [
+      "hyper_voice"
     ]
   },
   "evolution": null,

@@ -18,19 +18,49 @@
   "modelId": "registeel",
   "learnset": {
     "1": [
-      "scratch"
+      "metal_claw",
+      "charge_beam"
     ],
-    "4": [
-      "harden"
+    "6": [
+      "bulldoze"
     ],
-    "8": [
-      "steel_wing"
+    "12": [
+      "ancient_power"
     ],
-    "14": [
-      "iron_head"
+    "18": [
+      "stomp"
     ],
-    "26": [
-      "harden"
+    "24": [
+      "iron_head",
+      "flash_cannon"
+    ],
+    "30": [
+      "curse"
+    ],
+    "36": [
+      "iron_defense",
+      "amnesia"
+    ],
+    "42": [
+      "hammer_arm"
+    ],
+    "48": [
+      "heavy_slam"
+    ],
+    "54": [
+      "superpower"
+    ],
+    "60": [
+      "lock_on"
+    ],
+    "66": [
+      "zap_cannon"
+    ],
+    "72": [
+      "hyper_beam"
+    ],
+    "78": [
+      "explosion"
     ]
   },
   "evolution": null,

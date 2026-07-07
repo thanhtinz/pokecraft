@@ -19,31 +19,45 @@
   "modelId": "pignite",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "tail_whip",
+      "ember",
+      "odor_sleuth",
+      "arm_thrust",
+      "endure"
     ],
-    "4": [
-      "leer"
+    "13": [
+      "defense_curl"
     ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
-      "ember"
+    "15": [
+      "flame_charge"
     ],
     "20": [
-      "low_kick"
+      "smog"
     ],
-    "32": [
-      "fire_spin"
+    "23": [
+      "rollout"
     ],
-    "40": [
-      "brick_break"
+    "28": [
+      "take_down"
     ],
-    "48": [
-      "fire_punch"
+    "31": [
+      "heat_crash"
     ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "assurance"
+    ],
+    "39": [
+      "flamethrower"
+    ],
+    "44": [
+      "head_smash"
+    ],
+    "47": [
+      "roar"
+    ],
+    "52": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

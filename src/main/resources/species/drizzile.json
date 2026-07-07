@@ -18,28 +18,31 @@
   "modelId": "drizzile",
   "learnset": {
     "1": [
-      "scratch"
+      "pound",
+      "growl",
+      "water_gun",
+      "bind"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "water_pulse"
     ],
-    "8": [
-      "water_gun"
+    "19": [
+      "tearful_look"
     ],
-    "14": [
-      "bubble_beam"
+    "24": [
+      "sucker_punch"
     ],
-    "20": [
-      "waterfall"
+    "30": [
+      "u_turn"
     ],
-    "32": [
-      "surf"
+    "36": [
+      "liquidation"
     ],
-    "40": [
-      "hydro_pump"
+    "42": [
+      "soak"
     ],
-    "26": [
-      "calm_mind"
+    "48": [
+      "rain_dance"
     ]
   },
   "evolution": null,

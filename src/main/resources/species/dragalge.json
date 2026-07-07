@@ -19,31 +19,43 @@
   "modelId": "dragalge",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "smokescreen",
+      "water_gun",
+      "feint_attack",
+      "bubble",
+      "acid",
+      "camouflage"
     ],
-    "4": [
-      "poison_powder"
-    ],
-    "8": [
-      "twister"
-    ],
-    "14": [
-      "poison_sting"
+    "15": [
+      "tail_whip"
     ],
     "20": [
-      "dragon_breath"
+      "double_team"
     ],
-    "32": [
-      "acid"
+    "25": [
+      "poison_tail"
+    ],
+    "30": [
+      "water_pulse"
+    ],
+    "35": [
+      "toxic"
     ],
     "40": [
-      "dragon_claw"
+      "dragon_pulse"
     ],
-    "48": [
-      "sludge"
+    "45": [
+      "aqua_tail"
     ],
-    "26": [
-      "calm_mind"
+    "52": [
+      "sludge_bomb"
+    ],
+    "59": [
+      "hydro_pump"
+    ],
+    "66": [
+      "outrage"
     ]
   },
   "evolution": null,

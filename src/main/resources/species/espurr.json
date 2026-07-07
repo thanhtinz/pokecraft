@@ -18,22 +18,30 @@
   "modelId": "espurr",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "leer"
     ],
-    "4": [
-      "hypnosis"
+    "3": [
+      "fake_out"
     ],
-    "8": [
+    "6": [
+      "disarming_voice"
+    ],
+    "9": [
       "confusion"
     ],
-    "14": [
+    "18": [
+      "covet"
+    ],
+    "21": [
       "psybeam"
     ],
-    "20": [
-      "psychic"
+    "30": [
+      "light_screen",
+      "reflect"
     ],
-    "26": [
-      "agility"
+    "33": [
+      "psyshock"
     ]
   },
   "evolution": null,

@@ -18,25 +18,50 @@
   "modelId": "garbodor",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "poison_gas",
+      "recycle",
+      "acid_spray",
+      "double_slap",
+      "take_down",
+      "metal_claw"
     ],
-    "4": [
-      "poison_powder"
+    "9": [
+      "amnesia"
     ],
-    "8": [
-      "poison_sting"
+    "12": [
+      "clear_smog"
     ],
-    "14": [
-      "acid"
+    "15": [
+      "toxic_spikes"
     ],
-    "20": [
+    "18": [
       "sludge"
     ],
-    "32": [
+    "21": [
+      "stockpile",
+      "swallow"
+    ],
+    "24": [
+      "body_slam"
+    ],
+    "27": [
       "sludge_bomb"
     ],
-    "26": [
-      "swords_dance"
+    "30": [
+      "toxic"
+    ],
+    "33": [
+      "belch"
+    ],
+    "39": [
+      "pain_split"
+    ],
+    "43": [
+      "gunk_shot"
+    ],
+    "48": [
+      "explosion"
     ]
   },
   "evolution": null,

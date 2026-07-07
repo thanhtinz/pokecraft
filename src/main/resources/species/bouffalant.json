@@ -18,31 +18,43 @@
   "modelId": "bouffalant",
   "learnset": {
     "1": [
-      "pound"
+      "pursuit",
+      "leer",
+      "rage",
+      "tackle"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "focus_energy"
     ],
-    "8": [
-      "quick_attack"
+    "10": [
+      "fury_attack"
     ],
-    "14": [
-      "hyper_fang"
+    "15": [
+      "revenge"
     ],
     "20": [
-      "mega_punch"
+      "scary_face"
     ],
-    "32": [
-      "body_slam"
+    "25": [
+      "horn_attack"
+    ],
+    "30": [
+      "reversal"
+    ],
+    "35": [
+      "throat_chop"
     ],
     "40": [
-      "double_edge"
+      "head_charge"
     ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
+    "45": [
       "swords_dance"
+    ],
+    "50": [
+      "thrash"
+    ],
+    "55": [
+      "giga_impact"
     ]
   },
   "evolution": null,

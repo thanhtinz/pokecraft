@@ -18,22 +18,39 @@
   "modelId": "banette",
   "learnset": {
     "1": [
-      "tackle"
+      "knock_off",
+      "screech",
+      "night_shade",
+      "spite",
+      "feint_attack",
+      "astonish"
     ],
-    "4": [
-      "hypnosis"
+    "16": [
+      "will_o_wisp"
     ],
-    "8": [
-      "lick"
+    "19": [
+      "shadow_sneak"
     ],
-    "14": [
-      "night_shade"
-    ],
-    "20": [
-      "shadow_ball"
+    "22": [
+      "hex"
     ],
     "26": [
-      "swords_dance"
+      "curse"
+    ],
+    "30": [
+      "shadow_ball"
+    ],
+    "34": [
+      "role_play"
+    ],
+    "40": [
+      "sucker_punch"
+    ],
+    "46": [
+      "trick"
+    ],
+    "53": [
+      "phantom_force"
     ]
   },
   "evolution": null,

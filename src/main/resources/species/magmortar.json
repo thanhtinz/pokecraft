@@ -18,28 +18,45 @@
   "modelId": "magmortar",
   "learnset": {
     "1": [
-      "pound"
+      "smog",
+      "leer",
+      "ember",
+      "smokescreen",
+      "feint_attack",
+      "flame_burst"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "clear_smog"
     ],
-    "8": [
-      "ember"
-    ],
-    "14": [
-      "fire_spin"
+    "16": [
+      "flame_wheel"
     ],
     "20": [
+      "confuse_ray"
+    ],
+    "24": [
+      "scary_face"
+    ],
+    "28": [
       "fire_punch"
     ],
-    "32": [
-      "flamethrower"
+    "34": [
+      "lava_plume"
     ],
     "40": [
+      "low_kick"
+    ],
+    "46": [
+      "flamethrower"
+    ],
+    "52": [
+      "sunny_day"
+    ],
+    "58": [
       "fire_blast"
     ],
-    "26": [
-      "calm_mind"
+    "64": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

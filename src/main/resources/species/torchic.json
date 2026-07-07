@@ -18,28 +18,48 @@
   "modelId": "torchic",
   "learnset": {
     "1": [
-      "tackle"
+      "scratch",
+      "growl",
+      "peck"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+    "3": [
       "ember"
     ],
-    "14": [
-      "fire_spin"
+    "6": [
+      "quick_attack"
     ],
-    "20": [
-      "fire_punch"
+    "9": [
+      "flame_charge"
     ],
-    "32": [
+    "12": [
+      "detect"
+    ],
+    "15": [
+      "sand_attack"
+    ],
+    "18": [
+      "aerial_ace"
+    ],
+    "21": [
+      "slash"
+    ],
+    "24": [
+      "bounce"
+    ],
+    "27": [
+      "focus_energy"
+    ],
+    "30": [
       "flamethrower"
     ],
-    "40": [
-      "fire_blast"
+    "33": [
+      "feather_dance"
     ],
-    "26": [
-      "calm_mind"
+    "36": [
+      "reversal"
+    ],
+    "39": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

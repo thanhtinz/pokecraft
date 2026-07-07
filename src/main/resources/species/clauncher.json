@@ -18,28 +18,40 @@
   "modelId": "clauncher",
   "learnset": {
     "1": [
-      "pound"
+      "splash",
+      "water_gun",
+      "water_sport",
+      "bubble"
     ],
-    "4": [
-      "tail_whip"
+    "10": [
+      "flail"
     ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "bubble_beam"
+    "15": [
+      "aqua_jet"
     ],
     "20": [
-      "waterfall"
+      "bubble_beam"
     ],
-    "32": [
-      "surf"
+    "25": [
+      "hone_claws"
+    ],
+    "30": [
+      "water_pulse"
+    ],
+    "35": [
+      "swords_dance"
     ],
     "40": [
-      "hydro_pump"
+      "aura_sphere"
     ],
-    "26": [
-      "harden"
+    "45": [
+      "bounce"
+    ],
+    "50": [
+      "muddy_water"
+    ],
+    "55": [
+      "crabhammer"
     ]
   },
   "evolution": null,

@@ -19,31 +19,45 @@
   "modelId": "dustox",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
+      "gust",
+      "string_shot",
+      "bug_bite",
+      "tackle",
+      "harden",
       "poison_sting"
     ],
-    "14": [
-      "bug_bite"
+    "12": [
+      "confusion"
+    ],
+    "15": [
+      "poison_powder"
+    ],
+    "17": [
+      "moonlight"
     ],
     "20": [
-      "acid"
+      "venoshock"
+    ],
+    "22": [
+      "psybeam"
+    ],
+    "27": [
+      "light_screen"
+    ],
+    "30": [
+      "whirlwind"
     ],
     "32": [
-      "pin_missile"
+      "toxic"
+    ],
+    "35": [
+      "bug_buzz"
+    ],
+    "37": [
+      "protect"
     ],
     "40": [
-      "sludge"
-    ],
-    "48": [
-      "sludge_bomb"
-    ],
-    "26": [
-      "harden"
+      "quiver_dance"
     ]
   },
   "evolution": null,

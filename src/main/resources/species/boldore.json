@@ -18,22 +18,38 @@
   "modelId": "boldore",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "harden",
+      "sand_attack",
+      "power_gem",
+      "stealth_rock"
     ],
-    "4": [
-      "harden"
+    "12": [
+      "mud_slap"
     ],
-    "8": [
-      "rock_throw"
-    ],
-    "14": [
-      "rock_slide"
+    "16": [
+      "smack_down"
     ],
     "20": [
+      "iron_defense"
+    ],
+    "24": [
+      "headbutt"
+    ],
+    "30": [
+      "rock_slide"
+    ],
+    "36": [
+      "rock_blast"
+    ],
+    "42": [
+      "sandstorm"
+    ],
+    "48": [
       "stone_edge"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "explosion"
     ]
   },
   "evolution": null,

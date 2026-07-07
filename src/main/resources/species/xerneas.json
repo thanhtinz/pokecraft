@@ -18,19 +18,59 @@
   "modelId": "xerneas",
   "learnset": {
     "1": [
-      "pound"
+      "gravity",
+      "tackle"
     ],
-    "4": [
-      "sing"
+    "5": [
+      "light_screen"
     ],
-    "8": [
-      "fairy_wind"
+    "10": [
+      "aurora_beam"
     ],
-    "14": [
-      "dazzling_gleam"
+    "15": [
+      "nature_power"
     ],
-    "26": [
-      "swords_dance"
+    "20": [
+      "night_slash"
+    ],
+    "25": [
+      "aromatherapy"
+    ],
+    "30": [
+      "psych_up"
+    ],
+    "35": [
+      "horn_leech"
+    ],
+    "40": [
+      "misty_terrain"
+    ],
+    "45": [
+      "ingrain"
+    ],
+    "50": [
+      "take_down"
+    ],
+    "55": [
+      "geomancy"
+    ],
+    "60": [
+      "moonblast"
+    ],
+    "65": [
+      "heal_pulse"
+    ],
+    "70": [
+      "megahorn"
+    ],
+    "75": [
+      "close_combat"
+    ],
+    "80": [
+      "outrage"
+    ],
+    "85": [
+      "giga_impact"
     ]
   },
   "evolution": null,

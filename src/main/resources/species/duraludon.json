@@ -19,31 +19,41 @@
   "modelId": "duraludon",
   "learnset": {
     "1": [
-      "pound"
+      "metal_claw",
+      "leer"
     ],
-    "4": [
-      "harden"
+    "6": [
+      "rock_smash"
     ],
-    "8": [
-      "steel_wing"
+    "12": [
+      "hone_claws"
     ],
-    "14": [
-      "twister"
+    "18": [
+      "metal_sound"
     ],
-    "20": [
-      "iron_head"
+    "24": [
+      "breaking_swipe"
     ],
-    "32": [
-      "dragon_breath"
+    "30": [
+      "dragon_tail"
     ],
-    "40": [
-      "dragon_claw"
+    "36": [
+      "iron_defense"
+    ],
+    "42": [
+      "focus_energy"
     ],
     "48": [
-      "outrage"
+      "dragon_claw"
     ],
-    "26": [
-      "calm_mind"
+    "54": [
+      "flash_cannon"
+    ],
+    "60": [
+      "metal_burst"
+    ],
+    "66": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

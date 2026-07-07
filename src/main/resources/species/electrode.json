@@ -18,25 +18,51 @@
   "modelId": "electrode",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
+      "charge",
+      "tackle",
+      "sonic_boom",
+      "magnetic_flux",
+      "eerie_impulse",
       "thunder_shock"
     ],
-    "14": [
+    "9": [
       "spark"
     ],
-    "20": [
-      "thunderbolt"
+    "11": [
+      "rollout"
     ],
-    "32": [
-      "thunder"
+    "13": [
+      "screech"
+    ],
+    "16": [
+      "charge_beam"
+    ],
+    "20": [
+      "swift"
+    ],
+    "22": [
+      "electro_ball"
     ],
     "26": [
-      "agility"
+      "self_destruct"
+    ],
+    "29": [
+      "light_screen"
+    ],
+    "36": [
+      "magnet_rise"
+    ],
+    "41": [
+      "discharge"
+    ],
+    "47": [
+      "explosion"
+    ],
+    "54": [
+      "gyro_ball"
+    ],
+    "58": [
+      "mirror_coat"
     ]
   },
   "evolution": null,

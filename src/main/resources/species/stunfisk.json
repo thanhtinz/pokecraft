@@ -19,31 +19,47 @@
   "modelId": "stunfisk",
   "learnset": {
     "1": [
-      "tackle"
+      "mud_slap",
+      "mud_sport",
+      "bide",
+      "thunder_shock",
+      "camouflage",
+      "mud_bomb",
+      "tackle",
+      "water_gun"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "endure"
     ],
-    "8": [
-      "sand_tomb"
+    "10": [
+      "mud_shot"
     ],
-    "14": [
-      "thunder_shock"
+    "15": [
+      "revenge"
     ],
     "20": [
-      "dig"
+      "charge"
     ],
-    "32": [
-      "spark"
+    "25": [
+      "sucker_punch"
+    ],
+    "30": [
+      "electric_terrain"
+    ],
+    "35": [
+      "bounce"
     ],
     "40": [
-      "earthquake"
+      "muddy_water"
     ],
-    "48": [
-      "thunderbolt"
+    "45": [
+      "discharge"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "flail"
+    ],
+    "55": [
+      "fissure"
     ]
   },
   "evolution": null,

@@ -18,28 +18,41 @@
   "modelId": "torracat",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "scratch",
+      "ember",
+      "growl",
+      "lick",
       "leer"
     ],
-    "8": [
-      "ember"
+    "9": [
+      "roar"
     ],
-    "14": [
-      "fire_spin"
+    "12": [
+      "fury_swipes"
+    ],
+    "15": [
+      "bite"
     ],
     "20": [
-      "fire_punch"
+      "double_kick"
     ],
-    "32": [
-      "flamethrower"
+    "25": [
+      "fire_fang"
+    ],
+    "30": [
+      "scary_face"
+    ],
+    "35": [
+      "swagger"
     ],
     "40": [
-      "fire_blast"
+      "flamethrower"
     ],
-    "26": [
-      "agility"
+    "45": [
+      "thrash"
+    ],
+    "50": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

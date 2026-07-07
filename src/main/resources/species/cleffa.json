@@ -18,19 +18,24 @@
   "modelId": "cleffa",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "copycat",
+      "splash"
     ],
     "4": [
       "sing"
     ],
     "8": [
-      "fairy_wind"
+      "sweet_kiss"
     ],
-    "14": [
-      "dazzling_gleam"
+    "12": [
+      "disarming_voice"
     ],
-    "26": [
-      "calm_mind"
+    "16": [
+      "encore"
+    ],
+    "20": [
+      "charm"
     ]
   },
   "evolution": null,

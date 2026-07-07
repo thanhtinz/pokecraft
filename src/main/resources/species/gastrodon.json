@@ -19,31 +19,33 @@
   "modelId": "gastrodon",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
+      "mud_slap",
+      "mud_sport",
+      "harden",
+      "mud_bomb",
+      "recover",
       "water_gun"
     ],
+    "15": [
+      "water_pulse"
+    ],
     "20": [
-      "dig"
+      "ancient_power"
     ],
-    "32": [
-      "bubble_beam"
+    "25": [
+      "body_slam"
     ],
-    "40": [
-      "earthquake"
+    "33": [
+      "muddy_water"
     ],
-    "48": [
-      "waterfall"
+    "39": [
+      "earth_power"
     ],
-    "26": [
-      "calm_mind"
+    "46": [
+      "rain_dance"
+    ],
+    "53": [
+      "memento"
     ]
   },
   "evolution": null,

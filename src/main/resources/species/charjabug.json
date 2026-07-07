@@ -19,31 +19,34 @@
   "modelId": "charjabug",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
+      "charge",
+      "string_shot",
+      "mud_slap",
       "bug_bite"
     ],
-    "20": [
+    "15": [
+      "bite"
+    ],
+    "23": [
       "spark"
     ],
-    "32": [
-      "pin_missile"
+    "29": [
+      "sticky_web"
     ],
-    "40": [
-      "thunderbolt"
+    "36": [
+      "x_scissor"
     ],
-    "48": [
-      "thunder"
+    "43": [
+      "crunch"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "dig"
+    ],
+    "57": [
+      "iron_defense"
+    ],
+    "64": [
+      "discharge"
     ]
   },
   "evolution": null,

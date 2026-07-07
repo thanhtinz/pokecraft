@@ -18,28 +18,13 @@
   "modelId": "feebas",
   "learnset": {
     "1": [
-      "scratch"
+      "splash"
     ],
-    "4": [
-      "tail_whip"
+    "15": [
+      "tackle"
     ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "bubble_beam"
-    ],
-    "20": [
-      "waterfall"
-    ],
-    "32": [
-      "surf"
-    ],
-    "40": [
-      "hydro_pump"
-    ],
-    "26": [
-      "agility"
+    "25": [
+      "flail"
     ]
   },
   "evolution": null,

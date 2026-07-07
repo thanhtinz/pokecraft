@@ -18,22 +18,43 @@
   "modelId": "shuppet",
   "learnset": {
     "1": [
-      "pound"
+      "astonish"
     ],
     "4": [
-      "hypnosis"
+      "screech"
     ],
-    "8": [
-      "lick"
-    ],
-    "14": [
+    "7": [
       "night_shade"
     ],
-    "20": [
-      "shadow_ball"
+    "10": [
+      "spite"
+    ],
+    "16": [
+      "will_o_wisp"
+    ],
+    "19": [
+      "feint_attack"
+    ],
+    "22": [
+      "hex"
     ],
     "26": [
-      "swords_dance"
+      "curse"
+    ],
+    "30": [
+      "shadow_ball"
+    ],
+    "34": [
+      "role_play"
+    ],
+    "38": [
+      "sucker_punch"
+    ],
+    "42": [
+      "trick"
+    ],
+    "48": [
+      "phantom_force"
     ]
   },
   "evolution": null,

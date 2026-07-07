@@ -19,30 +19,41 @@
   "modelId": "emolga",
   "learnset": {
     "1": [
-      "pound"
+      "tail_whip",
+      "pursuit",
+      "nuzzle"
     ],
-    "4": [
-      "thunder_wave"
+    "5": [
+      "double_team"
     ],
-    "8": [
-      "peck"
+    "10": [
+      "quick_attack"
     ],
-    "14": [
+    "15": [
       "thunder_shock"
     ],
     "20": [
-      "gust"
+      "charge"
     ],
-    "32": [
+    "25": [
+      "acrobatics"
+    ],
+    "30": [
       "spark"
     ],
+    "35": [
+      "encore"
+    ],
     "40": [
-      "wing_attack"
+      "volt_switch"
     ],
-    "48": [
-      "thunderbolt"
+    "45": [
+      "light_screen"
     ],
-    "26": [
+    "50": [
+      "discharge"
+    ],
+    "55": [
       "agility"
     ]
   },

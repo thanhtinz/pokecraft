@@ -18,28 +18,35 @@
   "modelId": "sobble",
   "learnset": {
     "1": [
-      "tackle"
+      "pound",
+      "growl"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+    "6": [
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "8": [
+      "bind"
+    ],
+    "12": [
+      "water_pulse"
+    ],
+    "17": [
+      "tearful_look"
     ],
     "20": [
-      "waterfall"
+      "sucker_punch"
+    ],
+    "24": [
+      "u_turn"
+    ],
+    "28": [
+      "liquidation"
     ],
     "32": [
-      "surf"
+      "soak"
     ],
-    "40": [
-      "hydro_pump"
-    ],
-    "26": [
-      "calm_mind"
+    "36": [
+      "rain_dance"
     ]
   },
   "evolution": null,

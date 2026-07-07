@@ -19,31 +19,52 @@
   "modelId": "quaquaval",
   "learnset": {
     "1": [
-      "pound"
+      "aqua_step",
+      "pound",
+      "growl",
+      "water_gun",
+      "double_hit",
+      "counter"
     ],
-    "4": [
-      "tail_whip"
+    "7": [
+      "work_up"
     ],
-    "8": [
-      "water_gun"
+    "10": [
+      "wing_attack"
     ],
-    "14": [
-      "karate_chop"
+    "13": [
+      "aqua_jet"
     ],
-    "20": [
-      "bubble_beam"
+    "17": [
+      "low_sweep",
+      "water_pulse"
+    ],
+    "21": [
+      "aqua_cutter"
+    ],
+    "27": [
+      "air_slash"
     ],
     "32": [
-      "low_kick"
+      "focus_energy"
     ],
-    "40": [
-      "waterfall"
+    "38": [
+      "mega_kick"
     ],
-    "48": [
-      "brick_break"
+    "43": [
+      "acrobatics"
     ],
-    "26": [
-      "swords_dance"
+    "47": [
+      "liquidation"
+    ],
+    "52": [
+      "feather_dance"
+    ],
+    "58": [
+      "close_combat"
+    ],
+    "64": [
+      "wave_crash"
     ]
   },
   "evolution": null,

@@ -19,28 +19,41 @@
   "modelId": "crustle",
   "learnset": {
     "1": [
-      "tackle"
+      "withdraw",
+      "sand_attack",
+      "feint_attack",
+      "smack_down",
+      "fury_cutter"
     ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
+    "12": [
       "bug_bite"
     ],
-    "14": [
-      "rock_throw"
+    "16": [
+      "flail"
     ],
     "20": [
-      "pin_missile"
+      "slash"
     ],
-    "32": [
+    "24": [
       "rock_slide"
     ],
-    "40": [
-      "stone_edge"
+    "28": [
+      "stealth_rock"
     ],
-    "26": [
-      "harden"
+    "32": [
+      "rock_blast"
+    ],
+    "38": [
+      "x_scissor"
+    ],
+    "44": [
+      "rock_polish"
+    ],
+    "50": [
+      "shell_smash"
+    ],
+    "56": [
+      "rock_wrecker"
     ]
   },
   "evolution": null,

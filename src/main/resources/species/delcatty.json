@@ -18,31 +18,28 @@
   "modelId": "delcatty",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "hyper_fang"
-    ],
-    "20": [
-      "mega_punch"
-    ],
-    "32": [
-      "body_slam"
-    ],
-    "40": [
-      "double_edge"
-    ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "agility"
+      "fake_out",
+      "attract",
+      "sing",
+      "double_slap",
+      "heal_bell",
+      "facade",
+      "payback",
+      "covet",
+      "charm",
+      "play_rough",
+      "growl",
+      "tail_whip",
+      "tackle",
+      "disarming_voice",
+      "fury_swipes",
+      "copycat",
+      "double_edge",
+      "baby_doll_eyes",
+      "captivate",
+      "foresight",
+      "assist",
+      "feint_attack"
     ]
   },
   "evolution": null,

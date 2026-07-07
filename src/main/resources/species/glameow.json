@@ -18,31 +18,46 @@
   "modelId": "glameow",
   "learnset": {
     "1": [
-      "pound"
+      "fake_out"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "scratch"
     ],
     "8": [
-      "quick_attack"
+      "growl"
     ],
-    "14": [
-      "hyper_fang"
+    "13": [
+      "hypnosis"
+    ],
+    "17": [
+      "feint_attack"
     ],
     "20": [
-      "mega_punch"
+      "fury_swipes"
+    ],
+    "25": [
+      "charm"
+    ],
+    "29": [
+      "assist"
     ],
     "32": [
-      "body_slam"
+      "captivate"
     ],
-    "40": [
-      "double_edge"
+    "37": [
+      "slash"
+    ],
+    "41": [
+      "sucker_punch"
+    ],
+    "44": [
+      "attract"
     ],
     "48": [
-      "hyper_beam"
+      "hone_claws"
     ],
-    "26": [
-      "agility"
+    "50": [
+      "play_rough"
     ]
   },
   "evolution": null,

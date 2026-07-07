@@ -19,31 +19,42 @@
   "modelId": "cradily",
   "learnset": {
     "1": [
-      "scratch"
+      "astonish",
+      "constrict",
+      "acid",
+      "confuse_ray",
+      "wring_out",
+      "leech_seed",
+      "wrap"
     ],
-    "4": [
-      "harden"
+    "12": [
+      "ingrain"
     ],
-    "8": [
-      "rock_throw"
-    ],
-    "14": [
-      "vine_whip"
+    "16": [
+      "ancient_power"
     ],
     "20": [
-      "rock_slide"
+      "mega_drain"
+    ],
+    "24": [
+      "brine"
+    ],
+    "28": [
+      "amnesia"
     ],
     "32": [
-      "razor_leaf"
+      "gastro_acid"
     ],
-    "40": [
-      "stone_edge"
+    "36": [
+      "giga_drain"
+    ],
+    "43": [
+      "stockpile",
+      "spit_up",
+      "swallow"
     ],
     "48": [
-      "seed_bomb"
-    ],
-    "26": [
-      "harden"
+      "energy_ball"
     ]
   },
   "evolution": null,

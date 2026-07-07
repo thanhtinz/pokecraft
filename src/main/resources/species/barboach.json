@@ -19,31 +19,36 @@
   "modelId": "barboach",
   "learnset": {
     "1": [
-      "tackle"
+      "mud_slap",
+      "mud_sport",
+      "water_sport",
+      "water_gun",
+      "mud_bomb"
     ],
-    "4": [
-      "tail_whip"
+    "6": [
+      "rest",
+      "snore"
     ],
-    "8": [
-      "sand_tomb"
+    "12": [
+      "water_pulse"
     ],
-    "14": [
-      "water_gun"
+    "18": [
+      "amnesia"
     ],
-    "20": [
-      "dig"
+    "24": [
+      "aqua_tail"
     ],
-    "32": [
-      "bubble_beam"
+    "31": [
+      "muddy_water"
     ],
-    "40": [
+    "36": [
       "earthquake"
     ],
-    "48": [
-      "waterfall"
+    "42": [
+      "future_sight"
     ],
-    "26": [
-      "agility"
+    "48": [
+      "fissure"
     ]
   },
   "evolution": null,

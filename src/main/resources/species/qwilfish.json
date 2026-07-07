@@ -19,31 +19,52 @@
   "modelId": "qwilfish",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "poison_sting",
+      "bubble"
     ],
     "4": [
-      "tail_whip"
+      "harden"
     ],
     "8": [
-      "poison_sting"
-    ],
-    "14": [
       "water_gun"
     ],
+    "12": [
+      "fell_stinger"
+    ],
+    "16": [
+      "minimize"
+    ],
     "20": [
-      "acid"
+      "spikes"
+    ],
+    "24": [
+      "brine"
+    ],
+    "28": [
+      "poison_jab"
     ],
     "32": [
-      "bubble_beam"
+      "pin_missile"
+    ],
+    "36": [
+      "toxic_spikes"
     ],
     "40": [
-      "sludge"
+      "stockpile",
+      "spit_up"
+    ],
+    "44": [
+      "toxic"
     ],
     "48": [
-      "waterfall"
+      "aqua_tail"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "acupressure"
+    ],
+    "56": [
+      "destiny_bond"
     ]
   },
   "evolution": null,

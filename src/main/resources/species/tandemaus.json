@@ -18,31 +18,44 @@
   "modelId": "tandemaus",
   "learnset": {
     "1": [
-      "tackle"
+      "pound",
+      "baby_doll_eyes"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "echoed_voice"
     ],
     "8": [
-      "quick_attack"
+      "helping_hand"
+    ],
+    "11": [
+      "super_fang"
     ],
     "14": [
-      "hyper_fang"
+      "double_hit"
     ],
-    "20": [
-      "mega_punch"
+    "18": [
+      "bullet_seed"
     ],
-    "32": [
-      "body_slam"
-    ],
-    "40": [
-      "double_edge"
-    ],
-    "48": [
-      "hyper_beam"
+    "22": [
+      "encore"
     ],
     "26": [
-      "agility"
+      "play_rough"
+    ],
+    "30": [
+      "hyper_voice"
+    ],
+    "33": [
+      "charm"
+    ],
+    "37": [
+      "beat_up"
+    ],
+    "41": [
+      "copycat"
+    ],
+    "46": [
+      "population_bomb"
     ]
   },
   "evolution": null,

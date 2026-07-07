@@ -19,31 +19,55 @@
   "modelId": "hydreigon",
   "learnset": {
     "1": [
-      "pound"
+      "tri_attack",
+      "dragon_rage",
+      "focus_energy",
+      "bite",
+      "dragon_breath",
+      "tackle",
+      "double_hit"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "roar"
     ],
-    "8": [
-      "twister"
-    ],
-    "14": [
-      "bite"
+    "16": [
+      "assurance"
     ],
     "20": [
-      "dragon_breath"
+      "headbutt"
+    ],
+    "24": [
+      "work_up"
+    ],
+    "28": [
+      "slam"
     ],
     "32": [
       "crunch"
     ],
+    "36": [
+      "scary_face"
+    ],
     "40": [
-      "dragon_claw"
+      "dragon_pulse"
+    ],
+    "44": [
+      "body_slam"
     ],
     "48": [
+      "hyper_voice"
+    ],
+    "54": [
+      "dragon_rush"
+    ],
+    "60": [
+      "nasty_plot"
+    ],
+    "68": [
       "outrage"
     ],
-    "26": [
-      "calm_mind"
+    "76": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

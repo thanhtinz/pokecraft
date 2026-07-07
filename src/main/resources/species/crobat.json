@@ -19,31 +19,42 @@
   "modelId": "crobat",
   "learnset": {
     "1": [
-      "scratch"
+      "cross_poison",
+      "screech",
+      "supersonic",
+      "astonish",
+      "wing_attack",
+      "mean_look",
+      "tailwind",
+      "absorb",
+      "toxic"
     ],
-    "4": [
-      "poison_powder"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "poison_sting"
+    "15": [
+      "poison_fang"
     ],
     "20": [
-      "gust"
+      "quick_guard"
     ],
-    "32": [
-      "acid"
+    "27": [
+      "air_cutter"
     ],
-    "40": [
-      "wing_attack"
+    "34": [
+      "bite"
+    ],
+    "41": [
+      "haze"
     ],
     "48": [
-      "sludge"
+      "venoshock"
     ],
-    "26": [
-      "agility"
+    "55": [
+      "confuse_ray"
+    ],
+    "62": [
+      "air_slash"
+    ],
+    "69": [
+      "leech_life"
     ]
   },
   "evolution": null,

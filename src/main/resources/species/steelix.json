@@ -19,28 +19,62 @@
   "modelId": "steelix",
   "learnset": {
     "1": [
-      "scratch"
+      "thunder_fang",
+      "ice_fang",
+      "fire_fang",
+      "mud_sport",
+      "tackle",
+      "harden",
+      "bind",
+      "rock_throw",
+      "rage",
+      "rock_polish",
+      "crunch"
     ],
     "4": [
-      "harden"
+      "smack_down"
     ],
     "8": [
-      "steel_wing"
+      "autotomize"
     ],
-    "14": [
-      "sand_tomb"
+    "12": [
+      "dragon_breath"
+    ],
+    "16": [
+      "curse"
     ],
     "20": [
-      "iron_head"
+      "rock_slide"
+    ],
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "sand_tomb"
     ],
     "32": [
-      "dig"
+      "stealth_rock"
+    ],
+    "36": [
+      "slam"
     ],
     "40": [
-      "earthquake"
+      "sandstorm"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "dig"
+    ],
+    "48": [
+      "iron_tail"
+    ],
+    "52": [
+      "stone_edge"
+    ],
+    "56": [
+      "double_edge"
+    ],
+    "60": [
+      "magnet_rise"
     ]
   },
   "evolution": null,

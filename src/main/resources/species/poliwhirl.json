@@ -18,28 +18,36 @@
   "modelId": "poliwhirl",
   "learnset": {
     "1": [
-      "scratch"
+      "water_sport",
+      "bubble",
+      "hypnosis",
+      "water_gun",
+      "double_slap",
+      "mud_shot",
+      "wake_up_slap",
+      "mud_bomb",
+      "pound"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
+    "18": [
       "bubble_beam"
     ],
-    "20": [
-      "waterfall"
+    "24": [
+      "rain_dance"
     ],
     "32": [
-      "surf"
+      "body_slam"
     ],
     "40": [
+      "earth_power"
+    ],
+    "48": [
       "hydro_pump"
     ],
-    "26": [
-      "agility"
+    "56": [
+      "belly_drum"
+    ],
+    "66": [
+      "double_edge"
     ]
   },
   "evolution": null,

@@ -19,31 +19,47 @@
   "modelId": "hydrapple",
   "learnset": {
     "1": [
-      "pound"
+      "fickle_beam",
+      "withdraw",
+      "sweet_scent",
+      "recycle",
+      "astonish",
+      "yawn",
+      "double_hit",
+      "infestation"
     ],
     "4": [
-      "sleep_powder"
+      "dragon_tail"
     ],
     "8": [
-      "twister"
+      "growth"
     ],
-    "14": [
-      "vine_whip"
-    ],
-    "20": [
+    "12": [
       "dragon_breath"
     ],
+    "16": [
+      "protect"
+    ],
+    "20": [
+      "bullet_seed"
+    ],
+    "28": [
+      "syrup_bomb"
+    ],
     "32": [
-      "razor_leaf"
+      "dragon_pulse"
+    ],
+    "36": [
+      "recover"
     ],
     "40": [
-      "dragon_claw"
+      "energy_ball"
     ],
-    "48": [
-      "seed_bomb"
+    "44": [
+      "substitute"
     ],
-    "26": [
-      "calm_mind"
+    "54": [
+      "power_whip"
     ]
   },
   "evolution": null,

@@ -18,22 +18,28 @@
   "modelId": "chingling",
   "learnset": {
     "1": [
-      "scratch"
+      "wrap"
     ],
     "4": [
-      "hypnosis"
+      "growl"
     ],
-    "8": [
+    "7": [
+      "astonish"
+    ],
+    "10": [
       "confusion"
     ],
-    "14": [
-      "psybeam"
+    "13": [
+      "yawn"
     ],
-    "20": [
-      "psychic"
+    "16": [
+      "last_resort"
     ],
-    "26": [
-      "calm_mind"
+    "19": [
+      "entrainment"
+    ],
+    "32": [
+      "uproar"
     ]
   },
   "evolution": null,

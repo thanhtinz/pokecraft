@@ -19,24 +19,44 @@
   "modelId": "scizor",
   "learnset": {
     "1": [
-      "pound"
+      "bullet_punch",
+      "quick_attack",
+      "leer",
+      "pursuit",
+      "false_swipe",
+      "agility",
+      "fury_cutter",
+      "razor_wind",
+      "night_slash",
+      "feint",
+      "wing_attack",
+      "air_slash"
     ],
-    "4": [
-      "string_shot"
+    "12": [
+      "metal_claw"
     ],
-    "8": [
-      "bug_bite"
-    ],
-    "14": [
-      "steel_wing"
+    "16": [
+      "double_team"
     ],
     "20": [
-      "pin_missile"
+      "double_hit"
+    ],
+    "24": [
+      "slash"
+    ],
+    "28": [
+      "focus_energy"
     ],
     "32": [
+      "iron_defense"
+    ],
+    "36": [
       "iron_head"
     ],
-    "26": [
+    "40": [
+      "x_scissor"
+    ],
+    "44": [
       "swords_dance"
     ]
   },

@@ -18,19 +18,46 @@
   "modelId": "slurpuff",
   "learnset": {
     "1": [
-      "scratch"
+      "sweet_scent",
+      "tackle",
+      "fairy_wind",
+      "play_nice"
     ],
-    "4": [
-      "sing"
+    "9": [
+      "aromatherapy"
     ],
-    "8": [
-      "fairy_wind"
+    "12": [
+      "draining_kiss"
     ],
-    "14": [
-      "dazzling_gleam"
+    "15": [
+      "fake_tears"
     ],
-    "26": [
-      "harden"
+    "18": [
+      "round"
+    ],
+    "21": [
+      "string_shot"
+    ],
+    "24": [
+      "cotton_spore"
+    ],
+    "27": [
+      "energy_ball"
+    ],
+    "30": [
+      "wish"
+    ],
+    "33": [
+      "play_rough"
+    ],
+    "36": [
+      "cotton_guard"
+    ],
+    "39": [
+      "endeavor"
+    ],
+    "42": [
+      "sticky_web"
     ]
   },
   "evolution": null,

@@ -18,25 +18,39 @@
   "modelId": "nidorino",
   "learnset": {
     "1": [
-      "tackle"
+      "leer",
+      "peck",
+      "focus_energy",
+      "poison_sting",
+      "horn_drill",
+      "captivate"
     ],
-    "4": [
-      "poison_powder"
+    "15": [
+      "fury_attack"
     ],
-    "8": [
-      "poison_sting"
+    "22": [
+      "toxic_spikes"
     ],
-    "14": [
-      "acid"
+    "29": [
+      "double_kick"
     ],
-    "20": [
-      "sludge"
+    "36": [
+      "horn_attack"
     ],
-    "32": [
-      "sludge_bomb"
+    "43": [
+      "helping_hand"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "toxic"
+    ],
+    "57": [
+      "flatter"
+    ],
+    "64": [
+      "poison_jab"
+    ],
+    "71": [
+      "earth_power"
     ]
   },
   "evolution": null,

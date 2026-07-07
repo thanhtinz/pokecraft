@@ -19,31 +19,43 @@
   "modelId": "toxicroak",
   "learnset": {
     "1": [
-      "scratch"
+      "astonish",
+      "mud_slap",
+      "poison_sting",
+      "taunt",
+      "pursuit",
+      "feint_attack",
+      "mud_bomb"
     ],
-    "4": [
-      "poison_powder"
+    "12": [
+      "flatter"
     ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "karate_chop"
-    ],
-    "20": [
-      "acid"
-    ],
-    "32": [
+    "16": [
       "low_kick"
     ],
-    "40": [
-      "sludge"
+    "20": [
+      "venoshock"
+    ],
+    "24": [
+      "sucker_punch"
+    ],
+    "28": [
+      "swagger"
+    ],
+    "32": [
+      "poison_jab"
+    ],
+    "36": [
+      "toxic"
+    ],
+    "42": [
+      "nasty_plot"
     ],
     "48": [
-      "brick_break"
+      "sludge_bomb"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "belch"
     ]
   },
   "evolution": null,

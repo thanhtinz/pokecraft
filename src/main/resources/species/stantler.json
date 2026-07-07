@@ -18,31 +18,46 @@
   "modelId": "stantler",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "me_first",
+      "jump_kick",
+      "captivate"
     ],
-    "4": [
-      "growl"
+    "3": [
+      "leer"
     ],
-    "8": [
-      "quick_attack"
+    "7": [
+      "astonish"
     ],
-    "14": [
-      "hyper_fang"
+    "10": [
+      "hypnosis"
     ],
-    "20": [
-      "mega_punch"
+    "13": [
+      "stomp"
+    ],
+    "16": [
+      "sand_attack"
+    ],
+    "21": [
+      "psyshield_bash"
+    ],
+    "23": [
+      "confuse_ray"
+    ],
+    "27": [
+      "calm_mind"
     ],
     "32": [
-      "body_slam"
+      "role_play"
     ],
-    "40": [
+    "37": [
+      "zen_headbutt"
+    ],
+    "49": [
+      "imprison"
+    ],
+    "55": [
       "double_edge"
-    ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

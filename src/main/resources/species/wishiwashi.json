@@ -18,28 +18,45 @@
   "modelId": "wishiwashi",
   "learnset": {
     "1": [
-      "pound"
+      "water_gun",
+      "growl",
+      "feint_attack"
     ],
     "4": [
-      "tail_whip"
+      "helping_hand"
     ],
     "8": [
-      "water_gun"
+      "beat_up"
     ],
-    "14": [
-      "bubble_beam"
+    "12": [
+      "brine"
+    ],
+    "16": [
+      "tearful_look"
     ],
     "20": [
-      "waterfall"
+      "dive"
+    ],
+    "24": [
+      "soak"
+    ],
+    "28": [
+      "uproar"
     ],
     "32": [
-      "surf"
+      "aqua_tail"
+    ],
+    "36": [
+      "aqua_ring"
     ],
     "40": [
+      "endeavor"
+    ],
+    "44": [
       "hydro_pump"
     ],
-    "26": [
-      "agility"
+    "48": [
+      "double_edge"
     ]
   },
   "evolution": null,

@@ -19,31 +19,42 @@
   "modelId": "murkrow",
   "learnset": {
     "1": [
-      "tackle"
+      "peck",
+      "astonish",
+      "pursuit"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "bite"
-    ],
-    "14": [
-      "peck"
-    ],
-    "20": [
-      "crunch"
-    ],
-    "32": [
+    "5": [
       "gust"
     ],
-    "40": [
+    "11": [
+      "haze"
+    ],
+    "15": [
       "wing_attack"
     ],
-    "48": [
-      "drill_peck"
+    "21": [
+      "night_shade"
     ],
-    "26": [
-      "agility"
+    "25": [
+      "assurance"
+    ],
+    "31": [
+      "taunt"
+    ],
+    "35": [
+      "feint_attack"
+    ],
+    "40": [
+      "foul_play"
+    ],
+    "50": [
+      "sucker_punch"
+    ],
+    "55": [
+      "torment"
+    ],
+    "60": [
+      "quash"
     ]
   },
   "evolution": null,

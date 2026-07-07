@@ -18,25 +18,54 @@
   "modelId": "voltorb",
   "learnset": {
     "1": [
-      "scratch"
+      "charge",
+      "tackle",
+      "sonic_boom"
     ],
     "4": [
-      "thunder_wave"
-    ],
-    "8": [
       "thunder_shock"
     ],
-    "14": [
+    "6": [
+      "eerie_impulse"
+    ],
+    "9": [
       "spark"
     ],
-    "20": [
-      "thunderbolt"
+    "11": [
+      "rollout"
     ],
-    "32": [
-      "thunder"
+    "13": [
+      "screech"
+    ],
+    "16": [
+      "charge_beam"
+    ],
+    "20": [
+      "swift"
+    ],
+    "22": [
+      "electro_ball"
     ],
     "26": [
-      "agility"
+      "self_destruct"
+    ],
+    "29": [
+      "light_screen"
+    ],
+    "34": [
+      "magnet_rise"
+    ],
+    "37": [
+      "discharge"
+    ],
+    "41": [
+      "explosion"
+    ],
+    "46": [
+      "gyro_ball"
+    ],
+    "50": [
+      "mirror_coat"
     ]
   },
   "evolution": null,

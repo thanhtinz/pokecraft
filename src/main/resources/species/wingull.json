@@ -19,31 +19,35 @@
   "modelId": "wingull",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "growl",
       "water_gun"
     ],
-    "14": [
-      "peck"
+    "5": [
+      "quick_attack"
     ],
-    "20": [
-      "bubble_beam"
+    "10": [
+      "supersonic"
     ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "waterfall"
-    ],
-    "48": [
+    "15": [
       "wing_attack"
     ],
+    "20": [
+      "water_pulse"
+    ],
     "26": [
-      "agility"
+      "pursuit"
+    ],
+    "30": [
+      "air_slash"
+    ],
+    "35": [
+      "mist"
+    ],
+    "40": [
+      "roost"
+    ],
+    "45": [
+      "hurricane"
     ]
   },
   "evolution": null,

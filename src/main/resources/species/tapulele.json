@@ -19,28 +19,54 @@
   "modelId": "tapulele",
   "learnset": {
     "1": [
-      "tackle"
+      "astonish",
+      "confusion",
+      "psywave"
     ],
-    "4": [
-      "hypnosis"
+    "5": [
+      "withdraw"
     ],
-    "8": [
-      "confusion"
+    "10": [
+      "aromatherapy"
     ],
-    "14": [
-      "fairy_wind"
+    "15": [
+      "draining_kiss"
     ],
     "20": [
       "psybeam"
     ],
-    "32": [
-      "dazzling_gleam"
+    "25": [
+      "flatter"
+    ],
+    "30": [
+      "aromatic_mist"
+    ],
+    "35": [
+      "sweet_scent"
     ],
     "40": [
-      "psychic"
+      "extrasensory"
     ],
-    "26": [
-      "calm_mind"
+    "45": [
+      "psyshock"
+    ],
+    "50": [
+      "mean_look"
+    ],
+    "55": [
+      "natures_madness"
+    ],
+    "60": [
+      "moonblast"
+    ],
+    "65": [
+      "tickle"
+    ],
+    "70": [
+      "skill_swap"
+    ],
+    "75": [
+      "psychic_terrain"
     ]
   },
   "evolution": null,

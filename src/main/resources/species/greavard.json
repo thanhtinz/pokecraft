@@ -18,22 +18,45 @@
   "modelId": "greavard",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "growl"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
+    "3": [
       "lick"
     ],
-    "14": [
-      "night_shade"
+    "6": [
+      "tail_whip",
+      "bite"
     ],
-    "20": [
-      "shadow_ball"
+    "9": [
+      "roar"
     ],
-    "26": [
-      "swords_dance"
+    "12": [
+      "headbutt"
+    ],
+    "16": [
+      "dig"
+    ],
+    "24": [
+      "rest"
+    ],
+    "28": [
+      "crunch"
+    ],
+    "32": [
+      "play_rough"
+    ],
+    "37": [
+      "helping_hand"
+    ],
+    "41": [
+      "phantom_force"
+    ],
+    "46": [
+      "charm"
+    ],
+    "52": [
+      "double_edge"
     ]
   },
   "evolution": null,

@@ -19,31 +19,38 @@
   "modelId": "trumbeak",
   "learnset": {
     "1": [
-      "tackle"
+      "rock_blast",
+      "peck",
+      "growl",
+      "echoed_voice",
+      "rock_smash"
     ],
-    "4": [
-      "growl"
+    "13": [
+      "supersonic"
     ],
-    "8": [
-      "quick_attack"
+    "16": [
+      "pluck"
     ],
-    "14": [
-      "peck"
+    "21": [
+      "roost"
     ],
-    "20": [
-      "hyper_fang"
+    "24": [
+      "fury_attack"
+    ],
+    "29": [
+      "screech"
     ],
     "32": [
-      "gust"
+      "drill_peck"
+    ],
+    "37": [
+      "bullet_seed"
     ],
     "40": [
-      "mega_punch"
+      "feather_dance"
     ],
-    "48": [
-      "wing_attack"
-    ],
-    "26": [
-      "swords_dance"
+    "45": [
+      "hyper_voice"
     ]
   },
   "evolution": null,

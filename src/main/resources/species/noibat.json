@@ -19,31 +19,47 @@
   "modelId": "noibat",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "absorb"
     ],
     "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "twister"
-    ],
-    "20": [
       "gust"
     ],
-    "32": [
-      "dragon_breath"
+    "8": [
+      "supersonic"
     ],
-    "40": [
+    "12": [
+      "double_team"
+    ],
+    "16": [
       "wing_attack"
     ],
-    "48": [
-      "dragon_claw"
+    "20": [
+      "bite"
     ],
-    "26": [
-      "agility"
+    "24": [
+      "air_cutter"
+    ],
+    "28": [
+      "whirlwind"
+    ],
+    "32": [
+      "super_fang"
+    ],
+    "36": [
+      "air_slash"
+    ],
+    "40": [
+      "screech"
+    ],
+    "44": [
+      "roost"
+    ],
+    "49": [
+      "tailwind"
+    ],
+    "52": [
+      "hurricane"
     ]
   },
   "evolution": null,

@@ -18,28 +18,45 @@
   "modelId": "piplup",
   "learnset": {
     "1": [
-      "tackle"
+      "pound",
+      "bubble",
+      "water_sport"
     ],
     "4": [
-      "tail_whip"
+      "growl"
     ],
     "8": [
       "water_gun"
     ],
-    "14": [
+    "11": [
+      "charm"
+    ],
+    "15": [
+      "peck"
+    ],
+    "18": [
       "bubble_beam"
     ],
-    "20": [
-      "waterfall"
+    "22": [
+      "bide"
+    ],
+    "25": [
+      "fury_attack"
+    ],
+    "29": [
+      "brine"
     ],
     "32": [
-      "surf"
+      "whirlpool"
     ],
-    "40": [
+    "36": [
+      "mist"
+    ],
+    "39": [
+      "drill_peck"
+    ],
+    "43": [
       "hydro_pump"
-    ],
-    "26": [
-      "calm_mind"
     ]
   },
   "evolution": null,

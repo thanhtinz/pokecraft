@@ -19,31 +19,42 @@
   "modelId": "dartrix",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "leafage",
+      "growl",
+      "astonish",
+      "foresight",
+      "fury_attack"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
+    "9": [
       "peck"
     ],
-    "14": [
-      "vine_whip"
+    "12": [
+      "shadow_sneak"
     ],
-    "20": [
-      "gust"
-    ],
-    "32": [
+    "15": [
       "razor_leaf"
     ],
+    "20": [
+      "synthesis"
+    ],
+    "25": [
+      "pluck"
+    ],
+    "30": [
+      "nasty_plot"
+    ],
+    "35": [
+      "sucker_punch"
+    ],
     "40": [
-      "wing_attack"
+      "leaf_blade"
     ],
-    "48": [
-      "seed_bomb"
+    "45": [
+      "feather_dance"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "brave_bird"
     ]
   },
   "evolution": null,

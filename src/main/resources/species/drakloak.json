@@ -19,31 +19,47 @@
   "modelId": "drakloak",
   "learnset": {
     "1": [
-      "scratch"
+      "dragon_pulse",
+      "astonish",
+      "infestation",
+      "quick_attack",
+      "bite"
     ],
-    "4": [
-      "leer"
+    "6": [
+      "lock_on"
     ],
-    "8": [
-      "twister"
+    "12": [
+      "assurance"
     ],
-    "14": [
-      "lick"
+    "18": [
+      "hex"
     ],
-    "20": [
-      "dragon_breath"
+    "24": [
+      "agility"
     ],
-    "32": [
-      "night_shade"
+    "30": [
+      "double_hit"
     ],
-    "40": [
-      "dragon_claw"
+    "36": [
+      "u_turn"
+    ],
+    "42": [
+      "dragon_dance"
     ],
     "48": [
-      "shadow_ball"
+      "phantom_force"
     ],
-    "26": [
-      "agility"
+    "54": [
+      "take_down"
+    ],
+    "61": [
+      "dragon_rush"
+    ],
+    "66": [
+      "double_edge"
+    ],
+    "72": [
+      "last_resort"
     ]
   },
   "evolution": null,

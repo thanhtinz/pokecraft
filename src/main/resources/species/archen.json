@@ -19,31 +19,54 @@
   "modelId": "archen",
   "learnset": {
     "1": [
-      "pound"
+      "quick_attack",
+      "leer",
+      "double_team"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
+    "3": [
       "rock_throw"
     ],
-    "14": [
-      "peck"
-    ],
-    "20": [
-      "rock_slide"
-    ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "stone_edge"
-    ],
-    "48": [
+    "6": [
       "wing_attack"
     ],
-    "26": [
-      "swords_dance"
+    "9": [
+      "dragon_breath"
+    ],
+    "12": [
+      "ancient_power"
+    ],
+    "15": [
+      "pluck"
+    ],
+    "18": [
+      "quick_guard"
+    ],
+    "21": [
+      "u_turn"
+    ],
+    "24": [
+      "rock_slide"
+    ],
+    "27": [
+      "scary_face"
+    ],
+    "30": [
+      "crunch"
+    ],
+    "33": [
+      "agility"
+    ],
+    "36": [
+      "tailwind"
+    ],
+    "39": [
+      "dragon_claw"
+    ],
+    "42": [
+      "thrash"
+    ],
+    "45": [
+      "endeavor"
     ]
   },
   "evolution": null,

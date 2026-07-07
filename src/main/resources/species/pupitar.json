@@ -19,31 +19,48 @@
   "modelId": "pupitar",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
+      "leer",
+      "payback",
+      "iron_defense",
+      "chip_away",
+      "tackle",
       "rock_throw"
     ],
-    "20": [
-      "dig"
+    "9": [
+      "bite"
     ],
-    "32": [
+    "12": [
+      "scary_face"
+    ],
+    "15": [
       "rock_slide"
     ],
-    "40": [
+    "18": [
+      "stomping_tantrum"
+    ],
+    "21": [
+      "screech"
+    ],
+    "24": [
+      "smack_down"
+    ],
+    "27": [
+      "crunch"
+    ],
+    "33": [
       "earthquake"
     ],
-    "48": [
+    "37": [
       "stone_edge"
     ],
-    "26": [
-      "swords_dance"
+    "42": [
+      "thrash"
+    ],
+    "47": [
+      "sandstorm"
+    ],
+    "52": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

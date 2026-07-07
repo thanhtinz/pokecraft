@@ -18,31 +18,49 @@
   "modelId": "regigigas",
   "learnset": {
     "1": [
-      "tackle"
+      "dizzy_punch",
+      "confuse_ray",
+      "foresight",
+      "pound"
     ],
-    "4": [
-      "growl"
+    "6": [
+      "payback"
     ],
-    "8": [
-      "quick_attack"
+    "12": [
+      "facade"
     ],
-    "14": [
-      "hyper_fang"
+    "18": [
+      "stomp"
     ],
-    "20": [
+    "24": [
+      "protect"
+    ],
+    "30": [
+      "knock_off"
+    ],
+    "36": [
       "mega_punch"
     ],
-    "32": [
-      "body_slam"
-    ],
-    "40": [
-      "double_edge"
+    "42": [
+      "body_press"
     ],
     "48": [
-      "hyper_beam"
+      "wide_guard"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "zen_headbutt"
+    ],
+    "60": [
+      "heavy_slam"
+    ],
+    "66": [
+      "hammer_arm"
+    ],
+    "72": [
+      "giga_impact"
+    ],
+    "78": [
+      "crush_grip"
     ]
   },
   "evolution": null,

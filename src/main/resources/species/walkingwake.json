@@ -19,31 +19,45 @@
   "modelId": "walkingwake",
   "learnset": {
     "1": [
-      "scratch"
+      "leer",
+      "roar",
+      "twister",
+      "aqua_jet",
+      "sunny_day",
+      "hone_claws"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "twister"
+    "7": [
+      "bite"
     ],
     "14": [
-      "water_gun"
+      "water_pulse"
     ],
-    "20": [
+    "21": [
+      "noble_roar"
+    ],
+    "28": [
       "dragon_breath"
     ],
-    "32": [
-      "bubble_beam"
+    "35": [
+      "breaking_swipe"
     ],
-    "40": [
-      "dragon_claw"
+    "42": [
+      "dragon_rush"
     ],
-    "48": [
-      "waterfall"
+    "56": [
+      "hydro_steam"
     ],
-    "26": [
-      "calm_mind"
+    "63": [
+      "dragon_pulse"
+    ],
+    "70": [
+      "outrage"
+    ],
+    "77": [
+      "flamethrower"
+    ],
+    "84": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

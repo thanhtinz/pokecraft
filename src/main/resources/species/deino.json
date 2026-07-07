@@ -19,31 +19,54 @@
   "modelId": "deino",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "dragon_rage",
+      "focus_energy"
     ],
     "4": [
-      "leer"
+      "dragon_breath"
     ],
     "8": [
-      "twister"
-    ],
-    "14": [
       "bite"
     ],
+    "12": [
+      "roar"
+    ],
+    "16": [
+      "assurance"
+    ],
     "20": [
-      "dragon_breath"
+      "headbutt"
+    ],
+    "24": [
+      "work_up"
+    ],
+    "28": [
+      "slam"
     ],
     "32": [
       "crunch"
     ],
+    "36": [
+      "scary_face"
+    ],
     "40": [
-      "dragon_claw"
+      "dragon_pulse"
+    ],
+    "44": [
+      "body_slam"
     ],
     "48": [
-      "outrage"
+      "hyper_voice"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "dragon_rush"
+    ],
+    "56": [
+      "nasty_plot"
+    ],
+    "60": [
+      "outrage"
     ]
   },
   "evolution": null,

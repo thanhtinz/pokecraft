@@ -19,31 +19,38 @@
   "modelId": "mareanie",
   "learnset": {
     "1": [
-      "tackle"
+      "poison_sting",
+      "peck"
     ],
-    "4": [
-      "poison_powder"
+    "5": [
+      "wide_guard"
     ],
-    "8": [
-      "water_gun"
+    "10": [
+      "bite"
     ],
-    "14": [
-      "poison_sting"
+    "15": [
+      "venoshock"
     ],
     "20": [
-      "bubble_beam"
+      "recover"
     ],
-    "32": [
-      "acid"
+    "25": [
+      "pin_missile"
+    ],
+    "30": [
+      "toxic_spikes"
+    ],
+    "35": [
+      "liquidation"
     ],
     "40": [
-      "waterfall"
+      "acid_spray"
     ],
-    "48": [
-      "sludge"
+    "45": [
+      "poison_jab"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "toxic"
     ]
   },
   "evolution": null,

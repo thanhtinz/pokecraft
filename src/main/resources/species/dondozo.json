@@ -18,28 +18,49 @@
   "modelId": "dondozo",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "tackle",
+      "supersonic",
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "5": [
+      "tickle"
+    ],
+    "10": [
+      "flail"
+    ],
+    "15": [
+      "rest",
+      "sleep_talk"
     ],
     "20": [
-      "waterfall"
+      "dive"
     ],
-    "32": [
-      "surf"
+    "25": [
+      "noble_roar"
+    ],
+    "30": [
+      "soak"
+    ],
+    "35": [
+      "body_slam"
     ],
     "40": [
-      "hydro_pump"
+      "aqua_tail"
     ],
-    "26": [
-      "harden"
+    "45": [
+      "rain_dance"
+    ],
+    "50": [
+      "order_up"
+    ],
+    "55": [
+      "heavy_slam"
+    ],
+    "60": [
+      "double_edge"
+    ],
+    "65": [
+      "wave_crash"
     ]
   },
   "evolution": null,

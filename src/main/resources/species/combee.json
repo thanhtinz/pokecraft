@@ -19,31 +19,10 @@
   "modelId": "combee",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "bug_bite"
-    ],
-    "20": [
-      "gust"
-    ],
-    "32": [
-      "pin_missile"
-    ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "drill_peck"
-    ],
-    "26": [
-      "agility"
+      "sweet_scent",
+      "gust",
+      "bug_bite",
+      "struggle_bug"
     ]
   },
   "evolution": null,

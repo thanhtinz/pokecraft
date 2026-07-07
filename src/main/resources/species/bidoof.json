@@ -18,31 +18,44 @@
   "modelId": "bidoof",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "tackle",
       "growl"
     ],
-    "8": [
-      "quick_attack"
+    "5": [
+      "defense_curl"
     ],
-    "14": [
+    "9": [
+      "rollout"
+    ],
+    "13": [
+      "headbutt"
+    ],
+    "17": [
       "hyper_fang"
     ],
-    "20": [
-      "mega_punch"
+    "21": [
+      "yawn"
     ],
-    "32": [
-      "body_slam"
+    "25": [
+      "crunch"
     ],
-    "40": [
-      "double_edge"
+    "29": [
+      "take_down"
     ],
-    "48": [
-      "hyper_beam"
+    "33": [
+      "super_fang"
     ],
-    "26": [
+    "37": [
       "swords_dance"
+    ],
+    "41": [
+      "amnesia"
+    ],
+    "45": [
+      "superpower"
+    ],
+    "49": [
+      "curse"
     ]
   },
   "evolution": null,

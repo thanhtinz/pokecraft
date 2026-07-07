@@ -18,28 +18,54 @@
   "modelId": "sunflora",
   "learnset": {
     "1": [
+      "pound",
+      "growth",
+      "grass_whistle",
+      "flower_shield",
+      "natural_gift",
       "tackle"
     ],
     "4": [
-      "sleep_powder"
+      "ingrain"
     ],
-    "8": [
-      "vine_whip"
+    "7": [
+      "absorb"
     ],
-    "14": [
+    "10": [
+      "mega_drain"
+    ],
+    "13": [
+      "leech_seed"
+    ],
+    "16": [
       "razor_leaf"
     ],
-    "20": [
-      "seed_bomb"
+    "19": [
+      "worry_seed"
     ],
-    "32": [
+    "22": [
+      "giga_drain"
+    ],
+    "25": [
+      "bullet_seed"
+    ],
+    "28": [
       "petal_dance"
     ],
-    "40": [
+    "31": [
       "solar_beam"
     ],
-    "26": [
-      "calm_mind"
+    "34": [
+      "double_edge"
+    ],
+    "39": [
+      "sunny_day"
+    ],
+    "43": [
+      "leaf_storm"
+    ],
+    "50": [
+      "petal_blizzard"
     ]
   },
   "evolution": null,

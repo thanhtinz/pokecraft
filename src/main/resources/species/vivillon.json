@@ -19,31 +19,39 @@
   "modelId": "vivillon",
   "learnset": {
     "1": [
-      "tackle"
+      "powder",
+      "sleep_powder",
+      "poison_powder",
+      "stun_spore",
+      "gust",
+      "struggle_bug",
+      "aromatherapy",
+      "tackle",
+      "harden"
     ],
-    "4": [
-      "string_shot"
+    "12": [
+      "light_screen"
     ],
-    "8": [
-      "bug_bite"
+    "17": [
+      "psybeam"
     ],
-    "14": [
-      "peck"
+    "21": [
+      "supersonic"
     ],
-    "20": [
-      "pin_missile"
+    "25": [
+      "draining_kiss"
     ],
-    "32": [
-      "gust"
+    "31": [
+      "safeguard"
     ],
-    "40": [
-      "wing_attack"
+    "35": [
+      "bug_buzz"
     ],
-    "48": [
-      "drill_peck"
+    "45": [
+      "quiver_dance"
     ],
-    "26": [
-      "calm_mind"
+    "50": [
+      "hurricane"
     ]
   },
   "evolution": null,

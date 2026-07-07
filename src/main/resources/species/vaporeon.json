@@ -18,28 +18,55 @@
   "modelId": "vaporeon",
   "learnset": {
     "1": [
-      "pound"
+      "bubble",
+      "tail_whip",
+      "tackle",
+      "helping_hand",
+      "water_gun",
+      "bite",
+      "swift",
+      "covet",
+      "copycat",
+      "baton_pass",
+      "take_down",
+      "charm",
+      "double_edge",
+      "growl",
+      "trump_card",
+      "refresh"
     ],
-    "4": [
-      "tail_whip"
+    "5": [
+      "sand_attack"
     ],
-    "8": [
-      "water_gun"
+    "10": [
+      "quick_attack"
     ],
-    "14": [
-      "bubble_beam"
+    "15": [
+      "baby_doll_eyes"
     ],
     "20": [
-      "waterfall"
+      "haze"
     ],
-    "32": [
-      "surf"
+    "25": [
+      "water_pulse"
+    ],
+    "30": [
+      "aurora_beam"
+    ],
+    "35": [
+      "aqua_ring"
     ],
     "40": [
+      "muddy_water"
+    ],
+    "45": [
+      "acid_armor"
+    ],
+    "50": [
       "hydro_pump"
     ],
-    "26": [
-      "calm_mind"
+    "55": [
+      "last_resort"
     ]
   },
   "evolution": null,

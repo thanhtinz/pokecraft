@@ -18,28 +18,44 @@
   "modelId": "chikorita",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "growl"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
+    "6": [
       "razor_leaf"
     ],
+    "9": [
+      "poison_powder"
+    ],
+    "12": [
+      "synthesis"
+    ],
+    "17": [
+      "reflect"
+    ],
     "20": [
-      "seed_bomb"
+      "magical_leaf"
     ],
-    "32": [
-      "petal_dance"
+    "23": [
+      "natural_gift"
     ],
-    "40": [
+    "28": [
+      "sweet_scent"
+    ],
+    "31": [
+      "light_screen"
+    ],
+    "34": [
+      "body_slam"
+    ],
+    "39": [
+      "safeguard"
+    ],
+    "42": [
+      "giga_drain"
+    ],
+    "45": [
       "solar_beam"
-    ],
-    "26": [
-      "harden"
     ]
   },
   "evolution": null,

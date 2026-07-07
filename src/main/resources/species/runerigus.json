@@ -19,31 +19,46 @@
   "modelId": "runerigus",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "lick"
-    ],
-    "14": [
-      "sand_tomb"
-    ],
-    "20": [
+      "shadow_claw",
+      "scary_face",
+      "astonish",
+      "protect",
+      "haze",
       "night_shade"
     ],
-    "32": [
-      "dig"
+    "12": [
+      "disable"
     ],
-    "40": [
+    "16": [
+      "brutal_swing"
+    ],
+    "20": [
+      "crafty_shield"
+    ],
+    "24": [
+      "hex"
+    ],
+    "28": [
+      "mean_look"
+    ],
+    "32": [
+      "slam"
+    ],
+    "38": [
+      "curse"
+    ],
+    "44": [
       "shadow_ball"
     ],
-    "48": [
+    "50": [
       "earthquake"
     ],
-    "26": [
-      "harden"
+    "56": [
+      "power_split",
+      "guard_split"
+    ],
+    "62": [
+      "destiny_bond"
     ]
   },
   "evolution": null,

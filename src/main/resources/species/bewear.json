@@ -19,31 +19,42 @@
   "modelId": "bewear",
   "learnset": {
     "1": [
-      "scratch"
+      "bind",
+      "tackle",
+      "leer",
+      "bide",
+      "baby_doll_eyes",
+      "payback"
     ],
-    "4": [
-      "growl"
+    "12": [
+      "brutal_swing"
     ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "karate_chop"
+    "16": [
+      "endure"
     ],
     "20": [
-      "hyper_fang"
+      "strength"
     ],
-    "32": [
-      "low_kick"
+    "24": [
+      "take_down"
     ],
-    "40": [
-      "mega_punch"
+    "30": [
+      "flail"
+    ],
+    "36": [
+      "hammer_arm"
+    ],
+    "42": [
+      "thrash"
     ],
     "48": [
-      "brick_break"
+      "pain_split"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "double_edge"
+    ],
+    "60": [
+      "superpower"
     ]
   },
   "evolution": null,

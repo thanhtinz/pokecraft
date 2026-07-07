@@ -18,22 +18,48 @@
   "modelId": "dusknoir",
   "learnset": {
     "1": [
-      "tackle"
+      "fire_punch",
+      "ice_punch",
+      "thunder_punch",
+      "gravity",
+      "bind",
+      "leer",
+      "disable",
+      "foresight",
+      "astonish",
+      "shadow_sneak",
+      "pursuit",
+      "shadow_punch"
     ],
-    "4": [
-      "hypnosis"
+    "12": [
+      "confuse_ray"
     ],
-    "8": [
-      "lick"
-    ],
-    "14": [
+    "16": [
       "night_shade"
     ],
     "20": [
+      "payback"
+    ],
+    "24": [
+      "will_o_wisp"
+    ],
+    "28": [
+      "mean_look"
+    ],
+    "32": [
+      "hex"
+    ],
+    "36": [
+      "curse"
+    ],
+    "42": [
       "shadow_ball"
     ],
-    "26": [
-      "harden"
+    "48": [
+      "future_sight"
+    ],
+    "54": [
+      "destiny_bond"
     ]
   },
   "evolution": null,

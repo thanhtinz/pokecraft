@@ -19,25 +19,50 @@
   "modelId": "tinkatink",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "sing"
-    ],
-    "8": [
-      "steel_wing"
-    ],
-    "14": [
+      "astonish",
       "fairy_wind"
     ],
-    "20": [
-      "iron_head"
+    "5": [
+      "baby_doll_eyes"
     ],
-    "32": [
-      "dazzling_gleam"
+    "8": [
+      "metal_claw"
     ],
-    "26": [
-      "agility"
+    "11": [
+      "covet"
+    ],
+    "14": [
+      "rock_smash"
+    ],
+    "17": [
+      "draining_kiss"
+    ],
+    "21": [
+      "sweet_kiss"
+    ],
+    "24": [
+      "brutal_swing"
+    ],
+    "27": [
+      "slam"
+    ],
+    "31": [
+      "flash_cannon"
+    ],
+    "35": [
+      "play_rough"
+    ],
+    "39": [
+      "fake_out"
+    ],
+    "43": [
+      "flatter"
+    ],
+    "47": [
+      "skitter_smack"
+    ],
+    "52": [
+      "knock_off"
     ]
   },
   "evolution": null,

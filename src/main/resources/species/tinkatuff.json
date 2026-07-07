@@ -19,25 +19,50 @@
   "modelId": "tinkatuff",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "sing"
-    ],
-    "8": [
+      "astonish",
       "fairy_wind"
     ],
+    "5": [
+      "baby_doll_eyes"
+    ],
+    "8": [
+      "metal_claw"
+    ],
+    "11": [
+      "covet"
+    ],
     "14": [
-      "steel_wing"
+      "rock_smash"
     ],
-    "20": [
-      "dazzling_gleam"
+    "17": [
+      "draining_kiss"
     ],
-    "32": [
-      "iron_head"
+    "21": [
+      "sweet_kiss"
     ],
-    "26": [
-      "agility"
+    "24": [
+      "brutal_swing"
+    ],
+    "27": [
+      "slam"
+    ],
+    "31": [
+      "flash_cannon"
+    ],
+    "35": [
+      "play_rough"
+    ],
+    "39": [
+      "fake_out"
+    ],
+    "43": [
+      "flatter"
+    ],
+    "47": [
+      "skitter_smack"
+    ],
+    "52": [
+      "knock_off"
     ]
   },
   "evolution": null,

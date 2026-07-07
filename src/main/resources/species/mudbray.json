@@ -18,22 +18,43 @@
   "modelId": "mudbray",
   "learnset": {
     "1": [
-      "pound"
+      "mud_slap",
+      "mud_sport",
+      "rototiller",
+      "rock_smash"
     ],
     "4": [
-      "leer"
+      "iron_defense"
     ],
     "8": [
-      "sand_tomb"
+      "double_kick"
     ],
-    "14": [
-      "dig"
+    "12": [
+      "bulldoze"
+    ],
+    "16": [
+      "stomp"
     ],
     "20": [
+      "strength"
+    ],
+    "24": [
+      "counter"
+    ],
+    "28": [
+      "high_horsepower"
+    ],
+    "32": [
+      "heavy_slam"
+    ],
+    "36": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "40": [
+      "mega_kick"
+    ],
+    "44": [
+      "superpower"
     ]
   },
   "evolution": null,

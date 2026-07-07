@@ -19,31 +19,51 @@
   "modelId": "slowbro",
   "learnset": {
     "1": [
-      "pound"
+      "curse",
+      "tackle",
+      "growl",
+      "water_gun",
+      "withdraw",
+      "future_sight"
     ],
-    "4": [
-      "tail_whip"
+    "9": [
+      "yawn"
     ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
+    "12": [
       "confusion"
     ],
-    "20": [
-      "bubble_beam"
+    "15": [
+      "disable"
     ],
-    "32": [
-      "psybeam"
+    "18": [
+      "water_pulse"
     ],
-    "40": [
-      "waterfall"
+    "21": [
+      "headbutt"
     ],
-    "48": [
+    "24": [
+      "zen_headbutt"
+    ],
+    "27": [
+      "amnesia"
+    ],
+    "30": [
+      "surf"
+    ],
+    "33": [
+      "slack_off"
+    ],
+    "36": [
       "psychic"
     ],
-    "26": [
-      "harden"
+    "41": [
+      "psych_up"
+    ],
+    "46": [
+      "rain_dance"
+    ],
+    "51": [
+      "heal_pulse"
     ]
   },
   "evolution": null,

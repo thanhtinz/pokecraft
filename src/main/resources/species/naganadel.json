@@ -19,31 +19,43 @@
   "modelId": "naganadel",
   "learnset": {
     "1": [
-      "tackle"
+      "air_cutter",
+      "dragon_pulse",
+      "peck",
+      "growl",
+      "helping_hand",
+      "acid",
+      "air_slash"
     ],
-    "4": [
-      "poison_powder"
-    ],
-    "8": [
-      "poison_sting"
+    "7": [
+      "fury_attack"
     ],
     "14": [
-      "twister"
+      "fell_stinger"
     ],
-    "20": [
-      "acid"
+    "21": [
+      "charm"
     ],
-    "32": [
-      "dragon_breath"
+    "28": [
+      "venoshock"
     ],
-    "40": [
-      "sludge"
+    "35": [
+      "venom_drench"
     ],
-    "48": [
-      "dragon_claw"
+    "42": [
+      "nasty_plot"
     ],
-    "26": [
-      "calm_mind"
+    "49": [
+      "poison_jab"
+    ],
+    "56": [
+      "gastro_acid"
+    ],
+    "63": [
+      "toxic"
+    ],
+    "70": [
+      "dragon_rush"
     ]
   },
   "evolution": null,

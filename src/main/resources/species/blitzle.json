@@ -18,25 +18,40 @@
   "modelId": "blitzle",
   "learnset": {
     "1": [
-      "tackle"
+      "quick_attack"
     ],
     "4": [
-      "thunder_wave"
+      "tail_whip"
     ],
     "8": [
-      "thunder_shock"
+      "charge"
     ],
-    "14": [
-      "spark"
+    "11": [
+      "shock_wave"
     ],
-    "20": [
-      "thunderbolt"
+    "15": [
+      "thunder_wave"
     ],
-    "32": [
-      "thunder"
+    "18": [
+      "flame_charge"
     ],
-    "26": [
+    "22": [
+      "pursuit"
+    ],
+    "25": [
+      "stomp"
+    ],
+    "29": [
+      "discharge"
+    ],
+    "33": [
       "agility"
+    ],
+    "35": [
+      "wild_charge"
+    ],
+    "40": [
+      "thrash"
     ]
   },
   "evolution": null,

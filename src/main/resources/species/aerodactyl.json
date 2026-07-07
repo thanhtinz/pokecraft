@@ -19,31 +19,44 @@
   "modelId": "aerodactyl",
   "learnset": {
     "1": [
-      "scratch"
+      "bite",
+      "ancient_power"
     ],
-    "4": [
-      "harden"
+    "5": [
+      "supersonic"
     ],
-    "8": [
-      "rock_throw"
+    "10": [
+      "wing_attack"
     ],
-    "14": [
-      "peck"
+    "15": [
+      "scary_face"
     ],
     "20": [
       "rock_slide"
     ],
-    "32": [
-      "gust"
+    "25": [
+      "roar"
+    ],
+    "30": [
+      "crunch"
+    ],
+    "35": [
+      "iron_head"
     ],
     "40": [
+      "take_down"
+    ],
+    "45": [
       "stone_edge"
     ],
-    "48": [
-      "wing_attack"
-    ],
-    "26": [
+    "50": [
       "agility"
+    ],
+    "55": [
+      "hyper_beam"
+    ],
+    "60": [
+      "giga_impact"
     ]
   },
   "evolution": null,

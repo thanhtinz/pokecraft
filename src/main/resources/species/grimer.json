@@ -18,25 +18,50 @@
   "modelId": "grimer",
   "learnset": {
     "1": [
-      "scratch"
+      "poison_gas",
+      "pound"
     ],
     "4": [
-      "poison_powder"
+      "harden"
     ],
-    "8": [
-      "poison_sting"
+    "7": [
+      "mud_slap"
     ],
-    "14": [
-      "acid"
+    "12": [
+      "disable"
     ],
-    "20": [
+    "15": [
       "sludge"
     ],
-    "32": [
-      "sludge_bomb"
+    "18": [
+      "mud_bomb"
+    ],
+    "21": [
+      "minimize"
     ],
     "26": [
-      "swords_dance"
+      "toxic"
+    ],
+    "29": [
+      "sludge_bomb"
+    ],
+    "32": [
+      "sludge_wave"
+    ],
+    "37": [
+      "screech"
+    ],
+    "40": [
+      "gunk_shot"
+    ],
+    "43": [
+      "acid_armor"
+    ],
+    "46": [
+      "belch"
+    ],
+    "48": [
+      "memento"
     ]
   },
   "evolution": null,

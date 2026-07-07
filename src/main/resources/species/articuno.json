@@ -19,31 +19,50 @@
   "modelId": "articuno",
   "learnset": {
     "1": [
-      "tackle"
+      "gust",
+      "mist"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "powder_snow"
     ],
-    "8": [
+    "10": [
+      "reflect"
+    ],
+    "15": [
       "ice_shard"
     ],
-    "14": [
-      "peck"
-    ],
     "20": [
-      "aurora_beam"
+      "agility"
     ],
-    "32": [
-      "gust"
+    "25": [
+      "ancient_power"
+    ],
+    "30": [
+      "tailwind"
+    ],
+    "35": [
+      "freeze_dry"
     ],
     "40": [
+      "roost"
+    ],
+    "45": [
       "ice_beam"
     ],
-    "48": [
-      "wing_attack"
+    "50": [
+      "snowscape"
     ],
-    "26": [
-      "harden"
+    "55": [
+      "hurricane"
+    ],
+    "60": [
+      "mind_reader"
+    ],
+    "65": [
+      "blizzard"
+    ],
+    "70": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

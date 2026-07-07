@@ -19,31 +19,49 @@
   "modelId": "greattusk",
   "learnset": {
     "1": [
-      "tackle"
+      "horn_attack",
+      "defense_curl",
+      "rollout",
+      "sunny_day"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "sand_tomb"
+    "7": [
+      "bulldoze"
     ],
     "14": [
-      "karate_chop"
+      "taunt"
     ],
-    "20": [
-      "dig"
+    "21": [
+      "rapid_spin"
     ],
-    "32": [
-      "low_kick"
-    ],
-    "40": [
-      "earthquake"
-    ],
-    "48": [
+    "28": [
       "brick_break"
     ],
-    "26": [
-      "swords_dance"
+    "35": [
+      "stomping_tantrum"
+    ],
+    "42": [
+      "knock_off"
+    ],
+    "49": [
+      "earthquake"
+    ],
+    "56": [
+      "giga_impact"
+    ],
+    "63": [
+      "close_combat"
+    ],
+    "70": [
+      "endeavor"
+    ],
+    "77": [
+      "megahorn"
+    ],
+    "84": [
+      "head_smash"
+    ],
+    "91": [
+      "headlong_rush"
     ]
   },
   "evolution": null,

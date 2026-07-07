@@ -19,25 +19,53 @@
   "modelId": "lokix",
   "learnset": {
     "1": [
-      "pound"
+      "lunge",
+      "tackle",
+      "leer",
+      "low_kick",
+      "detect"
     ],
     "4": [
-      "string_shot"
+      "struggle_bug"
     ],
-    "8": [
-      "bug_bite"
+    "6": [
+      "astonish"
+    ],
+    "9": [
+      "assurance"
+    ],
+    "11": [
+      "double_kick"
     ],
     "14": [
-      "bite"
+      "screech"
     ],
-    "20": [
-      "pin_missile"
+    "18": [
+      "endure"
+    ],
+    "22": [
+      "bug_bite"
+    ],
+    "28": [
+      "feint"
     ],
     "32": [
-      "crunch"
+      "agility"
     ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "throat_chop"
+    ],
+    "40": [
+      "sucker_punch"
+    ],
+    "44": [
+      "first_impression"
+    ],
+    "48": [
+      "bounce"
+    ],
+    "53": [
+      "axe_kick"
     ]
   },
   "evolution": null,

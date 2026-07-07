@@ -18,28 +18,26 @@
   "modelId": "politoed",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "bubble_beam"
-    ],
-    "20": [
-      "waterfall"
-    ],
-    "32": [
-      "surf"
-    ],
-    "40": [
-      "hydro_pump"
-    ],
-    "26": [
-      "calm_mind"
+      "bubble_beam",
+      "hypnosis",
+      "double_slap",
+      "perish_song",
+      "bounce",
+      "hyper_voice",
+      "rain_dance",
+      "swagger",
+      "body_slam",
+      "earth_power",
+      "hydro_pump",
+      "belly_drum",
+      "double_edge",
+      "water_gun",
+      "pound",
+      "mud_shot",
+      "water_sport",
+      "wake_up_slap",
+      "mud_bomb",
+      "bubble"
     ]
   },
   "evolution": null,

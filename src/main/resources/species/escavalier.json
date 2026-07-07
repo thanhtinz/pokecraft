@@ -19,25 +19,52 @@
   "modelId": "escavalier",
   "learnset": {
     "1": [
-      "scratch"
+      "peck",
+      "leer",
+      "quick_guard",
+      "twineedle",
+      "fury_attack",
+      "slash",
+      "double_edge",
+      "fell_stinger",
+      "endure",
+      "flail",
+      "scary_face",
+      "take_down",
+      "fury_cutter"
     ],
-    "4": [
-      "string_shot"
+    "12": [
+      "false_swipe"
     ],
-    "8": [
-      "steel_wing"
-    ],
-    "14": [
-      "bug_bite"
+    "16": [
+      "acid_spray"
     ],
     "20": [
-      "iron_head"
+      "headbutt"
+    ],
+    "24": [
+      "reversal"
+    ],
+    "28": [
+      "iron_defense"
     ],
     "32": [
-      "pin_missile"
+      "x_scissor"
     ],
-    "26": [
+    "36": [
       "swords_dance"
+    ],
+    "40": [
+      "iron_head"
+    ],
+    "44": [
+      "bug_buzz"
+    ],
+    "48": [
+      "giga_impact"
+    ],
+    "52": [
+      "metal_burst"
     ]
   },
   "evolution": null,

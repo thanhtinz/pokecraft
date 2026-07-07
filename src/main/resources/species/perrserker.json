@@ -18,19 +18,40 @@
   "modelId": "perrserker",
   "learnset": {
     "1": [
-      "pound"
+      "iron_head",
+      "metal_burst",
+      "iron_defense",
+      "fake_out",
+      "growl",
+      "hone_claws",
+      "scratch"
     ],
-    "4": [
-      "harden"
+    "12": [
+      "pay_day"
     ],
-    "8": [
-      "steel_wing"
+    "16": [
+      "metal_claw"
     ],
-    "14": [
-      "iron_head"
+    "20": [
+      "taunt"
     ],
-    "26": [
-      "swords_dance"
+    "24": [
+      "swagger"
+    ],
+    "31": [
+      "fury_swipes"
+    ],
+    "36": [
+      "screech"
+    ],
+    "42": [
+      "slash"
+    ],
+    "48": [
+      "metal_sound"
+    ],
+    "54": [
+      "thrash"
     ]
   },
   "evolution": null,

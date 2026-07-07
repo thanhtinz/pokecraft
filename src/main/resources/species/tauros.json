@@ -18,31 +18,46 @@
   "modelId": "tauros",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "tail_whip",
+      "rage",
+      "pursuit"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "work_up"
     ],
-    "8": [
-      "quick_attack"
+    "10": [
+      "payback"
     ],
-    "14": [
-      "hyper_fang"
+    "15": [
+      "assurance"
     ],
     "20": [
-      "mega_punch"
+      "horn_attack"
     ],
-    "32": [
-      "body_slam"
+    "25": [
+      "scary_face"
+    ],
+    "30": [
+      "zen_headbutt"
+    ],
+    "35": [
+      "raging_bull"
     ],
     "40": [
+      "rest"
+    ],
+    "45": [
+      "swagger"
+    ],
+    "50": [
+      "thrash"
+    ],
+    "55": [
       "double_edge"
     ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "agility"
+    "60": [
+      "giga_impact"
     ]
   },
   "evolution": null,

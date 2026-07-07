@@ -18,22 +18,58 @@
   "modelId": "azelf",
   "learnset": {
     "1": [
-      "pound"
+      "rest",
+      "confusion",
+      "snore",
+      "safeguard",
+      "iron_tail",
+      "payback",
+      "wonder_room",
+      "magic_room",
+      "natural_gift",
+      "ally_switch",
+      "tri_attack",
+      "self_destruct",
+      "psycho_cut",
+      "assurance",
+      "expanding_force",
+      "round"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
+    "7": [
+      "swift"
     ],
     "14": [
+      "detect"
+    ],
+    "21": [
       "psybeam"
     ],
-    "20": [
+    "28": [
+      "imprison"
+    ],
+    "35": [
+      "extrasensory"
+    ],
+    "42": [
+      "nasty_plot"
+    ],
+    "49": [
       "psychic"
     ],
-    "26": [
-      "swords_dance"
+    "56": [
+      "uproar"
+    ],
+    "63": [
+      "future_sight"
+    ],
+    "70": [
+      "last_resort"
+    ],
+    "77": [
+      "explosion"
+    ],
+    "84": [
+      "mystical_power"
     ]
   },
   "evolution": null,

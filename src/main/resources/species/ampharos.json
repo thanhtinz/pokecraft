@@ -18,25 +18,49 @@
   "modelId": "ampharos",
   "learnset": {
     "1": [
-      "scratch"
+      "fire_punch",
+      "tackle",
+      "growl",
+      "thunder_shock",
+      "thunder_wave",
+      "thunder_punch",
+      "zap_cannon",
+      "magnetic_flux",
+      "ion_deluge",
+      "dragon_pulse"
     ],
-    "4": [
-      "thunder_wave"
+    "11": [
+      "cotton_spore"
     ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
-      "spark"
+    "16": [
+      "charge"
     ],
     "20": [
-      "thunderbolt"
+      "take_down"
     ],
-    "32": [
+    "25": [
+      "electro_ball"
+    ],
+    "29": [
+      "confuse_ray"
+    ],
+    "35": [
+      "power_gem"
+    ],
+    "40": [
+      "discharge"
+    ],
+    "46": [
+      "cotton_guard"
+    ],
+    "51": [
+      "dazzling_gleam"
+    ],
+    "57": [
+      "light_screen"
+    ],
+    "62": [
       "thunder"
-    ],
-    "26": [
-      "calm_mind"
     ]
   },
   "evolution": null,

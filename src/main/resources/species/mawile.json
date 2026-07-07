@@ -19,25 +19,47 @@
   "modelId": "mawile",
   "learnset": {
     "1": [
-      "tackle"
+      "astonish",
+      "feint_attack",
+      "growl"
     ],
     "4": [
-      "harden"
-    ],
-    "8": [
       "fairy_wind"
     ],
-    "14": [
-      "steel_wing"
+    "8": [
+      "baton_pass"
+    ],
+    "12": [
+      "bite"
+    ],
+    "16": [
+      "stockpile",
+      "swallow",
+      "spit_up"
     ],
     "20": [
-      "dazzling_gleam"
+      "sucker_punch"
+    ],
+    "24": [
+      "iron_defense"
+    ],
+    "28": [
+      "crunch"
     ],
     "32": [
+      "sweet_scent"
+    ],
+    "36": [
       "iron_head"
     ],
-    "26": [
-      "swords_dance"
+    "40": [
+      "taunt"
+    ],
+    "44": [
+      "fake_tears"
+    ],
+    "48": [
+      "play_rough"
     ]
   },
   "evolution": null,

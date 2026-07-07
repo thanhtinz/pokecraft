@@ -18,25 +18,47 @@
   "modelId": "flaaffy",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "growl"
     ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
+    "6": [
       "thunder_shock"
     ],
-    "14": [
-      "spark"
+    "9": [
+      "thunder_wave"
+    ],
+    "11": [
+      "cotton_spore"
+    ],
+    "16": [
+      "charge"
     ],
     "20": [
-      "thunderbolt"
+      "take_down"
     ],
-    "32": [
+    "25": [
+      "electro_ball"
+    ],
+    "29": [
+      "confuse_ray"
+    ],
+    "34": [
+      "power_gem"
+    ],
+    "38": [
+      "discharge"
+    ],
+    "43": [
+      "cotton_guard"
+    ],
+    "47": [
+      "dazzling_gleam"
+    ],
+    "52": [
+      "light_screen"
+    ],
+    "56": [
       "thunder"
-    ],
-    "26": [
-      "calm_mind"
     ]
   },
   "evolution": null,

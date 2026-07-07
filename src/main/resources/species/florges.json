@@ -18,19 +18,27 @@
   "modelId": "florges",
   "learnset": {
     "1": [
-      "pound"
+      "disarming_voice",
+      "lucky_chant",
+      "wish",
+      "magical_leaf",
+      "flower_shield",
+      "grass_knot",
+      "grassy_terrain",
+      "petal_blizzard",
+      "misty_terrain",
+      "petal_dance",
+      "aromatherapy",
+      "solar_beam",
+      "safeguard",
+      "synthesis",
+      "tackle",
+      "vine_whip",
+      "fairy_wind",
+      "razor_leaf"
     ],
-    "4": [
-      "sing"
-    ],
-    "8": [
-      "fairy_wind"
-    ],
-    "14": [
-      "dazzling_gleam"
-    ],
-    "26": [
-      "calm_mind"
+    "5": [
+      "moonblast"
     ]
   },
   "evolution": null,

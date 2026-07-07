@@ -19,31 +19,46 @@
   "modelId": "incineroar",
   "learnset": {
     "1": [
-      "scratch"
+      "darkest_lariat",
+      "bulk_up",
+      "throat_chop",
+      "scratch",
+      "ember",
+      "growl",
+      "lick",
+      "leer",
+      "outrage",
+      "cross_chop"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "roar"
     ],
-    "8": [
+    "12": [
+      "fury_swipes"
+    ],
+    "15": [
       "bite"
     ],
-    "14": [
-      "ember"
-    ],
     "20": [
-      "crunch"
+      "double_kick"
+    ],
+    "25": [
+      "fire_fang"
+    ],
+    "30": [
+      "scary_face"
     ],
     "32": [
-      "fire_spin"
+      "swagger"
     ],
-    "40": [
-      "fire_punch"
-    ],
-    "48": [
+    "44": [
       "flamethrower"
     ],
-    "26": [
-      "swords_dance"
+    "51": [
+      "thrash"
+    ],
+    "58": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

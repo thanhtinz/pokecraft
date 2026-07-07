@@ -19,31 +19,34 @@
   "modelId": "coalossal",
   "learnset": {
     "1": [
-      "pound"
+      "tar_shot",
+      "flame_charge",
+      "tackle",
+      "smokescreen",
+      "rapid_spin",
+      "smack_down",
+      "burn_up"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "ember"
-    ],
-    "14": [
-      "rock_throw"
+    "15": [
+      "rock_polish"
     ],
     "20": [
-      "fire_spin"
+      "ancient_power"
     ],
-    "32": [
-      "rock_slide"
+    "27": [
+      "incinerate"
     ],
-    "40": [
-      "fire_punch"
+    "37": [
+      "stealth_rock"
     ],
-    "48": [
+    "45": [
+      "heat_crash"
+    ],
+    "54": [
+      "rock_blast"
+    ],
+    "63": [
       "stone_edge"
-    ],
-    "26": [
-      "harden"
     ]
   },
   "evolution": null,

@@ -18,25 +18,40 @@
   "modelId": "goomy",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "bubble",
+      "absorb",
+      "bide"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "water_gun"
     ],
-    "8": [
-      "twister"
-    ],
-    "14": [
+    "10": [
       "dragon_breath"
     ],
+    "15": [
+      "protect"
+    ],
     "20": [
-      "dragon_claw"
+      "flail"
     ],
-    "32": [
-      "outrage"
+    "25": [
+      "water_pulse"
     ],
-    "26": [
-      "calm_mind"
+    "30": [
+      "rain_dance"
+    ],
+    "35": [
+      "dragon_pulse"
+    ],
+    "41": [
+      "curse"
+    ],
+    "45": [
+      "body_slam"
+    ],
+    "50": [
+      "muddy_water"
     ]
   },
   "evolution": null,

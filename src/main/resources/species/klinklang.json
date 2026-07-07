@@ -18,19 +18,45 @@
   "modelId": "klinklang",
   "learnset": {
     "1": [
-      "scratch"
+      "charge",
+      "thunder_shock",
+      "bind",
+      "mirror_shot",
+      "magnetic_flux",
+      "gear_up"
     ],
-    "4": [
-      "harden"
+    "12": [
+      "charge_beam"
     ],
-    "8": [
-      "steel_wing"
+    "16": [
+      "metal_sound"
     ],
-    "14": [
-      "iron_head"
+    "20": [
+      "autotomize"
     ],
-    "26": [
-      "harden"
+    "24": [
+      "discharge"
+    ],
+    "28": [
+      "screech"
+    ],
+    "32": [
+      "gear_grind"
+    ],
+    "36": [
+      "lock_on"
+    ],
+    "42": [
+      "shift_gear"
+    ],
+    "48": [
+      "zap_cannon"
+    ],
+    "56": [
+      "hyper_beam"
+    ],
+    "64": [
+      "electric_terrain"
     ]
   },
   "evolution": null,

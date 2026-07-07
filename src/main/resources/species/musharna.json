@@ -18,22 +18,24 @@
   "modelId": "musharna",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "psybeam"
-    ],
-    "20": [
-      "psychic"
-    ],
-    "26": [
-      "calm_mind"
+      "defense_curl",
+      "lucky_chant",
+      "psybeam",
+      "hypnosis",
+      "psychic",
+      "dream_eater",
+      "magic_coat",
+      "calm_mind",
+      "zen_headbutt",
+      "wonder_room",
+      "psychic_terrain",
+      "imprison",
+      "moonlight",
+      "yawn",
+      "moonblast",
+      "future_sight",
+      "stored_power",
+      "psywave"
     ]
   },
   "evolution": null,

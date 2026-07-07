@@ -18,28 +18,45 @@
   "modelId": "froakie",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "growl",
+      "bubble"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+    "5": [
       "water_gun"
     ],
+    "8": [
+      "quick_attack"
+    ],
+    "10": [
+      "lick"
+    ],
     "14": [
-      "bubble_beam"
+      "water_pulse"
     ],
-    "20": [
-      "waterfall"
+    "18": [
+      "smokescreen"
     ],
-    "32": [
-      "surf"
+    "21": [
+      "round"
     ],
-    "40": [
+    "25": [
+      "fling"
+    ],
+    "29": [
+      "smack_down"
+    ],
+    "35": [
+      "substitute"
+    ],
+    "39": [
+      "bounce"
+    ],
+    "43": [
+      "double_team"
+    ],
+    "48": [
       "hydro_pump"
-    ],
-    "26": [
-      "agility"
     ]
   },
   "evolution": null,

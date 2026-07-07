@@ -19,31 +19,44 @@
   "modelId": "venomoth",
   "learnset": {
     "1": [
-      "scratch"
+      "silver_wind",
+      "tackle",
+      "disable",
+      "foresight",
+      "supersonic",
+      "gust",
+      "quiver_dance",
+      "air_slash"
     ],
-    "4": [
-      "string_shot"
+    "11": [
+      "confusion"
     ],
-    "8": [
-      "poison_sting"
+    "13": [
+      "poison_powder"
     ],
-    "14": [
-      "bug_bite"
+    "17": [
+      "psybeam"
     ],
-    "20": [
-      "acid"
+    "23": [
+      "stun_spore"
     ],
-    "32": [
-      "pin_missile"
+    "25": [
+      "bug_buzz"
     ],
-    "40": [
-      "sludge"
+    "29": [
+      "sleep_powder"
     ],
-    "48": [
-      "sludge_bomb"
+    "37": [
+      "leech_life"
     ],
-    "26": [
-      "calm_mind"
+    "41": [
+      "zen_headbutt"
+    ],
+    "47": [
+      "poison_fang"
+    ],
+    "55": [
+      "psychic"
     ]
   },
   "evolution": null,

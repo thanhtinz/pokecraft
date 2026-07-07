@@ -19,31 +19,46 @@
   "modelId": "salazzle",
   "learnset": {
     "1": [
-      "pound"
+      "captivate",
+      "disable",
+      "encore",
+      "torment",
+      "swagger",
+      "pound",
+      "poison_gas",
+      "ember",
+      "dragon_rage",
+      "smog",
+      "double_slap",
+      "flame_burst",
+      "knock_off",
+      "fire_lash",
+      "scratch",
+      "endeavor"
     ],
-    "4": [
-      "poison_powder"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "ember"
+    "15": [
+      "poison_fang"
     ],
     "20": [
-      "acid"
+      "sweet_scent"
     ],
-    "32": [
-      "fire_spin"
+    "25": [
+      "nasty_plot"
     ],
-    "40": [
-      "sludge"
+    "30": [
+      "incinerate"
     ],
-    "48": [
-      "fire_punch"
+    "37": [
+      "venoshock"
     ],
-    "26": [
-      "agility"
+    "44": [
+      "dragon_pulse"
+    ],
+    "51": [
+      "flamethrower"
+    ],
+    "58": [
+      "toxic"
     ]
   },
   "evolution": null,

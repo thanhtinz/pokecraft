@@ -19,31 +19,62 @@
   "modelId": "gallade",
   "learnset": {
     "1": [
-      "scratch"
+      "leaf_blade",
+      "night_slash",
+      "leer",
+      "confusion",
+      "double_team",
+      "fury_cutter",
+      "slash",
+      "psychic",
+      "dream_eater",
+      "calm_mind",
+      "growl",
+      "disarming_voice",
+      "hypnosis",
+      "draining_kiss",
+      "imprison",
+      "psybeam",
+      "life_dew",
+      "charm",
+      "future_sight",
+      "sacred_sword",
+      "aqua_cutter",
+      "lucky_chant"
     ],
-    "4": [
-      "hypnosis"
+    "9": [
+      "helping_hand"
     ],
-    "8": [
-      "karate_chop"
+    "12": [
+      "feint"
     ],
-    "14": [
-      "confusion"
+    "15": [
+      "teleport"
     ],
-    "20": [
-      "low_kick"
+    "18": [
+      "aerial_ace"
     ],
-    "32": [
-      "psybeam"
+    "23": [
+      "false_swipe"
     ],
-    "40": [
-      "brick_break"
+    "28": [
+      "protect"
     ],
-    "48": [
-      "psychic"
-    ],
-    "26": [
+    "35": [
       "swords_dance"
+    ],
+    "42": [
+      "psycho_cut"
+    ],
+    "49": [
+      "heal_pulse"
+    ],
+    "56": [
+      "quick_guard",
+      "wide_guard"
+    ],
+    "63": [
+      "close_combat"
     ]
   },
   "evolution": null,

@@ -18,31 +18,54 @@
   "modelId": "zangoose",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "leer",
+      "pursuit",
+      "embargo",
+      "curse",
+      "revenge"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
+    "5": [
       "quick_attack"
     ],
-    "14": [
-      "hyper_fang"
+    "8": [
+      "fury_cutter"
     ],
-    "20": [
-      "mega_punch"
+    "12": [
+      "metal_claw"
     ],
-    "32": [
-      "body_slam"
+    "15": [
+      "hone_claws"
     ],
-    "40": [
-      "double_edge"
+    "19": [
+      "slash"
     ],
-    "48": [
-      "hyper_beam"
+    "22": [
+      "power_trip"
     ],
     "26": [
+      "crush_claw"
+    ],
+    "29": [
+      "false_swipe"
+    ],
+    "33": [
+      "switcheroo"
+    ],
+    "36": [
+      "detect"
+    ],
+    "40": [
+      "x_scissor"
+    ],
+    "43": [
+      "taunt"
+    ],
+    "47": [
       "swords_dance"
+    ],
+    "50": [
+      "close_combat"
     ]
   },
   "evolution": null,

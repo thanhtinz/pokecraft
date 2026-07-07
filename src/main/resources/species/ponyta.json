@@ -18,28 +18,41 @@
   "modelId": "ponyta",
   "learnset": {
     "1": [
-      "pound"
+      "growl",
+      "tackle"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "tail_whip"
     ],
-    "8": [
+    "10": [
       "ember"
     ],
-    "14": [
-      "fire_spin"
+    "15": [
+      "flame_charge"
     ],
     "20": [
-      "fire_punch"
+      "agility"
     ],
-    "32": [
-      "flamethrower"
+    "25": [
+      "flame_wheel"
     ],
-    "40": [
+    "30": [
+      "stomp"
+    ],
+    "35": [
+      "fire_spin"
+    ],
+    "41": [
+      "take_down"
+    ],
+    "45": [
+      "inferno"
+    ],
+    "50": [
       "fire_blast"
     ],
-    "26": [
-      "agility"
+    "55": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

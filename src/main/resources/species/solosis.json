@@ -18,22 +18,46 @@
   "modelId": "solosis",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
+      "psywave",
+      "protect",
       "confusion"
     ],
-    "14": [
+    "4": [
+      "recover"
+    ],
+    "8": [
+      "endeavor"
+    ],
+    "12": [
       "psybeam"
     ],
+    "16": [
+      "charm"
+    ],
     "20": [
+      "psyshock"
+    ],
+    "24": [
+      "reflect",
+      "light_screen"
+    ],
+    "28": [
+      "ally_switch"
+    ],
+    "33": [
+      "pain_split"
+    ],
+    "36": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "40": [
+      "skill_swap"
+    ],
+    "44": [
+      "future_sight"
+    ],
+    "48": [
+      "wonder_room"
     ]
   },
   "evolution": null,

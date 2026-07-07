@@ -19,31 +19,28 @@
   "modelId": "ludicolo",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "vine_whip"
-    ],
-    "20": [
-      "bubble_beam"
-    ],
-    "32": [
-      "razor_leaf"
-    ],
-    "40": [
-      "waterfall"
-    ],
-    "48": [
-      "seed_bomb"
-    ],
-    "26": [
-      "calm_mind"
+      "astonish",
+      "growl",
+      "mega_drain",
+      "nature_power",
+      "giga_drain",
+      "rain_dance",
+      "energy_ball",
+      "zen_headbutt",
+      "knock_off",
+      "teeter_dance",
+      "fake_out",
+      "flail",
+      "mist",
+      "fury_swipes",
+      "bubble_beam",
+      "hydro_pump",
+      "absorb",
+      "water_gun",
+      "leech_seed",
+      "bubble",
+      "natural_gift",
+      "water_sport"
     ]
   },
   "evolution": null,

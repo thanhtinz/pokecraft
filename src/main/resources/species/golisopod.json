@@ -19,31 +19,44 @@
   "modelId": "golisopod",
   "learnset": {
     "1": [
-      "tackle"
+      "first_impression",
+      "struggle_bug",
+      "sand_attack",
+      "spite",
+      "defense_curl"
     ],
     "4": [
-      "string_shot"
+      "rock_smash"
     ],
     "8": [
+      "fury_cutter"
+    ],
+    "12": [
+      "mud_shot"
+    ],
+    "16": [
       "bug_bite"
     ],
-    "14": [
-      "water_gun"
-    ],
     "20": [
-      "pin_missile"
+      "iron_defense"
+    ],
+    "24": [
+      "sucker_punch"
+    ],
+    "28": [
+      "slash"
     ],
     "32": [
-      "bubble_beam"
+      "razor_shell"
+    ],
+    "36": [
+      "pin_missile"
     ],
     "40": [
-      "waterfall"
+      "swords_dance"
     ],
-    "48": [
-      "surf"
-    ],
-    "26": [
-      "harden"
+    "44": [
+      "liquidation"
     ]
   },
   "evolution": null,

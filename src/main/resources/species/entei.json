@@ -18,28 +18,52 @@
   "modelId": "entei",
   "learnset": {
     "1": [
-      "scratch"
+      "leer",
+      "ember",
+      "fire_spin",
+      "stomp",
+      "sacred_fire",
+      "extreme_speed",
+      "smokescreen"
     ],
-    "4": [
-      "leer"
+    "6": [
+      "flame_wheel"
     ],
-    "8": [
-      "ember"
+    "12": [
+      "bite"
     ],
-    "14": [
-      "fire_spin"
+    "18": [
+      "calm_mind"
     ],
-    "20": [
-      "fire_punch"
+    "24": [
+      "roar"
     ],
-    "32": [
-      "flamethrower"
+    "30": [
+      "fire_fang"
     ],
-    "40": [
+    "36": [
+      "scary_face"
+    ],
+    "42": [
+      "crunch"
+    ],
+    "48": [
+      "extrasensory"
+    ],
+    "54": [
+      "lava_plume"
+    ],
+    "60": [
+      "swagger"
+    ],
+    "66": [
+      "sunny_day"
+    ],
+    "72": [
       "fire_blast"
     ],
-    "26": [
-      "swords_dance"
+    "78": [
+      "eruption"
     ]
   },
   "evolution": null,

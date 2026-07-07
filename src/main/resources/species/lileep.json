@@ -19,31 +19,44 @@
   "modelId": "lileep",
   "learnset": {
     "1": [
-      "tackle"
+      "astonish",
+      "constrict",
+      "wrap"
     ],
     "4": [
-      "harden"
+      "acid"
     ],
     "8": [
-      "vine_whip"
+      "confuse_ray"
     ],
-    "14": [
-      "rock_throw"
+    "12": [
+      "ingrain"
+    ],
+    "16": [
+      "ancient_power"
     ],
     "20": [
-      "razor_leaf"
+      "mega_drain"
+    ],
+    "24": [
+      "brine"
+    ],
+    "28": [
+      "amnesia"
     ],
     "32": [
-      "rock_slide"
+      "gastro_acid"
     ],
-    "40": [
-      "seed_bomb"
+    "36": [
+      "giga_drain"
     ],
-    "48": [
-      "stone_edge"
+    "41": [
+      "stockpile",
+      "spit_up",
+      "swallow"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "energy_ball"
     ]
   },
   "evolution": null,

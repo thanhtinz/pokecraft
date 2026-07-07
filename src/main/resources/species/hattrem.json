@@ -18,22 +18,33 @@
   "modelId": "hattrem",
   "learnset": {
     "1": [
-      "pound"
+      "brutal_swing",
+      "confusion",
+      "play_nice",
+      "life_dew",
+      "disarming_voice",
+      "aromatherapy"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "psybeam"
+    "15": [
+      "aromatic_mist"
     ],
     "20": [
+      "psybeam"
+    ],
+    "25": [
+      "heal_pulse"
+    ],
+    "30": [
+      "dazzling_gleam"
+    ],
+    "37": [
+      "calm_mind"
+    ],
+    "44": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "51": [
+      "healing_wish"
     ]
   },
   "evolution": null,

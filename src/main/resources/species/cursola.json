@@ -18,22 +18,38 @@
   "modelId": "cursola",
   "learnset": {
     "1": [
-      "tackle"
+      "perish_song",
+      "tackle",
+      "harden",
+      "astonish",
+      "disable"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "lick"
-    ],
-    "14": [
-      "night_shade"
+    "15": [
+      "spite"
     ],
     "20": [
-      "shadow_ball"
+      "ancient_power"
     ],
-    "26": [
-      "calm_mind"
+    "25": [
+      "hex"
+    ],
+    "30": [
+      "curse"
+    ],
+    "35": [
+      "strength_sap"
+    ],
+    "40": [
+      "power_gem"
+    ],
+    "45": [
+      "night_shade"
+    ],
+    "50": [
+      "grudge"
+    ],
+    "55": [
+      "mirror_coat"
     ]
   },
   "evolution": null,

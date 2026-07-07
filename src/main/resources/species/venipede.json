@@ -19,31 +19,42 @@
   "modelId": "venipede",
   "learnset": {
     "1": [
-      "tackle"
+      "defense_curl",
+      "poison_sting",
+      "pursuit"
     ],
     "4": [
-      "string_shot"
+      "rollout"
     ],
     "8": [
-      "poison_sting"
+      "protect"
     ],
-    "14": [
-      "bug_bite"
+    "12": [
+      "poison_tail"
+    ],
+    "16": [
+      "screech"
     ],
     "20": [
-      "acid"
+      "bug_bite"
+    ],
+    "24": [
+      "venoshock"
+    ],
+    "28": [
+      "take_down"
     ],
     "32": [
-      "pin_missile"
+      "agility"
+    ],
+    "36": [
+      "toxic"
     ],
     "40": [
-      "sludge"
+      "venom_drench"
     ],
-    "48": [
-      "sludge_bomb"
-    ],
-    "26": [
-      "harden"
+    "44": [
+      "double_edge"
     ]
   },
   "evolution": null,

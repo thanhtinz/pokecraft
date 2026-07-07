@@ -19,31 +19,38 @@
   "modelId": "tranquill",
   "learnset": {
     "1": [
-      "scratch"
+      "gust",
+      "growl",
+      "leer",
+      "quick_attack",
+      "razor_wind"
     ],
-    "4": [
-      "growl"
+    "12": [
+      "taunt"
     ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "peck"
+    "16": [
+      "air_cutter"
     ],
     "20": [
-      "hyper_fang"
-    ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "mega_punch"
-    ],
-    "48": [
-      "wing_attack"
+      "swagger"
     ],
     "26": [
-      "swords_dance"
+      "feather_dance"
+    ],
+    "34": [
+      "detect"
+    ],
+    "38": [
+      "air_slash"
+    ],
+    "44": [
+      "roost"
+    ],
+    "50": [
+      "tailwind"
+    ],
+    "56": [
+      "sky_attack"
     ]
   },
   "evolution": null,

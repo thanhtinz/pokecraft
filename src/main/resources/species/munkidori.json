@@ -19,31 +19,37 @@
   "modelId": "munkidori",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "poison_powder"
+      "scratch",
+      "confusion",
+      "fake_out",
+      "flatter"
     ],
     "8": [
-      "confusion"
+      "helping_hand"
     ],
-    "14": [
-      "poison_sting"
-    ],
-    "20": [
+    "16": [
       "psybeam"
     ],
+    "24": [
+      "clear_smog"
+    ],
     "32": [
-      "acid"
+      "poison_jab"
     ],
     "40": [
       "psychic"
     ],
     "48": [
-      "sludge"
+      "sludge_wave"
     ],
-    "26": [
-      "calm_mind"
+    "56": [
+      "nasty_plot"
+    ],
+    "64": [
+      "future_sight"
+    ],
+    "72": [
+      "parting_shot"
     ]
   },
   "evolution": null,

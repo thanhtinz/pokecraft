@@ -18,25 +18,47 @@
   "modelId": "machoke",
   "learnset": {
     "1": [
-      "scratch"
+      "low_kick",
+      "leer",
+      "focus_energy",
+      "karate_chop",
+      "foresight",
+      "revenge",
+      "submission",
+      "wake_up_slap"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "low_sweep"
     ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
-      "low_kick"
+    "16": [
+      "knock_off"
     ],
     "20": [
-      "brick_break"
+      "scary_face"
     ],
-    "32": [
+    "24": [
+      "vital_throw"
+    ],
+    "31": [
+      "strength"
+    ],
+    "36": [
+      "dual_chop"
+    ],
+    "42": [
+      "bulk_up"
+    ],
+    "48": [
+      "seismic_toss"
+    ],
+    "54": [
+      "dynamic_punch"
+    ],
+    "60": [
       "cross_chop"
     ],
-    "26": [
-      "swords_dance"
+    "66": [
+      "double_edge"
     ]
   },
   "evolution": null,

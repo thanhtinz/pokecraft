@@ -18,28 +18,44 @@
   "modelId": "octillery",
   "learnset": {
     "1": [
-      "pound"
+      "gunk_shot",
+      "rock_blast",
+      "water_gun",
+      "constrict",
+      "focus_energy",
+      "octazooka",
+      "wring_out",
+      "water_pulse",
+      "bubble",
+      "helping_hand",
+      "wrap"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "psybeam"
     ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "bubble_beam"
+    "16": [
+      "aurora_beam"
     ],
     "20": [
-      "waterfall"
+      "bubble_beam"
     ],
-    "32": [
-      "surf"
+    "24": [
+      "lock_on"
     ],
-    "40": [
+    "30": [
+      "bullet_seed"
+    ],
+    "36": [
+      "ice_beam"
+    ],
+    "42": [
       "hydro_pump"
     ],
-    "26": [
-      "swords_dance"
+    "48": [
+      "soak"
+    ],
+    "54": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

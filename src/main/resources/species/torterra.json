@@ -19,31 +19,39 @@
   "modelId": "torterra",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
-      "vine_whip"
-    ],
-    "20": [
-      "dig"
-    ],
-    "32": [
-      "razor_leaf"
-    ],
-    "40": [
+      "wood_hammer",
+      "tackle",
+      "withdraw",
+      "absorb",
+      "razor_leaf",
       "earthquake"
     ],
-    "48": [
-      "seed_bomb"
+    "17": [
+      "curse"
     ],
-    "26": [
-      "swords_dance"
+    "22": [
+      "bite"
+    ],
+    "27": [
+      "mega_drain"
+    ],
+    "33": [
+      "leech_seed"
+    ],
+    "39": [
+      "synthesis"
+    ],
+    "45": [
+      "crunch"
+    ],
+    "51": [
+      "giga_drain"
+    ],
+    "57": [
+      "leaf_storm"
+    ],
+    "63": [
+      "headlong_rush"
     ]
   },
   "evolution": null,

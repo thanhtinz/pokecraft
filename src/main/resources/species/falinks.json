@@ -18,25 +18,44 @@
   "modelId": "falinks",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "protect"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "rock_smash"
     ],
-    "8": [
-      "karate_chop"
+    "10": [
+      "focus_energy"
     ],
-    "14": [
-      "low_kick"
+    "15": [
+      "headbutt"
     ],
     "20": [
-      "brick_break"
+      "bulk_up"
     ],
-    "32": [
-      "cross_chop"
+    "25": [
+      "endure"
     ],
-    "26": [
-      "swords_dance"
+    "30": [
+      "reversal"
+    ],
+    "35": [
+      "first_impression"
+    ],
+    "40": [
+      "no_retreat"
+    ],
+    "45": [
+      "iron_defense"
+    ],
+    "50": [
+      "close_combat"
+    ],
+    "55": [
+      "megahorn"
+    ],
+    "60": [
+      "counter"
     ]
   },
   "evolution": null,

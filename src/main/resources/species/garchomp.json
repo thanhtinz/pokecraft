@@ -19,31 +19,37 @@
   "modelId": "garchomp",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
-      "twister"
-    ],
-    "20": [
-      "dig"
-    ],
-    "32": [
+      "tackle",
+      "sand_attack",
+      "dragon_rage",
+      "sand_tomb",
+      "crunch",
+      "dual_chop",
       "dragon_breath"
     ],
-    "40": [
-      "earthquake"
+    "18": [
+      "bulldoze"
     ],
-    "48": [
+    "27": [
+      "bite"
+    ],
+    "34": [
+      "slash"
+    ],
+    "42": [
       "dragon_claw"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "dig"
+    ],
+    "62": [
+      "sandstorm"
+    ],
+    "72": [
+      "take_down"
+    ],
+    "82": [
+      "dragon_rush"
     ]
   },
   "evolution": null,

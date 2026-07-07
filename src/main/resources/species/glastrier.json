@@ -18,24 +18,43 @@
   "modelId": "glastrier",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "tail_whip"
     ],
-    "4": [
-      "leer"
+    "6": [
+      "double_kick"
     ],
-    "8": [
-      "ice_shard"
+    "12": [
+      "avalanche"
     ],
-    "14": [
-      "aurora_beam"
+    "18": [
+      "stomp"
     ],
-    "20": [
-      "ice_beam"
+    "24": [
+      "torment"
     ],
-    "32": [
-      "blizzard"
+    "30": [
+      "mist"
     ],
-    "26": [
+    "36": [
+      "icicle_crash"
+    ],
+    "42": [
+      "take_down"
+    ],
+    "48": [
+      "iron_defense"
+    ],
+    "54": [
+      "thrash"
+    ],
+    "60": [
+      "taunt"
+    ],
+    "66": [
+      "double_edge"
+    ],
+    "72": [
       "swords_dance"
     ]
   },

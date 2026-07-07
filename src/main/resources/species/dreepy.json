@@ -19,31 +19,10 @@
   "modelId": "dreepy",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "lick"
-    ],
-    "14": [
-      "twister"
-    ],
-    "20": [
-      "night_shade"
-    ],
-    "32": [
-      "dragon_breath"
-    ],
-    "40": [
-      "shadow_ball"
-    ],
-    "48": [
-      "dragon_claw"
-    ],
-    "26": [
-      "agility"
+      "astonish",
+      "infestation",
+      "quick_attack",
+      "bite"
     ]
   },
   "evolution": null,

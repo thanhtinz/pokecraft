@@ -19,31 +19,42 @@
   "modelId": "woobat",
   "learnset": {
     "1": [
-      "pound"
+      "odor_sleuth",
+      "gust",
+      "attract"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
+    "5": [
       "confusion"
     ],
-    "20": [
-      "gust"
+    "10": [
+      "endeavor"
     ],
-    "32": [
-      "psybeam"
+    "15": [
+      "heart_stamp"
+    ],
+    "20": [
+      "imprison"
+    ],
+    "25": [
+      "assurance"
+    ],
+    "30": [
+      "amnesia"
+    ],
+    "35": [
+      "air_slash"
     ],
     "40": [
-      "wing_attack"
-    ],
-    "48": [
       "psychic"
     ],
-    "26": [
-      "agility"
+    "45": [
+      "calm_mind"
+    ],
+    "50": [
+      "future_sight"
+    ],
+    "55": [
+      "simple_beam"
     ]
   },
   "evolution": null,

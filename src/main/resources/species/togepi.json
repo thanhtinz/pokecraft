@@ -18,19 +18,47 @@
   "modelId": "togepi",
   "learnset": {
     "1": [
-      "scratch"
+      "growl",
+      "pound"
     ],
     "4": [
-      "sing"
+      "sweet_kiss"
     ],
     "8": [
-      "fairy_wind"
+      "life_dew"
     ],
-    "14": [
-      "dazzling_gleam"
+    "12": [
+      "charm"
     ],
-    "26": [
-      "harden"
+    "16": [
+      "ancient_power"
+    ],
+    "20": [
+      "yawn"
+    ],
+    "24": [
+      "metronome"
+    ],
+    "28": [
+      "after_you"
+    ],
+    "32": [
+      "double_edge"
+    ],
+    "36": [
+      "safeguard"
+    ],
+    "40": [
+      "follow_me"
+    ],
+    "44": [
+      "baton_pass"
+    ],
+    "48": [
+      "last_resort"
+    ],
+    "52": [
+      "wish"
     ]
   },
   "evolution": null,

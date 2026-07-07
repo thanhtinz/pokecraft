@@ -19,31 +19,43 @@
   "modelId": "dodrio",
   "learnset": {
     "1": [
-      "scratch"
+      "peck",
+      "growl",
+      "quick_attack",
+      "rage",
+      "pursuit",
+      "tri_attack",
+      "jump_kick"
     ],
-    "4": [
-      "growl"
+    "12": [
+      "fury_attack"
     ],
-    "8": [
-      "peck"
+    "15": [
+      "pluck"
     ],
-    "14": [
-      "quick_attack"
+    "19": [
+      "double_hit"
     ],
-    "20": [
-      "gust"
-    ],
-    "32": [
-      "hyper_fang"
-    ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "mega_punch"
+    "23": [
+      "agility"
     ],
     "26": [
+      "uproar"
+    ],
+    "30": [
+      "acupressure"
+    ],
+    "34": [
       "swords_dance"
+    ],
+    "38": [
+      "drill_peck"
+    ],
+    "43": [
+      "endeavor"
+    ],
+    "50": [
+      "thrash"
     ]
   },
   "evolution": null,

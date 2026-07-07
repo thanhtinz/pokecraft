@@ -18,28 +18,43 @@
   "modelId": "quaxwell",
   "learnset": {
     "1": [
-      "scratch"
+      "pound",
+      "growl",
+      "water_gun",
+      "double_hit"
     ],
-    "4": [
-      "tail_whip"
+    "7": [
+      "work_up"
     ],
-    "8": [
-      "water_gun"
+    "10": [
+      "wing_attack"
     ],
-    "14": [
-      "bubble_beam"
+    "13": [
+      "aqua_jet"
     ],
-    "20": [
-      "waterfall"
+    "17": [
+      "water_pulse"
+    ],
+    "19": [
+      "low_sweep"
+    ],
+    "23": [
+      "aqua_cutter"
+    ],
+    "27": [
+      "air_slash"
     ],
     "32": [
-      "surf"
+      "focus_energy"
     ],
-    "40": [
-      "hydro_pump"
+    "38": [
+      "acrobatics"
     ],
-    "26": [
-      "swords_dance"
+    "43": [
+      "liquidation"
+    ],
+    "48": [
+      "feather_dance"
     ]
   },
   "evolution": null,

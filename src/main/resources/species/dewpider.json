@@ -19,31 +19,47 @@
   "modelId": "dewpider",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "bug_bite"
-    ],
-    "14": [
+      "water_sport",
+      "bubble",
+      "infestation",
+      "spider_web",
       "water_gun"
     ],
-    "20": [
-      "pin_missile"
+    "4": [
+      "bug_bite"
     ],
-    "32": [
+    "8": [
+      "bite"
+    ],
+    "12": [
       "bubble_beam"
     ],
+    "16": [
+      "aqua_ring"
+    ],
+    "20": [
+      "headbutt"
+    ],
+    "24": [
+      "crunch"
+    ],
+    "28": [
+      "soak"
+    ],
+    "32": [
+      "entrainment"
+    ],
+    "36": [
+      "lunge"
+    ],
     "40": [
-      "waterfall"
+      "liquidation"
+    ],
+    "44": [
+      "leech_life"
     ],
     "48": [
-      "surf"
-    ],
-    "26": [
-      "harden"
+      "mirror_coat"
     ]
   },
   "evolution": null,

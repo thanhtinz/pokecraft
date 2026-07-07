@@ -18,19 +18,41 @@
   "modelId": "cufant",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "growl"
     ],
-    "4": [
-      "harden"
+    "5": [
+      "rollout"
     ],
-    "8": [
-      "steel_wing"
+    "10": [
+      "rock_smash"
     ],
-    "14": [
+    "15": [
+      "bulldoze"
+    ],
+    "20": [
+      "stomp"
+    ],
+    "25": [
+      "iron_defense"
+    ],
+    "30": [
+      "dig"
+    ],
+    "35": [
+      "strength"
+    ],
+    "40": [
       "iron_head"
     ],
-    "26": [
-      "swords_dance"
+    "45": [
+      "play_rough"
+    ],
+    "50": [
+      "high_horsepower"
+    ],
+    "55": [
+      "superpower"
     ]
   },
   "evolution": null,

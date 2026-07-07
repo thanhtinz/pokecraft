@@ -19,31 +19,46 @@
   "modelId": "emboar",
   "learnset": {
     "1": [
-      "pound"
+      "hammer_arm",
+      "tackle",
+      "tail_whip",
+      "ember",
+      "odor_sleuth",
+      "arm_thrust",
+      "endure"
     ],
-    "4": [
-      "leer"
+    "13": [
+      "defense_curl"
     ],
-    "8": [
-      "ember"
-    ],
-    "14": [
-      "karate_chop"
+    "15": [
+      "flame_charge"
     ],
     "20": [
-      "fire_spin"
+      "smog"
     ],
-    "32": [
-      "low_kick"
+    "23": [
+      "rollout"
     ],
-    "40": [
-      "fire_punch"
+    "28": [
+      "take_down"
     ],
-    "48": [
-      "brick_break"
+    "31": [
+      "heat_crash"
     ],
-    "26": [
-      "swords_dance"
+    "38": [
+      "assurance"
+    ],
+    "43": [
+      "flamethrower"
+    ],
+    "50": [
+      "head_smash"
+    ],
+    "55": [
+      "roar"
+    ],
+    "62": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

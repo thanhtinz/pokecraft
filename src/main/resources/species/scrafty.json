@@ -19,31 +19,45 @@
   "modelId": "scrafty",
   "learnset": {
     "1": [
-      "pound"
+      "leer",
+      "low_kick",
+      "feint_attack",
+      "headbutt",
+      "payback",
+      "chip_away"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "sand_attack"
     ],
-    "8": [
-      "bite"
-    ],
-    "14": [
-      "karate_chop"
+    "16": [
+      "facade"
     ],
     "20": [
-      "crunch"
+      "torment"
+    ],
+    "24": [
+      "beat_up"
+    ],
+    "28": [
+      "scary_face"
     ],
     "32": [
-      "low_kick"
-    ],
-    "40": [
       "brick_break"
     ],
-    "48": [
-      "cross_chop"
+    "36": [
+      "swagger"
     ],
-    "26": [
-      "harden"
+    "42": [
+      "crunch"
+    ],
+    "48": [
+      "high_jump_kick"
+    ],
+    "54": [
+      "focus_punch"
+    ],
+    "60": [
+      "head_smash"
     ]
   },
   "evolution": null,

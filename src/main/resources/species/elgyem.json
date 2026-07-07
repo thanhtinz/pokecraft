@@ -18,22 +18,41 @@
   "modelId": "elgyem",
   "learnset": {
     "1": [
-      "pound"
+      "confusion",
+      "growl",
+      "heal_block",
+      "miracle_eye"
     ],
-    "4": [
-      "hypnosis"
+    "6": [
+      "imprison"
     ],
-    "8": [
-      "confusion"
+    "12": [
+      "teleport"
     ],
-    "14": [
+    "18": [
       "psybeam"
     ],
-    "20": [
-      "psychic"
+    "24": [
+      "guard_split",
+      "power_split"
     ],
-    "26": [
+    "30": [
+      "headbutt"
+    ],
+    "36": [
+      "zen_headbutt"
+    ],
+    "43": [
+      "recover"
+    ],
+    "48": [
       "calm_mind"
+    ],
+    "54": [
+      "wonder_room"
+    ],
+    "60": [
+      "psychic"
     ]
   },
   "evolution": null,

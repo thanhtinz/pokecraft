@@ -18,22 +18,47 @@
   "modelId": "hippopotas",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "sand_attack"
     ],
     "4": [
-      "leer"
+      "bite"
     ],
     "8": [
+      "yawn"
+    ],
+    "12": [
       "sand_tomb"
     ],
-    "14": [
+    "16": [
       "dig"
     ],
     "20": [
+      "crunch"
+    ],
+    "24": [
+      "sandstorm"
+    ],
+    "28": [
+      "take_down"
+    ],
+    "32": [
+      "roar"
+    ],
+    "36": [
+      "rest"
+    ],
+    "40": [
       "earthquake"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "double_edge"
+    ],
+    "48": [
+      "fissure"
+    ],
+    "52": [
+      "slack_off"
     ]
   },
   "evolution": null,

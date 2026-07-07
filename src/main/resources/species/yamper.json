@@ -18,25 +18,35 @@
   "modelId": "yamper",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "tail_whip"
     ],
-    "4": [
-      "thunder_wave"
+    "5": [
+      "nuzzle"
     ],
-    "8": [
-      "thunder_shock"
+    "10": [
+      "bite"
     ],
-    "14": [
-      "spark"
+    "15": [
+      "roar"
     ],
     "20": [
-      "thunderbolt"
-    ],
-    "32": [
-      "thunder"
+      "spark"
     ],
     "26": [
-      "harden"
+      "charm"
+    ],
+    "30": [
+      "crunch"
+    ],
+    "35": [
+      "charge"
+    ],
+    "40": [
+      "wild_charge"
+    ],
+    "45": [
+      "play_rough"
     ]
   },
   "evolution": null,

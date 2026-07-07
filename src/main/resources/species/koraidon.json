@@ -19,31 +19,50 @@
   "modelId": "koraidon",
   "learnset": {
     "1": [
-      "pound"
+      "sunny_day",
+      "breaking_swipe"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "twister"
+    "7": [
+      "rock_smash"
     ],
     "14": [
-      "karate_chop"
+      "ancient_power"
     ],
-    "20": [
-      "dragon_breath"
+    "21": [
+      "drain_punch"
     ],
-    "32": [
-      "low_kick"
-    ],
-    "40": [
-      "dragon_claw"
-    ],
-    "48": [
+    "28": [
       "brick_break"
     ],
-    "26": [
-      "swords_dance"
+    "35": [
+      "agility"
+    ],
+    "42": [
+      "dragon_claw"
+    ],
+    "49": [
+      "flamethrower"
+    ],
+    "56": [
+      "collision_course"
+    ],
+    "63": [
+      "screech"
+    ],
+    "70": [
+      "counter"
+    ],
+    "77": [
+      "outrage"
+    ],
+    "84": [
+      "close_combat"
+    ],
+    "91": [
+      "flare_blitz"
+    ],
+    "98": [
+      "giga_impact"
     ]
   },
   "evolution": null,

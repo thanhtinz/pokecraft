@@ -19,28 +19,43 @@
   "modelId": "anorith",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "harden",
+      "mud_sport",
+      "fury_cutter"
     ],
     "4": [
-      "harden"
+      "water_gun"
     ],
     "8": [
-      "bug_bite"
+      "smack_down"
     ],
-    "14": [
-      "rock_throw"
+    "12": [
+      "metal_claw"
+    ],
+    "16": [
+      "ancient_power"
     ],
     "20": [
-      "pin_missile"
+      "bug_bite"
+    ],
+    "24": [
+      "brine"
+    ],
+    "28": [
+      "slash"
     ],
     "32": [
-      "rock_slide"
+      "crush_claw"
     ],
-    "40": [
-      "stone_edge"
+    "36": [
+      "rock_blast"
     ],
-    "26": [
-      "swords_dance"
+    "41": [
+      "protect"
+    ],
+    "44": [
+      "x_scissor"
     ]
   },
   "evolution": null,

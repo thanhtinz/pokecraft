@@ -19,31 +19,44 @@
   "modelId": "talonflame",
   "learnset": {
     "1": [
-      "tackle"
+      "flare_blitz",
+      "tackle",
+      "growl",
+      "quick_attack",
+      "peck",
+      "ember",
+      "razor_wind",
+      "flame_charge",
+      "me_first",
+      "natural_gift",
+      "feint"
     ],
-    "4": [
-      "leer"
+    "15": [
+      "flail"
     ],
-    "8": [
-      "peck"
+    "22": [
+      "acrobatics"
     ],
-    "14": [
-      "ember"
-    ],
-    "20": [
-      "gust"
-    ],
-    "32": [
-      "fire_spin"
-    ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "fire_punch"
-    ],
-    "26": [
+    "29": [
       "agility"
+    ],
+    "38": [
+      "aerial_ace"
+    ],
+    "47": [
+      "tailwind"
+    ],
+    "56": [
+      "steel_wing"
+    ],
+    "65": [
+      "roost"
+    ],
+    "74": [
+      "fly"
+    ],
+    "83": [
+      "brave_bird"
     ]
   },
   "evolution": null,

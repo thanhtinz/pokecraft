@@ -18,22 +18,50 @@
   "modelId": "nosepass",
   "learnset": {
     "1": [
-      "pound"
+      "tackle"
     ],
     "4": [
       "harden"
     ],
-    "8": [
+    "7": [
+      "block"
+    ],
+    "10": [
       "rock_throw"
     ],
-    "14": [
+    "13": [
+      "thunder_wave"
+    ],
+    "16": [
+      "rest"
+    ],
+    "19": [
+      "spark"
+    ],
+    "22": [
       "rock_slide"
     ],
-    "20": [
+    "25": [
+      "power_gem"
+    ],
+    "28": [
+      "rock_blast"
+    ],
+    "31": [
+      "discharge"
+    ],
+    "34": [
+      "sandstorm"
+    ],
+    "37": [
+      "earth_power"
+    ],
+    "40": [
       "stone_edge"
     ],
-    "26": [
-      "harden"
+    "43": [
+      "zap_cannon",
+      "lock_on"
     ]
   },
   "evolution": null,

@@ -19,31 +19,41 @@
   "modelId": "sizzlipede",
   "learnset": {
     "1": [
-      "scratch"
+      "ember",
+      "smokescreen"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "wrap"
     ],
-    "8": [
-      "ember"
+    "10": [
+      "bite"
     ],
-    "14": [
-      "bug_bite"
+    "15": [
+      "flame_wheel"
     ],
     "20": [
+      "bug_bite"
+    ],
+    "25": [
+      "coil"
+    ],
+    "30": [
+      "slam"
+    ],
+    "35": [
       "fire_spin"
     ],
-    "32": [
-      "pin_missile"
-    ],
     "40": [
-      "fire_punch"
+      "crunch"
     ],
-    "48": [
-      "flamethrower"
+    "45": [
+      "fire_lash"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "lunge"
+    ],
+    "55": [
+      "burn_up"
     ]
   },
   "evolution": null,

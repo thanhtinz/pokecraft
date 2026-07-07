@@ -18,28 +18,52 @@
   "modelId": "wailmer",
   "learnset": {
     "1": [
-      "pound"
+      "splash"
     ],
-    "4": [
-      "tail_whip"
+    "3": [
+      "growl"
     ],
-    "8": [
+    "6": [
+      "astonish"
+    ],
+    "12": [
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "15": [
+      "mist"
     ],
-    "20": [
-      "waterfall"
+    "18": [
+      "water_pulse"
     ],
-    "32": [
-      "surf"
+    "21": [
+      "heavy_slam"
     ],
-    "40": [
+    "24": [
+      "brine"
+    ],
+    "27": [
+      "whirlpool"
+    ],
+    "30": [
+      "dive"
+    ],
+    "33": [
+      "bounce"
+    ],
+    "36": [
+      "body_slam"
+    ],
+    "39": [
+      "rest"
+    ],
+    "42": [
+      "amnesia"
+    ],
+    "45": [
       "hydro_pump"
     ],
-    "26": [
-      "swords_dance"
+    "48": [
+      "water_spout"
     ]
   },
   "evolution": null,

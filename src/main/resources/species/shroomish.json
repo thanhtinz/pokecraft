@@ -18,28 +18,38 @@
   "modelId": "shroomish",
   "learnset": {
     "1": [
+      "absorb",
       "tackle"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "stun_spore"
     ],
     "8": [
-      "vine_whip"
+      "leech_seed"
     ],
-    "14": [
-      "razor_leaf"
+    "12": [
+      "mega_drain"
     ],
-    "20": [
-      "seed_bomb"
+    "15": [
+      "headbutt"
     ],
-    "32": [
-      "petal_dance"
-    ],
-    "40": [
-      "solar_beam"
+    "19": [
+      "poison_powder"
     ],
     "26": [
-      "harden"
+      "giga_drain"
+    ],
+    "29": [
+      "growth"
+    ],
+    "33": [
+      "toxic"
+    ],
+    "36": [
+      "seed_bomb"
+    ],
+    "40": [
+      "spore"
     ]
   },
   "evolution": null,

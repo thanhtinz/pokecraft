@@ -18,28 +18,45 @@
   "modelId": "totodile",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "leer",
+      "rage"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+    "6": [
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "9": [
+      "bite"
     ],
-    "20": [
-      "waterfall"
+    "13": [
+      "scary_face"
     ],
-    "32": [
-      "surf"
+    "19": [
+      "ice_fang"
     ],
-    "40": [
+    "22": [
+      "flail"
+    ],
+    "27": [
+      "crunch"
+    ],
+    "30": [
+      "slash"
+    ],
+    "33": [
+      "screech"
+    ],
+    "37": [
+      "thrash"
+    ],
+    "41": [
+      "aqua_tail"
+    ],
+    "45": [
+      "superpower"
+    ],
+    "50": [
       "hydro_pump"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

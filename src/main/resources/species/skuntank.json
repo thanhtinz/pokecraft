@@ -19,31 +19,45 @@
   "modelId": "skuntank",
   "learnset": {
     "1": [
-      "tackle"
+      "scratch",
+      "poison_gas",
+      "smokescreen",
+      "feint",
+      "slash",
+      "flamethrower"
     ],
-    "4": [
-      "poison_powder"
+    "12": [
+      "fury_swipes"
     ],
-    "8": [
+    "15": [
+      "focus_energy"
+    ],
+    "18": [
       "bite"
     ],
-    "14": [
-      "poison_sting"
+    "21": [
+      "venoshock"
     ],
-    "20": [
-      "crunch"
+    "24": [
+      "screech"
     ],
-    "32": [
-      "acid"
+    "27": [
+      "toxic"
     ],
-    "40": [
-      "sludge"
+    "30": [
+      "sucker_punch"
+    ],
+    "33": [
+      "memento"
+    ],
+    "38": [
+      "night_slash"
+    ],
+    "43": [
+      "belch"
     ],
     "48": [
-      "sludge_bomb"
-    ],
-    "26": [
-      "swords_dance"
+      "explosion"
     ]
   },
   "evolution": null,

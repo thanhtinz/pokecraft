@@ -19,31 +19,44 @@
   "modelId": "lunatone",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "harden",
+      "confusion",
+      "rock_throw",
+      "psywave",
+      "heal_block",
+      "moonblast",
+      "moonlight"
     ],
-    "4": [
-      "harden"
+    "5": [
+      "hypnosis"
     ],
-    "8": [
-      "confusion"
+    "10": [
+      "rock_polish"
     ],
-    "14": [
-      "rock_throw"
-    ],
-    "20": [
-      "psybeam"
-    ],
-    "32": [
+    "15": [
       "rock_slide"
     ],
-    "40": [
+    "20": [
+      "psyshock"
+    ],
+    "25": [
+      "cosmic_power"
+    ],
+    "30": [
       "psychic"
     ],
-    "48": [
+    "35": [
       "stone_edge"
     ],
-    "26": [
-      "calm_mind"
+    "40": [
+      "future_sight"
+    ],
+    "45": [
+      "magic_room"
+    ],
+    "50": [
+      "explosion"
     ]
   },
   "evolution": null,

@@ -18,31 +18,38 @@
   "modelId": "lickitung",
   "learnset": {
     "1": [
-      "tackle"
+      "lick",
+      "defense_curl"
     ],
-    "4": [
-      "growl"
+    "6": [
+      "rollout"
     ],
-    "8": [
-      "quick_attack"
+    "12": [
+      "supersonic"
     ],
-    "14": [
-      "hyper_fang"
+    "18": [
+      "wrap"
     ],
-    "20": [
-      "mega_punch"
+    "24": [
+      "disable"
     ],
-    "32": [
-      "body_slam"
+    "30": [
+      "stomp"
     ],
-    "40": [
-      "double_edge"
+    "36": [
+      "knock_off"
+    ],
+    "42": [
+      "screech"
     ],
     "48": [
-      "hyper_beam"
+      "slam"
     ],
-    "26": [
-      "harden"
+    "54": [
+      "power_whip"
+    ],
+    "60": [
+      "belly_drum"
     ]
   },
   "evolution": null,

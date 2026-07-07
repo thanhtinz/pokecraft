@@ -19,31 +19,45 @@
   "modelId": "tentacruel",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
+      "poison_sting",
+      "constrict",
+      "acid",
+      "wrap",
+      "barrier",
+      "wring_out",
+      "reflect_type",
+      "bubble",
       "water_gun"
     ],
-    "20": [
-      "acid"
+    "12": [
+      "supersonic"
     ],
-    "32": [
+    "16": [
+      "water_pulse"
+    ],
+    "20": [
+      "screech"
+    ],
+    "24": [
       "bubble_beam"
     ],
+    "28": [
+      "hex"
+    ],
+    "34": [
+      "acid_armor"
+    ],
     "40": [
-      "sludge"
+      "poison_jab"
     ],
-    "48": [
-      "waterfall"
+    "46": [
+      "surf"
     ],
-    "26": [
-      "agility"
+    "52": [
+      "sludge_wave"
+    ],
+    "58": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

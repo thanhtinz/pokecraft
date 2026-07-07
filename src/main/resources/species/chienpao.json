@@ -19,31 +19,55 @@
   "modelId": "chienpao",
   "learnset": {
     "1": [
-      "tackle"
+      "spite",
+      "powder_snow",
+      "mean_look"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "icy_wind"
     ],
-    "8": [
-      "bite"
+    "10": [
+      "payback"
     ],
-    "14": [
-      "ice_shard"
+    "15": [
+      "mist",
+      "haze"
     ],
     "20": [
-      "crunch"
+      "ice_shard"
     ],
-    "32": [
-      "aurora_beam"
+    "25": [
+      "swords_dance"
+    ],
+    "30": [
+      "snowscape"
+    ],
+    "35": [
+      "night_slash"
     ],
     "40": [
-      "ice_beam"
+      "dark_pulse"
     ],
-    "48": [
-      "blizzard"
+    "45": [
+      "icicle_crash"
     ],
-    "26": [
-      "agility"
+    "50": [
+      "ruination"
+    ],
+    "55": [
+      "sucker_punch"
+    ],
+    "60": [
+      "sacred_sword"
+    ],
+    "65": [
+      "recover"
+    ],
+    "70": [
+      "throat_chop"
+    ],
+    "75": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

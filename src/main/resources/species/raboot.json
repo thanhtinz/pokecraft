@@ -18,28 +18,31 @@
   "modelId": "raboot",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "growl",
+      "ember",
+      "quick_attack"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "double_kick"
     ],
-    "8": [
-      "ember"
+    "19": [
+      "flame_charge"
     ],
-    "14": [
-      "fire_spin"
-    ],
-    "20": [
-      "fire_punch"
-    ],
-    "32": [
-      "flamethrower"
-    ],
-    "40": [
-      "fire_blast"
-    ],
-    "26": [
+    "24": [
       "agility"
+    ],
+    "30": [
+      "headbutt"
+    ],
+    "36": [
+      "counter"
+    ],
+    "42": [
+      "bounce"
+    ],
+    "48": [
+      "double_edge"
     ]
   },
   "evolution": null,

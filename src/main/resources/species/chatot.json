@@ -19,31 +19,43 @@
   "modelId": "chatot",
   "learnset": {
     "1": [
-      "tackle"
+      "chatter",
+      "taunt",
+      "hyper_voice",
+      "confide"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
+    "5": [
       "peck"
     ],
-    "14": [
-      "quick_attack"
+    "9": [
+      "mirror_move"
     ],
-    "20": [
-      "gust"
+    "13": [
+      "sing"
     ],
-    "32": [
-      "hyper_fang"
+    "17": [
+      "fury_attack"
     ],
-    "40": [
-      "wing_attack"
+    "29": [
+      "round"
     ],
-    "48": [
-      "mega_punch"
+    "33": [
+      "mimic"
     ],
-    "26": [
-      "calm_mind"
+    "37": [
+      "echoed_voice"
+    ],
+    "41": [
+      "roost"
+    ],
+    "45": [
+      "uproar"
+    ],
+    "49": [
+      "synchronoise"
+    ],
+    "50": [
+      "feather_dance"
     ]
   },
   "evolution": null,

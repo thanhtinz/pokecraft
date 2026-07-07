@@ -19,28 +19,51 @@
   "modelId": "probopass",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "harden"
-    ],
-    "8": [
+      "magnet_rise",
+      "gravity",
+      "tackle",
+      "iron_defense",
+      "magnet_bomb",
+      "block",
+      "wide_guard",
+      "tri_attack",
+      "magnetic_flux",
+      "harden",
       "rock_throw"
     ],
-    "14": [
-      "steel_wing"
+    "13": [
+      "thunder_wave"
     ],
-    "20": [
+    "16": [
+      "rest"
+    ],
+    "19": [
+      "spark"
+    ],
+    "22": [
       "rock_slide"
     ],
-    "32": [
-      "iron_head"
+    "25": [
+      "power_gem"
+    ],
+    "28": [
+      "rock_blast"
+    ],
+    "31": [
+      "discharge"
+    ],
+    "34": [
+      "sandstorm"
+    ],
+    "37": [
+      "earth_power"
     ],
     "40": [
       "stone_edge"
     ],
-    "26": [
-      "harden"
+    "43": [
+      "zap_cannon",
+      "lock_on"
     ]
   },
   "evolution": null,

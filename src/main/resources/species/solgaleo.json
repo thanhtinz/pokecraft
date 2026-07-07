@@ -19,28 +19,49 @@
   "modelId": "solgaleo",
   "learnset": {
     "1": [
-      "pound"
+      "sunsteel_strike",
+      "cosmic_power",
+      "wake_up_slap",
+      "teleport",
+      "metal_claw",
+      "noble_roar",
+      "splash"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "steel_wing"
-    ],
-    "14": [
-      "confusion"
-    ],
-    "20": [
+    "7": [
       "iron_head"
     ],
-    "32": [
-      "psybeam"
+    "14": [
+      "metal_sound"
     ],
-    "40": [
-      "psychic"
+    "21": [
+      "zen_headbutt"
     ],
-    "26": [
-      "swords_dance"
+    "28": [
+      "flash_cannon"
+    ],
+    "35": [
+      "morning_sun"
+    ],
+    "42": [
+      "crunch"
+    ],
+    "49": [
+      "metal_burst"
+    ],
+    "56": [
+      "wild_charge"
+    ],
+    "63": [
+      "solar_beam"
+    ],
+    "70": [
+      "flare_blitz"
+    ],
+    "77": [
+      "wide_guard"
+    ],
+    "84": [
+      "giga_impact"
     ]
   },
   "evolution": null,

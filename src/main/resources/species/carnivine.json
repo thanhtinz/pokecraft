@@ -18,28 +18,40 @@
   "modelId": "carnivine",
   "learnset": {
     "1": [
-      "pound"
+      "bind",
+      "growth"
     ],
-    "4": [
-      "sleep_powder"
+    "7": [
+      "bite"
     ],
-    "8": [
+    "11": [
       "vine_whip"
     ],
-    "14": [
-      "razor_leaf"
+    "17": [
+      "sweet_scent"
     ],
-    "20": [
-      "seed_bomb"
+    "21": [
+      "ingrain"
     ],
-    "32": [
-      "petal_dance"
+    "27": [
+      "feint_attack"
     ],
-    "40": [
-      "solar_beam"
+    "31": [
+      "leaf_tornado"
     ],
-    "26": [
-      "swords_dance"
+    "37": [
+      "stockpile",
+      "spit_up",
+      "swallow"
+    ],
+    "41": [
+      "crunch"
+    ],
+    "47": [
+      "wring_out"
+    ],
+    "50": [
+      "power_whip"
     ]
   },
   "evolution": null,

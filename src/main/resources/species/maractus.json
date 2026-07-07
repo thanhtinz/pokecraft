@@ -18,28 +18,57 @@
   "modelId": "maractus",
   "learnset": {
     "1": [
-      "scratch"
+      "peck",
+      "absorb",
+      "needle_arm",
+      "ingrain",
+      "after_you",
+      "spiky_shield"
     ],
     "4": [
-      "sleep_powder"
+      "growth"
     ],
     "8": [
-      "vine_whip"
+      "mega_drain"
     ],
-    "14": [
-      "razor_leaf"
+    "12": [
+      "leech_seed"
+    ],
+    "16": [
+      "sucker_punch"
     ],
     "20": [
-      "seed_bomb"
+      "pin_missile"
+    ],
+    "24": [
+      "giga_drain"
+    ],
+    "28": [
+      "sweet_scent"
     ],
     "32": [
-      "petal_dance"
+      "synthesis"
+    ],
+    "36": [
+      "petal_blizzard"
     ],
     "40": [
+      "cotton_spore"
+    ],
+    "44": [
+      "sunny_day"
+    ],
+    "48": [
       "solar_beam"
     ],
-    "26": [
-      "calm_mind"
+    "52": [
+      "acupressure"
+    ],
+    "56": [
+      "petal_dance"
+    ],
+    "60": [
+      "cotton_guard"
     ]
   },
   "evolution": null,

@@ -19,31 +19,55 @@
   "modelId": "wochien",
   "learnset": {
     "1": [
-      "pound"
+      "absorb",
+      "spite",
+      "mean_look"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "tickle"
     ],
-    "8": [
-      "vine_whip"
+    "10": [
+      "payback"
     ],
-    "14": [
-      "bite"
+    "15": [
+      "poison_powder",
+      "stun_spore"
     ],
     "20": [
-      "razor_leaf"
+      "mega_drain"
     ],
-    "32": [
-      "crunch"
+    "25": [
+      "leech_seed"
+    ],
+    "30": [
+      "growth"
+    ],
+    "35": [
+      "ingrain"
     ],
     "40": [
-      "seed_bomb"
+      "dark_pulse"
     ],
-    "48": [
-      "petal_dance"
+    "45": [
+      "giga_drain"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "ruination"
+    ],
+    "55": [
+      "foul_play"
+    ],
+    "60": [
+      "power_whip"
+    ],
+    "65": [
+      "grassy_terrain"
+    ],
+    "70": [
+      "knock_off"
+    ],
+    "75": [
+      "leaf_storm"
     ]
   },
   "evolution": null,

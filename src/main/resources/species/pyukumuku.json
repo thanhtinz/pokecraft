@@ -18,28 +18,48 @@
   "modelId": "pyukumuku",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "baton_pass",
+      "water_sport",
+      "mud_sport",
+      "harden",
+      "bide"
     ],
-    "4": [
-      "tail_whip"
+    "5": [
+      "helping_hand"
     ],
-    "8": [
-      "water_gun"
+    "10": [
+      "taunt"
     ],
-    "14": [
-      "bubble_beam"
+    "15": [
+      "safeguard"
     ],
     "20": [
-      "waterfall"
+      "counter"
     ],
-    "32": [
-      "surf"
+    "25": [
+      "purify"
+    ],
+    "30": [
+      "curse"
+    ],
+    "35": [
+      "gastro_acid"
     ],
     "40": [
-      "hydro_pump"
+      "pain_split"
     ],
-    "26": [
-      "harden"
+    "45": [
+      "recover"
+    ],
+    "50": [
+      "soak"
+    ],
+    "55": [
+      "toxic"
+    ],
+    "60": [
+      "memento"
     ]
   },
   "evolution": null,

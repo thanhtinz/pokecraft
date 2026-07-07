@@ -19,28 +19,47 @@
   "modelId": "krookodile",
   "learnset": {
     "1": [
-      "scratch"
+      "leer",
+      "rage",
+      "sand_attack",
+      "hone_claws",
+      "power_trip"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "bite"
-    ],
-    "14": [
+    "9": [
       "sand_tomb"
     ],
-    "20": [
+    "12": [
+      "scary_face"
+    ],
+    "15": [
+      "bite"
+    ],
+    "18": [
+      "torment"
+    ],
+    "21": [
+      "dig"
+    ],
+    "24": [
+      "swagger"
+    ],
+    "27": [
       "crunch"
     ],
     "32": [
-      "dig"
+      "sandstorm"
     ],
-    "40": [
+    "35": [
+      "foul_play"
+    ],
+    "44": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "51": [
+      "thrash"
+    ],
+    "58": [
+      "outrage"
     ]
   },
   "evolution": null,

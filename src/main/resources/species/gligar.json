@@ -19,31 +19,46 @@
   "modelId": "gligar",
   "learnset": {
     "1": [
-      "tackle"
+      "poison_sting"
     ],
     "4": [
-      "leer"
+      "sand_attack"
     ],
-    "8": [
-      "peck"
+    "7": [
+      "harden"
     ],
-    "14": [
-      "sand_tomb"
+    "10": [
+      "knock_off"
     ],
-    "20": [
-      "gust"
+    "13": [
+      "quick_attack"
     ],
-    "32": [
-      "dig"
+    "16": [
+      "fury_cutter"
+    ],
+    "19": [
+      "feint_attack"
+    ],
+    "22": [
+      "acrobatics"
+    ],
+    "27": [
+      "slash"
+    ],
+    "30": [
+      "u_turn"
+    ],
+    "35": [
+      "screech"
     ],
     "40": [
-      "wing_attack"
+      "x_scissor"
     ],
-    "48": [
-      "earthquake"
+    "45": [
+      "sky_uppercut"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "swords_dance"
     ]
   },
   "evolution": null,

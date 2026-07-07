@@ -19,31 +19,48 @@
   "modelId": "pawmo",
   "learnset": {
     "1": [
-      "scratch"
+      "arm_thrust",
+      "scratch",
+      "growl"
     ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
+    "3": [
       "thunder_shock"
     ],
-    "14": [
-      "karate_chop"
+    "6": [
+      "quick_attack"
     ],
-    "20": [
+    "8": [
+      "charge"
+    ],
+    "12": [
+      "nuzzle"
+    ],
+    "15": [
+      "dig"
+    ],
+    "19": [
+      "bite"
+    ],
+    "23": [
       "spark"
     ],
+    "27": [
+      "thunder_wave"
+    ],
     "32": [
-      "low_kick"
+      "slam"
     ],
-    "40": [
-      "thunderbolt"
+    "38": [
+      "entrainment"
     ],
-    "48": [
-      "brick_break"
+    "42": [
+      "discharge"
     ],
-    "26": [
+    "46": [
       "agility"
+    ],
+    "52": [
+      "wild_charge"
     ]
   },
   "evolution": null,

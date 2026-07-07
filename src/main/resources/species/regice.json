@@ -18,25 +18,47 @@
   "modelId": "regice",
   "learnset": {
     "1": [
-      "tackle"
+      "icy_wind",
+      "charge_beam"
     ],
-    "4": [
-      "leer"
+    "6": [
+      "bulldoze"
     ],
-    "8": [
-      "ice_shard"
+    "12": [
+      "ancient_power"
     ],
-    "14": [
-      "aurora_beam"
+    "18": [
+      "stomp"
     ],
-    "20": [
+    "24": [
       "ice_beam"
     ],
-    "32": [
+    "30": [
+      "curse"
+    ],
+    "36": [
+      "amnesia"
+    ],
+    "42": [
+      "hammer_arm"
+    ],
+    "48": [
       "blizzard"
     ],
-    "26": [
-      "harden"
+    "54": [
+      "superpower"
+    ],
+    "60": [
+      "lock_on"
+    ],
+    "66": [
+      "zap_cannon"
+    ],
+    "72": [
+      "hyper_beam"
+    ],
+    "78": [
+      "explosion"
     ]
   },
   "evolution": null,

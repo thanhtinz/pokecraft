@@ -18,19 +18,42 @@
   "modelId": "zoroark",
   "learnset": {
     "1": [
-      "scratch"
+      "u_turn",
+      "scratch",
+      "leer",
+      "pursuit",
+      "hone_claws",
+      "feint_attack",
+      "night_slash",
+      "torment",
+      "punishment"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "fury_swipes"
     ],
-    "8": [
-      "bite"
+    "20": [
+      "taunt"
     ],
-    "14": [
-      "crunch"
+    "24": [
+      "knock_off"
     ],
-    "26": [
-      "calm_mind"
+    "28": [
+      "fake_tears"
+    ],
+    "34": [
+      "agility"
+    ],
+    "40": [
+      "imprison"
+    ],
+    "46": [
+      "night_daze"
+    ],
+    "52": [
+      "nasty_plot"
+    ],
+    "58": [
+      "foul_play"
     ]
   },
   "evolution": null,

@@ -19,31 +19,42 @@
   "modelId": "carvanha",
   "learnset": {
     "1": [
-      "tackle"
+      "leer",
+      "rage",
+      "aqua_jet"
     ],
     "4": [
-      "tail_whip"
+      "poison_fang"
     ],
     "8": [
-      "water_gun"
+      "focus_energy"
     ],
-    "14": [
+    "12": [
+      "scary_face"
+    ],
+    "16": [
       "bite"
     ],
     "20": [
-      "bubble_beam"
+      "ice_fang"
+    ],
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "swagger"
     ],
     "32": [
       "crunch"
     ],
+    "36": [
+      "agility"
+    ],
     "40": [
-      "waterfall"
+      "liquidation"
     ],
-    "48": [
-      "surf"
-    ],
-    "26": [
-      "swords_dance"
+    "44": [
+      "take_down"
     ]
   },
   "evolution": null,

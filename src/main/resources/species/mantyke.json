@@ -19,31 +19,45 @@
   "modelId": "mantyke",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "tackle",
+      "bubble",
       "water_gun"
     ],
-    "14": [
-      "peck"
+    "4": [
+      "supersonic"
     ],
-    "20": [
-      "bubble_beam"
-    ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "waterfall"
-    ],
-    "48": [
+    "8": [
       "wing_attack"
     ],
-    "26": [
-      "calm_mind"
+    "12": [
+      "water_pulse"
+    ],
+    "16": [
+      "wide_guard"
+    ],
+    "20": [
+      "agility"
+    ],
+    "24": [
+      "bubble_beam"
+    ],
+    "28": [
+      "headbutt"
+    ],
+    "32": [
+      "air_slash"
+    ],
+    "36": [
+      "aqua_ring"
+    ],
+    "40": [
+      "bounce"
+    ],
+    "44": [
+      "take_down"
+    ],
+    "48": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

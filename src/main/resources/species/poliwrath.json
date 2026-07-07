@@ -19,31 +19,26 @@
   "modelId": "poliwrath",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "karate_chop"
-    ],
-    "20": [
-      "bubble_beam"
-    ],
-    "32": [
-      "low_kick"
-    ],
-    "40": [
-      "waterfall"
-    ],
-    "48": [
-      "brick_break"
-    ],
-    "26": [
-      "swords_dance"
+      "bubble_beam",
+      "hypnosis",
+      "double_slap",
+      "submission",
+      "dynamic_punch",
+      "mind_reader",
+      "rain_dance",
+      "circle_throw",
+      "body_slam",
+      "earth_power",
+      "hydro_pump",
+      "belly_drum",
+      "double_edge",
+      "water_gun",
+      "pound",
+      "mud_shot",
+      "water_sport",
+      "wake_up_slap",
+      "mud_bomb",
+      "bubble"
     ]
   },
   "evolution": null,

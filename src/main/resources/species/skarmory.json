@@ -19,31 +19,50 @@
   "modelId": "skarmory",
   "learnset": {
     "1": [
-      "pound"
+      "leer",
+      "peck",
+      "feint",
+      "night_slash",
+      "autotomize"
     ],
     "4": [
-      "harden"
+      "sand_attack"
     ],
     "8": [
-      "peck"
+      "fury_attack"
     ],
-    "14": [
-      "steel_wing"
+    "12": [
+      "metal_claw"
+    ],
+    "16": [
+      "agility"
     ],
     "20": [
-      "gust"
-    ],
-    "32": [
-      "iron_head"
-    ],
-    "40": [
       "wing_attack"
     ],
-    "48": [
+    "24": [
+      "slash"
+    ],
+    "28": [
+      "steel_wing"
+    ],
+    "32": [
+      "payback"
+    ],
+    "36": [
       "drill_peck"
     ],
-    "26": [
-      "harden"
+    "40": [
+      "metal_sound"
+    ],
+    "44": [
+      "spikes"
+    ],
+    "48": [
+      "iron_defense"
+    ],
+    "52": [
+      "brave_bird"
     ]
   },
   "evolution": null,

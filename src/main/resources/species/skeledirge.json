@@ -19,31 +19,52 @@
   "modelId": "skeledirge",
   "learnset": {
     "1": [
-      "pound"
+      "torch_song",
+      "ember",
+      "tackle",
+      "leer",
+      "sing",
+      "yawn"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+    "7": [
       "lick"
     ],
-    "14": [
-      "ember"
+    "10": [
+      "round"
     ],
-    "20": [
-      "night_shade"
+    "12": [
+      "scary_face"
+    ],
+    "15": [
+      "bite"
+    ],
+    "17": [
+      "incinerate"
+    ],
+    "24": [
+      "snarl"
+    ],
+    "28": [
+      "roar"
     ],
     "32": [
-      "fire_spin"
+      "flamethrower"
     ],
-    "40": [
+    "38": [
       "shadow_ball"
     ],
-    "48": [
-      "fire_punch"
+    "42": [
+      "hyper_voice"
     ],
-    "26": [
-      "calm_mind"
+    "47": [
+      "will_o_wisp",
+      "hex"
+    ],
+    "58": [
+      "fire_blast"
+    ],
+    "64": [
+      "overheat"
     ]
   },
   "evolution": null,

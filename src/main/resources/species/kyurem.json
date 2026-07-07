@@ -19,31 +19,44 @@
   "modelId": "kyurem",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "leer"
+      "dragon_rage",
+      "ancient_power",
+      "dragon_breath",
+      "noble_roar",
+      "freeze_dry"
     ],
     "8": [
-      "twister"
+      "slash"
     ],
-    "14": [
-      "ice_shard"
+    "16": [
+      "endeavor"
     ],
-    "20": [
-      "dragon_breath"
+    "24": [
+      "dragon_pulse"
     ],
     "32": [
-      "aurora_beam"
-    ],
-    "40": [
-      "dragon_claw"
-    ],
-    "48": [
       "ice_beam"
     ],
-    "26": [
-      "swords_dance"
+    "40": [
+      "hyper_voice"
+    ],
+    "48": [
+      "scary_face"
+    ],
+    "56": [
+      "blizzard"
+    ],
+    "64": [
+      "imprison"
+    ],
+    "72": [
+      "outrage"
+    ],
+    "80": [
+      "glaciate"
+    ],
+    "88": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

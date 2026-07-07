@@ -19,31 +19,50 @@
   "modelId": "golett",
   "learnset": {
     "1": [
-      "scratch"
+      "astonish",
+      "mud_slap"
     ],
     "4": [
-      "leer"
+      "defense_curl"
     ],
     "8": [
-      "sand_tomb"
+      "pound"
     ],
-    "14": [
-      "lick"
+    "12": [
+      "shadow_punch"
+    ],
+    "16": [
+      "curse"
     ],
     "20": [
-      "dig"
-    ],
-    "32": [
       "night_shade"
     ],
-    "40": [
-      "earthquake"
+    "24": [
+      "stomping_tantrum"
     ],
-    "48": [
+    "28": [
+      "iron_defense"
+    ],
+    "32": [
+      "mega_punch"
+    ],
+    "36": [
       "shadow_ball"
     ],
-    "26": [
-      "swords_dance"
+    "40": [
+      "heavy_slam"
+    ],
+    "44": [
+      "phantom_force"
+    ],
+    "48": [
+      "hammer_arm"
+    ],
+    "52": [
+      "earthquake"
+    ],
+    "56": [
+      "dynamic_punch"
     ]
   },
   "evolution": null,

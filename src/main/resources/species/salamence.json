@@ -19,31 +19,40 @@
   "modelId": "salamence",
   "learnset": {
     "1": [
-      "scratch"
+      "rage",
+      "bite",
+      "leer",
+      "ember",
+      "protect",
+      "dragon_breath",
+      "fly",
+      "roost",
+      "dragon_tail",
+      "dual_wingbeat"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "twister"
+    "15": [
+      "headbutt"
     ],
     "20": [
-      "gust"
+      "scary_face"
     ],
-    "32": [
-      "dragon_breath"
+    "25": [
+      "crunch"
     ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
+    "33": [
       "dragon_claw"
     ],
-    "26": [
-      "swords_dance"
+    "39": [
+      "zen_headbutt"
+    ],
+    "46": [
+      "focus_energy"
+    ],
+    "55": [
+      "flamethrower"
+    ],
+    "73": [
+      "double_edge"
     ]
   },
   "evolution": null,

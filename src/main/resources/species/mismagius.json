@@ -18,22 +18,18 @@
   "modelId": "mismagius",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "lick"
-    ],
-    "14": [
-      "night_shade"
-    ],
-    "20": [
-      "shadow_ball"
-    ],
-    "26": [
-      "calm_mind"
+      "lucky_chant",
+      "magical_leaf",
+      "growl",
+      "psywave",
+      "spite",
+      "astonish",
+      "mystical_fire",
+      "power_gem",
+      "phantom_force",
+      "mean_look",
+      "perish_song",
+      "confusion"
     ]
   },
   "evolution": null,

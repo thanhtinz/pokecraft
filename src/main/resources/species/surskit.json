@@ -19,31 +19,34 @@
   "modelId": "surskit",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
+      "bubble",
+      "water_sport",
       "water_gun"
     ],
-    "14": [
-      "bug_bite"
+    "6": [
+      "quick_attack"
     ],
-    "20": [
+    "9": [
+      "sweet_scent"
+    ],
+    "14": [
+      "soak"
+    ],
+    "17": [
       "bubble_beam"
     ],
-    "32": [
-      "pin_missile"
-    ],
-    "40": [
-      "waterfall"
-    ],
-    "48": [
-      "surf"
-    ],
-    "26": [
+    "22": [
       "agility"
+    ],
+    "25": [
+      "mist",
+      "haze"
+    ],
+    "35": [
+      "baton_pass"
+    ],
+    "38": [
+      "sticky_web"
     ]
   },
   "evolution": null,

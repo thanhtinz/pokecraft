@@ -19,31 +19,46 @@
   "modelId": "tentacool",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "poison_sting",
+      "constrict",
+      "bubble",
       "water_gun"
     ],
-    "14": [
-      "poison_sting"
-    ],
-    "20": [
-      "bubble_beam"
-    ],
-    "32": [
+    "4": [
       "acid"
     ],
+    "8": [
+      "wrap"
+    ],
+    "12": [
+      "supersonic"
+    ],
+    "16": [
+      "water_pulse"
+    ],
+    "20": [
+      "screech"
+    ],
+    "24": [
+      "bubble_beam"
+    ],
+    "28": [
+      "barrier"
+    ],
+    "32": [
+      "acid_armor"
+    ],
+    "36": [
+      "poison_jab"
+    ],
     "40": [
-      "waterfall"
+      "surf"
+    ],
+    "44": [
+      "sludge_wave"
     ],
     "48": [
-      "sludge"
-    ],
-    "26": [
-      "agility"
+      "hydro_pump"
     ]
   },
   "evolution": null,

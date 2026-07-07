@@ -19,31 +19,52 @@
   "modelId": "pheromosa",
   "learnset": {
     "1": [
-      "tackle"
+      "rapid_spin",
+      "feint",
+      "jump_kick",
+      "me_first"
     ],
-    "4": [
-      "string_shot"
+    "5": [
+      "leer"
     ],
-    "8": [
-      "karate_chop"
+    "10": [
+      "quick_guard"
     ],
-    "14": [
+    "15": [
       "bug_bite"
     ],
     "20": [
       "low_kick"
     ],
-    "32": [
-      "pin_missile"
+    "25": [
+      "double_kick"
+    ],
+    "30": [
+      "triple_kick"
+    ],
+    "35": [
+      "stomp"
     ],
     "40": [
-      "brick_break"
-    ],
-    "48": [
-      "cross_chop"
-    ],
-    "26": [
       "agility"
+    ],
+    "45": [
+      "lunge"
+    ],
+    "50": [
+      "bounce"
+    ],
+    "55": [
+      "speed_swap"
+    ],
+    "60": [
+      "bug_buzz"
+    ],
+    "65": [
+      "quiver_dance"
+    ],
+    "70": [
+      "high_jump_kick"
     ]
   },
   "evolution": null,

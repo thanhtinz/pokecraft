@@ -19,31 +19,49 @@
   "modelId": "revavroom",
   "learnset": {
     "1": [
-      "tackle"
+      "shift_gear",
+      "magnet_rise",
+      "lick",
+      "poison_gas"
     ],
     "4": [
-      "harden"
+      "smog"
     ],
-    "8": [
-      "steel_wing"
+    "7": [
+      "taunt"
     ],
-    "14": [
-      "poison_sting"
+    "10": [
+      "assurance"
     ],
-    "20": [
+    "13": [
+      "sludge"
+    ],
+    "17": [
+      "gyro_ball"
+    ],
+    "21": [
+      "headbutt"
+    ],
+    "25": [
+      "screech"
+    ],
+    "28": [
       "iron_head"
     ],
     "32": [
-      "acid"
+      "swagger"
     ],
-    "40": [
-      "sludge"
+    "36": [
+      "poison_jab"
     ],
-    "48": [
-      "sludge_bomb"
+    "46": [
+      "uproar"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "spin_out"
+    ],
+    "58": [
+      "gunk_shot"
     ]
   },
   "evolution": null,

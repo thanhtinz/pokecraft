@@ -18,28 +18,35 @@
   "modelId": "gossifleur",
   "learnset": {
     "1": [
-      "scratch"
+      "leafage",
+      "sing"
     ],
     "4": [
-      "sleep_powder"
+      "rapid_spin"
     ],
     "8": [
-      "vine_whip"
+      "sweet_scent"
     ],
-    "14": [
+    "12": [
       "razor_leaf"
     ],
-    "20": [
-      "seed_bomb"
+    "16": [
+      "round"
+    ],
+    "21": [
+      "leaf_tornado"
+    ],
+    "24": [
+      "synthesis"
+    ],
+    "28": [
+      "hyper_voice"
     ],
     "32": [
-      "petal_dance"
+      "aromatherapy"
     ],
-    "40": [
-      "solar_beam"
-    ],
-    "26": [
-      "harden"
+    "36": [
+      "leaf_storm"
     ]
   },
   "evolution": null,

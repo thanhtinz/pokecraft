@@ -18,31 +18,58 @@
   "modelId": "blissey",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "growl",
+      "refresh",
+      "double_slap",
+      "minimize",
+      "defense_curl",
+      "egg_bomb",
+      "bestow",
+      "covet",
+      "sweet_kiss",
+      "disarming_voice",
+      "charm",
+      "copycat"
     ],
     "4": [
-      "growl"
+      "tail_whip"
     ],
     "8": [
-      "quick_attack"
+      "echoed_voice"
     ],
-    "14": [
-      "hyper_fang"
+    "12": [
+      "life_dew"
+    ],
+    "16": [
+      "sing"
     ],
     "20": [
-      "mega_punch"
+      "fling"
+    ],
+    "24": [
+      "take_down"
+    ],
+    "28": [
+      "heal_pulse"
     ],
     "32": [
-      "body_slam"
+      "helping_hand"
+    ],
+    "36": [
+      "light_screen"
     ],
     "40": [
       "double_edge"
     ],
-    "48": [
-      "hyper_beam"
+    "44": [
+      "soft_boiled"
     ],
-    "26": [
-      "calm_mind"
+    "48": [
+      "last_resort"
+    ],
+    "52": [
+      "healing_wish"
     ]
   },
   "evolution": null,

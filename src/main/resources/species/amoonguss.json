@@ -19,31 +19,42 @@
   "modelId": "amoonguss",
   "learnset": {
     "1": [
-      "tackle"
+      "absorb",
+      "growth",
+      "astonish",
+      "bide",
+      "feint_attack",
+      "stun_spore"
     ],
-    "4": [
-      "sleep_powder"
+    "12": [
+      "mega_drain"
     ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "vine_whip"
+    "16": [
+      "synthesis"
     ],
     "20": [
-      "acid"
+      "clear_smog"
+    ],
+    "24": [
+      "sweet_scent"
+    ],
+    "28": [
+      "giga_drain"
     ],
     "32": [
-      "razor_leaf"
+      "ingrain"
     ],
-    "40": [
-      "sludge"
+    "36": [
+      "toxic"
+    ],
+    "42": [
+      "rage_powder"
     ],
     "48": [
-      "seed_bomb"
+      "solar_beam"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "spore"
     ]
   },
   "evolution": null,

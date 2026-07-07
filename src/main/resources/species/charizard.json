@@ -1,9 +1,60 @@
 {
-  "id": "charizard", "dex": 6, "name": "Charizard",
-  "types": ["FIRE", "FLYING"],
-  "baseStats": { "hp": 78, "atk": 84, "def": 78, "spa": 109, "spd": 85, "spe": 100 },
-  "catchRate": 45, "expYield": 240, "modelId": "charizard",
-  "learnset": { "1": ["scratch", "growl"], "4": ["ember"], "17": ["fire_spin"], "24": ["slash"], "34": ["flamethrower"], "36": ["wing_attack"] },
+  "id": "charizard",
+  "dex": 6,
+  "name": "Charizard",
+  "types": [
+    "FIRE",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 78,
+    "atk": 84,
+    "def": 78,
+    "spa": 109,
+    "spd": 85,
+    "spe": 100
+  },
+  "catchRate": 45,
+  "expYield": 240,
+  "modelId": "charizard",
+  "learnset": {
+    "1": [
+      "dragon_claw",
+      "air_slash",
+      "scratch",
+      "growl",
+      "ember",
+      "smokescreen",
+      "dragon_rage",
+      "wing_attack",
+      "heat_wave",
+      "flame_burst"
+    ],
+    "12": [
+      "dragon_breath"
+    ],
+    "19": [
+      "fire_fang"
+    ],
+    "24": [
+      "slash"
+    ],
+    "30": [
+      "flamethrower"
+    ],
+    "39": [
+      "scary_face"
+    ],
+    "46": [
+      "fire_spin"
+    ],
+    "54": [
+      "inferno"
+    ],
+    "62": [
+      "flare_blitz"
+    ]
+  },
   "evolution": null,
   "spawn": null
 }

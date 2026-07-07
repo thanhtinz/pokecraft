@@ -18,22 +18,32 @@
   "modelId": "rolycoly",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "smokescreen"
     ],
-    "4": [
-      "harden"
+    "5": [
+      "rapid_spin"
     ],
-    "8": [
-      "rock_throw"
+    "10": [
+      "smack_down"
     ],
-    "14": [
-      "rock_slide"
+    "15": [
+      "rock_polish"
     ],
     "20": [
-      "stone_edge"
+      "ancient_power"
     ],
-    "26": [
-      "harden"
+    "25": [
+      "incinerate"
+    ],
+    "30": [
+      "stealth_rock"
+    ],
+    "35": [
+      "heat_crash"
+    ],
+    "40": [
+      "rock_blast"
     ]
   },
   "evolution": null,

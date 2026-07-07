@@ -19,28 +19,39 @@
   "modelId": "armaldo",
   "learnset": {
     "1": [
-      "tackle"
+      "scratch",
+      "harden",
+      "mud_sport",
+      "water_gun",
+      "fury_cutter",
+      "smack_down"
     ],
-    "4": [
-      "harden"
+    "12": [
+      "metal_claw"
     ],
-    "8": [
-      "rock_throw"
-    ],
-    "14": [
-      "bug_bite"
+    "16": [
+      "ancient_power"
     ],
     "20": [
-      "rock_slide"
+      "bug_bite"
+    ],
+    "24": [
+      "brine"
+    ],
+    "28": [
+      "slash"
     ],
     "32": [
-      "pin_missile"
+      "crush_claw"
     ],
-    "40": [
-      "stone_edge"
+    "36": [
+      "rock_blast"
     ],
-    "26": [
-      "swords_dance"
+    "43": [
+      "protect"
+    ],
+    "48": [
+      "x_scissor"
     ]
   },
   "evolution": null,

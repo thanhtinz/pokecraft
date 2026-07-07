@@ -19,28 +19,48 @@
   "modelId": "sandile",
   "learnset": {
     "1": [
-      "pound"
+      "leer",
+      "rage",
+      "power_trip"
     ],
-    "4": [
-      "leer"
+    "3": [
+      "sand_attack"
     ],
-    "8": [
-      "bite"
+    "6": [
+      "hone_claws"
     ],
-    "14": [
+    "9": [
       "sand_tomb"
     ],
-    "20": [
-      "crunch"
+    "12": [
+      "scary_face"
     ],
-    "32": [
+    "15": [
+      "bite"
+    ],
+    "18": [
+      "torment"
+    ],
+    "21": [
       "dig"
     ],
-    "40": [
+    "24": [
+      "swagger"
+    ],
+    "27": [
+      "crunch"
+    ],
+    "30": [
+      "sandstorm"
+    ],
+    "33": [
+      "foul_play"
+    ],
+    "36": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "39": [
+      "thrash"
     ]
   },
   "evolution": null,

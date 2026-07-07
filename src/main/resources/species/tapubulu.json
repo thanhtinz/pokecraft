@@ -19,31 +19,54 @@
   "modelId": "tapubulu",
   "learnset": {
     "1": [
-      "scratch"
+      "leafage",
+      "rototiller",
+      "rock_smash"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "withdraw"
     ],
-    "8": [
-      "fairy_wind"
+    "10": [
+      "disable"
     ],
-    "14": [
-      "vine_whip"
+    "15": [
+      "leech_seed"
     ],
     "20": [
-      "dazzling_gleam"
+      "mega_drain"
     ],
-    "32": [
-      "razor_leaf"
+    "25": [
+      "whirlwind"
+    ],
+    "30": [
+      "horn_attack"
+    ],
+    "35": [
+      "scary_face"
     ],
     "40": [
-      "seed_bomb"
+      "horn_leech"
     ],
-    "48": [
-      "petal_dance"
+    "45": [
+      "zen_headbutt"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "mean_look"
+    ],
+    "55": [
+      "natures_madness"
+    ],
+    "60": [
+      "wood_hammer"
+    ],
+    "65": [
+      "megahorn"
+    ],
+    "70": [
+      "skull_bash"
+    ],
+    "75": [
+      "grassy_terrain"
     ]
   },
   "evolution": null,

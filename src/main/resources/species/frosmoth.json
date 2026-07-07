@@ -19,31 +19,50 @@
   "modelId": "frosmoth",
   "learnset": {
     "1": [
-      "tackle"
+      "icy_wind",
+      "powder_snow",
+      "struggle_bug",
+      "helping_hand",
+      "attract"
     ],
     "4": [
-      "leer"
+      "stun_spore"
     ],
     "8": [
-      "bug_bite"
+      "infestation"
     ],
-    "14": [
-      "ice_shard"
+    "12": [
+      "mist"
     ],
-    "20": [
-      "pin_missile"
+    "16": [
+      "defog"
     ],
-    "32": [
+    "21": [
+      "feather_dance"
+    ],
+    "24": [
       "aurora_beam"
     ],
-    "40": [
-      "ice_beam"
+    "28": [
+      "snowscape"
     ],
-    "48": [
+    "32": [
+      "bug_buzz"
+    ],
+    "36": [
+      "aurora_veil"
+    ],
+    "40": [
       "blizzard"
     ],
-    "26": [
-      "calm_mind"
+    "44": [
+      "tailwind"
+    ],
+    "48": [
+      "wide_guard"
+    ],
+    "52": [
+      "quiver_dance"
     ]
   },
   "evolution": null,

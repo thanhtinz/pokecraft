@@ -19,31 +19,46 @@
   "modelId": "bellsprout",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
       "vine_whip"
     ],
-    "20": [
+    "7": [
+      "growth"
+    ],
+    "11": [
+      "wrap"
+    ],
+    "13": [
+      "sleep_powder"
+    ],
+    "15": [
+      "poison_powder"
+    ],
+    "17": [
+      "stun_spore"
+    ],
+    "23": [
       "acid"
     ],
-    "32": [
+    "27": [
+      "knock_off"
+    ],
+    "29": [
+      "sweet_scent"
+    ],
+    "35": [
+      "gastro_acid"
+    ],
+    "39": [
       "razor_leaf"
     ],
-    "40": [
-      "sludge"
+    "41": [
+      "poison_jab"
     ],
-    "48": [
-      "seed_bomb"
+    "47": [
+      "slam"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "power_whip"
     ]
   },
   "evolution": null,

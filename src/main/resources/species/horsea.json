@@ -18,28 +18,42 @@
   "modelId": "horsea",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "bubble",
+      "leer",
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "5": [
+      "smokescreen"
+    ],
+    "10": [
+      "twister"
+    ],
+    "15": [
+      "focus_energy"
     ],
     "20": [
-      "waterfall"
+      "dragon_breath"
     ],
-    "32": [
-      "surf"
+    "25": [
+      "bubble_beam"
+    ],
+    "30": [
+      "agility"
+    ],
+    "35": [
+      "water_pulse"
     ],
     "40": [
+      "dragon_pulse"
+    ],
+    "45": [
       "hydro_pump"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "dragon_dance"
+    ],
+    "55": [
+      "rain_dance"
     ]
   },
   "evolution": null,

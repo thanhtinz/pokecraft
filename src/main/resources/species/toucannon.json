@@ -19,31 +19,39 @@
   "modelId": "toucannon",
   "learnset": {
     "1": [
-      "scratch"
+      "beak_blast",
+      "rock_blast",
+      "peck",
+      "growl",
+      "echoed_voice",
+      "rock_smash"
     ],
-    "4": [
-      "growl"
+    "13": [
+      "supersonic"
     ],
-    "8": [
-      "peck"
+    "16": [
+      "pluck"
     ],
-    "14": [
-      "quick_attack"
+    "21": [
+      "roost"
     ],
-    "20": [
-      "gust"
+    "24": [
+      "fury_attack"
     ],
-    "32": [
-      "hyper_fang"
+    "30": [
+      "screech"
+    ],
+    "34": [
+      "drill_peck"
     ],
     "40": [
-      "wing_attack"
+      "bullet_seed"
     ],
-    "48": [
-      "mega_punch"
+    "44": [
+      "feather_dance"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "hyper_voice"
     ]
   },
   "evolution": null,

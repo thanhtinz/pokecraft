@@ -18,22 +18,49 @@
   "modelId": "mewtwo",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "hypnosis"
+      "confusion",
+      "disable",
+      "barrier",
+      "swift",
+      "miracle_eye",
+      "me_first",
+      "laser_focus",
+      "psywave",
+      "life_dew"
     ],
     "8": [
-      "confusion"
+      "ancient_power"
     ],
-    "14": [
-      "psybeam"
+    "16": [
+      "psycho_cut"
     ],
-    "20": [
+    "24": [
+      "safeguard"
+    ],
+    "32": [
+      "amnesia"
+    ],
+    "40": [
+      "aura_sphere"
+    ],
+    "48": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "56": [
+      "power_swap",
+      "guard_swap"
+    ],
+    "64": [
+      "mist"
+    ],
+    "72": [
+      "psystrike"
+    ],
+    "80": [
+      "recover"
+    ],
+    "88": [
+      "future_sight"
     ]
   },
   "evolution": null,

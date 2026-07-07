@@ -18,31 +18,54 @@
   "modelId": "lopunny",
   "learnset": {
     "1": [
-      "pound"
+      "mirror_coat",
+      "magic_coat",
+      "splash",
+      "pound",
+      "defense_curl",
+      "foresight",
+      "jump_kick",
+      "dizzy_punch",
+      "rototiller",
+      "return",
+      "baby_doll_eyes",
+      "frustration"
     ],
-    "4": [
-      "growl"
+    "12": [
+      "after_you"
     ],
-    "8": [
+    "16": [
       "quick_attack"
     ],
-    "14": [
-      "hyper_fang"
-    ],
     "20": [
-      "mega_punch"
+      "double_kick"
+    ],
+    "24": [
+      "charm"
+    ],
+    "28": [
+      "baton_pass"
     ],
     "32": [
-      "body_slam"
+      "headbutt"
+    ],
+    "36": [
+      "agility"
     ],
     "40": [
-      "double_edge"
+      "entrainment"
+    ],
+    "44": [
+      "flatter"
     ],
     "48": [
-      "hyper_beam"
+      "bounce"
     ],
-    "26": [
-      "agility"
+    "52": [
+      "healing_wish"
+    ],
+    "56": [
+      "high_jump_kick"
     ]
   },
   "evolution": null,

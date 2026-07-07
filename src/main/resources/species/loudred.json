@@ -18,31 +18,33 @@
   "modelId": "loudred",
   "learnset": {
     "1": [
-      "tackle"
+      "pound",
+      "astonish",
+      "howl",
+      "bite",
+      "echoed_voice"
     ],
-    "4": [
-      "growl"
+    "15": [
+      "rest",
+      "sleep_talk"
     ],
-    "8": [
-      "quick_attack"
+    "23": [
+      "stomp"
     ],
-    "14": [
-      "hyper_fang"
+    "29": [
+      "roar"
     ],
-    "20": [
-      "mega_punch"
+    "36": [
+      "supersonic"
     ],
-    "32": [
-      "body_slam"
+    "43": [
+      "uproar"
     ],
-    "40": [
-      "double_edge"
+    "50": [
+      "synchronoise"
     ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "swords_dance"
+    "57": [
+      "hyper_voice"
     ]
   },
   "evolution": null,

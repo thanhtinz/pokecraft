@@ -18,19 +18,47 @@
   "modelId": "swirlix",
   "learnset": {
     "1": [
+      "sweet_scent",
       "tackle"
     ],
-    "4": [
-      "sing"
+    "3": [
+      "play_nice"
     ],
-    "8": [
+    "6": [
       "fairy_wind"
     ],
-    "14": [
-      "dazzling_gleam"
+    "9": [
+      "aromatherapy"
     ],
-    "26": [
-      "harden"
+    "12": [
+      "draining_kiss"
+    ],
+    "15": [
+      "fake_tears"
+    ],
+    "18": [
+      "round"
+    ],
+    "21": [
+      "string_shot"
+    ],
+    "24": [
+      "cotton_spore"
+    ],
+    "27": [
+      "energy_ball"
+    ],
+    "30": [
+      "wish"
+    ],
+    "33": [
+      "play_rough"
+    ],
+    "36": [
+      "cotton_guard"
+    ],
+    "39": [
+      "endeavor"
     ]
   },
   "evolution": null,

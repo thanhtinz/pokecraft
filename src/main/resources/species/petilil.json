@@ -18,28 +18,51 @@
   "modelId": "petilil",
   "learnset": {
     "1": [
-      "pound"
+      "absorb",
+      "growth",
+      "aromatherapy"
     ],
-    "4": [
+    "3": [
+      "helping_hand"
+    ],
+    "6": [
+      "stun_spore"
+    ],
+    "9": [
+      "mega_drain"
+    ],
+    "12": [
+      "charm"
+    ],
+    "15": [
+      "magical_leaf"
+    ],
+    "18": [
       "sleep_powder"
     ],
-    "8": [
-      "vine_whip"
+    "21": [
+      "giga_drain"
     ],
-    "14": [
-      "razor_leaf"
+    "24": [
+      "leech_seed"
     ],
-    "20": [
-      "seed_bomb"
+    "27": [
+      "after_you"
     ],
-    "32": [
-      "petal_dance"
+    "30": [
+      "energy_ball"
     ],
-    "40": [
-      "solar_beam"
+    "33": [
+      "synthesis"
     ],
-    "26": [
-      "calm_mind"
+    "36": [
+      "sunny_day"
+    ],
+    "39": [
+      "entrainment"
+    ],
+    "42": [
+      "leaf_storm"
     ]
   },
   "evolution": null,

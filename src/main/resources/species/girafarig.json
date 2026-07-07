@@ -19,31 +19,45 @@
   "modelId": "girafarig",
   "learnset": {
     "1": [
-      "pound"
+      "power_swap",
+      "guard_swap",
+      "astonish",
+      "tackle",
+      "growl",
+      "odor_sleuth"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
+    "5": [
       "confusion"
     ],
-    "14": [
-      "quick_attack"
+    "10": [
+      "assurance"
     ],
-    "20": [
+    "14": [
+      "stomp"
+    ],
+    "19": [
       "psybeam"
     ],
+    "23": [
+      "agility"
+    ],
+    "28": [
+      "double_hit"
+    ],
     "32": [
-      "hyper_fang"
+      "twin_beam"
     ],
-    "40": [
+    "37": [
+      "crunch"
+    ],
+    "41": [
+      "baton_pass"
+    ],
+    "46": [
+      "nasty_plot"
+    ],
+    "50": [
       "psychic"
-    ],
-    "48": [
-      "mega_punch"
-    ],
-    "26": [
-      "calm_mind"
     ]
   },
   "evolution": null,

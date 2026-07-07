@@ -18,31 +18,53 @@
   "modelId": "silvally",
   "learnset": {
     "1": [
-      "pound"
+      "multi_attack",
+      "heal_block",
+      "imprison",
+      "iron_head",
+      "poison_fang",
+      "fire_fang",
+      "ice_fang",
+      "thunder_fang",
+      "tackle",
+      "rage",
+      "pursuit",
+      "bite",
+      "aerial_ace",
+      "scary_face",
+      "punishment",
+      "razor_wind",
+      "explosion"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "hyper_fang"
+    "15": [
+      "double_hit"
     ],
     "20": [
-      "mega_punch"
+      "metal_sound"
     ],
-    "32": [
-      "body_slam"
+    "25": [
+      "crush_claw"
+    ],
+    "30": [
+      "air_slash"
+    ],
+    "35": [
+      "tri_attack"
     ],
     "40": [
+      "x_scissor"
+    ],
+    "45": [
+      "crunch"
+    ],
+    "50": [
+      "take_down"
+    ],
+    "55": [
       "double_edge"
     ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "swords_dance"
+    "60": [
+      "parting_shot"
     ]
   },
   "evolution": null,

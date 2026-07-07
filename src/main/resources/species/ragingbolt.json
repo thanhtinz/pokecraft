@@ -19,31 +19,50 @@
   "modelId": "ragingbolt",
   "learnset": {
     "1": [
-      "scratch"
+      "twister",
+      "sunny_day",
+      "shock_wave",
+      "stomp",
+      "ancient_power"
     ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "twister"
+    "7": [
+      "charge"
     ],
     "14": [
-      "thunder_shock"
-    ],
-    "20": [
       "dragon_breath"
     ],
-    "32": [
-      "spark"
+    "21": [
+      "electric_terrain"
     ],
-    "40": [
-      "dragon_claw"
+    "28": [
+      "discharge"
     ],
-    "48": [
-      "thunderbolt"
+    "35": [
+      "dragon_tail"
     ],
-    "26": [
+    "42": [
       "calm_mind"
+    ],
+    "49": [
+      "thunderclap"
+    ],
+    "56": [
+      "dragon_hammer"
+    ],
+    "63": [
+      "rising_voltage"
+    ],
+    "70": [
+      "dragon_pulse"
+    ],
+    "77": [
+      "zap_cannon"
+    ],
+    "84": [
+      "body_press"
+    ],
+    "91": [
+      "thunder"
     ]
   },
   "evolution": null,

@@ -19,31 +19,39 @@
   "modelId": "shiinotic",
   "learnset": {
     "1": [
-      "tackle"
+      "absorb",
+      "astonish",
+      "ingrain",
+      "flash",
+      "confuse_ray",
+      "spotlight"
     ],
-    "4": [
+    "12": [
+      "mega_drain"
+    ],
+    "16": [
       "sleep_powder"
     ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
-      "fairy_wind"
-    ],
     "20": [
-      "razor_leaf"
+      "moonlight"
+    ],
+    "27": [
+      "strength_sap"
     ],
     "32": [
+      "giga_drain"
+    ],
+    "38": [
       "dazzling_gleam"
     ],
-    "40": [
-      "seed_bomb"
+    "44": [
+      "spore"
     ],
-    "48": [
-      "petal_dance"
+    "50": [
+      "moonblast"
     ],
-    "26": [
-      "calm_mind"
+    "56": [
+      "dream_eater"
     ]
   },
   "evolution": null,

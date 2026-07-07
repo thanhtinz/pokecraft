@@ -18,31 +18,34 @@
   "modelId": "greedent",
   "learnset": {
     "1": [
-      "scratch"
+      "covet",
+      "tackle",
+      "tail_whip",
+      "bite",
+      "stuff_cheeks"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "hyper_fang"
+    "15": [
+      "stockpile",
+      "swallow",
+      "spit_up"
     ],
     "20": [
-      "mega_punch"
-    ],
-    "32": [
       "body_slam"
     ],
-    "40": [
-      "double_edge"
+    "27": [
+      "rest"
+    ],
+    "34": [
+      "counter"
+    ],
+    "41": [
+      "bullet_seed"
     ],
     "48": [
-      "hyper_beam"
+      "super_fang"
     ],
-    "26": [
-      "swords_dance"
+    "55": [
+      "belch"
     ]
   },
   "evolution": null,

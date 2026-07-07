@@ -19,31 +19,43 @@
   "modelId": "kingdra",
   "learnset": {
     "1": [
-      "pound"
+      "yawn",
+      "bubble",
+      "smokescreen",
+      "leer",
+      "water_gun",
+      "twister",
+      "whirlpool"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "twister"
+    "15": [
+      "focus_energy"
     ],
     "20": [
-      "bubble_beam"
-    ],
-    "32": [
       "dragon_breath"
     ],
-    "40": [
-      "waterfall"
+    "25": [
+      "bubble_beam"
     ],
-    "48": [
-      "dragon_claw"
+    "30": [
+      "agility"
     ],
-    "26": [
-      "swords_dance"
+    "37": [
+      "water_pulse"
+    ],
+    "44": [
+      "dragon_pulse"
+    ],
+    "51": [
+      "hydro_pump"
+    ],
+    "58": [
+      "dragon_dance"
+    ],
+    "65": [
+      "rain_dance"
+    ],
+    "72": [
+      "wave_crash"
     ]
   },
   "evolution": null,

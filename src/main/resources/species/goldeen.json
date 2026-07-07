@@ -18,28 +18,39 @@
   "modelId": "goldeen",
   "learnset": {
     "1": [
-      "scratch"
+      "peck",
+      "tail_whip",
+      "water_sport"
     ],
-    "4": [
-      "tail_whip"
+    "5": [
+      "supersonic"
     ],
-    "8": [
-      "water_gun"
+    "10": [
+      "water_pulse"
     ],
-    "14": [
-      "bubble_beam"
+    "15": [
+      "horn_attack"
     ],
     "20": [
+      "agility"
+    ],
+    "25": [
+      "aqua_ring"
+    ],
+    "30": [
+      "flail"
+    ],
+    "35": [
       "waterfall"
     ],
-    "32": [
-      "surf"
-    ],
     "40": [
-      "hydro_pump"
+      "soak"
     ],
-    "26": [
-      "swords_dance"
+    "45": [
+      "megahorn"
+    ],
+    "50": [
+      "horn_drill"
     ]
   },
   "evolution": null,

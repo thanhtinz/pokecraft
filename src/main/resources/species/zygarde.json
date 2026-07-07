@@ -19,31 +19,47 @@
   "modelId": "zygarde",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "leer"
+      "bulldoze",
+      "dragon_breath",
+      "bite",
+      "bind",
+      "camouflage",
+      "thousand_arrows",
+      "thousand_waves",
+      "core_enforcer"
     ],
     "8": [
-      "twister"
+      "haze"
     ],
-    "14": [
-      "sand_tomb"
-    ],
-    "20": [
-      "dragon_breath"
-    ],
-    "32": [
+    "16": [
       "dig"
     ],
+    "24": [
+      "safeguard"
+    ],
+    "32": [
+      "crunch"
+    ],
     "40": [
-      "dragon_claw"
+      "dragon_pulse"
     ],
     "48": [
+      "lands_wrath"
+    ],
+    "56": [
+      "glare"
+    ],
+    "64": [
+      "sandstorm"
+    ],
+    "72": [
+      "coil"
+    ],
+    "80": [
       "earthquake"
     ],
-    "26": [
-      "harden"
+    "88": [
+      "extreme_speed"
     ]
   },
   "evolution": null,

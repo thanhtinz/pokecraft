@@ -19,28 +19,54 @@
   "modelId": "tinglu",
   "learnset": {
     "1": [
-      "scratch"
+      "mean_look",
+      "sand_tomb",
+      "spite"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "spikes"
     ],
-    "8": [
-      "sand_tomb"
+    "10": [
+      "payback"
     ],
-    "14": [
-      "bite"
+    "15": [
+      "stomp"
     ],
     "20": [
-      "dig"
+      "bulldoze"
     ],
-    "32": [
-      "crunch"
+    "25": [
+      "whirlwind"
+    ],
+    "30": [
+      "taunt"
+    ],
+    "35": [
+      "thrash"
     ],
     "40": [
+      "dark_pulse"
+    ],
+    "45": [
+      "stomping_tantrum"
+    ],
+    "50": [
+      "ruination"
+    ],
+    "55": [
+      "throat_chop"
+    ],
+    "60": [
+      "rock_slide"
+    ],
+    "65": [
+      "memento"
+    ],
+    "70": [
       "earthquake"
     ],
-    "26": [
-      "harden"
+    "75": [
+      "fissure"
     ]
   },
   "evolution": null,

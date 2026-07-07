@@ -19,31 +19,47 @@
   "modelId": "lapras",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "ice_shard"
-    ],
-    "14": [
+      "growl",
       "water_gun"
     ],
-    "20": [
-      "aurora_beam"
+    "5": [
+      "sing"
     ],
-    "32": [
-      "bubble_beam"
+    "10": [
+      "mist"
+    ],
+    "15": [
+      "life_dew"
+    ],
+    "20": [
+      "ice_shard"
+    ],
+    "25": [
+      "confuse_ray"
+    ],
+    "30": [
+      "water_pulse"
+    ],
+    "35": [
+      "brine"
     ],
     "40": [
+      "body_slam"
+    ],
+    "45": [
       "ice_beam"
     ],
-    "48": [
-      "waterfall"
+    "50": [
+      "rain_dance"
     ],
-    "26": [
-      "swords_dance"
+    "55": [
+      "hydro_pump"
+    ],
+    "60": [
+      "perish_song"
+    ],
+    "65": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

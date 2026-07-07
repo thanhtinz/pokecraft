@@ -18,22 +18,47 @@
   "modelId": "hippowdon",
   "learnset": {
     "1": [
-      "tackle"
+      "ice_fang",
+      "fire_fang",
+      "thunder_fang",
+      "tackle",
+      "sand_attack",
+      "bite",
+      "yawn",
+      "mud_bomb"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+    "12": [
       "sand_tomb"
     ],
-    "14": [
+    "16": [
       "dig"
     ],
     "20": [
+      "crunch"
+    ],
+    "24": [
+      "sandstorm"
+    ],
+    "28": [
+      "take_down"
+    ],
+    "32": [
+      "roar"
+    ],
+    "38": [
+      "rest"
+    ],
+    "44": [
       "earthquake"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "double_edge"
+    ],
+    "56": [
+      "fissure"
+    ],
+    "62": [
+      "slack_off"
     ]
   },
   "evolution": null,

@@ -19,31 +19,42 @@
   "modelId": "drampa",
   "learnset": {
     "1": [
-      "tackle"
+      "play_nice",
+      "echoed_voice",
+      "dragon_rage"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
+    "5": [
       "twister"
     ],
-    "20": [
-      "hyper_fang"
+    "10": [
+      "protect"
     ],
-    "32": [
+    "15": [
+      "glare"
+    ],
+    "20": [
+      "safeguard"
+    ],
+    "25": [
       "dragon_breath"
     ],
+    "30": [
+      "extrasensory"
+    ],
+    "35": [
+      "dragon_pulse"
+    ],
     "40": [
-      "mega_punch"
+      "light_screen"
     ],
-    "48": [
-      "dragon_claw"
+    "45": [
+      "fly"
     ],
-    "26": [
-      "calm_mind"
+    "50": [
+      "hyper_voice"
+    ],
+    "55": [
+      "outrage"
     ]
   },
   "evolution": null,

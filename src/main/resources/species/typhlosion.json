@@ -18,28 +18,43 @@
   "modelId": "typhlosion",
   "learnset": {
     "1": [
-      "scratch"
+      "gyro_ball",
+      "tackle",
+      "leer",
+      "smokescreen",
+      "ember",
+      "double_edge",
+      "eruption"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "ember"
-    ],
-    "14": [
-      "fire_spin"
+    "13": [
+      "quick_attack"
     ],
     "20": [
-      "fire_punch"
+      "flame_wheel"
     ],
-    "32": [
+    "24": [
+      "defense_curl"
+    ],
+    "31": [
+      "swift"
+    ],
+    "35": [
+      "flame_charge"
+    ],
+    "43": [
+      "lava_plume"
+    ],
+    "48": [
       "flamethrower"
     ],
-    "40": [
-      "fire_blast"
+    "56": [
+      "inferno"
     ],
-    "26": [
-      "calm_mind"
+    "61": [
+      "rollout"
+    ],
+    "74": [
+      "overheat"
     ]
   },
   "evolution": null,

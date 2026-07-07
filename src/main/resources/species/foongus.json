@@ -19,31 +19,45 @@
   "modelId": "foongus",
   "learnset": {
     "1": [
-      "pound"
+      "absorb",
+      "astonish",
+      "bide"
     ],
     "4": [
-      "sleep_powder"
+      "growth"
     ],
     "8": [
-      "vine_whip"
+      "stun_spore"
     ],
-    "14": [
-      "poison_sting"
+    "12": [
+      "mega_drain"
+    ],
+    "16": [
+      "synthesis"
     ],
     "20": [
-      "razor_leaf"
+      "feint_attack"
+    ],
+    "24": [
+      "sweet_scent"
+    ],
+    "28": [
+      "giga_drain"
     ],
     "32": [
-      "acid"
+      "ingrain"
+    ],
+    "36": [
+      "toxic"
     ],
     "40": [
-      "seed_bomb"
+      "rage_powder"
+    ],
+    "44": [
+      "solar_beam"
     ],
     "48": [
-      "sludge"
-    ],
-    "26": [
-      "swords_dance"
+      "spore"
     ]
   },
   "evolution": null,

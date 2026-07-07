@@ -19,31 +19,53 @@
   "modelId": "nihilego",
   "learnset": {
     "1": [
-      "scratch"
+      "constrict",
+      "pound",
+      "psywave",
+      "wrap"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "rock_throw"
-    ],
-    "20": [
+    "5": [
       "acid"
     ],
-    "32": [
-      "rock_slide"
+    "10": [
+      "tickle"
+    ],
+    "15": [
+      "acid_spray"
+    ],
+    "20": [
+      "clear_smog"
+    ],
+    "25": [
+      "power_split",
+      "guard_split"
+    ],
+    "30": [
+      "venoshock"
+    ],
+    "35": [
+      "headbutt"
     ],
     "40": [
-      "sludge"
+      "toxic_spikes"
     ],
-    "48": [
-      "stone_edge"
+    "45": [
+      "venom_drench"
     ],
-    "26": [
-      "calm_mind"
+    "50": [
+      "power_gem"
+    ],
+    "55": [
+      "stealth_rock"
+    ],
+    "60": [
+      "mirror_coat"
+    ],
+    "65": [
+      "wonder_room"
+    ],
+    "70": [
+      "head_smash"
     ]
   },
   "evolution": null,

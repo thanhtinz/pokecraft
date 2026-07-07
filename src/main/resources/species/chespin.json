@@ -18,28 +18,39 @@
   "modelId": "chespin",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
+      "tackle",
+      "growl",
       "vine_whip"
     ],
-    "14": [
-      "razor_leaf"
+    "8": [
+      "rollout"
     ],
-    "20": [
-      "seed_bomb"
+    "11": [
+      "bite"
+    ],
+    "15": [
+      "leech_seed"
+    ],
+    "18": [
+      "pin_missile"
+    ],
+    "27": [
+      "take_down"
     ],
     "32": [
-      "petal_dance"
+      "seed_bomb"
     ],
-    "40": [
-      "solar_beam"
+    "35": [
+      "mud_shot"
     ],
-    "26": [
-      "harden"
+    "42": [
+      "body_slam"
+    ],
+    "45": [
+      "pain_split"
+    ],
+    "48": [
+      "wood_hammer"
     ]
   },
   "evolution": null,

@@ -19,31 +19,48 @@
   "modelId": "empoleon",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "growl",
+      "bubble",
+      "metal_claw",
+      "aqua_jet",
+      "pound",
+      "water_gun",
+      "bide",
+      "water_sport"
     ],
-    "4": [
-      "tail_whip"
+    "11": [
+      "swords_dance"
     ],
-    "8": [
-      "steel_wing"
+    "15": [
+      "peck"
     ],
-    "14": [
-      "water_gun"
-    ],
-    "20": [
-      "iron_head"
-    ],
-    "32": [
+    "19": [
       "bubble_beam"
     ],
-    "40": [
-      "waterfall"
+    "24": [
+      "swagger"
     ],
-    "48": [
-      "surf"
+    "28": [
+      "fury_attack"
     ],
-    "26": [
-      "calm_mind"
+    "33": [
+      "brine"
+    ],
+    "39": [
+      "whirlpool"
+    ],
+    "46": [
+      "mist"
+    ],
+    "52": [
+      "drill_peck"
+    ],
+    "59": [
+      "hydro_pump"
+    ],
+    "66": [
+      "wave_crash"
     ]
   },
   "evolution": null,

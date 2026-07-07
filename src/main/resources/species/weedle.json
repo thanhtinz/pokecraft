@@ -19,31 +19,11 @@
   "modelId": "weedle",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
+      "poison_sting",
       "string_shot"
     ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
+    "9": [
       "bug_bite"
-    ],
-    "20": [
-      "acid"
-    ],
-    "32": [
-      "pin_missile"
-    ],
-    "40": [
-      "sludge"
-    ],
-    "48": [
-      "sludge_bomb"
-    ],
-    "26": [
-      "agility"
     ]
   },
   "evolution": null,

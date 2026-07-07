@@ -18,25 +18,53 @@
   "modelId": "beartic",
   "learnset": {
     "1": [
-      "pound"
+      "aqua_jet",
+      "powder_snow",
+      "growl",
+      "bide",
+      "fury_swipes",
+      "endure",
+      "icicle_crash",
+      "charm"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "icy_wind"
     ],
-    "8": [
-      "ice_shard"
+    "12": [
+      "play_nice"
     ],
-    "14": [
-      "aurora_beam"
+    "15": [
+      "brine"
     ],
-    "20": [
-      "ice_beam"
+    "18": [
+      "frost_breath"
     ],
-    "32": [
+    "21": [
+      "slash"
+    ],
+    "24": [
+      "flail"
+    ],
+    "27": [
+      "swagger"
+    ],
+    "30": [
+      "snowscape"
+    ],
+    "33": [
+      "thrash"
+    ],
+    "36": [
+      "rest"
+    ],
+    "41": [
       "blizzard"
     ],
-    "26": [
-      "swords_dance"
+    "46": [
+      "sheer_cold"
+    ],
+    "51": [
+      "superpower"
     ]
   },
   "evolution": null,

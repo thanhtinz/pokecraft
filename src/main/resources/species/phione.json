@@ -18,28 +18,39 @@
   "modelId": "phione",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "bubble",
+      "water_sport",
       "water_gun"
     ],
-    "14": [
+    "9": [
+      "charm"
+    ],
+    "16": [
+      "supersonic"
+    ],
+    "24": [
       "bubble_beam"
     ],
-    "20": [
-      "waterfall"
+    "31": [
+      "acid_armor"
     ],
-    "32": [
-      "surf"
+    "39": [
+      "whirlpool"
     ],
-    "40": [
-      "hydro_pump"
+    "46": [
+      "water_pulse"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "aqua_ring"
+    ],
+    "61": [
+      "dive"
+    ],
+    "69": [
+      "rain_dance"
+    ],
+    "75": [
+      "take_heart"
     ]
   },
   "evolution": null,

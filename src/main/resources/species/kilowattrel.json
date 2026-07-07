@@ -19,31 +19,42 @@
   "modelId": "kilowattrel",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
+      "electro_ball",
+      "growl",
       "peck"
     ],
-    "14": [
+    "4": [
       "thunder_shock"
     ],
-    "20": [
-      "gust"
+    "7": [
+      "quick_attack"
     ],
-    "32": [
+    "11": [
+      "pluck"
+    ],
+    "15": [
       "spark"
     ],
-    "40": [
-      "wing_attack"
+    "19": [
+      "uproar"
+    ],
+    "24": [
+      "roost"
+    ],
+    "30": [
+      "dual_wingbeat"
+    ],
+    "36": [
+      "agility"
+    ],
+    "43": [
+      "volt_switch"
     ],
     "48": [
-      "thunderbolt"
+      "discharge"
     ],
-    "26": [
-      "agility"
+    "55": [
+      "hurricane"
     ]
   },
   "evolution": null,

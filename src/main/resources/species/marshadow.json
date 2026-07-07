@@ -19,31 +19,49 @@
   "modelId": "marshadow",
   "learnset": {
     "1": [
-      "scratch"
+      "fire_punch",
+      "thunder_punch",
+      "ice_punch",
+      "counter",
+      "pursuit",
+      "shadow_sneak",
+      "feint",
+      "rolling_kick",
+      "copycat",
+      "jump_kick"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "role_play"
     ],
-    "8": [
-      "karate_chop"
+    "18": [
+      "shadow_punch"
     ],
-    "14": [
-      "lick"
+    "27": [
+      "force_palm"
     ],
-    "20": [
-      "low_kick"
+    "36": [
+      "assurance"
     ],
-    "32": [
-      "night_shade"
+    "45": [
+      "sucker_punch"
     ],
-    "40": [
-      "brick_break"
+    "54": [
+      "drain_punch"
     ],
-    "48": [
-      "shadow_ball"
+    "63": [
+      "psych_up"
     ],
-    "26": [
-      "swords_dance"
+    "72": [
+      "spectral_thief"
+    ],
+    "81": [
+      "laser_focus"
+    ],
+    "90": [
+      "endeavor"
+    ],
+    "99": [
+      "close_combat"
     ]
   },
   "evolution": null,

@@ -19,31 +19,45 @@
   "modelId": "bramblin",
   "learnset": {
     "1": [
-      "scratch"
+      "defense_curl",
+      "rollout",
+      "astonish"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "absorb"
     ],
-    "8": [
-      "vine_whip"
+    "9": [
+      "rapid_spin"
     ],
-    "14": [
-      "lick"
+    "13": [
+      "bullet_seed"
     ],
-    "20": [
-      "razor_leaf"
+    "17": [
+      "infestation"
     ],
-    "32": [
-      "night_shade"
+    "21": [
+      "hex"
+    ],
+    "25": [
+      "mega_drain"
+    ],
+    "29": [
+      "disable"
+    ],
+    "35": [
+      "phantom_force"
     ],
     "40": [
-      "seed_bomb"
+      "giga_drain"
     ],
-    "48": [
-      "shadow_ball"
+    "45": [
+      "curse"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "pain_split"
+    ],
+    "55": [
+      "power_whip"
     ]
   },
   "evolution": null,

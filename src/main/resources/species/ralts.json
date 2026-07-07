@@ -19,28 +19,48 @@
   "modelId": "ralts",
   "learnset": {
     "1": [
-      "scratch"
+      "growl",
+      "lucky_chant",
+      "disarming_voice"
     ],
-    "4": [
-      "hypnosis"
+    "3": [
+      "double_team"
     ],
-    "8": [
+    "6": [
       "confusion"
     ],
-    "14": [
-      "fairy_wind"
+    "9": [
+      "hypnosis"
     ],
-    "20": [
+    "12": [
+      "draining_kiss"
+    ],
+    "15": [
+      "teleport"
+    ],
+    "18": [
       "psybeam"
     ],
-    "32": [
-      "dazzling_gleam"
+    "21": [
+      "life_dew"
     ],
-    "40": [
+    "24": [
+      "charm"
+    ],
+    "27": [
+      "calm_mind"
+    ],
+    "30": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "33": [
+      "heal_pulse"
+    ],
+    "36": [
+      "dream_eater"
+    ],
+    "39": [
+      "future_sight"
     ]
   },
   "evolution": null,

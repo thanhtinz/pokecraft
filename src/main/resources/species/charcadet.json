@@ -18,28 +18,30 @@
   "modelId": "charcadet",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "leer"
+      "leer",
+      "ember",
+      "astonish"
     ],
     "8": [
-      "ember"
+      "clear_smog"
     ],
-    "14": [
+    "12": [
       "fire_spin"
     ],
+    "16": [
+      "will_o_wisp"
+    ],
     "20": [
-      "fire_punch"
+      "night_shade"
+    ],
+    "24": [
+      "flame_charge"
+    ],
+    "28": [
+      "incinerate"
     ],
     "32": [
-      "flamethrower"
-    ],
-    "40": [
-      "fire_blast"
-    ],
-    "26": [
-      "swords_dance"
+      "lava_plume"
     ]
   },
   "evolution": null,

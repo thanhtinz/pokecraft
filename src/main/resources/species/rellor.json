@@ -18,19 +18,32 @@
   "modelId": "rellor",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "defense_curl"
     ],
     "4": [
-      "string_shot"
+      "sand_attack"
     ],
-    "8": [
+    "7": [
+      "struggle_bug"
+    ],
+    "11": [
+      "rollout"
+    ],
+    "15": [
+      "mud_shot"
+    ],
+    "20": [
       "bug_bite"
     ],
-    "14": [
-      "pin_missile"
+    "24": [
+      "take_down"
     ],
-    "26": [
-      "harden"
+    "29": [
+      "dig"
+    ],
+    "35": [
+      "lunge"
     ]
   },
   "evolution": null,

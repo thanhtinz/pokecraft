@@ -18,25 +18,45 @@
   "modelId": "timburr",
   "learnset": {
     "1": [
-      "scratch"
+      "pound",
+      "leer",
+      "bide"
     ],
     "4": [
-      "leer"
-    ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
       "low_kick"
     ],
+    "8": [
+      "rock_throw"
+    ],
+    "12": [
+      "focus_energy"
+    ],
+    "16": [
+      "bulk_up"
+    ],
     "20": [
-      "brick_break"
+      "wake_up_slap"
+    ],
+    "24": [
+      "chip_away"
+    ],
+    "28": [
+      "scary_face"
     ],
     "32": [
-      "cross_chop"
+      "dynamic_punch"
     ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "hammer_arm"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "44": [
+      "superpower"
+    ],
+    "48": [
+      "focus_punch"
     ]
   },
   "evolution": null,

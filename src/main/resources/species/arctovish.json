@@ -19,31 +19,41 @@
   "modelId": "arctovish",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "ice_shard"
-    ],
-    "14": [
+      "powder_snow",
       "water_gun"
     ],
-    "20": [
-      "aurora_beam"
+    "7": [
+      "protect"
     ],
-    "32": [
-      "bubble_beam"
+    "14": [
+      "icy_wind"
     ],
-    "40": [
-      "ice_beam"
+    "21": [
+      "ancient_power"
     ],
-    "48": [
-      "waterfall"
+    "28": [
+      "bite"
     ],
-    "26": [
-      "harden"
+    "35": [
+      "aurora_veil"
+    ],
+    "42": [
+      "freeze_dry"
+    ],
+    "49": [
+      "super_fang"
+    ],
+    "56": [
+      "crunch"
+    ],
+    "63": [
+      "fishious_rend"
+    ],
+    "70": [
+      "icicle_crash"
+    ],
+    "77": [
+      "blizzard"
     ]
   },
   "evolution": null,

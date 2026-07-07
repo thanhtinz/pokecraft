@@ -18,28 +18,48 @@
   "modelId": "mudkip",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "growl",
+      "foresight"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+    "3": [
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "6": [
+      "rock_smash"
     ],
-    "20": [
-      "waterfall"
+    "9": [
+      "rock_throw"
     ],
-    "32": [
+    "12": [
+      "protect"
+    ],
+    "15": [
+      "supersonic"
+    ],
+    "18": [
+      "water_pulse"
+    ],
+    "21": [
+      "rock_slide"
+    ],
+    "24": [
+      "take_down"
+    ],
+    "27": [
+      "amnesia"
+    ],
+    "30": [
       "surf"
     ],
-    "40": [
-      "hydro_pump"
+    "33": [
+      "screech"
     ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "endeavor"
+    ],
+    "39": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

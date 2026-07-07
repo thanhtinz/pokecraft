@@ -18,31 +18,41 @@
   "modelId": "herdier",
   "learnset": {
     "1": [
-      "tackle"
+      "leer",
+      "tackle",
+      "odor_sleuth",
+      "bite",
+      "work_up"
     ],
-    "4": [
-      "growl"
+    "12": [
+      "retaliate"
     ],
-    "8": [
-      "quick_attack"
+    "19": [
+      "baby_doll_eyes"
     ],
-    "14": [
-      "hyper_fang"
+    "24": [
+      "play_rough"
     ],
-    "20": [
-      "mega_punch"
+    "30": [
+      "crunch"
     ],
-    "32": [
-      "body_slam"
+    "36": [
+      "take_down"
     ],
-    "40": [
-      "double_edge"
+    "42": [
+      "helping_hand"
     ],
     "48": [
-      "hyper_beam"
+      "reversal"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "roar"
+    ],
+    "60": [
+      "last_resort"
+    ],
+    "66": [
+      "giga_impact"
     ]
   },
   "evolution": null,

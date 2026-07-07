@@ -19,31 +19,27 @@
   "modelId": "swadloon",
   "learnset": {
     "1": [
-      "scratch"
+      "grass_whistle",
+      "tackle",
+      "string_shot",
+      "bug_bite",
+      "razor_leaf",
+      "protect"
     ],
-    "4": [
-      "string_shot"
+    "22": [
+      "struggle_bug"
     ],
-    "8": [
-      "vine_whip"
+    "29": [
+      "endure"
     ],
-    "14": [
-      "bug_bite"
+    "31": [
+      "sticky_web"
     ],
-    "20": [
-      "razor_leaf"
+    "36": [
+      "bug_buzz"
     ],
-    "32": [
-      "pin_missile"
-    ],
-    "40": [
-      "seed_bomb"
-    ],
-    "48": [
-      "petal_dance"
-    ],
-    "26": [
-      "harden"
+    "43": [
+      "flail"
     ]
   },
   "evolution": null,

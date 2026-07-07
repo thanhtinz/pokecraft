@@ -19,31 +19,40 @@
   "modelId": "sinistcha",
   "learnset": {
     "1": [
-      "pound"
+      "matcha_gotcha",
+      "stun_spore",
+      "withdraw",
+      "astonish"
     ],
-    "4": [
-      "sleep_powder"
+    "6": [
+      "absorb"
     ],
-    "8": [
-      "lick"
+    "12": [
+      "life_dew"
     ],
-    "14": [
-      "vine_whip"
+    "18": [
+      "foul_play"
     ],
-    "20": [
-      "night_shade"
+    "24": [
+      "mega_drain"
     ],
-    "32": [
-      "razor_leaf"
+    "30": [
+      "hex"
     ],
-    "40": [
-      "shadow_ball"
+    "36": [
+      "rage_powder"
+    ],
+    "42": [
+      "strength_sap"
     ],
     "48": [
-      "seed_bomb"
+      "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "54": [
+      "memento"
+    ],
+    "60": [
+      "leaf_storm"
     ]
   },
   "evolution": null,

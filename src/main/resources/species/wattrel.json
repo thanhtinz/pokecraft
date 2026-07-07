@@ -19,31 +19,38 @@
   "modelId": "wattrel",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
+      "growl",
       "peck"
     ],
-    "20": [
+    "4": [
+      "thunder_shock"
+    ],
+    "7": [
+      "quick_attack"
+    ],
+    "11": [
+      "pluck"
+    ],
+    "15": [
       "spark"
     ],
+    "19": [
+      "uproar"
+    ],
+    "23": [
+      "roost"
+    ],
+    "27": [
+      "dual_wingbeat"
+    ],
     "32": [
-      "gust"
-    ],
-    "40": [
-      "thunderbolt"
-    ],
-    "48": [
-      "wing_attack"
-    ],
-    "26": [
       "agility"
+    ],
+    "37": [
+      "volt_switch"
+    ],
+    "43": [
+      "discharge"
     ]
   },
   "evolution": null,

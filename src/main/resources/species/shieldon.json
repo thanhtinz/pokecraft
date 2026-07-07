@@ -19,28 +19,38 @@
   "modelId": "shieldon",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "protect"
     ],
-    "4": [
-      "harden"
+    "6": [
+      "taunt"
     ],
-    "8": [
-      "rock_throw"
+    "10": [
+      "metal_sound"
     ],
-    "14": [
-      "steel_wing"
+    "15": [
+      "take_down"
     ],
-    "20": [
-      "rock_slide"
+    "19": [
+      "iron_defense"
     ],
-    "32": [
+    "24": [
+      "swagger"
+    ],
+    "28": [
+      "ancient_power"
+    ],
+    "33": [
+      "endure"
+    ],
+    "37": [
+      "metal_burst"
+    ],
+    "42": [
       "iron_head"
     ],
-    "40": [
-      "stone_edge"
-    ],
-    "26": [
-      "harden"
+    "46": [
+      "heavy_slam"
     ]
   },
   "evolution": null,

@@ -18,28 +18,45 @@
   "modelId": "tympole",
   "learnset": {
     "1": [
-      "scratch"
+      "bubble",
+      "growl",
+      "echoed_voice"
     ],
     "4": [
-      "tail_whip"
+      "acid"
     ],
     "8": [
-      "water_gun"
+      "supersonic"
     ],
-    "14": [
-      "bubble_beam"
+    "12": [
+      "mud_shot"
+    ],
+    "16": [
+      "round"
     ],
     "20": [
-      "waterfall"
+      "bubble_beam"
+    ],
+    "24": [
+      "flail"
+    ],
+    "28": [
+      "uproar"
     ],
     "32": [
-      "surf"
+      "aqua_ring"
+    ],
+    "36": [
+      "hyper_voice"
     ],
     "40": [
-      "hydro_pump"
+      "muddy_water"
     ],
-    "26": [
-      "agility"
+    "44": [
+      "rain_dance"
+    ],
+    "48": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

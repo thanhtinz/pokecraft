@@ -18,25 +18,44 @@
   "modelId": "elekid",
   "learnset": {
     "1": [
-      "pound"
+      "quick_attack",
+      "leer"
     ],
     "4": [
-      "thunder_wave"
-    ],
-    "8": [
       "thunder_shock"
     ],
-    "14": [
-      "spark"
+    "8": [
+      "charge"
+    ],
+    "12": [
+      "swift"
+    ],
+    "16": [
+      "shock_wave"
     ],
     "20": [
-      "thunderbolt"
+      "thunder_wave"
+    ],
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "thunder_punch"
     ],
     "32": [
-      "thunder"
+      "discharge"
     ],
-    "26": [
-      "agility"
+    "36": [
+      "low_kick"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "44": [
+      "light_screen"
+    ],
+    "48": [
+      "thunder"
     ]
   },
   "evolution": null,

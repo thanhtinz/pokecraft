@@ -18,19 +18,44 @@
   "modelId": "karrablast",
   "learnset": {
     "1": [
-      "tackle"
+      "peck",
+      "leer"
     ],
     "4": [
-      "string_shot"
+      "fury_cutter"
     ],
     "8": [
-      "bug_bite"
+      "endure"
     ],
-    "14": [
-      "pin_missile"
+    "12": [
+      "false_swipe"
     ],
-    "26": [
+    "16": [
+      "fury_attack"
+    ],
+    "20": [
+      "headbutt"
+    ],
+    "24": [
+      "flail"
+    ],
+    "28": [
+      "scary_face"
+    ],
+    "32": [
+      "slash"
+    ],
+    "36": [
       "swords_dance"
+    ],
+    "40": [
+      "take_down"
+    ],
+    "44": [
+      "bug_buzz"
+    ],
+    "48": [
+      "double_edge"
     ]
   },
   "evolution": null,

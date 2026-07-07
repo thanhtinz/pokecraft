@@ -19,31 +19,43 @@
   "modelId": "golem",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "defense_curl",
+      "mud_sport",
+      "rock_polish",
+      "magnitude",
+      "steamroller",
+      "heavy_slam"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
+    "16": [
       "rock_throw"
     ],
-    "14": [
-      "sand_tomb"
+    "18": [
+      "smack_down"
     ],
-    "20": [
-      "rock_slide"
+    "22": [
+      "bulldoze"
     ],
-    "32": [
-      "dig"
+    "24": [
+      "self_destruct"
+    ],
+    "30": [
+      "stealth_rock"
+    ],
+    "34": [
+      "rock_blast"
     ],
     "40": [
-      "stone_edge"
-    ],
-    "48": [
       "earthquake"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "explosion"
+    ],
+    "50": [
+      "double_edge"
+    ],
+    "54": [
+      "stone_edge"
     ]
   },
   "evolution": null,

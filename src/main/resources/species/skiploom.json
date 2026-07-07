@@ -19,31 +19,48 @@
   "modelId": "skiploom",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "sleep_powder"
+      "splash",
+      "synthesis",
+      "tail_whip",
+      "absorb"
     ],
     "8": [
-      "vine_whip"
+      "tackle"
     ],
-    "14": [
-      "peck"
+    "10": [
+      "fairy_wind"
+    ],
+    "12": [
+      "poison_powder",
+      "stun_spore",
+      "sleep_powder"
+    ],
+    "15": [
+      "bullet_seed"
     ],
     "20": [
-      "razor_leaf"
+      "leech_seed"
     ],
-    "32": [
-      "gust"
+    "24": [
+      "mega_drain"
     ],
-    "40": [
-      "seed_bomb"
+    "28": [
+      "acrobatics"
     ],
-    "48": [
-      "wing_attack"
+    "31": [
+      "cotton_spore"
     ],
-    "26": [
-      "agility"
+    "34": [
+      "u_turn"
+    ],
+    "37": [
+      "giga_drain"
+    ],
+    "41": [
+      "bounce"
+    ],
+    "44": [
+      "memento"
     ]
   },
   "evolution": null,

@@ -19,31 +19,51 @@
   "modelId": "amaura",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "harden"
-    ],
-    "8": [
+      "growl",
+      "powder_snow",
       "rock_throw"
     ],
-    "14": [
-      "ice_shard"
+    "4": [
+      "encore"
+    ],
+    "8": [
+      "ancient_power"
+    ],
+    "12": [
+      "icy_wind"
+    ],
+    "16": [
+      "round"
     ],
     "20": [
-      "rock_slide"
+      "mist"
     ],
-    "32": [
+    "24": [
       "aurora_beam"
     ],
-    "40": [
-      "stone_edge"
+    "28": [
+      "thunder_wave"
     ],
-    "48": [
+    "32": [
+      "nature_power"
+    ],
+    "36": [
+      "freeze_dry"
+    ],
+    "40": [
       "ice_beam"
     ],
-    "26": [
-      "calm_mind"
+    "44": [
+      "light_screen"
+    ],
+    "48": [
+      "hail"
+    ],
+    "52": [
+      "blizzard"
+    ],
+    "56": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

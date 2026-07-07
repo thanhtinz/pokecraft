@@ -19,30 +19,41 @@
   "modelId": "scyther",
   "learnset": {
     "1": [
-      "tackle"
+      "quick_attack",
+      "leer",
+      "pursuit"
     ],
     "4": [
-      "string_shot"
+      "fury_cutter"
     ],
     "8": [
-      "peck"
+      "false_swipe"
     ],
-    "14": [
-      "bug_bite"
-    ],
-    "20": [
-      "gust"
-    ],
-    "32": [
-      "pin_missile"
-    ],
-    "40": [
+    "12": [
       "wing_attack"
     ],
-    "48": [
-      "drill_peck"
+    "16": [
+      "double_team"
     ],
-    "26": [
+    "20": [
+      "double_hit"
+    ],
+    "24": [
+      "slash"
+    ],
+    "28": [
+      "focus_energy"
+    ],
+    "32": [
+      "agility"
+    ],
+    "36": [
+      "air_slash"
+    ],
+    "40": [
+      "x_scissor"
+    ],
+    "44": [
       "swords_dance"
     ]
   },

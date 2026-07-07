@@ -18,19 +18,49 @@
   "modelId": "mabosstiff",
   "learnset": {
     "1": [
-      "scratch"
+      "comeuppance",
+      "leer",
+      "scary_face",
+      "tackle"
     ],
     "4": [
-      "leer"
+      "lick"
     ],
-    "8": [
-      "bite"
+    "7": [
+      "snarl"
+    ],
+    "10": [
+      "hone_claws"
     ],
     "14": [
-      "crunch"
+      "bite"
+    ],
+    "18": [
+      "roar"
+    ],
+    "22": [
+      "headbutt"
     ],
     "26": [
-      "swords_dance"
+      "payback"
+    ],
+    "34": [
+      "crunch"
+    ],
+    "39": [
+      "swagger"
+    ],
+    "43": [
+      "reversal"
+    ],
+    "48": [
+      "jaw_lock"
+    ],
+    "55": [
+      "double_edge"
+    ],
+    "60": [
+      "outrage"
     ]
   },
   "evolution": null,

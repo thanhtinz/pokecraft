@@ -19,31 +19,54 @@
   "modelId": "onix",
   "learnset": {
     "1": [
-      "pound"
+      "mud_sport",
+      "tackle",
+      "harden",
+      "bind",
+      "rock_throw",
+      "rage"
     ],
     "4": [
-      "harden"
+      "smack_down"
     ],
     "8": [
-      "sand_tomb"
+      "rock_polish"
     ],
-    "14": [
-      "rock_throw"
+    "12": [
+      "dragon_breath"
+    ],
+    "16": [
+      "curse"
     ],
     "20": [
-      "dig"
-    ],
-    "32": [
       "rock_slide"
     ],
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "sand_tomb"
+    ],
+    "32": [
+      "stealth_rock"
+    ],
+    "36": [
+      "slam"
+    ],
     "40": [
-      "earthquake"
+      "sandstorm"
+    ],
+    "44": [
+      "dig"
     ],
     "48": [
+      "iron_tail"
+    ],
+    "52": [
       "stone_edge"
     ],
-    "26": [
-      "harden"
+    "56": [
+      "double_edge"
     ]
   },
   "evolution": null,

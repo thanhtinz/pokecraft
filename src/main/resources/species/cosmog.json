@@ -18,22 +18,9 @@
   "modelId": "cosmog",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "psybeam"
-    ],
-    "20": [
-      "psychic"
-    ],
-    "26": [
-      "agility"
+      "tackle",
+      "splash",
+      "teleport"
     ]
   },
   "evolution": null,

@@ -18,28 +18,28 @@
   "modelId": "arcanine",
   "learnset": {
     "1": [
-      "pound"
+      "bite",
+      "roar",
+      "fire_fang",
+      "odor_sleuth",
+      "extreme_speed",
+      "helping_hand",
+      "retaliate",
+      "burn_up",
+      "flame_wheel",
+      "agility",
+      "crunch",
+      "take_down",
+      "play_rough",
+      "reversal",
+      "flare_blitz",
+      "ember",
+      "leer",
+      "howl",
+      "flame_burst"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "ember"
-    ],
-    "14": [
-      "fire_spin"
-    ],
-    "20": [
-      "fire_punch"
-    ],
-    "32": [
+    "5": [
       "flamethrower"
-    ],
-    "40": [
-      "fire_blast"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

@@ -19,31 +19,33 @@
   "modelId": "carkol",
   "learnset": {
     "1": [
-      "scratch"
+      "flame_charge",
+      "tackle",
+      "smokescreen",
+      "rapid_spin",
+      "smack_down",
+      "burn_up"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "rock_throw"
-    ],
-    "14": [
-      "ember"
+    "15": [
+      "rock_polish"
     ],
     "20": [
-      "rock_slide"
+      "ancient_power"
     ],
-    "32": [
-      "fire_spin"
+    "27": [
+      "incinerate"
     ],
-    "40": [
-      "stone_edge"
+    "35": [
+      "stealth_rock"
+    ],
+    "41": [
+      "heat_crash"
     ],
     "48": [
-      "fire_punch"
+      "rock_blast"
     ],
-    "26": [
-      "harden"
+    "55": [
+      "stone_edge"
     ]
   },
   "evolution": null,

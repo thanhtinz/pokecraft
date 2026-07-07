@@ -19,31 +19,44 @@
   "modelId": "smoochum",
   "learnset": {
     "1": [
-      "scratch"
+      "pound",
+      "lick"
     ],
     "4": [
-      "leer"
+      "powder_snow"
     ],
     "8": [
-      "ice_shard"
+      "copycat"
     ],
-    "14": [
+    "12": [
       "confusion"
     ],
+    "16": [
+      "covet"
+    ],
     "20": [
-      "aurora_beam"
+      "sing"
+    ],
+    "24": [
+      "fake_tears"
+    ],
+    "28": [
+      "ice_punch"
     ],
     "32": [
-      "psybeam"
-    ],
-    "40": [
-      "ice_beam"
-    ],
-    "48": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "36": [
+      "sweet_kiss"
+    ],
+    "40": [
+      "mean_look"
+    ],
+    "44": [
+      "perish_song"
+    ],
+    "48": [
+      "blizzard"
     ]
   },
   "evolution": null,

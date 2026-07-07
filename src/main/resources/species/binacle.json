@@ -19,31 +19,42 @@
   "modelId": "binacle",
   "learnset": {
     "1": [
-      "scratch"
+      "scratch",
+      "sand_attack",
+      "mud_slap"
     ],
     "4": [
-      "harden"
+      "withdraw"
     ],
     "8": [
-      "rock_throw"
-    ],
-    "14": [
       "water_gun"
     ],
+    "12": [
+      "fury_cutter"
+    ],
+    "16": [
+      "fury_swipes"
+    ],
     "20": [
-      "rock_slide"
+      "clamp"
+    ],
+    "24": [
+      "rock_polish"
+    ],
+    "28": [
+      "slash"
     ],
     "32": [
-      "bubble_beam"
+      "hone_claws"
+    ],
+    "36": [
+      "razor_shell"
     ],
     "40": [
-      "stone_edge"
+      "shell_smash"
     ],
-    "48": [
-      "waterfall"
-    ],
-    "26": [
-      "harden"
+    "44": [
+      "cross_chop"
     ]
   },
   "evolution": null,

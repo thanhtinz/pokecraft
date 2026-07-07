@@ -19,31 +19,38 @@
   "modelId": "palkia",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "tail_whip"
+      "scary_face",
+      "water_pulse"
     ],
     "8": [
-      "water_gun"
-    ],
-    "14": [
-      "twister"
-    ],
-    "20": [
-      "bubble_beam"
-    ],
-    "32": [
       "dragon_breath"
     ],
-    "40": [
-      "waterfall"
+    "16": [
+      "ancient_power"
+    ],
+    "24": [
+      "slash"
+    ],
+    "32": [
+      "aqua_ring"
     ],
     "48": [
-      "dragon_claw"
+      "aura_sphere"
     ],
-    "26": [
-      "calm_mind"
+    "56": [
+      "power_gem"
+    ],
+    "64": [
+      "aqua_tail"
+    ],
+    "72": [
+      "earth_power"
+    ],
+    "80": [
+      "spacial_rend"
+    ],
+    "88": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

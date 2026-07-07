@@ -18,31 +18,52 @@
   "modelId": "kangaskhan",
   "learnset": {
     "1": [
-      "scratch"
+      "comet_punch",
+      "leer",
+      "tail_whip",
+      "rage",
+      "dizzy_punch",
+      "chip_away",
+      "pound"
     ],
     "4": [
       "growl"
     ],
     "8": [
-      "quick_attack"
+      "fake_out"
     ],
-    "14": [
-      "hyper_fang"
+    "12": [
+      "bite"
+    ],
+    "16": [
+      "stomp"
     ],
     "20": [
-      "mega_punch"
+      "focus_energy"
+    ],
+    "24": [
+      "headbutt"
+    ],
+    "28": [
+      "sucker_punch"
     ],
     "32": [
-      "body_slam"
+      "double_hit"
+    ],
+    "36": [
+      "crunch"
     ],
     "40": [
-      "double_edge"
+      "endure"
+    ],
+    "44": [
+      "reversal"
     ],
     "48": [
-      "hyper_beam"
+      "outrage"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "last_resort"
     ]
   },
   "evolution": null,

@@ -19,31 +19,50 @@
   "modelId": "froslass",
   "learnset": {
     "1": [
-      "scratch"
+      "powder_snow",
+      "leer",
+      "double_team",
+      "astonish",
+      "ominous_wind",
+      "wake_up_slap",
+      "destiny_bond",
+      "headbutt",
+      "protect",
+      "captivate",
+      "ice_fang",
+      "hex",
+      "bite",
+      "crunch"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+    "15": [
       "ice_shard"
     ],
-    "14": [
-      "lick"
-    ],
     "20": [
-      "aurora_beam"
+      "draining_kiss"
     ],
-    "32": [
-      "night_shade"
+    "25": [
+      "icy_wind"
+    ],
+    "30": [
+      "frost_breath"
+    ],
+    "35": [
+      "confuse_ray"
     ],
     "40": [
-      "ice_beam"
+      "snowscape"
     ],
-    "48": [
+    "47": [
+      "will_o_wisp"
+    ],
+    "54": [
+      "aurora_veil"
+    ],
+    "61": [
       "shadow_ball"
     ],
-    "26": [
-      "agility"
+    "68": [
+      "blizzard"
     ]
   },
   "evolution": null,

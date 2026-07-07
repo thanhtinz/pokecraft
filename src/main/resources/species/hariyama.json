@@ -18,25 +18,55 @@
   "modelId": "hariyama",
   "learnset": {
     "1": [
-      "tackle"
+      "brine",
+      "tackle",
+      "focus_energy",
+      "sand_attack",
+      "arm_thrust",
+      "smelling_salts",
+      "wake_up_slap"
     ],
-    "4": [
-      "leer"
+    "10": [
+      "fake_out"
     ],
-    "8": [
-      "karate_chop"
+    "13": [
+      "force_palm"
     ],
-    "14": [
-      "low_kick"
+    "16": [
+      "whirlwind"
     ],
-    "20": [
-      "brick_break"
+    "19": [
+      "knock_off"
     ],
-    "32": [
-      "cross_chop"
+    "22": [
+      "bulk_up"
     ],
     "26": [
-      "swords_dance"
+      "belly_drum"
+    ],
+    "30": [
+      "detect"
+    ],
+    "34": [
+      "seismic_toss"
+    ],
+    "38": [
+      "focus_punch"
+    ],
+    "42": [
+      "endure"
+    ],
+    "46": [
+      "close_combat"
+    ],
+    "50": [
+      "reversal"
+    ],
+    "54": [
+      "heavy_slam"
+    ],
+    "60": [
+      "headlong_rush"
     ]
   },
   "evolution": null,

@@ -19,31 +19,36 @@
   "modelId": "toxapex",
   "learnset": {
     "1": [
-      "scratch"
+      "baneful_bunker",
+      "poison_sting",
+      "peck",
+      "bite",
+      "wide_guard",
+      "spike_cannon"
     ],
-    "4": [
-      "poison_powder"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "water_gun"
+    "15": [
+      "venoshock"
     ],
     "20": [
-      "acid"
+      "recover"
     ],
-    "32": [
-      "bubble_beam"
+    "25": [
+      "pin_missile"
     ],
-    "40": [
-      "sludge"
+    "30": [
+      "toxic_spikes"
     ],
-    "48": [
-      "waterfall"
+    "35": [
+      "liquidation"
     ],
-    "26": [
-      "harden"
+    "42": [
+      "acid_spray"
+    ],
+    "49": [
+      "poison_jab"
+    ],
+    "56": [
+      "toxic"
     ]
   },
   "evolution": null,

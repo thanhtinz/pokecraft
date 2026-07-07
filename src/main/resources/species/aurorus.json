@@ -19,31 +19,47 @@
   "modelId": "aurorus",
   "learnset": {
     "1": [
-      "tackle"
+      "growl",
+      "powder_snow",
+      "rock_throw",
+      "ancient_power",
+      "encore"
     ],
-    "4": [
-      "harden"
+    "12": [
+      "icy_wind"
     ],
-    "8": [
-      "ice_shard"
-    ],
-    "14": [
-      "rock_throw"
+    "16": [
+      "round"
     ],
     "20": [
+      "mist"
+    ],
+    "24": [
       "aurora_beam"
     ],
-    "32": [
-      "rock_slide"
+    "28": [
+      "thunder_wave"
     ],
-    "40": [
+    "32": [
+      "nature_power"
+    ],
+    "36": [
+      "freeze_dry"
+    ],
+    "42": [
       "ice_beam"
     ],
     "48": [
-      "stone_edge"
+      "light_screen"
     ],
-    "26": [
-      "calm_mind"
+    "54": [
+      "hail"
+    ],
+    "60": [
+      "blizzard"
+    ],
+    "66": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

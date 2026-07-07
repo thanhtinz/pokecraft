@@ -19,31 +19,50 @@
   "modelId": "sandyshocks",
   "learnset": {
     "1": [
-      "pound"
+      "thunder_wave",
+      "electric_terrain",
+      "supersonic",
+      "thunder_shock",
+      "sunny_day"
     ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
-      "thunder_shock"
-    ],
-    "20": [
-      "dig"
-    ],
-    "32": [
+    "7": [
       "spark"
     ],
-    "40": [
-      "earthquake"
+    "14": [
+      "bulldoze"
     ],
-    "48": [
-      "thunderbolt"
+    "21": [
+      "charge_beam"
     ],
-    "26": [
-      "calm_mind"
+    "28": [
+      "tri_attack"
+    ],
+    "35": [
+      "screech"
+    ],
+    "42": [
+      "heavy_slam"
+    ],
+    "49": [
+      "metal_sound"
+    ],
+    "56": [
+      "discharge"
+    ],
+    "63": [
+      "earth_power"
+    ],
+    "70": [
+      "mirror_coat"
+    ],
+    "77": [
+      "gravity"
+    ],
+    "84": [
+      "zap_cannon"
+    ],
+    "91": [
+      "magnetic_flux"
     ]
   },
   "evolution": null,

@@ -18,25 +18,36 @@
   "modelId": "zebstrika",
   "learnset": {
     "1": [
-      "scratch"
+      "quick_attack",
+      "tail_whip",
+      "charge",
+      "thunder_wave",
+      "pursuit",
+      "ion_deluge"
     ],
-    "4": [
-      "thunder_wave"
+    "11": [
+      "shock_wave"
     ],
-    "8": [
-      "thunder_shock"
+    "18": [
+      "flame_charge"
     ],
-    "14": [
+    "25": [
       "spark"
     ],
-    "20": [
-      "thunderbolt"
+    "31": [
+      "stomp"
     ],
-    "32": [
-      "thunder"
+    "36": [
+      "discharge"
     ],
-    "26": [
+    "42": [
       "agility"
+    ],
+    "47": [
+      "wild_charge"
+    ],
+    "53": [
+      "thrash"
     ]
   },
   "evolution": null,

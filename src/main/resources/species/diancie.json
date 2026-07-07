@@ -19,28 +19,47 @@
   "modelId": "diancie",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "harden",
+      "rock_throw",
+      "sharpen",
+      "diamond_storm"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "fairy_wind"
+    "7": [
+      "guard_split"
     ],
     "14": [
-      "rock_throw"
+      "smack_down"
     ],
-    "20": [
-      "dazzling_gleam"
+    "21": [
+      "flail"
     ],
-    "32": [
+    "28": [
+      "ancient_power"
+    ],
+    "35": [
+      "rock_polish"
+    ],
+    "42": [
+      "light_screen"
+    ],
+    "49": [
       "rock_slide"
     ],
-    "40": [
-      "stone_edge"
+    "56": [
+      "skill_swap"
     ],
-    "26": [
-      "harden"
+    "63": [
+      "power_gem"
+    ],
+    "70": [
+      "stealth_rock"
+    ],
+    "77": [
+      "moonblast"
+    ],
+    "84": [
+      "stone_edge"
     ]
   },
   "evolution": null,

@@ -18,28 +18,42 @@
   "modelId": "rapidash",
   "learnset": {
     "1": [
+      "poison_jab",
+      "megahorn",
+      "growl",
+      "quick_attack",
+      "tail_whip",
+      "ember",
+      "fury_attack",
+      "smart_strike",
       "tackle"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "ember"
-    ],
-    "14": [
-      "fire_spin"
+    "15": [
+      "flame_charge"
     ],
     "20": [
-      "fire_punch"
+      "agility"
     ],
-    "32": [
-      "flamethrower"
+    "25": [
+      "flame_wheel"
     ],
-    "40": [
+    "30": [
+      "stomp"
+    ],
+    "35": [
+      "fire_spin"
+    ],
+    "43": [
+      "take_down"
+    ],
+    "49": [
+      "inferno"
+    ],
+    "56": [
       "fire_blast"
     ],
-    "26": [
-      "agility"
+    "63": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

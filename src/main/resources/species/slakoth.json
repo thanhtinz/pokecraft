@@ -18,31 +18,36 @@
   "modelId": "slakoth",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "yawn",
+      "feint_attack"
     ],
-    "4": [
-      "growl"
+    "6": [
+      "encore"
     ],
-    "8": [
-      "quick_attack"
+    "9": [
+      "slack_off"
     ],
     "14": [
-      "hyper_fang"
+      "headbutt"
     ],
-    "20": [
-      "mega_punch"
+    "17": [
+      "amnesia"
     ],
-    "32": [
-      "body_slam"
+    "22": [
+      "covet"
     ],
-    "40": [
-      "double_edge"
+    "25": [
+      "chip_away"
     ],
-    "48": [
-      "hyper_beam"
+    "30": [
+      "counter"
     ],
-    "26": [
-      "swords_dance"
+    "33": [
+      "flail"
+    ],
+    "38": [
+      "play_rough"
     ]
   },
   "evolution": null,

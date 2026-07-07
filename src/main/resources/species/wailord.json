@@ -18,28 +18,48 @@
   "modelId": "wailord",
   "learnset": {
     "1": [
-      "tackle"
+      "splash",
+      "growl",
+      "water_gun",
+      "astonish",
+      "soak",
+      "noble_roar"
     ],
-    "4": [
-      "tail_whip"
+    "15": [
+      "mist"
     ],
-    "8": [
-      "water_gun"
+    "18": [
+      "water_pulse"
     ],
-    "14": [
-      "bubble_beam"
+    "21": [
+      "heavy_slam"
     ],
-    "20": [
-      "waterfall"
+    "24": [
+      "brine"
     ],
-    "32": [
-      "surf"
+    "27": [
+      "whirlpool"
     ],
-    "40": [
+    "30": [
+      "dive"
+    ],
+    "33": [
+      "bounce"
+    ],
+    "36": [
+      "body_slam"
+    ],
+    "39": [
+      "rest"
+    ],
+    "44": [
+      "amnesia"
+    ],
+    "49": [
       "hydro_pump"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "water_spout"
     ]
   },
   "evolution": null,

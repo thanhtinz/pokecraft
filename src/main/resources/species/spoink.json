@@ -18,22 +18,43 @@
   "modelId": "spoink",
   "learnset": {
     "1": [
-      "scratch"
+      "splash",
+      "psywave",
+      "odor_sleuth"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
+    "7": [
       "confusion"
+    ],
+    "10": [
+      "growl"
     ],
     "14": [
       "psybeam"
     ],
-    "20": [
+    "18": [
+      "psych_up"
+    ],
+    "22": [
+      "confuse_ray"
+    ],
+    "29": [
+      "rest",
+      "power_gem"
+    ],
+    "33": [
+      "snore"
+    ],
+    "38": [
+      "psyshock"
+    ],
+    "40": [
+      "payback"
+    ],
+    "44": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "50": [
+      "bounce"
     ]
   },
   "evolution": null,

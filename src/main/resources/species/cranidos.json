@@ -18,22 +18,39 @@
   "modelId": "cranidos",
   "learnset": {
     "1": [
-      "tackle"
+      "headbutt",
+      "leer",
+      "pursuit"
     ],
-    "4": [
-      "harden"
+    "6": [
+      "focus_energy"
     ],
-    "8": [
-      "rock_throw"
+    "10": [
+      "rock_smash"
     ],
-    "14": [
-      "rock_slide"
+    "15": [
+      "take_down"
     ],
-    "20": [
-      "stone_edge"
+    "19": [
+      "scary_face"
     ],
-    "26": [
-      "swords_dance"
+    "24": [
+      "assurance"
+    ],
+    "28": [
+      "chip_away"
+    ],
+    "33": [
+      "ancient_power"
+    ],
+    "37": [
+      "zen_headbutt"
+    ],
+    "42": [
+      "screech"
+    ],
+    "46": [
+      "head_smash"
     ]
   },
   "evolution": null,

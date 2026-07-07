@@ -18,19 +18,49 @@
   "modelId": "aromatisse",
   "learnset": {
     "1": [
-      "pound"
+      "aromatic_mist",
+      "heal_pulse",
+      "sweet_scent",
+      "fairy_wind",
+      "sweet_kiss",
+      "odor_sleuth",
+      "echoed_voice"
     ],
-    "4": [
-      "sing"
+    "9": [
+      "disarming_voice"
     ],
-    "8": [
-      "fairy_wind"
+    "12": [
+      "aromatherapy"
     ],
-    "14": [
-      "dazzling_gleam"
+    "15": [
+      "draining_kiss"
     ],
-    "26": [
+    "18": [
+      "attract"
+    ],
+    "21": [
+      "flail"
+    ],
+    "24": [
+      "misty_terrain"
+    ],
+    "27": [
+      "psychic"
+    ],
+    "30": [
+      "charm"
+    ],
+    "33": [
       "calm_mind"
+    ],
+    "36": [
+      "moonblast"
+    ],
+    "39": [
+      "skill_swap"
+    ],
+    "42": [
+      "psych_up"
     ]
   },
   "evolution": null,

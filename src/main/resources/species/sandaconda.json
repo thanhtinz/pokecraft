@@ -18,22 +18,35 @@
   "modelId": "sandaconda",
   "learnset": {
     "1": [
-      "scratch"
+      "skull_bash",
+      "wrap",
+      "sand_attack",
+      "minimize",
+      "brutal_swing"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
-      "dig"
+    "15": [
+      "bulldoze"
     ],
     "20": [
-      "earthquake"
+      "headbutt"
     ],
-    "26": [
-      "harden"
+    "25": [
+      "glare"
+    ],
+    "30": [
+      "dig"
+    ],
+    "35": [
+      "sandstorm"
+    ],
+    "42": [
+      "slam"
+    ],
+    "49": [
+      "coil"
+    ],
+    "51": [
+      "sand_tomb"
     ]
   },
   "evolution": null,

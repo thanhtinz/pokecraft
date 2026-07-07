@@ -18,19 +18,54 @@
   "modelId": "sylveon",
   "learnset": {
     "1": [
-      "scratch"
+      "disarming_voice",
+      "tail_whip",
+      "tackle",
+      "helping_hand",
+      "fairy_wind",
+      "covet",
+      "bite",
+      "copycat",
+      "baton_pass",
+      "take_down",
+      "charm",
+      "double_edge",
+      "growl",
+      "trump_card",
+      "refresh"
     ],
-    "4": [
-      "sing"
+    "5": [
+      "sand_attack"
     ],
-    "8": [
-      "fairy_wind"
+    "10": [
+      "quick_attack"
     ],
-    "14": [
-      "dazzling_gleam"
+    "15": [
+      "baby_doll_eyes"
     ],
-    "26": [
-      "calm_mind"
+    "20": [
+      "swift"
+    ],
+    "25": [
+      "light_screen"
+    ],
+    "30": [
+      "draining_kiss"
+    ],
+    "35": [
+      "misty_terrain"
+    ],
+    "40": [
+      "skill_swap"
+    ],
+    "45": [
+      "psych_up"
+    ],
+    "50": [
+      "moonblast"
+    ],
+    "55": [
+      "last_resort"
     ]
   },
   "evolution": null,

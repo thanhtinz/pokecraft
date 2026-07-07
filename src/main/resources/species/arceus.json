@@ -18,31 +18,41 @@
   "modelId": "arceus",
   "learnset": {
     "1": [
-      "scratch"
+      "seismic_toss",
+      "cosmic_power",
+      "natural_gift",
+      "punishment",
+      "refresh"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "hyper_fang"
+    "10": [
+      "gravity"
     ],
     "20": [
-      "mega_punch"
+      "earth_power"
     ],
-    "32": [
-      "body_slam"
+    "30": [
+      "hyper_voice"
     ],
     "40": [
-      "double_edge"
+      "extreme_speed"
     ],
-    "48": [
+    "50": [
+      "healing_wish"
+    ],
+    "60": [
+      "future_sight"
+    ],
+    "70": [
+      "recover"
+    ],
+    "80": [
       "hyper_beam"
     ],
-    "26": [
-      "swords_dance"
+    "90": [
+      "perish_song"
+    ],
+    "100": [
+      "judgment"
     ]
   },
   "evolution": null,

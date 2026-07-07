@@ -18,25 +18,47 @@
   "modelId": "pawmi",
   "learnset": {
     "1": [
-      "tackle"
+      "scratch",
+      "growl"
     ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
+    "3": [
       "thunder_shock"
     ],
-    "14": [
+    "6": [
+      "quick_attack"
+    ],
+    "8": [
+      "charge"
+    ],
+    "12": [
+      "nuzzle"
+    ],
+    "15": [
+      "dig"
+    ],
+    "19": [
+      "bite"
+    ],
+    "23": [
       "spark"
     ],
-    "20": [
-      "thunderbolt"
+    "27": [
+      "thunder_wave"
     ],
-    "32": [
-      "thunder"
+    "31": [
+      "entrainment"
     ],
-    "26": [
+    "35": [
+      "slam"
+    ],
+    "38": [
+      "discharge"
+    ],
+    "40": [
       "agility"
+    ],
+    "44": [
+      "wild_charge"
     ]
   },
   "evolution": null,

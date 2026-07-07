@@ -19,31 +19,45 @@
   "modelId": "corsola",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "harden",
+      "bubble",
+      "refresh",
+      "lucky_chant",
+      "spike_cannon"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+    "5": [
       "water_gun"
     ],
-    "14": [
-      "rock_throw"
+    "10": [
+      "aqua_ring"
+    ],
+    "15": [
+      "endure"
     ],
     "20": [
+      "ancient_power"
+    ],
+    "25": [
       "bubble_beam"
     ],
-    "32": [
-      "rock_slide"
+    "30": [
+      "flail"
+    ],
+    "35": [
+      "life_dew"
     ],
     "40": [
-      "waterfall"
+      "power_gem"
     ],
-    "48": [
-      "stone_edge"
+    "45": [
+      "earth_power"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "recover"
+    ],
+    "55": [
+      "mirror_coat"
     ]
   },
   "evolution": null,

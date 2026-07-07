@@ -18,25 +18,56 @@
   "modelId": "cryogonal",
   "learnset": {
     "1": [
-      "tackle"
+      "bind",
+      "ice_shard",
+      "sharpen"
     ],
     "4": [
-      "leer"
+      "confuse_ray"
     ],
     "8": [
-      "ice_shard"
+      "rapid_spin"
     ],
-    "14": [
-      "aurora_beam"
+    "12": [
+      "icy_wind"
+    ],
+    "16": [
+      "mist",
+      "haze"
     ],
     "20": [
-      "ice_beam"
+      "ancient_power"
+    ],
+    "24": [
+      "aurora_beam"
+    ],
+    "28": [
+      "slash"
     ],
     "32": [
-      "blizzard"
+      "night_slash"
     ],
-    "26": [
-      "agility"
+    "36": [
+      "freeze_dry"
+    ],
+    "40": [
+      "light_screen",
+      "reflect"
+    ],
+    "44": [
+      "recover"
+    ],
+    "48": [
+      "ice_beam"
+    ],
+    "52": [
+      "acid_armor"
+    ],
+    "56": [
+      "solar_beam"
+    ],
+    "60": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

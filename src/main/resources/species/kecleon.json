@@ -18,31 +18,53 @@
   "modelId": "kecleon",
   "learnset": {
     "1": [
+      "thief",
+      "tail_whip",
+      "astonish",
+      "lick",
       "scratch"
     ],
     "4": [
-      "growl"
+      "bind"
     ],
-    "8": [
-      "quick_attack"
+    "7": [
+      "shadow_sneak"
     ],
-    "14": [
-      "hyper_fang"
+    "10": [
+      "feint"
     ],
-    "20": [
-      "mega_punch"
+    "13": [
+      "fury_swipes"
     ],
-    "32": [
-      "body_slam"
+    "16": [
+      "feint_attack"
     ],
-    "40": [
-      "double_edge"
+    "18": [
+      "psybeam"
     ],
-    "48": [
-      "hyper_beam"
+    "21": [
+      "ancient_power"
     ],
-    "26": [
-      "swords_dance"
+    "25": [
+      "slash"
+    ],
+    "30": [
+      "camouflage"
+    ],
+    "33": [
+      "shadow_claw"
+    ],
+    "38": [
+      "screech"
+    ],
+    "42": [
+      "substitute"
+    ],
+    "46": [
+      "sucker_punch"
+    ],
+    "50": [
+      "synchronoise"
     ]
   },
   "evolution": null,

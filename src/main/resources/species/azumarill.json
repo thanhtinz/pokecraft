@@ -19,31 +19,48 @@
   "modelId": "azumarill",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "defense_curl",
+      "tail_whip",
+      "water_gun",
+      "rollout",
+      "helping_hand",
+      "bubble",
+      "water_sport",
+      "splash"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "fairy_wind"
-    ],
-    "20": [
+    "6": [
       "bubble_beam"
     ],
-    "32": [
-      "dazzling_gleam"
+    "9": [
+      "charm"
+    ],
+    "12": [
+      "slam"
+    ],
+    "15": [
+      "bounce"
+    ],
+    "21": [
+      "aqua_tail"
+    ],
+    "25": [
+      "play_rough"
+    ],
+    "30": [
+      "aqua_ring"
+    ],
+    "35": [
+      "rain_dance"
     ],
     "40": [
-      "waterfall"
+      "hydro_pump"
     ],
-    "48": [
-      "surf"
+    "45": [
+      "double_edge"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "superpower"
     ]
   },
   "evolution": null,

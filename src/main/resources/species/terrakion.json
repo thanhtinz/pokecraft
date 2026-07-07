@@ -19,31 +19,40 @@
   "modelId": "terrakion",
   "learnset": {
     "1": [
-      "tackle"
+      "quick_attack",
+      "leer",
+      "helping_hand",
+      "work_up"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "karate_chop"
+    "7": [
+      "smack_down"
     ],
     "14": [
-      "rock_throw"
+      "quick_guard"
     ],
-    "20": [
-      "low_kick"
+    "21": [
+      "double_kick"
     ],
-    "32": [
+    "28": [
+      "retaliate"
+    ],
+    "35": [
       "rock_slide"
     ],
-    "40": [
-      "brick_break"
+    "42": [
+      "take_down"
     ],
-    "48": [
+    "49": [
+      "sacred_sword"
+    ],
+    "56": [
+      "swords_dance"
+    ],
+    "63": [
       "stone_edge"
     ],
-    "26": [
-      "swords_dance"
+    "70": [
+      "close_combat"
     ]
   },
   "evolution": null,

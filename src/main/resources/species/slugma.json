@@ -18,28 +18,47 @@
   "modelId": "slugma",
   "learnset": {
     "1": [
-      "pound"
+      "yawn",
+      "smog"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+    "6": [
       "ember"
     ],
-    "14": [
-      "fire_spin"
+    "8": [
+      "rock_throw"
+    ],
+    "13": [
+      "harden"
     ],
     "20": [
-      "fire_punch"
+      "clear_smog"
     ],
-    "32": [
+    "22": [
+      "ancient_power"
+    ],
+    "27": [
+      "flame_burst"
+    ],
+    "29": [
+      "rock_slide"
+    ],
+    "34": [
+      "lava_plume"
+    ],
+    "36": [
+      "amnesia"
+    ],
+    "41": [
+      "body_slam"
+    ],
+    "43": [
+      "recover"
+    ],
+    "48": [
       "flamethrower"
     ],
-    "40": [
-      "fire_blast"
-    ],
-    "26": [
-      "calm_mind"
+    "50": [
+      "earth_power"
     ]
   },
   "evolution": null,

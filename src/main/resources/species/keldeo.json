@@ -19,31 +19,41 @@
   "modelId": "keldeo",
   "learnset": {
     "1": [
-      "pound"
+      "aqua_jet",
+      "leer",
+      "helping_hand",
+      "work_up",
+      "secret_sword"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
-      "water_gun"
-    ],
-    "20": [
-      "low_kick"
-    ],
-    "32": [
+    "7": [
       "bubble_beam"
     ],
-    "40": [
-      "brick_break"
+    "14": [
+      "quick_guard"
     ],
-    "48": [
-      "waterfall"
+    "21": [
+      "double_kick"
     ],
-    "26": [
-      "calm_mind"
+    "28": [
+      "retaliate"
+    ],
+    "35": [
+      "aqua_tail"
+    ],
+    "42": [
+      "take_down"
+    ],
+    "49": [
+      "sacred_sword"
+    ],
+    "56": [
+      "swords_dance"
+    ],
+    "63": [
+      "hydro_pump"
+    ],
+    "70": [
+      "close_combat"
     ]
   },
   "evolution": null,

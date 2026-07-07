@@ -19,31 +19,45 @@
   "modelId": "pangoro",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "leer",
+      "arm_thrust",
+      "karate_chop",
+      "comet_punch",
+      "sky_uppercut",
+      "taunt",
+      "bullet_punch",
+      "night_slash"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "circle_throw"
     ],
-    "8": [
-      "bite"
-    ],
-    "14": [
-      "karate_chop"
+    "16": [
+      "low_sweep"
     ],
     "20": [
+      "work_up"
+    ],
+    "24": [
+      "slash"
+    ],
+    "28": [
+      "vital_throw"
+    ],
+    "35": [
       "crunch"
     ],
-    "32": [
-      "low_kick"
-    ],
     "40": [
-      "brick_break"
+      "body_slam"
     ],
-    "48": [
-      "cross_chop"
+    "46": [
+      "parting_shot"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "entrainment"
+    ],
+    "58": [
+      "hammer_arm"
     ]
   },
   "evolution": null,

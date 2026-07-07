@@ -18,31 +18,43 @@
   "modelId": "furret",
   "learnset": {
     "1": [
-      "tackle"
+      "scratch",
+      "foresight",
+      "defense_curl",
+      "quick_attack",
+      "me_first",
+      "agility",
+      "coil"
     ],
-    "4": [
-      "growl"
+    "13": [
+      "fury_swipes"
     ],
-    "8": [
-      "quick_attack"
+    "17": [
+      "helping_hand"
     ],
-    "14": [
-      "hyper_fang"
+    "21": [
+      "follow_me"
     ],
-    "20": [
-      "mega_punch"
+    "28": [
+      "slam"
     ],
     "32": [
-      "body_slam"
+      "rest"
     ],
-    "40": [
+    "36": [
+      "sucker_punch"
+    ],
+    "42": [
+      "amnesia"
+    ],
+    "46": [
+      "baton_pass"
+    ],
+    "50": [
       "double_edge"
     ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "agility"
+    "56": [
+      "hyper_voice"
     ]
   },
   "evolution": null,

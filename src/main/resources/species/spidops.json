@@ -18,19 +18,45 @@
   "modelId": "spidops",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "silk_trap",
+      "tackle",
       "string_shot"
     ],
+    "5": [
+      "struggle_bug"
+    ],
     "8": [
-      "bug_bite"
+      "assurance"
+    ],
+    "11": [
+      "feint"
     ],
     "14": [
-      "pin_missile"
+      "bug_bite"
     ],
-    "26": [
-      "harden"
+    "19": [
+      "block"
+    ],
+    "24": [
+      "counter"
+    ],
+    "28": [
+      "headbutt"
+    ],
+    "33": [
+      "sticky_web"
+    ],
+    "37": [
+      "gastro_acid"
+    ],
+    "41": [
+      "circle_throw"
+    ],
+    "45": [
+      "throat_chop"
+    ],
+    "49": [
+      "skitter_smack"
     ]
   },
   "evolution": null,

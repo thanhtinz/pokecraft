@@ -19,31 +19,47 @@
   "modelId": "turtonator",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "smog"
     ],
     "4": [
-      "leer"
-    ],
-    "8": [
       "ember"
     ],
-    "14": [
-      "twister"
+    "8": [
+      "protect"
+    ],
+    "12": [
+      "endure"
+    ],
+    "16": [
+      "flail"
     ],
     "20": [
-      "fire_spin"
+      "incinerate"
+    ],
+    "24": [
+      "iron_defense"
+    ],
+    "28": [
+      "dragon_pulse"
     ],
     "32": [
-      "dragon_breath"
+      "body_slam"
+    ],
+    "36": [
+      "flamethrower"
     ],
     "40": [
-      "fire_punch"
+      "shell_trap"
+    ],
+    "44": [
+      "shell_smash"
     ],
     "48": [
-      "dragon_claw"
+      "overheat"
     ],
-    "26": [
-      "harden"
+    "52": [
+      "explosion"
     ]
   },
   "evolution": null,

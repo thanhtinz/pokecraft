@@ -18,31 +18,46 @@
   "modelId": "maushold",
   "learnset": {
     "1": [
-      "scratch"
+      "pound",
+      "follow_me",
+      "baby_doll_eyes",
+      "tidy_up"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "echoed_voice"
     ],
     "8": [
-      "quick_attack"
+      "helping_hand"
+    ],
+    "11": [
+      "super_fang"
     ],
     "14": [
-      "hyper_fang"
+      "double_hit"
     ],
-    "20": [
-      "mega_punch"
+    "18": [
+      "bullet_seed"
     ],
-    "32": [
-      "body_slam"
+    "22": [
+      "encore"
     ],
-    "40": [
-      "double_edge"
+    "29": [
+      "play_rough"
     ],
-    "48": [
-      "hyper_beam"
+    "33": [
+      "hyper_voice"
     ],
-    "26": [
-      "agility"
+    "37": [
+      "charm"
+    ],
+    "41": [
+      "beat_up"
+    ],
+    "46": [
+      "copycat"
+    ],
+    "53": [
+      "population_bomb"
     ]
   },
   "evolution": null,

@@ -21,29 +21,40 @@
     "1": [
       "tackle"
     ],
-    "4": [
-      "string_shot"
+    "5": [
+      "supersonic"
     ],
     "8": [
-      "peck"
+      "swift"
     ],
-    "14": [
-      "bug_bite"
+    "12": [
+      "light_screen",
+      "reflect",
+      "safeguard"
     ],
-    "20": [
-      "gust"
+    "15": [
+      "mach_punch"
     ],
-    "32": [
-      "pin_missile"
+    "19": [
+      "roost"
     ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "drill_peck"
+    "22": [
+      "comet_punch"
     ],
     "26": [
+      "baton_pass"
+    ],
+    "29": [
       "agility"
+    ],
+    "33": [
+      "bug_buzz"
+    ],
+    "36": [
+      "air_slash"
+    ],
+    "40": [
+      "double_edge"
     ]
   },
   "evolution": null,

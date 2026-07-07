@@ -18,22 +18,46 @@
   "modelId": "reuniclus",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
+      "psywave",
+      "snatch",
+      "recover",
+      "endeavor",
+      "dizzy_punch",
+      "heal_block",
+      "protect",
+      "hammer_arm",
       "confusion"
     ],
-    "14": [
+    "12": [
       "psybeam"
     ],
+    "16": [
+      "charm"
+    ],
     "20": [
+      "psyshock"
+    ],
+    "24": [
+      "reflect",
+      "light_screen"
+    ],
+    "28": [
+      "ally_switch"
+    ],
+    "35": [
+      "pain_split"
+    ],
+    "40": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "48": [
+      "skill_swap"
+    ],
+    "56": [
+      "future_sight"
+    ],
+    "64": [
+      "wonder_room"
     ]
   },
   "evolution": null,

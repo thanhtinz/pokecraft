@@ -19,31 +19,27 @@
   "modelId": "roserade",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "vine_whip"
-    ],
-    "20": [
-      "acid"
-    ],
-    "32": [
-      "razor_leaf"
-    ],
-    "40": [
-      "sludge"
-    ],
-    "48": [
-      "seed_bomb"
-    ],
-    "26": [
-      "calm_mind"
+      "poison_sting",
+      "mega_drain",
+      "magical_leaf",
+      "sweet_scent",
+      "giga_drain",
+      "synthesis",
+      "worry_seed",
+      "venom_drench",
+      "grassy_terrain",
+      "leech_seed",
+      "toxic_spikes",
+      "toxic",
+      "petal_blizzard",
+      "aromatherapy",
+      "ingrain",
+      "petal_dance",
+      "absorb",
+      "growth",
+      "stun_spore",
+      "grass_whistle",
+      "water_sport"
     ]
   },
   "evolution": null,

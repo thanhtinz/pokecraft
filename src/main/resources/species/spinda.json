@@ -20,29 +20,38 @@
     "1": [
       "tackle"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "copycat"
     ],
-    "8": [
-      "quick_attack"
+    "10": [
+      "feint_attack"
     ],
     "14": [
-      "hyper_fang"
+      "psybeam"
     ],
-    "20": [
-      "mega_punch"
+    "19": [
+      "hypnosis"
     ],
-    "32": [
-      "body_slam"
+    "23": [
+      "dizzy_punch"
     ],
-    "40": [
+    "28": [
+      "sucker_punch"
+    ],
+    "37": [
+      "uproar"
+    ],
+    "41": [
+      "psych_up"
+    ],
+    "46": [
       "double_edge"
     ],
-    "48": [
-      "hyper_beam"
+    "50": [
+      "flail"
     ],
-    "26": [
-      "swords_dance"
+    "55": [
+      "thrash"
     ]
   },
   "evolution": null,

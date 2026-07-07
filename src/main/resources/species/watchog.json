@@ -18,31 +18,54 @@
   "modelId": "watchog",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "growl"
+      "tackle",
+      "leer",
+      "bite",
+      "low_kick",
+      "confuse_ray",
+      "rototiller"
     ],
     "8": [
-      "quick_attack"
+      "bide"
     ],
-    "14": [
-      "hyper_fang"
+    "11": [
+      "detect"
     ],
-    "20": [
-      "mega_punch"
+    "13": [
+      "sand_attack"
+    ],
+    "16": [
+      "crunch"
+    ],
+    "18": [
+      "hypnosis"
+    ],
+    "22": [
+      "super_fang"
+    ],
+    "25": [
+      "after_you"
+    ],
+    "29": [
+      "focus_energy"
     ],
     "32": [
-      "body_slam"
+      "psych_up"
     ],
-    "40": [
-      "double_edge"
+    "36": [
+      "hyper_fang"
     ],
-    "48": [
-      "hyper_beam"
+    "39": [
+      "nasty_plot"
     ],
-    "26": [
-      "swords_dance"
+    "43": [
+      "mean_look"
+    ],
+    "46": [
+      "baton_pass"
+    ],
+    "50": [
+      "slam"
     ]
   },
   "evolution": null,

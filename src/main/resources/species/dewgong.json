@@ -19,31 +19,51 @@
   "modelId": "dewgong",
   "learnset": {
     "1": [
-      "tackle"
+      "headbutt",
+      "growl",
+      "signal_beam",
+      "icy_wind",
+      "sheer_cold",
+      "water_sport"
     ],
-    "4": [
-      "tail_whip"
+    "13": [
+      "encore"
     ],
-    "8": [
+    "17": [
       "ice_shard"
     ],
-    "14": [
-      "water_gun"
+    "21": [
+      "rest"
     ],
-    "20": [
+    "23": [
+      "aqua_ring"
+    ],
+    "27": [
       "aurora_beam"
     ],
-    "32": [
-      "bubble_beam"
+    "31": [
+      "aqua_jet"
     ],
-    "40": [
+    "33": [
+      "brine"
+    ],
+    "39": [
+      "take_down"
+    ],
+    "45": [
+      "dive"
+    ],
+    "49": [
+      "aqua_tail"
+    ],
+    "55": [
       "ice_beam"
     ],
-    "48": [
-      "waterfall"
+    "61": [
+      "safeguard"
     ],
-    "26": [
-      "harden"
+    "65": [
+      "snowscape"
     ]
   },
   "evolution": null,

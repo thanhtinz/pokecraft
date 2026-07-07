@@ -20,29 +20,29 @@
     "1": [
       "tackle"
     ],
-    "4": [
-      "growl"
+    "10": [
+      "water_gun",
+      "ember",
+      "powder_snow"
     ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "hyper_fang"
+    "15": [
+      "headbutt"
     ],
     "20": [
-      "mega_punch"
+      "rain_dance",
+      "sunny_day",
+      "hail"
     ],
-    "32": [
-      "body_slam"
+    "25": [
+      "weather_ball"
     ],
-    "40": [
-      "double_edge"
+    "35": [
+      "blizzard",
+      "fire_blast",
+      "hydro_pump"
     ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "swords_dance"
+    "45": [
+      "hurricane"
     ]
   },
   "evolution": null,

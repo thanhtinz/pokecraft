@@ -19,31 +19,38 @@
   "modelId": "tatsugiri",
   "learnset": {
     "1": [
-      "tackle"
+      "water_gun",
+      "splash"
     ],
-    "4": [
-      "leer"
+    "6": [
+      "harden"
     ],
-    "8": [
-      "twister"
+    "12": [
+      "helping_hand"
     ],
-    "14": [
-      "water_gun"
+    "17": [
+      "water_pulse"
     ],
-    "20": [
-      "dragon_breath"
+    "23": [
+      "soak"
     ],
-    "32": [
-      "bubble_beam"
+    "28": [
+      "taunt"
     ],
-    "40": [
-      "dragon_claw"
+    "34": [
+      "memento"
     ],
-    "48": [
-      "waterfall"
+    "39": [
+      "muddy_water"
     ],
-    "26": [
-      "calm_mind"
+    "43": [
+      "nasty_plot"
+    ],
+    "47": [
+      "mirror_coat"
+    ],
+    "52": [
+      "dragon_pulse"
     ]
   },
   "evolution": null,

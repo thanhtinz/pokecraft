@@ -19,31 +19,47 @@
   "modelId": "frillish",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "bubble",
+      "water_sport",
+      "absorb",
+      "bubble_beam",
       "water_gun"
     ],
-    "14": [
-      "lick"
+    "4": [
+      "poison_sting"
     ],
-    "20": [
-      "bubble_beam"
-    ],
-    "32": [
+    "8": [
       "night_shade"
     ],
-    "40": [
-      "waterfall"
+    "12": [
+      "water_pulse"
     ],
-    "48": [
+    "16": [
+      "rain_dance"
+    ],
+    "20": [
+      "hex"
+    ],
+    "24": [
+      "brine"
+    ],
+    "28": [
+      "recover"
+    ],
+    "32": [
       "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "36": [
+      "whirlpool"
+    ],
+    "41": [
+      "hydro_pump"
+    ],
+    "44": [
+      "destiny_bond"
+    ],
+    "48": [
+      "water_spout"
     ]
   },
   "evolution": null,

@@ -18,25 +18,43 @@
   "modelId": "druddigon",
   "learnset": {
     "1": [
-      "tackle"
+      "leer",
+      "scratch",
+      "dragon_rage",
+      "chip_away"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "bite"
     ],
-    "8": [
-      "twister"
+    "10": [
+      "dragon_tail"
     ],
-    "14": [
-      "dragon_breath"
+    "15": [
+      "metal_claw"
     ],
     "20": [
+      "scary_face"
+    ],
+    "25": [
+      "slash"
+    ],
+    "30": [
       "dragon_claw"
     ],
-    "32": [
+    "35": [
+      "hone_claws"
+    ],
+    "40": [
+      "night_slash"
+    ],
+    "45": [
+      "iron_head"
+    ],
+    "50": [
       "outrage"
     ],
-    "26": [
-      "swords_dance"
+    "55": [
+      "superpower"
     ]
   },
   "evolution": null,

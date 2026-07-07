@@ -19,31 +19,40 @@
   "modelId": "wooper",
   "learnset": {
     "1": [
-      "pound"
+      "water_gun",
+      "tail_whip",
+      "mud_sport"
     ],
     "4": [
-      "tail_whip"
+      "rain_dance"
     ],
     "8": [
-      "water_gun"
+      "mud_shot"
     ],
-    "14": [
-      "sand_tomb"
+    "12": [
+      "mist",
+      "haze"
     ],
-    "20": [
-      "bubble_beam"
+    "16": [
+      "slam"
+    ],
+    "21": [
+      "yawn"
+    ],
+    "24": [
+      "aqua_tail"
+    ],
+    "28": [
+      "muddy_water"
     ],
     "32": [
-      "dig"
+      "amnesia"
+    ],
+    "36": [
+      "toxic"
     ],
     "40": [
-      "waterfall"
-    ],
-    "48": [
       "earthquake"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

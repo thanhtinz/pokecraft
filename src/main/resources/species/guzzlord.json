@@ -19,31 +19,54 @@
   "modelId": "guzzlord",
   "learnset": {
     "1": [
-      "scratch"
+      "dragon_rage",
+      "bite",
+      "steamroller",
+      "dragon_tail",
+      "wring_out"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "swallow",
+      "stockpile"
     ],
-    "8": [
-      "twister"
+    "10": [
+      "knock_off"
     ],
-    "14": [
-      "bite"
+    "15": [
+      "stomp"
     ],
     "20": [
-      "dragon_breath"
+      "stomping_tantrum"
     ],
-    "32": [
+    "25": [
+      "wide_guard"
+    ],
+    "30": [
       "crunch"
     ],
+    "35": [
+      "body_slam"
+    ],
     "40": [
-      "dragon_claw"
+      "gastro_acid"
     ],
-    "48": [
-      "outrage"
+    "45": [
+      "hammer_arm"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "heavy_slam"
+    ],
+    "55": [
+      "dragon_rush"
+    ],
+    "60": [
+      "belch"
+    ],
+    "65": [
+      "thrash"
+    ],
+    "70": [
+      "giga_impact"
     ]
   },
   "evolution": null,

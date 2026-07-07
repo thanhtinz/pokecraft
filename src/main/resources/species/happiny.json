@@ -18,31 +18,25 @@
   "modelId": "happiny",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "copycat",
+      "refresh",
+      "minimize"
     ],
     "4": [
-      "growl"
+      "defense_curl"
     ],
     "8": [
-      "quick_attack"
+      "sweet_kiss"
     ],
-    "14": [
-      "hyper_fang"
+    "12": [
+      "disarming_voice"
+    ],
+    "16": [
+      "covet"
     ],
     "20": [
-      "mega_punch"
-    ],
-    "32": [
-      "body_slam"
-    ],
-    "40": [
-      "double_edge"
-    ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "agility"
+      "charm"
     ]
   },
   "evolution": null,

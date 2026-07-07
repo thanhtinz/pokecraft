@@ -18,22 +18,44 @@
   "modelId": "rockruff",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "leer"
     ],
     "4": [
-      "harden"
+      "sand_attack"
     ],
     "8": [
+      "double_team"
+    ],
+    "12": [
       "rock_throw"
     ],
-    "14": [
-      "rock_slide"
+    "16": [
+      "howl"
     ],
     "20": [
-      "stone_edge"
+      "bite"
     ],
-    "26": [
-      "swords_dance"
+    "24": [
+      "rock_tomb"
+    ],
+    "28": [
+      "roar"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "36": [
+      "crunch"
+    ],
+    "40": [
+      "scary_face"
+    ],
+    "44": [
+      "stealth_rock"
+    ],
+    "48": [
+      "stone_edge"
     ]
   },
   "evolution": null,

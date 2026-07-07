@@ -19,25 +19,47 @@
   "modelId": "pawniard",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "scratch",
       "leer"
     ],
-    "8": [
-      "bite"
+    "5": [
+      "fury_cutter"
     ],
-    "14": [
-      "steel_wing"
+    "10": [
+      "metal_claw"
+    ],
+    "15": [
+      "torment"
     ],
     "20": [
-      "crunch"
+      "scary_face"
     ],
-    "32": [
+    "25": [
+      "assurance"
+    ],
+    "30": [
+      "metal_sound"
+    ],
+    "35": [
+      "slash"
+    ],
+    "40": [
+      "night_slash"
+    ],
+    "45": [
+      "iron_defense"
+    ],
+    "50": [
+      "retaliate"
+    ],
+    "55": [
       "iron_head"
     ],
-    "26": [
+    "60": [
       "swords_dance"
+    ],
+    "65": [
+      "guillotine"
     ]
   },
   "evolution": null,

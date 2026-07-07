@@ -19,31 +19,49 @@
   "modelId": "jigglypuff",
   "learnset": {
     "1": [
-      "tackle"
+      "sing",
+      "defense_curl",
+      "pound",
+      "disable",
+      "double_slap",
+      "wake_up_slap",
+      "play_nice",
+      "disarming_voice",
+      "sweet_kiss",
+      "charm",
+      "copycat"
     ],
     "4": [
-      "growl"
+      "echoed_voice"
     ],
     "8": [
-      "fairy_wind"
+      "covet"
     ],
-    "14": [
-      "quick_attack"
+    "12": [
+      "stockpile",
+      "swallow",
+      "spit_up"
+    ],
+    "16": [
+      "round"
     ],
     "20": [
-      "dazzling_gleam"
+      "rest"
     ],
-    "32": [
-      "hyper_fang"
-    ],
-    "40": [
-      "mega_punch"
-    ],
-    "48": [
+    "24": [
       "body_slam"
     ],
-    "26": [
-      "swords_dance"
+    "28": [
+      "mimic"
+    ],
+    "32": [
+      "gyro_ball"
+    ],
+    "36": [
+      "hyper_voice"
+    ],
+    "44": [
+      "double_edge"
     ]
   },
   "evolution": null,

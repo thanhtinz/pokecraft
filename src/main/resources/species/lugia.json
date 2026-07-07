@@ -19,31 +19,43 @@
   "modelId": "lugia",
   "learnset": {
     "1": [
-      "tackle"
+      "whirlwind",
+      "weather_ball",
+      "gust",
+      "dragon_rush",
+      "punishment",
+      "ancient_power",
+      "natural_gift"
     ],
-    "4": [
-      "hypnosis"
+    "9": [
+      "mist"
     ],
-    "8": [
-      "peck"
+    "18": [
+      "safeguard"
     ],
-    "14": [
-      "confusion"
+    "27": [
+      "calm_mind"
     ],
-    "20": [
-      "gust"
+    "36": [
+      "extrasensory"
     ],
-    "32": [
-      "psybeam"
+    "45": [
+      "recover"
     ],
-    "40": [
-      "wing_attack"
+    "54": [
+      "aeroblast"
     ],
-    "48": [
-      "psychic"
+    "63": [
+      "rain_dance"
     ],
-    "26": [
-      "harden"
+    "72": [
+      "hydro_pump"
+    ],
+    "81": [
+      "future_sight"
+    ],
+    "90": [
+      "sky_attack"
     ]
   },
   "evolution": null,

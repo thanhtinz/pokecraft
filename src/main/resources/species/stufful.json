@@ -19,31 +19,45 @@
   "modelId": "stufful",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "leer",
+      "bide"
     ],
     "4": [
-      "growl"
+      "baby_doll_eyes"
     ],
     "8": [
-      "karate_chop"
+      "payback"
     ],
-    "14": [
-      "quick_attack"
+    "12": [
+      "brutal_swing"
+    ],
+    "16": [
+      "endure"
     ],
     "20": [
-      "low_kick"
+      "strength"
+    ],
+    "24": [
+      "take_down"
+    ],
+    "28": [
+      "flail"
     ],
     "32": [
-      "hyper_fang"
+      "hammer_arm"
+    ],
+    "36": [
+      "thrash"
     ],
     "40": [
-      "brick_break"
+      "pain_split"
+    ],
+    "44": [
+      "double_edge"
     ],
     "48": [
-      "mega_punch"
-    ],
-    "26": [
-      "swords_dance"
+      "superpower"
     ]
   },
   "evolution": null,

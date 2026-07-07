@@ -18,22 +18,45 @@
   "modelId": "donphan",
   "learnset": {
     "1": [
-      "scratch"
+      "fire_fang",
+      "thunder_fang",
+      "horn_attack",
+      "growl",
+      "defense_curl",
+      "flail",
+      "magnitude",
+      "fury_attack",
+      "bulldoze",
+      "tackle",
+      "odor_sleuth",
+      "natural_gift"
     ],
-    "4": [
-      "leer"
+    "6": [
+      "rapid_spin"
     ],
-    "8": [
-      "sand_tomb"
+    "10": [
+      "rollout"
     ],
-    "14": [
-      "dig"
+    "15": [
+      "assurance"
     ],
-    "20": [
+    "19": [
+      "knock_off"
+    ],
+    "24": [
+      "slam"
+    ],
+    "30": [
+      "stomping_tantrum"
+    ],
+    "37": [
+      "scary_face"
+    ],
+    "43": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "giga_impact"
     ]
   },
   "evolution": null,

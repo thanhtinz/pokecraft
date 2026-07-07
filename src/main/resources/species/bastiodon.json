@@ -19,28 +19,36 @@
   "modelId": "bastiodon",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "protect",
+      "taunt",
+      "metal_sound",
+      "block",
+      "wide_guard"
     ],
-    "4": [
-      "harden"
+    "15": [
+      "take_down"
     ],
-    "8": [
-      "steel_wing"
+    "19": [
+      "iron_defense"
     ],
-    "14": [
-      "rock_throw"
+    "24": [
+      "swagger"
     ],
-    "20": [
+    "28": [
+      "ancient_power"
+    ],
+    "36": [
+      "endure"
+    ],
+    "43": [
+      "metal_burst"
+    ],
+    "51": [
       "iron_head"
     ],
-    "32": [
-      "rock_slide"
-    ],
-    "40": [
-      "stone_edge"
-    ],
-    "26": [
-      "harden"
+    "58": [
+      "heavy_slam"
     ]
   },
   "evolution": null,

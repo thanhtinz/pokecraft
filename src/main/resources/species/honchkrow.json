@@ -19,31 +19,31 @@
   "modelId": "honchkrow",
   "learnset": {
     "1": [
-      "scratch"
+      "astonish",
+      "pursuit",
+      "haze",
+      "wing_attack",
+      "night_slash",
+      "sucker_punch",
+      "quash",
+      "gust",
+      "peck",
+      "feint_attack"
     ],
-    "4": [
-      "leer"
+    "25": [
+      "swagger"
     ],
-    "8": [
-      "bite"
+    "35": [
+      "nasty_plot"
     ],
-    "14": [
-      "peck"
+    "45": [
+      "foul_play"
     ],
-    "20": [
-      "crunch"
+    "55": [
+      "dark_pulse"
     ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "drill_peck"
-    ],
-    "26": [
-      "swords_dance"
+    "65": [
+      "comeuppance"
     ]
   },
   "evolution": null,

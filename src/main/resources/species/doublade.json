@@ -19,28 +19,41 @@
   "modelId": "doublade",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "fury_cutter",
+      "pursuit",
+      "autotomize",
+      "shadow_sneak"
     ],
-    "4": [
-      "harden"
+    "12": [
+      "aerial_ace"
     ],
-    "8": [
-      "steel_wing"
-    ],
-    "14": [
-      "lick"
+    "16": [
+      "metal_sound"
     ],
     "20": [
-      "iron_head"
+      "slash"
+    ],
+    "24": [
+      "night_slash"
+    ],
+    "28": [
+      "retaliate"
     ],
     "32": [
-      "night_shade"
+      "iron_defense"
     ],
-    "40": [
-      "shadow_ball"
+    "38": [
+      "iron_head"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "power_trick"
+    ],
+    "50": [
+      "swords_dance"
+    ],
+    "56": [
+      "sacred_sword"
     ]
   },
   "evolution": null,

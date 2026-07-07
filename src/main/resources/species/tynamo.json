@@ -18,25 +18,10 @@
   "modelId": "tynamo",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
-      "spark"
-    ],
-    "20": [
-      "thunderbolt"
-    ],
-    "32": [
-      "thunder"
-    ],
-    "26": [
-      "agility"
+      "tackle",
+      "thunder_wave",
+      "spark",
+      "charge_beam"
     ]
   },
   "evolution": null,

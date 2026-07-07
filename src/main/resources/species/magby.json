@@ -18,28 +18,45 @@
   "modelId": "magby",
   "learnset": {
     "1": [
-      "tackle"
+      "smog",
+      "leer",
+      "feint_attack"
     ],
     "4": [
-      "leer"
-    ],
-    "8": [
       "ember"
     ],
-    "14": [
-      "fire_spin"
+    "8": [
+      "smokescreen"
+    ],
+    "12": [
+      "clear_smog"
+    ],
+    "16": [
+      "flame_wheel"
     ],
     "20": [
+      "confuse_ray"
+    ],
+    "24": [
+      "scary_face"
+    ],
+    "28": [
       "fire_punch"
     ],
     "32": [
-      "flamethrower"
+      "lava_plume"
+    ],
+    "36": [
+      "low_kick"
     ],
     "40": [
-      "fire_blast"
+      "flamethrower"
     ],
-    "26": [
-      "agility"
+    "44": [
+      "sunny_day"
+    ],
+    "48": [
+      "fire_blast"
     ]
   },
   "evolution": null,

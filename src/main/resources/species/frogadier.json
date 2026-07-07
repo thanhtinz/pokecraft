@@ -18,28 +18,43 @@
   "modelId": "frogadier",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "pound",
+      "growl",
+      "bubble",
       "water_gun"
     ],
+    "8": [
+      "quick_attack"
+    ],
+    "10": [
+      "lick"
+    ],
     "14": [
-      "bubble_beam"
+      "water_pulse"
     ],
-    "20": [
-      "waterfall"
+    "19": [
+      "smokescreen"
     ],
-    "32": [
-      "surf"
+    "23": [
+      "round"
+    ],
+    "28": [
+      "fling"
+    ],
+    "33": [
+      "smack_down"
     ],
     "40": [
-      "hydro_pump"
+      "substitute"
     ],
-    "26": [
-      "agility"
+    "45": [
+      "bounce"
+    ],
+    "50": [
+      "double_team"
+    ],
+    "56": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

@@ -19,31 +19,39 @@
   "modelId": "gible",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+      "tackle",
+      "dragon_rage",
       "sand_tomb"
     ],
-    "14": [
-      "twister"
+    "6": [
+      "sand_attack"
     ],
-    "20": [
-      "dig"
-    ],
-    "32": [
+    "12": [
       "dragon_breath"
     ],
-    "40": [
-      "earthquake"
+    "18": [
+      "bulldoze"
     ],
-    "48": [
+    "25": [
+      "bite"
+    ],
+    "30": [
+      "slash"
+    ],
+    "36": [
       "dragon_claw"
     ],
-    "26": [
-      "swords_dance"
+    "42": [
+      "dig"
+    ],
+    "48": [
+      "sandstorm"
+    ],
+    "54": [
+      "take_down"
+    ],
+    "60": [
+      "dragon_rush"
     ]
   },
   "evolution": null,

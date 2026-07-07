@@ -19,31 +19,40 @@
   "modelId": "celebi",
   "learnset": {
     "1": [
-      "pound"
+      "confusion",
+      "heal_bell",
+      "heal_block",
+      "natural_gift"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
-      "confusion"
+    "10": [
+      "magical_leaf"
     ],
     "20": [
-      "razor_leaf"
+      "baton_pass"
     ],
-    "32": [
-      "psybeam"
+    "30": [
+      "ancient_power"
     ],
     "40": [
-      "seed_bomb"
+      "life_dew"
     ],
-    "48": [
-      "psychic"
+    "50": [
+      "leech_seed"
     ],
-    "26": [
-      "swords_dance"
+    "60": [
+      "recover"
+    ],
+    "70": [
+      "future_sight"
+    ],
+    "80": [
+      "healing_wish"
+    ],
+    "90": [
+      "leaf_storm"
+    ],
+    "100": [
+      "perish_song"
     ]
   },
   "evolution": null,

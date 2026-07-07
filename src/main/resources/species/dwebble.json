@@ -19,28 +19,45 @@
   "modelId": "dwebble",
   "learnset": {
     "1": [
-      "pound"
+      "fury_cutter",
+      "sand_attack",
+      "feint_attack"
     ],
     "4": [
-      "string_shot"
+      "withdraw"
     ],
     "8": [
-      "rock_throw"
+      "smack_down"
     ],
-    "14": [
+    "12": [
       "bug_bite"
     ],
+    "16": [
+      "flail"
+    ],
     "20": [
+      "slash"
+    ],
+    "24": [
       "rock_slide"
     ],
+    "28": [
+      "stealth_rock"
+    ],
     "32": [
-      "pin_missile"
+      "rock_blast"
+    ],
+    "36": [
+      "x_scissor"
     ],
     "40": [
-      "stone_edge"
+      "rock_polish"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "shell_smash"
+    ],
+    "48": [
+      "rock_wrecker"
     ]
   },
   "evolution": null,

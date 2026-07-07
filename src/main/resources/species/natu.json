@@ -19,31 +19,37 @@
   "modelId": "natu",
   "learnset": {
     "1": [
-      "tackle"
+      "peck",
+      "leer",
+      "lucky_chant"
     ],
-    "4": [
-      "hypnosis"
+    "5": [
+      "stored_power"
     ],
-    "8": [
-      "peck"
+    "10": [
+      "teleport"
     ],
-    "14": [
-      "confusion"
+    "15": [
+      "confuse_ray"
     ],
     "20": [
-      "gust"
-    ],
-    "32": [
-      "psybeam"
-    ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "psychic"
+      "night_shade"
     ],
     "26": [
-      "calm_mind"
+      "psycho_shift"
+    ],
+    "30": [
+      "power_swap"
+    ],
+    "35": [
+      "guard_swap",
+      "psychic"
+    ],
+    "40": [
+      "wish"
+    ],
+    "45": [
+      "future_sight"
     ]
   },
   "evolution": null,

@@ -19,31 +19,50 @@
   "modelId": "archeops",
   "learnset": {
     "1": [
-      "tackle"
+      "quick_attack",
+      "leer",
+      "wing_attack",
+      "rock_throw",
+      "double_team"
     ],
-    "4": [
-      "harden"
+    "9": [
+      "dragon_breath"
     ],
-    "8": [
-      "peck"
+    "12": [
+      "ancient_power"
     ],
-    "14": [
-      "rock_throw"
+    "15": [
+      "pluck"
     ],
-    "20": [
-      "gust"
+    "18": [
+      "quick_guard"
     ],
-    "32": [
+    "21": [
+      "u_turn"
+    ],
+    "24": [
       "rock_slide"
     ],
-    "40": [
-      "wing_attack"
+    "27": [
+      "scary_face"
     ],
-    "48": [
-      "stone_edge"
+    "30": [
+      "crunch"
     ],
-    "26": [
-      "swords_dance"
+    "33": [
+      "agility"
+    ],
+    "36": [
+      "tailwind"
+    ],
+    "41": [
+      "dragon_claw"
+    ],
+    "46": [
+      "thrash"
+    ],
+    "51": [
+      "endeavor"
     ]
   },
   "evolution": null,

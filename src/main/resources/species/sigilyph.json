@@ -19,31 +19,49 @@
   "modelId": "sigilyph",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
+      "gust",
+      "miracle_eye",
+      "psywave",
+      "synchronoise",
+      "mirror_move",
       "confusion"
     ],
-    "20": [
-      "gust"
+    "5": [
+      "gravity"
     ],
-    "32": [
+    "10": [
+      "hypnosis"
+    ],
+    "15": [
+      "air_cutter"
+    ],
+    "20": [
       "psybeam"
     ],
-    "40": [
-      "wing_attack"
+    "25": [
+      "whirlwind"
     ],
-    "48": [
+    "30": [
+      "cosmic_power"
+    ],
+    "35": [
+      "air_slash"
+    ],
+    "40": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "45": [
+      "tailwind"
+    ],
+    "50": [
+      "light_screen",
+      "reflect"
+    ],
+    "55": [
+      "sky_attack"
+    ],
+    "60": [
+      "skill_swap"
     ]
   },
   "evolution": null,

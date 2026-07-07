@@ -18,28 +18,51 @@
   "modelId": "growlithe",
   "learnset": {
     "1": [
-      "scratch"
+      "ember",
+      "leer",
+      "odor_sleuth"
     ],
     "4": [
-      "leer"
+      "howl"
     ],
     "8": [
-      "ember"
+      "bite"
     ],
-    "14": [
-      "fire_spin"
+    "12": [
+      "flame_wheel"
+    ],
+    "16": [
+      "helping_hand"
     ],
     "20": [
-      "fire_punch"
+      "agility"
+    ],
+    "24": [
+      "fire_fang"
+    ],
+    "28": [
+      "flame_burst"
     ],
     "32": [
-      "flamethrower"
+      "crunch"
+    ],
+    "36": [
+      "take_down"
     ],
     "40": [
-      "fire_blast"
+      "flamethrower"
     ],
-    "26": [
-      "swords_dance"
+    "44": [
+      "roar"
+    ],
+    "48": [
+      "play_rough"
+    ],
+    "52": [
+      "reversal"
+    ],
+    "56": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

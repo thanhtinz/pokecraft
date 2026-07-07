@@ -19,31 +19,43 @@
   "modelId": "pelipper",
   "learnset": {
     "1": [
-      "tackle"
+      "growl",
+      "water_gun",
+      "water_sport",
+      "supersonic",
+      "protect",
+      "tailwind",
+      "soak",
+      "quick_attack",
+      "agility",
+      "air_slash",
+      "pursuit"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "water_gun"
-    ],
-    "20": [
-      "gust"
-    ],
-    "32": [
-      "bubble_beam"
-    ],
-    "40": [
+    "15": [
       "wing_attack"
     ],
-    "48": [
-      "waterfall"
+    "20": [
+      "water_pulse"
     ],
-    "26": [
-      "harden"
+    "28": [
+      "stockpile",
+      "swallow",
+      "spit_up"
+    ],
+    "34": [
+      "fling"
+    ],
+    "41": [
+      "mist"
+    ],
+    "48": [
+      "roost"
+    ],
+    "55": [
+      "hurricane"
+    ],
+    "62": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

@@ -19,28 +19,51 @@
   "modelId": "stakataka",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
+      "tackle",
+      "bide",
       "harden"
     ],
-    "8": [
-      "steel_wing"
-    ],
-    "14": [
+    "5": [
       "rock_throw"
     ],
-    "20": [
-      "iron_head"
+    "10": [
+      "protect"
     ],
-    "32": [
+    "15": [
+      "stomp"
+    ],
+    "20": [
+      "block"
+    ],
+    "25": [
       "rock_slide"
     ],
-    "40": [
-      "stone_edge"
+    "30": [
+      "wide_guard"
     ],
-    "26": [
-      "harden"
+    "35": [
+      "autotomize"
+    ],
+    "40": [
+      "rock_blast"
+    ],
+    "45": [
+      "magnet_rise"
+    ],
+    "50": [
+      "iron_defense"
+    ],
+    "55": [
+      "iron_head"
+    ],
+    "60": [
+      "take_down"
+    ],
+    "65": [
+      "stealth_rock"
+    ],
+    "70": [
+      "double_edge"
     ]
   },
   "evolution": null,

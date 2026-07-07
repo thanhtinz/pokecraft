@@ -19,31 +19,44 @@
   "modelId": "heatran",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "steel_wing"
-    ],
-    "14": [
-      "ember"
-    ],
-    "20": [
-      "iron_head"
-    ],
-    "32": [
+      "leer",
       "fire_spin"
     ],
-    "40": [
-      "fire_punch"
+    "6": [
+      "metal_claw"
+    ],
+    "12": [
+      "ancient_power"
+    ],
+    "18": [
+      "fire_fang"
+    ],
+    "24": [
+      "scary_face"
+    ],
+    "30": [
+      "iron_head"
+    ],
+    "36": [
+      "crunch"
+    ],
+    "42": [
+      "lava_plume"
     ],
     "48": [
-      "flamethrower"
+      "metal_sound"
     ],
-    "26": [
-      "calm_mind"
+    "54": [
+      "earth_power"
+    ],
+    "60": [
+      "heat_wave"
+    ],
+    "66": [
+      "stone_edge"
+    ],
+    "72": [
+      "magma_storm"
     ]
   },
   "evolution": null,

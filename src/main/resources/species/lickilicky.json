@@ -18,31 +18,38 @@
   "modelId": "lickilicky",
   "learnset": {
     "1": [
-      "scratch"
+      "lick",
+      "supersonic",
+      "defense_curl",
+      "rollout",
+      "me_first",
+      "refresh",
+      "wring_out",
+      "chip_away"
     ],
-    "4": [
-      "growl"
+    "18": [
+      "wrap"
     ],
-    "8": [
-      "quick_attack"
+    "24": [
+      "disable"
     ],
-    "14": [
-      "hyper_fang"
+    "30": [
+      "stomp"
     ],
-    "20": [
-      "mega_punch"
+    "36": [
+      "knock_off"
     ],
-    "32": [
-      "body_slam"
-    ],
-    "40": [
-      "double_edge"
+    "42": [
+      "screech"
     ],
     "48": [
-      "hyper_beam"
+      "slam"
     ],
-    "26": [
-      "harden"
+    "54": [
+      "power_whip"
+    ],
+    "60": [
+      "belly_drum"
     ]
   },
   "evolution": null,

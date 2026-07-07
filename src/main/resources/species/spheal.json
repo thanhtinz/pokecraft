@@ -19,31 +19,47 @@
   "modelId": "spheal",
   "learnset": {
     "1": [
-      "tackle"
+      "defense_curl",
+      "rollout"
     ],
     "4": [
-      "leer"
+      "growl"
     ],
     "8": [
       "water_gun"
     ],
-    "14": [
-      "ice_shard"
+    "12": [
+      "powder_snow"
+    ],
+    "16": [
+      "rest"
     ],
     "20": [
-      "bubble_beam"
+      "snore"
     ],
-    "32": [
+    "24": [
+      "brine"
+    ],
+    "28": [
       "aurora_beam"
     ],
+    "33": [
+      "encore"
+    ],
+    "36": [
+      "body_slam"
+    ],
     "40": [
-      "waterfall"
+      "surf"
+    ],
+    "44": [
+      "blizzard"
     ],
     "48": [
-      "ice_beam"
+      "hail"
     ],
-    "26": [
-      "calm_mind"
+    "52": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

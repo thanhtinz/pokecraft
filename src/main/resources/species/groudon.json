@@ -18,22 +18,38 @@
   "modelId": "groudon",
   "learnset": {
     "1": [
-      "pound"
+      "mud_shot",
+      "scary_face",
+      "lava_plume",
+      "ancient_power",
+      "precipice_blades"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "earth_power"
     ],
-    "8": [
-      "sand_tomb"
+    "18": [
+      "bulk_up"
     ],
-    "14": [
-      "dig"
-    ],
-    "20": [
+    "27": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "hammer_arm"
+    ],
+    "45": [
+      "fissure"
+    ],
+    "54": [
+      "rest"
+    ],
+    "72": [
+      "fire_blast"
+    ],
+    "81": [
+      "solar_beam"
+    ],
+    "90": [
+      "eruption"
     ]
   },
   "evolution": null,

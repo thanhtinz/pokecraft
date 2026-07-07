@@ -18,22 +18,32 @@
   "modelId": "flittle",
   "learnset": {
     "1": [
-      "scratch"
+      "growl",
+      "peck"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
+    "5": [
       "confusion"
     ],
-    "14": [
+    "8": [
+      "baby_doll_eyes"
+    ],
+    "11": [
+      "disarming_voice"
+    ],
+    "15": [
+      "quick_attack"
+    ],
+    "19": [
       "psybeam"
     ],
-    "20": [
-      "psychic"
+    "24": [
+      "pluck"
     ],
-    "26": [
+    "29": [
       "agility"
+    ],
+    "34": [
+      "uproar"
     ]
   },
   "evolution": null,

@@ -18,28 +18,36 @@
   "modelId": "shellos",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "mud_slap",
+      "mud_sport",
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "5": [
+      "harden"
+    ],
+    "10": [
+      "recover"
+    ],
+    "15": [
+      "water_pulse"
     ],
     "20": [
-      "waterfall"
+      "ancient_power"
     ],
-    "32": [
-      "surf"
+    "25": [
+      "body_slam"
+    ],
+    "31": [
+      "muddy_water"
+    ],
+    "35": [
+      "earth_power"
     ],
     "40": [
-      "hydro_pump"
+      "rain_dance"
     ],
-    "26": [
-      "calm_mind"
+    "45": [
+      "memento"
     ]
   },
   "evolution": null,

@@ -18,31 +18,44 @@
   "modelId": "sentret",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "foresight"
     ],
     "4": [
-      "growl"
+      "defense_curl"
     ],
-    "8": [
+    "7": [
       "quick_attack"
     ],
-    "14": [
-      "hyper_fang"
+    "13": [
+      "fury_swipes"
     ],
-    "20": [
-      "mega_punch"
+    "16": [
+      "helping_hand"
     ],
-    "32": [
-      "body_slam"
+    "19": [
+      "follow_me"
     ],
-    "40": [
-      "double_edge"
+    "25": [
+      "slam"
     ],
-    "48": [
-      "hyper_beam"
+    "28": [
+      "rest"
     ],
-    "26": [
-      "swords_dance"
+    "31": [
+      "sucker_punch"
+    ],
+    "36": [
+      "amnesia"
+    ],
+    "39": [
+      "baton_pass"
+    ],
+    "42": [
+      "me_first"
+    ],
+    "47": [
+      "hyper_voice"
     ]
   },
   "evolution": null,

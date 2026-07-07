@@ -18,28 +18,43 @@
   "modelId": "darmanitan",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "rage",
+      "hammer_arm",
+      "taunt",
+      "swagger",
+      "ember",
+      "bite"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "incinerate"
     ],
-    "8": [
-      "ember"
-    ],
-    "14": [
-      "fire_spin"
+    "16": [
+      "work_up"
     ],
     "20": [
+      "fire_fang"
+    ],
+    "24": [
+      "headbutt"
+    ],
+    "28": [
       "fire_punch"
     ],
     "32": [
-      "flamethrower"
+      "uproar"
     ],
-    "40": [
-      "fire_blast"
+    "38": [
+      "belly_drum"
     ],
-    "26": [
-      "swords_dance"
+    "44": [
+      "flare_blitz"
+    ],
+    "50": [
+      "thrash"
+    ],
+    "56": [
+      "superpower"
     ]
   },
   "evolution": null,

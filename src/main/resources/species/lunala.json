@@ -19,31 +19,45 @@
   "modelId": "lunala",
   "learnset": {
     "1": [
-      "tackle"
+      "moongeist_beam",
+      "cosmic_power",
+      "hypnosis",
+      "teleport",
+      "confusion",
+      "splash"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "lick"
-    ],
-    "20": [
-      "psybeam"
-    ],
-    "32": [
+    "7": [
       "night_shade"
     ],
-    "40": [
-      "psychic"
+    "14": [
+      "confuse_ray"
     ],
-    "48": [
+    "21": [
+      "air_slash"
+    ],
+    "28": [
       "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "35": [
+      "moonlight"
+    ],
+    "42": [
+      "night_daze"
+    ],
+    "49": [
+      "psychic"
+    ],
+    "56": [
+      "moonblast"
+    ],
+    "63": [
+      "phantom_force"
+    ],
+    "70": [
+      "dream_eater"
+    ],
+    "77": [
+      "wide_guard"
     ]
   },
   "evolution": null,

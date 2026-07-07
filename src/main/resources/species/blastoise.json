@@ -1,9 +1,62 @@
 {
-  "id": "blastoise", "dex": 9, "name": "Blastoise",
-  "types": ["WATER"],
-  "baseStats": { "hp": 79, "atk": 83, "def": 100, "spa": 85, "spd": 105, "spe": 78 },
-  "catchRate": 45, "expYield": 239, "modelId": "blastoise",
-  "learnset": { "1": ["tackle"], "4": ["water_gun"], "7": ["tail_whip"], "10": ["withdraw"], "16": ["bite"], "24": ["bubble_beam"], "36": ["hydro_pump"], "42": ["ice_beam"] },
+  "id": "blastoise",
+  "dex": 9,
+  "name": "Blastoise",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 79,
+    "atk": 83,
+    "def": 100,
+    "spa": 85,
+    "spd": 105,
+    "spe": 78
+  },
+  "catchRate": 45,
+  "expYield": 239,
+  "modelId": "blastoise",
+  "learnset": {
+    "1": [
+      "flash_cannon",
+      "tackle",
+      "tail_whip",
+      "bubble",
+      "withdraw",
+      "water_gun",
+      "skull_bash"
+    ],
+    "9": [
+      "rapid_spin"
+    ],
+    "12": [
+      "bite"
+    ],
+    "15": [
+      "water_pulse"
+    ],
+    "20": [
+      "protect"
+    ],
+    "25": [
+      "rain_dance"
+    ],
+    "30": [
+      "aqua_tail"
+    ],
+    "35": [
+      "shell_smash"
+    ],
+    "42": [
+      "iron_defense"
+    ],
+    "49": [
+      "hydro_pump"
+    ],
+    "56": [
+      "wave_crash"
+    ]
+  },
   "evolution": null,
   "spawn": null
 }

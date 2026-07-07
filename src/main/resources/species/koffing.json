@@ -18,25 +18,47 @@
   "modelId": "koffing",
   "learnset": {
     "1": [
-      "scratch"
+      "poison_gas",
+      "tackle"
     ],
     "4": [
-      "poison_powder"
+      "smog"
     ],
     "8": [
-      "poison_sting"
+      "smokescreen"
     ],
-    "14": [
-      "acid"
+    "12": [
+      "clear_smog"
+    ],
+    "16": [
+      "assurance"
     ],
     "20": [
       "sludge"
     ],
+    "24": [
+      "haze"
+    ],
+    "28": [
+      "self_destruct"
+    ],
     "32": [
       "sludge_bomb"
     ],
-    "26": [
-      "harden"
+    "36": [
+      "toxic"
+    ],
+    "40": [
+      "belch"
+    ],
+    "44": [
+      "explosion"
+    ],
+    "48": [
+      "memento"
+    ],
+    "52": [
+      "destiny_bond"
     ]
   },
   "evolution": null,

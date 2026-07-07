@@ -18,19 +18,39 @@
   "modelId": "purrloin",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "growl",
+      "assist"
     ],
     "4": [
-      "leer"
+      "sand_attack"
     ],
-    "8": [
-      "bite"
+    "5": [
+      "fake_out"
     ],
-    "14": [
-      "crunch"
+    "12": [
+      "fury_swipes"
     ],
-    "26": [
-      "agility"
+    "16": [
+      "torment"
+    ],
+    "21": [
+      "assurance"
+    ],
+    "24": [
+      "hone_claws"
+    ],
+    "28": [
+      "sucker_punch"
+    ],
+    "32": [
+      "nasty_plot"
+    ],
+    "36": [
+      "night_slash"
+    ],
+    "40": [
+      "play_rough"
     ]
   },
   "evolution": null,

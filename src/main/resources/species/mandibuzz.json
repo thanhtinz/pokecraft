@@ -19,31 +19,47 @@
   "modelId": "mandibuzz",
   "learnset": {
     "1": [
-      "tackle"
+      "gust",
+      "leer",
+      "fury_attack",
+      "pluck",
+      "flatter",
+      "feint_attack",
+      "punishment",
+      "bone_rush",
+      "mirror_move",
+      "sky_attack",
+      "toxic"
     ],
-    "4": [
-      "leer"
+    "18": [
+      "tailwind"
     ],
-    "8": [
-      "bite"
+    "24": [
+      "knock_off"
     ],
-    "14": [
-      "peck"
+    "30": [
+      "iron_defense"
     ],
-    "20": [
-      "crunch"
+    "36": [
+      "whirlwind"
     ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "wing_attack"
+    "42": [
+      "air_slash"
     ],
     "48": [
-      "drill_peck"
+      "dark_pulse"
     ],
-    "26": [
-      "harden"
+    "57": [
+      "nasty_plot"
+    ],
+    "64": [
+      "defog"
+    ],
+    "72": [
+      "attract"
+    ],
+    "80": [
+      "brave_bird"
     ]
   },
   "evolution": null,

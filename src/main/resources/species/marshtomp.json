@@ -19,31 +19,50 @@
   "modelId": "marshtomp",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "growl",
+      "mud_slap",
+      "water_gun",
+      "bide",
+      "mud_shot",
+      "foresight",
+      "mud_bomb",
+      "earthquake",
+      "surf",
+      "rock_smash"
     ],
-    "4": [
-      "tail_whip"
+    "9": [
+      "rock_throw"
     ],
-    "8": [
-      "sand_tomb"
+    "12": [
+      "protect"
     ],
-    "14": [
-      "water_gun"
+    "15": [
+      "supersonic"
     ],
     "20": [
-      "dig"
+      "water_pulse"
     ],
-    "32": [
-      "bubble_beam"
+    "25": [
+      "rock_slide"
+    ],
+    "30": [
+      "take_down"
+    ],
+    "35": [
+      "amnesia"
     ],
     "40": [
-      "earthquake"
+      "muddy_water"
     ],
-    "48": [
-      "waterfall"
+    "45": [
+      "screech"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "endeavor"
+    ],
+    "55": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

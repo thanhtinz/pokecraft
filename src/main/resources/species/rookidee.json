@@ -18,25 +18,35 @@
   "modelId": "rookidee",
   "learnset": {
     "1": [
-      "pound"
+      "peck",
+      "leer"
     ],
     "4": [
-      "tail_whip"
+      "power_trip"
     ],
     "8": [
-      "peck"
+      "hone_claws"
     ],
-    "14": [
-      "gust"
+    "12": [
+      "fury_attack"
+    ],
+    "16": [
+      "pluck"
     ],
     "20": [
-      "wing_attack"
+      "taunt"
     ],
-    "32": [
+    "24": [
+      "scary_face"
+    ],
+    "28": [
       "drill_peck"
     ],
-    "26": [
-      "agility"
+    "32": [
+      "swagger"
+    ],
+    "36": [
+      "brave_bird"
     ]
   },
   "evolution": null,

@@ -18,28 +18,43 @@
   "modelId": "quilladin",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "sleep_powder"
+      "tackle",
+      "growl",
+      "vine_whip",
+      "needle_arm"
     ],
     "8": [
-      "vine_whip"
+      "rollout"
     ],
-    "14": [
-      "razor_leaf"
+    "11": [
+      "bite"
+    ],
+    "15": [
+      "leech_seed"
     ],
     "20": [
       "seed_bomb"
     ],
-    "32": [
-      "petal_dance"
+    "24": [
+      "pin_missile"
     ],
-    "40": [
-      "solar_beam"
+    "29": [
+      "take_down"
     ],
-    "26": [
-      "harden"
+    "34": [
+      "mud_shot"
+    ],
+    "38": [
+      "bulk_up"
+    ],
+    "43": [
+      "body_slam"
+    ],
+    "47": [
+      "pain_split"
+    ],
+    "53": [
+      "wood_hammer"
     ]
   },
   "evolution": null,

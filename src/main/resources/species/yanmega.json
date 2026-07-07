@@ -19,31 +19,48 @@
   "modelId": "yanmega",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "bug_bite"
-    ],
-    "20": [
-      "gust"
-    ],
-    "32": [
-      "pin_missile"
-    ],
-    "40": [
+      "night_slash",
+      "tackle",
+      "foresight",
+      "double_team",
+      "sonic_boom",
+      "pursuit",
+      "air_slash",
+      "bug_buzz",
+      "silver_wind",
+      "gust",
+      "hypnosis",
       "wing_attack"
     ],
-    "48": [
-      "drill_peck"
+    "14": [
+      "quick_attack"
     ],
-    "26": [
-      "calm_mind"
+    "17": [
+      "detect"
+    ],
+    "22": [
+      "supersonic"
+    ],
+    "27": [
+      "uproar"
+    ],
+    "30": [
+      "bug_bite"
+    ],
+    "33": [
+      "ancient_power"
+    ],
+    "38": [
+      "feint"
+    ],
+    "43": [
+      "slash"
+    ],
+    "46": [
+      "screech"
+    ],
+    "49": [
+      "u_turn"
     ]
   },
   "evolution": null,

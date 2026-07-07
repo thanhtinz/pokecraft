@@ -19,25 +19,38 @@
   "modelId": "morgrem",
   "learnset": {
     "1": [
-      "pound"
+      "false_surrender",
+      "fake_out",
+      "confide",
+      "bite",
+      "flatter"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "fake_tears"
     ],
-    "8": [
-      "bite"
-    ],
-    "14": [
-      "fairy_wind"
+    "16": [
+      "assurance"
     ],
     "20": [
-      "crunch"
+      "swagger"
     ],
-    "32": [
-      "dazzling_gleam"
+    "24": [
+      "sucker_punch"
     ],
-    "26": [
-      "calm_mind"
+    "28": [
+      "torment"
+    ],
+    "35": [
+      "dark_pulse"
+    ],
+    "40": [
+      "nasty_plot"
+    ],
+    "46": [
+      "play_rough"
+    ],
+    "52": [
+      "foul_play"
     ]
   },
   "evolution": null,

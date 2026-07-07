@@ -18,22 +18,41 @@
   "modelId": "stonjourner",
   "learnset": {
     "1": [
-      "scratch"
+      "rock_throw",
+      "block"
     ],
-    "4": [
-      "harden"
+    "6": [
+      "rock_polish"
     ],
-    "8": [
-      "rock_throw"
+    "12": [
+      "rock_tomb"
     ],
-    "14": [
+    "18": [
+      "gravity"
+    ],
+    "24": [
+      "stomp"
+    ],
+    "30": [
+      "stealth_rock"
+    ],
+    "36": [
       "rock_slide"
     ],
-    "20": [
+    "42": [
+      "body_slam"
+    ],
+    "48": [
+      "wide_guard"
+    ],
+    "54": [
+      "heavy_slam"
+    ],
+    "60": [
       "stone_edge"
     ],
-    "26": [
-      "harden"
+    "66": [
+      "mega_kick"
     ]
   },
   "evolution": null,

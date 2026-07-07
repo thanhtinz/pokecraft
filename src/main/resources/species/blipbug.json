@@ -18,19 +18,7 @@
   "modelId": "blipbug",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
-      "bug_bite"
-    ],
-    "14": [
-      "pin_missile"
-    ],
-    "26": [
-      "agility"
+      "struggle_bug"
     ]
   },
   "evolution": null,

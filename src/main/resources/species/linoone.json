@@ -18,31 +18,48 @@
   "modelId": "linoone",
   "learnset": {
     "1": [
-      "tackle"
+      "switcheroo",
+      "tackle",
+      "growl",
+      "tail_whip",
+      "sand_attack",
+      "odor_sleuth",
+      "mud_sport",
+      "slash",
+      "bestow",
+      "rototiller",
+      "pin_missile",
+      "baby_doll_eyes"
     ],
-    "4": [
-      "growl"
+    "9": [
+      "covet"
     ],
-    "8": [
-      "quick_attack"
+    "12": [
+      "headbutt"
     ],
-    "14": [
-      "hyper_fang"
+    "15": [
+      "hone_claws"
     ],
-    "20": [
-      "mega_punch"
+    "18": [
+      "fury_swipes"
     ],
-    "32": [
-      "body_slam"
+    "23": [
+      "rest"
     ],
-    "40": [
-      "double_edge"
+    "28": [
+      "take_down"
+    ],
+    "33": [
+      "fling"
+    ],
+    "38": [
+      "flail"
+    ],
+    "43": [
+      "belly_drum"
     ],
     "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "agility"
+      "double_edge"
     ]
   },
   "evolution": null,

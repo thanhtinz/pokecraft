@@ -19,31 +19,45 @@
   "modelId": "mantine",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "psybeam",
+      "bullet_seed",
+      "signal_beam",
+      "tackle",
+      "bubble",
+      "supersonic",
+      "wing_attack",
+      "roost",
       "water_gun"
     ],
-    "14": [
-      "peck"
+    "12": [
+      "water_pulse"
+    ],
+    "16": [
+      "wide_guard"
     ],
     "20": [
+      "agility"
+    ],
+    "24": [
       "bubble_beam"
     ],
+    "28": [
+      "headbutt"
+    ],
     "32": [
-      "gust"
+      "air_slash"
+    ],
+    "36": [
+      "aqua_ring"
     ],
     "40": [
-      "waterfall"
+      "bounce"
+    ],
+    "44": [
+      "take_down"
     ],
     "48": [
-      "wing_attack"
-    ],
-    "26": [
-      "calm_mind"
+      "hydro_pump"
     ]
   },
   "evolution": null,

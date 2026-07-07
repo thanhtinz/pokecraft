@@ -19,31 +19,45 @@
   "modelId": "jynx",
   "learnset": {
     "1": [
-      "scratch"
+      "pound",
+      "lick",
+      "powder_snow",
+      "double_slap",
+      "wake_up_slap",
+      "wring_out",
+      "heart_stamp",
+      "sweet_kiss",
+      "copycat"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "ice_shard"
-    ],
-    "14": [
+    "12": [
       "confusion"
     ],
+    "16": [
+      "covet"
+    ],
     "20": [
-      "aurora_beam"
+      "sing"
     ],
-    "32": [
-      "psybeam"
+    "24": [
+      "fake_tears"
     ],
-    "40": [
-      "ice_beam"
+    "28": [
+      "ice_punch"
     ],
-    "48": [
+    "34": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "40": [
+      "lovely_kiss"
+    ],
+    "46": [
+      "mean_look"
+    ],
+    "52": [
+      "perish_song"
+    ],
+    "58": [
+      "blizzard"
     ]
   },
   "evolution": null,

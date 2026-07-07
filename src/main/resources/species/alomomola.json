@@ -18,28 +18,48 @@
   "modelId": "alomomola",
   "learnset": {
     "1": [
-      "tackle"
+      "pound",
+      "water_sport",
+      "double_slap",
+      "heal_pulse",
+      "play_nice"
     ],
-    "4": [
-      "tail_whip"
+    "5": [
+      "aqua_ring"
     ],
-    "8": [
-      "water_gun"
+    "9": [
+      "aqua_jet"
     ],
-    "14": [
-      "bubble_beam"
+    "13": [
+      "helping_hand",
+      "wide_guard"
     ],
-    "20": [
-      "waterfall"
+    "21": [
+      "protect"
     ],
-    "32": [
-      "surf"
+    "25": [
+      "water_pulse"
     ],
-    "40": [
+    "29": [
+      "healing_wish"
+    ],
+    "33": [
+      "soak"
+    ],
+    "37": [
+      "wish"
+    ],
+    "41": [
+      "brine"
+    ],
+    "45": [
+      "safeguard"
+    ],
+    "49": [
+      "whirlpool"
+    ],
+    "55": [
       "hydro_pump"
-    ],
-    "26": [
-      "harden"
     ]
   },
   "evolution": null,

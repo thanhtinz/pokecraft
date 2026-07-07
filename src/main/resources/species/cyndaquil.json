@@ -18,28 +18,50 @@
   "modelId": "cyndaquil",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
+      "tackle",
       "leer"
     ],
-    "8": [
+    "6": [
+      "smokescreen"
+    ],
+    "10": [
       "ember"
     ],
-    "14": [
-      "fire_spin"
+    "13": [
+      "quick_attack"
     ],
-    "20": [
-      "fire_punch"
+    "19": [
+      "flame_wheel"
     ],
-    "32": [
-      "flamethrower"
+    "22": [
+      "defense_curl"
+    ],
+    "28": [
+      "flame_charge"
+    ],
+    "31": [
+      "swift"
+    ],
+    "37": [
+      "lava_plume"
     ],
     "40": [
-      "fire_blast"
+      "flamethrower"
     ],
-    "26": [
-      "agility"
+    "46": [
+      "inferno"
+    ],
+    "49": [
+      "rollout"
+    ],
+    "55": [
+      "double_edge"
+    ],
+    "58": [
+      "overheat"
+    ],
+    "64": [
+      "eruption"
     ]
   },
   "evolution": null,

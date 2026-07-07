@@ -19,31 +19,37 @@
   "modelId": "abomasnow",
   "learnset": {
     "1": [
-      "scratch"
+      "ice_punch",
+      "powder_snow",
+      "leer",
+      "grass_whistle",
+      "mist",
+      "aurora_veil",
+      "leafage"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
+    "15": [
       "ice_shard"
     ],
     "20": [
       "razor_leaf"
     ],
-    "32": [
-      "aurora_beam"
+    "25": [
+      "icy_wind"
     ],
-    "40": [
-      "seed_bomb"
+    "30": [
+      "swagger"
     ],
-    "48": [
-      "ice_beam"
+    "35": [
+      "ingrain"
     ],
-    "26": [
-      "swords_dance"
+    "43": [
+      "wood_hammer"
+    ],
+    "49": [
+      "blizzard"
+    ],
+    "56": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

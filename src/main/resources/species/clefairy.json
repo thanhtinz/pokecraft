@@ -18,19 +18,57 @@
   "modelId": "clefairy",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "growl",
+      "sing",
+      "double_slap",
+      "defense_curl",
+      "minimize",
+      "wake_up_slap",
+      "lucky_chant",
+      "bestow",
+      "disarming_voice",
+      "spotlight",
+      "sweet_kiss",
+      "charm",
+      "splash",
+      "copycat"
     ],
     "4": [
-      "sing"
+      "stored_power"
     ],
     "8": [
-      "fairy_wind"
+      "encore"
     ],
-    "14": [
-      "dazzling_gleam"
+    "12": [
+      "after_you"
     ],
-    "26": [
-      "calm_mind"
+    "16": [
+      "life_dew"
+    ],
+    "20": [
+      "metronome"
+    ],
+    "24": [
+      "moonlight"
+    ],
+    "28": [
+      "gravity"
+    ],
+    "32": [
+      "meteor_mash"
+    ],
+    "36": [
+      "follow_me"
+    ],
+    "40": [
+      "cosmic_power"
+    ],
+    "44": [
+      "moonblast"
+    ],
+    "48": [
+      "healing_wish"
     ]
   },
   "evolution": null,

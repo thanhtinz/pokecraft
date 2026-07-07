@@ -18,31 +18,45 @@
   "modelId": "lillipup",
   "learnset": {
     "1": [
-      "pound"
+      "leer",
+      "tackle",
+      "odor_sleuth"
     ],
     "4": [
-      "growl"
+      "work_up"
     ],
     "8": [
-      "quick_attack"
+      "bite"
     ],
-    "14": [
-      "hyper_fang"
+    "12": [
+      "retaliate"
+    ],
+    "17": [
+      "baby_doll_eyes"
     ],
     "20": [
-      "mega_punch"
+      "play_rough"
+    ],
+    "24": [
+      "crunch"
+    ],
+    "28": [
+      "take_down"
     ],
     "32": [
-      "body_slam"
+      "helping_hand"
+    ],
+    "36": [
+      "reversal"
     ],
     "40": [
-      "double_edge"
+      "roar"
+    ],
+    "44": [
+      "last_resort"
     ],
     "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "swords_dance"
+      "giga_impact"
     ]
   },
   "evolution": null,

@@ -18,25 +18,53 @@
   "modelId": "tornadus",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
+      "astonish",
       "gust"
     ],
+    "5": [
+      "leer"
+    ],
+    "10": [
+      "swagger"
+    ],
+    "15": [
+      "bite"
+    ],
     "20": [
-      "wing_attack"
+      "air_cutter"
     ],
-    "32": [
-      "drill_peck"
+    "25": [
+      "agility"
     ],
-    "26": [
-      "calm_mind"
+    "30": [
+      "tailwind"
+    ],
+    "35": [
+      "air_slash"
+    ],
+    "40": [
+      "crunch"
+    ],
+    "45": [
+      "extrasensory"
+    ],
+    "50": [
+      "uproar"
+    ],
+    "55": [
+      "hammer_arm"
+    ],
+    "60": [
+      "rain_dance"
+    ],
+    "65": [
+      "hurricane"
+    ],
+    "70": [
+      "thrash"
+    ],
+    "77": [
+      "bleakwind_storm"
     ]
   },
   "evolution": null,

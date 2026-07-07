@@ -19,31 +19,44 @@
   "modelId": "barbaracle",
   "learnset": {
     "1": [
-      "pound"
+      "skull_bash",
+      "scratch",
+      "sand_attack",
+      "water_gun",
+      "withdraw",
+      "mud_slap",
+      "clamp",
+      "night_slash"
     ],
-    "4": [
-      "harden"
+    "12": [
+      "fury_cutter"
     ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "rock_throw"
+    "16": [
+      "fury_swipes"
     ],
     "20": [
-      "bubble_beam"
+      "ancient_power"
+    ],
+    "24": [
+      "rock_polish"
+    ],
+    "28": [
+      "slash"
     ],
     "32": [
-      "rock_slide"
+      "hone_claws"
     ],
-    "40": [
-      "waterfall"
+    "36": [
+      "razor_shell"
+    ],
+    "42": [
+      "shell_smash"
     ],
     "48": [
-      "stone_edge"
+      "cross_chop"
     ],
-    "26": [
-      "harden"
+    "54": [
+      "stone_edge"
     ]
   },
   "evolution": null,

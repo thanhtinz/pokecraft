@@ -19,31 +19,44 @@
   "modelId": "morpeko",
   "learnset": {
     "1": [
-      "scratch"
+      "thunder_shock",
+      "tail_whip"
     ],
-    "4": [
-      "thunder_wave"
+    "5": [
+      "leer"
     ],
-    "8": [
-      "bite"
+    "10": [
+      "power_trip"
     ],
-    "14": [
-      "thunder_shock"
+    "15": [
+      "quick_attack"
     ],
     "20": [
-      "crunch"
+      "flatter"
     ],
-    "32": [
+    "25": [
+      "bite"
+    ],
+    "30": [
       "spark"
     ],
+    "35": [
+      "torment"
+    ],
     "40": [
-      "thunderbolt"
-    ],
-    "48": [
-      "thunder"
-    ],
-    "26": [
       "agility"
+    ],
+    "45": [
+      "bullet_seed"
+    ],
+    "50": [
+      "crunch"
+    ],
+    "55": [
+      "aura_wheel"
+    ],
+    "60": [
+      "thrash"
     ]
   },
   "evolution": null,

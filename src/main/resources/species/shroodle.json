@@ -19,31 +19,45 @@
   "modelId": "shroodle",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "leer"
     ],
-    "4": [
-      "poison_powder"
+    "5": [
+      "acid_spray"
     ],
     "8": [
-      "poison_sting"
+      "bite",
+      "fury_swipes"
+    ],
+    "11": [
+      "switcheroo"
     ],
     "14": [
-      "quick_attack"
+      "poison_fang"
     ],
-    "20": [
-      "acid"
+    "18": [
+      "flatter"
     ],
-    "32": [
-      "hyper_fang"
+    "21": [
+      "slash"
+    ],
+    "25": [
+      "u_turn"
+    ],
+    "29": [
+      "poison_jab"
+    ],
+    "33": [
+      "taunt"
+    ],
+    "36": [
+      "substitute"
     ],
     "40": [
-      "sludge"
+      "knock_off"
     ],
-    "48": [
-      "mega_punch"
-    ],
-    "26": [
-      "agility"
+    "45": [
+      "gunk_shot"
     ]
   },
   "evolution": null,

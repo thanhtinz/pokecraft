@@ -19,31 +19,55 @@
   "modelId": "landorus",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
+      "punishment",
+      "rock_throw",
+      "smack_down",
       "sand_tomb"
     ],
-    "20": [
-      "gust"
+    "5": [
+      "leer"
     ],
-    "32": [
-      "dig"
+    "10": [
+      "block"
+    ],
+    "15": [
+      "bulldoze"
+    ],
+    "20": [
+      "rock_tomb"
+    ],
+    "30": [
+      "imprison"
+    ],
+    "35": [
+      "rock_slide"
     ],
     "40": [
-      "wing_attack"
+      "earth_power"
     ],
-    "48": [
+    "45": [
+      "extrasensory"
+    ],
+    "50": [
+      "stone_edge"
+    ],
+    "55": [
+      "hammer_arm"
+    ],
+    "60": [
+      "sandstorm"
+    ],
+    "65": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "70": [
+      "outrage"
+    ],
+    "75": [
+      "fissure"
+    ],
+    "80": [
+      "sandsear_storm"
     ]
   },
   "evolution": null,

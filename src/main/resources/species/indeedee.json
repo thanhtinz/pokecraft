@@ -19,31 +19,41 @@
   "modelId": "indeedee",
   "learnset": {
     "1": [
-      "tackle"
+      "stored_power",
+      "play_nice"
     ],
-    "4": [
-      "hypnosis"
+    "5": [
+      "encore"
     ],
-    "8": [
-      "confusion"
+    "10": [
+      "disarming_voice"
     ],
-    "14": [
-      "quick_attack"
-    ],
-    "20": [
+    "15": [
       "psybeam"
     ],
-    "32": [
-      "hyper_fang"
+    "20": [
+      "helping_hand"
     ],
-    "40": [
+    "25": [
+      "after_you"
+    ],
+    "30": [
+      "healing_wish"
+    ],
+    "35": [
       "psychic"
     ],
-    "48": [
-      "mega_punch"
-    ],
-    "26": [
+    "40": [
       "calm_mind"
+    ],
+    "45": [
+      "power_split"
+    ],
+    "50": [
+      "psychic_terrain"
+    ],
+    "55": [
+      "last_resort"
     ]
   },
   "evolution": null,

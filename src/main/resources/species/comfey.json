@@ -18,19 +18,59 @@
   "modelId": "comfey",
   "learnset": {
     "1": [
-      "pound"
+      "flower_shield",
+      "growth",
+      "wrap",
+      "natural_gift",
+      "aromatherapy"
     ],
-    "4": [
-      "sing"
+    "3": [
+      "vine_whip"
     ],
-    "8": [
-      "fairy_wind"
+    "6": [
+      "helping_hand"
     ],
-    "14": [
-      "dazzling_gleam"
+    "9": [
+      "draining_kiss"
     ],
-    "26": [
-      "agility"
+    "12": [
+      "charm"
+    ],
+    "15": [
+      "magical_leaf"
+    ],
+    "18": [
+      "synthesis"
+    ],
+    "21": [
+      "leech_seed"
+    ],
+    "24": [
+      "grass_knot"
+    ],
+    "27": [
+      "sweet_kiss"
+    ],
+    "30": [
+      "floral_healing"
+    ],
+    "33": [
+      "petal_blizzard"
+    ],
+    "36": [
+      "bind"
+    ],
+    "39": [
+      "play_rough"
+    ],
+    "42": [
+      "sweet_scent"
+    ],
+    "45": [
+      "petal_dance"
+    ],
+    "48": [
+      "grassy_terrain"
     ]
   },
   "evolution": null,

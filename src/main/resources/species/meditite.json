@@ -19,31 +19,52 @@
   "modelId": "meditite",
   "learnset": {
     "1": [
-      "scratch"
+      "bide",
+      "meditate",
+      "confusion",
+      "work_up"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "detect"
     ],
-    "8": [
-      "confusion"
+    "12": [
+      "endure"
     ],
-    "14": [
-      "karate_chop"
+    "15": [
+      "feint"
+    ],
+    "17": [
+      "force_palm"
     ],
     "20": [
       "psybeam"
     ],
-    "32": [
-      "low_kick"
+    "23": [
+      "calm_mind"
     ],
-    "40": [
-      "psychic"
+    "25": [
+      "zen_headbutt"
     ],
-    "48": [
-      "brick_break"
+    "28": [
+      "high_jump_kick"
     ],
-    "26": [
-      "agility"
+    "31": [
+      "psych_up"
+    ],
+    "33": [
+      "acupressure"
+    ],
+    "36": [
+      "power_trick"
+    ],
+    "39": [
+      "reversal"
+    ],
+    "41": [
+      "recover"
+    ],
+    "44": [
+      "counter"
     ]
   },
   "evolution": null,

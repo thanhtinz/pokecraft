@@ -18,28 +18,44 @@
   "modelId": "fennekin",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "tail_whip"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+    "5": [
       "ember"
     ],
+    "11": [
+      "howl"
+    ],
     "14": [
-      "fire_spin"
+      "flame_charge"
+    ],
+    "17": [
+      "psybeam"
     ],
     "20": [
-      "fire_punch"
+      "fire_spin"
     ],
-    "32": [
+    "25": [
+      "lucky_chant"
+    ],
+    "31": [
+      "psyshock"
+    ],
+    "35": [
       "flamethrower"
     ],
-    "40": [
-      "fire_blast"
+    "38": [
+      "will_o_wisp"
     ],
-    "26": [
-      "calm_mind"
+    "41": [
+      "psychic"
+    ],
+    "43": [
+      "sunny_day"
+    ],
+    "48": [
+      "fire_blast"
     ]
   },
   "evolution": null,

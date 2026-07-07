@@ -18,25 +18,48 @@
   "modelId": "gulpin",
   "learnset": {
     "1": [
-      "scratch"
+      "pound"
     ],
-    "4": [
-      "poison_powder"
+    "5": [
+      "yawn"
     ],
     "8": [
-      "poison_sting"
+      "poison_gas"
     ],
-    "14": [
-      "acid"
-    ],
-    "20": [
+    "10": [
       "sludge"
     ],
-    "32": [
+    "12": [
+      "amnesia"
+    ],
+    "17": [
+      "acid_spray"
+    ],
+    "20": [
+      "encore"
+    ],
+    "25": [
+      "toxic"
+    ],
+    "28": [
+      "stockpile",
+      "spit_up",
+      "swallow"
+    ],
+    "33": [
       "sludge_bomb"
     ],
-    "26": [
-      "harden"
+    "36": [
+      "gastro_acid"
+    ],
+    "41": [
+      "belch"
+    ],
+    "44": [
+      "wring_out"
+    ],
+    "49": [
+      "gunk_shot"
     ]
   },
   "evolution": null,

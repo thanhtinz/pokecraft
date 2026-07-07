@@ -19,31 +19,43 @@
   "modelId": "eternatus",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "poison_powder"
+      "poison_tail",
+      "confuse_ray",
+      "dragon_tail",
+      "agility"
     ],
     "8": [
-      "poison_sting"
+      "toxic"
     ],
-    "14": [
-      "twister"
+    "16": [
+      "venoshock"
     ],
-    "20": [
-      "acid"
+    "24": [
+      "dragon_dance"
     ],
     "32": [
-      "dragon_breath"
+      "cross_poison"
     ],
     "40": [
-      "sludge"
+      "dragon_pulse"
     ],
     "48": [
-      "dragon_claw"
+      "flamethrower"
     ],
-    "26": [
-      "calm_mind"
+    "56": [
+      "dynamax_cannon"
+    ],
+    "64": [
+      "cosmic_power"
+    ],
+    "72": [
+      "recover"
+    ],
+    "80": [
+      "hyper_beam"
+    ],
+    "88": [
+      "eternabeam"
     ]
   },
   "evolution": null,

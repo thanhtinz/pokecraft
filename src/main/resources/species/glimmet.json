@@ -19,31 +19,42 @@
   "modelId": "glimmet",
   "learnset": {
     "1": [
-      "tackle"
+      "rock_throw",
+      "harden",
+      "smack_down"
     ],
-    "4": [
-      "harden"
+    "7": [
+      "acid_spray"
     ],
-    "8": [
-      "poison_sting"
+    "11": [
+      "ancient_power"
     ],
-    "14": [
-      "rock_throw"
+    "15": [
+      "rock_polish"
     ],
-    "20": [
-      "acid"
+    "18": [
+      "stealth_rock"
     ],
-    "32": [
-      "rock_slide"
-    ],
-    "40": [
-      "sludge"
-    ],
-    "48": [
-      "stone_edge"
+    "22": [
+      "venoshock"
     ],
     "26": [
-      "calm_mind"
+      "sandstorm"
+    ],
+    "29": [
+      "self_destruct"
+    ],
+    "33": [
+      "rock_slide"
+    ],
+    "37": [
+      "power_gem"
+    ],
+    "41": [
+      "acid_armor"
+    ],
+    "46": [
+      "sludge_wave"
     ]
   },
   "evolution": null,

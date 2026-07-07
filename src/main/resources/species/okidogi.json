@@ -19,31 +19,36 @@
   "modelId": "okidogi",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "poison_powder"
+      "bite",
+      "low_kick",
+      "bulk_up"
     ],
     "8": [
-      "poison_sting"
+      "howl"
     ],
-    "14": [
-      "karate_chop"
+    "16": [
+      "poison_fang"
     ],
-    "20": [
-      "acid"
+    "24": [
+      "force_palm"
     ],
     "32": [
-      "low_kick"
+      "counter"
     ],
     "40": [
-      "sludge"
+      "poison_jab"
     ],
     "48": [
-      "brick_break"
+      "brutal_swing"
     ],
-    "26": [
-      "swords_dance"
+    "56": [
+      "crunch"
+    ],
+    "64": [
+      "superpower"
+    ],
+    "72": [
+      "giga_impact"
     ]
   },
   "evolution": null,

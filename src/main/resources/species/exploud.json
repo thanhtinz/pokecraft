@@ -18,31 +18,44 @@
   "modelId": "exploud",
   "learnset": {
     "1": [
-      "scratch"
+      "ice_fang",
+      "fire_fang",
+      "thunder_fang",
+      "pound",
+      "astonish",
+      "howl",
+      "bite",
+      "crunch",
+      "synchronoise",
+      "echoed_voice"
     ],
-    "4": [
-      "growl"
+    "15": [
+      "rest",
+      "sleep_talk"
     ],
-    "8": [
-      "quick_attack"
+    "23": [
+      "stomp"
     ],
-    "14": [
-      "hyper_fang"
+    "29": [
+      "roar"
     ],
-    "20": [
-      "mega_punch"
+    "36": [
+      "supersonic"
     ],
-    "32": [
-      "body_slam"
+    "45": [
+      "uproar"
     ],
-    "40": [
-      "double_edge"
+    "54": [
+      "screech"
     ],
-    "48": [
+    "63": [
+      "hyper_voice"
+    ],
+    "72": [
+      "boomburst"
+    ],
+    "81": [
       "hyper_beam"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

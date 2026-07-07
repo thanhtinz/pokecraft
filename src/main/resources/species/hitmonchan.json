@@ -18,25 +18,52 @@
   "modelId": "hitmonchan",
   "learnset": {
     "1": [
-      "pound"
+      "revenge",
+      "comet_punch",
+      "pursuit",
+      "feint",
+      "sky_uppercut",
+      "helping_hand",
+      "drain_punch",
+      "tackle",
+      "fake_out",
+      "focus_energy",
+      "foresight"
     ],
     "4": [
-      "leer"
+      "mach_punch"
     ],
     "8": [
-      "karate_chop"
+      "vacuum_wave"
     ],
-    "14": [
-      "low_kick"
+    "12": [
+      "detect"
     ],
-    "20": [
-      "brick_break"
+    "16": [
+      "bullet_punch"
+    ],
+    "21": [
+      "quick_guard"
+    ],
+    "24": [
+      "thunder_punch",
+      "ice_punch",
+      "fire_punch"
+    ],
+    "28": [
+      "agility"
     ],
     "32": [
-      "cross_chop"
+      "mega_punch"
     ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "close_combat"
+    ],
+    "40": [
+      "counter"
+    ],
+    "44": [
+      "focus_punch"
     ]
   },
   "evolution": null,

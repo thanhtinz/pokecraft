@@ -18,19 +18,43 @@
   "modelId": "floette",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "vine_whip",
+      "fairy_wind",
+      "lucky_chant"
     ],
-    "4": [
-      "sing"
+    "10": [
+      "safeguard"
     ],
-    "8": [
-      "fairy_wind"
+    "15": [
+      "razor_leaf"
     ],
-    "14": [
-      "dazzling_gleam"
+    "20": [
+      "wish"
     ],
-    "26": [
-      "calm_mind"
+    "25": [
+      "magical_leaf"
+    ],
+    "27": [
+      "grassy_terrain"
+    ],
+    "33": [
+      "petal_blizzard"
+    ],
+    "38": [
+      "aromatherapy"
+    ],
+    "43": [
+      "misty_terrain"
+    ],
+    "46": [
+      "moonblast"
+    ],
+    "51": [
+      "petal_dance"
+    ],
+    "58": [
+      "solar_beam"
     ]
   },
   "evolution": null,

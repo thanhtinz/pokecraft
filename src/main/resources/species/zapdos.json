@@ -19,31 +19,50 @@
   "modelId": "zapdos",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
+      "peck",
       "thunder_wave"
     ],
-    "8": [
-      "peck"
-    ],
-    "14": [
+    "5": [
       "thunder_shock"
     ],
-    "20": [
-      "gust"
+    "10": [
+      "light_screen"
     ],
-    "32": [
-      "spark"
+    "15": [
+      "pluck"
+    ],
+    "20": [
+      "agility"
+    ],
+    "25": [
+      "ancient_power"
+    ],
+    "30": [
+      "charge"
+    ],
+    "35": [
+      "drill_peck"
     ],
     "40": [
-      "wing_attack"
+      "roost"
     ],
-    "48": [
-      "thunderbolt"
+    "45": [
+      "discharge"
     ],
-    "26": [
-      "calm_mind"
+    "50": [
+      "rain_dance"
+    ],
+    "55": [
+      "thunder"
+    ],
+    "60": [
+      "detect"
+    ],
+    "65": [
+      "magnetic_flux"
+    ],
+    "70": [
+      "zap_cannon"
     ]
   },
   "evolution": null,

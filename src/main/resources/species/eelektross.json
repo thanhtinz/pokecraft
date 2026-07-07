@@ -18,25 +18,21 @@
   "modelId": "eelektross",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
+      "crush_claw",
+      "headbutt",
+      "acid",
+      "discharge",
+      "crunch",
+      "gastro_acid",
+      "thrash",
+      "zap_cannon",
+      "coil",
+      "ion_deluge",
+      "tackle",
       "spark"
     ],
-    "20": [
-      "thunderbolt"
-    ],
-    "32": [
-      "thunder"
-    ],
-    "26": [
-      "swords_dance"
+    "5": [
+      "wild_charge"
     ]
   },
   "evolution": null,

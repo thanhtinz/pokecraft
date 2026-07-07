@@ -19,31 +19,39 @@
   "modelId": "fearow",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "growl"
+      "pluck",
+      "peck",
+      "growl",
+      "leer",
+      "pursuit",
+      "drill_run"
     ],
     "8": [
-      "quick_attack"
+      "assurance"
     ],
-    "14": [
-      "peck"
+    "11": [
+      "fury_attack"
     ],
-    "20": [
-      "hyper_fang"
+    "15": [
+      "aerial_ace"
+    ],
+    "18": [
+      "mirror_move"
+    ],
+    "23": [
+      "take_down"
+    ],
+    "27": [
+      "agility"
     ],
     "32": [
-      "gust"
+      "focus_energy"
     ],
-    "40": [
-      "mega_punch"
+    "36": [
+      "roost"
     ],
-    "48": [
-      "wing_attack"
-    ],
-    "26": [
-      "agility"
+    "41": [
+      "drill_peck"
     ]
   },
   "evolution": null,

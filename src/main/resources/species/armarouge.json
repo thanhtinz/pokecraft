@@ -19,31 +19,48 @@
   "modelId": "armarouge",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "leer"
+      "psyshock",
+      "leer",
+      "ember",
+      "mystical_fire",
+      "astonish",
+      "wide_guard"
     ],
     "8": [
-      "ember"
+      "clear_smog"
     ],
-    "14": [
-      "confusion"
-    ],
-    "20": [
+    "12": [
       "fire_spin"
     ],
-    "32": [
-      "psybeam"
+    "16": [
+      "will_o_wisp"
     ],
-    "40": [
-      "fire_punch"
+    "20": [
+      "night_shade"
+    ],
+    "24": [
+      "flame_charge"
+    ],
+    "28": [
+      "incinerate"
+    ],
+    "32": [
+      "lava_plume"
+    ],
+    "37": [
+      "calm_mind"
+    ],
+    "42": [
+      "ally_switch"
     ],
     "48": [
-      "psychic"
+      "flamethrower"
     ],
-    "26": [
-      "calm_mind"
+    "56": [
+      "expanding_force"
+    ],
+    "62": [
+      "armor_cannon"
     ]
   },
   "evolution": null,

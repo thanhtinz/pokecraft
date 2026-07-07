@@ -18,22 +18,43 @@
   "modelId": "trapinch",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "leer"
+      "sand_attack",
+      "feint_attack",
+      "bide",
+      "astonish"
     ],
     "8": [
+      "bite"
+    ],
+    "12": [
+      "mud_slap"
+    ],
+    "16": [
       "sand_tomb"
     ],
-    "14": [
+    "20": [
+      "bulldoze"
+    ],
+    "24": [
       "dig"
     ],
-    "20": [
+    "28": [
+      "crunch"
+    ],
+    "32": [
+      "sandstorm"
+    ],
+    "36": [
+      "earth_power"
+    ],
+    "40": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "44": [
+      "superpower"
+    ],
+    "48": [
+      "fissure"
     ]
   },
   "evolution": null,

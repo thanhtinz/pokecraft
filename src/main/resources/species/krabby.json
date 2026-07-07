@@ -18,28 +18,46 @@
   "modelId": "krabby",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "mud_sport",
+      "bubble",
+      "leer",
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "metal_claw"
+    ],
+    "12": [
+      "mud_shot"
+    ],
+    "16": [
+      "protect"
     ],
     "20": [
-      "waterfall"
+      "bubble_beam"
+    ],
+    "24": [
+      "stomp"
+    ],
+    "29": [
+      "flail"
     ],
     "32": [
-      "surf"
+      "razor_shell"
+    ],
+    "36": [
+      "slam"
     ],
     "40": [
-      "hydro_pump"
-    ],
-    "26": [
       "swords_dance"
+    ],
+    "44": [
+      "crabhammer"
+    ],
+    "48": [
+      "guillotine"
     ]
   },
   "evolution": null,

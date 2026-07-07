@@ -18,28 +18,40 @@
   "modelId": "shaymin",
   "learnset": {
     "1": [
-      "tackle"
+      "growth"
     ],
-    "4": [
-      "sleep_powder"
+    "10": [
+      "magical_leaf"
     ],
-    "8": [
-      "vine_whip"
+    "19": [
+      "leech_seed"
     ],
-    "14": [
-      "razor_leaf"
+    "28": [
+      "synthesis"
     ],
-    "20": [
-      "seed_bomb"
+    "37": [
+      "sweet_scent"
     ],
-    "32": [
-      "petal_dance"
+    "46": [
+      "natural_gift"
     ],
-    "40": [
-      "solar_beam"
+    "55": [
+      "worry_seed"
     ],
-    "26": [
-      "swords_dance"
+    "64": [
+      "grassy_terrain"
+    ],
+    "73": [
+      "energy_ball"
+    ],
+    "82": [
+      "sweet_kiss"
+    ],
+    "91": [
+      "healing_wish"
+    ],
+    "100": [
+      "seed_flare"
     ]
   },
   "evolution": null,

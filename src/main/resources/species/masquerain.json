@@ -19,31 +19,39 @@
   "modelId": "masquerain",
   "learnset": {
     "1": [
-      "pound"
+      "ominous_wind",
+      "bubble",
+      "quick_attack",
+      "sweet_scent",
+      "water_sport",
+      "whirlwind",
+      "water_gun",
+      "bubble_beam",
+      "mist",
+      "sticky_web",
+      "soak"
     ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
-      "bug_bite"
-    ],
-    "14": [
-      "peck"
-    ],
-    "20": [
-      "pin_missile"
-    ],
-    "32": [
+    "17": [
       "gust"
     ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "drill_peck"
+    "22": [
+      "scary_face",
+      "air_cutter"
     ],
     "26": [
-      "calm_mind"
+      "stun_spore"
+    ],
+    "32": [
+      "air_slash"
+    ],
+    "38": [
+      "giga_drain"
+    ],
+    "44": [
+      "bug_buzz"
+    ],
+    "52": [
+      "quiver_dance"
     ]
   },
   "evolution": null,

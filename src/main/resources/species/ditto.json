@@ -18,31 +18,8 @@
   "modelId": "ditto",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "hyper_fang"
-    ],
-    "20": [
-      "mega_punch"
-    ],
-    "32": [
-      "body_slam"
-    ],
-    "40": [
-      "double_edge"
-    ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "swords_dance"
+      "tackle",
+      "transform"
     ]
   },
   "evolution": null,

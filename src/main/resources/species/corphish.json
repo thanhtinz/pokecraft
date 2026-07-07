@@ -18,28 +18,48 @@
   "modelId": "corphish",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "bubble",
+      "harden",
       "water_gun"
     ],
-    "14": [
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "taunt"
+    ],
+    "12": [
       "bubble_beam"
     ],
+    "16": [
+      "knock_off"
+    ],
     "20": [
-      "waterfall"
+      "double_hit"
+    ],
+    "24": [
+      "protect"
+    ],
+    "28": [
+      "night_slash"
     ],
     "32": [
-      "surf"
+      "razor_shell"
+    ],
+    "36": [
+      "swords_dance"
     ],
     "40": [
-      "hydro_pump"
+      "crunch"
     ],
-    "26": [
-      "swords_dance"
+    "44": [
+      "crabhammer"
+    ],
+    "48": [
+      "endeavor"
+    ],
+    "52": [
+      "guillotine"
     ]
   },
   "evolution": null,

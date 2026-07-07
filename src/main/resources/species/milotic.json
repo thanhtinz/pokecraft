@@ -18,28 +18,54 @@
   "modelId": "milotic",
   "learnset": {
     "1": [
-      "pound"
+      "water_gun",
+      "wrap",
+      "water_sport",
+      "refresh",
+      "water_pulse",
+      "captivate",
+      "flail",
+      "splash",
+      "tackle"
     ],
     "4": [
-      "tail_whip"
+      "disarming_voice"
     ],
     "8": [
-      "water_gun"
+      "twister"
     ],
-    "14": [
-      "bubble_beam"
+    "12": [
+      "aqua_ring"
+    ],
+    "16": [
+      "attract"
     ],
     "20": [
-      "waterfall"
+      "life_dew"
+    ],
+    "24": [
+      "dragon_tail"
+    ],
+    "28": [
+      "recover"
     ],
     "32": [
-      "surf"
+      "aqua_tail"
+    ],
+    "36": [
+      "safeguard"
     ],
     "40": [
-      "hydro_pump"
+      "surf"
     ],
-    "26": [
-      "calm_mind"
+    "44": [
+      "rain_dance"
+    ],
+    "48": [
+      "coil"
+    ],
+    "52": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

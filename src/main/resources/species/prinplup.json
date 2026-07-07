@@ -18,28 +18,41 @@
   "modelId": "prinplup",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "tackle",
+      "growl",
+      "bubble",
+      "water_sport",
+      "metal_claw",
+      "bide",
+      "pound",
       "water_gun"
     ],
-    "14": [
+    "15": [
+      "peck"
+    ],
+    "19": [
       "bubble_beam"
     ],
-    "20": [
-      "waterfall"
+    "24": [
+      "swagger"
     ],
-    "32": [
-      "surf"
+    "28": [
+      "fury_attack"
     ],
-    "40": [
+    "33": [
+      "brine"
+    ],
+    "37": [
+      "whirlpool"
+    ],
+    "42": [
+      "mist"
+    ],
+    "46": [
+      "drill_peck"
+    ],
+    "50": [
       "hydro_pump"
-    ],
-    "26": [
-      "calm_mind"
     ]
   },
   "evolution": null,

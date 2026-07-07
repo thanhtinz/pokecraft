@@ -18,28 +18,49 @@
   "modelId": "floatzel",
   "learnset": {
     "1": [
-      "pound"
+      "ice_fang",
+      "sonic_boom",
+      "growl",
+      "water_sport",
+      "quick_attack",
+      "pursuit",
+      "crunch",
+      "razor_wind",
+      "tackle",
+      "soak"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+    "15": [
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "18": [
+      "bite"
     ],
-    "20": [
-      "waterfall"
+    "21": [
+      "swift"
     ],
-    "32": [
-      "surf"
+    "24": [
+      "aqua_jet"
     ],
-    "40": [
+    "29": [
+      "double_hit"
+    ],
+    "35": [
+      "whirlpool"
+    ],
+    "41": [
+      "liquidation"
+    ],
+    "46": [
+      "aqua_tail"
+    ],
+    "51": [
+      "agility"
+    ],
+    "57": [
       "hydro_pump"
     ],
-    "26": [
-      "agility"
+    "62": [
+      "wave_crash"
     ]
   },
   "evolution": null,

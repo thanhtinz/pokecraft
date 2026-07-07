@@ -19,31 +19,44 @@
   "modelId": "pyroar",
   "learnset": {
     "1": [
-      "pound"
+      "hyper_beam",
+      "tackle",
+      "leer",
+      "ember",
+      "work_up"
     ],
-    "4": [
-      "leer"
+    "11": [
+      "headbutt"
     ],
-    "8": [
-      "ember"
-    ],
-    "14": [
-      "quick_attack"
+    "15": [
+      "noble_roar"
     ],
     "20": [
-      "fire_spin"
+      "take_down"
     ],
-    "32": [
-      "hyper_fang"
+    "23": [
+      "fire_fang"
     ],
-    "40": [
-      "fire_punch"
+    "28": [
+      "endeavor"
+    ],
+    "33": [
+      "echoed_voice"
+    ],
+    "38": [
+      "flamethrower"
+    ],
+    "42": [
+      "crunch"
     ],
     "48": [
-      "mega_punch"
+      "hyper_voice"
     ],
-    "26": [
-      "calm_mind"
+    "51": [
+      "incinerate"
+    ],
+    "57": [
+      "overheat"
     ]
   },
   "evolution": null,

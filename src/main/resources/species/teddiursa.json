@@ -18,31 +18,40 @@
   "modelId": "teddiursa",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "growl"
+      "covet",
+      "scratch",
+      "leer",
+      "lick",
+      "fling",
+      "baby_doll_eyes"
     ],
     "8": [
-      "quick_attack"
+      "fury_swipes"
     ],
-    "14": [
-      "hyper_fang"
+    "13": [
+      "payback"
     ],
-    "20": [
-      "mega_punch"
+    "17": [
+      "sweet_scent"
     ],
-    "32": [
-      "body_slam"
+    "22": [
+      "slash"
     ],
-    "40": [
-      "double_edge"
+    "25": [
+      "play_nice"
     ],
-    "48": [
-      "hyper_beam"
+    "29": [
+      "play_rough"
     ],
-    "26": [
-      "swords_dance"
+    "33": [
+      "charm"
+    ],
+    "37": [
+      "rest",
+      "snore"
+    ],
+    "41": [
+      "thrash"
     ]
   },
   "evolution": null,

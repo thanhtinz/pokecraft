@@ -19,28 +19,46 @@
   "modelId": "orbeetle",
   "learnset": {
     "1": [
-      "scratch"
+      "reflect",
+      "light_screen",
+      "confusion",
+      "struggle_bug"
     ],
     "4": [
-      "string_shot"
+      "confuse_ray"
     ],
     "8": [
-      "bug_bite"
+      "magic_coat"
     ],
-    "14": [
-      "confusion"
+    "12": [
+      "agility"
     ],
-    "20": [
-      "pin_missile"
-    ],
-    "32": [
+    "16": [
       "psybeam"
     ],
-    "40": [
+    "20": [
+      "hypnosis"
+    ],
+    "24": [
+      "ally_switch"
+    ],
+    "28": [
+      "bug_buzz"
+    ],
+    "32": [
+      "mirror_coat"
+    ],
+    "36": [
       "psychic"
     ],
-    "26": [
-      "harden"
+    "40": [
+      "after_you"
+    ],
+    "44": [
+      "calm_mind"
+    ],
+    "48": [
+      "psychic_terrain"
     ]
   },
   "evolution": null,

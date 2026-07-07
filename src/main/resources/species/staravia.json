@@ -19,31 +19,36 @@
   "modelId": "staravia",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
+      "tackle",
+      "growl",
       "quick_attack"
     ],
-    "20": [
-      "gust"
-    ],
-    "32": [
-      "hyper_fang"
-    ],
-    "40": [
+    "9": [
       "wing_attack"
     ],
-    "48": [
-      "mega_punch"
+    "13": [
+      "double_team"
     ],
-    "26": [
+    "18": [
+      "endeavor"
+    ],
+    "23": [
+      "whirlwind"
+    ],
+    "28": [
+      "aerial_ace"
+    ],
+    "33": [
+      "take_down"
+    ],
+    "38": [
       "agility"
+    ],
+    "43": [
+      "brave_bird"
+    ],
+    "48": [
+      "final_gambit"
     ]
   },
   "evolution": null,

@@ -19,31 +19,44 @@
   "modelId": "scolipede",
   "learnset": {
     "1": [
-      "pound"
+      "defense_curl",
+      "rollout",
+      "poison_sting",
+      "pursuit",
+      "protect",
+      "baton_pass",
+      "steamroller",
+      "iron_defense"
     ],
-    "4": [
-      "string_shot"
+    "12": [
+      "poison_tail"
     ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "bug_bite"
+    "16": [
+      "screech"
     ],
     "20": [
-      "acid"
-    ],
-    "32": [
-      "pin_missile"
-    ],
-    "40": [
-      "sludge"
-    ],
-    "48": [
-      "sludge_bomb"
+      "bug_bite"
     ],
     "26": [
+      "venoshock"
+    ],
+    "34": [
+      "take_down"
+    ],
+    "42": [
       "agility"
+    ],
+    "50": [
+      "toxic"
+    ],
+    "58": [
+      "venom_drench"
+    ],
+    "66": [
+      "double_edge"
+    ],
+    "74": [
+      "megahorn"
     ]
   },
   "evolution": null,

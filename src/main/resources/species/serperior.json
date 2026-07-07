@@ -18,28 +18,42 @@
   "modelId": "serperior",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "leer",
+      "vine_whip",
+      "wrap",
+      "leaf_tornado",
+      "wring_out"
     ],
-    "4": [
-      "sleep_powder"
+    "13": [
+      "growth"
     ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
-      "razor_leaf"
+    "16": [
+      "magical_leaf"
     ],
     "20": [
-      "seed_bomb"
+      "leech_seed"
+    ],
+    "24": [
+      "mega_drain"
+    ],
+    "28": [
+      "slam"
     ],
     "32": [
-      "petal_dance"
+      "leaf_blade"
     ],
-    "40": [
-      "solar_beam"
+    "38": [
+      "coil"
     ],
-    "26": [
-      "agility"
+    "44": [
+      "giga_drain"
+    ],
+    "50": [
+      "gastro_acid"
+    ],
+    "56": [
+      "leaf_storm"
     ]
   },
   "evolution": null,

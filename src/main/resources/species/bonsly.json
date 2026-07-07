@@ -18,22 +18,41 @@
   "modelId": "bonsly",
   "learnset": {
     "1": [
-      "tackle"
+      "fake_tears",
+      "copycat"
     ],
     "4": [
-      "harden"
+      "flail"
     ],
     "8": [
       "rock_throw"
     ],
-    "14": [
-      "rock_slide"
+    "12": [
+      "block"
+    ],
+    "16": [
+      "mimic"
     ],
     "20": [
-      "stone_edge"
+      "rock_tomb"
     ],
-    "26": [
-      "harden"
+    "24": [
+      "tearful_look"
+    ],
+    "28": [
+      "sucker_punch"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "36": [
+      "low_kick"
+    ],
+    "40": [
+      "counter"
+    ],
+    "44": [
+      "double_edge"
     ]
   },
   "evolution": null,

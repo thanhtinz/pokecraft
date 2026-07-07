@@ -18,25 +18,50 @@
   "modelId": "arbok",
   "learnset": {
     "1": [
-      "tackle"
+      "ice_fang",
+      "thunder_fang",
+      "fire_fang",
+      "wrap",
+      "leer",
+      "poison_sting",
+      "bite",
+      "crunch",
+      "mud_bomb"
     ],
-    "4": [
-      "poison_powder"
+    "12": [
+      "glare"
     ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "acid"
+    "17": [
+      "screech"
     ],
     "20": [
-      "sludge"
+      "acid"
+    ],
+    "27": [
+      "stockpile",
+      "swallow",
+      "spit_up"
     ],
     "32": [
+      "acid_spray"
+    ],
+    "39": [
       "sludge_bomb"
     ],
-    "26": [
-      "swords_dance"
+    "44": [
+      "gastro_acid"
+    ],
+    "48": [
+      "belch"
+    ],
+    "51": [
+      "haze"
+    ],
+    "56": [
+      "coil"
+    ],
+    "63": [
+      "gunk_shot"
     ]
   },
   "evolution": null,

@@ -18,28 +18,50 @@
   "modelId": "grovyle",
   "learnset": {
     "1": [
-      "scratch"
+      "pound",
+      "leer",
+      "absorb",
+      "quick_attack",
+      "fury_cutter",
+      "pursuit",
+      "agility",
+      "false_swipe",
+      "x_scissor",
+      "energy_ball",
+      "leafage"
     ],
-    "4": [
-      "sleep_powder"
+    "9": [
+      "mega_drain"
     ],
-    "8": [
-      "vine_whip"
+    "12": [
+      "detect"
     ],
-    "14": [
-      "razor_leaf"
+    "15": [
+      "quick_guard"
     ],
     "20": [
-      "seed_bomb"
+      "assurance"
     ],
-    "32": [
-      "petal_dance"
+    "25": [
+      "giga_drain"
+    ],
+    "30": [
+      "slam"
+    ],
+    "35": [
+      "double_team"
     ],
     "40": [
-      "solar_beam"
+      "leaf_blade"
     ],
-    "26": [
-      "agility"
+    "45": [
+      "screech"
+    ],
+    "50": [
+      "endeavor"
+    ],
+    "55": [
+      "leaf_storm"
     ]
   },
   "evolution": null,

@@ -18,22 +18,42 @@
   "modelId": "grumpig",
   "learnset": {
     "1": [
-      "pound"
+      "splash",
+      "psywave",
+      "odor_sleuth",
+      "psybeam",
+      "teeter_dance",
+      "belch",
+      "confusion",
+      "growl"
     ],
-    "4": [
-      "hypnosis"
+    "18": [
+      "psych_up"
     ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "psybeam"
-    ],
-    "20": [
-      "psychic"
+    "22": [
+      "confuse_ray"
     ],
     "26": [
-      "calm_mind"
+      "zen_headbutt"
+    ],
+    "29": [
+      "power_gem"
+    ],
+    "35": [
+      "rest",
+      "snore"
+    ],
+    "42": [
+      "psyshock"
+    ],
+    "46": [
+      "payback"
+    ],
+    "52": [
+      "psychic"
+    ],
+    "60": [
+      "bounce"
     ]
   },
   "evolution": null,

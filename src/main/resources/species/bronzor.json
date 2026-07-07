@@ -19,28 +19,41 @@
   "modelId": "bronzor",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "steel_wing"
-    ],
-    "14": [
+      "tackle",
       "confusion"
     ],
+    "4": [
+      "confuse_ray"
+    ],
+    "8": [
+      "payback"
+    ],
+    "12": [
+      "imprison"
+    ],
+    "16": [
+      "gyro_ball"
+    ],
     "20": [
-      "iron_head"
+      "hypnosis"
+    ],
+    "24": [
+      "safeguard"
+    ],
+    "28": [
+      "extrasensory"
     ],
     "32": [
-      "psybeam"
+      "heavy_slam"
+    ],
+    "36": [
+      "iron_defense"
     ],
     "40": [
-      "psychic"
+      "metal_sound"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "future_sight"
     ]
   },
   "evolution": null,

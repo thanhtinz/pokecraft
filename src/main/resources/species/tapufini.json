@@ -19,31 +19,55 @@
   "modelId": "tapufini",
   "learnset": {
     "1": [
-      "pound"
+      "water_gun",
+      "refresh",
+      "disarming_voice"
     ],
-    "4": [
-      "tail_whip"
+    "5": [
+      "withdraw"
     ],
-    "8": [
-      "water_gun"
+    "10": [
+      "haze",
+      "mist"
     ],
-    "14": [
-      "fairy_wind"
+    "15": [
+      "aqua_ring"
     ],
     "20": [
-      "bubble_beam"
+      "water_pulse"
     ],
-    "32": [
-      "dazzling_gleam"
+    "25": [
+      "brine"
+    ],
+    "30": [
+      "defog"
+    ],
+    "35": [
+      "heal_pulse"
     ],
     "40": [
-      "waterfall"
-    ],
-    "48": [
       "surf"
     ],
-    "26": [
-      "harden"
+    "45": [
+      "muddy_water"
+    ],
+    "50": [
+      "mean_look"
+    ],
+    "55": [
+      "natures_madness"
+    ],
+    "60": [
+      "moonblast"
+    ],
+    "65": [
+      "hydro_pump"
+    ],
+    "70": [
+      "soak"
+    ],
+    "75": [
+      "misty_terrain"
     ]
   },
   "evolution": null,

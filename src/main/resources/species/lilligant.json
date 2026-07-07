@@ -18,28 +18,29 @@
   "modelId": "lilligant",
   "learnset": {
     "1": [
-      "tackle"
+      "growth",
+      "leech_seed",
+      "mega_drain",
+      "synthesis",
+      "teeter_dance",
+      "quiver_dance",
+      "petal_dance",
+      "giga_drain",
+      "sunny_day",
+      "helping_hand",
+      "energy_ball",
+      "after_you",
+      "petal_blizzard",
+      "aromatherapy",
+      "sleep_powder",
+      "entrainment",
+      "leaf_storm",
+      "absorb",
+      "stun_spore",
+      "charm"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
-      "razor_leaf"
-    ],
-    "20": [
-      "seed_bomb"
-    ],
-    "32": [
-      "petal_dance"
-    ],
-    "40": [
-      "solar_beam"
-    ],
-    "26": [
-      "calm_mind"
+    "5": [
+      "magical_leaf"
     ]
   },
   "evolution": null,

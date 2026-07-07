@@ -18,28 +18,44 @@
   "modelId": "finneon",
   "learnset": {
     "1": [
-      "tackle"
+      "pound",
+      "bubble"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+    "6": [
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "13": [
+      "rain_dance"
     ],
-    "20": [
-      "waterfall"
+    "17": [
+      "gust"
     ],
-    "32": [
-      "surf"
-    ],
-    "40": [
-      "hydro_pump"
+    "22": [
+      "water_pulse"
     ],
     "26": [
-      "agility"
+      "captivate"
+    ],
+    "29": [
+      "safeguard"
+    ],
+    "33": [
+      "aqua_ring"
+    ],
+    "38": [
+      "whirlpool"
+    ],
+    "42": [
+      "u_turn"
+    ],
+    "45": [
+      "bounce"
+    ],
+    "49": [
+      "tailwind"
+    ],
+    "54": [
+      "soak"
     ]
   },
   "evolution": null,

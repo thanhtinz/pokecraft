@@ -19,31 +19,43 @@
   "modelId": "magcargo",
   "learnset": {
     "1": [
-      "tackle"
+      "yawn",
+      "smog",
+      "ember",
+      "rock_throw",
+      "earth_power",
+      "flame_burst",
+      "shell_smash"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "rock_throw"
-    ],
-    "14": [
-      "ember"
+    "13": [
+      "harden"
     ],
     "20": [
+      "clear_smog"
+    ],
+    "22": [
+      "ancient_power"
+    ],
+    "27": [
+      "incinerate"
+    ],
+    "29": [
       "rock_slide"
     ],
-    "32": [
-      "fire_spin"
+    "34": [
+      "lava_plume"
     ],
-    "40": [
-      "stone_edge"
+    "36": [
+      "amnesia"
     ],
-    "48": [
-      "fire_punch"
+    "43": [
+      "body_slam"
     ],
-    "26": [
-      "harden"
+    "47": [
+      "recover"
+    ],
+    "54": [
+      "flamethrower"
     ]
   },
   "evolution": null,

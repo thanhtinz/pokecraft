@@ -18,25 +18,41 @@
   "modelId": "tadbulb",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "mud_slap"
     ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
+    "7": [
       "thunder_shock"
     ],
-    "14": [
+    "11": [
+      "water_gun"
+    ],
+    "17": [
+      "charge"
+    ],
+    "21": [
       "spark"
     ],
-    "20": [
-      "thunderbolt"
+    "24": [
+      "mud_shot"
+    ],
+    "25": [
+      "flail"
     ],
     "32": [
-      "thunder"
+      "discharge"
     ],
-    "26": [
-      "calm_mind"
+    "36": [
+      "weather_ball"
+    ],
+    "40": [
+      "electric_terrain"
+    ],
+    "45": [
+      "sucker_punch"
+    ],
+    "50": [
+      "zap_cannon"
     ]
   },
   "evolution": null,

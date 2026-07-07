@@ -19,28 +19,38 @@
   "modelId": "gholdengo",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "astonish"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "steel_wing"
-    ],
-    "14": [
-      "lick"
-    ],
-    "20": [
-      "iron_head"
-    ],
-    "32": [
+    "7": [
       "night_shade"
     ],
-    "40": [
+    "14": [
+      "confuse_ray"
+    ],
+    "21": [
+      "substitute"
+    ],
+    "28": [
+      "metal_sound"
+    ],
+    "35": [
       "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "42": [
+      "recover"
+    ],
+    "49": [
+      "power_gem"
+    ],
+    "56": [
+      "make_it_rain"
+    ],
+    "63": [
+      "nasty_plot"
+    ],
+    "70": [
+      "memento"
     ]
   },
   "evolution": null,

@@ -19,31 +19,47 @@
   "modelId": "houndoom",
   "learnset": {
     "1": [
-      "scratch"
+      "thunder_fang",
+      "leer",
+      "ember",
+      "howl",
+      "smog",
+      "odor_sleuth",
+      "feint_attack",
+      "nasty_plot"
     ],
-    "4": [
-      "leer"
+    "13": [
+      "roar"
     ],
-    "8": [
-      "ember"
-    ],
-    "14": [
+    "16": [
       "bite"
     ],
     "20": [
-      "fire_spin"
-    ],
-    "32": [
-      "crunch"
-    ],
-    "40": [
-      "fire_punch"
-    ],
-    "48": [
-      "flamethrower"
+      "incinerate"
     ],
     "26": [
-      "calm_mind"
+      "beat_up"
+    ],
+    "30": [
+      "fire_fang"
+    ],
+    "35": [
+      "torment"
+    ],
+    "41": [
+      "comeuppance"
+    ],
+    "45": [
+      "foul_play"
+    ],
+    "50": [
+      "flamethrower"
+    ],
+    "56": [
+      "crunch"
+    ],
+    "62": [
+      "inferno"
     ]
   },
   "evolution": null,

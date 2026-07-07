@@ -18,25 +18,50 @@
   "modelId": "raikou",
   "learnset": {
     "1": [
-      "tackle"
+      "leer",
+      "thunder_shock",
+      "quick_attack",
+      "extreme_speed",
+      "charge"
     ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
+    "6": [
       "spark"
     ],
-    "20": [
-      "thunderbolt"
+    "12": [
+      "bite"
     ],
-    "32": [
+    "18": [
+      "calm_mind"
+    ],
+    "24": [
+      "roar"
+    ],
+    "30": [
+      "thunder_fang"
+    ],
+    "36": [
+      "howl"
+    ],
+    "42": [
+      "crunch"
+    ],
+    "48": [
+      "extrasensory"
+    ],
+    "54": [
+      "discharge"
+    ],
+    "60": [
+      "reflect"
+    ],
+    "66": [
+      "rain_dance"
+    ],
+    "72": [
       "thunder"
     ],
-    "26": [
-      "calm_mind"
+    "78": [
+      "zap_cannon"
     ]
   },
   "evolution": null,

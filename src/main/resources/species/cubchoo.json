@@ -18,25 +18,51 @@
   "modelId": "cubchoo",
   "learnset": {
     "1": [
-      "scratch"
+      "powder_snow",
+      "growl",
+      "bide"
     ],
-    "4": [
-      "leer"
+    "3": [
+      "endure"
     ],
-    "8": [
-      "ice_shard"
+    "6": [
+      "fury_swipes"
     ],
-    "14": [
-      "aurora_beam"
+    "9": [
+      "icy_wind"
     ],
-    "20": [
-      "ice_beam"
+    "12": [
+      "play_nice"
     ],
-    "32": [
+    "15": [
+      "brine"
+    ],
+    "18": [
+      "frost_breath"
+    ],
+    "21": [
+      "slash"
+    ],
+    "24": [
+      "flail"
+    ],
+    "27": [
+      "charm"
+    ],
+    "30": [
+      "snowscape"
+    ],
+    "33": [
+      "thrash"
+    ],
+    "36": [
+      "rest"
+    ],
+    "39": [
       "blizzard"
     ],
-    "26": [
-      "swords_dance"
+    "42": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

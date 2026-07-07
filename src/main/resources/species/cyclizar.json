@@ -19,31 +19,44 @@
   "modelId": "cyclizar",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "growl"
     ],
-    "4": [
-      "leer"
+    "7": [
+      "rapid_spin"
     ],
-    "8": [
-      "quick_attack"
+    "11": [
+      "taunt"
     ],
     "14": [
-      "twister"
+      "breaking_swipe"
     ],
-    "20": [
-      "hyper_fang"
+    "18": [
+      "quick_attack"
     ],
-    "32": [
-      "dragon_breath"
+    "23": [
+      "bite"
     ],
-    "40": [
-      "mega_punch"
+    "27": [
+      "u_turn"
     ],
-    "48": [
+    "31": [
+      "shed_tail"
+    ],
+    "36": [
       "dragon_claw"
     ],
-    "26": [
-      "agility"
+    "40": [
+      "shift_gear"
+    ],
+    "45": [
+      "dragon_pulse"
+    ],
+    "51": [
+      "double_edge"
+    ],
+    "57": [
+      "dragon_rush"
     ]
   },
   "evolution": null,

@@ -18,25 +18,35 @@
   "modelId": "clobbopus",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "rock_smash",
       "leer"
     ],
-    "8": [
-      "karate_chop"
+    "5": [
+      "feint"
     ],
-    "14": [
-      "low_kick"
+    "10": [
+      "bind"
+    ],
+    "15": [
+      "detect"
     ],
     "20": [
       "brick_break"
     ],
-    "32": [
-      "cross_chop"
+    "25": [
+      "bulk_up"
     ],
-    "26": [
-      "swords_dance"
+    "30": [
+      "submission"
+    ],
+    "35": [
+      "taunt"
+    ],
+    "40": [
+      "reversal"
+    ],
+    "45": [
+      "superpower"
     ]
   },
   "evolution": null,

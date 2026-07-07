@@ -19,31 +19,26 @@
   "modelId": "azurill",
   "learnset": {
     "1": [
-      "scratch"
+      "splash",
+      "tail_whip",
+      "bubble",
+      "water_gun",
+      "water_sport"
     ],
-    "4": [
-      "growl"
+    "3": [
+      "helping_hand"
     ],
-    "8": [
-      "quick_attack"
+    "6": [
+      "bubble_beam"
     ],
-    "14": [
-      "fairy_wind"
+    "9": [
+      "charm"
     ],
-    "20": [
-      "hyper_fang"
+    "12": [
+      "slam"
     ],
-    "32": [
-      "dazzling_gleam"
-    ],
-    "40": [
-      "mega_punch"
-    ],
-    "48": [
-      "body_slam"
-    ],
-    "26": [
-      "harden"
+    "15": [
+      "bounce"
     ]
   },
   "evolution": null,

@@ -18,28 +18,47 @@
   "modelId": "golduck",
   "learnset": {
     "1": [
-      "scratch"
+      "aqua_jet",
+      "water_sport",
+      "scratch",
+      "tail_whip",
+      "water_gun",
+      "confusion",
+      "me_first",
+      "bubble"
     ],
-    "4": [
-      "tail_whip"
+    "9": [
+      "fury_swipes"
     ],
-    "8": [
-      "water_gun"
+    "12": [
+      "water_pulse"
     ],
-    "14": [
-      "bubble_beam"
+    "15": [
+      "disable"
     ],
-    "20": [
-      "waterfall"
+    "18": [
+      "zen_headbutt"
     ],
-    "32": [
-      "surf"
+    "21": [
+      "screech"
+    ],
+    "24": [
+      "aqua_tail"
+    ],
+    "27": [
+      "soak"
+    ],
+    "30": [
+      "psych_up"
+    ],
+    "36": [
+      "amnesia"
     ],
     "40": [
       "hydro_pump"
     ],
-    "26": [
-      "calm_mind"
+    "45": [
+      "wonder_room"
     ]
   },
   "evolution": null,

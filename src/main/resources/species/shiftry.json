@@ -19,31 +19,36 @@
   "modelId": "shiftry",
   "learnset": {
     "1": [
+      "feint_attack",
+      "whirlwind",
+      "nasty_plot",
+      "razor_leaf",
+      "leaf_storm",
+      "explosion",
+      "rollout",
+      "synthesis",
+      "sunny_day",
+      "torment",
+      "air_cutter",
+      "payback",
+      "sucker_punch",
+      "leaf_tornado",
+      "hurricane",
+      "nature_power",
+      "fake_out",
+      "swagger",
+      "growth",
+      "mega_drain",
+      "extrasensory",
+      "leaf_blade",
+      "tackle",
+      "harden",
+      "absorb",
+      "astonish",
+      "beat_up",
+      "razor_wind",
+      "bide",
       "pound"
-    ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "bite"
-    ],
-    "14": [
-      "vine_whip"
-    ],
-    "20": [
-      "crunch"
-    ],
-    "32": [
-      "razor_leaf"
-    ],
-    "40": [
-      "seed_bomb"
-    ],
-    "48": [
-      "petal_dance"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

@@ -19,31 +19,41 @@
   "modelId": "pumpkaboo",
   "learnset": {
     "1": [
-      "pound"
+      "astonish",
+      "trick_or_treat"
     ],
     "4": [
-      "hypnosis"
+      "shadow_sneak"
     ],
     "8": [
-      "lick"
+      "confuse_ray"
     ],
-    "14": [
-      "vine_whip"
-    ],
-    "20": [
-      "night_shade"
-    ],
-    "32": [
+    "12": [
       "razor_leaf"
     ],
-    "40": [
-      "shadow_ball"
+    "16": [
+      "leech_seed"
     ],
-    "48": [
+    "20": [
+      "bullet_seed"
+    ],
+    "24": [
+      "scary_face"
+    ],
+    "28": [
+      "worry_seed"
+    ],
+    "32": [
       "seed_bomb"
     ],
-    "26": [
-      "harden"
+    "36": [
+      "shadow_ball"
+    ],
+    "40": [
+      "trick"
+    ],
+    "44": [
+      "pain_split"
     ]
   },
   "evolution": null,

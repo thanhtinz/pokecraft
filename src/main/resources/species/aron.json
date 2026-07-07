@@ -19,28 +19,53 @@
   "modelId": "aron",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "harden"
     ],
     "4": [
-      "harden"
+      "metal_claw"
     ],
     "8": [
-      "steel_wing"
+      "rock_tomb"
     ],
-    "14": [
-      "rock_throw"
+    "12": [
+      "roar"
+    ],
+    "16": [
+      "headbutt"
     ],
     "20": [
-      "iron_head"
+      "protect"
     ],
-    "32": [
+    "24": [
       "rock_slide"
     ],
-    "40": [
-      "stone_edge"
+    "28": [
+      "iron_head"
     ],
-    "26": [
-      "harden"
+    "33": [
+      "metal_sound"
+    ],
+    "36": [
+      "take_down"
+    ],
+    "40": [
+      "autotomize"
+    ],
+    "44": [
+      "iron_tail"
+    ],
+    "48": [
+      "iron_defense"
+    ],
+    "52": [
+      "heavy_slam"
+    ],
+    "56": [
+      "double_edge"
+    ],
+    "60": [
+      "metal_burst"
     ]
   },
   "evolution": null,

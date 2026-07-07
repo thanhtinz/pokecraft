@@ -19,31 +19,39 @@
   "modelId": "snover",
   "learnset": {
     "1": [
-      "tackle"
+      "powder_snow",
+      "leer",
+      "grass_whistle"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "leafage"
     ],
-    "8": [
+    "10": [
+      "mist"
+    ],
+    "15": [
       "ice_shard"
     ],
-    "14": [
-      "vine_whip"
-    ],
     "20": [
-      "aurora_beam"
-    ],
-    "32": [
       "razor_leaf"
     ],
-    "40": [
-      "ice_beam"
+    "25": [
+      "icy_wind"
     ],
-    "48": [
-      "seed_bomb"
+    "30": [
+      "swagger"
     ],
-    "26": [
-      "swords_dance"
+    "35": [
+      "ingrain"
+    ],
+    "41": [
+      "wood_hammer"
+    ],
+    "45": [
+      "blizzard"
+    ],
+    "50": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

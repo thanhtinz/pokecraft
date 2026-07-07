@@ -19,28 +19,49 @@
   "modelId": "aggron",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "harden",
+      "metal_claw",
+      "rock_tomb"
     ],
-    "4": [
-      "harden"
+    "12": [
+      "roar"
     ],
-    "8": [
-      "steel_wing"
-    ],
-    "14": [
-      "rock_throw"
+    "16": [
+      "headbutt"
     ],
     "20": [
-      "iron_head"
+      "protect"
     ],
-    "32": [
+    "24": [
       "rock_slide"
     ],
-    "40": [
-      "stone_edge"
+    "28": [
+      "iron_head"
     ],
-    "26": [
-      "harden"
+    "35": [
+      "metal_sound"
+    ],
+    "40": [
+      "take_down"
+    ],
+    "48": [
+      "autotomize"
+    ],
+    "56": [
+      "iron_tail"
+    ],
+    "64": [
+      "iron_defense"
+    ],
+    "72": [
+      "heavy_slam"
+    ],
+    "80": [
+      "double_edge"
+    ],
+    "88": [
+      "metal_burst"
     ]
   },
   "evolution": null,

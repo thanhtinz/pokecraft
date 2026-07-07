@@ -19,31 +19,38 @@
   "modelId": "ledian",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "supersonic",
+      "swift"
     ],
-    "4": [
-      "string_shot"
+    "12": [
+      "light_screen",
+      "reflect",
+      "safeguard"
     ],
-    "8": [
-      "bug_bite"
-    ],
-    "14": [
-      "peck"
+    "15": [
+      "mach_punch"
     ],
     "20": [
-      "pin_missile"
+      "roost"
     ],
-    "32": [
-      "gust"
+    "24": [
+      "comet_punch"
     ],
-    "40": [
-      "wing_attack"
+    "29": [
+      "baton_pass"
     ],
-    "48": [
-      "drill_peck"
-    ],
-    "26": [
+    "33": [
       "agility"
+    ],
+    "38": [
+      "bug_buzz"
+    ],
+    "42": [
+      "air_slash"
+    ],
+    "47": [
+      "double_edge"
     ]
   },
   "evolution": null,

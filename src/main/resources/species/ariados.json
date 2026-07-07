@@ -19,31 +19,55 @@
   "modelId": "ariados",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "string_shot"
+      "bug_bite",
+      "poison_sting",
+      "string_shot",
+      "constrict",
+      "spider_web",
+      "venom_drench",
+      "fell_stinger",
+      "swords_dance",
+      "focus_energy",
+      "absorb"
     ],
     "8": [
-      "bug_bite"
+      "infestation"
     ],
-    "14": [
-      "poison_sting"
+    "12": [
+      "scary_face"
     ],
-    "20": [
+    "15": [
+      "night_shade"
+    ],
+    "19": [
+      "shadow_sneak"
+    ],
+    "23": [
+      "fury_swipes"
+    ],
+    "28": [
+      "sucker_punch"
+    ],
+    "31": [
+      "agility"
+    ],
+    "35": [
       "pin_missile"
     ],
-    "32": [
-      "acid"
+    "41": [
+      "psychic"
     ],
-    "40": [
-      "sludge"
+    "46": [
+      "poison_jab"
     ],
-    "48": [
-      "sludge_bomb"
+    "50": [
+      "cross_poison"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "sticky_web"
+    ],
+    "59": [
+      "toxic_thread"
     ]
   },
   "evolution": null,

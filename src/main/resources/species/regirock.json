@@ -18,22 +18,47 @@
   "modelId": "regirock",
   "learnset": {
     "1": [
-      "pound"
+      "rock_throw",
+      "charge_beam"
     ],
-    "4": [
-      "harden"
+    "6": [
+      "bulldoze"
     ],
-    "8": [
-      "rock_throw"
+    "12": [
+      "ancient_power"
     ],
-    "14": [
+    "18": [
+      "stomp"
+    ],
+    "24": [
       "rock_slide"
     ],
-    "20": [
+    "30": [
+      "curse"
+    ],
+    "36": [
+      "iron_defense"
+    ],
+    "42": [
+      "hammer_arm"
+    ],
+    "48": [
       "stone_edge"
     ],
-    "26": [
-      "harden"
+    "54": [
+      "superpower"
+    ],
+    "60": [
+      "lock_on"
+    ],
+    "66": [
+      "zap_cannon"
+    ],
+    "72": [
+      "hyper_beam"
+    ],
+    "78": [
+      "explosion"
     ]
   },
   "evolution": null,

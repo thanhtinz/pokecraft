@@ -19,31 +19,42 @@
   "modelId": "doduo",
   "learnset": {
     "1": [
-      "tackle"
+      "peck",
+      "growl",
+      "rage"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
+    "5": [
       "quick_attack"
     ],
+    "9": [
+      "fury_attack"
+    ],
     "14": [
-      "peck"
+      "pluck"
     ],
-    "20": [
-      "hyper_fang"
+    "19": [
+      "double_hit"
     ],
-    "32": [
-      "gust"
+    "23": [
+      "agility"
     ],
-    "40": [
-      "mega_punch"
+    "27": [
+      "uproar"
     ],
-    "48": [
-      "wing_attack"
+    "30": [
+      "acupressure"
     ],
-    "26": [
+    "33": [
       "swords_dance"
+    ],
+    "36": [
+      "drill_peck"
+    ],
+    "39": [
+      "endeavor"
+    ],
+    "43": [
+      "thrash"
     ]
   },
   "evolution": null,

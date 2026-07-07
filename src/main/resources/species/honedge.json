@@ -19,28 +19,45 @@
   "modelId": "honedge",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "fury_cutter",
+      "pursuit"
     ],
     "4": [
-      "harden"
+      "shadow_sneak"
     ],
     "8": [
-      "lick"
+      "autotomize"
     ],
-    "14": [
-      "steel_wing"
+    "12": [
+      "aerial_ace"
+    ],
+    "16": [
+      "metal_sound"
     ],
     "20": [
-      "night_shade"
+      "slash"
+    ],
+    "24": [
+      "night_slash"
+    ],
+    "28": [
+      "retaliate"
     ],
     "32": [
+      "iron_defense"
+    ],
+    "36": [
       "iron_head"
     ],
     "40": [
-      "shadow_ball"
+      "power_trick"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "swords_dance"
+    ],
+    "48": [
+      "sacred_sword"
     ]
   },
   "evolution": null,

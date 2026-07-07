@@ -19,31 +19,54 @@
   "modelId": "latios",
   "learnset": {
     "1": [
-      "tackle"
+      "psywave",
+      "heal_block",
+      "refresh",
+      "psycho_shift",
+      "dragon_dance",
+      "stored_power"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "helping_hand"
     ],
-    "8": [
+    "10": [
+      "recover"
+    ],
+    "15": [
       "confusion"
     ],
-    "14": [
-      "twister"
-    ],
     "20": [
-      "psybeam"
+      "tailwind"
     ],
-    "32": [
+    "25": [
       "dragon_breath"
     ],
+    "30": [
+      "ally_switch"
+    ],
+    "35": [
+      "luster_purge"
+    ],
     "40": [
+      "zen_headbutt"
+    ],
+    "45": [
+      "dragon_pulse"
+    ],
+    "50": [
+      "heal_pulse"
+    ],
+    "55": [
+      "simple_beam"
+    ],
+    "60": [
       "psychic"
     ],
-    "48": [
-      "dragon_claw"
+    "65": [
+      "power_split"
     ],
-    "26": [
-      "calm_mind"
+    "70": [
+      "memento"
     ]
   },
   "evolution": null,

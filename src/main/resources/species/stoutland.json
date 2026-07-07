@@ -18,31 +18,44 @@
   "modelId": "stoutland",
   "learnset": {
     "1": [
-      "scratch"
+      "ice_fang",
+      "fire_fang",
+      "thunder_fang",
+      "leer",
+      "tackle",
+      "odor_sleuth",
+      "bite",
+      "work_up"
     ],
-    "4": [
-      "growl"
+    "12": [
+      "retaliate"
     ],
-    "8": [
-      "quick_attack"
+    "19": [
+      "baby_doll_eyes"
     ],
-    "14": [
-      "hyper_fang"
+    "24": [
+      "play_rough"
     ],
-    "20": [
-      "mega_punch"
+    "30": [
+      "crunch"
     ],
-    "32": [
-      "body_slam"
+    "38": [
+      "take_down"
     ],
-    "40": [
-      "double_edge"
+    "46": [
+      "helping_hand"
     ],
-    "48": [
-      "hyper_beam"
+    "54": [
+      "reversal"
     ],
-    "26": [
-      "swords_dance"
+    "62": [
+      "roar"
+    ],
+    "70": [
+      "last_resort"
+    ],
+    "78": [
+      "giga_impact"
     ]
   },
   "evolution": null,

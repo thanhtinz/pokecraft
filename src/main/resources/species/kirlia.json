@@ -19,28 +19,44 @@
   "modelId": "kirlia",
   "learnset": {
     "1": [
-      "pound"
+      "growl",
+      "confusion",
+      "double_team",
+      "lucky_chant",
+      "disarming_voice"
     ],
-    "4": [
+    "9": [
       "hypnosis"
     ],
-    "8": [
-      "fairy_wind"
+    "12": [
+      "draining_kiss"
     ],
-    "14": [
-      "confusion"
+    "15": [
+      "teleport"
     ],
-    "20": [
-      "dazzling_gleam"
-    ],
-    "32": [
+    "18": [
       "psybeam"
     ],
-    "40": [
+    "23": [
+      "life_dew"
+    ],
+    "28": [
+      "charm"
+    ],
+    "33": [
+      "calm_mind"
+    ],
+    "38": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "43": [
+      "heal_pulse"
+    ],
+    "48": [
+      "dream_eater"
+    ],
+    "53": [
+      "future_sight"
     ]
   },
   "evolution": null,

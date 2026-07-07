@@ -19,28 +19,44 @@
   "modelId": "excadrill",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "mud_sport",
+      "rapid_spin",
+      "mud_slap",
+      "hone_claws",
+      "slash",
+      "horn_drill",
+      "rototiller"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "fury_swipes"
     ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
-      "steel_wing"
+    "16": [
+      "metal_claw"
     ],
     "20": [
+      "sandstorm"
+    ],
+    "24": [
+      "crush_claw"
+    ],
+    "28": [
+      "rock_slide"
+    ],
+    "34": [
       "dig"
     ],
-    "32": [
-      "iron_head"
-    ],
     "40": [
+      "swords_dance"
+    ],
+    "46": [
+      "drill_run"
+    ],
+    "52": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "58": [
+      "fissure"
     ]
   },
   "evolution": null,

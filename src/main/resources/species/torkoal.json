@@ -18,28 +18,57 @@
   "modelId": "torkoal",
   "learnset": {
     "1": [
-      "tackle"
+      "ember",
+      "smog",
+      "flail"
     ],
     "4": [
-      "leer"
+      "withdraw"
     ],
     "8": [
-      "ember"
+      "rapid_spin"
     ],
-    "14": [
-      "fire_spin"
+    "12": [
+      "smokescreen"
+    ],
+    "16": [
+      "clear_smog"
     ],
     "20": [
-      "fire_punch"
+      "flame_wheel"
+    ],
+    "24": [
+      "protect"
+    ],
+    "28": [
+      "lava_plume"
     ],
     "32": [
-      "flamethrower"
+      "body_slam"
+    ],
+    "36": [
+      "iron_defense"
     ],
     "40": [
-      "fire_blast"
+      "flamethrower"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "curse"
+    ],
+    "48": [
+      "heat_wave"
+    ],
+    "52": [
+      "amnesia"
+    ],
+    "56": [
+      "inferno"
+    ],
+    "60": [
+      "shell_smash"
+    ],
+    "64": [
+      "eruption"
     ]
   },
   "evolution": null,

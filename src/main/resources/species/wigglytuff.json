@@ -19,31 +19,32 @@
   "modelId": "wigglytuff",
   "learnset": {
     "1": [
-      "scratch"
+      "sing",
+      "disable",
+      "defense_curl",
+      "double_slap",
+      "rest",
+      "gyro_ball",
+      "hyper_voice",
+      "covet",
+      "echoed_voice",
+      "double_edge",
+      "sweet_kiss",
+      "disarming_voice",
+      "charm",
+      "stockpile",
+      "swallow",
+      "spit_up",
+      "round",
+      "body_slam",
+      "mimic",
+      "pound",
+      "copycat",
+      "wake_up_slap",
+      "play_nice"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "fairy_wind"
-    ],
-    "20": [
-      "hyper_fang"
-    ],
-    "32": [
-      "dazzling_gleam"
-    ],
-    "40": [
-      "mega_punch"
-    ],
-    "48": [
-      "body_slam"
-    ],
-    "26": [
-      "calm_mind"
+    "5": [
+      "play_rough"
     ]
   },
   "evolution": null,

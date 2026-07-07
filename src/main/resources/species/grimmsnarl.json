@@ -19,25 +19,44 @@
   "modelId": "grimmsnarl",
   "learnset": {
     "1": [
-      "tackle"
+      "spirit_break",
+      "false_surrender",
+      "bulk_up",
+      "power_up_punch",
+      "fake_out",
+      "confide",
+      "bite",
+      "flatter"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "fake_tears"
     ],
-    "8": [
-      "fairy_wind"
-    ],
-    "14": [
-      "bite"
+    "16": [
+      "assurance"
     ],
     "20": [
-      "dazzling_gleam"
+      "swagger"
     ],
-    "32": [
-      "crunch"
+    "24": [
+      "sucker_punch"
     ],
-    "26": [
-      "swords_dance"
+    "28": [
+      "torment"
+    ],
+    "35": [
+      "dark_pulse"
+    ],
+    "40": [
+      "nasty_plot"
+    ],
+    "48": [
+      "play_rough"
+    ],
+    "56": [
+      "foul_play"
+    ],
+    "64": [
+      "hammer_arm"
     ]
   },
   "evolution": null,

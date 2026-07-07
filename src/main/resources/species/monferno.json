@@ -19,31 +19,40 @@
   "modelId": "monferno",
   "learnset": {
     "1": [
-      "scratch"
+      "scratch",
+      "leer",
+      "ember",
+      "mach_punch"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "taunt"
     ],
-    "8": [
-      "karate_chop"
+    "16": [
+      "fury_swipes"
     ],
-    "14": [
-      "ember"
-    ],
-    "20": [
-      "low_kick"
-    ],
-    "32": [
-      "fire_spin"
-    ],
-    "40": [
-      "brick_break"
-    ],
-    "48": [
-      "fire_punch"
+    "19": [
+      "flame_wheel"
     ],
     "26": [
-      "agility"
+      "feint"
+    ],
+    "29": [
+      "torment"
+    ],
+    "36": [
+      "close_combat"
+    ],
+    "39": [
+      "fire_spin"
+    ],
+    "46": [
+      "acrobatics"
+    ],
+    "49": [
+      "slack_off"
+    ],
+    "56": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

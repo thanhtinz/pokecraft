@@ -19,31 +19,42 @@
   "modelId": "sharpedo",
   "learnset": {
     "1": [
-      "scratch"
+      "feint",
+      "leer",
+      "rage",
+      "focus_energy",
+      "slash",
+      "aqua_jet",
+      "skull_bash",
+      "night_slash",
+      "poison_fang"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "scary_face"
     ],
-    "8": [
+    "16": [
       "bite"
     ],
-    "14": [
-      "water_gun"
-    ],
     "20": [
+      "ice_fang"
+    ],
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "swagger"
+    ],
+    "34": [
       "crunch"
     ],
-    "32": [
-      "bubble_beam"
-    ],
     "40": [
-      "waterfall"
+      "agility"
     ],
-    "48": [
-      "surf"
+    "46": [
+      "liquidation"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "take_down"
     ]
   },
   "evolution": null,

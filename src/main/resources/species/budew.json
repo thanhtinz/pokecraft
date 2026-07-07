@@ -19,31 +19,12 @@
   "modelId": "budew",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
-      "poison_sting"
-    ],
-    "20": [
-      "razor_leaf"
-    ],
-    "32": [
-      "acid"
-    ],
-    "40": [
-      "seed_bomb"
-    ],
-    "48": [
-      "sludge"
-    ],
-    "26": [
-      "agility"
+      "absorb",
+      "growth",
+      "water_sport",
+      "stun_spore",
+      "mega_drain",
+      "worry_seed"
     ]
   },
   "evolution": null,

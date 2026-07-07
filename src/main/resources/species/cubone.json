@@ -18,22 +18,46 @@
   "modelId": "cubone",
   "learnset": {
     "1": [
-      "pound"
+      "growl",
+      "bone_club",
+      "leer",
+      "mud_slap"
     ],
     "4": [
-      "leer"
+      "tail_whip"
     ],
     "8": [
-      "sand_tomb"
+      "false_swipe"
     ],
-    "14": [
-      "dig"
+    "12": [
+      "headbutt"
+    ],
+    "16": [
+      "retaliate"
     ],
     "20": [
-      "earthquake"
+      "fling"
     ],
-    "26": [
-      "harden"
+    "24": [
+      "stomping_tantrum"
+    ],
+    "29": [
+      "bone_rush"
+    ],
+    "32": [
+      "focus_energy"
+    ],
+    "36": [
+      "endeavor"
+    ],
+    "40": [
+      "bonemerang"
+    ],
+    "44": [
+      "thrash"
+    ],
+    "48": [
+      "double_edge"
     ]
   },
   "evolution": null,

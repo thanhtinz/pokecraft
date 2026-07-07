@@ -19,31 +19,41 @@
   "modelId": "rotom",
   "learnset": {
     "1": [
-      "pound"
+      "astonish",
+      "double_team"
     ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "lick"
-    ],
-    "14": [
+    "5": [
       "thunder_shock"
     ],
-    "20": [
-      "night_shade"
+    "10": [
+      "confuse_ray"
     ],
-    "32": [
-      "spark"
+    "15": [
+      "charge"
+    ],
+    "20": [
+      "electro_ball"
+    ],
+    "25": [
+      "thunder_wave"
+    ],
+    "30": [
+      "shock_wave"
+    ],
+    "35": [
+      "hex"
     ],
     "40": [
-      "shadow_ball"
+      "substitute"
     ],
-    "48": [
-      "thunderbolt"
+    "45": [
+      "trick"
     ],
-    "26": [
-      "calm_mind"
+    "50": [
+      "discharge"
+    ],
+    "55": [
+      "uproar"
     ]
   },
   "evolution": null,

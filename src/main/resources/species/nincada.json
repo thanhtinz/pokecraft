@@ -19,28 +19,32 @@
   "modelId": "nincada",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "sand_attack"
     ],
-    "4": [
-      "string_shot"
+    "5": [
+      "harden"
     ],
-    "8": [
-      "bug_bite"
+    "10": [
+      "false_swipe"
     ],
-    "14": [
-      "sand_tomb"
+    "15": [
+      "mud_slap"
     ],
-    "20": [
-      "pin_missile"
+    "21": [
+      "absorb"
     ],
-    "32": [
-      "dig"
+    "25": [
+      "metal_claw"
+    ],
+    "30": [
+      "fury_swipes"
+    ],
+    "35": [
+      "mind_reader"
     ],
     "40": [
-      "earthquake"
-    ],
-    "26": [
-      "harden"
+      "dig"
     ]
   },
   "evolution": null,

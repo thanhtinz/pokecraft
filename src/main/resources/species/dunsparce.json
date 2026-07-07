@@ -18,31 +18,49 @@
   "modelId": "dunsparce",
   "learnset": {
     "1": [
-      "pound"
+      "rage",
+      "defense_curl",
+      "pursuit",
+      "flail"
     ],
     "4": [
-      "growl"
+      "mud_slap"
     ],
     "8": [
-      "quick_attack"
+      "rollout"
     ],
-    "14": [
-      "hyper_fang"
+    "12": [
+      "glare"
+    ],
+    "16": [
+      "screech"
     ],
     "20": [
-      "mega_punch"
+      "ancient_power"
+    ],
+    "24": [
+      "drill_run"
+    ],
+    "28": [
+      "yawn"
     ],
     "32": [
-      "body_slam"
+      "hyper_drill"
+    ],
+    "36": [
+      "roost"
     ],
     "40": [
-      "double_edge"
+      "dragon_rush"
+    ],
+    "44": [
+      "coil"
     ],
     "48": [
-      "hyper_beam"
+      "double_edge"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "endeavor"
     ]
   },
   "evolution": null,

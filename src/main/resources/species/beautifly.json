@@ -19,31 +19,45 @@
   "modelId": "beautifly",
   "learnset": {
     "1": [
-      "tackle"
+      "gust",
+      "string_shot",
+      "bug_bite",
+      "tackle",
+      "harden",
+      "poison_sting"
     ],
-    "4": [
-      "string_shot"
+    "12": [
+      "absorb"
     ],
-    "8": [
-      "peck"
+    "15": [
+      "stun_spore"
     ],
-    "14": [
-      "bug_bite"
+    "17": [
+      "morning_sun"
     ],
     "20": [
-      "gust"
+      "air_cutter"
+    ],
+    "22": [
+      "mega_drain"
+    ],
+    "27": [
+      "attract"
+    ],
+    "30": [
+      "whirlwind"
     ],
     "32": [
-      "pin_missile"
+      "giga_drain"
+    ],
+    "35": [
+      "bug_buzz"
+    ],
+    "37": [
+      "rage"
     ],
     "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "drill_peck"
-    ],
-    "26": [
-      "calm_mind"
+      "quiver_dance"
     ]
   },
   "evolution": null,

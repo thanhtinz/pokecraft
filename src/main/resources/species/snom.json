@@ -19,31 +19,8 @@
   "modelId": "snom",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "ice_shard"
-    ],
-    "14": [
-      "bug_bite"
-    ],
-    "20": [
-      "aurora_beam"
-    ],
-    "32": [
-      "pin_missile"
-    ],
-    "40": [
-      "ice_beam"
-    ],
-    "48": [
-      "blizzard"
-    ],
-    "26": [
-      "calm_mind"
+      "powder_snow",
+      "struggle_bug"
     ]
   },
   "evolution": null,

@@ -19,31 +19,45 @@
   "modelId": "altaria",
   "learnset": {
     "1": [
-      "scratch"
+      "pluck",
+      "peck",
+      "growl",
+      "astonish",
+      "mist",
+      "refresh",
+      "dragon_pulse",
+      "disarming_voice",
+      "natural_gift"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "fury_attack"
     ],
-    "8": [
-      "twister"
-    ],
-    "14": [
-      "peck"
+    "16": [
+      "round"
     ],
     "20": [
       "dragon_breath"
     ],
+    "24": [
+      "safeguard"
+    ],
+    "28": [
+      "sing"
+    ],
     "32": [
-      "gust"
+      "cotton_guard"
     ],
-    "40": [
-      "dragon_claw"
+    "38": [
+      "take_down"
     ],
-    "48": [
-      "wing_attack"
+    "44": [
+      "moonblast"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "perish_song"
+    ],
+    "56": [
+      "sky_attack"
     ]
   },
   "evolution": null,

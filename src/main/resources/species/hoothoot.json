@@ -19,31 +19,48 @@
   "modelId": "hoothoot",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "growl"
-    ],
-    "8": [
+      "growl",
+      "foresight",
       "peck"
     ],
-    "14": [
-      "quick_attack"
+    "3": [
+      "tackle"
     ],
-    "20": [
-      "gust"
+    "6": [
+      "echoed_voice"
     ],
-    "32": [
-      "hyper_fang"
+    "9": [
+      "confusion"
     ],
-    "40": [
-      "wing_attack"
+    "12": [
+      "reflect"
     ],
-    "48": [
-      "mega_punch"
+    "15": [
+      "psycho_shift"
     ],
-    "26": [
-      "agility"
+    "18": [
+      "air_slash"
+    ],
+    "21": [
+      "extrasensory"
+    ],
+    "24": [
+      "take_down"
+    ],
+    "27": [
+      "uproar"
+    ],
+    "30": [
+      "roost"
+    ],
+    "33": [
+      "moonblast"
+    ],
+    "36": [
+      "hypnosis"
+    ],
+    "39": [
+      "dream_eater"
     ]
   },
   "evolution": null,

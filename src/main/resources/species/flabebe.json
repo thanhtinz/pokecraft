@@ -18,19 +18,45 @@
   "modelId": "flabebe",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "vine_whip",
+      "lucky_chant"
     ],
-    "4": [
-      "sing"
-    ],
-    "8": [
+    "6": [
       "fairy_wind"
     ],
-    "14": [
-      "dazzling_gleam"
+    "10": [
+      "safeguard"
     ],
-    "26": [
-      "calm_mind"
+    "15": [
+      "razor_leaf"
+    ],
+    "20": [
+      "wish"
+    ],
+    "22": [
+      "magical_leaf"
+    ],
+    "24": [
+      "grassy_terrain"
+    ],
+    "28": [
+      "petal_blizzard"
+    ],
+    "33": [
+      "aromatherapy"
+    ],
+    "37": [
+      "misty_terrain"
+    ],
+    "41": [
+      "moonblast"
+    ],
+    "45": [
+      "petal_dance"
+    ],
+    "48": [
+      "solar_beam"
     ]
   },
   "evolution": null,

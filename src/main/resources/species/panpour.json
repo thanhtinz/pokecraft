@@ -18,28 +18,50 @@
   "modelId": "panpour",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "play_nice"
     ],
     "4": [
-      "tail_whip"
+      "leer"
     ],
-    "8": [
+    "7": [
+      "lick"
+    ],
+    "10": [
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "13": [
+      "fury_swipes"
     ],
-    "20": [
-      "waterfall"
+    "16": [
+      "water_sport"
     ],
-    "32": [
-      "surf"
+    "19": [
+      "bite"
+    ],
+    "22": [
+      "scald"
+    ],
+    "25": [
+      "taunt"
+    ],
+    "28": [
+      "fling"
+    ],
+    "31": [
+      "acrobatics"
+    ],
+    "34": [
+      "brine"
+    ],
+    "37": [
+      "recycle"
     ],
     "40": [
-      "hydro_pump"
+      "natural_gift"
     ],
-    "26": [
-      "agility"
+    "43": [
+      "crunch"
     ]
   },
   "evolution": null,

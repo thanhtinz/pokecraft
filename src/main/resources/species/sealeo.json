@@ -19,31 +19,44 @@
   "modelId": "sealeo",
   "learnset": {
     "1": [
-      "scratch"
+      "growl",
+      "water_gun",
+      "rollout",
+      "defense_curl",
+      "swagger"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "powder_snow"
     ],
-    "8": [
-      "ice_shard"
-    ],
-    "14": [
-      "water_gun"
+    "16": [
+      "rest"
     ],
     "20": [
+      "snore"
+    ],
+    "24": [
+      "brine"
+    ],
+    "28": [
       "aurora_beam"
     ],
-    "32": [
-      "bubble_beam"
+    "35": [
+      "encore"
     ],
     "40": [
-      "ice_beam"
+      "body_slam"
     ],
-    "48": [
-      "waterfall"
+    "46": [
+      "surf"
     ],
-    "26": [
-      "calm_mind"
+    "52": [
+      "blizzard"
+    ],
+    "58": [
+      "hail"
+    ],
+    "64": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

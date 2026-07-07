@@ -19,31 +19,42 @@
   "modelId": "gourgeist",
   "learnset": {
     "1": [
-      "tackle"
+      "explosion",
+      "astonish",
+      "confuse_ray",
+      "trick_or_treat",
+      "shadow_sneak",
+      "moonblast"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
-      "lick"
-    ],
-    "20": [
+    "12": [
       "razor_leaf"
     ],
-    "32": [
-      "night_shade"
+    "16": [
+      "leech_seed"
     ],
-    "40": [
+    "20": [
+      "bullet_seed"
+    ],
+    "24": [
+      "scary_face"
+    ],
+    "28": [
+      "worry_seed"
+    ],
+    "32": [
       "seed_bomb"
     ],
-    "48": [
+    "36": [
       "shadow_ball"
     ],
-    "26": [
-      "harden"
+    "40": [
+      "trick"
+    ],
+    "44": [
+      "pain_split"
+    ],
+    "48": [
+      "phantom_force"
     ]
   },
   "evolution": null,

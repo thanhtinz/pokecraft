@@ -19,31 +19,43 @@
   "modelId": "skrelp",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "smokescreen",
+      "feint_attack",
+      "bubble"
     ],
-    "4": [
-      "poison_powder"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "water_gun"
-    ],
-    "20": [
+    "5": [
       "acid"
     ],
-    "32": [
-      "bubble_beam"
+    "10": [
+      "water_gun"
+    ],
+    "15": [
+      "tail_whip"
+    ],
+    "20": [
+      "double_team"
+    ],
+    "25": [
+      "poison_tail"
+    ],
+    "30": [
+      "water_pulse"
+    ],
+    "35": [
+      "toxic"
     ],
     "40": [
-      "sludge"
+      "dragon_pulse"
     ],
-    "48": [
-      "waterfall"
+    "45": [
+      "aqua_tail"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "sludge_bomb"
+    ],
+    "55": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

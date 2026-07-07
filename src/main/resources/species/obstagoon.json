@@ -19,31 +19,47 @@
   "modelId": "obstagoon",
   "learnset": {
     "1": [
-      "scratch"
+      "obstruct",
+      "cross_chop",
+      "submission",
+      "night_slash",
+      "switcheroo",
+      "pin_missile",
+      "baby_doll_eyes",
+      "tackle",
+      "leer",
+      "sand_attack",
+      "lick"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "snarl"
     ],
-    "8": [
-      "bite"
+    "12": [
+      "headbutt"
     ],
-    "14": [
-      "quick_attack"
+    "15": [
+      "hone_claws"
     ],
-    "20": [
-      "crunch"
+    "18": [
+      "fury_swipes"
     ],
-    "32": [
-      "hyper_fang"
+    "23": [
+      "rest"
     ],
-    "40": [
-      "mega_punch"
+    "28": [
+      "take_down"
     ],
-    "48": [
-      "body_slam"
+    "35": [
+      "scary_face"
     ],
-    "26": [
-      "harden"
+    "42": [
+      "counter"
+    ],
+    "49": [
+      "taunt"
+    ],
+    "56": [
+      "double_edge"
     ]
   },
   "evolution": null,

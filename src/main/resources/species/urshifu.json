@@ -19,31 +19,45 @@
   "modelId": "urshifu",
   "learnset": {
     "1": [
-      "scratch"
+      "wicked_blow",
+      "sucker_punch",
+      "rock_smash",
+      "leer",
+      "endure",
+      "focus_energy"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "aerial_ace"
     ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
-      "bite"
+    "16": [
+      "scary_face"
     ],
     "20": [
-      "low_kick"
+      "headbutt"
     ],
-    "32": [
-      "crunch"
-    ],
-    "40": [
+    "24": [
       "brick_break"
     ],
-    "48": [
-      "cross_chop"
+    "28": [
+      "detect"
     ],
-    "26": [
-      "swords_dance"
+    "32": [
+      "bulk_up"
+    ],
+    "36": [
+      "iron_head"
+    ],
+    "40": [
+      "dynamic_punch"
+    ],
+    "44": [
+      "counter"
+    ],
+    "48": [
+      "close_combat"
+    ],
+    "52": [
+      "focus_punch"
     ]
   },
   "evolution": null,

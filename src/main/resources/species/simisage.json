@@ -18,28 +18,16 @@
   "modelId": "simisage",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
-      "razor_leaf"
-    ],
-    "20": [
-      "seed_bomb"
-    ],
-    "32": [
-      "petal_dance"
-    ],
-    "40": [
-      "solar_beam"
-    ],
-    "26": [
-      "agility"
+      "leer",
+      "lick",
+      "fury_swipes",
+      "seed_bomb",
+      "scratch",
+      "vine_whip",
+      "leech_seed",
+      "bite",
+      "play_nice",
+      "natural_gift"
     ]
   },
   "evolution": null,

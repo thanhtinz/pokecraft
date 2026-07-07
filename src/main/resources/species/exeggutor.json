@@ -19,31 +19,28 @@
   "modelId": "exeggutor",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "vine_whip"
-    ],
-    "20": [
-      "psybeam"
-    ],
-    "32": [
-      "razor_leaf"
-    ],
-    "40": [
-      "psychic"
-    ],
-    "48": [
-      "seed_bomb"
-    ],
-    "26": [
-      "calm_mind"
+      "seed_bomb",
+      "barrage",
+      "hypnosis",
+      "confusion",
+      "stomp",
+      "egg_bomb",
+      "wood_hammer",
+      "leaf_storm",
+      "solar_beam",
+      "reflect",
+      "giga_drain",
+      "synthesis",
+      "bullet_seed",
+      "worry_seed",
+      "psyshock",
+      "mega_drain",
+      "extrasensory",
+      "uproar",
+      "absorb",
+      "leech_seed",
+      "growth",
+      "bestow"
     ]
   },
   "evolution": null,

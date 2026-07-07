@@ -19,31 +19,49 @@
   "modelId": "arboliva",
   "learnset": {
     "1": [
+      "sweet_scent",
+      "mirror_coat",
+      "safeguard",
       "tackle"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "absorb"
     ],
-    "8": [
-      "vine_whip"
+    "7": [
+      "growth"
     ],
-    "14": [
-      "quick_attack"
-    ],
-    "20": [
+    "10": [
       "razor_leaf"
     ],
-    "32": [
-      "hyper_fang"
+    "13": [
+      "helping_hand"
     ],
-    "40": [
+    "16": [
+      "flail"
+    ],
+    "20": [
+      "mega_drain"
+    ],
+    "23": [
+      "grassy_terrain"
+    ],
+    "29": [
       "seed_bomb"
     ],
-    "48": [
-      "mega_punch"
+    "34": [
+      "energy_ball"
     ],
-    "26": [
-      "calm_mind"
+    "39": [
+      "leech_seed"
+    ],
+    "46": [
+      "terrain_pulse"
+    ],
+    "52": [
+      "petal_blizzard"
+    ],
+    "58": [
+      "petal_dance"
     ]
   },
   "evolution": null,

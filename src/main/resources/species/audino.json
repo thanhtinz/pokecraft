@@ -18,31 +18,57 @@
   "modelId": "audino",
   "learnset": {
     "1": [
-      "tackle"
+      "pound",
+      "refresh",
+      "double_slap",
+      "play_nice",
+      "attract",
+      "secret_power"
     ],
     "4": [
+      "disarming_voice"
+    ],
+    "9": [
+      "baby_doll_eyes"
+    ],
+    "12": [
+      "helping_hand"
+    ],
+    "16": [
       "growl"
     ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "hyper_fang"
-    ],
     "20": [
-      "mega_punch"
+      "zen_headbutt"
+    ],
+    "24": [
+      "life_dew"
+    ],
+    "28": [
+      "after_you"
     ],
     "32": [
-      "body_slam"
+      "take_down"
+    ],
+    "36": [
+      "simple_beam"
     ],
     "40": [
-      "double_edge"
+      "hyper_voice"
+    ],
+    "44": [
+      "heal_pulse"
     ],
     "48": [
-      "hyper_beam"
+      "double_edge"
     ],
-    "26": [
-      "harden"
+    "52": [
+      "entrainment"
+    ],
+    "56": [
+      "misty_terrain"
+    ],
+    "60": [
+      "last_resort"
     ]
   },
   "evolution": null,

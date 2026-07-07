@@ -19,31 +19,36 @@
   "modelId": "gabite",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "twister"
-    ],
-    "14": [
-      "sand_tomb"
-    ],
-    "20": [
+      "tackle",
+      "sand_attack",
+      "dragon_rage",
+      "sand_tomb",
+      "dual_chop",
       "dragon_breath"
     ],
-    "32": [
-      "dig"
+    "18": [
+      "bulldoze"
     ],
-    "40": [
+    "27": [
+      "bite"
+    ],
+    "34": [
+      "slash"
+    ],
+    "42": [
       "dragon_claw"
     ],
-    "48": [
-      "earthquake"
+    "50": [
+      "dig"
     ],
-    "26": [
-      "swords_dance"
+    "58": [
+      "sandstorm"
+    ],
+    "66": [
+      "take_down"
+    ],
+    "74": [
+      "dragon_rush"
     ]
   },
   "evolution": null,

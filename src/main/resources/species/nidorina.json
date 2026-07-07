@@ -18,25 +18,39 @@
   "modelId": "nidorina",
   "learnset": {
     "1": [
-      "tackle"
+      "growl",
+      "scratch",
+      "tail_whip",
+      "poison_sting",
+      "poison_fang",
+      "captivate"
     ],
-    "4": [
-      "poison_powder"
+    "15": [
+      "fury_swipes"
     ],
-    "8": [
-      "poison_sting"
+    "22": [
+      "toxic_spikes"
     ],
-    "14": [
-      "acid"
+    "29": [
+      "double_kick"
     ],
-    "20": [
-      "sludge"
+    "36": [
+      "bite"
     ],
-    "32": [
-      "sludge_bomb"
+    "43": [
+      "helping_hand"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "toxic"
+    ],
+    "57": [
+      "flatter"
+    ],
+    "64": [
+      "crunch"
+    ],
+    "71": [
+      "earth_power"
     ]
   },
   "evolution": null,

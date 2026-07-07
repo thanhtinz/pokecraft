@@ -18,28 +18,15 @@
   "modelId": "simisear",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "ember"
-    ],
-    "14": [
-      "fire_spin"
-    ],
-    "20": [
-      "fire_punch"
-    ],
-    "32": [
-      "flamethrower"
-    ],
-    "40": [
-      "fire_blast"
-    ],
-    "26": [
-      "agility"
+      "leer",
+      "lick",
+      "fury_swipes",
+      "flame_burst",
+      "scratch",
+      "yawn",
+      "bite",
+      "play_nice",
+      "natural_gift"
     ]
   },
   "evolution": null,

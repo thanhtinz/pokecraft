@@ -19,28 +19,49 @@
   "modelId": "jirachi",
   "learnset": {
     "1": [
-      "scratch"
+      "wish",
+      "confusion",
+      "refresh",
+      "lucky_chant"
     ],
-    "4": [
-      "harden"
+    "7": [
+      "swift"
     ],
-    "8": [
-      "confusion"
+    "21": [
+      "life_dew"
     ],
-    "14": [
-      "steel_wing"
+    "28": [
+      "zen_headbutt"
     ],
-    "20": [
-      "psybeam"
+    "35": [
+      "gravity"
     ],
-    "32": [
-      "iron_head"
-    ],
-    "40": [
+    "42": [
       "psychic"
     ],
-    "26": [
-      "swords_dance"
+    "49": [
+      "meteor_mash"
+    ],
+    "56": [
+      "healing_wish"
+    ],
+    "63": [
+      "rest"
+    ],
+    "70": [
+      "future_sight"
+    ],
+    "77": [
+      "double_edge"
+    ],
+    "84": [
+      "cosmic_power"
+    ],
+    "91": [
+      "last_resort"
+    ],
+    "98": [
+      "doom_desire"
     ]
   },
   "evolution": null,

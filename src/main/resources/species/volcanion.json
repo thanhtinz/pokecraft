@@ -19,31 +19,52 @@
   "modelId": "volcanion",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+      "steam_eruption",
+      "fire_spin",
       "water_gun"
     ],
-    "14": [
-      "ember"
+    "6": [
+      "leer"
     ],
-    "20": [
-      "bubble_beam"
+    "12": [
+      "weather_ball"
     ],
-    "32": [
-      "fire_spin"
+    "18": [
+      "flame_charge"
     ],
-    "40": [
-      "waterfall"
+    "24": [
+      "water_pulse"
+    ],
+    "30": [
+      "scary_face"
+    ],
+    "36": [
+      "incinerate"
+    ],
+    "42": [
+      "stomp"
     ],
     "48": [
-      "fire_punch"
+      "scald"
     ],
-    "26": [
-      "calm_mind"
+    "54": [
+      "take_down"
+    ],
+    "60": [
+      "mist",
+      "haze"
+    ],
+    "66": [
+      "hydro_pump"
+    ],
+    "78": [
+      "flare_blitz"
+    ],
+    "84": [
+      "overheat"
+    ],
+    "90": [
+      "explosion"
     ]
   },
   "evolution": null,

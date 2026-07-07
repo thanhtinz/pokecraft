@@ -18,22 +18,41 @@
   "modelId": "roggenrola",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "sand_attack"
     ],
     "4": [
       "harden"
     ],
     "8": [
-      "rock_throw"
+      "stealth_rock"
     ],
-    "14": [
-      "rock_slide"
+    "12": [
+      "mud_slap"
+    ],
+    "16": [
+      "smack_down"
     ],
     "20": [
+      "iron_defense"
+    ],
+    "24": [
+      "headbutt"
+    ],
+    "28": [
+      "rock_slide"
+    ],
+    "32": [
+      "rock_blast"
+    ],
+    "36": [
+      "sandstorm"
+    ],
+    "40": [
       "stone_edge"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "explosion"
     ]
   },
   "evolution": null,

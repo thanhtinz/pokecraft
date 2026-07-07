@@ -19,28 +19,45 @@
   "modelId": "metagross",
   "learnset": {
     "1": [
-      "scratch"
+      "metal_claw",
+      "confusion",
+      "pursuit",
+      "bullet_punch",
+      "hammer_arm",
+      "explosion",
+      "miracle_eye",
+      "hone_claws",
+      "tackle"
     ],
-    "4": [
-      "harden"
+    "6": [
+      "zen_headbutt"
     ],
-    "8": [
-      "steel_wing"
+    "12": [
+      "magnet_rise"
     ],
-    "14": [
-      "confusion"
-    ],
-    "20": [
-      "iron_head"
-    ],
-    "32": [
-      "psybeam"
-    ],
-    "40": [
-      "psychic"
+    "16": [
+      "flash_cannon"
     ],
     "26": [
-      "swords_dance"
+      "take_down"
+    ],
+    "34": [
+      "psychic"
+    ],
+    "42": [
+      "scary_face"
+    ],
+    "52": [
+      "meteor_mash"
+    ],
+    "62": [
+      "iron_defense"
+    ],
+    "72": [
+      "agility"
+    ],
+    "82": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

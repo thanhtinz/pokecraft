@@ -19,31 +19,50 @@
   "modelId": "litwick",
   "learnset": {
     "1": [
-      "scratch"
+      "astonish",
+      "smog"
     ],
     "4": [
-      "hypnosis"
-    ],
-    "8": [
       "ember"
     ],
-    "14": [
-      "lick"
+    "8": [
+      "minimize"
+    ],
+    "12": [
+      "confuse_ray"
+    ],
+    "16": [
+      "hex"
     ],
     "20": [
+      "flame_burst"
+    ],
+    "24": [
       "fire_spin"
     ],
-    "32": [
+    "28": [
       "night_shade"
     ],
-    "40": [
-      "fire_punch"
+    "32": [
+      "curse"
     ],
-    "48": [
+    "36": [
       "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "40": [
+      "inferno"
+    ],
+    "44": [
+      "imprison"
+    ],
+    "48": [
+      "pain_split"
+    ],
+    "52": [
+      "overheat"
+    ],
+    "56": [
+      "memento"
     ]
   },
   "evolution": null,

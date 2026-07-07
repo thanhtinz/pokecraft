@@ -19,31 +19,53 @@
   "modelId": "roaringmoon",
   "learnset": {
     "1": [
-      "tackle"
+      "dragon_breath",
+      "leer",
+      "bite",
+      "focus_energy",
+      "sunny_day",
+      "jaw_lock",
+      "breaking_swipe",
+      "scale_shot"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "bite"
+    "7": [
+      "incinerate"
     ],
     "14": [
-      "twister"
+      "headbutt"
     ],
-    "20": [
-      "crunch"
+    "21": [
+      "scary_face"
     ],
-    "32": [
-      "dragon_breath"
-    ],
-    "40": [
+    "28": [
       "dragon_claw"
     ],
-    "48": [
-      "outrage"
+    "35": [
+      "zen_headbutt"
     ],
-    "26": [
-      "swords_dance"
+    "42": [
+      "flamethrower"
+    ],
+    "49": [
+      "night_slash"
+    ],
+    "56": [
+      "dragon_dance"
+    ],
+    "63": [
+      "dragon_rush"
+    ],
+    "70": [
+      "fly"
+    ],
+    "77": [
+      "throat_chop"
+    ],
+    "84": [
+      "roost"
+    ],
+    "91": [
+      "double_edge"
     ]
   },
   "evolution": null,

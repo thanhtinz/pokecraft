@@ -19,31 +19,49 @@
   "modelId": "roselia",
   "learnset": {
     "1": [
-      "tackle"
+      "absorb",
+      "growth",
+      "poison_sting",
+      "stun_spore",
+      "grass_whistle",
+      "worry_seed",
+      "water_sport"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "mega_drain"
     ],
-    "8": [
-      "poison_sting"
+    "10": [
+      "leech_seed"
     ],
-    "14": [
-      "vine_whip"
+    "15": [
+      "magical_leaf"
     ],
     "20": [
-      "acid"
+      "toxic_spikes"
     ],
-    "32": [
-      "razor_leaf"
+    "25": [
+      "sweet_scent"
+    ],
+    "30": [
+      "giga_drain"
+    ],
+    "35": [
+      "synthesis"
     ],
     "40": [
-      "sludge"
+      "toxic"
     ],
-    "48": [
-      "seed_bomb"
+    "45": [
+      "petal_blizzard"
     ],
-    "26": [
-      "calm_mind"
+    "50": [
+      "aromatherapy"
+    ],
+    "55": [
+      "ingrain"
+    ],
+    "60": [
+      "petal_dance"
     ]
   },
   "evolution": null,

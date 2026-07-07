@@ -18,25 +18,38 @@
   "modelId": "eiscue",
   "learnset": {
     "1": [
-      "pound"
+      "powder_snow",
+      "tackle"
     ],
-    "4": [
-      "leer"
+    "6": [
+      "mist"
     ],
-    "8": [
-      "ice_shard"
+    "12": [
+      "weather_ball"
     ],
-    "14": [
-      "aurora_beam"
+    "18": [
+      "icy_wind"
     ],
-    "20": [
-      "ice_beam"
+    "24": [
+      "headbutt"
     ],
-    "32": [
+    "30": [
+      "amnesia"
+    ],
+    "36": [
+      "freeze_dry"
+    ],
+    "42": [
+      "snowscape"
+    ],
+    "48": [
+      "aurora_veil"
+    ],
+    "54": [
+      "surf"
+    ],
+    "60": [
       "blizzard"
-    ],
-    "26": [
-      "harden"
     ]
   },
   "evolution": null,

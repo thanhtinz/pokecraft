@@ -18,28 +18,39 @@
   "modelId": "lumineon",
   "learnset": {
     "1": [
-      "scratch"
+      "pound",
+      "water_gun",
+      "gust",
+      "soak",
+      "captivate",
+      "bubble"
     ],
-    "4": [
-      "tail_whip"
+    "13": [
+      "rain_dance"
     ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "bubble_beam"
-    ],
-    "20": [
-      "waterfall"
-    ],
-    "32": [
-      "surf"
-    ],
-    "40": [
-      "hydro_pump"
+    "22": [
+      "water_pulse"
     ],
     "26": [
-      "agility"
+      "attract"
+    ],
+    "29": [
+      "safeguard"
+    ],
+    "35": [
+      "aqua_ring"
+    ],
+    "42": [
+      "whirlpool"
+    ],
+    "48": [
+      "u_turn"
+    ],
+    "53": [
+      "bounce"
+    ],
+    "59": [
+      "tailwind"
     ]
   },
   "evolution": null,

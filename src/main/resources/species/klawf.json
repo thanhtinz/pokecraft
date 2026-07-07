@@ -18,22 +18,46 @@
   "modelId": "klawf",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "harden"
-    ],
-    "8": [
       "rock_throw"
     ],
-    "14": [
+    "6": [
+      "harden"
+    ],
+    "9": [
+      "rock_smash"
+    ],
+    "13": [
+      "rock_tomb"
+    ],
+    "17": [
+      "metal_claw"
+    ],
+    "21": [
+      "protect"
+    ],
+    "24": [
+      "rock_blast"
+    ],
+    "29": [
+      "x_scissor"
+    ],
+    "33": [
+      "swords_dance"
+    ],
+    "37": [
+      "flail"
+    ],
+    "42": [
       "rock_slide"
     ],
-    "20": [
-      "stone_edge"
+    "47": [
+      "high_horsepower"
     ],
-    "26": [
-      "harden"
+    "51": [
+      "iron_defense"
+    ],
+    "56": [
+      "guillotine"
     ]
   },
   "evolution": null,

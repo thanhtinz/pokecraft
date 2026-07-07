@@ -18,28 +18,45 @@
   "modelId": "darumaka",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+      "tackle",
+      "rage",
       "ember"
     ],
-    "14": [
-      "fire_spin"
+    "4": [
+      "taunt"
+    ],
+    "8": [
+      "bite"
+    ],
+    "12": [
+      "incinerate"
+    ],
+    "16": [
+      "work_up"
     ],
     "20": [
+      "fire_fang"
+    ],
+    "24": [
+      "headbutt"
+    ],
+    "28": [
       "fire_punch"
     ],
     "32": [
-      "flamethrower"
+      "uproar"
+    ],
+    "36": [
+      "belly_drum"
     ],
     "40": [
-      "fire_blast"
+      "flare_blitz"
     ],
-    "26": [
-      "swords_dance"
+    "44": [
+      "thrash"
+    ],
+    "48": [
+      "superpower"
     ]
   },
   "evolution": null,

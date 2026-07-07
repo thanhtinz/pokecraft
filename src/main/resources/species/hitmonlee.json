@@ -18,25 +18,54 @@
   "modelId": "hitmonlee",
   "learnset": {
     "1": [
-      "scratch"
+      "revenge",
+      "meditate",
+      "rolling_kick",
+      "jump_kick",
+      "brick_break",
+      "focus_energy",
+      "mind_reader",
+      "foresight",
+      "helping_hand",
+      "low_sweep",
+      "tackle",
+      "fake_out"
     ],
     "4": [
-      "leer"
+      "double_kick"
     ],
     "8": [
-      "karate_chop"
-    ],
-    "14": [
       "low_kick"
     ],
-    "20": [
-      "brick_break"
+    "12": [
+      "endure"
+    ],
+    "16": [
+      "sucker_punch"
+    ],
+    "21": [
+      "wide_guard"
+    ],
+    "24": [
+      "blaze_kick"
+    ],
+    "28": [
+      "feint"
     ],
     "32": [
-      "cross_chop"
+      "mega_kick"
     ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "close_combat"
+    ],
+    "40": [
+      "reversal"
+    ],
+    "44": [
+      "high_jump_kick"
+    ],
+    "50": [
+      "axe_kick"
     ]
   },
   "evolution": null,

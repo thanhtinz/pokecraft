@@ -18,22 +18,43 @@
   "modelId": "marowak",
   "learnset": {
     "1": [
-      "tackle"
+      "growl",
+      "tail_whip",
+      "bone_club",
+      "leer",
+      "rage",
+      "false_swipe",
+      "mud_slap"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "headbutt"
     ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
-      "dig"
+    "16": [
+      "retaliate"
     ],
     "20": [
-      "earthquake"
+      "fling"
     ],
-    "26": [
-      "harden"
+    "24": [
+      "stomping_tantrum"
+    ],
+    "31": [
+      "bone_rush"
+    ],
+    "36": [
+      "focus_energy"
+    ],
+    "42": [
+      "endeavor"
+    ],
+    "48": [
+      "bonemerang"
+    ],
+    "54": [
+      "thrash"
+    ],
+    "60": [
+      "double_edge"
     ]
   },
   "evolution": null,

@@ -19,31 +19,45 @@
   "modelId": "oranguru",
   "learnset": {
     "1": [
-      "tackle"
+      "confusion",
+      "taunt",
+      "feint_attack"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "after_you"
     ],
-    "8": [
-      "confusion"
+    "10": [
+      "calm_mind"
     ],
-    "14": [
-      "quick_attack"
+    "15": [
+      "stored_power"
     ],
     "20": [
-      "psybeam"
+      "psych_up"
     ],
-    "32": [
-      "hyper_fang"
+    "25": [
+      "quash"
+    ],
+    "30": [
+      "nasty_plot"
+    ],
+    "35": [
+      "zen_headbutt"
     ],
     "40": [
+      "trick_room"
+    ],
+    "45": [
       "psychic"
     ],
-    "48": [
-      "mega_punch"
+    "50": [
+      "instruct"
     ],
-    "26": [
-      "calm_mind"
+    "55": [
+      "foul_play"
+    ],
+    "60": [
+      "future_sight"
     ]
   },
   "evolution": null,

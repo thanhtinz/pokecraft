@@ -19,28 +19,10 @@
   "modelId": "dottler",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "bug_bite"
-    ],
-    "20": [
-      "psybeam"
-    ],
-    "32": [
-      "pin_missile"
-    ],
-    "40": [
-      "psychic"
-    ],
-    "26": [
-      "harden"
+      "reflect",
+      "light_screen",
+      "confusion",
+      "struggle_bug"
     ]
   },
   "evolution": null,

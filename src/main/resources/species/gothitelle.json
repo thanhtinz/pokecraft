@@ -18,22 +18,43 @@
   "modelId": "gothitelle",
   "learnset": {
     "1": [
-      "tackle"
+      "pound",
+      "confusion",
+      "tickle",
+      "double_slap",
+      "feint_attack",
+      "heal_block",
+      "play_nice"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
+    "12": [
       "psybeam"
     ],
+    "16": [
+      "charm"
+    ],
     "20": [
+      "psyshock"
+    ],
+    "24": [
+      "hypnosis"
+    ],
+    "28": [
+      "fake_tears"
+    ],
+    "35": [
+      "psych_up"
+    ],
+    "40": [
       "psychic"
     ],
-    "26": [
-      "harden"
+    "48": [
+      "flatter"
+    ],
+    "56": [
+      "future_sight"
+    ],
+    "64": [
+      "magic_room"
     ]
   },
   "evolution": null,

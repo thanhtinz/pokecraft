@@ -18,22 +18,52 @@
   "modelId": "meowstic",
   "learnset": {
     "1": [
-      "tackle"
+      "mean_look",
+      "scratch",
+      "leer",
+      "fake_out",
+      "disarming_voice",
+      "miracle_eye"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
+    "9": [
       "confusion"
     ],
-    "14": [
+    "12": [
+      "helping_hand"
+    ],
+    "15": [
+      "charm"
+    ],
+    "18": [
+      "covet"
+    ],
+    "21": [
       "psybeam"
     ],
-    "20": [
+    "24": [
+      "sucker_punch"
+    ],
+    "29": [
+      "role_play"
+    ],
+    "34": [
+      "light_screen",
+      "reflect"
+    ],
+    "39": [
+      "psyshock"
+    ],
+    "44": [
+      "imprison"
+    ],
+    "49": [
+      "quick_guard"
+    ],
+    "54": [
       "psychic"
     ],
-    "26": [
-      "agility"
+    "59": [
+      "misty_terrain"
     ]
   },
   "evolution": null,

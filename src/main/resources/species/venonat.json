@@ -19,31 +19,42 @@
   "modelId": "venonat",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "disable",
+      "foresight"
     ],
-    "4": [
-      "string_shot"
+    "5": [
+      "supersonic"
     ],
-    "8": [
-      "bug_bite"
+    "11": [
+      "confusion"
     ],
-    "14": [
-      "poison_sting"
+    "13": [
+      "poison_powder"
     ],
-    "20": [
-      "pin_missile"
+    "17": [
+      "psybeam"
     ],
-    "32": [
-      "acid"
+    "23": [
+      "stun_spore"
     ],
-    "40": [
-      "sludge"
+    "25": [
+      "bug_buzz"
     ],
-    "48": [
-      "sludge_bomb"
+    "29": [
+      "sleep_powder"
     ],
-    "26": [
-      "swords_dance"
+    "35": [
+      "leech_life"
+    ],
+    "37": [
+      "zen_headbutt"
+    ],
+    "41": [
+      "poison_fang"
+    ],
+    "47": [
+      "psychic"
     ]
   },
   "evolution": null,

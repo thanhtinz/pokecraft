@@ -18,28 +18,53 @@
   "modelId": "suicune",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "leer",
+      "bubble_beam",
+      "gust",
+      "aurora_beam",
+      "mist",
+      "sheer_cold",
+      "extreme_speed",
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "6": [
+      "water_pulse"
     ],
-    "20": [
-      "waterfall"
+    "12": [
+      "bite"
     ],
-    "32": [
+    "18": [
+      "calm_mind"
+    ],
+    "24": [
+      "roar"
+    ],
+    "30": [
+      "ice_fang"
+    ],
+    "36": [
+      "tailwind"
+    ],
+    "42": [
+      "crunch"
+    ],
+    "48": [
+      "extrasensory"
+    ],
+    "54": [
       "surf"
     ],
-    "40": [
+    "60": [
+      "mirror_coat"
+    ],
+    "66": [
+      "rain_dance"
+    ],
+    "72": [
       "hydro_pump"
     ],
-    "26": [
-      "harden"
+    "78": [
+      "blizzard"
     ]
   },
   "evolution": null,

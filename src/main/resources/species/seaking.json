@@ -18,28 +18,36 @@
   "modelId": "seaking",
   "learnset": {
     "1": [
-      "pound"
+      "peck",
+      "tail_whip",
+      "water_sport",
+      "supersonic",
+      "water_pulse",
+      "fury_attack"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "bubble_beam"
+    "15": [
+      "horn_attack"
     ],
     "20": [
+      "agility"
+    ],
+    "25": [
+      "aqua_ring"
+    ],
+    "30": [
+      "flail"
+    ],
+    "37": [
       "waterfall"
     ],
-    "32": [
-      "surf"
+    "44": [
+      "soak"
     ],
-    "40": [
-      "hydro_pump"
+    "51": [
+      "megahorn"
     ],
-    "26": [
-      "swords_dance"
+    "58": [
+      "horn_drill"
     ]
   },
   "evolution": null,

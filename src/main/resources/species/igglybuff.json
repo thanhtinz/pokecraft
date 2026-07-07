@@ -19,31 +19,24 @@
   "modelId": "igglybuff",
   "learnset": {
     "1": [
-      "tackle"
+      "sing",
+      "pound",
+      "copycat"
     ],
     "4": [
-      "growl"
+      "defense_curl"
     ],
     "8": [
-      "quick_attack"
+      "sweet_kiss"
     ],
-    "14": [
-      "fairy_wind"
+    "12": [
+      "disarming_voice"
+    ],
+    "16": [
+      "disable"
     ],
     "20": [
-      "hyper_fang"
-    ],
-    "32": [
-      "dazzling_gleam"
-    ],
-    "40": [
-      "mega_punch"
-    ],
-    "48": [
-      "body_slam"
-    ],
-    "26": [
-      "calm_mind"
+      "charm"
     ]
   },
   "evolution": null,

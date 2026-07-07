@@ -19,31 +19,10 @@
   "modelId": "delibird",
   "learnset": {
     "1": [
-      "tackle"
+      "present"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "ice_shard"
-    ],
-    "20": [
-      "gust"
-    ],
-    "32": [
-      "aurora_beam"
-    ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "ice_beam"
-    ],
-    "26": [
-      "agility"
+    "25": [
+      "drill_peck"
     ]
   },
   "evolution": null,

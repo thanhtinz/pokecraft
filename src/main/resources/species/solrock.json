@@ -19,31 +19,44 @@
   "modelId": "solrock",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "harden",
+      "confusion",
+      "rock_throw",
+      "psywave",
+      "heal_block",
+      "flare_blitz",
+      "morning_sun"
     ],
-    "4": [
-      "harden"
+    "5": [
+      "hypnosis"
     ],
-    "8": [
-      "rock_throw"
+    "10": [
+      "rock_polish"
     ],
-    "14": [
-      "confusion"
-    ],
-    "20": [
+    "15": [
       "rock_slide"
     ],
-    "32": [
-      "psybeam"
+    "20": [
+      "zen_headbutt"
     ],
-    "40": [
-      "stone_edge"
+    "25": [
+      "cosmic_power"
     ],
-    "48": [
+    "30": [
       "psychic"
     ],
-    "26": [
-      "swords_dance"
+    "35": [
+      "stone_edge"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "45": [
+      "wonder_room"
+    ],
+    "50": [
+      "explosion"
     ]
   },
   "evolution": null,

@@ -19,31 +19,48 @@
   "modelId": "jumpluff",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "sleep_powder"
+      "splash",
+      "synthesis",
+      "tail_whip",
+      "absorb"
     ],
     "8": [
-      "peck"
+      "tackle"
     ],
-    "14": [
-      "vine_whip"
+    "10": [
+      "fairy_wind"
+    ],
+    "12": [
+      "poison_powder",
+      "stun_spore",
+      "sleep_powder"
+    ],
+    "15": [
+      "bullet_seed"
     ],
     "20": [
-      "gust"
+      "leech_seed"
     ],
-    "32": [
-      "razor_leaf"
+    "24": [
+      "mega_drain"
     ],
-    "40": [
-      "wing_attack"
+    "30": [
+      "acrobatics"
     ],
-    "48": [
-      "seed_bomb"
+    "35": [
+      "cotton_spore"
     ],
-    "26": [
-      "agility"
+    "39": [
+      "u_turn"
+    ],
+    "43": [
+      "giga_drain"
+    ],
+    "49": [
+      "bounce"
+    ],
+    "55": [
+      "memento"
     ]
   },
   "evolution": null,

@@ -18,22 +18,45 @@
   "modelId": "gothita",
   "learnset": {
     "1": [
-      "scratch"
+      "pound",
+      "confusion",
+      "double_slap"
     ],
     "4": [
-      "hypnosis"
+      "play_nice"
     ],
     "8": [
-      "confusion"
+      "tickle"
     ],
-    "14": [
+    "12": [
       "psybeam"
     ],
+    "16": [
+      "charm"
+    ],
     "20": [
+      "psyshock"
+    ],
+    "24": [
+      "feint_attack"
+    ],
+    "28": [
+      "fake_tears"
+    ],
+    "33": [
+      "heal_block"
+    ],
+    "36": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "40": [
+      "flatter"
+    ],
+    "44": [
+      "future_sight"
+    ],
+    "48": [
+      "magic_room"
     ]
   },
   "evolution": null,

@@ -18,28 +18,32 @@
   "modelId": "arrokuda",
   "learnset": {
     "1": [
-      "tackle"
+      "peck",
+      "aqua_jet"
     ],
-    "4": [
-      "tail_whip"
+    "6": [
+      "fury_attack"
     ],
-    "8": [
-      "water_gun"
+    "12": [
+      "bite"
     ],
-    "14": [
-      "bubble_beam"
-    ],
-    "20": [
-      "waterfall"
-    ],
-    "32": [
-      "surf"
-    ],
-    "40": [
-      "hydro_pump"
-    ],
-    "26": [
+    "18": [
       "agility"
+    ],
+    "24": [
+      "dive"
+    ],
+    "30": [
+      "focus_energy"
+    ],
+    "36": [
+      "crunch"
+    ],
+    "42": [
+      "liquidation"
+    ],
+    "48": [
+      "double_edge"
     ]
   },
   "evolution": null,

@@ -19,31 +19,54 @@
   "modelId": "chiyu",
   "learnset": {
     "1": [
-      "pound"
+      "ember",
+      "spite",
+      "mean_look"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "flame_wheel"
     ],
-    "8": [
-      "bite"
+    "10": [
+      "payback"
     ],
-    "14": [
-      "ember"
+    "15": [
+      "will_o_wisp"
     ],
     "20": [
-      "crunch"
+      "flame_charge"
     ],
-    "32": [
-      "fire_spin"
+    "25": [
+      "incinerate"
+    ],
+    "30": [
+      "confuse_ray"
+    ],
+    "35": [
+      "nasty_plot"
     ],
     "40": [
-      "fire_punch"
+      "dark_pulse"
     ],
-    "48": [
-      "flamethrower"
+    "45": [
+      "lava_plume"
     ],
-    "26": [
-      "calm_mind"
+    "50": [
+      "ruination"
+    ],
+    "55": [
+      "bounce"
+    ],
+    "60": [
+      "swagger"
+    ],
+    "65": [
+      "inferno"
+    ],
+    "70": [
+      "memento"
+    ],
+    "75": [
+      "overheat"
     ]
   },
   "evolution": null,

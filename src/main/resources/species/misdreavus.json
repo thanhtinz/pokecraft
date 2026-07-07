@@ -18,22 +18,39 @@
   "modelId": "misdreavus",
   "learnset": {
     "1": [
-      "pound"
+      "growl",
+      "psywave",
+      "confusion"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "lick"
+    "10": [
+      "astonish"
     ],
     "14": [
-      "night_shade"
+      "confuse_ray"
     ],
-    "20": [
+    "19": [
+      "mean_look"
+    ],
+    "23": [
+      "hex"
+    ],
+    "28": [
+      "psybeam"
+    ],
+    "32": [
+      "pain_split"
+    ],
+    "37": [
+      "payback"
+    ],
+    "41": [
       "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "46": [
+      "perish_song"
+    ],
+    "50": [
+      "power_gem"
     ]
   },
   "evolution": null,

@@ -19,25 +19,61 @@
   "modelId": "magearna",
   "learnset": {
     "1": [
-      "tackle"
+      "gear_up",
+      "helping_hand",
+      "sonic_boom",
+      "lucky_chant",
+      "mirror_shot",
+      "mind_reader",
+      "synchronoise",
+      "heart_swap",
+      "trump_card",
+      "gyro_ball"
     ],
-    "4": [
-      "harden"
+    "6": [
+      "defense_curl"
     ],
-    "8": [
-      "fairy_wind"
+    "12": [
+      "rollout"
     ],
-    "14": [
-      "steel_wing"
+    "18": [
+      "iron_defense"
     ],
-    "20": [
-      "dazzling_gleam"
+    "24": [
+      "magnetic_flux"
     ],
-    "32": [
+    "30": [
+      "psybeam"
+    ],
+    "36": [
+      "aurora_beam"
+    ],
+    "42": [
+      "lock_on"
+    ],
+    "48": [
+      "shift_gear"
+    ],
+    "54": [
+      "crafty_shield"
+    ],
+    "60": [
       "iron_head"
     ],
-    "26": [
-      "calm_mind"
+    "66": [
+      "aura_sphere"
+    ],
+    "72": [
+      "flash_cannon"
+    ],
+    "78": [
+      "pain_split"
+    ],
+    "84": [
+      "zap_cannon"
+    ],
+    "90": [
+      "fleur_cannon"
     ]
   },
   "evolution": null,

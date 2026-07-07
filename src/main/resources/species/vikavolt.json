@@ -19,31 +19,42 @@
   "modelId": "vikavolt",
   "learnset": {
     "1": [
-      "tackle"
+      "thunderbolt",
+      "air_slash",
+      "charge",
+      "string_shot",
+      "mud_slap",
+      "bug_bite",
+      "acrobatics",
+      "dig",
+      "iron_defense",
+      "x_scissor",
+      "crunch",
+      "discharge"
     ],
-    "4": [
-      "string_shot"
+    "15": [
+      "bite"
     ],
-    "8": [
-      "bug_bite"
-    ],
-    "14": [
-      "thunder_shock"
-    ],
-    "20": [
-      "pin_missile"
-    ],
-    "32": [
+    "23": [
       "spark"
     ],
-    "40": [
-      "thunderbolt"
+    "29": [
+      "sticky_web"
     ],
-    "48": [
-      "thunder"
+    "36": [
+      "bug_buzz"
     ],
-    "26": [
-      "calm_mind"
+    "43": [
+      "guillotine"
+    ],
+    "50": [
+      "fly"
+    ],
+    "57": [
+      "agility"
+    ],
+    "64": [
+      "zap_cannon"
     ]
   },
   "evolution": null,

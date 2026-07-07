@@ -20,26 +20,38 @@
     "1": [
       "tackle"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "withdraw"
     ],
-    "8": [
-      "vine_whip"
+    "9": [
+      "absorb"
     ],
-    "14": [
+    "13": [
       "razor_leaf"
     ],
-    "20": [
-      "seed_bomb"
+    "17": [
+      "curse"
     ],
-    "32": [
-      "petal_dance"
+    "21": [
+      "bite"
     ],
-    "40": [
-      "solar_beam"
+    "25": [
+      "mega_drain"
     ],
-    "26": [
-      "swords_dance"
+    "29": [
+      "leech_seed"
+    ],
+    "33": [
+      "synthesis"
+    ],
+    "37": [
+      "crunch"
+    ],
+    "41": [
+      "giga_drain"
+    ],
+    "45": [
+      "leaf_storm"
     ]
   },
   "evolution": null,

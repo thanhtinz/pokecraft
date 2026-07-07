@@ -19,31 +19,45 @@
   "modelId": "infernape",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "leer",
+      "ember",
+      "taunt",
+      "mach_punch",
+      "punishment",
+      "close_combat",
+      "flamethrower",
+      "facade",
+      "power_up_punch",
+      "nasty_plot",
+      "slack_off"
     ],
-    "4": [
-      "leer"
+    "16": [
+      "fury_swipes"
     ],
-    "8": [
-      "ember"
-    ],
-    "14": [
-      "karate_chop"
-    ],
-    "20": [
-      "fire_spin"
-    ],
-    "32": [
-      "low_kick"
-    ],
-    "40": [
-      "fire_punch"
-    ],
-    "48": [
-      "brick_break"
+    "19": [
+      "flame_wheel"
     ],
     "26": [
-      "agility"
+      "feint"
+    ],
+    "29": [
+      "torment"
+    ],
+    "42": [
+      "fire_spin"
+    ],
+    "47": [
+      "flare_blitz"
+    ],
+    "52": [
+      "acrobatics"
+    ],
+    "58": [
+      "calm_mind"
+    ],
+    "65": [
+      "raging_fury"
     ]
   },
   "evolution": null,

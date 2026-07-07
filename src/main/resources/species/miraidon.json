@@ -19,31 +19,48 @@
   "modelId": "miraidon",
   "learnset": {
     "1": [
-      "tackle"
+      "thunder_shock",
+      "dragon_breath",
+      "electric_terrain"
     ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "thunder_shock"
+    "7": [
+      "shock_wave"
     ],
     "14": [
-      "twister"
+      "charge"
     ],
-    "20": [
-      "spark"
+    "21": [
+      "parabolic_charge"
     ],
-    "32": [
-      "dragon_breath"
+    "28": [
+      "discharge"
     ],
-    "40": [
-      "thunderbolt"
+    "35": [
+      "agility"
     ],
-    "48": [
-      "dragon_claw"
+    "42": [
+      "dragon_pulse"
     ],
-    "26": [
-      "calm_mind"
+    "56": [
+      "electro_drift"
+    ],
+    "63": [
+      "metal_sound"
+    ],
+    "70": [
+      "mirror_coat"
+    ],
+    "77": [
+      "outrage"
+    ],
+    "84": [
+      "thunder"
+    ],
+    "91": [
+      "overheat"
+    ],
+    "98": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

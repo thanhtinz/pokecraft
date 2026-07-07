@@ -19,31 +19,28 @@
   "modelId": "togekiss",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "sing"
-    ],
-    "8": [
-      "fairy_wind"
-    ],
-    "14": [
-      "peck"
-    ],
-    "20": [
-      "dazzling_gleam"
-    ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "drill_peck"
-    ],
-    "26": [
-      "calm_mind"
+      "sky_attack",
+      "extreme_speed",
+      "aura_sphere",
+      "air_slash",
+      "safeguard",
+      "ancient_power",
+      "last_resort",
+      "after_you",
+      "tri_attack",
+      "fairy_wind",
+      "charm",
+      "yawn",
+      "metronome",
+      "double_edge",
+      "follow_me",
+      "baton_pass",
+      "wish",
+      "growl",
+      "pound",
+      "sweet_kiss",
+      "life_dew",
+      "bestow"
     ]
   },
   "evolution": null,

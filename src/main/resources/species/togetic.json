@@ -19,31 +19,45 @@
   "modelId": "togetic",
   "learnset": {
     "1": [
-      "pound"
+      "growl",
+      "sweet_kiss",
+      "bestow",
+      "fairy_wind",
+      "pound",
+      "life_dew"
     ],
-    "4": [
-      "sing"
+    "12": [
+      "charm"
     ],
-    "8": [
-      "fairy_wind"
-    ],
-    "14": [
-      "peck"
+    "16": [
+      "ancient_power"
     ],
     "20": [
-      "dazzling_gleam"
+      "yawn"
+    ],
+    "24": [
+      "metronome"
+    ],
+    "28": [
+      "after_you"
     ],
     "32": [
-      "gust"
+      "double_edge"
+    ],
+    "36": [
+      "safeguard"
     ],
     "40": [
-      "wing_attack"
+      "follow_me"
+    ],
+    "44": [
+      "baton_pass"
     ],
     "48": [
-      "drill_peck"
+      "last_resort"
     ],
-    "26": [
-      "harden"
+    "52": [
+      "wish"
     ]
   },
   "evolution": null,

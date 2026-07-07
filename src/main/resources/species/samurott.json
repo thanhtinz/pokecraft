@@ -18,28 +18,46 @@
   "modelId": "samurott",
   "learnset": {
     "1": [
-      "pound"
+      "megahorn",
+      "tackle",
+      "tail_whip",
+      "water_gun",
+      "water_sport",
+      "slash",
+      "soak"
     ],
-    "4": [
-      "tail_whip"
+    "13": [
+      "focus_energy"
     ],
-    "8": [
-      "water_gun"
+    "18": [
+      "razor_shell"
     ],
-    "14": [
-      "bubble_beam"
+    "21": [
+      "fury_cutter"
     ],
-    "20": [
-      "waterfall"
+    "25": [
+      "water_pulse"
     ],
-    "32": [
-      "surf"
+    "29": [
+      "aerial_ace"
     ],
-    "40": [
+    "34": [
+      "aqua_jet"
+    ],
+    "39": [
+      "encore"
+    ],
+    "46": [
+      "aqua_tail"
+    ],
+    "51": [
+      "retaliate"
+    ],
+    "58": [
+      "swords_dance"
+    ],
+    "63": [
       "hydro_pump"
-    ],
-    "26": [
-      "calm_mind"
     ]
   },
   "evolution": null,

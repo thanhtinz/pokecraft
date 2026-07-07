@@ -18,28 +18,31 @@
   "modelId": "steenee",
   "learnset": {
     "1": [
-      "tackle"
+      "double_slap",
+      "splash",
+      "play_nice",
+      "rapid_spin",
+      "razor_leaf",
+      "captivate",
+      "flail"
     ],
-    "4": [
-      "sleep_powder"
+    "16": [
+      "sweet_scent"
     ],
-    "8": [
-      "vine_whip"
+    "22": [
+      "magical_leaf"
     ],
-    "14": [
-      "razor_leaf"
+    "28": [
+      "stomp"
     ],
-    "20": [
-      "seed_bomb"
-    ],
-    "32": [
-      "petal_dance"
+    "34": [
+      "teeter_dance"
     ],
     "40": [
-      "solar_beam"
+      "aromatic_mist"
     ],
-    "26": [
-      "agility"
+    "46": [
+      "aromatherapy"
     ]
   },
   "evolution": null,

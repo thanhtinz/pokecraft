@@ -18,25 +18,44 @@
   "modelId": "mienshao",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "meditate",
+      "detect",
+      "fake_out",
+      "double_slap",
+      "jump_kick",
+      "reversal",
+      "quick_guard"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
-      "low_kick"
+    "15": [
+      "fury_swipes"
     ],
     "20": [
-      "brick_break"
+      "wide_guard"
     ],
-    "32": [
-      "cross_chop"
+    "25": [
+      "force_palm"
     ],
-    "26": [
-      "swords_dance"
+    "30": [
+      "u_turn"
+    ],
+    "35": [
+      "drain_punch"
+    ],
+    "40": [
+      "hone_claws"
+    ],
+    "45": [
+      "aura_sphere"
+    ],
+    "53": [
+      "bounce"
+    ],
+    "59": [
+      "calm_mind"
+    ],
+    "66": [
+      "high_jump_kick"
     ]
   },
   "evolution": null,

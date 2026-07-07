@@ -19,25 +19,48 @@
   "modelId": "forretress",
   "learnset": {
     "1": [
-      "scratch"
+      "toxic_spikes",
+      "tackle",
+      "protect",
+      "self_destruct",
+      "bug_bite",
+      "bide",
+      "mirror_shot",
+      "magnet_rise",
+      "zap_cannon",
+      "autotomize",
+      "heavy_slam",
+      "natural_gift"
     ],
-    "4": [
-      "string_shot"
+    "12": [
+      "take_down"
     ],
-    "8": [
-      "steel_wing"
-    ],
-    "14": [
-      "bug_bite"
+    "17": [
+      "rapid_spin"
     ],
     "20": [
-      "iron_head"
+      "rollout"
+    ],
+    "23": [
+      "curse"
+    ],
+    "28": [
+      "spikes"
     ],
     "32": [
-      "pin_missile"
+      "payback"
     ],
-    "26": [
-      "harden"
+    "36": [
+      "explosion"
+    ],
+    "42": [
+      "iron_defense"
+    ],
+    "46": [
+      "gyro_ball"
+    ],
+    "50": [
+      "double_edge"
     ]
   },
   "evolution": null,

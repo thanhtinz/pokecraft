@@ -19,31 +19,50 @@
   "modelId": "stunky",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "poison_gas"
     ],
-    "4": [
-      "poison_powder"
+    "3": [
+      "feint"
     ],
-    "8": [
-      "poison_sting"
+    "6": [
+      "smokescreen"
     ],
-    "14": [
+    "9": [
+      "acid_spray"
+    ],
+    "12": [
+      "fury_swipes"
+    ],
+    "15": [
+      "focus_energy"
+    ],
+    "18": [
       "bite"
     ],
-    "20": [
-      "acid"
+    "21": [
+      "venoshock"
     ],
-    "32": [
-      "crunch"
+    "24": [
+      "screech"
     ],
-    "40": [
-      "sludge"
+    "27": [
+      "toxic"
     ],
-    "48": [
-      "sludge_bomb"
+    "30": [
+      "sucker_punch"
     ],
-    "26": [
-      "agility"
+    "33": [
+      "memento"
+    ],
+    "36": [
+      "night_slash"
+    ],
+    "39": [
+      "belch"
+    ],
+    "42": [
+      "explosion"
     ]
   },
   "evolution": null,

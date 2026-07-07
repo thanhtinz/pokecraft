@@ -18,31 +18,49 @@
   "modelId": "munchlax",
   "learnset": {
     "1": [
-      "pound"
+      "odor_sleuth",
+      "tackle",
+      "lick"
     ],
     "4": [
-      "growl"
+      "defense_curl"
     ],
     "8": [
-      "quick_attack"
+      "recycle"
     ],
-    "14": [
-      "hyper_fang"
+    "12": [
+      "covet"
+    ],
+    "16": [
+      "bite"
     ],
     "20": [
-      "mega_punch"
+      "stockpile",
+      "swallow"
     ],
-    "32": [
+    "24": [
+      "screech"
+    ],
+    "28": [
       "body_slam"
     ],
+    "32": [
+      "fling"
+    ],
+    "36": [
+      "amnesia"
+    ],
     "40": [
-      "double_edge"
+      "metronome"
+    ],
+    "44": [
+      "flail"
     ],
     "48": [
-      "hyper_beam"
+      "belly_drum"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "last_resort"
     ]
   },
   "evolution": null,

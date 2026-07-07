@@ -17,20 +17,14 @@
   "expYield": 45,
   "modelId": "burmy",
   "learnset": {
-    "1": [
-      "scratch"
+    "10": [
+      "tackle"
     ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
+    "15": [
       "bug_bite"
     ],
-    "14": [
-      "pin_missile"
-    ],
-    "26": [
-      "harden"
+    "20": [
+      "string_shot"
     ]
   },
   "evolution": null,

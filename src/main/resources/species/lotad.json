@@ -19,31 +19,43 @@
   "modelId": "lotad",
   "learnset": {
     "1": [
-      "tackle"
+      "astonish",
+      "growl",
+      "bubble",
+      "natural_gift"
     ],
-    "4": [
-      "tail_whip"
+    "3": [
+      "absorb"
     ],
-    "8": [
+    "6": [
       "water_gun"
     ],
-    "14": [
-      "vine_whip"
+    "9": [
+      "mist"
+    ],
+    "12": [
+      "mega_drain"
+    ],
+    "16": [
+      "flail"
     ],
     "20": [
       "bubble_beam"
     ],
-    "32": [
-      "razor_leaf"
+    "24": [
+      "leech_seed"
     ],
-    "40": [
-      "waterfall"
+    "28": [
+      "giga_drain"
     ],
-    "48": [
-      "seed_bomb"
+    "33": [
+      "rain_dance"
     ],
-    "26": [
-      "calm_mind"
+    "38": [
+      "zen_headbutt"
+    ],
+    "43": [
+      "energy_ball"
     ]
   },
   "evolution": null,

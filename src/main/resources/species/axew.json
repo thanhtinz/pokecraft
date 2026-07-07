@@ -18,25 +18,57 @@
   "modelId": "axew",
   "learnset": {
     "1": [
-      "scratch"
+      "scratch",
+      "leer",
+      "dragon_rage"
     ],
-    "4": [
-      "leer"
+    "3": [
+      "bite"
     ],
-    "8": [
-      "twister"
+    "6": [
+      "false_swipe"
     ],
-    "14": [
-      "dragon_breath"
+    "9": [
+      "assurance"
     ],
-    "20": [
+    "12": [
+      "taunt"
+    ],
+    "15": [
+      "slash"
+    ],
+    "18": [
       "dragon_claw"
     ],
-    "32": [
+    "21": [
+      "scary_face"
+    ],
+    "24": [
+      "crunch"
+    ],
+    "27": [
+      "dragon_dance"
+    ],
+    "30": [
+      "breaking_swipe"
+    ],
+    "33": [
+      "focus_energy"
+    ],
+    "36": [
+      "dragon_pulse"
+    ],
+    "39": [
+      "swords_dance"
+    ],
+    "42": [
       "outrage"
     ],
-    "26": [
-      "swords_dance"
+    "45": [
+      "guillotine"
+    ],
+    "48": [
+      "giga_impact"
     ]
   },
   "evolution": null,

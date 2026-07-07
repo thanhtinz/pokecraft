@@ -18,28 +18,32 @@
   "modelId": "thwackey",
   "learnset": {
     "1": [
-      "scratch"
+      "double_hit",
+      "scratch",
+      "growl",
+      "branch_poke",
+      "taunt"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
+    "12": [
       "razor_leaf"
     ],
-    "20": [
-      "seed_bomb"
+    "19": [
+      "screech"
     ],
-    "32": [
-      "petal_dance"
+    "24": [
+      "knock_off"
     ],
-    "40": [
-      "solar_beam"
+    "30": [
+      "slam"
     ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "uproar"
+    ],
+    "42": [
+      "wood_hammer"
+    ],
+    "48": [
+      "endeavor"
     ]
   },
   "evolution": null,

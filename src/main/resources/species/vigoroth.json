@@ -18,31 +18,35 @@
   "modelId": "vigoroth",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "quick_attack"
+      "scratch",
+      "focus_energy",
+      "encore",
+      "uproar",
+      "yawn",
+      "slack_off",
+      "flail",
+      "feint_attack"
     ],
     "14": [
-      "hyper_fang"
+      "fury_swipes"
     ],
-    "20": [
-      "mega_punch"
+    "17": [
+      "endure"
     ],
-    "32": [
-      "body_slam"
+    "23": [
+      "slash"
     ],
-    "40": [
-      "double_edge"
+    "27": [
+      "chip_away"
     ],
-    "48": [
-      "hyper_beam"
+    "33": [
+      "counter"
     ],
-    "26": [
-      "agility"
+    "37": [
+      "focus_punch"
+    ],
+    "43": [
+      "reversal"
     ]
   },
   "evolution": null,

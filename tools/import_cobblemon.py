@@ -8,10 +8,11 @@ converts them into PokeCraft's species format.
 
 What we take from Cobblemon:  base stats, types, catch rate, exp yield,
                               evolution chains, national dex number, legendary flag.
-What we generate locally:     learnsets (from PokeCraft's own 89-move pool, via
-                              generate_gen1's per-type pools) and biome spawn
-                              tables - so every imported species is guaranteed a
-                              working moveset within PokeCraft's existing moves.
+What we generate locally:     biome spawn tables, and a placeholder learnset
+                              (from the per-type pools) that is meant to be
+                              overwritten by tools/enrich_learnsets.py, which
+                              overlays each species' authentic level-up moveset
+                              from Cobblemon onto the built move pool.
 
 Underlying Pokemon names/stats are Nintendo/Game Freak IP; this is fine for a
 private server but do not redistribute commercially.

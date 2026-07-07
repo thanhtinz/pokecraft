@@ -18,22 +18,51 @@
   "modelId": "sandslash",
   "learnset": {
     "1": [
-      "scratch"
+      "scratch",
+      "defense_curl",
+      "sand_attack",
+      "poison_sting",
+      "crush_claw",
+      "magnitude"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "rollout"
     ],
-    "8": [
-      "sand_tomb"
+    "12": [
+      "fury_cutter"
     ],
-    "14": [
-      "dig"
+    "15": [
+      "rapid_spin"
     ],
-    "20": [
-      "earthquake"
+    "18": [
+      "bulldoze"
+    ],
+    "21": [
+      "swift"
     ],
     "26": [
-      "harden"
+      "fury_swipes"
+    ],
+    "31": [
+      "sand_tomb"
+    ],
+    "36": [
+      "slash"
+    ],
+    "41": [
+      "dig"
+    ],
+    "46": [
+      "gyro_ball"
+    ],
+    "51": [
+      "swords_dance"
+    ],
+    "56": [
+      "sandstorm"
+    ],
+    "61": [
+      "earthquake"
     ]
   },
   "evolution": null,

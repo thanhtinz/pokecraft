@@ -19,31 +19,51 @@
   "modelId": "oricorio",
   "learnset": {
     "1": [
-      "tackle"
+      "pound",
+      "double_slap",
+      "mirror_move"
     ],
     "4": [
-      "leer"
+      "growl"
     ],
-    "8": [
+    "6": [
       "peck"
     ],
-    "14": [
-      "ember"
+    "10": [
+      "helping_hand"
+    ],
+    "13": [
+      "air_cutter"
+    ],
+    "16": [
+      "baton_pass"
     ],
     "20": [
-      "gust"
+      "feather_dance"
     ],
-    "32": [
-      "fire_spin"
-    ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "fire_punch"
+    "23": [
+      "acrobatics"
     ],
     "26": [
-      "calm_mind"
+      "teeter_dance"
+    ],
+    "30": [
+      "roost"
+    ],
+    "33": [
+      "flatter"
+    ],
+    "36": [
+      "air_slash"
+    ],
+    "40": [
+      "revelation_dance"
+    ],
+    "43": [
+      "agility"
+    ],
+    "47": [
+      "hurricane"
     ]
   },
   "evolution": null,

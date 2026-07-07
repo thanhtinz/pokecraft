@@ -19,31 +19,42 @@
   "modelId": "tropius",
   "learnset": {
     "1": [
-      "tackle"
+      "leer",
+      "gust",
+      "growth",
+      "razor_leaf",
+      "leaf_storm",
+      "bestow"
     ],
-    "4": [
-      "sleep_powder"
+    "6": [
+      "sweet_scent"
     ],
-    "8": [
-      "peck"
+    "10": [
+      "stomp"
     ],
-    "14": [
-      "vine_whip"
+    "16": [
+      "magical_leaf"
     ],
-    "20": [
-      "gust"
+    "21": [
+      "whirlwind"
     ],
-    "32": [
-      "razor_leaf"
+    "30": [
+      "wide_guard"
     ],
-    "40": [
-      "wing_attack"
+    "36": [
+      "air_slash"
     ],
-    "48": [
-      "seed_bomb"
+    "41": [
+      "body_slam"
     ],
-    "26": [
-      "harden"
+    "46": [
+      "outrage"
+    ],
+    "50": [
+      "synthesis"
+    ],
+    "56": [
+      "solar_beam"
     ]
   },
   "evolution": null,

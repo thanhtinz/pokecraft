@@ -18,25 +18,31 @@
   "modelId": "corvisquire",
   "learnset": {
     "1": [
-      "tackle"
+      "peck",
+      "leer",
+      "power_trip",
+      "hone_claws"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "fury_attack"
     ],
-    "8": [
-      "peck"
+    "16": [
+      "pluck"
     ],
-    "14": [
-      "gust"
+    "22": [
+      "taunt"
     ],
-    "20": [
-      "wing_attack"
+    "28": [
+      "scary_face"
     ],
-    "32": [
+    "34": [
       "drill_peck"
     ],
-    "26": [
-      "agility"
+    "40": [
+      "swagger"
+    ],
+    "46": [
+      "brave_bird"
     ]
   },
   "evolution": null,

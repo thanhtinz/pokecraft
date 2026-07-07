@@ -19,31 +19,49 @@
   "modelId": "delphox",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "confusion"
+      "future_sight",
+      "role_play",
+      "switcheroo",
+      "shadow_ball",
+      "scratch",
+      "tail_whip",
+      "ember",
+      "howl",
+      "lucky_chant",
+      "mystical_fire"
     ],
     "14": [
-      "ember"
+      "flame_charge"
     ],
-    "20": [
+    "18": [
       "psybeam"
     ],
-    "32": [
+    "22": [
       "fire_spin"
     ],
-    "40": [
+    "28": [
+      "light_screen"
+    ],
+    "38": [
+      "psyshock"
+    ],
+    "45": [
+      "flamethrower"
+    ],
+    "51": [
+      "will_o_wisp"
+    ],
+    "57": [
       "psychic"
     ],
-    "48": [
-      "fire_punch"
+    "62": [
+      "sunny_day"
     ],
-    "26": [
-      "calm_mind"
+    "68": [
+      "magic_room"
+    ],
+    "74": [
+      "fire_blast"
     ]
   },
   "evolution": null,

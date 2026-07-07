@@ -19,31 +19,53 @@
   "modelId": "blaziken",
   "learnset": {
     "1": [
-      "pound"
+      "fire_punch",
+      "scratch",
+      "growl",
+      "ember",
+      "double_kick",
+      "peck",
+      "quick_attack",
+      "blaze_kick",
+      "sky_uppercut",
+      "flamethrower",
+      "high_jump_kick",
+      "close_combat",
+      "feather_dance",
+      "mirror_move"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "flame_charge"
     ],
-    "8": [
-      "karate_chop"
+    "12": [
+      "detect"
     ],
-    "14": [
-      "ember"
+    "15": [
+      "sand_attack"
     ],
     "20": [
-      "low_kick"
+      "aerial_ace"
     ],
-    "32": [
-      "fire_spin"
+    "25": [
+      "slash"
     ],
-    "40": [
-      "brick_break"
+    "30": [
+      "bounce"
     ],
-    "48": [
-      "fire_punch"
+    "35": [
+      "focus_energy"
     ],
-    "26": [
-      "swords_dance"
+    "42": [
+      "bulk_up"
+    ],
+    "49": [
+      "reversal"
+    ],
+    "56": [
+      "flare_blitz"
+    ],
+    "63": [
+      "brave_bird"
     ]
   },
   "evolution": null,

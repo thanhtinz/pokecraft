@@ -19,31 +19,51 @@
   "modelId": "ironvaliant",
   "learnset": {
     "1": [
-      "scratch"
+      "disable",
+      "double_team",
+      "shadow_sneak",
+      "fury_cutter",
+      "electric_terrain"
     ],
-    "4": [
-      "sing"
-    ],
-    "8": [
-      "fairy_wind"
+    "7": [
+      "hypnosis"
     ],
     "14": [
-      "karate_chop"
+      "feint"
     ],
-    "20": [
+    "21": [
+      "future_sight"
+    ],
+    "28": [
       "dazzling_gleam"
     ],
-    "32": [
-      "low_kick"
+    "35": [
+      "psycho_cut"
     ],
-    "40": [
-      "brick_break"
+    "42": [
+      "night_slash"
     ],
-    "48": [
-      "cross_chop"
+    "49": [
+      "leaf_blade"
     ],
-    "26": [
-      "swords_dance"
+    "56": [
+      "moonblast"
+    ],
+    "63": [
+      "close_combat"
+    ],
+    "70": [
+      "knock_off"
+    ],
+    "77": [
+      "destiny_bond"
+    ],
+    "84": [
+      "wide_guard",
+      "quick_guard"
+    ],
+    "91": [
+      "spirit_break"
     ]
   },
   "evolution": null,

@@ -19,31 +19,41 @@
   "modelId": "crabominable",
   "learnset": {
     "1": [
-      "pound"
+      "ice_punch",
+      "bubble",
+      "rock_smash",
+      "leer",
+      "pursuit",
+      "dizzy_punch",
+      "protect",
+      "crabhammer"
     ],
-    "4": [
-      "leer"
+    "17": [
+      "bubble_beam"
     ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
-      "ice_shard"
-    ],
-    "20": [
-      "low_kick"
-    ],
-    "32": [
-      "aurora_beam"
-    ],
-    "40": [
+    "22": [
       "brick_break"
     ],
-    "48": [
-      "ice_beam"
+    "25": [
+      "slam"
     ],
-    "26": [
-      "swords_dance"
+    "29": [
+      "avalanche"
+    ],
+    "33": [
+      "reversal"
+    ],
+    "37": [
+      "ice_hammer"
+    ],
+    "42": [
+      "iron_defense"
+    ],
+    "45": [
+      "dynamic_punch"
+    ],
+    "49": [
+      "close_combat"
     ]
   },
   "evolution": null,

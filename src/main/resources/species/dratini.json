@@ -18,25 +18,44 @@
   "modelId": "dratini",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "wrap",
       "leer"
     ],
-    "8": [
+    "5": [
       "twister"
     ],
-    "14": [
-      "dragon_breath"
+    "10": [
+      "thunder_wave"
+    ],
+    "15": [
+      "dragon_rage"
     ],
     "20": [
-      "dragon_claw"
+      "agility"
     ],
-    "32": [
+    "25": [
+      "slam"
+    ],
+    "31": [
+      "aqua_tail"
+    ],
+    "35": [
+      "dragon_rush"
+    ],
+    "40": [
+      "safeguard"
+    ],
+    "45": [
+      "rain_dance"
+    ],
+    "50": [
+      "dragon_dance"
+    ],
+    "55": [
       "outrage"
     ],
-    "26": [
-      "swords_dance"
+    "60": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

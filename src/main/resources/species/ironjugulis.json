@@ -19,31 +19,47 @@
   "modelId": "ironjugulis",
   "learnset": {
     "1": [
-      "tackle"
+      "electric_terrain",
+      "work_up",
+      "focus_energy",
+      "tri_attack",
+      "air_cutter"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "peck"
+    "7": [
+      "roar"
     ],
     "14": [
-      "bite"
+      "assurance"
     ],
-    "20": [
-      "gust"
+    "21": [
+      "dragon_breath"
     ],
-    "32": [
+    "28": [
+      "snarl"
+    ],
+    "35": [
       "crunch"
     ],
-    "40": [
-      "wing_attack"
+    "42": [
+      "hyper_voice"
     ],
-    "48": [
-      "drill_peck"
+    "56": [
+      "air_slash"
     ],
-    "26": [
-      "calm_mind"
+    "63": [
+      "knock_off"
+    ],
+    "70": [
+      "dark_pulse"
+    ],
+    "77": [
+      "outrage"
+    ],
+    "84": [
+      "dragon_pulse"
+    ],
+    "91": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

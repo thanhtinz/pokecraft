@@ -18,28 +18,37 @@
   "modelId": "poliwag",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "water_sport",
+      "bubble",
+      "hypnosis",
       "water_gun"
     ],
-    "14": [
+    "6": [
+      "pound"
+    ],
+    "12": [
+      "mud_shot"
+    ],
+    "18": [
       "bubble_beam"
     ],
-    "20": [
-      "waterfall"
+    "24": [
+      "rain_dance"
     ],
-    "32": [
-      "surf"
+    "30": [
+      "body_slam"
     ],
-    "40": [
+    "36": [
+      "earth_power"
+    ],
+    "42": [
       "hydro_pump"
     ],
-    "26": [
-      "agility"
+    "48": [
+      "belly_drum"
+    ],
+    "54": [
+      "double_edge"
     ]
   },
   "evolution": null,

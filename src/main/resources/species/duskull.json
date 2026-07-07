@@ -18,22 +18,42 @@
   "modelId": "duskull",
   "learnset": {
     "1": [
-      "scratch"
+      "leer",
+      "foresight",
+      "astonish"
     ],
     "4": [
-      "hypnosis"
+      "disable"
     ],
     "8": [
-      "lick"
+      "shadow_sneak"
     ],
-    "14": [
+    "12": [
+      "confuse_ray"
+    ],
+    "16": [
       "night_shade"
     ],
     "20": [
+      "payback"
+    ],
+    "24": [
+      "will_o_wisp"
+    ],
+    "28": [
+      "mean_look"
+    ],
+    "32": [
+      "hex"
+    ],
+    "36": [
+      "curse"
+    ],
+    "40": [
       "shadow_ball"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "future_sight"
     ]
   },
   "evolution": null,

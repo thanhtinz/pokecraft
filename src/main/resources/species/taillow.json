@@ -19,31 +19,41 @@
   "modelId": "taillow",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "peck",
       "growl"
     ],
-    "8": [
+    "5": [
+      "focus_energy"
+    ],
+    "9": [
       "quick_attack"
     ],
-    "14": [
-      "peck"
-    ],
-    "20": [
-      "hyper_fang"
-    ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "mega_punch"
-    ],
-    "48": [
+    "13": [
       "wing_attack"
     ],
-    "26": [
+    "17": [
+      "double_team"
+    ],
+    "21": [
+      "aerial_ace"
+    ],
+    "25": [
+      "quick_guard"
+    ],
+    "29": [
       "agility"
+    ],
+    "33": [
+      "air_slash"
+    ],
+    "37": [
+      "endeavor"
+    ],
+    "41": [
+      "brave_bird"
+    ],
+    "45": [
+      "reversal"
     ]
   },
   "evolution": null,

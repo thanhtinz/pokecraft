@@ -18,25 +18,42 @@
   "modelId": "gurdurr",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "leer",
+      "bide",
+      "low_kick",
+      "rock_throw",
+      "chip_away"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "focus_energy"
     ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
-      "low_kick"
+    "16": [
+      "bulk_up"
     ],
     "20": [
-      "brick_break"
+      "wake_up_slap"
     ],
-    "32": [
-      "cross_chop"
+    "24": [
+      "slam"
     ],
-    "26": [
-      "swords_dance"
+    "30": [
+      "scary_face"
+    ],
+    "36": [
+      "dynamic_punch"
+    ],
+    "42": [
+      "hammer_arm"
+    ],
+    "48": [
+      "stone_edge"
+    ],
+    "54": [
+      "superpower"
+    ],
+    "60": [
+      "focus_punch"
     ]
   },
   "evolution": null,

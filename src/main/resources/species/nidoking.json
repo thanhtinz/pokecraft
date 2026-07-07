@@ -19,31 +19,24 @@
   "modelId": "nidoking",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "poison_powder"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "sand_tomb"
-    ],
-    "20": [
-      "acid"
-    ],
-    "32": [
-      "dig"
-    ],
-    "40": [
-      "sludge"
-    ],
-    "48": [
-      "earthquake"
-    ],
-    "26": [
-      "swords_dance"
+      "peck",
+      "focus_energy",
+      "double_kick",
+      "poison_sting",
+      "thrash",
+      "earth_power",
+      "megahorn",
+      "helping_hand",
+      "poison_jab",
+      "chip_away",
+      "fury_attack",
+      "toxic_spikes",
+      "horn_attack",
+      "toxic",
+      "flatter",
+      "leer",
+      "horn_drill",
+      "captivate"
     ]
   },
   "evolution": null,

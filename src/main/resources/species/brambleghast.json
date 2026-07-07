@@ -19,31 +19,45 @@
   "modelId": "brambleghast",
   "learnset": {
     "1": [
-      "pound"
+      "defense_curl",
+      "rollout",
+      "astonish"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "absorb"
     ],
-    "8": [
-      "lick"
+    "9": [
+      "rapid_spin"
     ],
-    "14": [
-      "vine_whip"
+    "13": [
+      "bullet_seed"
     ],
-    "20": [
-      "night_shade"
+    "17": [
+      "infestation"
     ],
-    "32": [
-      "razor_leaf"
+    "21": [
+      "hex"
+    ],
+    "25": [
+      "mega_drain"
+    ],
+    "29": [
+      "disable"
+    ],
+    "35": [
+      "phantom_force"
     ],
     "40": [
-      "shadow_ball"
+      "giga_drain"
     ],
-    "48": [
-      "seed_bomb"
+    "45": [
+      "curse"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "pain_split"
+    ],
+    "55": [
+      "power_whip"
     ]
   },
   "evolution": null,

@@ -18,19 +18,45 @@
   "modelId": "shelmet",
   "learnset": {
     "1": [
-      "scratch"
+      "bide",
+      "protect",
+      "absorb"
     ],
     "4": [
-      "string_shot"
+      "acid"
     ],
     "8": [
-      "bug_bite"
+      "curse"
     ],
-    "14": [
-      "pin_missile"
+    "12": [
+      "mega_drain"
     ],
-    "26": [
-      "harden"
+    "16": [
+      "struggle_bug"
+    ],
+    "20": [
+      "yawn"
+    ],
+    "24": [
+      "acid_armor"
+    ],
+    "28": [
+      "giga_drain"
+    ],
+    "32": [
+      "guard_swap"
+    ],
+    "36": [
+      "body_slam"
+    ],
+    "40": [
+      "recover"
+    ],
+    "44": [
+      "bug_buzz"
+    ],
+    "48": [
+      "final_gambit"
     ]
   },
   "evolution": null,

@@ -18,28 +18,38 @@
   "modelId": "lurantis",
   "learnset": {
     "1": [
-      "scratch"
+      "petal_blizzard",
+      "night_slash",
+      "fury_cutter",
+      "leafage",
+      "growth",
+      "ingrain",
+      "solar_beam",
+      "dual_chop"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
+    "15": [
       "razor_leaf"
     ],
     "20": [
-      "seed_bomb"
+      "sweet_scent"
     ],
-    "32": [
-      "petal_dance"
+    "25": [
+      "slash"
     ],
-    "40": [
-      "solar_beam"
+    "30": [
+      "x_scissor"
     ],
-    "26": [
-      "swords_dance"
+    "37": [
+      "synthesis"
+    ],
+    "44": [
+      "leaf_blade"
+    ],
+    "51": [
+      "sunny_day"
+    ],
+    "63": [
+      "solar_blade"
     ]
   },
   "evolution": null,

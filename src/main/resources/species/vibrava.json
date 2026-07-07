@@ -19,31 +19,55 @@
   "modelId": "vibrava",
   "learnset": {
     "1": [
-      "pound"
+      "sonic_boom",
+      "sand_attack",
+      "feint_attack",
+      "supersonic",
+      "dragon_breath",
+      "hyper_beam",
+      "dig",
+      "rock_slide",
+      "bide",
+      "bulldoze",
+      "superpower",
+      "laser_focus",
+      "crunch",
+      "fissure",
+      "astonish",
+      "bite"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "mud_slap"
     ],
-    "8": [
-      "twister"
-    ],
-    "14": [
+    "16": [
       "sand_tomb"
     ],
     "20": [
-      "dragon_breath"
+      "dragon_tail"
+    ],
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "bug_buzz"
     ],
     "32": [
-      "dig"
+      "sandstorm"
     ],
-    "40": [
-      "dragon_claw"
+    "38": [
+      "earth_power"
     ],
-    "48": [
+    "44": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "uproar"
+    ],
+    "56": [
+      "dragon_rush"
+    ],
+    "62": [
+      "boomburst"
     ]
   },
   "evolution": null,

@@ -19,28 +19,46 @@
   "modelId": "malamar",
   "learnset": {
     "1": [
-      "tackle"
+      "reversal",
+      "tackle",
+      "peck",
+      "constrict",
+      "psywave",
+      "hypnosis",
+      "wrap"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "payback"
     ],
-    "8": [
-      "confusion"
+    "12": [
+      "pluck"
     ],
-    "14": [
-      "bite"
-    ],
-    "20": [
+    "15": [
       "psybeam"
     ],
-    "32": [
-      "crunch"
+    "18": [
+      "swagger"
     ],
-    "40": [
-      "psychic"
+    "21": [
+      "slash"
     ],
-    "26": [
-      "swords_dance"
+    "24": [
+      "night_slash"
+    ],
+    "27": [
+      "psycho_cut"
+    ],
+    "33": [
+      "switcheroo"
+    ],
+    "37": [
+      "foul_play"
+    ],
+    "42": [
+      "topsy_turvy"
+    ],
+    "47": [
+      "superpower"
     ]
   },
   "evolution": null,

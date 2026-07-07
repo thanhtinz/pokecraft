@@ -19,31 +19,42 @@
   "modelId": "salandit",
   "learnset": {
     "1": [
-      "scratch"
+      "scratch",
+      "poison_gas",
+      "dragon_rage"
     ],
-    "4": [
-      "poison_powder"
+    "5": [
+      "smog"
     ],
-    "8": [
+    "10": [
       "ember"
     ],
-    "14": [
-      "poison_sting"
+    "15": [
+      "poison_fang"
     ],
     "20": [
-      "fire_spin"
+      "sweet_scent"
     ],
-    "32": [
-      "acid"
+    "25": [
+      "nasty_plot"
+    ],
+    "30": [
+      "incinerate"
+    ],
+    "35": [
+      "venoshock"
     ],
     "40": [
-      "fire_punch"
+      "dragon_pulse"
     ],
-    "48": [
-      "sludge"
+    "45": [
+      "flamethrower"
     ],
-    "26": [
-      "agility"
+    "50": [
+      "toxic"
+    ],
+    "55": [
+      "endeavor"
     ]
   },
   "evolution": null,

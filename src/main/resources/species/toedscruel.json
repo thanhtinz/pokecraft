@@ -19,31 +19,52 @@
   "modelId": "toedscruel",
   "learnset": {
     "1": [
-      "scratch"
+      "reflect_type",
+      "wrap",
+      "mud_slap"
     ],
     "4": [
-      "leer"
+      "absorb"
     ],
     "8": [
-      "vine_whip"
+      "stun_spore",
+      "poison_powder"
     ],
-    "14": [
-      "sand_tomb"
+    "12": [
+      "supersonic"
+    ],
+    "15": [
+      "tackle"
+    ],
+    "16": [
+      "mega_drain"
     ],
     "20": [
-      "razor_leaf"
+      "screech"
     ],
-    "32": [
-      "dig"
+    "24": [
+      "mud_shot"
     ],
-    "40": [
+    "28": [
+      "hex"
+    ],
+    "34": [
       "seed_bomb"
     ],
-    "48": [
-      "earthquake"
+    "40": [
+      "spore"
     ],
-    "26": [
-      "agility"
+    "44": [
+      "growth"
+    ],
+    "48": [
+      "giga_drain"
+    ],
+    "54": [
+      "earth_power"
+    ],
+    "58": [
+      "power_whip"
     ]
   },
   "evolution": null,

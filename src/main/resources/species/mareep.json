@@ -18,7 +18,8 @@
   "modelId": "mareep",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "growl"
     ],
     "4": [
       "thunder_wave"
@@ -26,17 +27,38 @@
     "8": [
       "thunder_shock"
     ],
-    "14": [
-      "spark"
+    "11": [
+      "cotton_spore"
     ],
-    "20": [
-      "thunderbolt"
+    "15": [
+      "charge"
+    ],
+    "18": [
+      "take_down"
+    ],
+    "22": [
+      "electro_ball"
+    ],
+    "25": [
+      "confuse_ray"
+    ],
+    "29": [
+      "power_gem"
     ],
     "32": [
-      "thunder"
+      "discharge"
     ],
-    "26": [
-      "calm_mind"
+    "36": [
+      "cotton_guard"
+    ],
+    "39": [
+      "dazzling_gleam"
+    ],
+    "43": [
+      "light_screen"
+    ],
+    "46": [
+      "thunder"
     ]
   },
   "evolution": null,

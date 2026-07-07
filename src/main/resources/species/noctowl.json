@@ -19,31 +19,47 @@
   "modelId": "noctowl",
   "learnset": {
     "1": [
-      "pound"
+      "sky_attack",
+      "tackle",
+      "growl",
+      "foresight",
+      "peck",
+      "psycho_shift",
+      "echoed_voice",
+      "synchronoise"
     ],
-    "4": [
-      "growl"
+    "9": [
+      "confusion"
     ],
-    "8": [
-      "quick_attack"
+    "12": [
+      "reflect"
     ],
-    "14": [
-      "peck"
+    "15": [
+      "defog"
     ],
-    "20": [
-      "hyper_fang"
+    "18": [
+      "air_slash"
     ],
-    "32": [
-      "gust"
+    "23": [
+      "extrasensory"
     ],
-    "40": [
-      "mega_punch"
+    "28": [
+      "take_down"
+    ],
+    "33": [
+      "uproar"
+    ],
+    "38": [
+      "roost"
+    ],
+    "43": [
+      "moonblast"
     ],
     "48": [
-      "wing_attack"
+      "hypnosis"
     ],
-    "26": [
-      "calm_mind"
+    "53": [
+      "dream_eater"
     ]
   },
   "evolution": null,

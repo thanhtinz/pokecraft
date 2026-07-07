@@ -19,31 +19,50 @@
   "modelId": "moltres",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
+      "gust",
       "leer"
     ],
-    "8": [
+    "5": [
       "ember"
     ],
-    "14": [
-      "peck"
+    "10": [
+      "safeguard"
     ],
-    "20": [
-      "fire_spin"
-    ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "fire_punch"
-    ],
-    "48": [
+    "15": [
       "wing_attack"
     ],
-    "26": [
-      "calm_mind"
+    "20": [
+      "agility"
+    ],
+    "25": [
+      "ancient_power"
+    ],
+    "30": [
+      "incinerate"
+    ],
+    "35": [
+      "air_slash"
+    ],
+    "40": [
+      "roost"
+    ],
+    "45": [
+      "heat_wave"
+    ],
+    "50": [
+      "sunny_day"
+    ],
+    "55": [
+      "hurricane"
+    ],
+    "60": [
+      "endure"
+    ],
+    "65": [
+      "burn_up"
+    ],
+    "70": [
+      "sky_attack"
     ]
   },
   "evolution": null,

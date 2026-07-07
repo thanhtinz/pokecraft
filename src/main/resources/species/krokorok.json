@@ -19,28 +19,44 @@
   "modelId": "krokorok",
   "learnset": {
     "1": [
-      "tackle"
+      "leer",
+      "rage",
+      "sand_attack",
+      "hone_claws",
+      "power_trip"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+    "9": [
       "sand_tomb"
     ],
-    "14": [
+    "12": [
+      "scary_face"
+    ],
+    "15": [
       "bite"
     ],
-    "20": [
+    "18": [
+      "torment"
+    ],
+    "21": [
       "dig"
     ],
-    "32": [
+    "24": [
+      "swagger"
+    ],
+    "27": [
       "crunch"
     ],
-    "40": [
+    "32": [
+      "sandstorm"
+    ],
+    "35": [
+      "foul_play"
+    ],
+    "42": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "47": [
+      "thrash"
     ]
   },
   "evolution": null,

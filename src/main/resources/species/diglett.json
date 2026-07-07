@@ -18,22 +18,42 @@
   "modelId": "diglett",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "sand_attack",
+      "magnitude"
     ],
     "4": [
-      "leer"
+      "growl"
     ],
     "8": [
-      "sand_tomb"
+      "astonish"
     ],
-    "14": [
-      "dig"
+    "12": [
+      "mud_slap"
+    ],
+    "16": [
+      "bulldoze"
     ],
     "20": [
+      "sucker_punch"
+    ],
+    "24": [
+      "slash"
+    ],
+    "28": [
+      "sandstorm"
+    ],
+    "32": [
+      "dig"
+    ],
+    "36": [
+      "earth_power"
+    ],
+    "40": [
       "earthquake"
     ],
-    "26": [
-      "agility"
+    "44": [
+      "fissure"
     ]
   },
   "evolution": null,

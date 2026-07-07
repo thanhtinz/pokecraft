@@ -18,22 +18,10 @@
   "modelId": "cosmoem",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "psybeam"
-    ],
-    "20": [
-      "psychic"
-    ],
-    "26": [
-      "harden"
+      "tackle",
+      "cosmic_power",
+      "teleport",
+      "splash"
     ]
   },
   "evolution": null,

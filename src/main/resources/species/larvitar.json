@@ -19,31 +19,51 @@
   "modelId": "larvitar",
   "learnset": {
     "1": [
+      "leer",
+      "chip_away",
       "tackle"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
+    "3": [
       "rock_throw"
     ],
-    "14": [
-      "sand_tomb"
+    "6": [
+      "payback"
     ],
-    "20": [
+    "9": [
+      "bite"
+    ],
+    "12": [
+      "scary_face"
+    ],
+    "15": [
       "rock_slide"
     ],
-    "32": [
-      "dig"
+    "18": [
+      "stomping_tantrum"
     ],
-    "40": [
-      "stone_edge"
+    "21": [
+      "screech"
     ],
-    "48": [
+    "24": [
+      "smack_down"
+    ],
+    "27": [
+      "crunch"
+    ],
+    "31": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "33": [
+      "stone_edge"
+    ],
+    "36": [
+      "thrash"
+    ],
+    "39": [
+      "sandstorm"
+    ],
+    "42": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

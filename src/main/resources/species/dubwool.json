@@ -18,31 +18,37 @@
   "modelId": "dubwool",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "growl",
+      "defense_curl",
+      "copycat"
     ],
-    "4": [
-      "growl"
+    "12": [
+      "guard_split"
     ],
-    "8": [
-      "quick_attack"
+    "16": [
+      "double_kick"
     ],
-    "14": [
-      "hyper_fang"
+    "21": [
+      "headbutt"
     ],
-    "20": [
-      "mega_punch"
+    "27": [
+      "take_down"
     ],
     "32": [
-      "body_slam"
+      "guard_swap"
     ],
-    "40": [
+    "38": [
+      "reversal"
+    ],
+    "44": [
+      "cotton_guard"
+    ],
+    "50": [
       "double_edge"
     ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "harden"
+    "56": [
+      "last_resort"
     ]
   },
   "evolution": null,

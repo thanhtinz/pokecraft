@@ -18,28 +18,50 @@
   "modelId": "pansage",
   "learnset": {
     "1": [
-      "scratch"
+      "scratch",
+      "play_nice"
     ],
     "4": [
-      "sleep_powder"
+      "leer"
     ],
-    "8": [
+    "7": [
+      "lick"
+    ],
+    "10": [
       "vine_whip"
     ],
-    "14": [
-      "razor_leaf"
+    "13": [
+      "fury_swipes"
     ],
-    "20": [
+    "16": [
+      "leech_seed"
+    ],
+    "19": [
+      "bite"
+    ],
+    "22": [
       "seed_bomb"
     ],
-    "32": [
-      "petal_dance"
+    "25": [
+      "torment"
+    ],
+    "28": [
+      "fling"
+    ],
+    "31": [
+      "acrobatics"
+    ],
+    "34": [
+      "grass_knot"
+    ],
+    "37": [
+      "recycle"
     ],
     "40": [
-      "solar_beam"
+      "natural_gift"
     ],
-    "26": [
-      "agility"
+    "43": [
+      "crunch"
     ]
   },
   "evolution": null,

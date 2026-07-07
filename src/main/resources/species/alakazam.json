@@ -18,21 +18,40 @@
   "modelId": "alakazam",
   "learnset": {
     "1": [
-      "pound"
+      "teleport",
+      "kinesis",
+      "confusion",
+      "disable",
+      "miracle_eye"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
+    "5": [
       "psybeam"
     ],
+    "10": [
+      "reflect"
+    ],
+    "15": [
+      "ally_switch"
+    ],
     "20": [
+      "psycho_cut"
+    ],
+    "25": [
+      "recover"
+    ],
+    "30": [
+      "psyshock"
+    ],
+    "35": [
       "psychic"
     ],
-    "26": [
+    "40": [
+      "role_play"
+    ],
+    "45": [
+      "future_sight"
+    ],
+    "50": [
       "calm_mind"
     ]
   },

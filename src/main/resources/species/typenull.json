@@ -18,31 +18,43 @@
   "modelId": "typenull",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "rage",
+      "pursuit",
+      "imprison"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "aerial_ace"
     ],
-    "8": [
-      "quick_attack"
+    "10": [
+      "scary_face"
     ],
-    "14": [
-      "hyper_fang"
+    "15": [
+      "double_hit"
     ],
     "20": [
-      "mega_punch"
+      "metal_sound"
     ],
-    "32": [
-      "body_slam"
+    "25": [
+      "crush_claw"
+    ],
+    "30": [
+      "air_slash"
+    ],
+    "35": [
+      "tri_attack"
     ],
     "40": [
+      "x_scissor"
+    ],
+    "45": [
+      "iron_head"
+    ],
+    "50": [
+      "take_down"
+    ],
+    "55": [
       "double_edge"
-    ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

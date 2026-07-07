@@ -19,31 +19,43 @@
   "modelId": "primarina",
   "learnset": {
     "1": [
-      "scratch"
+      "sparkling_aria",
+      "pound",
+      "water_gun",
+      "growl",
+      "disarming_voice",
+      "double_slap",
+      "captivate"
     ],
-    "4": [
-      "tail_whip"
+    "9": [
+      "aqua_jet"
     ],
-    "8": [
-      "water_gun"
+    "12": [
+      "baby_doll_eyes"
     ],
-    "14": [
-      "fairy_wind"
+    "15": [
+      "icy_wind"
     ],
     "20": [
+      "sing"
+    ],
+    "25": [
       "bubble_beam"
     ],
-    "32": [
-      "dazzling_gleam"
+    "30": [
+      "encore"
     ],
-    "40": [
-      "waterfall"
+    "37": [
+      "misty_terrain"
     ],
-    "48": [
-      "surf"
+    "44": [
+      "hyper_voice"
     ],
-    "26": [
-      "calm_mind"
+    "51": [
+      "moonblast"
+    ],
+    "58": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

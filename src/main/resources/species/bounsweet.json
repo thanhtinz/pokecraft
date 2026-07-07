@@ -18,28 +18,31 @@
   "modelId": "bounsweet",
   "learnset": {
     "1": [
-      "pound"
+      "splash"
     ],
     "4": [
-      "sleep_powder"
+      "play_nice"
     ],
     "8": [
-      "vine_whip"
+      "rapid_spin"
     ],
-    "14": [
+    "12": [
       "razor_leaf"
     ],
+    "16": [
+      "sweet_scent"
+    ],
     "20": [
-      "seed_bomb"
+      "magical_leaf"
+    ],
+    "24": [
+      "flail"
+    ],
+    "28": [
+      "teeter_dance"
     ],
     "32": [
-      "petal_dance"
-    ],
-    "40": [
-      "solar_beam"
-    ],
-    "26": [
-      "harden"
+      "aromatic_mist"
     ]
   },
   "evolution": null,

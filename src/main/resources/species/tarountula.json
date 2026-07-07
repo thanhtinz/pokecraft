@@ -18,19 +18,44 @@
   "modelId": "tarountula",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
+      "tackle",
       "string_shot"
     ],
+    "5": [
+      "struggle_bug"
+    ],
     "8": [
-      "bug_bite"
+      "assurance"
+    ],
+    "11": [
+      "feint"
     ],
     "14": [
-      "pin_missile"
+      "bug_bite"
     ],
-    "26": [
-      "harden"
+    "18": [
+      "block"
+    ],
+    "22": [
+      "counter"
+    ],
+    "25": [
+      "headbutt"
+    ],
+    "29": [
+      "sticky_web"
+    ],
+    "33": [
+      "gastro_acid"
+    ],
+    "36": [
+      "circle_throw"
+    ],
+    "40": [
+      "throat_chop"
+    ],
+    "44": [
+      "skitter_smack"
     ]
   },
   "evolution": null,

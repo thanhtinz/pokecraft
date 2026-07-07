@@ -19,25 +19,49 @@
   "modelId": "genesect",
   "learnset": {
     "1": [
-      "scratch"
+      "quick_attack",
+      "fury_cutter",
+      "magnet_bomb",
+      "slash"
     ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
-      "steel_wing"
+    "7": [
+      "screech"
     ],
     "14": [
-      "bug_bite"
+      "metal_claw"
     ],
-    "20": [
-      "iron_head"
+    "21": [
+      "fell_stinger"
     ],
-    "32": [
-      "pin_missile"
+    "28": [
+      "flame_charge"
     ],
-    "26": [
-      "swords_dance"
+    "35": [
+      "metal_sound"
+    ],
+    "42": [
+      "x_scissor"
+    ],
+    "49": [
+      "magnet_rise"
+    ],
+    "56": [
+      "bug_buzz"
+    ],
+    "63": [
+      "simple_beam"
+    ],
+    "70": [
+      "zap_cannon"
+    ],
+    "77": [
+      "lock_on"
+    ],
+    "84": [
+      "techno_blast"
+    ],
+    "91": [
+      "self_destruct"
     ]
   },
   "evolution": null,

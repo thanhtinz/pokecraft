@@ -18,19 +18,35 @@
   "modelId": "thievul",
   "learnset": {
     "1": [
-      "tackle"
+      "thief",
+      "quick_attack",
+      "tail_whip",
+      "beat_up",
+      "hone_claws"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "snarl"
     ],
-    "8": [
-      "bite"
+    "16": [
+      "assurance"
     ],
-    "14": [
-      "crunch"
+    "22": [
+      "nasty_plot"
     ],
-    "26": [
-      "agility"
+    "28": [
+      "sucker_punch"
+    ],
+    "34": [
+      "night_slash"
+    ],
+    "40": [
+      "tail_slap"
+    ],
+    "46": [
+      "foul_play"
+    ],
+    "52": [
+      "parting_shot"
     ]
   },
   "evolution": null,

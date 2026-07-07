@@ -18,25 +18,44 @@
   "modelId": "pincurchin",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
+      "peck",
       "thunder_shock"
     ],
-    "14": [
-      "spark"
+    "5": [
+      "water_gun"
+    ],
+    "10": [
+      "charge"
+    ],
+    "15": [
+      "fury_attack"
     ],
     "20": [
-      "thunderbolt"
+      "spark"
     ],
-    "32": [
-      "thunder"
+    "25": [
+      "bubble_beam"
     ],
-    "26": [
-      "swords_dance"
+    "30": [
+      "recover"
+    ],
+    "35": [
+      "curse"
+    ],
+    "40": [
+      "electric_terrain"
+    ],
+    "45": [
+      "poison_jab"
+    ],
+    "50": [
+      "zing_zap"
+    ],
+    "55": [
+      "acupressure"
+    ],
+    "60": [
+      "discharge"
     ]
   },
   "evolution": null,

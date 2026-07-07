@@ -18,22 +18,51 @@
   "modelId": "garganacl",
   "learnset": {
     "1": [
-      "scratch"
+      "hammer_arm",
+      "block",
+      "tackle",
+      "wide_guard",
+      "harden",
+      "rock_blast"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
+    "5": [
       "rock_throw"
     ],
-    "14": [
+    "7": [
+      "mud_shot"
+    ],
+    "10": [
+      "rock_tomb"
+    ],
+    "13": [
+      "rock_polish"
+    ],
+    "16": [
+      "headbutt"
+    ],
+    "24": [
+      "salt_cure"
+    ],
+    "30": [
+      "recover"
+    ],
+    "34": [
       "rock_slide"
     ],
-    "20": [
+    "40": [
+      "stealth_rock"
+    ],
+    "44": [
+      "heavy_slam"
+    ],
+    "49": [
+      "earthquake"
+    ],
+    "54": [
       "stone_edge"
     ],
-    "26": [
-      "harden"
+    "60": [
+      "explosion"
     ]
   },
   "evolution": null,

@@ -19,31 +19,45 @@
   "modelId": "vullaby",
   "learnset": {
     "1": [
-      "pound"
+      "gust",
+      "leer",
+      "fury_attack"
     ],
-    "4": [
-      "leer"
+    "6": [
+      "flatter"
     ],
-    "8": [
-      "peck"
+    "12": [
+      "pluck"
     ],
-    "14": [
-      "bite"
+    "18": [
+      "tailwind"
     ],
-    "20": [
-      "gust"
+    "24": [
+      "knock_off"
     ],
-    "32": [
-      "crunch"
+    "30": [
+      "iron_defense"
     ],
-    "40": [
-      "wing_attack"
+    "36": [
+      "whirlwind"
+    ],
+    "42": [
+      "air_slash"
     ],
     "48": [
-      "drill_peck"
+      "dark_pulse"
     ],
-    "26": [
-      "harden"
+    "54": [
+      "nasty_plot"
+    ],
+    "60": [
+      "defog"
+    ],
+    "66": [
+      "attract"
+    ],
+    "72": [
+      "brave_bird"
     ]
   },
   "evolution": null,

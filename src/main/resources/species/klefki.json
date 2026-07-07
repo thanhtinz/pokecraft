@@ -19,25 +19,49 @@
   "modelId": "klefki",
   "learnset": {
     "1": [
-      "pound"
+      "astonish",
+      "crafty_shield",
+      "mirror_shot",
+      "heal_block"
     ],
     "4": [
-      "harden"
+      "tackle"
     ],
     "8": [
       "fairy_wind"
     ],
-    "14": [
-      "steel_wing"
+    "12": [
+      "torment"
+    ],
+    "16": [
+      "fairy_lock"
     ],
     "20": [
-      "dazzling_gleam"
+      "metal_sound"
+    ],
+    "24": [
+      "draining_kiss"
+    ],
+    "28": [
+      "recycle"
     ],
     "32": [
-      "iron_head"
+      "imprison"
     ],
-    "26": [
-      "harden"
+    "36": [
+      "flash_cannon"
+    ],
+    "40": [
+      "play_rough"
+    ],
+    "44": [
+      "magic_room"
+    ],
+    "48": [
+      "foul_play"
+    ],
+    "52": [
+      "last_resort"
     ]
   },
   "evolution": null,

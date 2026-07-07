@@ -19,31 +19,45 @@
   "modelId": "crawdaunt",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "bubble",
+      "harden",
+      "leer",
+      "swift",
+      "taunt",
       "water_gun"
     ],
-    "14": [
-      "bite"
-    ],
-    "20": [
+    "12": [
       "bubble_beam"
     ],
-    "32": [
-      "crunch"
+    "16": [
+      "knock_off"
+    ],
+    "20": [
+      "double_hit"
+    ],
+    "24": [
+      "protect"
+    ],
+    "28": [
+      "night_slash"
+    ],
+    "34": [
+      "razor_shell"
     ],
     "40": [
-      "waterfall"
-    ],
-    "48": [
-      "surf"
-    ],
-    "26": [
       "swords_dance"
+    ],
+    "46": [
+      "crunch"
+    ],
+    "52": [
+      "crabhammer"
+    ],
+    "58": [
+      "endeavor"
+    ],
+    "64": [
+      "guillotine"
     ]
   },
   "evolution": null,

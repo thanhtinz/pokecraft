@@ -18,22 +18,40 @@
   "modelId": "gothorita",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "confusion",
+      "tickle",
+      "double_slap",
+      "feint_attack",
+      "heal_block",
+      "play_nice"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
+    "12": [
       "psybeam"
     ],
-    "20": [
-      "psychic"
+    "16": [
+      "charm"
     ],
-    "26": [
-      "calm_mind"
+    "20": [
+      "psyshock"
+    ],
+    "24": [
+      "hypnosis"
+    ],
+    "28": [
+      "fake_tears"
+    ],
+    "35": [
+      "psych_up"
+    ],
+    "46": [
+      "flatter"
+    ],
+    "52": [
+      "future_sight"
+    ],
+    "58": [
+      "magic_room"
     ]
   },
   "evolution": null,

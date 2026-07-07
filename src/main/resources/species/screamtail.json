@@ -19,28 +19,49 @@
   "modelId": "screamtail",
   "learnset": {
     "1": [
-      "scratch"
+      "pound",
+      "sing",
+      "disable",
+      "sunny_day"
     ],
-    "4": [
-      "sing"
-    ],
-    "8": [
-      "confusion"
+    "7": [
+      "howl"
     ],
     "14": [
-      "fairy_wind"
+      "noble_roar"
     ],
-    "20": [
-      "psybeam"
+    "21": [
+      "bite"
     ],
-    "32": [
-      "dazzling_gleam"
+    "28": [
+      "body_slam"
     ],
-    "40": [
-      "psychic"
+    "35": [
+      "rest"
     ],
-    "26": [
-      "agility"
+    "42": [
+      "play_rough"
+    ],
+    "49": [
+      "hyper_voice"
+    ],
+    "56": [
+      "psychic_fangs"
+    ],
+    "63": [
+      "crunch"
+    ],
+    "70": [
+      "wish"
+    ],
+    "77": [
+      "gyro_ball"
+    ],
+    "84": [
+      "perish_song"
+    ],
+    "91": [
+      "boomburst"
     ]
   },
   "evolution": null,

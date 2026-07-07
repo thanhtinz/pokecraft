@@ -19,31 +19,60 @@
   "modelId": "yveltal",
   "learnset": {
     "1": [
-      "tackle"
+      "razor_wind",
+      "gust",
+      "double_team"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "taunt"
     ],
-    "8": [
-      "peck"
+    "10": [
+      "snarl"
     ],
-    "14": [
-      "bite"
+    "15": [
+      "disable"
     ],
     "20": [
-      "gust"
+      "sucker_punch"
     ],
-    "32": [
-      "crunch"
+    "25": [
+      "tailwind"
+    ],
+    "30": [
+      "roost"
+    ],
+    "35": [
+      "air_slash"
     ],
     "40": [
-      "wing_attack"
+      "dark_pulse"
     ],
-    "48": [
-      "drill_peck"
+    "45": [
+      "psychic"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "oblivion_wing"
+    ],
+    "55": [
+      "phantom_force"
+    ],
+    "60": [
+      "foul_play"
+    ],
+    "65": [
+      "dragon_rush"
+    ],
+    "70": [
+      "hurricane"
+    ],
+    "75": [
+      "focus_blast"
+    ],
+    "80": [
+      "sky_attack"
+    ],
+    "85": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

@@ -18,25 +18,52 @@
   "modelId": "xurkitree",
   "learnset": {
     "1": [
-      "scratch"
+      "tail_glow",
+      "wrap",
+      "thunder_shock",
+      "ion_deluge"
     ],
-    "4": [
+    "5": [
+      "charge"
+    ],
+    "10": [
       "thunder_wave"
     ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
-      "spark"
+    "15": [
+      "ingrain"
     ],
     "20": [
+      "spark"
+    ],
+    "25": [
+      "shock_wave"
+    ],
+    "30": [
+      "hypnosis"
+    ],
+    "35": [
+      "eerie_impulse"
+    ],
+    "40": [
+      "thunder_punch"
+    ],
+    "45": [
+      "discharge"
+    ],
+    "50": [
+      "magnet_rise"
+    ],
+    "55": [
       "thunderbolt"
     ],
-    "32": [
-      "thunder"
+    "60": [
+      "electric_terrain"
     ],
-    "26": [
-      "calm_mind"
+    "65": [
+      "power_whip"
+    ],
+    "70": [
+      "zap_cannon"
     ]
   },
   "evolution": null,

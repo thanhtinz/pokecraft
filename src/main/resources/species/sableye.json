@@ -19,28 +19,55 @@
   "modelId": "sableye",
   "learnset": {
     "1": [
-      "pound"
+      "leer",
+      "scratch",
+      "foresight",
+      "feint_attack"
     ],
-    "4": [
-      "leer"
+    "3": [
+      "astonish"
     ],
-    "8": [
-      "bite"
+    "9": [
+      "shadow_sneak"
     ],
-    "14": [
-      "lick"
+    "12": [
+      "fake_out"
     ],
-    "20": [
-      "crunch"
+    "15": [
+      "disable"
     ],
-    "32": [
+    "18": [
+      "detect"
+    ],
+    "21": [
       "night_shade"
     ],
-    "40": [
+    "24": [
+      "fury_swipes"
+    ],
+    "27": [
+      "knock_off"
+    ],
+    "30": [
+      "quash"
+    ],
+    "33": [
+      "shadow_claw"
+    ],
+    "36": [
+      "mean_look"
+    ],
+    "39": [
+      "power_gem"
+    ],
+    "42": [
+      "zen_headbutt"
+    ],
+    "45": [
       "shadow_ball"
     ],
-    "26": [
-      "swords_dance"
+    "48": [
+      "foul_play"
     ]
   },
   "evolution": null,

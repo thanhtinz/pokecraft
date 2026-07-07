@@ -19,25 +19,47 @@
   "modelId": "durant",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "string_shot"
+      "sand_attack",
+      "fury_cutter"
     ],
     "8": [
+      "metal_claw"
+    ],
+    "12": [
+      "beat_up"
+    ],
+    "16": [
       "bug_bite"
     ],
-    "14": [
-      "steel_wing"
-    ],
     "20": [
-      "pin_missile"
+      "bite"
+    ],
+    "24": [
+      "agility"
+    ],
+    "28": [
+      "dig"
     ],
     "32": [
+      "x_scissor"
+    ],
+    "36": [
+      "crunch"
+    ],
+    "40": [
+      "metal_sound"
+    ],
+    "44": [
       "iron_head"
     ],
-    "26": [
-      "harden"
+    "48": [
+      "entrainment"
+    ],
+    "52": [
+      "iron_defense"
+    ],
+    "56": [
+      "guillotine"
     ]
   },
   "evolution": null,

@@ -19,31 +19,46 @@
   "modelId": "grafaiai",
   "learnset": {
     "1": [
-      "tackle"
+      "doodle",
+      "scratch",
+      "leer",
+      "bite"
     ],
-    "4": [
-      "poison_powder"
+    "5": [
+      "acid_spray"
     ],
     "8": [
-      "quick_attack"
+      "fury_swipes"
+    ],
+    "11": [
+      "switcheroo"
     ],
     "14": [
-      "poison_sting"
+      "poison_fang"
     ],
-    "20": [
-      "hyper_fang"
+    "18": [
+      "flatter"
     ],
-    "32": [
-      "acid"
+    "21": [
+      "slash"
+    ],
+    "25": [
+      "u_turn"
+    ],
+    "33": [
+      "poison_jab"
+    ],
+    "37": [
+      "taunt"
     ],
     "40": [
-      "mega_punch"
+      "substitute"
     ],
-    "48": [
-      "sludge"
+    "45": [
+      "knock_off"
     ],
-    "26": [
-      "agility"
+    "51": [
+      "gunk_shot"
     ]
   },
   "evolution": null,

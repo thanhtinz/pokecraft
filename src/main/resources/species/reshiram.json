@@ -19,31 +19,44 @@
   "modelId": "reshiram",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "leer"
+      "fire_fang",
+      "dragon_rage",
+      "ancient_power",
+      "dragon_breath",
+      "noble_roar"
     ],
     "8": [
-      "ember"
+      "slash"
     ],
-    "14": [
-      "twister"
+    "16": [
+      "crunch"
     ],
-    "20": [
-      "fire_spin"
+    "24": [
+      "extrasensory"
     ],
     "32": [
-      "dragon_breath"
+      "dragon_pulse"
     ],
     "40": [
-      "fire_punch"
+      "flamethrower"
     ],
     "48": [
-      "dragon_claw"
+      "fusion_flare"
     ],
-    "26": [
-      "calm_mind"
+    "56": [
+      "hyper_voice"
+    ],
+    "64": [
+      "fire_blast"
+    ],
+    "72": [
+      "imprison"
+    ],
+    "80": [
+      "outrage"
+    ],
+    "88": [
+      "blue_flare"
     ]
   },
   "evolution": null,

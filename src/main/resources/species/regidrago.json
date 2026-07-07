@@ -18,25 +18,43 @@
   "modelId": "regidrago",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
       "twister"
     ],
-    "14": [
+    "6": [
+      "bite"
+    ],
+    "12": [
+      "ancient_power"
+    ],
+    "18": [
       "dragon_breath"
     ],
-    "20": [
+    "30": [
+      "crunch"
+    ],
+    "36": [
       "dragon_claw"
     ],
-    "32": [
-      "outrage"
+    "42": [
+      "hammer_arm"
     ],
-    "26": [
-      "swords_dance"
+    "48": [
+      "dragon_dance"
+    ],
+    "54": [
+      "thrash"
+    ],
+    "60": [
+      "focus_energy"
+    ],
+    "66": [
+      "dragon_energy"
+    ],
+    "72": [
+      "hyper_beam"
+    ],
+    "78": [
+      "explosion"
     ]
   },
   "evolution": null,

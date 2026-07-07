@@ -18,19 +18,38 @@
   "modelId": "copperajah",
   "learnset": {
     "1": [
-      "tackle"
+      "heavy_slam",
+      "tackle",
+      "growl",
+      "rollout",
+      "rock_smash"
     ],
-    "4": [
-      "harden"
+    "15": [
+      "bulldoze"
     ],
-    "8": [
-      "steel_wing"
+    "20": [
+      "stomp"
     ],
-    "14": [
+    "25": [
+      "iron_defense"
+    ],
+    "30": [
+      "dig"
+    ],
+    "37": [
+      "strength"
+    ],
+    "44": [
       "iron_head"
     ],
-    "26": [
-      "swords_dance"
+    "51": [
+      "play_rough"
+    ],
+    "58": [
+      "high_horsepower"
+    ],
+    "65": [
+      "superpower"
     ]
   },
   "evolution": null,

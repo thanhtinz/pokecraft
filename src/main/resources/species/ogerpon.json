@@ -18,28 +18,47 @@
   "modelId": "ogerpon",
   "learnset": {
     "1": [
-      "tackle"
+      "vine_whip",
+      "leech_seed",
+      "quick_attack",
+      "follow_me",
+      "double_kick",
+      "counter",
+      "retaliate",
+      "horn_leech"
     ],
-    "4": [
-      "sleep_powder"
+    "6": [
+      "focus_energy"
     ],
-    "8": [
-      "vine_whip"
+    "12": [
+      "growth"
     ],
-    "14": [
-      "razor_leaf"
+    "18": [
+      "slam"
     ],
-    "20": [
-      "seed_bomb"
+    "24": [
+      "low_sweep"
     ],
-    "32": [
-      "petal_dance"
+    "30": [
+      "ivy_cudgel"
     ],
-    "40": [
-      "solar_beam"
+    "36": [
+      "throat_chop"
     ],
-    "26": [
-      "swords_dance"
+    "42": [
+      "synthesis"
+    ],
+    "48": [
+      "spiky_shield"
+    ],
+    "54": [
+      "power_whip"
+    ],
+    "60": [
+      "superpower"
+    ],
+    "66": [
+      "wood_hammer"
     ]
   },
   "evolution": null,

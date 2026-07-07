@@ -18,28 +18,35 @@
   "modelId": "eldegoss",
   "learnset": {
     "1": [
-      "pound"
+      "cotton_spore",
+      "leafage",
+      "sing",
+      "rapid_spin",
+      "sweet_scent"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
+    "12": [
       "razor_leaf"
     ],
-    "20": [
-      "seed_bomb"
+    "16": [
+      "round"
     ],
-    "32": [
-      "petal_dance"
+    "23": [
+      "leaf_tornado"
+    ],
+    "28": [
+      "synthesis"
+    ],
+    "34": [
+      "hyper_voice"
     ],
     "40": [
-      "solar_beam"
+      "aromatherapy"
     ],
-    "26": [
-      "harden"
+    "46": [
+      "leaf_storm"
+    ],
+    "52": [
+      "cotton_guard"
     ]
   },
   "evolution": null,

@@ -19,31 +19,41 @@
   "modelId": "helioptile",
   "learnset": {
     "1": [
-      "scratch"
+      "tail_whip",
+      "mud_slap"
     ],
     "4": [
-      "thunder_wave"
+      "pound"
     ],
     "8": [
       "thunder_shock"
     ],
-    "14": [
+    "12": [
       "quick_attack"
     ],
+    "16": [
+      "charge"
+    ],
     "20": [
-      "spark"
+      "bulldoze"
+    ],
+    "24": [
+      "volt_switch"
+    ],
+    "28": [
+      "parabolic_charge"
     ],
     "32": [
-      "hyper_fang"
+      "thunder_wave"
     ],
-    "40": [
+    "36": [
       "thunderbolt"
     ],
-    "48": [
-      "mega_punch"
+    "40": [
+      "electrify"
     ],
-    "26": [
-      "agility"
+    "44": [
+      "thunder"
     ]
   },
   "evolution": null,

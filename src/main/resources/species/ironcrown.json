@@ -19,28 +19,49 @@
   "modelId": "ironcrown",
   "learnset": {
     "1": [
-      "tackle"
+      "leer",
+      "electric_terrain",
+      "confusion",
+      "metal_claw"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "confusion"
+    "7": [
+      "smart_strike"
     ],
     "14": [
-      "steel_wing"
+      "slash"
     ],
-    "20": [
-      "psybeam"
+    "21": [
+      "iron_defense"
     ],
-    "32": [
-      "iron_head"
+    "28": [
+      "psyshock"
     ],
-    "40": [
-      "psychic"
+    "35": [
+      "psycho_cut"
     ],
-    "26": [
-      "calm_mind"
+    "42": [
+      "flash_cannon"
+    ],
+    "49": [
+      "sacred_sword"
+    ],
+    "56": [
+      "tachyon_cutter"
+    ],
+    "63": [
+      "future_sight"
+    ],
+    "70": [
+      "volt_switch"
+    ],
+    "77": [
+      "quick_guard"
+    ],
+    "84": [
+      "metal_burst"
+    ],
+    "91": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

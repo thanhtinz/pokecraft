@@ -19,31 +19,48 @@
   "modelId": "heracross",
   "learnset": {
     "1": [
-      "scratch"
+      "night_slash",
+      "tackle",
+      "leer",
+      "feint",
+      "chip_away",
+      "arm_thrust"
     ],
-    "4": [
-      "string_shot"
+    "5": [
+      "fury_attack"
     ],
-    "8": [
-      "bug_bite"
+    "10": [
+      "endure"
     ],
-    "14": [
-      "karate_chop"
+    "15": [
+      "aerial_ace"
     ],
     "20": [
-      "pin_missile"
+      "horn_attack"
     ],
-    "32": [
-      "low_kick"
+    "25": [
+      "counter"
     ],
-    "40": [
+    "30": [
       "brick_break"
     ],
-    "48": [
-      "cross_chop"
+    "35": [
+      "pin_missile"
     ],
-    "26": [
+    "40": [
+      "throat_chop"
+    ],
+    "45": [
+      "thrash"
+    ],
+    "50": [
       "swords_dance"
+    ],
+    "55": [
+      "megahorn"
+    ],
+    "60": [
+      "close_combat"
     ]
   },
   "evolution": null,

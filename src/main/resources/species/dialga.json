@@ -19,31 +19,41 @@
   "modelId": "dialga",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "harden"
+      "scary_face",
+      "metal_claw"
     ],
     "8": [
-      "twister"
-    ],
-    "14": [
-      "steel_wing"
-    ],
-    "20": [
       "dragon_breath"
     ],
+    "16": [
+      "ancient_power"
+    ],
+    "24": [
+      "slash"
+    ],
     "32": [
-      "iron_head"
+      "flash_cannon"
     ],
     "40": [
       "dragon_claw"
     ],
     "48": [
-      "outrage"
+      "aura_sphere"
     ],
-    "26": [
-      "calm_mind"
+    "56": [
+      "power_gem"
+    ],
+    "64": [
+      "metal_burst"
+    ],
+    "72": [
+      "earth_power"
+    ],
+    "80": [
+      "iron_tail"
+    ],
+    "88": [
+      "roar_of_time"
     ]
   },
   "evolution": null,

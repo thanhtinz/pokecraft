@@ -18,22 +18,44 @@
   "modelId": "spectrier",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "tail_whip"
     ],
-    "4": [
-      "hypnosis"
+    "6": [
+      "double_kick"
     ],
-    "8": [
-      "lick"
+    "12": [
+      "hex"
     ],
-    "14": [
-      "night_shade"
+    "18": [
+      "stomp"
     ],
-    "20": [
+    "24": [
+      "confuse_ray"
+    ],
+    "30": [
+      "haze"
+    ],
+    "36": [
       "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "42": [
+      "take_down"
+    ],
+    "48": [
+      "agility"
+    ],
+    "54": [
+      "thrash"
+    ],
+    "60": [
+      "disable"
+    ],
+    "66": [
+      "double_edge"
+    ],
+    "72": [
+      "nasty_plot"
     ]
   },
   "evolution": null,

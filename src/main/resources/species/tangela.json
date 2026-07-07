@@ -18,28 +18,51 @@
   "modelId": "tangela",
   "learnset": {
     "1": [
-      "tackle"
+      "constrict",
+      "absorb",
+      "bind"
     ],
     "4": [
-      "sleep_powder"
+      "stun_spore"
     ],
     "8": [
+      "growth"
+    ],
+    "12": [
+      "mega_drain"
+    ],
+    "16": [
       "vine_whip"
     ],
-    "14": [
-      "razor_leaf"
-    ],
     "20": [
-      "seed_bomb"
+      "poison_powder"
+    ],
+    "24": [
+      "ancient_power"
+    ],
+    "28": [
+      "knock_off"
     ],
     "32": [
-      "petal_dance"
+      "giga_drain"
+    ],
+    "36": [
+      "sleep_powder"
     ],
     "40": [
-      "solar_beam"
+      "slam"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "tickle"
+    ],
+    "48": [
+      "power_whip"
+    ],
+    "52": [
+      "ingrain"
+    ],
+    "56": [
+      "grassy_terrain"
     ]
   },
   "evolution": null,

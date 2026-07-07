@@ -19,31 +19,38 @@
   "modelId": "fezandipiti",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "poison_powder"
+      "double_kick",
+      "peck",
+      "poison_gas",
+      "disarming_voice"
     ],
     "8": [
-      "poison_sting"
+      "quick_attack"
     ],
-    "14": [
-      "fairy_wind"
+    "16": [
+      "attract"
     ],
-    "20": [
-      "acid"
+    "24": [
+      "wing_attack"
     ],
     "32": [
-      "dazzling_gleam"
+      "cross_poison"
     ],
     "40": [
-      "sludge"
+      "tail_slap"
     ],
     "48": [
-      "sludge_bomb"
+      "beat_up"
     ],
-    "26": [
-      "agility"
+    "56": [
+      "swagger",
+      "flatter"
+    ],
+    "64": [
+      "roost"
+    ],
+    "72": [
+      "moonblast"
     ]
   },
   "evolution": null,

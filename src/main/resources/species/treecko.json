@@ -18,28 +18,48 @@
   "modelId": "treecko",
   "learnset": {
     "1": [
-      "tackle"
+      "pound",
+      "leer",
+      "absorb"
     ],
-    "4": [
-      "sleep_powder"
+    "3": [
+      "leafage"
     ],
-    "8": [
-      "vine_whip"
+    "6": [
+      "quick_attack"
     ],
-    "14": [
-      "razor_leaf"
+    "9": [
+      "mega_drain"
     ],
-    "20": [
-      "seed_bomb"
+    "12": [
+      "detect"
     ],
-    "32": [
-      "petal_dance"
+    "15": [
+      "quick_guard"
     ],
-    "40": [
-      "solar_beam"
+    "18": [
+      "assurance"
     ],
-    "26": [
-      "agility"
+    "21": [
+      "giga_drain"
+    ],
+    "24": [
+      "slam"
+    ],
+    "27": [
+      "double_team"
+    ],
+    "30": [
+      "energy_ball"
+    ],
+    "33": [
+      "screech"
+    ],
+    "36": [
+      "endeavor"
+    ],
+    "39": [
+      "leaf_storm"
     ]
   },
   "evolution": null,

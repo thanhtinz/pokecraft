@@ -19,28 +19,46 @@
   "modelId": "spiritomb",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "lick"
-    ],
-    "14": [
-      "bite"
-    ],
-    "20": [
+      "pursuit",
+      "confuse_ray",
+      "feint_attack",
       "night_shade"
     ],
-    "32": [
-      "crunch"
+    "5": [
+      "shadow_sneak"
+    ],
+    "10": [
+      "spite"
+    ],
+    "15": [
+      "payback"
+    ],
+    "20": [
+      "nasty_plot"
+    ],
+    "25": [
+      "hex"
+    ],
+    "30": [
+      "memento"
+    ],
+    "35": [
+      "sucker_punch"
     ],
     "40": [
+      "curse"
+    ],
+    "45": [
       "shadow_ball"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "dark_pulse"
+    ],
+    "55": [
+      "hypnosis"
+    ],
+    "60": [
+      "dream_eater"
     ]
   },
   "evolution": null,

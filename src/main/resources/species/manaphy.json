@@ -18,28 +18,41 @@
   "modelId": "manaphy",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "tail_glow",
+      "bubble",
+      "water_sport",
+      "heart_swap",
       "water_gun"
     ],
-    "14": [
+    "9": [
+      "charm"
+    ],
+    "16": [
+      "supersonic"
+    ],
+    "24": [
       "bubble_beam"
     ],
-    "20": [
-      "waterfall"
+    "31": [
+      "acid_armor"
     ],
-    "32": [
-      "surf"
+    "39": [
+      "whirlpool"
     ],
-    "40": [
-      "hydro_pump"
+    "46": [
+      "water_pulse"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "aqua_ring"
+    ],
+    "61": [
+      "dive"
+    ],
+    "69": [
+      "rain_dance"
+    ],
+    "76": [
+      "take_heart"
     ]
   },
   "evolution": null,

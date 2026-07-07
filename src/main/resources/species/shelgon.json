@@ -18,25 +18,39 @@
   "modelId": "shelgon",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "twister"
-    ],
-    "14": [
+      "rage",
+      "bite",
+      "leer",
+      "ember",
+      "protect",
       "dragon_breath"
     ],
+    "15": [
+      "headbutt"
+    ],
     "20": [
+      "scary_face"
+    ],
+    "25": [
+      "crunch"
+    ],
+    "33": [
       "dragon_claw"
     ],
-    "32": [
+    "39": [
+      "zen_headbutt"
+    ],
+    "46": [
+      "focus_energy"
+    ],
+    "53": [
+      "flamethrower"
+    ],
+    "60": [
       "outrage"
     ],
-    "26": [
-      "harden"
+    "67": [
+      "double_edge"
     ]
   },
   "evolution": null,

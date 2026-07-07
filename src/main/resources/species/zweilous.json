@@ -19,31 +19,51 @@
   "modelId": "zweilous",
   "learnset": {
     "1": [
-      "scratch"
+      "double_hit",
+      "dragon_rage",
+      "focus_energy",
+      "bite",
+      "dragon_breath",
+      "tackle"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "roar"
     ],
-    "8": [
-      "bite"
-    ],
-    "14": [
-      "twister"
+    "16": [
+      "assurance"
     ],
     "20": [
-      "crunch"
+      "headbutt"
+    ],
+    "24": [
+      "work_up"
+    ],
+    "28": [
+      "slam"
     ],
     "32": [
-      "dragon_breath"
+      "crunch"
+    ],
+    "36": [
+      "scary_face"
     ],
     "40": [
-      "dragon_claw"
+      "dragon_pulse"
+    ],
+    "44": [
+      "body_slam"
     ],
     "48": [
-      "outrage"
+      "hyper_voice"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "dragon_rush"
+    ],
+    "60": [
+      "nasty_plot"
+    ],
+    "66": [
+      "outrage"
     ]
   },
   "evolution": null,

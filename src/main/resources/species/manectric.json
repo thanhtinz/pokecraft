@@ -18,25 +18,43 @@
   "modelId": "manectric",
   "learnset": {
     "1": [
-      "scratch"
+      "fire_fang",
+      "tackle",
+      "thunder_wave",
+      "leer",
+      "howl",
+      "spark",
+      "odor_sleuth"
     ],
-    "4": [
-      "thunder_wave"
+    "12": [
+      "quick_attack"
     ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
-      "spark"
+    "16": [
+      "shock_wave"
     ],
     "20": [
-      "thunderbolt"
+      "bite"
     ],
-    "32": [
+    "24": [
+      "thunder_fang"
+    ],
+    "30": [
+      "roar"
+    ],
+    "36": [
+      "discharge"
+    ],
+    "42": [
+      "charge"
+    ],
+    "48": [
+      "wild_charge"
+    ],
+    "54": [
       "thunder"
     ],
-    "26": [
-      "calm_mind"
+    "60": [
+      "electric_terrain"
     ]
   },
   "evolution": null,

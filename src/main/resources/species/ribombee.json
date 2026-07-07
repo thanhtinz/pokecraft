@@ -19,25 +19,33 @@
   "modelId": "ribombee",
   "learnset": {
     "1": [
-      "pound"
+      "pollen_puff",
+      "absorb",
+      "fairy_wind",
+      "stun_spore",
+      "sweet_scent",
+      "aromatherapy"
     ],
-    "4": [
-      "string_shot"
+    "18": [
+      "draining_kiss"
     ],
-    "8": [
-      "fairy_wind"
-    ],
-    "14": [
-      "bug_bite"
-    ],
-    "20": [
-      "dazzling_gleam"
+    "24": [
+      "struggle_bug"
     ],
     "32": [
-      "pin_missile"
+      "covet"
     ],
-    "26": [
-      "agility"
+    "40": [
+      "switcheroo"
+    ],
+    "48": [
+      "dazzling_gleam"
+    ],
+    "56": [
+      "bug_buzz"
+    ],
+    "64": [
+      "quiver_dance"
     ]
   },
   "evolution": null,

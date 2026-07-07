@@ -19,31 +19,38 @@
   "modelId": "starly",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "tackle",
       "growl"
     ],
-    "8": [
+    "5": [
       "quick_attack"
     ],
-    "14": [
-      "peck"
-    ],
-    "20": [
-      "hyper_fang"
-    ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "mega_punch"
-    ],
-    "48": [
+    "9": [
       "wing_attack"
     ],
-    "26": [
+    "13": [
+      "double_team"
+    ],
+    "17": [
+      "endeavor"
+    ],
+    "21": [
+      "whirlwind"
+    ],
+    "25": [
+      "aerial_ace"
+    ],
+    "29": [
+      "take_down"
+    ],
+    "33": [
       "agility"
+    ],
+    "37": [
+      "brave_bird"
+    ],
+    "41": [
+      "final_gambit"
     ]
   },
   "evolution": null,

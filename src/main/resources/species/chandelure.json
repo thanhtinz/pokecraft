@@ -19,31 +19,23 @@
   "modelId": "chandelure",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "ember"
-    ],
-    "14": [
-      "lick"
-    ],
-    "20": [
-      "fire_spin"
-    ],
-    "32": [
-      "night_shade"
-    ],
-    "40": [
-      "fire_punch"
-    ],
-    "48": [
-      "shadow_ball"
-    ],
-    "26": [
-      "calm_mind"
+      "smog",
+      "confuse_ray",
+      "flame_burst",
+      "hex",
+      "pain_split",
+      "shadow_ball",
+      "will_o_wisp",
+      "overheat",
+      "fire_spin",
+      "night_shade",
+      "curse",
+      "inferno",
+      "imprison",
+      "memento",
+      "astonish",
+      "ember",
+      "minimize"
     ]
   },
   "evolution": null,

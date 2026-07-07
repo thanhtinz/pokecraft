@@ -19,31 +19,50 @@
   "modelId": "claydol",
   "learnset": {
     "1": [
-      "pound"
+      "teleport",
+      "confusion",
+      "harden",
+      "rapid_spin",
+      "mud_slap",
+      "hyper_beam",
+      "heal_block"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "rock_tomb"
     ],
-    "8": [
-      "sand_tomb"
+    "12": [
+      "power_trick"
     ],
-    "14": [
-      "confusion"
-    ],
-    "20": [
-      "dig"
-    ],
-    "32": [
+    "15": [
       "psybeam"
     ],
-    "40": [
-      "earthquake"
+    "18": [
+      "ancient_power"
+    ],
+    "21": [
+      "imprison"
+    ],
+    "24": [
+      "cosmic_power"
+    ],
+    "27": [
+      "extrasensory"
+    ],
+    "30": [
+      "earth_power"
+    ],
+    "33": [
+      "self_destruct"
+    ],
+    "38": [
+      "guard_split",
+      "power_split"
+    ],
+    "43": [
+      "sandstorm"
     ],
     "48": [
-      "psychic"
-    ],
-    "26": [
-      "harden"
+      "explosion"
     ]
   },
   "evolution": null,

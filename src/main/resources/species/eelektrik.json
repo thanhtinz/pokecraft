@@ -18,25 +18,42 @@
   "modelId": "eelektrik",
   "learnset": {
     "1": [
+      "headbutt",
+      "thunder_wave",
+      "spark",
+      "charge_beam",
+      "crunch",
       "tackle"
     ],
-    "4": [
-      "thunder_wave"
+    "9": [
+      "bind"
     ],
-    "8": [
-      "thunder_shock"
+    "19": [
+      "acid"
     ],
-    "14": [
-      "spark"
+    "29": [
+      "discharge"
     ],
-    "20": [
+    "44": [
       "thunderbolt"
     ],
-    "32": [
-      "thunder"
+    "49": [
+      "acid_spray"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "coil"
+    ],
+    "59": [
+      "wild_charge"
+    ],
+    "64": [
+      "gastro_acid"
+    ],
+    "69": [
+      "zap_cannon"
+    ],
+    "74": [
+      "thrash"
     ]
   },
   "evolution": null,

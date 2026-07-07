@@ -18,28 +18,44 @@
   "modelId": "popplio",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "growl"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+    "3": [
       "water_gun"
     ],
-    "14": [
+    "6": [
+      "disarming_voice"
+    ],
+    "9": [
+      "aqua_jet"
+    ],
+    "12": [
+      "baby_doll_eyes"
+    ],
+    "15": [
+      "icy_wind"
+    ],
+    "18": [
+      "sing"
+    ],
+    "21": [
       "bubble_beam"
     ],
-    "20": [
-      "waterfall"
+    "24": [
+      "encore"
     ],
-    "32": [
-      "surf"
+    "27": [
+      "misty_terrain"
     ],
-    "40": [
+    "30": [
+      "hyper_voice"
+    ],
+    "33": [
+      "moonblast"
+    ],
+    "36": [
       "hydro_pump"
-    ],
-    "26": [
-      "calm_mind"
     ]
   },
   "evolution": null,

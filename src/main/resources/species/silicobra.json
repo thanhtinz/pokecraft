@@ -18,22 +18,38 @@
   "modelId": "silicobra",
   "learnset": {
     "1": [
-      "tackle"
+      "wrap",
+      "sand_attack"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "minimize"
     ],
-    "8": [
-      "sand_tomb"
+    "10": [
+      "brutal_swing"
     ],
-    "14": [
-      "dig"
+    "15": [
+      "bulldoze"
     ],
     "20": [
-      "earthquake"
+      "headbutt"
     ],
-    "26": [
-      "harden"
+    "25": [
+      "glare"
+    ],
+    "30": [
+      "dig"
+    ],
+    "35": [
+      "sandstorm"
+    ],
+    "40": [
+      "slam"
+    ],
+    "45": [
+      "coil"
+    ],
+    "50": [
+      "sand_tomb"
     ]
   },
   "evolution": null,

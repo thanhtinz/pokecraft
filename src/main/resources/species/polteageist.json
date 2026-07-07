@@ -18,22 +18,40 @@
   "modelId": "polteageist",
   "learnset": {
     "1": [
-      "tackle"
+      "teatime",
+      "strength_sap",
+      "astonish",
+      "withdraw",
+      "aromatic_mist",
+      "mega_drain",
+      "aromatherapy"
     ],
-    "4": [
-      "hypnosis"
+    "18": [
+      "protect"
     ],
-    "8": [
-      "lick"
+    "24": [
+      "sucker_punch"
     ],
-    "14": [
-      "night_shade"
+    "30": [
+      "sweet_scent"
     ],
-    "20": [
+    "36": [
+      "giga_drain"
+    ],
+    "42": [
+      "nasty_plot"
+    ],
+    "48": [
       "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "54": [
+      "memento"
+    ],
+    "60": [
+      "shell_smash"
+    ],
+    "66": [
+      "curse"
     ]
   },
   "evolution": null,

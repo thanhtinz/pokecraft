@@ -18,28 +18,51 @@
   "modelId": "basculin",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
+      "water_gun",
+      "chip_away",
       "tail_whip"
     ],
-    "8": [
-      "water_gun"
+    "4": [
+      "tackle"
     ],
-    "14": [
-      "bubble_beam"
+    "8": [
+      "flail"
+    ],
+    "12": [
+      "aqua_jet"
+    ],
+    "16": [
+      "bite"
     ],
     "20": [
-      "waterfall"
+      "scary_face"
+    ],
+    "24": [
+      "headbutt"
+    ],
+    "28": [
+      "soak"
     ],
     "32": [
-      "surf"
+      "crunch"
+    ],
+    "36": [
+      "take_down"
     ],
     "40": [
-      "hydro_pump"
+      "final_gambit"
     ],
-    "26": [
-      "agility"
+    "44": [
+      "wave_crash"
+    ],
+    "48": [
+      "thrash"
+    ],
+    "52": [
+      "double_edge"
+    ],
+    "56": [
+      "head_smash"
     ]
   },
   "evolution": null,

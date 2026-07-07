@@ -19,31 +19,41 @@
   "modelId": "morelull",
   "learnset": {
     "1": [
-      "pound"
+      "absorb",
+      "astonish"
     ],
     "4": [
-      "sleep_powder"
+      "confuse_ray"
     ],
     "8": [
-      "fairy_wind"
+      "ingrain"
     ],
-    "14": [
-      "vine_whip"
+    "12": [
+      "mega_drain"
+    ],
+    "16": [
+      "sleep_powder"
     ],
     "20": [
-      "dazzling_gleam"
+      "moonlight"
+    ],
+    "25": [
+      "strength_sap"
+    ],
+    "28": [
+      "giga_drain"
     ],
     "32": [
-      "razor_leaf"
+      "dazzling_gleam"
+    ],
+    "36": [
+      "spore"
     ],
     "40": [
-      "seed_bomb"
+      "moonblast"
     ],
-    "48": [
-      "petal_dance"
-    ],
-    "26": [
-      "calm_mind"
+    "44": [
+      "dream_eater"
     ]
   },
   "evolution": null,

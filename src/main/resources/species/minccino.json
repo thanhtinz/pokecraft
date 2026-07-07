@@ -18,31 +18,46 @@
   "modelId": "minccino",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "growl",
+      "double_slap",
+      "baby_doll_eyes"
     ],
     "4": [
-      "growl"
+      "helping_hand"
     ],
     "8": [
-      "quick_attack"
+      "echoed_voice"
     ],
-    "14": [
-      "hyper_fang"
+    "12": [
+      "sing"
+    ],
+    "16": [
+      "charm"
     ],
     "20": [
-      "mega_punch"
+      "swift"
+    ],
+    "24": [
+      "encore"
+    ],
+    "28": [
+      "after_you"
     ],
     "32": [
-      "body_slam"
+      "tail_slap"
+    ],
+    "36": [
+      "tickle"
     ],
     "40": [
-      "double_edge"
+      "slam"
+    ],
+    "44": [
+      "hyper_voice"
     ],
     "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "agility"
+      "last_resort"
     ]
   },
   "evolution": null,

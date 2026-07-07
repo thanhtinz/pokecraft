@@ -19,31 +19,45 @@
   "modelId": "glimmora",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
+      "mortal_spin",
+      "smack_down",
+      "spiky_shield",
+      "toxic_spikes",
+      "rock_throw",
       "harden"
     ],
-    "8": [
-      "rock_throw"
+    "7": [
+      "acid_spray"
     ],
-    "14": [
-      "poison_sting"
+    "11": [
+      "ancient_power"
     ],
-    "20": [
-      "rock_slide"
+    "15": [
+      "rock_polish"
     ],
-    "32": [
-      "acid"
+    "18": [
+      "stealth_rock"
     ],
-    "40": [
-      "stone_edge"
-    ],
-    "48": [
-      "sludge"
+    "22": [
+      "venoshock"
     ],
     "26": [
-      "calm_mind"
+      "sandstorm"
+    ],
+    "29": [
+      "self_destruct"
+    ],
+    "33": [
+      "rock_slide"
+    ],
+    "39": [
+      "power_gem"
+    ],
+    "44": [
+      "acid_armor"
+    ],
+    "50": [
+      "sludge_wave"
     ]
   },
   "evolution": null,

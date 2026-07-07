@@ -18,28 +18,48 @@
   "modelId": "gogoat",
   "learnset": {
     "1": [
-      "scratch"
+      "aerial_ace",
+      "tackle",
+      "growth",
+      "vine_whip",
+      "tail_whip",
+      "earthquake"
     ],
-    "4": [
-      "sleep_powder"
+    "12": [
+      "leech_seed"
     ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
+    "13": [
       "razor_leaf"
     ],
+    "16": [
+      "worry_seed"
+    ],
     "20": [
-      "seed_bomb"
+      "synthesis"
     ],
-    "32": [
-      "petal_dance"
-    ],
-    "40": [
-      "solar_beam"
+    "22": [
+      "take_down"
     ],
     "26": [
-      "swords_dance"
+      "bulldoze"
+    ],
+    "30": [
+      "seed_bomb"
+    ],
+    "34": [
+      "bulk_up"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "47": [
+      "horn_leech"
+    ],
+    "55": [
+      "leaf_blade"
+    ],
+    "58": [
+      "milk_drink"
     ]
   },
   "evolution": null,

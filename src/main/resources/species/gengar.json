@@ -19,31 +19,44 @@
   "modelId": "gengar",
   "learnset": {
     "1": [
-      "scratch"
+      "hypnosis",
+      "lick",
+      "mean_look",
+      "confuse_ray",
+      "shadow_punch",
+      "nightmare",
+      "perish_song",
+      "reflect_type"
     ],
-    "4": [
-      "hypnosis"
+    "12": [
+      "payback"
     ],
-    "8": [
-      "lick"
-    ],
-    "14": [
-      "poison_sting"
+    "16": [
+      "spite"
     ],
     "20": [
+      "curse"
+    ],
+    "24": [
+      "hex"
+    ],
+    "30": [
       "night_shade"
     ],
-    "32": [
-      "acid"
+    "36": [
+      "sucker_punch"
     ],
-    "40": [
-      "shadow_ball"
+    "42": [
+      "dark_pulse"
     ],
     "48": [
-      "sludge"
+      "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "54": [
+      "destiny_bond"
+    ],
+    "60": [
+      "dream_eater"
     ]
   },
   "evolution": null,

@@ -19,28 +19,23 @@
   "modelId": "aegislash",
   "learnset": {
     "1": [
+      "fury_cutter",
+      "pursuit",
+      "autotomize",
+      "shadow_sneak",
+      "slash",
+      "iron_defense",
+      "night_slash",
+      "power_trick",
+      "iron_head",
+      "head_smash",
+      "swords_dance",
+      "aerial_ace",
+      "kings_shield",
+      "sacred_sword",
+      "retaliate",
+      "metal_sound",
       "tackle"
-    ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "lick"
-    ],
-    "14": [
-      "steel_wing"
-    ],
-    "20": [
-      "night_shade"
-    ],
-    "32": [
-      "iron_head"
-    ],
-    "40": [
-      "shadow_ball"
-    ],
-    "26": [
-      "harden"
     ]
   },
   "evolution": null,

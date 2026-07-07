@@ -19,31 +19,44 @@
   "modelId": "zekrom",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "leer"
+      "thunder_fang",
+      "dragon_rage",
+      "ancient_power",
+      "dragon_breath",
+      "noble_roar"
     ],
     "8": [
-      "twister"
+      "slash"
     ],
-    "14": [
-      "thunder_shock"
+    "16": [
+      "crunch"
     ],
-    "20": [
-      "dragon_breath"
+    "24": [
+      "zen_headbutt"
     ],
     "32": [
-      "spark"
-    ],
-    "40": [
       "dragon_claw"
     ],
-    "48": [
+    "40": [
       "thunderbolt"
     ],
-    "26": [
-      "swords_dance"
+    "48": [
+      "fusion_bolt"
+    ],
+    "56": [
+      "hyper_voice"
+    ],
+    "64": [
+      "thunder"
+    ],
+    "72": [
+      "imprison"
+    ],
+    "80": [
+      "outrage"
+    ],
+    "88": [
+      "bolt_strike"
     ]
   },
   "evolution": null,

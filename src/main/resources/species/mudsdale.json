@@ -18,22 +18,40 @@
   "modelId": "mudsdale",
   "learnset": {
     "1": [
-      "tackle"
+      "mud_slap",
+      "mud_sport",
+      "rototiller",
+      "double_kick",
+      "bide",
+      "iron_defense",
+      "rock_smash"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "bulldoze"
     ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
-      "dig"
+    "16": [
+      "stomp"
     ],
     "20": [
+      "strength"
+    ],
+    "24": [
+      "counter"
+    ],
+    "28": [
+      "high_horsepower"
+    ],
+    "34": [
+      "heavy_slam"
+    ],
+    "40": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "46": [
+      "mega_kick"
+    ],
+    "52": [
+      "superpower"
     ]
   },
   "evolution": null,

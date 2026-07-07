@@ -19,31 +19,56 @@
   "modelId": "skorupi",
   "learnset": {
     "1": [
-      "scratch"
+      "poison_sting",
+      "leer"
     ],
-    "4": [
-      "poison_powder"
+    "3": [
+      "hone_claws"
     ],
-    "8": [
+    "6": [
+      "fell_stinger"
+    ],
+    "9": [
+      "poison_fang"
+    ],
+    "12": [
+      "bite"
+    ],
+    "15": [
+      "toxic_spikes"
+    ],
+    "18": [
       "bug_bite"
     ],
-    "14": [
-      "poison_sting"
+    "21": [
+      "venoshock"
     ],
-    "20": [
+    "24": [
+      "knock_off"
+    ],
+    "27": [
+      "scary_face"
+    ],
+    "30": [
       "pin_missile"
     ],
-    "32": [
-      "acid"
+    "33": [
+      "toxic"
     ],
-    "40": [
-      "sludge"
+    "36": [
+      "night_slash"
+    ],
+    "39": [
+      "cross_poison"
+    ],
+    "42": [
+      "x_scissor"
+    ],
+    "45": [
+      "acupressure"
     ],
     "48": [
-      "sludge_bomb"
-    ],
-    "26": [
-      "harden"
+      "crunch"
     ]
   },
   "evolution": null,

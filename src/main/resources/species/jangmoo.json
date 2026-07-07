@@ -18,25 +18,42 @@
   "modelId": "jangmoo",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "leer",
+      "bide"
     ],
     "4": [
-      "leer"
+      "protect"
     ],
     "8": [
-      "twister"
+      "dragon_tail"
     ],
-    "14": [
-      "dragon_breath"
+    "12": [
+      "scary_face"
+    ],
+    "16": [
+      "headbutt"
     ],
     "20": [
-      "dragon_claw"
+      "work_up"
+    ],
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "iron_defense"
     ],
     "32": [
-      "outrage"
+      "dragon_claw"
     ],
-    "26": [
-      "harden"
+    "36": [
+      "noble_roar"
+    ],
+    "40": [
+      "dragon_dance"
+    ],
+    "44": [
+      "outrage"
     ]
   },
   "evolution": null,

@@ -18,22 +18,46 @@
   "modelId": "houndstone",
   "learnset": {
     "1": [
-      "tackle"
+      "last_respects",
+      "tackle",
+      "growl"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
+    "3": [
       "lick"
     ],
-    "14": [
-      "night_shade"
+    "6": [
+      "tail_whip",
+      "bite"
     ],
-    "20": [
-      "shadow_ball"
+    "9": [
+      "roar"
     ],
-    "26": [
-      "swords_dance"
+    "12": [
+      "headbutt"
+    ],
+    "16": [
+      "dig"
+    ],
+    "24": [
+      "rest"
+    ],
+    "28": [
+      "crunch"
+    ],
+    "36": [
+      "play_rough"
+    ],
+    "41": [
+      "helping_hand"
+    ],
+    "46": [
+      "phantom_force"
+    ],
+    "51": [
+      "charm"
+    ],
+    "58": [
+      "double_edge"
     ]
   },
   "evolution": null,

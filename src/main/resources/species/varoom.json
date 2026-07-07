@@ -19,31 +19,47 @@
   "modelId": "varoom",
   "learnset": {
     "1": [
-      "pound"
+      "lick",
+      "poison_gas"
     ],
     "4": [
-      "harden"
+      "smog"
     ],
-    "8": [
-      "poison_sting"
+    "7": [
+      "taunt"
     ],
-    "14": [
-      "steel_wing"
+    "10": [
+      "assurance"
     ],
-    "20": [
-      "acid"
-    ],
-    "32": [
-      "iron_head"
-    ],
-    "40": [
+    "13": [
       "sludge"
     ],
-    "48": [
-      "sludge_bomb"
+    "17": [
+      "gyro_ball"
     ],
-    "26": [
-      "swords_dance"
+    "21": [
+      "headbutt"
+    ],
+    "25": [
+      "screech"
+    ],
+    "28": [
+      "iron_head"
+    ],
+    "32": [
+      "swagger"
+    ],
+    "36": [
+      "poison_jab"
+    ],
+    "41": [
+      "uproar"
+    ],
+    "46": [
+      "spin_out"
+    ],
+    "50": [
+      "gunk_shot"
     ]
   },
   "evolution": null,

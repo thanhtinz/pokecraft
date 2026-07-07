@@ -19,31 +19,44 @@
   "modelId": "bombirdier",
   "learnset": {
     "1": [
-      "pound"
+      "wing_attack",
+      "leer",
+      "peck",
+      "memento",
+      "hone_claws"
     ],
-    "4": [
-      "tail_whip"
+    "7": [
+      "thief"
     ],
-    "8": [
-      "peck"
+    "11": [
+      "rock_throw"
     ],
-    "14": [
-      "bite"
+    "16": [
+      "whirlwind"
     ],
     "20": [
-      "gust"
+      "pluck"
     ],
-    "32": [
-      "crunch"
+    "24": [
+      "torment"
     ],
-    "40": [
-      "wing_attack"
+    "29": [
+      "rock_tomb"
     ],
-    "48": [
-      "drill_peck"
+    "36": [
+      "payback"
     ],
-    "26": [
-      "swords_dance"
+    "42": [
+      "dual_wingbeat"
+    ],
+    "47": [
+      "rock_slide"
+    ],
+    "53": [
+      "knock_off"
+    ],
+    "60": [
+      "parting_shot"
     ]
   },
   "evolution": null,

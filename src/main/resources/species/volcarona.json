@@ -19,31 +19,50 @@
   "modelId": "volcarona",
   "learnset": {
     "1": [
-      "scratch"
+      "ember",
+      "string_shot",
+      "gust",
+      "fire_spin",
+      "whirlwind",
+      "quiver_dance",
+      "fiery_dance",
+      "flame_charge",
+      "struggle_bug",
+      "flare_blitz",
+      "thrash",
+      "absorb",
+      "take_down",
+      "double_edge"
     ],
-    "4": [
-      "string_shot"
+    "18": [
+      "flame_wheel"
     ],
-    "8": [
-      "ember"
-    ],
-    "14": [
+    "24": [
       "bug_bite"
     ],
-    "20": [
-      "fire_spin"
+    "30": [
+      "screech"
     ],
-    "32": [
-      "pin_missile"
+    "36": [
+      "leech_life"
     ],
-    "40": [
-      "fire_punch"
+    "42": [
+      "bug_buzz"
     ],
     "48": [
-      "flamethrower"
+      "heat_wave"
     ],
-    "26": [
-      "calm_mind"
+    "54": [
+      "amnesia"
+    ],
+    "62": [
+      "hurricane"
+    ],
+    "70": [
+      "fire_blast"
+    ],
+    "78": [
+      "rage_powder"
     ]
   },
   "evolution": null,

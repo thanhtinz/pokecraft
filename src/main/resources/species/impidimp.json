@@ -19,25 +19,41 @@
   "modelId": "impidimp",
   "learnset": {
     "1": [
-      "scratch"
+      "fake_out",
+      "confide"
     ],
     "4": [
-      "leer"
-    ],
-    "8": [
-      "fairy_wind"
-    ],
-    "14": [
       "bite"
     ],
+    "8": [
+      "flatter"
+    ],
+    "12": [
+      "fake_tears"
+    ],
+    "16": [
+      "assurance"
+    ],
     "20": [
-      "dazzling_gleam"
+      "swagger"
     ],
-    "32": [
-      "crunch"
+    "24": [
+      "sucker_punch"
     ],
-    "26": [
-      "calm_mind"
+    "28": [
+      "torment"
+    ],
+    "33": [
+      "dark_pulse"
+    ],
+    "36": [
+      "nasty_plot"
+    ],
+    "40": [
+      "play_rough"
+    ],
+    "44": [
+      "foul_play"
     ]
   },
   "evolution": null,

@@ -19,31 +19,42 @@
   "modelId": "zubat",
   "learnset": {
     "1": [
-      "pound"
+      "supersonic",
+      "wing_attack",
+      "absorb"
     ],
-    "4": [
-      "poison_powder"
+    "5": [
+      "astonish"
     ],
-    "8": [
-      "peck"
+    "10": [
+      "mean_look"
     ],
-    "14": [
-      "poison_sting"
+    "15": [
+      "poison_fang"
     ],
     "20": [
-      "gust"
+      "quick_guard"
     ],
-    "32": [
-      "acid"
+    "25": [
+      "air_cutter"
+    ],
+    "30": [
+      "bite"
+    ],
+    "35": [
+      "haze"
     ],
     "40": [
-      "wing_attack"
+      "venoshock"
     ],
-    "48": [
-      "sludge"
+    "45": [
+      "confuse_ray"
     ],
-    "26": [
-      "agility"
+    "50": [
+      "air_slash"
+    ],
+    "55": [
+      "leech_life"
     ]
   },
   "evolution": null,

@@ -18,28 +18,37 @@
   "modelId": "cherrim",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "growth",
+      "sunny_day",
+      "lucky_chant",
+      "morning_sun",
+      "flower_shield",
+      "leafage"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
-      "razor_leaf"
+    "15": [
+      "helping_hand"
     ],
     "20": [
-      "seed_bomb"
+      "magical_leaf"
     ],
-    "32": [
-      "petal_dance"
+    "28": [
+      "leech_seed"
     ],
-    "40": [
+    "34": [
+      "take_down"
+    ],
+    "41": [
+      "petal_blizzard"
+    ],
+    "48": [
+      "worry_seed"
+    ],
+    "55": [
       "solar_beam"
     ],
-    "26": [
-      "calm_mind"
+    "62": [
+      "petal_dance"
     ]
   },
   "evolution": null,

@@ -19,31 +19,42 @@
   "modelId": "ninjask",
   "learnset": {
     "1": [
-      "tackle"
+      "scratch",
+      "harden",
+      "sand_attack",
+      "fury_cutter",
+      "screech",
+      "baton_pass",
+      "dig",
+      "mud_slap",
+      "false_swipe",
+      "aerial_ace",
+      "double_team",
+      "metal_claw"
     ],
-    "4": [
-      "string_shot"
+    "15": [
+      "agility"
     ],
-    "8": [
-      "peck"
+    "23": [
+      "absorb"
     ],
-    "14": [
+    "29": [
       "bug_bite"
     ],
-    "20": [
-      "gust"
+    "36": [
+      "fury_swipes"
     ],
-    "32": [
-      "pin_missile"
+    "43": [
+      "mind_reader"
     ],
-    "40": [
-      "wing_attack"
+    "50": [
+      "slash"
     ],
-    "48": [
-      "drill_peck"
+    "57": [
+      "swords_dance"
     ],
-    "26": [
-      "agility"
+    "64": [
+      "x_scissor"
     ]
   },
   "evolution": null,

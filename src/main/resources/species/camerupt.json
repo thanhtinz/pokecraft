@@ -19,31 +19,42 @@
   "modelId": "camerupt",
   "learnset": {
     "1": [
-      "pound"
+      "growl",
+      "tackle",
+      "ember",
+      "magnitude",
+      "focus_energy",
+      "rock_slide",
+      "eruption",
+      "fissure",
+      "flame_burst"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "bulldoze"
     ],
-    "8": [
-      "sand_tomb"
+    "15": [
+      "incinerate"
     ],
-    "14": [
-      "ember"
+    "19": [
+      "amnesia"
     ],
-    "20": [
-      "dig"
-    ],
-    "32": [
-      "fire_spin"
-    ],
-    "40": [
-      "earthquake"
-    ],
-    "48": [
-      "fire_punch"
+    "22": [
+      "lava_plume"
     ],
     "26": [
-      "calm_mind"
+      "earth_power"
+    ],
+    "29": [
+      "curse"
+    ],
+    "31": [
+      "take_down"
+    ],
+    "39": [
+      "yawn"
+    ],
+    "46": [
+      "earthquake"
     ]
   },
   "evolution": null,

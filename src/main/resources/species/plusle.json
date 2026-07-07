@@ -18,25 +18,59 @@
   "modelId": "plusle",
   "learnset": {
     "1": [
-      "pound"
+      "growl",
+      "thunder_wave",
+      "quick_attack",
+      "fake_tears",
+      "nuzzle",
+      "play_nice",
+      "bestow",
+      "charm"
     ],
     "4": [
-      "thunder_wave"
+      "helping_hand"
     ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
+    "7": [
       "spark"
     ],
-    "20": [
-      "thunderbolt"
+    "10": [
+      "encore"
     ],
-    "32": [
-      "thunder"
+    "13": [
+      "switcheroo"
+    ],
+    "16": [
+      "swift"
+    ],
+    "19": [
+      "electro_ball"
+    ],
+    "22": [
+      "copycat"
     ],
     "26": [
+      "charge"
+    ],
+    "31": [
+      "discharge"
+    ],
+    "34": [
+      "baton_pass"
+    ],
+    "37": [
       "agility"
+    ],
+    "40": [
+      "last_resort"
+    ],
+    "43": [
+      "thunder"
+    ],
+    "46": [
+      "nasty_plot"
+    ],
+    "49": [
+      "entrainment"
     ]
   },
   "evolution": null,

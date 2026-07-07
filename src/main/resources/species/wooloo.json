@@ -18,31 +18,38 @@
   "modelId": "wooloo",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "tackle",
       "growl"
     ],
+    "4": [
+      "defense_curl"
+    ],
     "8": [
-      "quick_attack"
+      "copycat"
     ],
-    "14": [
-      "hyper_fang"
+    "12": [
+      "guard_split"
     ],
-    "20": [
-      "mega_punch"
+    "16": [
+      "double_kick"
+    ],
+    "21": [
+      "headbutt"
+    ],
+    "25": [
+      "take_down"
+    ],
+    "28": [
+      "guard_swap"
     ],
     "32": [
-      "body_slam"
+      "reversal"
+    ],
+    "36": [
+      "cotton_guard"
     ],
     "40": [
       "double_edge"
-    ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "harden"
     ]
   },
   "evolution": null,

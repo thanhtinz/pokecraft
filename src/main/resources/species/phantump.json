@@ -19,31 +19,47 @@
   "modelId": "phantump",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "astonish"
     ],
     "4": [
-      "hypnosis"
+      "branch_poke"
     ],
     "8": [
-      "lick"
+      "leech_seed"
     ],
-    "14": [
-      "vine_whip"
+    "12": [
+      "confuse_ray"
+    ],
+    "16": [
+      "will_o_wisp"
     ],
     "20": [
-      "night_shade"
+      "hex"
+    ],
+    "24": [
+      "growth"
+    ],
+    "28": [
+      "horn_leech"
     ],
     "32": [
-      "razor_leaf"
+      "curse"
+    ],
+    "36": [
+      "phantom_force"
     ],
     "40": [
-      "shadow_ball"
+      "ingrain"
+    ],
+    "44": [
+      "wood_hammer"
     ],
     "48": [
-      "seed_bomb"
+      "destiny_bond"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "forests_curse"
     ]
   },
   "evolution": null,

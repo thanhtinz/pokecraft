@@ -18,25 +18,40 @@
   "modelId": "swalot",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "yawn",
+      "poison_gas",
+      "sludge",
+      "body_slam",
+      "wring_out",
+      "gunk_shot",
+      "venom_drench"
     ],
-    "4": [
-      "poison_powder"
+    "12": [
+      "amnesia"
     ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "acid"
+    "17": [
+      "acid_spray"
     ],
     "20": [
-      "sludge"
+      "encore"
     ],
-    "32": [
+    "25": [
+      "toxic"
+    ],
+    "30": [
+      "stockpile",
+      "spit_up",
+      "swallow"
+    ],
+    "37": [
       "sludge_bomb"
     ],
-    "26": [
-      "harden"
+    "42": [
+      "gastro_acid"
+    ],
+    "49": [
+      "belch"
     ]
   },
   "evolution": null,

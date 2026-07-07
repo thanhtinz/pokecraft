@@ -19,28 +19,50 @@
   "modelId": "shuckle",
   "learnset": {
     "1": [
-      "tackle"
+      "withdraw",
+      "constrict",
+      "bide",
+      "wrap"
     ],
-    "4": [
-      "string_shot"
+    "5": [
+      "rollout"
     ],
-    "8": [
+    "10": [
+      "struggle_bug"
+    ],
+    "15": [
       "rock_throw"
     ],
-    "14": [
+    "20": [
+      "safeguard"
+    ],
+    "25": [
+      "rest"
+    ],
+    "30": [
       "bug_bite"
     ],
-    "20": [
-      "rock_slide"
-    ],
-    "32": [
-      "pin_missile"
+    "35": [
+      "power_split",
+      "guard_split"
     ],
     "40": [
+      "rock_slide"
+    ],
+    "45": [
+      "gastro_acid"
+    ],
+    "50": [
+      "sticky_web"
+    ],
+    "55": [
+      "power_trick"
+    ],
+    "60": [
       "stone_edge"
     ],
-    "26": [
-      "harden"
+    "65": [
+      "shell_smash"
     ]
   },
   "evolution": null,

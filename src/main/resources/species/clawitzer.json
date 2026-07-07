@@ -18,28 +18,42 @@
   "modelId": "clawitzer",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
+      "heal_pulse",
+      "dark_pulse",
+      "dragon_pulse",
+      "splash",
+      "water_gun",
+      "water_sport",
+      "bubble",
+      "flail",
       "bubble_beam"
     ],
+    "15": [
+      "aqua_jet"
+    ],
     "20": [
-      "waterfall"
+      "smack_down"
     ],
-    "32": [
-      "surf"
+    "25": [
+      "hone_claws"
     ],
-    "40": [
-      "hydro_pump"
+    "30": [
+      "water_pulse"
     ],
-    "26": [
-      "calm_mind"
+    "35": [
+      "swords_dance"
+    ],
+    "42": [
+      "aura_sphere"
+    ],
+    "49": [
+      "bounce"
+    ],
+    "56": [
+      "muddy_water"
+    ],
+    "63": [
+      "crabhammer"
     ]
   },
   "evolution": null,

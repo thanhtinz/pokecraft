@@ -18,28 +18,41 @@
   "modelId": "finizen",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "supersonic",
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "7": [
+      "astonish"
     ],
-    "20": [
-      "waterfall"
+    "10": [
+      "focus_energy"
     ],
-    "32": [
-      "surf"
+    "13": [
+      "aqua_jet"
     ],
-    "40": [
+    "17": [
+      "double_hit"
+    ],
+    "21": [
+      "dive"
+    ],
+    "25": [
+      "charm"
+    ],
+    "29": [
+      "acrobatics"
+    ],
+    "34": [
+      "encore"
+    ],
+    "39": [
+      "aqua_tail"
+    ],
+    "44": [
+      "mist"
+    ],
+    "50": [
       "hydro_pump"
-    ],
-    "26": [
-      "agility"
     ]
   },
   "evolution": null,

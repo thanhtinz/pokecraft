@@ -19,31 +19,50 @@
   "modelId": "ceruledge",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "leer"
+      "shadow_claw",
+      "leer",
+      "ember",
+      "astonish",
+      "night_slash",
+      "shadow_sneak",
+      "quick_guard",
+      "solar_blade"
     ],
     "8": [
-      "lick"
+      "clear_smog"
     ],
-    "14": [
-      "ember"
+    "12": [
+      "fire_spin"
+    ],
+    "16": [
+      "will_o_wisp"
     ],
     "20": [
       "night_shade"
     ],
-    "32": [
-      "fire_spin"
+    "24": [
+      "flame_charge"
     ],
-    "40": [
-      "shadow_ball"
+    "28": [
+      "incinerate"
+    ],
+    "32": [
+      "lava_plume"
+    ],
+    "37": [
+      "swords_dance"
+    ],
+    "42": [
+      "ally_switch"
     ],
     "48": [
-      "fire_punch"
+      "bitter_blade"
     ],
-    "26": [
-      "swords_dance"
+    "56": [
+      "psycho_cut"
+    ],
+    "62": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

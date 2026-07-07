@@ -18,31 +18,36 @@
   "modelId": "whismur",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "astonish"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "echoed_voice"
     ],
-    "8": [
-      "quick_attack"
+    "10": [
+      "howl"
     ],
-    "14": [
-      "hyper_fang"
+    "15": [
+      "rest",
+      "sleep_talk"
     ],
-    "20": [
-      "mega_punch"
+    "21": [
+      "stomp"
     ],
-    "32": [
-      "body_slam"
+    "25": [
+      "roar"
+    ],
+    "30": [
+      "supersonic"
+    ],
+    "35": [
+      "uproar"
     ],
     "40": [
-      "double_edge"
+      "screech"
     ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "swords_dance"
+    "45": [
+      "hyper_voice"
     ]
   },
   "evolution": null,

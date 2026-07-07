@@ -18,25 +18,47 @@
   "modelId": "kubfu",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "rock_smash",
       "leer"
     ],
-    "8": [
-      "karate_chop"
+    "4": [
+      "endure"
     ],
-    "14": [
-      "low_kick"
+    "8": [
+      "focus_energy"
+    ],
+    "12": [
+      "aerial_ace"
+    ],
+    "16": [
+      "scary_face"
     ],
     "20": [
+      "headbutt"
+    ],
+    "24": [
       "brick_break"
     ],
-    "32": [
-      "cross_chop"
+    "28": [
+      "detect"
     ],
-    "26": [
-      "swords_dance"
+    "32": [
+      "bulk_up"
+    ],
+    "36": [
+      "iron_head"
+    ],
+    "40": [
+      "dynamic_punch"
+    ],
+    "44": [
+      "counter"
+    ],
+    "48": [
+      "close_combat"
+    ],
+    "52": [
+      "focus_punch"
     ]
   },
   "evolution": null,

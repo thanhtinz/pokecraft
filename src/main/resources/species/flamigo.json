@@ -19,31 +19,47 @@
   "modelId": "flamigo",
   "learnset": {
     "1": [
-      "scratch"
+      "peck",
+      "copycat"
     ],
-    "4": [
-      "tail_whip"
+    "5": [
+      "double_kick"
     ],
-    "8": [
-      "karate_chop"
+    "9": [
+      "detect"
     ],
-    "14": [
-      "peck"
-    ],
-    "20": [
-      "low_kick"
-    ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "brick_break"
-    ],
-    "48": [
+    "12": [
       "wing_attack"
     ],
-    "26": [
-      "swords_dance"
+    "15": [
+      "focus_energy"
+    ],
+    "18": [
+      "low_kick"
+    ],
+    "21": [
+      "feint"
+    ],
+    "27": [
+      "payback"
+    ],
+    "31": [
+      "roost"
+    ],
+    "35": [
+      "air_slash"
+    ],
+    "39": [
+      "mega_kick"
+    ],
+    "44": [
+      "wide_guard"
+    ],
+    "48": [
+      "throat_chop"
+    ],
+    "54": [
+      "brave_bird"
     ]
   },
   "evolution": null,

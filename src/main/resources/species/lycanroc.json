@@ -18,22 +18,45 @@
   "modelId": "lycanroc",
   "learnset": {
     "1": [
-      "scratch"
+      "accelerock",
+      "quick_guard",
+      "quick_attack",
+      "tackle",
+      "leer",
+      "sand_attack",
+      "odor_sleuth",
+      "sucker_punch",
+      "double_team"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
+    "12": [
       "rock_throw"
     ],
-    "14": [
-      "rock_slide"
+    "16": [
+      "howl"
     ],
     "20": [
-      "stone_edge"
+      "bite"
     ],
-    "26": [
-      "swords_dance"
+    "24": [
+      "rock_tomb"
+    ],
+    "30": [
+      "roar"
+    ],
+    "36": [
+      "rock_slide"
+    ],
+    "42": [
+      "crunch"
+    ],
+    "48": [
+      "scary_face"
+    ],
+    "54": [
+      "stealth_rock"
+    ],
+    "60": [
+      "stone_edge"
     ]
   },
   "evolution": null,

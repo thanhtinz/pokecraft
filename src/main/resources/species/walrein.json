@@ -19,31 +19,46 @@
   "modelId": "walrein",
   "learnset": {
     "1": [
-      "pound"
+      "crunch",
+      "growl",
+      "water_gun",
+      "ice_fang",
+      "rollout",
+      "defense_curl",
+      "swagger"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "powder_snow"
     ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "ice_shard"
+    "16": [
+      "rest"
     ],
     "20": [
-      "bubble_beam"
+      "snore"
     ],
-    "32": [
+    "24": [
+      "brine"
+    ],
+    "28": [
       "aurora_beam"
     ],
+    "35": [
+      "encore"
+    ],
     "40": [
-      "waterfall"
+      "body_slam"
     ],
     "48": [
-      "ice_beam"
+      "surf"
     ],
-    "26": [
-      "calm_mind"
+    "56": [
+      "blizzard"
+    ],
+    "64": [
+      "hail"
+    ],
+    "72": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

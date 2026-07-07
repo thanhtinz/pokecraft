@@ -18,25 +18,45 @@
   "modelId": "passimian",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "leer",
+      "bestow"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "rock_smash"
     ],
-    "8": [
-      "karate_chop"
+    "10": [
+      "focus_energy"
     ],
-    "14": [
-      "low_kick"
+    "15": [
+      "beat_up"
     ],
     "20": [
-      "brick_break"
+      "scary_face"
     ],
-    "32": [
-      "cross_chop"
+    "25": [
+      "take_down"
     ],
-    "26": [
-      "swords_dance"
+    "30": [
+      "fling"
+    ],
+    "35": [
+      "bulk_up"
+    ],
+    "40": [
+      "thrash"
+    ],
+    "45": [
+      "double_edge"
+    ],
+    "50": [
+      "close_combat"
+    ],
+    "55": [
+      "reversal"
+    ],
+    "60": [
+      "giga_impact"
     ]
   },
   "evolution": null,

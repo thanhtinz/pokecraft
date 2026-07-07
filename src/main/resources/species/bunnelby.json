@@ -18,31 +18,48 @@
   "modelId": "bunnelby",
   "learnset": {
     "1": [
-      "pound"
+      "leer",
+      "double_slap",
+      "mud_slap"
     ],
-    "4": [
-      "growl"
+    "3": [
+      "tackle"
     ],
-    "8": [
+    "6": [
+      "laser_focus"
+    ],
+    "9": [
       "quick_attack"
     ],
-    "14": [
-      "hyper_fang"
+    "12": [
+      "mud_shot"
     ],
-    "20": [
-      "mega_punch"
+    "15": [
+      "flail"
     ],
-    "32": [
-      "body_slam"
+    "18": [
+      "double_kick"
     ],
-    "40": [
-      "double_edge"
+    "21": [
+      "bulldoze"
     ],
-    "48": [
-      "hyper_beam"
+    "24": [
+      "dig"
     ],
-    "26": [
-      "agility"
+    "27": [
+      "bounce"
+    ],
+    "30": [
+      "take_down"
+    ],
+    "33": [
+      "swords_dance"
+    ],
+    "36": [
+      "earthquake"
+    ],
+    "39": [
+      "super_fang"
     ]
   },
   "evolution": null,

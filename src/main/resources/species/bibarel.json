@@ -19,31 +19,47 @@
   "modelId": "bibarel",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "growl",
+      "water_gun",
+      "rototiller",
+      "aqua_jet"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "defense_curl"
     ],
-    "8": [
-      "quick_attack"
+    "9": [
+      "rollout"
     ],
-    "14": [
-      "water_gun"
+    "13": [
+      "headbutt"
     ],
-    "20": [
+    "18": [
       "hyper_fang"
     ],
-    "32": [
-      "bubble_beam"
+    "23": [
+      "yawn"
     ],
-    "40": [
-      "mega_punch"
+    "28": [
+      "crunch"
+    ],
+    "33": [
+      "take_down"
+    ],
+    "38": [
+      "super_fang"
+    ],
+    "43": [
+      "swords_dance"
     ],
     "48": [
-      "waterfall"
+      "amnesia"
     ],
-    "26": [
-      "swords_dance"
+    "53": [
+      "superpower"
+    ],
+    "58": [
+      "curse"
     ]
   },
   "evolution": null,

@@ -18,25 +18,48 @@
   "modelId": "muk",
   "learnset": {
     "1": [
-      "pound"
+      "poison_gas",
+      "pound",
+      "harden",
+      "mud_slap",
+      "mud_bomb",
+      "venom_drench"
     ],
-    "4": [
-      "poison_powder"
+    "12": [
+      "disable"
     ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "acid"
-    ],
-    "20": [
+    "15": [
       "sludge"
     ],
-    "32": [
-      "sludge_bomb"
+    "18": [
+      "mud_shot"
+    ],
+    "21": [
+      "minimize"
     ],
     "26": [
-      "swords_dance"
+      "toxic"
+    ],
+    "29": [
+      "sludge_bomb"
+    ],
+    "32": [
+      "sludge_wave"
+    ],
+    "37": [
+      "screech"
+    ],
+    "40": [
+      "gunk_shot"
+    ],
+    "46": [
+      "acid_armor"
+    ],
+    "52": [
+      "belch"
+    ],
+    "57": [
+      "memento"
     ]
   },
   "evolution": null,

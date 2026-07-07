@@ -21,29 +21,47 @@
     "1": [
       "tackle"
     ],
-    "4": [
-      "harden"
+    "3": [
+      "defense_curl"
     ],
     "8": [
-      "rock_throw"
+      "rollout"
     ],
-    "14": [
-      "peck"
+    "10": [
+      "confuse_ray"
     ],
-    "20": [
-      "rock_slide"
+    "15": [
+      "swift"
     ],
-    "32": [
-      "gust"
+    "17": [
+      "ancient_power"
     ],
-    "40": [
-      "stone_edge"
+    "22": [
+      "self_destruct"
     ],
-    "48": [
-      "wing_attack"
+    "24": [
+      "stealth_rock"
     ],
-    "26": [
-      "agility"
+    "29": [
+      "take_down"
+    ],
+    "31": [
+      "autotomize"
+    ],
+    "36": [
+      "cosmic_power"
+    ],
+    "38": [
+      "power_gem"
+    ],
+    "43": [
+      "double_edge"
+    ],
+    "45": [
+      "shell_smash"
+    ],
+    "50": [
+      "explosion"
     ]
   },
   "evolution": null,

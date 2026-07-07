@@ -19,31 +19,39 @@
   "modelId": "frigibax",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "leer",
+      "dragon_tail"
     ],
-    "4": [
-      "leer"
+    "6": [
+      "icy_wind"
     ],
-    "8": [
-      "twister"
-    ],
-    "14": [
-      "ice_shard"
-    ],
-    "20": [
+    "12": [
       "dragon_breath"
     ],
-    "32": [
-      "aurora_beam"
+    "18": [
+      "focus_energy"
     ],
-    "40": [
+    "24": [
+      "bite"
+    ],
+    "29": [
+      "ice_fang"
+    ],
+    "32": [
       "dragon_claw"
     ],
-    "48": [
+    "36": [
+      "take_down"
+    ],
+    "40": [
       "ice_beam"
     ],
-    "26": [
-      "swords_dance"
+    "44": [
+      "crunch"
+    ],
+    "48": [
+      "icicle_crash"
     ]
   },
   "evolution": null,

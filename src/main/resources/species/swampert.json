@@ -19,31 +19,51 @@
   "modelId": "swampert",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "growl",
+      "mud_slap",
+      "water_gun",
+      "bide",
+      "mud_shot",
+      "foresight",
+      "mud_bomb",
+      "earthquake",
+      "hammer_arm",
+      "surf",
+      "rock_smash"
     ],
-    "4": [
-      "tail_whip"
+    "9": [
+      "rock_throw"
     ],
-    "8": [
-      "water_gun"
+    "12": [
+      "protect"
     ],
-    "14": [
-      "sand_tomb"
+    "15": [
+      "supersonic"
     ],
     "20": [
-      "bubble_beam"
+      "water_pulse"
     ],
-    "32": [
-      "dig"
+    "25": [
+      "rock_slide"
     ],
-    "40": [
-      "waterfall"
+    "30": [
+      "take_down"
     ],
-    "48": [
-      "earthquake"
+    "35": [
+      "amnesia"
     ],
-    "26": [
-      "swords_dance"
+    "42": [
+      "muddy_water"
+    ],
+    "49": [
+      "screech"
+    ],
+    "56": [
+      "endeavor"
+    ],
+    "63": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

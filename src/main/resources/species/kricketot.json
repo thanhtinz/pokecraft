@@ -18,19 +18,15 @@
   "modelId": "kricketot",
   "learnset": {
     "1": [
-      "pound"
+      "growl",
+      "bide",
+      "tackle"
     ],
-    "4": [
-      "string_shot"
+    "6": [
+      "struggle_bug"
     ],
-    "8": [
+    "16": [
       "bug_bite"
-    ],
-    "14": [
-      "pin_missile"
-    ],
-    "26": [
-      "harden"
     ]
   },
   "evolution": null,

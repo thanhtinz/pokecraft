@@ -19,31 +19,34 @@
   "modelId": "swellow",
   "learnset": {
     "1": [
-      "scratch"
+      "pluck",
+      "peck",
+      "growl",
+      "focus_energy",
+      "quick_attack",
+      "air_slash",
+      "brave_bird"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "quick_attack"
-    ],
-    "20": [
-      "gust"
-    ],
-    "32": [
-      "hyper_fang"
-    ],
-    "40": [
+    "13": [
       "wing_attack"
     ],
-    "48": [
-      "mega_punch"
+    "17": [
+      "double_team"
     ],
-    "26": [
+    "21": [
+      "aerial_ace"
+    ],
+    "27": [
+      "quick_guard"
+    ],
+    "33": [
       "agility"
+    ],
+    "45": [
+      "endeavor"
+    ],
+    "57": [
+      "reversal"
     ]
   },
   "evolution": null,

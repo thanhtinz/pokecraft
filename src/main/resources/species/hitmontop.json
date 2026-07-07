@@ -18,25 +18,50 @@
   "modelId": "hitmontop",
   "learnset": {
     "1": [
-      "tackle"
+      "revenge",
+      "rolling_kick",
+      "focus_energy",
+      "pursuit",
+      "triple_kick",
+      "feint",
+      "helping_hand",
+      "tackle",
+      "fake_out",
+      "foresight"
     ],
     "4": [
-      "leer"
+      "quick_attack"
     ],
     "8": [
-      "karate_chop"
+      "gyro_ball"
     ],
-    "14": [
-      "low_kick"
+    "12": [
+      "detect"
     ],
-    "20": [
-      "brick_break"
+    "16": [
+      "rapid_spin"
+    ],
+    "21": [
+      "wide_guard",
+      "quick_guard"
+    ],
+    "24": [
+      "sucker_punch"
+    ],
+    "28": [
+      "agility"
     ],
     "32": [
-      "cross_chop"
+      "dig"
     ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "close_combat"
+    ],
+    "40": [
+      "counter"
+    ],
+    "44": [
+      "endeavor"
     ]
   },
   "evolution": null,

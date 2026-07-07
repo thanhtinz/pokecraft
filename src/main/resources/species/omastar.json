@@ -19,31 +19,45 @@
   "modelId": "omastar",
   "learnset": {
     "1": [
-      "scratch"
+      "constrict",
+      "withdraw",
+      "bite",
+      "rollout",
+      "spike_cannon",
+      "tickle",
+      "bind",
+      "crunch",
+      "sand_attack"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
+    "15": [
       "water_gun"
     ],
-    "14": [
-      "rock_throw"
-    ],
     "20": [
-      "bubble_beam"
+      "leer"
     ],
-    "32": [
-      "rock_slide"
+    "25": [
+      "mud_shot"
     ],
-    "40": [
-      "waterfall"
+    "30": [
+      "ancient_power"
     ],
-    "48": [
-      "stone_edge"
+    "35": [
+      "brine"
     ],
-    "26": [
-      "harden"
+    "43": [
+      "protect"
+    ],
+    "49": [
+      "rock_blast"
+    ],
+    "56": [
+      "surf"
+    ],
+    "63": [
+      "shell_smash"
+    ],
+    "70": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

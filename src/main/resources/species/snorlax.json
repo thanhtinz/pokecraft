@@ -18,31 +18,59 @@
   "modelId": "snorlax",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "defense_curl",
+      "lick",
+      "block",
+      "recycle",
+      "fling",
+      "last_resort",
+      "chip_away",
+      "covet",
+      "stockpile",
+      "swallow",
+      "screech",
+      "metronome",
+      "flail",
+      "odor_sleuth"
     ],
-    "4": [
-      "growl"
+    "12": [
+      "yawn"
     ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "hyper_fang"
+    "16": [
+      "bite"
     ],
     "20": [
-      "mega_punch"
+      "rest",
+      "sleep_talk",
+      "snore"
     ],
-    "32": [
+    "24": [
+      "crunch"
+    ],
+    "28": [
       "body_slam"
     ],
+    "32": [
+      "heavy_slam"
+    ],
+    "36": [
+      "amnesia"
+    ],
     "40": [
-      "double_edge"
+      "high_horsepower"
+    ],
+    "44": [
+      "hammer_arm"
     ],
     "48": [
-      "hyper_beam"
+      "belly_drum"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "belch"
+    ],
+    "56": [
+      "giga_impact"
     ]
   },
   "evolution": null,

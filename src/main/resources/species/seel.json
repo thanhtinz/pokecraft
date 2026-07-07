@@ -18,28 +18,56 @@
   "modelId": "seel",
   "learnset": {
     "1": [
-      "pound"
+      "headbutt",
+      "water_sport"
     ],
-    "4": [
-      "tail_whip"
+    "3": [
+      "growl"
     ],
-    "8": [
-      "water_gun"
+    "7": [
+      "charm"
     ],
-    "14": [
-      "bubble_beam"
+    "11": [
+      "icy_wind"
     ],
-    "20": [
-      "waterfall"
+    "13": [
+      "encore"
     ],
-    "32": [
-      "surf"
+    "17": [
+      "ice_shard"
     ],
-    "40": [
-      "hydro_pump"
+    "21": [
+      "rest"
     ],
-    "26": [
-      "harden"
+    "23": [
+      "aqua_ring"
+    ],
+    "27": [
+      "aurora_beam"
+    ],
+    "31": [
+      "aqua_jet"
+    ],
+    "33": [
+      "brine"
+    ],
+    "37": [
+      "take_down"
+    ],
+    "41": [
+      "dive"
+    ],
+    "43": [
+      "aqua_tail"
+    ],
+    "47": [
+      "ice_beam"
+    ],
+    "51": [
+      "safeguard"
+    ],
+    "53": [
+      "snowscape"
     ]
   },
   "evolution": null,

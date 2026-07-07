@@ -18,28 +18,48 @@
   "modelId": "quilava",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "leer",
+      "smokescreen"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+    "10": [
       "ember"
     ],
-    "14": [
-      "fire_spin"
+    "13": [
+      "quick_attack"
     ],
     "20": [
-      "fire_punch"
+      "flame_wheel"
     ],
-    "32": [
+    "24": [
+      "defense_curl"
+    ],
+    "31": [
+      "swift"
+    ],
+    "35": [
+      "flame_charge"
+    ],
+    "42": [
+      "lava_plume"
+    ],
+    "46": [
       "flamethrower"
     ],
-    "40": [
-      "fire_blast"
+    "53": [
+      "inferno"
     ],
-    "26": [
-      "calm_mind"
+    "57": [
+      "rollout"
+    ],
+    "64": [
+      "double_edge"
+    ],
+    "68": [
+      "overheat"
+    ],
+    "75": [
+      "eruption"
     ]
   },
   "evolution": null,

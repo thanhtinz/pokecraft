@@ -19,31 +19,35 @@
   "modelId": "staraptor",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "growl",
+      "quick_attack",
+      "wing_attack",
+      "close_combat"
     ],
-    "4": [
-      "growl"
+    "13": [
+      "double_team"
     ],
-    "8": [
-      "quick_attack"
+    "18": [
+      "endeavor"
     ],
-    "14": [
-      "peck"
+    "23": [
+      "whirlwind"
     ],
-    "20": [
-      "hyper_fang"
+    "28": [
+      "aerial_ace"
     ],
-    "32": [
-      "gust"
+    "33": [
+      "take_down"
     ],
-    "40": [
-      "mega_punch"
+    "41": [
+      "agility"
     ],
-    "48": [
-      "wing_attack"
+    "49": [
+      "brave_bird"
     ],
-    "26": [
-      "swords_dance"
+    "57": [
+      "final_gambit"
     ]
   },
   "evolution": null,

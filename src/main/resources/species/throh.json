@@ -18,25 +18,43 @@
   "modelId": "throh",
   "learnset": {
     "1": [
-      "scratch"
+      "bind",
+      "leer",
+      "bide",
+      "mat_block"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "focus_energy"
     ],
-    "8": [
-      "karate_chop"
+    "10": [
+      "circle_throw"
     ],
-    "14": [
-      "low_kick"
+    "15": [
+      "wide_guard"
     ],
     "20": [
-      "brick_break"
+      "revenge"
     ],
-    "32": [
-      "cross_chop"
+    "25": [
+      "bulk_up"
     ],
-    "26": [
-      "swords_dance"
+    "30": [
+      "storm_throw"
+    ],
+    "35": [
+      "vital_throw"
+    ],
+    "40": [
+      "seismic_toss"
+    ],
+    "45": [
+      "endure"
+    ],
+    "50": [
+      "reversal"
+    ],
+    "55": [
+      "superpower"
     ]
   },
   "evolution": null,

@@ -19,31 +19,51 @@
   "modelId": "yanma",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "foresight",
+      "sonic_boom"
     ],
-    "4": [
-      "string_shot"
+    "6": [
+      "quick_attack"
     ],
-    "8": [
-      "peck"
+    "11": [
+      "double_team"
     ],
     "14": [
-      "bug_bite"
+      "air_cutter"
     ],
-    "20": [
-      "gust"
+    "17": [
+      "detect"
     ],
-    "32": [
-      "pin_missile"
+    "22": [
+      "supersonic"
     ],
-    "40": [
+    "27": [
+      "uproar"
+    ],
+    "30": [
+      "pursuit"
+    ],
+    "33": [
+      "ancient_power"
+    ],
+    "38": [
+      "hypnosis"
+    ],
+    "43": [
       "wing_attack"
     ],
-    "48": [
-      "drill_peck"
+    "46": [
+      "screech"
     ],
-    "26": [
-      "agility"
+    "49": [
+      "u_turn"
+    ],
+    "54": [
+      "air_slash"
+    ],
+    "57": [
+      "bug_buzz"
     ]
   },
   "evolution": null,

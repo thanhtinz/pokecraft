@@ -19,31 +19,48 @@
   "modelId": "magneton",
   "learnset": {
     "1": [
-      "scratch"
+      "tri_attack",
+      "tackle",
+      "thunder_shock",
+      "supersonic",
+      "sonic_boom",
+      "thunder_wave",
+      "magnet_bomb",
+      "mirror_shot",
+      "electric_terrain"
     ],
-    "4": [
-      "thunder_wave"
+    "12": [
+      "electro_ball"
     ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
-      "steel_wing"
+    "16": [
+      "gyro_ball"
     ],
     "20": [
       "spark"
     ],
-    "32": [
-      "iron_head"
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "magnet_rise"
+    ],
+    "34": [
+      "flash_cannon"
     ],
     "40": [
-      "thunderbolt"
+      "discharge"
     ],
-    "48": [
-      "thunder"
+    "46": [
+      "metal_sound"
     ],
-    "26": [
-      "calm_mind"
+    "52": [
+      "light_screen"
+    ],
+    "58": [
+      "lock_on"
+    ],
+    "64": [
+      "zap_cannon"
     ]
   },
   "evolution": null,

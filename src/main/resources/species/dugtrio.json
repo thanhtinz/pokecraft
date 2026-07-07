@@ -18,22 +18,43 @@
   "modelId": "dugtrio",
   "learnset": {
     "1": [
-      "tackle"
+      "night_slash",
+      "tri_attack",
+      "scratch",
+      "sand_attack",
+      "growl",
+      "astonish",
+      "magnitude",
+      "sand_tomb",
+      "mud_bomb",
+      "rototiller"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "mud_slap"
     ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
-      "dig"
+    "16": [
+      "bulldoze"
     ],
     "20": [
+      "sucker_punch"
+    ],
+    "24": [
+      "slash"
+    ],
+    "30": [
+      "sandstorm"
+    ],
+    "36": [
+      "dig"
+    ],
+    "42": [
+      "earth_power"
+    ],
+    "48": [
       "earthquake"
     ],
-    "26": [
-      "agility"
+    "54": [
+      "fissure"
     ]
   },
   "evolution": null,

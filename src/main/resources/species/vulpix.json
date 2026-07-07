@@ -18,28 +18,47 @@
   "modelId": "vulpix",
   "learnset": {
     "1": [
-      "scratch"
+      "ember",
+      "tail_whip"
     ],
     "4": [
-      "leer"
+      "disable"
     ],
     "8": [
-      "ember"
+      "quick_attack"
     ],
-    "14": [
-      "fire_spin"
+    "12": [
+      "spite"
+    ],
+    "16": [
+      "incinerate"
     ],
     "20": [
-      "fire_punch"
+      "confuse_ray"
+    ],
+    "24": [
+      "will_o_wisp"
+    ],
+    "28": [
+      "flame_burst"
     ],
     "32": [
       "flamethrower"
     ],
-    "40": [
-      "fire_blast"
+    "36": [
+      "imprison"
     ],
-    "26": [
-      "agility"
+    "40": [
+      "fire_spin"
+    ],
+    "44": [
+      "safeguard"
+    ],
+    "48": [
+      "inferno"
+    ],
+    "52": [
+      "grudge"
     ]
   },
   "evolution": null,

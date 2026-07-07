@@ -18,25 +18,44 @@
   "modelId": "vanilluxe",
   "learnset": {
     "1": [
-      "pound"
+      "weather_ball",
+      "harden",
+      "astonish",
+      "mist",
+      "taunt",
+      "mirror_shot",
+      "freeze_dry",
+      "icicle_crash"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "icy_wind"
     ],
-    "8": [
-      "ice_shard"
-    ],
-    "14": [
-      "aurora_beam"
+    "16": [
+      "avalanche"
     ],
     "20": [
-      "ice_beam"
+      "hail"
+    ],
+    "24": [
+      "icicle_spear"
+    ],
+    "28": [
+      "uproar"
     ],
     "32": [
+      "acid_armor"
+    ],
+    "38": [
+      "mirror_coat"
+    ],
+    "44": [
+      "ice_beam"
+    ],
+    "52": [
       "blizzard"
     ],
-    "26": [
-      "calm_mind"
+    "60": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

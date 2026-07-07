@@ -19,31 +19,46 @@
   "modelId": "beedrill",
   "learnset": {
     "1": [
-      "tackle"
+      "fury_attack",
+      "twineedle",
+      "pursuit",
+      "string_shot",
+      "bug_bite",
+      "poison_sting",
+      "harden"
     ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
-      "poison_sting"
+    "11": [
+      "fury_cutter"
     ],
     "14": [
-      "bug_bite"
+      "rage"
     ],
     "20": [
-      "acid"
+      "focus_energy"
+    ],
+    "23": [
+      "venoshock"
+    ],
+    "26": [
+      "assurance"
+    ],
+    "29": [
+      "toxic_spikes"
     ],
     "32": [
       "pin_missile"
     ],
-    "40": [
-      "sludge"
+    "35": [
+      "poison_jab"
     ],
-    "48": [
-      "sludge_bomb"
+    "38": [
+      "agility"
     ],
-    "26": [
-      "swords_dance"
+    "41": [
+      "endeavor"
+    ],
+    "44": [
+      "fell_stinger"
     ]
   },
   "evolution": null,

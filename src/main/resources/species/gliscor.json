@@ -19,31 +19,48 @@
   "modelId": "gliscor",
   "learnset": {
     "1": [
-      "scratch"
+      "thunder_fang",
+      "ice_fang",
+      "fire_fang",
+      "poison_jab",
+      "sand_attack",
+      "harden",
+      "feint_attack",
+      "guillotine",
+      "sky_uppercut",
+      "mud_bomb",
+      "poison_sting",
+      "slash"
     ],
-    "4": [
-      "leer"
+    "13": [
+      "quick_attack"
     ],
-    "8": [
-      "sand_tomb"
+    "16": [
+      "fury_cutter"
     ],
-    "14": [
-      "peck"
+    "19": [
+      "knock_off"
     ],
-    "20": [
-      "dig"
+    "22": [
+      "acrobatics"
     ],
-    "32": [
-      "gust"
+    "27": [
+      "night_slash"
+    ],
+    "30": [
+      "u_turn"
+    ],
+    "35": [
+      "screech"
     ],
     "40": [
-      "earthquake"
+      "x_scissor"
     ],
-    "48": [
-      "wing_attack"
+    "45": [
+      "crabhammer"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "swords_dance"
     ]
   },
   "evolution": null,

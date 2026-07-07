@@ -19,31 +19,41 @@
   "modelId": "palpitoad",
   "learnset": {
     "1": [
-      "pound"
+      "bubble",
+      "growl",
+      "supersonic",
+      "echoed_voice",
+      "acid"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "mud_shot"
     ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "sand_tomb"
+    "16": [
+      "round"
     ],
     "20": [
       "bubble_beam"
     ],
-    "32": [
-      "dig"
+    "24": [
+      "flail"
     ],
-    "40": [
-      "waterfall"
+    "30": [
+      "uproar"
+    ],
+    "37": [
+      "aqua_ring"
+    ],
+    "42": [
+      "hyper_voice"
     ],
     "48": [
-      "earthquake"
+      "muddy_water"
     ],
-    "26": [
-      "agility"
+    "54": [
+      "rain_dance"
+    ],
+    "60": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

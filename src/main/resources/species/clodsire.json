@@ -19,31 +19,40 @@
   "modelId": "clodsire",
   "learnset": {
     "1": [
-      "pound"
+      "amnesia",
+      "tail_whip",
+      "poison_sting",
+      "tackle"
     ],
     "4": [
-      "poison_powder"
+      "toxic_spikes"
     ],
     "8": [
-      "poison_sting"
+      "mud_shot"
     ],
-    "14": [
-      "sand_tomb"
+    "12": [
+      "poison_tail"
     ],
-    "20": [
-      "acid"
+    "16": [
+      "slam"
     ],
-    "32": [
-      "dig"
+    "21": [
+      "yawn"
+    ],
+    "24": [
+      "poison_jab"
+    ],
+    "30": [
+      "sludge_wave"
+    ],
+    "36": [
+      "megahorn"
     ],
     "40": [
-      "sludge"
+      "toxic"
     ],
     "48": [
       "earthquake"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

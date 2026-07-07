@@ -18,25 +18,45 @@
   "modelId": "weezing",
   "learnset": {
     "1": [
-      "pound"
+      "poison_gas",
+      "tackle",
+      "smog",
+      "smokescreen",
+      "double_hit",
+      "heat_wave"
     ],
-    "4": [
-      "poison_powder"
+    "12": [
+      "clear_smog"
     ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "acid"
+    "16": [
+      "assurance"
     ],
     "20": [
       "sludge"
     ],
+    "24": [
+      "haze"
+    ],
+    "28": [
+      "self_destruct"
+    ],
     "32": [
       "sludge_bomb"
     ],
-    "26": [
-      "harden"
+    "38": [
+      "toxic"
+    ],
+    "44": [
+      "belch"
+    ],
+    "50": [
+      "explosion"
+    ],
+    "56": [
+      "memento"
+    ],
+    "62": [
+      "destiny_bond"
     ]
   },
   "evolution": null,

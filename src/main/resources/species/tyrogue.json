@@ -18,25 +18,11 @@
   "modelId": "tyrogue",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
-      "low_kick"
-    ],
-    "20": [
-      "brick_break"
-    ],
-    "32": [
-      "cross_chop"
-    ],
-    "26": [
-      "swords_dance"
+      "tackle",
+      "helping_hand",
+      "fake_out",
+      "foresight",
+      "focus_energy"
     ]
   },
   "evolution": null,

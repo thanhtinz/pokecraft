@@ -19,31 +19,53 @@
   "modelId": "toxtricity",
   "learnset": {
     "1": [
-      "tackle"
+      "spark",
+      "belch",
+      "tearful_look",
+      "nuzzle",
+      "growl",
+      "flail",
+      "acid",
+      "thunder_shock",
+      "acid_spray",
+      "leer",
+      "noble_roar"
     ],
     "4": [
-      "thunder_wave"
+      "charge"
     ],
     "8": [
-      "poison_sting"
+      "shock_wave"
     ],
-    "14": [
-      "thunder_shock"
+    "12": [
+      "scary_face"
     ],
-    "20": [
-      "acid"
+    "16": [
+      "taunt"
+    ],
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "swagger"
     ],
     "32": [
-      "spark"
+      "toxic"
+    ],
+    "36": [
+      "discharge"
     ],
     "40": [
-      "sludge"
+      "poison_jab"
+    ],
+    "44": [
+      "overdrive"
     ],
     "48": [
-      "thunderbolt"
+      "boomburst"
     ],
-    "26": [
-      "calm_mind"
+    "52": [
+      "shift_gear"
     ]
   },
   "evolution": null,

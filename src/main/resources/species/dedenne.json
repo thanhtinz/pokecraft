@@ -19,31 +19,45 @@
   "modelId": "dedenne",
   "learnset": {
     "1": [
+      "tail_whip",
+      "nuzzle"
+    ],
+    "5": [
       "tackle"
     ],
-    "4": [
-      "thunder_wave"
+    "10": [
+      "charge"
     ],
-    "8": [
+    "15": [
       "thunder_shock"
     ],
-    "14": [
-      "fairy_wind"
-    ],
     "20": [
-      "spark"
+      "charm"
     ],
-    "32": [
-      "dazzling_gleam"
+    "25": [
+      "parabolic_charge"
+    ],
+    "30": [
+      "volt_switch"
+    ],
+    "35": [
+      "rest",
+      "snore"
     ],
     "40": [
-      "thunderbolt"
+      "discharge"
     ],
-    "48": [
+    "45": [
+      "play_rough"
+    ],
+    "50": [
+      "super_fang"
+    ],
+    "55": [
+      "entrainment"
+    ],
+    "60": [
       "thunder"
-    ],
-    "26": [
-      "agility"
     ]
   },
   "evolution": null,

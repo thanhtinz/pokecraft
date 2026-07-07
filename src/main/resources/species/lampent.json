@@ -19,31 +19,46 @@
   "modelId": "lampent",
   "learnset": {
     "1": [
-      "pound"
+      "ember",
+      "astonish",
+      "minimize",
+      "smog"
     ],
-    "4": [
-      "hypnosis"
+    "12": [
+      "confuse_ray"
     ],
-    "8": [
-      "lick"
-    ],
-    "14": [
-      "ember"
+    "16": [
+      "hex"
     ],
     "20": [
+      "flame_burst"
+    ],
+    "24": [
+      "fire_spin"
+    ],
+    "28": [
       "night_shade"
     ],
     "32": [
-      "fire_spin"
+      "curse"
     ],
-    "40": [
+    "36": [
       "shadow_ball"
     ],
-    "48": [
-      "fire_punch"
+    "40": [
+      "inferno"
     ],
-    "26": [
-      "calm_mind"
+    "46": [
+      "imprison"
+    ],
+    "52": [
+      "pain_split"
+    ],
+    "58": [
+      "overheat"
+    ],
+    "64": [
+      "memento"
     ]
   },
   "evolution": null,

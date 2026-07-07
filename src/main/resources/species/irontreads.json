@@ -19,28 +19,46 @@
   "modelId": "irontreads",
   "learnset": {
     "1": [
-      "tackle"
+      "horn_attack",
+      "defense_curl",
+      "rollout",
+      "electric_terrain"
     ],
-    "4": [
-      "leer"
+    "7": [
+      "bulldoze"
     ],
-    "8": [
-      "sand_tomb"
+    "21": [
+      "rapid_spin"
     ],
-    "14": [
-      "steel_wing"
-    ],
-    "20": [
-      "dig"
-    ],
-    "32": [
+    "28": [
       "iron_head"
     ],
-    "40": [
+    "35": [
+      "stomping_tantrum"
+    ],
+    "42": [
+      "knock_off"
+    ],
+    "49": [
       "earthquake"
     ],
-    "26": [
-      "harden"
+    "56": [
+      "heavy_slam"
+    ],
+    "63": [
+      "wild_charge"
+    ],
+    "70": [
+      "endeavor"
+    ],
+    "77": [
+      "megahorn"
+    ],
+    "84": [
+      "giga_impact"
+    ],
+    "91": [
+      "steel_roller"
     ]
   },
   "evolution": null,

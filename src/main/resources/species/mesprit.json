@@ -18,22 +18,56 @@
   "modelId": "mesprit",
   "learnset": {
     "1": [
-      "scratch"
+      "rest",
+      "confusion",
+      "lucky_chant",
+      "snore",
+      "safeguard",
+      "iron_tail",
+      "wonder_room",
+      "magic_room",
+      "natural_gift",
+      "ally_switch",
+      "tri_attack",
+      "psycho_cut",
+      "expanding_force",
+      "round"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
+    "7": [
+      "swift"
     ],
     "14": [
+      "protect"
+    ],
+    "21": [
       "psybeam"
     ],
-    "20": [
+    "28": [
+      "imprison"
+    ],
+    "35": [
+      "extrasensory"
+    ],
+    "42": [
+      "charm"
+    ],
+    "49": [
       "psychic"
     ],
-    "26": [
-      "swords_dance"
+    "56": [
+      "flatter"
+    ],
+    "63": [
+      "future_sight"
+    ],
+    "70": [
+      "copycat"
+    ],
+    "77": [
+      "healing_wish"
+    ],
+    "84": [
+      "mystical_power"
     ]
   },
   "evolution": null,

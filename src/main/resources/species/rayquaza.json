@@ -19,31 +19,41 @@
   "modelId": "rayquaza",
   "learnset": {
     "1": [
-      "tackle"
+      "twister",
+      "scary_face",
+      "air_slash",
+      "ancient_power",
+      "dragon_ascent"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "crunch"
     ],
-    "8": [
-      "twister"
+    "18": [
+      "dragon_dance"
     ],
-    "14": [
-      "peck"
+    "27": [
+      "extreme_speed"
     ],
-    "20": [
-      "dragon_breath"
+    "36": [
+      "dragon_pulse"
     ],
-    "32": [
-      "gust"
+    "45": [
+      "hyper_voice"
     ],
-    "40": [
-      "dragon_claw"
+    "54": [
+      "rest"
     ],
-    "48": [
-      "wing_attack"
+    "63": [
+      "fly"
     ],
-    "26": [
-      "swords_dance"
+    "72": [
+      "hurricane"
+    ],
+    "81": [
+      "outrage"
+    ],
+    "90": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

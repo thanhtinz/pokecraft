@@ -19,31 +19,22 @@
   "modelId": "heliolisk",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
+      "eerie_impulse",
+      "electrify",
+      "razor_wind",
+      "quick_attack",
+      "thunder",
+      "charge",
+      "parabolic_charge",
+      "thunderbolt",
+      "thunder_wave",
+      "volt_switch",
+      "bulldoze",
+      "discharge",
+      "mud_slap",
+      "tail_whip",
+      "pound",
       "thunder_shock"
-    ],
-    "20": [
-      "hyper_fang"
-    ],
-    "32": [
-      "spark"
-    ],
-    "40": [
-      "mega_punch"
-    ],
-    "48": [
-      "thunderbolt"
-    ],
-    "26": [
-      "calm_mind"
     ]
   },
   "evolution": null,

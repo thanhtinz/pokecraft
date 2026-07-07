@@ -18,25 +18,49 @@
   "modelId": "pachirisu",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
+      "growl",
+      "bide",
+      "hyper_fang",
       "thunder_shock"
     ],
-    "14": [
+    "5": [
+      "quick_attack"
+    ],
+    "9": [
+      "charm"
+    ],
+    "13": [
       "spark"
     ],
-    "20": [
-      "thunderbolt"
+    "17": [
+      "endure"
     ],
-    "32": [
+    "19": [
+      "nuzzle"
+    ],
+    "21": [
+      "swift"
+    ],
+    "25": [
+      "electro_ball"
+    ],
+    "29": [
+      "sweet_kiss"
+    ],
+    "33": [
+      "thunder_wave"
+    ],
+    "37": [
+      "super_fang"
+    ],
+    "41": [
+      "discharge"
+    ],
+    "45": [
+      "last_resort"
+    ],
+    "49": [
       "thunder"
-    ],
-    "26": [
-      "agility"
     ]
   },
   "evolution": null,

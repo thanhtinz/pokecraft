@@ -19,31 +19,39 @@
   "modelId": "sneasel",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "leer",
+      "feint_attack"
     ],
-    "4": [
-      "leer"
+    "6": [
+      "taunt"
     ],
-    "8": [
-      "ice_shard"
+    "12": [
+      "quick_attack"
     ],
-    "14": [
-      "bite"
+    "18": [
+      "metal_claw"
     ],
-    "20": [
-      "aurora_beam"
+    "24": [
+      "icy_wind"
     ],
-    "32": [
-      "crunch"
+    "30": [
+      "fury_swipes"
     ],
-    "40": [
-      "ice_beam"
+    "36": [
+      "hone_claws"
+    ],
+    "42": [
+      "beat_up"
     ],
     "48": [
-      "blizzard"
-    ],
-    "26": [
       "agility"
+    ],
+    "54": [
+      "screech"
+    ],
+    "60": [
+      "slash"
     ]
   },
   "evolution": null,

@@ -19,31 +19,48 @@
   "modelId": "marill",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "defense_curl",
+      "tail_whip",
+      "water_gun",
+      "rollout",
+      "helping_hand",
+      "bubble",
+      "water_sport",
+      "splash"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "fairy_wind"
-    ],
-    "14": [
-      "water_gun"
-    ],
-    "20": [
-      "dazzling_gleam"
-    ],
-    "32": [
+    "6": [
       "bubble_beam"
     ],
-    "40": [
-      "waterfall"
+    "9": [
+      "charm"
     ],
-    "48": [
-      "surf"
+    "12": [
+      "slam"
     ],
-    "26": [
-      "harden"
+    "15": [
+      "bounce"
+    ],
+    "19": [
+      "aqua_tail"
+    ],
+    "21": [
+      "play_rough"
+    ],
+    "24": [
+      "aqua_ring"
+    ],
+    "27": [
+      "rain_dance"
+    ],
+    "30": [
+      "hydro_pump"
+    ],
+    "33": [
+      "double_edge"
+    ],
+    "36": [
+      "superpower"
     ]
   },
   "evolution": null,

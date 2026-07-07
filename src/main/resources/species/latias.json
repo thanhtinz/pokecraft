@@ -19,31 +19,54 @@
   "modelId": "latias",
   "learnset": {
     "1": [
-      "pound"
+      "psywave",
+      "water_sport",
+      "refresh",
+      "psycho_shift",
+      "charm",
+      "stored_power"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "helping_hand"
     ],
-    "8": [
-      "twister"
+    "10": [
+      "recover"
     ],
-    "14": [
+    "15": [
       "confusion"
     ],
     "20": [
+      "tailwind"
+    ],
+    "25": [
       "dragon_breath"
     ],
-    "32": [
-      "psybeam"
+    "30": [
+      "wish"
+    ],
+    "35": [
+      "mist_ball"
     ],
     "40": [
-      "dragon_claw"
+      "zen_headbutt"
     ],
-    "48": [
+    "45": [
+      "dragon_pulse"
+    ],
+    "50": [
+      "heal_pulse"
+    ],
+    "55": [
+      "reflect_type"
+    ],
+    "60": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "65": [
+      "guard_split"
+    ],
+    "70": [
+      "healing_wish"
     ]
   },
   "evolution": null,

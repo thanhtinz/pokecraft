@@ -19,31 +19,50 @@
   "modelId": "farfetchd",
   "learnset": {
     "1": [
-      "pound"
+      "peck",
+      "sand_attack",
+      "fury_attack",
+      "night_slash",
+      "feint"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "leer"
     ],
-    "8": [
-      "peck"
+    "10": [
+      "fury_cutter"
     ],
-    "14": [
-      "quick_attack"
+    "15": [
+      "cut"
     ],
     "20": [
-      "gust"
+      "aerial_ace"
     ],
-    "32": [
-      "hyper_fang"
+    "25": [
+      "air_cutter"
+    ],
+    "30": [
+      "knock_off"
+    ],
+    "35": [
+      "false_swipe"
     ],
     "40": [
-      "wing_attack"
+      "slash"
     ],
-    "48": [
-      "mega_punch"
-    ],
-    "26": [
+    "45": [
       "swords_dance"
+    ],
+    "50": [
+      "air_slash"
+    ],
+    "55": [
+      "leaf_blade"
+    ],
+    "60": [
+      "agility"
+    ],
+    "65": [
+      "brave_bird"
     ]
   },
   "evolution": null,

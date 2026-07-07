@@ -18,25 +18,40 @@
   "modelId": "luxio",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
+      "tackle",
+      "leer",
+      "charge",
       "thunder_shock"
     ],
-    "14": [
+    "12": [
+      "bite"
+    ],
+    "18": [
       "spark"
     ],
-    "20": [
-      "thunderbolt"
+    "24": [
+      "roar"
     ],
-    "32": [
-      "thunder"
+    "31": [
+      "volt_switch"
     ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "scary_face"
+    ],
+    "42": [
+      "thunder_wave"
+    ],
+    "48": [
+      "crunch"
+    ],
+    "54": [
+      "discharge"
+    ],
+    "60": [
+      "swagger"
+    ],
+    "68": [
+      "wild_charge"
     ]
   },
   "evolution": null,

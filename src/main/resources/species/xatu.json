@@ -19,31 +19,37 @@
   "modelId": "xatu",
   "learnset": {
     "1": [
-      "scratch"
+      "peck",
+      "leer",
+      "teleport",
+      "lucky_chant",
+      "miracle_eye",
+      "me_first",
+      "tailwind",
+      "stored_power",
+      "air_slash"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "peck"
+    "15": [
+      "confuse_ray"
     ],
     "20": [
-      "psybeam"
+      "night_shade"
     ],
-    "32": [
-      "gust"
+    "28": [
+      "psycho_shift"
     ],
-    "40": [
+    "34": [
+      "power_swap",
+      "guard_swap"
+    ],
+    "41": [
       "psychic"
     ],
     "48": [
-      "wing_attack"
+      "wish"
     ],
-    "26": [
-      "calm_mind"
+    "55": [
+      "future_sight"
     ]
   },
   "evolution": null,

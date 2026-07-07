@@ -18,28 +18,37 @@
   "modelId": "wugtrio",
   "learnset": {
     "1": [
-      "scratch"
+      "sand_attack",
+      "wrap",
+      "water_gun",
+      "mud_slap"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "aqua_jet"
     ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "bubble_beam"
+    "16": [
+      "slam"
     ],
     "20": [
-      "waterfall"
+      "water_pulse"
     ],
-    "32": [
-      "surf"
+    "24": [
+      "headbutt"
     ],
-    "40": [
-      "hydro_pump"
+    "30": [
+      "triple_dive"
     ],
-    "26": [
-      "agility"
+    "36": [
+      "dig"
+    ],
+    "42": [
+      "sucker_punch"
+    ],
+    "48": [
+      "throat_chop"
+    ],
+    "54": [
+      "liquidation"
     ]
   },
   "evolution": null,

@@ -18,25 +18,44 @@
   "modelId": "shinx",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "leer"
     ],
     "4": [
-      "thunder_wave"
-    ],
-    "8": [
       "thunder_shock"
     ],
-    "14": [
+    "8": [
+      "charge"
+    ],
+    "12": [
+      "bite"
+    ],
+    "16": [
       "spark"
     ],
     "20": [
-      "thunderbolt"
+      "roar"
+    ],
+    "24": [
+      "volt_switch"
+    ],
+    "28": [
+      "scary_face"
     ],
     "32": [
-      "thunder"
+      "thunder_wave"
     ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "crunch"
+    ],
+    "40": [
+      "discharge"
+    ],
+    "44": [
+      "swagger"
+    ],
+    "48": [
+      "wild_charge"
     ]
   },
   "evolution": null,

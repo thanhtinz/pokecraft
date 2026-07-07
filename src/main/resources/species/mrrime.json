@@ -19,31 +19,62 @@
   "modelId": "mrrime",
   "learnset": {
     "1": [
-      "pound"
+      "fake_tears",
+      "slack_off",
+      "after_you",
+      "block",
+      "copycat",
+      "encore",
+      "role_play",
+      "protect",
+      "recycle",
+      "mimic",
+      "light_screen",
+      "reflect",
+      "safeguard",
+      "dazzling_gleam",
+      "misty_terrain",
+      "pound",
+      "rapid_spin",
+      "baton_pass",
+      "ice_shard",
+      "tickle",
+      "barrier",
+      "meditate",
+      "double_slap"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "ice_shard"
-    ],
-    "14": [
+    "12": [
       "confusion"
     ],
-    "20": [
-      "aurora_beam"
+    "16": [
+      "ally_switch"
     ],
-    "32": [
+    "20": [
+      "icy_wind"
+    ],
+    "24": [
+      "double_kick"
+    ],
+    "28": [
       "psybeam"
     ],
+    "32": [
+      "hypnosis"
+    ],
+    "36": [
+      "mirror_coat"
+    ],
     "40": [
-      "ice_beam"
+      "sucker_punch"
+    ],
+    "44": [
+      "freeze_dry"
     ],
     "48": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "52": [
+      "teeter_dance"
     ]
   },
   "evolution": null,

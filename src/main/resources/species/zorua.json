@@ -18,19 +18,45 @@
   "modelId": "zorua",
   "learnset": {
     "1": [
-      "tackle"
+      "scratch",
+      "leer",
+      "pursuit"
     ],
     "4": [
-      "leer"
+      "torment"
     ],
     "8": [
-      "bite"
+      "hone_claws"
     ],
-    "14": [
-      "crunch"
+    "12": [
+      "fury_swipes"
     ],
-    "26": [
-      "calm_mind"
+    "16": [
+      "scary_face"
+    ],
+    "20": [
+      "taunt"
+    ],
+    "24": [
+      "knock_off"
+    ],
+    "28": [
+      "fake_tears"
+    ],
+    "32": [
+      "agility"
+    ],
+    "36": [
+      "imprison"
+    ],
+    "40": [
+      "night_daze"
+    ],
+    "44": [
+      "nasty_plot"
+    ],
+    "48": [
+      "foul_play"
     ]
   },
   "evolution": null,

@@ -19,31 +19,46 @@
   "modelId": "geodude",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "defense_curl",
+      "mud_sport",
+      "magnitude"
     ],
-    "4": [
-      "harden"
+    "6": [
+      "rock_polish"
     ],
-    "8": [
+    "10": [
+      "rollout"
+    ],
+    "12": [
+      "bulldoze"
+    ],
+    "16": [
       "rock_throw"
     ],
-    "14": [
-      "sand_tomb"
+    "18": [
+      "smack_down"
     ],
-    "20": [
-      "rock_slide"
+    "24": [
+      "self_destruct"
     ],
-    "32": [
-      "dig"
+    "28": [
+      "stealth_rock"
     ],
-    "40": [
-      "stone_edge"
+    "30": [
+      "rock_blast"
     ],
-    "48": [
+    "34": [
       "earthquake"
     ],
-    "26": [
-      "harden"
+    "36": [
+      "explosion"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "42": [
+      "stone_edge"
     ]
   },
   "evolution": null,

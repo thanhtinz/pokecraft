@@ -18,22 +18,53 @@
   "modelId": "espeon",
   "learnset": {
     "1": [
-      "scratch"
+      "tail_whip",
+      "tackle",
+      "helping_hand",
+      "confusion",
+      "covet",
+      "bite",
+      "copycat",
+      "baton_pass",
+      "take_down",
+      "charm",
+      "double_edge",
+      "growl",
+      "trump_card",
+      "refresh"
     ],
-    "4": [
-      "hypnosis"
+    "5": [
+      "sand_attack"
     ],
-    "8": [
-      "confusion"
+    "10": [
+      "quick_attack"
     ],
-    "14": [
-      "psybeam"
+    "15": [
+      "baby_doll_eyes"
     ],
     "20": [
+      "swift"
+    ],
+    "25": [
+      "psybeam"
+    ],
+    "30": [
+      "morning_sun"
+    ],
+    "35": [
+      "power_swap"
+    ],
+    "40": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "45": [
+      "psych_up"
+    ],
+    "50": [
+      "future_sight"
+    ],
+    "55": [
+      "last_resort"
     ]
   },
   "evolution": null,

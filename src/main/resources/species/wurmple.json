@@ -18,19 +18,14 @@
   "modelId": "wurmple",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
+      "tackle",
       "string_shot"
     ],
-    "8": [
+    "5": [
+      "poison_sting"
+    ],
+    "15": [
       "bug_bite"
-    ],
-    "14": [
-      "pin_missile"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

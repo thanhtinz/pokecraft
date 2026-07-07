@@ -18,28 +18,41 @@
   "modelId": "bayleef",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "growl",
+      "razor_leaf",
+      "poison_powder",
+      "natural_gift"
     ],
-    "4": [
-      "sleep_powder"
+    "12": [
+      "synthesis"
     ],
-    "8": [
-      "vine_whip"
+    "18": [
+      "reflect"
     ],
-    "14": [
-      "razor_leaf"
-    ],
-    "20": [
-      "seed_bomb"
-    ],
-    "32": [
-      "petal_dance"
-    ],
-    "40": [
-      "solar_beam"
+    "22": [
+      "magical_leaf"
     ],
     "26": [
-      "harden"
+      "leech_seed"
+    ],
+    "32": [
+      "sweet_scent"
+    ],
+    "36": [
+      "light_screen"
+    ],
+    "40": [
+      "body_slam"
+    ],
+    "46": [
+      "safeguard"
+    ],
+    "50": [
+      "giga_drain"
+    ],
+    "54": [
+      "solar_beam"
     ]
   },
   "evolution": null,

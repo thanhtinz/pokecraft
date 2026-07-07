@@ -19,31 +19,37 @@
   "modelId": "quagsire",
   "learnset": {
     "1": [
-      "tackle"
+      "water_gun",
+      "tail_whip",
+      "mud_sport",
+      "mud_shot",
+      "mud_bomb",
+      "rain_dance"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "mist",
+      "haze"
     ],
-    "8": [
-      "sand_tomb"
+    "16": [
+      "slam"
     ],
-    "14": [
-      "water_gun"
+    "23": [
+      "yawn"
     ],
-    "20": [
-      "dig"
+    "28": [
+      "aqua_tail"
     ],
-    "32": [
-      "bubble_beam"
+    "34": [
+      "muddy_water"
     ],
     "40": [
+      "amnesia"
+    ],
+    "46": [
+      "toxic"
+    ],
+    "52": [
       "earthquake"
-    ],
-    "48": [
-      "waterfall"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

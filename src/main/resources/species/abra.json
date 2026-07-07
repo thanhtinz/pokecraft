@@ -18,22 +18,8 @@
   "modelId": "abra",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "psybeam"
-    ],
-    "20": [
-      "psychic"
-    ],
-    "26": [
-      "calm_mind"
+      "tackle",
+      "teleport"
     ]
   },
   "evolution": null,

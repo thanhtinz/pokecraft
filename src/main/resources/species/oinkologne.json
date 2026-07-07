@@ -18,31 +18,47 @@
   "modelId": "oinkologne",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "tail_whip"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "disarming_voice"
     ],
     "8": [
-      "quick_attack"
+      "echoed_voice"
     ],
-    "14": [
-      "hyper_fang"
+    "12": [
+      "mud_shot"
     ],
-    "20": [
-      "mega_punch"
+    "15": [
+      "covet"
     ],
-    "32": [
-      "body_slam"
+    "17": [
+      "dig"
     ],
-    "40": [
+    "23": [
+      "headbutt"
+    ],
+    "26": [
+      "take_down"
+    ],
+    "27": [
+      "yawn"
+    ],
+    "34": [
+      "work_up"
+    ],
+    "38": [
+      "uproar"
+    ],
+    "42": [
       "double_edge"
     ],
     "48": [
-      "hyper_beam"
+      "earth_power"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "belch"
     ]
   },
   "evolution": null,

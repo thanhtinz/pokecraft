@@ -19,31 +19,43 @@
   "modelId": "rhydon",
   "learnset": {
     "1": [
-      "scratch"
+      "tail_whip",
+      "fury_attack",
+      "hammer_arm",
+      "bulldoze",
+      "chip_away",
+      "smack_down",
+      "tackle"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
-      "rock_throw"
+    "15": [
+      "horn_attack"
     ],
     "20": [
-      "dig"
+      "scary_face"
     ],
-    "32": [
-      "rock_slide"
+    "25": [
+      "stomp"
+    ],
+    "30": [
+      "rock_blast"
+    ],
+    "35": [
+      "drill_run"
     ],
     "40": [
+      "take_down"
+    ],
+    "47": [
       "earthquake"
     ],
-    "48": [
+    "54": [
       "stone_edge"
     ],
-    "26": [
-      "swords_dance"
+    "61": [
+      "megahorn"
+    ],
+    "68": [
+      "horn_drill"
     ]
   },
   "evolution": null,

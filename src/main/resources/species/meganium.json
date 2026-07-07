@@ -18,28 +18,43 @@
   "modelId": "meganium",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "growl",
+      "razor_leaf",
+      "poison_powder",
+      "petal_dance",
+      "petal_blizzard",
+      "natural_gift"
     ],
-    "4": [
-      "sleep_powder"
+    "12": [
+      "synthesis"
     ],
-    "8": [
-      "vine_whip"
+    "18": [
+      "reflect"
     ],
-    "14": [
-      "razor_leaf"
-    ],
-    "20": [
-      "seed_bomb"
-    ],
-    "32": [
-      "petal_dance"
-    ],
-    "40": [
-      "solar_beam"
+    "22": [
+      "magical_leaf"
     ],
     "26": [
-      "harden"
+      "leech_seed"
+    ],
+    "34": [
+      "sweet_scent"
+    ],
+    "40": [
+      "light_screen"
+    ],
+    "46": [
+      "body_slam"
+    ],
+    "54": [
+      "safeguard"
+    ],
+    "60": [
+      "giga_drain"
+    ],
+    "65": [
+      "solar_beam"
     ]
   },
   "evolution": null,

@@ -19,31 +19,47 @@
   "modelId": "litleo",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
+      "tackle",
       "leer"
     ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
+    "5": [
       "ember"
     ],
+    "8": [
+      "work_up"
+    ],
+    "11": [
+      "headbutt"
+    ],
+    "15": [
+      "noble_roar"
+    ],
     "20": [
-      "hyper_fang"
+      "take_down"
     ],
-    "32": [
-      "fire_spin"
+    "23": [
+      "fire_fang"
     ],
-    "40": [
-      "mega_punch"
+    "28": [
+      "endeavor"
     ],
-    "48": [
-      "fire_punch"
+    "33": [
+      "echoed_voice"
     ],
-    "26": [
-      "calm_mind"
+    "36": [
+      "flamethrower"
+    ],
+    "39": [
+      "crunch"
+    ],
+    "43": [
+      "hyper_voice"
+    ],
+    "46": [
+      "incinerate"
+    ],
+    "50": [
+      "overheat"
     ]
   },
   "evolution": null,

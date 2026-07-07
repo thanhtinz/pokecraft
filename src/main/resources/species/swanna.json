@@ -19,31 +19,43 @@
   "modelId": "swanna",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "water_gun"
-    ],
-    "20": [
-      "gust"
-    ],
-    "32": [
-      "bubble_beam"
-    ],
-    "40": [
+      "water_gun",
+      "water_sport",
+      "defog",
       "wing_attack"
     ],
-    "48": [
-      "waterfall"
+    "13": [
+      "water_pulse"
     ],
-    "26": [
-      "agility"
+    "15": [
+      "aerial_ace"
+    ],
+    "19": [
+      "bubble_beam"
+    ],
+    "21": [
+      "feather_dance"
+    ],
+    "24": [
+      "aqua_ring"
+    ],
+    "27": [
+      "air_slash"
+    ],
+    "30": [
+      "roost"
+    ],
+    "34": [
+      "rain_dance"
+    ],
+    "40": [
+      "tailwind"
+    ],
+    "47": [
+      "brave_bird"
+    ],
+    "55": [
+      "hurricane"
     ]
   },
   "evolution": null,

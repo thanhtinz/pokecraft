@@ -18,25 +18,35 @@
   "modelId": "zamazenta",
   "learnset": {
     "1": [
-      "scratch"
+      "wide_guard",
+      "metal_claw",
+      "howl",
+      "quick_attack",
+      "bite"
     ],
-    "4": [
-      "leer"
+    "11": [
+      "slash"
     ],
-    "8": [
-      "karate_chop"
+    "22": [
+      "iron_defense"
     ],
-    "14": [
-      "low_kick"
+    "33": [
+      "iron_head"
     ],
-    "20": [
-      "brick_break"
+    "44": [
+      "metal_burst"
     ],
-    "32": [
-      "cross_chop"
+    "55": [
+      "crunch"
     ],
-    "26": [
-      "agility"
+    "66": [
+      "moonblast"
+    ],
+    "77": [
+      "close_combat"
+    ],
+    "88": [
+      "giga_impact"
     ]
   },
   "evolution": null,

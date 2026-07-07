@@ -19,31 +19,44 @@
   "modelId": "rowlet",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "growl"
     ],
-    "4": [
-      "sleep_powder"
+    "3": [
+      "leafage"
     ],
-    "8": [
-      "vine_whip"
+    "6": [
+      "astonish"
     ],
-    "14": [
+    "9": [
       "peck"
     ],
-    "20": [
+    "12": [
+      "shadow_sneak"
+    ],
+    "15": [
       "razor_leaf"
     ],
-    "32": [
-      "gust"
+    "18": [
+      "foresight"
     ],
-    "40": [
-      "seed_bomb"
+    "21": [
+      "pluck"
     ],
-    "48": [
-      "wing_attack"
+    "24": [
+      "nasty_plot"
     ],
-    "26": [
-      "swords_dance"
+    "27": [
+      "sucker_punch"
+    ],
+    "30": [
+      "leaf_blade"
+    ],
+    "33": [
+      "feather_dance"
+    ],
+    "36": [
+      "brave_bird"
     ]
   },
   "evolution": null,

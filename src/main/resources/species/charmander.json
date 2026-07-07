@@ -1,9 +1,69 @@
 {
-  "id": "charmander", "dex": 4, "name": "Charmander",
-  "types": ["FIRE"],
-  "baseStats": { "hp": 39, "atk": 52, "def": 43, "spa": 60, "spd": 50, "spe": 65 },
-  "catchRate": 45, "expYield": 62, "modelId": "charmander",
-  "learnset": { "1": ["scratch", "growl"], "4": ["ember"], "17": ["fire_spin"], "24": ["slash"], "34": ["flamethrower"] },
-  "evolution": { "level": 16, "to": "charmeleon" },
-  "spawn": { "biomes": ["DESERT", "BADLANDS", "SAVANNA"], "weight": 8, "minLevel": 3, "maxLevel": 8 }
+  "id": "charmander",
+  "dex": 4,
+  "name": "Charmander",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 39,
+    "atk": 52,
+    "def": 43,
+    "spa": 60,
+    "spd": 50,
+    "spe": 65
+  },
+  "catchRate": 45,
+  "expYield": 62,
+  "modelId": "charmander",
+  "learnset": {
+    "1": [
+      "scratch",
+      "growl"
+    ],
+    "4": [
+      "ember"
+    ],
+    "8": [
+      "smokescreen"
+    ],
+    "12": [
+      "dragon_breath"
+    ],
+    "17": [
+      "fire_fang"
+    ],
+    "20": [
+      "slash"
+    ],
+    "24": [
+      "flamethrower"
+    ],
+    "28": [
+      "flame_burst"
+    ],
+    "32": [
+      "fire_spin"
+    ],
+    "36": [
+      "inferno"
+    ],
+    "40": [
+      "flare_blitz"
+    ]
+  },
+  "evolution": {
+    "level": 16,
+    "to": "charmeleon"
+  },
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 8,
+    "minLevel": 3,
+    "maxLevel": 8
+  }
 }

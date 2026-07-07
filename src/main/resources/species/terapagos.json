@@ -18,31 +18,36 @@
   "modelId": "terapagos",
   "learnset": {
     "1": [
-      "scratch"
+      "withdraw",
+      "tri_attack",
+      "rapid_spin"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "hyper_fang"
+    "10": [
+      "ancient_power"
     ],
     "20": [
-      "mega_punch"
+      "headbutt"
     ],
-    "32": [
-      "body_slam"
+    "30": [
+      "protect"
     ],
     "40": [
+      "earth_power"
+    ],
+    "50": [
+      "heavy_slam"
+    ],
+    "60": [
+      "tera_starstorm"
+    ],
+    "70": [
       "double_edge"
     ],
-    "48": [
-      "hyper_beam"
+    "80": [
+      "rock_polish"
     ],
-    "26": [
-      "harden"
+    "90": [
+      "gyro_ball"
     ]
   },
   "evolution": null,

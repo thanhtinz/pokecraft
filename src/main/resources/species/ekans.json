@@ -18,25 +18,49 @@
   "modelId": "ekans",
   "learnset": {
     "1": [
-      "pound"
+      "wrap",
+      "leer"
     ],
     "4": [
-      "poison_powder"
-    ],
-    "8": [
       "poison_sting"
     ],
-    "14": [
-      "acid"
+    "9": [
+      "bite"
+    ],
+    "12": [
+      "glare"
+    ],
+    "17": [
+      "screech"
     ],
     "20": [
-      "sludge"
+      "acid"
     ],
-    "32": [
-      "sludge_bomb"
+    "25": [
+      "stockpile",
+      "swallow",
+      "spit_up"
     ],
-    "26": [
-      "swords_dance"
+    "28": [
+      "acid_spray"
+    ],
+    "33": [
+      "mud_bomb"
+    ],
+    "36": [
+      "gastro_acid"
+    ],
+    "38": [
+      "belch"
+    ],
+    "41": [
+      "haze"
+    ],
+    "44": [
+      "coil"
+    ],
+    "49": [
+      "gunk_shot"
     ]
   },
   "evolution": null,

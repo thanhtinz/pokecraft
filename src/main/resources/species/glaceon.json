@@ -18,25 +18,54 @@
   "modelId": "glaceon",
   "learnset": {
     "1": [
-      "tackle"
+      "tail_whip",
+      "tackle",
+      "helping_hand",
+      "icy_wind",
+      "barrier",
+      "swift",
+      "covet",
+      "copycat",
+      "baton_pass",
+      "take_down",
+      "charm",
+      "double_edge",
+      "growl",
+      "trump_card",
+      "refresh"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "sand_attack"
     ],
-    "8": [
-      "ice_shard"
+    "10": [
+      "quick_attack"
     ],
-    "14": [
-      "aurora_beam"
+    "15": [
+      "baby_doll_eyes"
     ],
     "20": [
-      "ice_beam"
+      "ice_shard"
     ],
-    "32": [
+    "25": [
+      "bite"
+    ],
+    "30": [
+      "ice_fang"
+    ],
+    "35": [
+      "snowscape"
+    ],
+    "40": [
+      "freeze_dry"
+    ],
+    "45": [
+      "mirror_coat"
+    ],
+    "50": [
       "blizzard"
     ],
-    "26": [
-      "calm_mind"
+    "55": [
+      "last_resort"
     ]
   },
   "evolution": null,

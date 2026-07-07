@@ -18,25 +18,53 @@
   "modelId": "makuhita",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "focus_energy"
     ],
     "4": [
-      "leer"
+      "sand_attack"
     ],
-    "8": [
-      "karate_chop"
+    "7": [
+      "arm_thrust"
     ],
-    "14": [
-      "low_kick"
+    "10": [
+      "fake_out"
     ],
-    "20": [
-      "brick_break"
+    "13": [
+      "force_palm"
     ],
-    "32": [
-      "cross_chop"
+    "16": [
+      "whirlwind"
     ],
-    "26": [
-      "swords_dance"
+    "19": [
+      "knock_off"
+    ],
+    "22": [
+      "bulk_up"
+    ],
+    "25": [
+      "belly_drum"
+    ],
+    "28": [
+      "smelling_salts"
+    ],
+    "31": [
+      "seismic_toss"
+    ],
+    "34": [
+      "wake_up_slap"
+    ],
+    "37": [
+      "endure"
+    ],
+    "40": [
+      "close_combat"
+    ],
+    "43": [
+      "reversal"
+    ],
+    "46": [
+      "heavy_slam"
     ]
   },
   "evolution": null,

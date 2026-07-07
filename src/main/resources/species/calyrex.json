@@ -19,31 +19,44 @@
   "modelId": "calyrex",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "hypnosis"
+      "pound",
+      "mega_drain",
+      "confusion",
+      "growth"
     ],
     "8": [
-      "confusion"
+      "life_dew"
     ],
-    "14": [
-      "vine_whip"
+    "16": [
+      "giga_drain"
     ],
-    "20": [
-      "psybeam"
+    "24": [
+      "psyshock"
     ],
     "32": [
-      "razor_leaf"
+      "helping_hand"
     ],
     "40": [
-      "psychic"
+      "aromatherapy",
+      "psychic_terrain"
     ],
     "48": [
-      "seed_bomb"
+      "energy_ball"
     ],
-    "26": [
-      "swords_dance"
+    "56": [
+      "psychic"
+    ],
+    "64": [
+      "leech_seed"
+    ],
+    "72": [
+      "heal_pulse"
+    ],
+    "80": [
+      "solar_beam"
+    ],
+    "88": [
+      "future_sight"
     ]
   },
   "evolution": null,

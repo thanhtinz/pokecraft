@@ -19,31 +19,35 @@
   "modelId": "cramorant",
   "learnset": {
     "1": [
-      "pound"
+      "belch",
+      "peck",
+      "stockpile",
+      "swallow",
+      "spit_up"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+    "7": [
       "water_gun"
     ],
     "14": [
-      "peck"
+      "fury_attack"
     ],
-    "20": [
-      "bubble_beam"
+    "21": [
+      "pluck"
     ],
-    "32": [
-      "gust"
+    "28": [
+      "dive"
     ],
-    "40": [
-      "waterfall"
+    "35": [
+      "drill_peck"
     ],
-    "48": [
-      "wing_attack"
+    "42": [
+      "amnesia"
     ],
-    "26": [
-      "swords_dance"
+    "49": [
+      "thrash"
+    ],
+    "56": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

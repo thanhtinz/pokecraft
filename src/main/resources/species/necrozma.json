@@ -18,22 +18,47 @@
   "modelId": "necrozma",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "hypnosis"
+      "moonlight",
+      "morning_sun",
+      "charge_beam",
+      "mirror_shot",
+      "metal_claw",
+      "confusion",
+      "gravity",
+      "wring_out"
     ],
     "8": [
-      "confusion"
+      "stealth_rock"
     ],
-    "14": [
-      "psybeam"
+    "16": [
+      "slash"
     ],
-    "20": [
-      "psychic"
+    "24": [
+      "night_slash"
     ],
-    "26": [
-      "calm_mind"
+    "32": [
+      "psycho_cut"
+    ],
+    "40": [
+      "stored_power"
+    ],
+    "48": [
+      "rock_blast"
+    ],
+    "56": [
+      "iron_defense"
+    ],
+    "64": [
+      "power_gem"
+    ],
+    "72": [
+      "photon_geyser"
+    ],
+    "80": [
+      "autotomize"
+    ],
+    "88": [
+      "prismatic_laser"
     ]
   },
   "evolution": null,

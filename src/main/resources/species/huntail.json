@@ -18,28 +18,51 @@
   "modelId": "huntail",
   "learnset": {
     "1": [
-      "scratch"
+      "whirlpool",
+      "bite",
+      "iron_defense",
+      "water_gun",
+      "shell_smash",
+      "clamp"
     ],
-    "4": [
-      "tail_whip"
+    "5": [
+      "screech"
     ],
-    "8": [
-      "water_gun"
+    "9": [
+      "scary_face"
+    ],
+    "11": [
+      "feint_attack"
     ],
     "14": [
-      "bubble_beam"
+      "water_pulse"
     ],
-    "20": [
-      "waterfall"
+    "16": [
+      "ice_fang"
     ],
-    "32": [
-      "surf"
+    "19": [
+      "brine"
     ],
-    "40": [
-      "hydro_pump"
+    "23": [
+      "sucker_punch"
     ],
     "26": [
-      "harden"
+      "dive"
+    ],
+    "29": [
+      "baton_pass"
+    ],
+    "34": [
+      "crunch"
+    ],
+    "39": [
+      "aqua_tail"
+    ],
+    "45": [
+      "coil"
+    ],
+    "50": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

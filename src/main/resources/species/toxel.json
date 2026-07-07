@@ -19,31 +19,12 @@
   "modelId": "toxel",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
-      "poison_sting"
-    ],
-    "20": [
-      "spark"
-    ],
-    "32": [
+      "belch",
+      "tearful_look",
+      "nuzzle",
+      "growl",
+      "flail",
       "acid"
-    ],
-    "40": [
-      "thunderbolt"
-    ],
-    "48": [
-      "sludge"
-    ],
-    "26": [
-      "calm_mind"
     ]
   },
   "evolution": null,

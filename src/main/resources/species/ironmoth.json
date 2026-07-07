@@ -19,31 +19,50 @@
   "modelId": "ironmoth",
   "learnset": {
     "1": [
-      "scratch"
+      "gust",
+      "whirlwind",
+      "ember",
+      "acid_spray",
+      "electric_terrain"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "ember"
+    "7": [
+      "struggle_bug"
     ],
     "14": [
-      "poison_sting"
-    ],
-    "20": [
       "fire_spin"
     ],
-    "32": [
-      "acid"
+    "21": [
+      "take_down"
     ],
-    "40": [
-      "fire_punch"
+    "28": [
+      "lunge"
     ],
-    "48": [
-      "sludge"
+    "35": [
+      "screech"
     ],
-    "26": [
-      "calm_mind"
+    "42": [
+      "discharge"
+    ],
+    "49": [
+      "sludge_wave"
+    ],
+    "56": [
+      "fiery_dance"
+    ],
+    "63": [
+      "metal_sound"
+    ],
+    "70": [
+      "morning_sun"
+    ],
+    "77": [
+      "hurricane"
+    ],
+    "84": [
+      "bug_buzz"
+    ],
+    "91": [
+      "overheat"
     ]
   },
   "evolution": null,

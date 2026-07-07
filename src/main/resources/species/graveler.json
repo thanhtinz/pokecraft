@@ -19,31 +19,44 @@
   "modelId": "graveler",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "defense_curl",
+      "mud_sport",
+      "rock_polish",
+      "magnitude"
     ],
-    "4": [
-      "harden"
+    "10": [
+      "rollout"
     ],
-    "8": [
-      "sand_tomb"
+    "12": [
+      "bulldoze"
     ],
-    "14": [
+    "16": [
       "rock_throw"
     ],
-    "20": [
-      "dig"
+    "18": [
+      "smack_down"
     ],
-    "32": [
-      "rock_slide"
+    "24": [
+      "self_destruct"
+    ],
+    "30": [
+      "stealth_rock"
+    ],
+    "34": [
+      "rock_blast"
     ],
     "40": [
       "earthquake"
     ],
-    "48": [
-      "stone_edge"
+    "44": [
+      "explosion"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "double_edge"
+    ],
+    "54": [
+      "stone_edge"
     ]
   },
   "evolution": null,

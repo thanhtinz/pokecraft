@@ -18,28 +18,47 @@
   "modelId": "skiddo",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "growth"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
+    "7": [
       "vine_whip"
     ],
-    "14": [
+    "9": [
+      "tail_whip"
+    ],
+    "12": [
+      "leech_seed"
+    ],
+    "13": [
       "razor_leaf"
     ],
+    "16": [
+      "worry_seed"
+    ],
     "20": [
-      "seed_bomb"
+      "synthesis"
     ],
-    "32": [
-      "petal_dance"
-    ],
-    "40": [
-      "solar_beam"
+    "22": [
+      "take_down"
     ],
     "26": [
-      "swords_dance"
+      "bulldoze"
+    ],
+    "30": [
+      "seed_bomb"
+    ],
+    "34": [
+      "bulk_up"
+    ],
+    "38": [
+      "double_edge"
+    ],
+    "42": [
+      "horn_leech"
+    ],
+    "45": [
+      "leaf_blade"
     ]
   },
   "evolution": null,

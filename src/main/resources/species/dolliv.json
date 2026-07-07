@@ -19,31 +19,41 @@
   "modelId": "dolliv",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "sweet_scent"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "absorb"
     ],
-    "8": [
-      "quick_attack"
+    "7": [
+      "growth"
     ],
-    "14": [
-      "vine_whip"
-    ],
-    "20": [
-      "hyper_fang"
-    ],
-    "32": [
+    "10": [
       "razor_leaf"
     ],
-    "40": [
-      "mega_punch"
+    "13": [
+      "helping_hand"
     ],
-    "48": [
+    "16": [
+      "flail"
+    ],
+    "20": [
+      "mega_drain"
+    ],
+    "23": [
+      "grassy_terrain"
+    ],
+    "29": [
       "seed_bomb"
     ],
-    "26": [
-      "calm_mind"
+    "34": [
+      "energy_ball"
+    ],
+    "37": [
+      "leech_seed"
+    ],
+    "42": [
+      "terrain_pulse"
     ]
   },
   "evolution": null,

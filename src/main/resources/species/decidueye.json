@@ -19,31 +19,47 @@
   "modelId": "decidueye",
   "learnset": {
     "1": [
-      "scratch"
+      "spirit_shackle",
+      "phantom_force",
+      "leaf_storm",
+      "u_turn",
+      "tackle",
+      "leafage",
+      "growl",
+      "astonish",
+      "foresight",
+      "fury_attack",
+      "spite"
     ],
-    "4": [
-      "sleep_powder"
+    "9": [
+      "peck"
     ],
-    "8": [
-      "vine_whip"
+    "12": [
+      "shadow_sneak"
     ],
-    "14": [
-      "lick"
-    ],
-    "20": [
+    "15": [
       "razor_leaf"
     ],
-    "32": [
-      "night_shade"
+    "20": [
+      "synthesis"
     ],
-    "40": [
-      "seed_bomb"
+    "25": [
+      "pluck"
     ],
-    "48": [
-      "shadow_ball"
+    "30": [
+      "nasty_plot"
     ],
-    "26": [
-      "swords_dance"
+    "37": [
+      "sucker_punch"
+    ],
+    "44": [
+      "leaf_blade"
+    ],
+    "51": [
+      "feather_dance"
+    ],
+    "58": [
+      "brave_bird"
     ]
   },
   "evolution": null,

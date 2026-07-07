@@ -18,19 +18,42 @@
   "modelId": "orthworm",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
+      "tackle",
+      "wrap",
       "harden"
     ],
-    "8": [
-      "steel_wing"
+    "7": [
+      "mud_slap"
     ],
-    "14": [
+    "12": [
+      "smack_down"
+    ],
+    "16": [
+      "bulldoze"
+    ],
+    "21": [
       "iron_head"
     ],
     "26": [
-      "harden"
+      "take_down"
+    ],
+    "30": [
+      "dig"
+    ],
+    "34": [
+      "sandstorm"
+    ],
+    "38": [
+      "iron_defense"
+    ],
+    "43": [
+      "iron_tail"
+    ],
+    "47": [
+      "earthquake"
+    ],
+    "52": [
+      "shed_tail"
     ]
   },
   "evolution": null,

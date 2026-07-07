@@ -18,22 +18,41 @@
   "modelId": "chimecho",
   "learnset": {
     "1": [
-      "scratch"
+      "wrap",
+      "growl",
+      "astonish",
+      "confusion",
+      "psywave",
+      "healing_wish",
+      "synchronoise",
+      "entrainment"
     ],
-    "4": [
-      "hypnosis"
+    "13": [
+      "yawn"
     ],
-    "8": [
-      "confusion"
+    "16": [
+      "stored_power"
     ],
-    "14": [
-      "psybeam"
+    "19": [
+      "take_down"
     ],
-    "20": [
-      "psychic"
+    "22": [
+      "extrasensory"
     ],
-    "26": [
-      "calm_mind"
+    "27": [
+      "heal_bell"
+    ],
+    "32": [
+      "uproar"
+    ],
+    "37": [
+      "safeguard"
+    ],
+    "42": [
+      "double_edge"
+    ],
+    "47": [
+      "heal_pulse"
     ]
   },
   "evolution": null,

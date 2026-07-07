@@ -19,31 +19,44 @@
   "modelId": "sandygast",
   "learnset": {
     "1": [
-      "scratch"
+      "harden",
+      "absorb"
     ],
-    "4": [
-      "hypnosis"
+    "5": [
+      "astonish"
     ],
-    "8": [
+    "10": [
       "sand_tomb"
     ],
-    "14": [
-      "lick"
+    "15": [
+      "mega_drain"
     ],
     "20": [
-      "dig"
+      "sand_attack"
     ],
-    "32": [
-      "night_shade"
+    "25": [
+      "bulldoze"
+    ],
+    "30": [
+      "hypnosis"
+    ],
+    "35": [
+      "giga_drain"
     ],
     "40": [
-      "earthquake"
+      "iron_defense"
     ],
-    "48": [
+    "45": [
       "shadow_ball"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "earth_power"
+    ],
+    "55": [
+      "shore_up"
+    ],
+    "60": [
+      "sandstorm"
     ]
   },
   "evolution": null,

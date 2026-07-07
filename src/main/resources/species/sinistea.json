@@ -18,22 +18,36 @@
   "modelId": "sinistea",
   "learnset": {
     "1": [
-      "pound"
+      "astonish",
+      "withdraw",
+      "aromatherapy"
     ],
-    "4": [
-      "hypnosis"
+    "6": [
+      "aromatic_mist"
     ],
-    "8": [
-      "lick"
+    "12": [
+      "mega_drain"
     ],
-    "14": [
-      "night_shade"
+    "24": [
+      "sucker_punch"
     ],
-    "20": [
+    "30": [
+      "sweet_scent"
+    ],
+    "36": [
+      "giga_drain"
+    ],
+    "42": [
+      "nasty_plot"
+    ],
+    "48": [
       "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "54": [
+      "memento"
+    ],
+    "60": [
+      "shell_smash"
     ]
   },
   "evolution": null,

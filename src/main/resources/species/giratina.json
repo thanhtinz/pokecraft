@@ -19,31 +19,44 @@
   "modelId": "giratina",
   "learnset": {
     "1": [
-      "scratch"
+      "shadow_sneak",
+      "defog"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "twister"
-    ],
-    "14": [
-      "lick"
-    ],
-    "20": [
+    "7": [
       "dragon_breath"
     ],
-    "32": [
-      "night_shade"
+    "14": [
+      "ancient_power"
     ],
-    "40": [
+    "21": [
+      "hex"
+    ],
+    "28": [
+      "slash"
+    ],
+    "35": [
+      "scary_face"
+    ],
+    "42": [
+      "shadow_claw"
+    ],
+    "49": [
+      "pain_split"
+    ],
+    "56": [
+      "aura_sphere"
+    ],
+    "63": [
       "dragon_claw"
     ],
-    "48": [
-      "shadow_ball"
+    "70": [
+      "earth_power"
     ],
-    "26": [
-      "harden"
+    "77": [
+      "shadow_force"
+    ],
+    "84": [
+      "destiny_bond"
     ]
   },
   "evolution": null,

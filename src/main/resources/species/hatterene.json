@@ -19,28 +19,37 @@
   "modelId": "hatterene",
   "learnset": {
     "1": [
-      "tackle"
+      "psycho_cut",
+      "brutal_swing",
+      "confusion",
+      "play_nice",
+      "life_dew",
+      "disarming_voice",
+      "aromatherapy"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "fairy_wind"
+    "15": [
+      "aromatic_mist"
     ],
     "20": [
       "psybeam"
     ],
-    "32": [
+    "25": [
+      "heal_pulse"
+    ],
+    "30": [
       "dazzling_gleam"
     ],
-    "40": [
+    "37": [
+      "calm_mind"
+    ],
+    "46": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "55": [
+      "healing_wish"
+    ],
+    "64": [
+      "magic_powder"
     ]
   },
   "evolution": null,

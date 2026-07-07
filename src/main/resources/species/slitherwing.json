@@ -19,31 +19,50 @@
   "modelId": "slitherwing",
   "learnset": {
     "1": [
-      "scratch"
+      "gust",
+      "ember",
+      "bug_bite",
+      "sunny_day"
     ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
-      "bug_bite"
+    "7": [
+      "poison_powder",
+      "stun_spore"
     ],
     "14": [
-      "karate_chop"
+      "flame_charge"
     ],
-    "20": [
-      "pin_missile"
+    "21": [
+      "stomp"
     ],
-    "32": [
-      "low_kick"
+    "28": [
+      "low_sweep"
     ],
-    "40": [
-      "brick_break"
+    "35": [
+      "morning_sun"
     ],
-    "48": [
-      "cross_chop"
+    "42": [
+      "lunge"
     ],
-    "26": [
-      "swords_dance"
+    "49": [
+      "superpower"
+    ],
+    "56": [
+      "bulk_up"
+    ],
+    "63": [
+      "dual_wingbeat"
+    ],
+    "70": [
+      "first_impression"
+    ],
+    "77": [
+      "whirlwind"
+    ],
+    "84": [
+      "leech_life"
+    ],
+    "91": [
+      "thrash"
     ]
   },
   "evolution": null,

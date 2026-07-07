@@ -18,28 +18,24 @@
   "modelId": "ninetales",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "ember"
-    ],
-    "14": [
-      "fire_spin"
-    ],
-    "20": [
-      "fire_punch"
-    ],
-    "32": [
-      "flamethrower"
-    ],
-    "40": [
-      "fire_blast"
-    ],
-    "26": [
-      "agility"
+      "nasty_plot",
+      "ember",
+      "quick_attack",
+      "confuse_ray",
+      "safeguard",
+      "flamethrower",
+      "fire_blast",
+      "spite",
+      "will_o_wisp",
+      "incinerate",
+      "imprison",
+      "extrasensory",
+      "fire_spin",
+      "inferno",
+      "grudge",
+      "tail_whip",
+      "disable",
+      "flame_burst"
     ]
   },
   "evolution": null,

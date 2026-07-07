@@ -19,31 +19,50 @@
   "modelId": "celesteela",
   "learnset": {
     "1": [
-      "pound"
+      "absorb",
+      "tackle"
     ],
-    "4": [
+    "5": [
       "harden"
     ],
-    "8": [
-      "peck"
+    "10": [
+      "wide_guard"
     ],
-    "14": [
-      "steel_wing"
+    "15": [
+      "mega_drain"
     ],
     "20": [
-      "gust"
+      "smack_down"
     ],
-    "32": [
-      "iron_head"
+    "25": [
+      "ingrain"
+    ],
+    "30": [
+      "autotomize"
+    ],
+    "35": [
+      "giga_drain"
     ],
     "40": [
-      "wing_attack"
+      "flash_cannon"
     ],
-    "48": [
-      "drill_peck"
+    "45": [
+      "metal_sound"
     ],
-    "26": [
-      "calm_mind"
+    "50": [
+      "iron_defense"
+    ],
+    "55": [
+      "leech_seed"
+    ],
+    "60": [
+      "heavy_slam"
+    ],
+    "65": [
+      "double_edge"
+    ],
+    "70": [
+      "skull_bash"
     ]
   },
   "evolution": null,

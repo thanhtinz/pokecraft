@@ -19,31 +19,41 @@
   "modelId": "pidove",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "gust",
       "growl"
     ],
-    "8": [
-      "peck"
+    "4": [
+      "leer"
     ],
-    "14": [
+    "8": [
       "quick_attack"
     ],
+    "12": [
+      "taunt"
+    ],
+    "16": [
+      "air_cutter"
+    ],
     "20": [
-      "gust"
+      "swagger"
+    ],
+    "24": [
+      "feather_dance"
+    ],
+    "28": [
+      "detect"
     ],
     "32": [
-      "hyper_fang"
+      "razor_wind"
+    ],
+    "36": [
+      "roost"
     ],
     "40": [
-      "wing_attack"
+      "tailwind"
     ],
-    "48": [
-      "mega_punch"
-    ],
-    "26": [
-      "swords_dance"
+    "44": [
+      "sky_attack"
     ]
   },
   "evolution": null,

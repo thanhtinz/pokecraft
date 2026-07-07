@@ -19,25 +19,45 @@
   "modelId": "bisharp",
   "learnset": {
     "1": [
-      "scratch"
+      "metal_burst",
+      "scratch",
+      "leer",
+      "fury_cutter",
+      "feint_attack",
+      "metal_claw"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "steel_wing"
-    ],
-    "14": [
-      "bite"
+    "15": [
+      "torment"
     ],
     "20": [
+      "scary_face"
+    ],
+    "25": [
+      "assurance"
+    ],
+    "30": [
+      "metal_sound"
+    ],
+    "35": [
+      "slash"
+    ],
+    "40": [
+      "night_slash"
+    ],
+    "45": [
+      "iron_defense"
+    ],
+    "50": [
+      "retaliate"
+    ],
+    "57": [
       "iron_head"
     ],
-    "32": [
-      "crunch"
-    ],
-    "26": [
+    "64": [
       "swords_dance"
+    ],
+    "71": [
+      "guillotine"
     ]
   },
   "evolution": null,

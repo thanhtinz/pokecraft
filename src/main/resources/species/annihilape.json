@@ -19,31 +19,55 @@
   "modelId": "annihilape",
   "learnset": {
     "1": [
-      "scratch"
+      "shadow_punch",
+      "scratch",
+      "leer",
+      "counter",
+      "fling",
+      "focus_energy",
+      "karate_chop",
+      "punishment",
+      "pursuit",
+      "rage"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "fury_swipes"
     ],
     "8": [
-      "lick"
-    ],
-    "14": [
-      "karate_chop"
-    ],
-    "20": [
-      "night_shade"
-    ],
-    "32": [
       "low_kick"
     ],
-    "40": [
-      "shadow_ball"
+    "12": [
+      "seismic_toss"
     ],
-    "48": [
-      "brick_break"
+    "17": [
+      "swagger"
+    ],
+    "22": [
+      "cross_chop"
     ],
     "26": [
-      "swords_dance"
+      "assurance"
+    ],
+    "30": [
+      "thrash"
+    ],
+    "35": [
+      "rage_fist"
+    ],
+    "39": [
+      "close_combat"
+    ],
+    "44": [
+      "screech"
+    ],
+    "48": [
+      "stomping_tantrum"
+    ],
+    "53": [
+      "outrage"
+    ],
+    "57": [
+      "final_gambit"
     ]
   },
   "evolution": null,

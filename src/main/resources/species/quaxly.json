@@ -18,28 +18,36 @@
   "modelId": "quaxly",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "pound",
+      "growl",
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "7": [
+      "work_up"
     ],
-    "20": [
-      "waterfall"
+    "10": [
+      "wing_attack"
     ],
-    "32": [
-      "surf"
+    "13": [
+      "aqua_jet"
     ],
-    "40": [
-      "hydro_pump"
+    "17": [
+      "double_hit"
     ],
-    "26": [
-      "swords_dance"
+    "21": [
+      "aqua_cutter"
+    ],
+    "24": [
+      "air_slash"
+    ],
+    "28": [
+      "focus_energy"
+    ],
+    "31": [
+      "acrobatics"
+    ],
+    "35": [
+      "liquidation"
     ]
   },
   "evolution": null,

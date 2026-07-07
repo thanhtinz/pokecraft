@@ -19,31 +19,47 @@
   "modelId": "butterfree",
   "learnset": {
     "1": [
+      "gust",
+      "string_shot",
+      "bug_bite",
+      "captivate",
+      "harden",
       "tackle"
     ],
     "4": [
-      "string_shot"
+      "supersonic"
     ],
     "8": [
-      "bug_bite"
+      "confusion"
     ],
-    "14": [
-      "peck"
+    "12": [
+      "poison_powder",
+      "stun_spore",
+      "sleep_powder"
+    ],
+    "16": [
+      "psybeam"
     ],
     "20": [
-      "pin_missile"
+      "whirlwind"
+    ],
+    "24": [
+      "air_slash"
+    ],
+    "28": [
+      "safeguard"
     ],
     "32": [
-      "gust"
+      "bug_buzz"
+    ],
+    "36": [
+      "tailwind"
     ],
     "40": [
-      "wing_attack"
+      "rage_powder"
     ],
-    "48": [
-      "drill_peck"
-    ],
-    "26": [
-      "calm_mind"
+    "44": [
+      "quiver_dance"
     ]
   },
   "evolution": null,

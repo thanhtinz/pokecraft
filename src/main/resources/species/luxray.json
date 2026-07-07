@@ -18,25 +18,41 @@
   "modelId": "luxray",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
+      "tackle",
+      "leer",
+      "charge",
+      "electric_terrain",
       "thunder_shock"
     ],
-    "14": [
+    "12": [
+      "bite"
+    ],
+    "18": [
       "spark"
     ],
-    "20": [
-      "thunderbolt"
+    "24": [
+      "roar"
     ],
-    "32": [
-      "thunder"
+    "33": [
+      "volt_switch"
     ],
-    "26": [
-      "swords_dance"
+    "40": [
+      "scary_face"
+    ],
+    "48": [
+      "thunder_wave"
+    ],
+    "56": [
+      "crunch"
+    ],
+    "64": [
+      "discharge"
+    ],
+    "72": [
+      "swagger"
+    ],
+    "80": [
+      "wild_charge"
     ]
   },
   "evolution": null,

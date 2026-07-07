@@ -19,31 +19,59 @@
   "modelId": "flygon",
   "learnset": {
     "1": [
-      "tackle"
+      "sonic_boom",
+      "sand_attack",
+      "feint_attack",
+      "supersonic",
+      "dragon_breath",
+      "dragon_claw",
+      "hyper_beam",
+      "dig",
+      "rock_slide",
+      "outrage",
+      "bide",
+      "bulldoze",
+      "superpower",
+      "dragon_dance",
+      "laser_focus",
+      "feint",
+      "crunch",
+      "fissure",
+      "astonish",
+      "bite"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "mud_slap"
     ],
-    "8": [
+    "16": [
       "sand_tomb"
     ],
-    "14": [
-      "twister"
-    ],
     "20": [
-      "dig"
+      "dragon_tail"
+    ],
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "bug_buzz"
     ],
     "32": [
-      "dragon_breath"
+      "sandstorm"
     ],
-    "40": [
+    "38": [
+      "earth_power"
+    ],
+    "44": [
       "earthquake"
     ],
-    "48": [
-      "dragon_claw"
+    "52": [
+      "uproar"
     ],
-    "26": [
-      "swords_dance"
+    "60": [
+      "dragon_rush"
+    ],
+    "68": [
+      "boomburst"
     ]
   },
   "evolution": null,

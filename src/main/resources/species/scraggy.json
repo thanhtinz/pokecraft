@@ -19,31 +19,48 @@
   "modelId": "scraggy",
   "learnset": {
     "1": [
-      "scratch"
+      "leer",
+      "low_kick",
+      "feint_attack"
     ],
     "4": [
-      "leer"
+      "payback"
     ],
     "8": [
-      "karate_chop"
+      "headbutt"
     ],
-    "14": [
-      "bite"
+    "12": [
+      "sand_attack"
+    ],
+    "16": [
+      "facade"
     ],
     "20": [
-      "low_kick"
+      "torment"
+    ],
+    "24": [
+      "beat_up"
+    ],
+    "28": [
+      "scary_face"
     ],
     "32": [
-      "crunch"
-    ],
-    "40": [
       "brick_break"
     ],
-    "48": [
-      "cross_chop"
+    "36": [
+      "swagger"
     ],
-    "26": [
-      "swords_dance"
+    "40": [
+      "crunch"
+    ],
+    "44": [
+      "high_jump_kick"
+    ],
+    "48": [
+      "focus_punch"
+    ],
+    "52": [
+      "head_smash"
     ]
   },
   "evolution": null,

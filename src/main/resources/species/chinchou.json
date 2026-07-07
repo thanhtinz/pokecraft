@@ -19,31 +19,42 @@
   "modelId": "chinchou",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "bubble",
+      "supersonic",
       "water_gun"
     ],
-    "14": [
-      "thunder_shock"
+    "4": [
+      "electro_ball"
     ],
-    "20": [
+    "8": [
+      "thunder_wave"
+    ],
+    "12": [
       "bubble_beam"
     ],
-    "32": [
+    "16": [
+      "confuse_ray"
+    ],
+    "20": [
       "spark"
     ],
+    "24": [
+      "charge"
+    ],
+    "28": [
+      "discharge"
+    ],
+    "32": [
+      "aqua_ring"
+    ],
+    "36": [
+      "flail"
+    ],
     "40": [
-      "waterfall"
+      "take_down"
     ],
-    "48": [
-      "thunderbolt"
-    ],
-    "26": [
-      "agility"
+    "44": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

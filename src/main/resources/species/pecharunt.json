@@ -19,31 +19,40 @@
   "modelId": "pecharunt",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "poison_powder"
+      "smog",
+      "poison_gas",
+      "memento",
+      "astonish",
+      "defense_curl",
+      "rollout",
+      "mean_look"
     ],
     "8": [
-      "lick"
+      "withdraw"
     ],
-    "14": [
-      "poison_sting"
+    "16": [
+      "destiny_bond"
     ],
-    "20": [
-      "night_shade"
+    "24": [
+      "fake_tears"
     ],
     "32": [
-      "acid"
+      "parting_shot"
     ],
     "40": [
       "shadow_ball"
     ],
     "48": [
-      "sludge"
+      "malignant_chain"
     ],
-    "26": [
-      "harden"
+    "56": [
+      "toxic"
+    ],
+    "64": [
+      "nasty_plot"
+    ],
+    "72": [
+      "recover"
     ]
   },
   "evolution": null,

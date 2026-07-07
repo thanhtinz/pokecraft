@@ -18,19 +18,44 @@
   "modelId": "pineco",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "protect"
     ],
-    "4": [
-      "string_shot"
+    "6": [
+      "self_destruct"
     ],
-    "8": [
+    "9": [
       "bug_bite"
     ],
-    "14": [
-      "pin_missile"
+    "12": [
+      "take_down"
     ],
-    "26": [
-      "harden"
+    "17": [
+      "rapid_spin"
+    ],
+    "20": [
+      "bide"
+    ],
+    "23": [
+      "natural_gift"
+    ],
+    "28": [
+      "spikes"
+    ],
+    "31": [
+      "payback"
+    ],
+    "34": [
+      "explosion"
+    ],
+    "39": [
+      "iron_defense"
+    ],
+    "42": [
+      "gyro_ball"
+    ],
+    "45": [
+      "double_edge"
     ]
   },
   "evolution": null,

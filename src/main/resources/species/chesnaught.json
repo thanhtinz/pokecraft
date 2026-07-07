@@ -19,31 +19,48 @@
   "modelId": "chesnaught",
   "learnset": {
     "1": [
-      "scratch"
+      "feint",
+      "hammer_arm",
+      "belly_drum",
+      "tackle",
+      "growl",
+      "vine_whip",
+      "rollout",
+      "needle_arm",
+      "spiky_shield"
     ],
-    "4": [
-      "sleep_powder"
+    "11": [
+      "bite"
     ],
-    "8": [
-      "vine_whip"
+    "15": [
+      "leech_seed"
     ],
-    "14": [
-      "karate_chop"
+    "19": [
+      "pin_missile"
     ],
-    "20": [
-      "razor_leaf"
+    "29": [
+      "take_down"
     ],
-    "32": [
-      "low_kick"
-    ],
-    "40": [
+    "35": [
       "seed_bomb"
     ],
-    "48": [
-      "brick_break"
+    "41": [
+      "mud_shot"
     ],
-    "26": [
-      "harden"
+    "48": [
+      "bulk_up"
+    ],
+    "54": [
+      "body_slam"
+    ],
+    "60": [
+      "pain_split"
+    ],
+    "66": [
+      "wood_hammer"
+    ],
+    "78": [
+      "giga_impact"
     ]
   },
   "evolution": null,

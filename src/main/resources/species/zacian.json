@@ -18,19 +18,36 @@
   "modelId": "zacian",
   "learnset": {
     "1": [
-      "tackle"
+      "sacred_sword",
+      "quick_guard",
+      "metal_claw",
+      "howl",
+      "quick_attack",
+      "bite"
     ],
-    "4": [
-      "sing"
+    "11": [
+      "slash"
     ],
-    "8": [
-      "fairy_wind"
+    "22": [
+      "swords_dance"
     ],
-    "14": [
-      "dazzling_gleam"
+    "33": [
+      "iron_head"
     ],
-    "26": [
-      "agility"
+    "44": [
+      "noble_roar"
+    ],
+    "55": [
+      "crunch"
+    ],
+    "66": [
+      "moonblast"
+    ],
+    "77": [
+      "close_combat"
+    ],
+    "88": [
+      "giga_impact"
     ]
   },
   "evolution": null,

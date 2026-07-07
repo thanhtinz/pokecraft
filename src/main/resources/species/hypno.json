@@ -18,22 +18,45 @@
   "modelId": "hypno",
   "learnset": {
     "1": [
-      "scratch"
+      "nightmare",
+      "switcheroo",
+      "pound",
+      "hypnosis",
+      "disable",
+      "confusion",
+      "meditate",
+      "synchronoise",
+      "wake_up_slap"
     ],
-    "4": [
-      "hypnosis"
+    "13": [
+      "headbutt"
     ],
-    "8": [
-      "confusion"
+    "17": [
+      "poison_gas"
     ],
-    "14": [
+    "21": [
       "psybeam"
     ],
-    "20": [
+    "25": [
+      "psych_up"
+    ],
+    "32": [
+      "zen_headbutt"
+    ],
+    "37": [
+      "swagger"
+    ],
+    "42": [
       "psychic"
     ],
-    "26": [
-      "swords_dance"
+    "47": [
+      "nasty_plot"
+    ],
+    "51": [
+      "psyshock"
+    ],
+    "56": [
+      "future_sight"
     ]
   },
   "evolution": null,

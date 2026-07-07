@@ -18,31 +18,41 @@
   "modelId": "meowth",
   "learnset": {
     "1": [
-      "scratch"
+      "growl",
+      "fake_out"
     ],
     "4": [
-      "growl"
+      "feint"
     ],
     "8": [
-      "quick_attack"
+      "scratch"
     ],
-    "14": [
-      "hyper_fang"
+    "12": [
+      "pay_day"
+    ],
+    "16": [
+      "bite"
     ],
     "20": [
-      "mega_punch"
+      "taunt"
+    ],
+    "24": [
+      "assurance"
+    ],
+    "29": [
+      "fury_swipes"
     ],
     "32": [
-      "body_slam"
+      "screech"
+    ],
+    "36": [
+      "slash"
     ],
     "40": [
-      "double_edge"
+      "nasty_plot"
     ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "agility"
+    "44": [
+      "play_rough"
     ]
   },
   "evolution": null,

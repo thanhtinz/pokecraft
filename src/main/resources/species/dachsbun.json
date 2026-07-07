@@ -18,19 +18,47 @@
   "modelId": "dachsbun",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "growl"
     ],
-    "4": [
-      "sing"
+    "3": [
+      "lick"
+    ],
+    "6": [
+      "tail_whip"
     ],
     "8": [
-      "fairy_wind"
+      "covet"
     ],
-    "14": [
-      "dazzling_gleam"
+    "11": [
+      "bite"
     ],
-    "26": [
-      "harden"
+    "15": [
+      "baby_doll_eyes"
+    ],
+    "18": [
+      "play_rough"
+    ],
+    "22": [
+      "work_up"
+    ],
+    "29": [
+      "baton_pass"
+    ],
+    "33": [
+      "roar"
+    ],
+    "38": [
+      "double_edge"
+    ],
+    "42": [
+      "charm"
+    ],
+    "47": [
+      "crunch"
+    ],
+    "53": [
+      "last_resort"
     ]
   },
   "evolution": null,

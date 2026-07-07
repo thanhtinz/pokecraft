@@ -18,31 +18,45 @@
   "modelId": "zigzagoon",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "growl",
+      "odor_sleuth"
     ],
-    "4": [
-      "growl"
+    "3": [
+      "sand_attack"
     ],
-    "8": [
-      "quick_attack"
+    "6": [
+      "tail_whip"
     ],
-    "14": [
-      "hyper_fang"
+    "9": [
+      "covet"
     ],
-    "20": [
-      "mega_punch"
+    "12": [
+      "headbutt"
     ],
-    "32": [
-      "body_slam"
+    "15": [
+      "baby_doll_eyes"
     ],
-    "40": [
+    "18": [
+      "pin_missile"
+    ],
+    "21": [
+      "rest"
+    ],
+    "24": [
+      "take_down"
+    ],
+    "27": [
+      "fling"
+    ],
+    "30": [
+      "flail"
+    ],
+    "33": [
+      "belly_drum"
+    ],
+    "36": [
       "double_edge"
-    ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "agility"
     ]
   },
   "evolution": null,

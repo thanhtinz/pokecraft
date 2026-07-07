@@ -19,31 +19,41 @@
   "modelId": "virizion",
   "learnset": {
     "1": [
-      "scratch"
+      "quick_attack",
+      "leer",
+      "take_down",
+      "helping_hand",
+      "work_up"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
+    "7": [
+      "magical_leaf"
     ],
     "14": [
-      "karate_chop"
+      "quick_guard"
     ],
-    "20": [
-      "razor_leaf"
+    "21": [
+      "double_kick"
     ],
-    "32": [
-      "low_kick"
+    "28": [
+      "retaliate"
     ],
-    "40": [
-      "seed_bomb"
+    "35": [
+      "giga_drain"
     ],
-    "48": [
-      "brick_break"
+    "42": [
+      "synthesis"
     ],
-    "26": [
-      "agility"
+    "49": [
+      "sacred_sword"
+    ],
+    "56": [
+      "swords_dance"
+    ],
+    "63": [
+      "leaf_blade"
+    ],
+    "70": [
+      "close_combat"
     ]
   },
   "evolution": null,

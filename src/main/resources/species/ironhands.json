@@ -19,31 +19,50 @@
   "modelId": "ironhands",
   "learnset": {
     "1": [
-      "pound"
+      "sand_attack",
+      "tackle",
+      "focus_energy",
+      "arm_thrust",
+      "electric_terrain"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "karate_chop"
+    "7": [
+      "fake_out"
     ],
     "14": [
-      "thunder_shock"
+      "whirlwind"
     ],
-    "20": [
-      "low_kick"
+    "21": [
+      "thunder_punch"
     ],
-    "32": [
-      "spark"
+    "28": [
+      "slam"
     ],
-    "40": [
-      "brick_break"
+    "35": [
+      "force_palm"
     ],
-    "48": [
-      "thunderbolt"
+    "42": [
+      "seismic_toss"
     ],
-    "26": [
-      "swords_dance"
+    "49": [
+      "charge"
+    ],
+    "56": [
+      "wild_charge"
+    ],
+    "63": [
+      "close_combat"
+    ],
+    "70": [
+      "detect"
+    ],
+    "77": [
+      "heavy_slam"
+    ],
+    "84": [
+      "belly_drum"
+    ],
+    "91": [
+      "focus_punch"
     ]
   },
   "evolution": null,

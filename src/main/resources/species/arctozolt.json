@@ -19,31 +19,41 @@
   "modelId": "arctozolt",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "ice_shard"
-    ],
-    "14": [
+      "powder_snow",
       "thunder_shock"
     ],
-    "20": [
-      "aurora_beam"
+    "7": [
+      "charge"
     ],
-    "32": [
-      "spark"
+    "14": [
+      "echoed_voice"
     ],
-    "40": [
-      "ice_beam"
+    "21": [
+      "ancient_power"
     ],
-    "48": [
-      "thunderbolt"
+    "28": [
+      "pluck"
     ],
-    "26": [
-      "swords_dance"
+    "35": [
+      "avalanche"
+    ],
+    "42": [
+      "freeze_dry"
+    ],
+    "49": [
+      "slam"
+    ],
+    "56": [
+      "discharge"
+    ],
+    "63": [
+      "bolt_beak"
+    ],
+    "70": [
+      "icicle_crash"
+    ],
+    "77": [
+      "blizzard"
     ]
   },
   "evolution": null,

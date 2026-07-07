@@ -18,28 +18,29 @@
   "modelId": "barraskewda",
   "learnset": {
     "1": [
-      "scratch"
+      "throat_chop",
+      "peck",
+      "aqua_jet",
+      "fury_attack",
+      "bite"
     ],
-    "4": [
-      "tail_whip"
+    "18": [
+      "agility"
     ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "bubble_beam"
-    ],
-    "20": [
-      "waterfall"
+    "24": [
+      "dive"
     ],
     "32": [
-      "surf"
+      "focus_energy"
     ],
     "40": [
-      "hydro_pump"
+      "crunch"
     ],
-    "26": [
-      "agility"
+    "48": [
+      "liquidation"
+    ],
+    "56": [
+      "double_edge"
     ]
   },
   "evolution": null,

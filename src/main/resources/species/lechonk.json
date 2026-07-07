@@ -18,31 +18,41 @@
   "modelId": "lechonk",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "tail_whip"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "disarming_voice"
     ],
     "8": [
-      "quick_attack"
+      "echoed_voice"
     ],
-    "14": [
-      "hyper_fang"
+    "12": [
+      "mud_shot"
     ],
-    "20": [
-      "mega_punch"
+    "15": [
+      "covet"
+    ],
+    "17": [
+      "dig"
+    ],
+    "21": [
+      "headbutt"
+    ],
+    "24": [
+      "yawn"
+    ],
+    "27": [
+      "take_down"
+    ],
+    "30": [
+      "work_up"
     ],
     "32": [
-      "body_slam"
+      "uproar"
     ],
-    "40": [
+    "35": [
       "double_edge"
-    ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

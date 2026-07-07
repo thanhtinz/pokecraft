@@ -18,19 +18,14 @@
   "modelId": "scatterbug",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
+      "tackle",
       "string_shot"
     ],
-    "8": [
+    "6": [
+      "stun_spore"
+    ],
+    "15": [
       "bug_bite"
-    ],
-    "14": [
-      "pin_missile"
-    ],
-    "26": [
-      "harden"
     ]
   },
   "evolution": null,

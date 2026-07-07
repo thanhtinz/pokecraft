@@ -19,31 +19,54 @@
   "modelId": "tapukoko",
   "learnset": {
     "1": [
-      "pound"
+      "quick_attack",
+      "thunder_shock",
+      "mirror_move"
     ],
-    "4": [
-      "thunder_wave"
+    "5": [
+      "withdraw"
     ],
-    "8": [
+    "10": [
       "fairy_wind"
     ],
-    "14": [
-      "thunder_shock"
+    "15": [
+      "false_swipe"
     ],
     "20": [
-      "dazzling_gleam"
-    ],
-    "32": [
       "spark"
     ],
-    "40": [
-      "thunderbolt"
+    "25": [
+      "shock_wave"
     ],
-    "48": [
-      "thunder"
+    "30": [
+      "charge"
     ],
-    "26": [
+    "35": [
       "agility"
+    ],
+    "40": [
+      "screech"
+    ],
+    "45": [
+      "discharge"
+    ],
+    "50": [
+      "mean_look"
+    ],
+    "55": [
+      "natures_madness"
+    ],
+    "60": [
+      "wild_charge"
+    ],
+    "65": [
+      "brave_bird"
+    ],
+    "70": [
+      "power_swap"
+    ],
+    "75": [
+      "electric_terrain"
     ]
   },
   "evolution": null,

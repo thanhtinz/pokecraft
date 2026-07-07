@@ -19,31 +19,48 @@
   "modelId": "ironthorns",
   "learnset": {
     "1": [
-      "pound"
+      "rock_throw",
+      "fire_fang",
+      "ice_fang",
+      "iron_defense",
+      "thunder_fang",
+      "electric_terrain"
     ],
-    "4": [
-      "harden"
+    "7": [
+      "screech"
     ],
-    "8": [
-      "thunder_shock"
+    "21": [
+      "rock_tomb"
     ],
-    "14": [
-      "rock_throw"
+    "28": [
+      "bite"
     ],
-    "20": [
-      "spark"
+    "35": [
+      "charge"
     ],
-    "32": [
+    "42": [
       "rock_slide"
     ],
-    "40": [
-      "thunderbolt"
+    "49": [
+      "sandstorm"
     ],
-    "48": [
+    "56": [
+      "wild_charge"
+    ],
+    "63": [
+      "pin_missile"
+    ],
+    "70": [
+      "earthquake"
+    ],
+    "77": [
+      "stealth_rock"
+    ],
+    "84": [
       "stone_edge"
     ],
-    "26": [
-      "swords_dance"
+    "91": [
+      "giga_impact"
     ]
   },
   "evolution": null,

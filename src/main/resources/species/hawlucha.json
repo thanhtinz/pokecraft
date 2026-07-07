@@ -19,31 +19,52 @@
   "modelId": "hawlucha",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "hone_claws",
+      "karate_chop",
+      "submission"
     ],
     "4": [
-      "leer"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "karate_chop"
-    ],
-    "20": [
-      "gust"
-    ],
-    "32": [
-      "low_kick"
-    ],
-    "40": [
       "wing_attack"
     ],
-    "48": [
+    "8": [
+      "detect"
+    ],
+    "12": [
+      "aerial_ace"
+    ],
+    "16": [
+      "encore"
+    ],
+    "20": [
+      "feather_dance"
+    ],
+    "24": [
       "brick_break"
     ],
-    "26": [
-      "agility"
+    "28": [
+      "bounce"
+    ],
+    "32": [
+      "taunt"
+    ],
+    "36": [
+      "roost"
+    ],
+    "40": [
+      "swords_dance"
+    ],
+    "44": [
+      "flying_press"
+    ],
+    "48": [
+      "high_jump_kick"
+    ],
+    "52": [
+      "endeavor"
+    ],
+    "56": [
+      "sky_attack"
     ]
   },
   "evolution": null,

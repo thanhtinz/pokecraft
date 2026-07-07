@@ -19,31 +19,45 @@
   "modelId": "jellicent",
   "learnset": {
     "1": [
-      "pound"
+      "bubble",
+      "water_sport",
+      "absorb",
+      "night_shade",
+      "bubble_beam",
+      "wring_out",
+      "acid_armor",
+      "water_gun",
+      "poison_sting"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "water_pulse"
     ],
-    "8": [
-      "lick"
-    ],
-    "14": [
-      "water_gun"
+    "16": [
+      "rain_dance"
     ],
     "20": [
-      "night_shade"
+      "hex"
+    ],
+    "24": [
+      "brine"
+    ],
+    "28": [
+      "recover"
     ],
     "32": [
-      "bubble_beam"
-    ],
-    "40": [
       "shadow_ball"
     ],
-    "48": [
-      "waterfall"
+    "36": [
+      "whirlpool"
     ],
-    "26": [
-      "calm_mind"
+    "43": [
+      "hydro_pump"
+    ],
+    "48": [
+      "destiny_bond"
+    ],
+    "54": [
+      "water_spout"
     ]
   },
   "evolution": null,

@@ -18,28 +18,16 @@
   "modelId": "simipour",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "bubble_beam"
-    ],
-    "20": [
-      "waterfall"
-    ],
-    "32": [
-      "surf"
-    ],
-    "40": [
-      "hydro_pump"
-    ],
-    "26": [
-      "agility"
+      "leer",
+      "lick",
+      "fury_swipes",
+      "scald",
+      "scratch",
+      "water_gun",
+      "water_sport",
+      "bite",
+      "play_nice",
+      "natural_gift"
     ]
   },
   "evolution": null,

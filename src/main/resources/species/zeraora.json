@@ -18,25 +18,48 @@
   "modelId": "zeraora",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "thunder_wave"
+      "scratch",
+      "spark",
+      "quick_attack",
+      "snarl",
+      "fake_out",
+      "power_up_punch"
     ],
     "8": [
-      "thunder_shock"
+      "fury_swipes"
     ],
-    "14": [
-      "spark"
+    "16": [
+      "quick_guard"
     ],
-    "20": [
-      "thunderbolt"
+    "24": [
+      "slash"
     ],
     "32": [
-      "thunder"
+      "volt_switch"
     ],
-    "26": [
+    "40": [
+      "charge"
+    ],
+    "48": [
+      "thunder_punch"
+    ],
+    "56": [
+      "hone_claws"
+    ],
+    "64": [
+      "discharge"
+    ],
+    "72": [
+      "wild_charge"
+    ],
+    "80": [
       "agility"
+    ],
+    "88": [
+      "plasma_fists"
+    ],
+    "96": [
+      "close_combat"
     ]
   },
   "evolution": null,

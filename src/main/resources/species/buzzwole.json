@@ -19,31 +19,51 @@
   "modelId": "buzzwole",
   "learnset": {
     "1": [
-      "pound"
+      "harden",
+      "power_up_punch",
+      "comet_punch"
     ],
-    "4": [
-      "string_shot"
+    "5": [
+      "taunt"
     ],
-    "8": [
-      "bug_bite"
+    "10": [
+      "fell_stinger"
     ],
-    "14": [
-      "karate_chop"
+    "15": [
+      "vital_throw"
     ],
     "20": [
-      "pin_missile"
+      "bulk_up"
     ],
-    "32": [
-      "low_kick"
+    "25": [
+      "endure"
+    ],
+    "30": [
+      "reversal"
+    ],
+    "35": [
+      "mega_punch"
     ],
     "40": [
-      "brick_break"
+      "lunge"
     ],
-    "48": [
-      "cross_chop"
+    "45": [
+      "focus_energy"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "dynamic_punch"
+    ],
+    "55": [
+      "counter"
+    ],
+    "60": [
+      "hammer_arm"
+    ],
+    "65": [
+      "superpower"
+    ],
+    "70": [
+      "focus_punch"
     ]
   },
   "evolution": null,

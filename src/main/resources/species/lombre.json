@@ -19,31 +19,44 @@
   "modelId": "lombre",
   "learnset": {
     "1": [
-      "scratch"
+      "astonish",
+      "growl",
+      "absorb",
+      "fake_out",
+      "water_sport",
+      "bubble",
+      "knock_off",
+      "teeter_dance",
+      "flail",
+      "water_gun",
+      "natural_gift"
     ],
-    "4": [
-      "tail_whip"
+    "9": [
+      "mist"
     ],
-    "8": [
-      "vine_whip"
+    "12": [
+      "mega_drain"
     ],
-    "14": [
-      "water_gun"
+    "18": [
+      "fury_swipes"
     ],
-    "20": [
-      "razor_leaf"
-    ],
-    "32": [
+    "24": [
       "bubble_beam"
     ],
-    "40": [
-      "seed_bomb"
+    "30": [
+      "leech_seed"
     ],
-    "48": [
-      "waterfall"
+    "36": [
+      "giga_drain"
     ],
-    "26": [
-      "calm_mind"
+    "50": [
+      "zen_headbutt"
+    ],
+    "57": [
+      "energy_ball"
+    ],
+    "64": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

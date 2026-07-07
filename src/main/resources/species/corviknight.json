@@ -19,31 +19,35 @@
   "modelId": "corviknight",
   "learnset": {
     "1": [
-      "scratch"
+      "steel_wing",
+      "iron_defense",
+      "metal_sound",
+      "peck",
+      "leer",
+      "power_trip",
+      "hone_claws",
+      "screech"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "fury_attack"
     ],
-    "8": [
-      "steel_wing"
+    "16": [
+      "pluck"
     ],
-    "14": [
-      "peck"
+    "22": [
+      "taunt"
     ],
-    "20": [
-      "iron_head"
+    "28": [
+      "scary_face"
     ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
+    "34": [
       "drill_peck"
     ],
-    "26": [
-      "harden"
+    "42": [
+      "swagger"
+    ],
+    "50": [
+      "brave_bird"
     ]
   },
   "evolution": null,

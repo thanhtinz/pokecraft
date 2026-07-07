@@ -19,31 +19,52 @@
   "modelId": "hoppip",
   "learnset": {
     "1": [
-      "scratch"
+      "splash",
+      "tackle"
     ],
     "4": [
-      "sleep_powder"
+      "tail_whip"
+    ],
+    "6": [
+      "absorb"
     ],
     "8": [
-      "peck"
+      "fairy_wind"
     ],
-    "14": [
-      "vine_whip"
+    "10": [
+      "poison_powder",
+      "stun_spore",
+      "sleep_powder"
     ],
-    "20": [
-      "gust"
+    "12": [
+      "bullet_seed"
+    ],
+    "15": [
+      "synthesis"
+    ],
+    "19": [
+      "leech_seed"
+    ],
+    "22": [
+      "mega_drain"
+    ],
+    "24": [
+      "acrobatics"
+    ],
+    "27": [
+      "cotton_spore"
+    ],
+    "29": [
+      "u_turn"
     ],
     "32": [
-      "razor_leaf"
+      "giga_drain"
     ],
-    "40": [
-      "wing_attack"
+    "35": [
+      "bounce"
     ],
-    "48": [
-      "seed_bomb"
-    ],
-    "26": [
-      "agility"
+    "38": [
+      "memento"
     ]
   },
   "evolution": null,

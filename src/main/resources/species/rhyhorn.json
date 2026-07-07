@@ -19,31 +19,45 @@
   "modelId": "rhyhorn",
   "learnset": {
     "1": [
+      "tail_whip",
+      "fury_attack",
       "tackle"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "smack_down"
     ],
-    "8": [
-      "rock_throw"
+    "10": [
+      "bulldoze"
     ],
-    "14": [
-      "sand_tomb"
+    "15": [
+      "horn_attack"
     ],
     "20": [
-      "rock_slide"
+      "scary_face"
     ],
-    "32": [
-      "dig"
+    "25": [
+      "chip_away"
+    ],
+    "30": [
+      "rock_blast"
+    ],
+    "35": [
+      "drill_run"
     ],
     "40": [
-      "stone_edge"
+      "take_down"
     ],
-    "48": [
+    "45": [
       "earthquake"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "stone_edge"
+    ],
+    "55": [
+      "megahorn"
+    ],
+    "60": [
+      "horn_drill"
     ]
   },
   "evolution": null,

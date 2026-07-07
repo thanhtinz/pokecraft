@@ -21,25 +21,43 @@
       "tackle"
     ],
     "4": [
-      "sleep_powder"
+      "leer"
     ],
-    "8": [
+    "7": [
       "vine_whip"
     ],
-    "14": [
-      "razor_leaf"
+    "10": [
+      "wrap"
     ],
-    "20": [
-      "seed_bomb"
+    "13": [
+      "growth"
     ],
-    "32": [
-      "petal_dance"
+    "16": [
+      "leaf_tornado"
+    ],
+    "19": [
+      "leech_seed"
+    ],
+    "22": [
+      "mega_drain"
+    ],
+    "25": [
+      "slam"
+    ],
+    "28": [
+      "leaf_blade"
+    ],
+    "31": [
+      "coil"
+    ],
+    "34": [
+      "giga_drain"
+    ],
+    "37": [
+      "wring_out"
     ],
     "40": [
-      "solar_beam"
-    ],
-    "26": [
-      "agility"
+      "leaf_storm"
     ]
   },
   "evolution": null,

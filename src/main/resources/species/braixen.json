@@ -18,28 +18,45 @@
   "modelId": "braixen",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+      "scratch",
+      "tail_whip",
       "ember"
     ],
+    "11": [
+      "howl"
+    ],
     "14": [
+      "flame_charge"
+    ],
+    "18": [
+      "psybeam"
+    ],
+    "22": [
       "fire_spin"
     ],
-    "20": [
-      "fire_punch"
+    "28": [
+      "lucky_chant"
     ],
-    "32": [
+    "36": [
+      "psyshock"
+    ],
+    "41": [
       "flamethrower"
     ],
-    "40": [
-      "fire_blast"
+    "45": [
+      "will_o_wisp"
     ],
-    "26": [
-      "calm_mind"
+    "49": [
+      "psychic"
+    ],
+    "52": [
+      "sunny_day"
+    ],
+    "56": [
+      "magic_room"
+    ],
+    "59": [
+      "fire_blast"
     ]
   },
   "evolution": null,

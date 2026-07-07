@@ -19,31 +19,49 @@
   "modelId": "combusken",
   "learnset": {
     "1": [
-      "scratch"
+      "scratch",
+      "growl",
+      "ember",
+      "double_kick",
+      "peck",
+      "quick_attack",
+      "mirror_move",
+      "sky_uppercut",
+      "flamethrower",
+      "feather_dance"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "flame_charge"
     ],
-    "8": [
-      "ember"
+    "12": [
+      "detect"
     ],
-    "14": [
-      "karate_chop"
+    "15": [
+      "sand_attack"
     ],
     "20": [
-      "fire_spin"
+      "aerial_ace"
     ],
-    "32": [
-      "low_kick"
+    "25": [
+      "slash"
+    ],
+    "30": [
+      "bounce"
+    ],
+    "35": [
+      "focus_energy"
     ],
     "40": [
-      "fire_punch"
+      "blaze_kick"
     ],
-    "48": [
-      "brick_break"
+    "45": [
+      "bulk_up"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "reversal"
+    ],
+    "55": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

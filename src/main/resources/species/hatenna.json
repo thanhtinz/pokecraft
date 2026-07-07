@@ -18,22 +18,35 @@
   "modelId": "hatenna",
   "learnset": {
     "1": [
-      "scratch"
+      "confusion",
+      "play_nice"
     ],
-    "4": [
-      "hypnosis"
+    "5": [
+      "life_dew"
     ],
-    "8": [
-      "confusion"
+    "10": [
+      "disarming_voice"
     ],
-    "14": [
-      "psybeam"
+    "15": [
+      "aromatherapy"
     ],
     "20": [
+      "psybeam"
+    ],
+    "25": [
+      "heal_pulse"
+    ],
+    "30": [
+      "dazzling_gleam"
+    ],
+    "35": [
+      "calm_mind"
+    ],
+    "40": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "45": [
+      "healing_wish"
     ]
   },
   "evolution": null,

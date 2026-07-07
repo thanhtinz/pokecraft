@@ -18,31 +18,49 @@
   "modelId": "buneary",
   "learnset": {
     "1": [
-      "scratch"
+      "splash",
+      "pound",
+      "foresight",
+      "frustration"
     ],
     "4": [
-      "growl"
+      "defense_curl"
     ],
     "8": [
+      "baby_doll_eyes"
+    ],
+    "12": [
+      "after_you"
+    ],
+    "16": [
       "quick_attack"
     ],
-    "14": [
-      "hyper_fang"
-    ],
     "20": [
-      "mega_punch"
+      "double_kick"
+    ],
+    "24": [
+      "charm"
+    ],
+    "28": [
+      "baton_pass"
     ],
     "32": [
-      "body_slam"
+      "headbutt"
+    ],
+    "36": [
+      "dizzy_punch"
     ],
     "40": [
-      "double_edge"
+      "entrainment"
+    ],
+    "44": [
+      "flatter"
     ],
     "48": [
-      "hyper_beam"
+      "bounce"
     ],
-    "26": [
-      "agility"
+    "52": [
+      "healing_wish"
     ]
   },
   "evolution": null,

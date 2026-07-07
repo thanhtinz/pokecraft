@@ -18,19 +18,38 @@
   "modelId": "darkrai",
   "learnset": {
     "1": [
-      "pound"
+      "ominous_wind",
+      "disable"
     ],
-    "4": [
-      "leer"
+    "11": [
+      "quick_attack"
     ],
-    "8": [
-      "bite"
+    "20": [
+      "hypnosis"
     ],
-    "14": [
-      "crunch"
+    "29": [
+      "feint_attack"
     ],
-    "26": [
-      "calm_mind"
+    "38": [
+      "nightmare"
+    ],
+    "47": [
+      "double_team"
+    ],
+    "57": [
+      "haze"
+    ],
+    "66": [
+      "dark_void"
+    ],
+    "75": [
+      "nasty_plot"
+    ],
+    "84": [
+      "dream_eater"
+    ],
+    "93": [
+      "dark_pulse"
     ]
   },
   "evolution": null,

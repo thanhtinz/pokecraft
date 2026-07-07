@@ -19,31 +19,51 @@
   "modelId": "cacturne",
   "learnset": {
     "1": [
-      "pound"
+      "revenge",
+      "poison_sting",
+      "leer",
+      "absorb",
+      "growth",
+      "feint_attack",
+      "needle_arm",
+      "destiny_bond",
+      "spiky_shield"
     ],
-    "4": [
-      "sleep_powder"
+    "10": [
+      "leech_seed"
     ],
-    "8": [
-      "vine_whip"
+    "13": [
+      "sand_attack"
     ],
-    "14": [
-      "bite"
+    "16": [
+      "bullet_seed"
     ],
-    "20": [
-      "razor_leaf"
+    "19": [
+      "power_trip"
     ],
-    "32": [
-      "crunch"
-    ],
-    "40": [
-      "seed_bomb"
-    ],
-    "48": [
-      "petal_dance"
+    "22": [
+      "ingrain"
     ],
     "26": [
-      "swords_dance"
+      "payback"
+    ],
+    "30": [
+      "spikes"
+    ],
+    "35": [
+      "sucker_punch"
+    ],
+    "38": [
+      "pin_missile"
+    ],
+    "44": [
+      "energy_ball"
+    ],
+    "49": [
+      "cotton_spore"
+    ],
+    "54": [
+      "sandstorm"
     ]
   },
   "evolution": null,

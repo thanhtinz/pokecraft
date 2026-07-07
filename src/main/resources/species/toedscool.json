@@ -19,31 +19,51 @@
   "modelId": "toedscool",
   "learnset": {
     "1": [
-      "tackle"
+      "wrap",
+      "mud_slap"
     ],
     "4": [
-      "leer"
+      "absorb"
     ],
     "8": [
-      "sand_tomb"
+      "poison_powder",
+      "stun_spore"
     ],
-    "14": [
-      "vine_whip"
+    "12": [
+      "supersonic"
+    ],
+    "15": [
+      "tackle"
+    ],
+    "16": [
+      "mega_drain"
     ],
     "20": [
-      "dig"
+      "screech"
+    ],
+    "24": [
+      "mud_shot"
+    ],
+    "28": [
+      "hex"
     ],
     "32": [
-      "razor_leaf"
-    ],
-    "40": [
-      "earthquake"
-    ],
-    "48": [
       "seed_bomb"
     ],
-    "26": [
-      "agility"
+    "36": [
+      "spore"
+    ],
+    "40": [
+      "growth"
+    ],
+    "44": [
+      "giga_drain"
+    ],
+    "48": [
+      "earth_power"
+    ],
+    "52": [
+      "power_whip"
     ]
   },
   "evolution": null,

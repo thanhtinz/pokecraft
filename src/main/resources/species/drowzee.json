@@ -18,22 +18,44 @@
   "modelId": "drowzee",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "pound",
       "hypnosis"
     ],
-    "8": [
+    "5": [
+      "disable"
+    ],
+    "9": [
       "confusion"
     ],
-    "14": [
-      "psybeam"
+    "13": [
+      "headbutt"
     ],
-    "20": [
-      "psychic"
+    "17": [
+      "poison_gas"
     ],
-    "26": [
-      "swords_dance"
+    "21": [
+      "meditate"
+    ],
+    "25": [
+      "psych_up"
+    ],
+    "29": [
+      "wake_up_slap"
+    ],
+    "33": [
+      "swagger"
+    ],
+    "37": [
+      "synchronoise"
+    ],
+    "41": [
+      "nasty_plot"
+    ],
+    "45": [
+      "psyshock"
+    ],
+    "49": [
+      "future_sight"
     ]
   },
   "evolution": null,

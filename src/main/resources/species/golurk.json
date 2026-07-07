@@ -19,31 +19,50 @@
   "modelId": "golurk",
   "learnset": {
     "1": [
-      "pound"
+      "pound",
+      "astonish",
+      "defense_curl",
+      "mud_slap",
+      "rollout",
+      "magnitude",
+      "focus_punch",
+      "high_horsepower"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "shadow_punch"
     ],
-    "8": [
-      "lick"
-    ],
-    "14": [
-      "sand_tomb"
+    "16": [
+      "curse"
     ],
     "20": [
       "night_shade"
     ],
-    "32": [
-      "dig"
+    "24": [
+      "stomping_tantrum"
     ],
-    "40": [
+    "28": [
+      "iron_defense"
+    ],
+    "32": [
+      "mega_punch"
+    ],
+    "36": [
       "shadow_ball"
     ],
-    "48": [
+    "40": [
+      "heavy_slam"
+    ],
+    "46": [
+      "phantom_force"
+    ],
+    "52": [
+      "hammer_arm"
+    ],
+    "58": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "64": [
+      "dynamic_punch"
     ]
   },
   "evolution": null,

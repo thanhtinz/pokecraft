@@ -19,31 +19,49 @@
   "modelId": "diggersby",
   "learnset": {
     "1": [
-      "tackle"
+      "rototiller",
+      "tackle",
+      "leer",
+      "mud_slap",
+      "odor_sleuth",
+      "double_slap",
+      "laser_focus"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
+    "9": [
       "quick_attack"
     ],
-    "14": [
-      "sand_tomb"
+    "12": [
+      "mud_shot"
     ],
-    "20": [
-      "hyper_fang"
+    "15": [
+      "flail"
     ],
-    "32": [
+    "18": [
+      "double_kick"
+    ],
+    "23": [
+      "bulldoze"
+    ],
+    "28": [
       "dig"
     ],
-    "40": [
-      "mega_punch"
+    "33": [
+      "bounce"
+    ],
+    "38": [
+      "take_down"
+    ],
+    "43": [
+      "swords_dance"
     ],
     "48": [
       "earthquake"
     ],
-    "26": [
-      "agility"
+    "53": [
+      "super_fang"
+    ],
+    "58": [
+      "hammer_arm"
     ]
   },
   "evolution": null,

@@ -18,28 +18,53 @@
   "modelId": "cacnea",
   "learnset": {
     "1": [
-      "scratch"
+      "poison_sting",
+      "leer"
     ],
     "4": [
-      "sleep_powder"
+      "absorb"
     ],
-    "8": [
-      "vine_whip"
+    "7": [
+      "growth"
     ],
-    "14": [
-      "razor_leaf"
+    "10": [
+      "leech_seed"
     ],
-    "20": [
-      "seed_bomb"
+    "13": [
+      "sand_attack"
     ],
-    "32": [
-      "petal_dance"
+    "16": [
+      "needle_arm"
     ],
-    "40": [
-      "solar_beam"
+    "19": [
+      "feint_attack"
+    ],
+    "22": [
+      "ingrain"
     ],
     "26": [
-      "swords_dance"
+      "payback"
+    ],
+    "30": [
+      "spikes"
+    ],
+    "34": [
+      "sucker_punch"
+    ],
+    "38": [
+      "pin_missile"
+    ],
+    "42": [
+      "energy_ball"
+    ],
+    "46": [
+      "cotton_spore"
+    ],
+    "50": [
+      "sandstorm"
+    ],
+    "54": [
+      "destiny_bond"
     ]
   },
   "evolution": null,

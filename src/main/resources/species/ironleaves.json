@@ -19,31 +19,51 @@
   "modelId": "ironleaves",
   "learnset": {
     "1": [
-      "pound"
+      "leer",
+      "quick_attack",
+      "helping_hand",
+      "work_up",
+      "quash",
+      "electric_terrain"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
+    "7": [
+      "magical_leaf"
     ],
     "14": [
-      "confusion"
+      "retaliate"
     ],
-    "20": [
-      "razor_leaf"
+    "21": [
+      "quick_guard"
     ],
-    "32": [
-      "psybeam"
+    "28": [
+      "night_slash"
     ],
-    "40": [
-      "seed_bomb"
-    ],
-    "48": [
-      "psychic"
-    ],
-    "26": [
+    "35": [
       "swords_dance"
+    ],
+    "42": [
+      "sacred_sword"
+    ],
+    "49": [
+      "leaf_blade"
+    ],
+    "56": [
+      "psyblade"
+    ],
+    "63": [
+      "close_combat"
+    ],
+    "70": [
+      "imprison"
+    ],
+    "77": [
+      "megahorn"
+    ],
+    "84": [
+      "ally_switch"
+    ],
+    "91": [
+      "solar_blade"
     ]
   },
   "evolution": null,

@@ -19,31 +19,39 @@
   "modelId": "fletchling",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "growl"
-    ],
-    "8": [
+      "tackle",
+      "growl",
       "peck"
     ],
-    "14": [
+    "5": [
       "quick_attack"
     ],
-    "20": [
-      "gust"
+    "10": [
+      "ember"
     ],
-    "32": [
-      "hyper_fang"
+    "15": [
+      "flail"
+    ],
+    "20": [
+      "acrobatics"
+    ],
+    "25": [
+      "razor_wind"
+    ],
+    "30": [
+      "aerial_ace"
+    ],
+    "35": [
+      "tailwind"
     ],
     "40": [
-      "wing_attack"
+      "steel_wing"
     ],
-    "48": [
-      "mega_punch"
+    "45": [
+      "roost"
     ],
-    "26": [
-      "agility"
+    "50": [
+      "fly"
     ]
   },
   "evolution": null,

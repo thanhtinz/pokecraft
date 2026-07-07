@@ -18,28 +18,41 @@
   "modelId": "chimchar",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "scratch",
       "leer"
     ],
-    "8": [
+    "7": [
       "ember"
     ],
-    "14": [
+    "9": [
+      "taunt"
+    ],
+    "15": [
+      "fury_swipes"
+    ],
+    "17": [
+      "flame_wheel"
+    ],
+    "23": [
+      "nasty_plot"
+    ],
+    "25": [
+      "torment"
+    ],
+    "31": [
+      "facade"
+    ],
+    "33": [
       "fire_spin"
     ],
-    "20": [
-      "fire_punch"
+    "39": [
+      "acrobatics"
     ],
-    "32": [
+    "41": [
+      "slack_off"
+    ],
+    "47": [
       "flamethrower"
-    ],
-    "40": [
-      "fire_blast"
-    ],
-    "26": [
-      "agility"
     ]
   },
   "evolution": null,

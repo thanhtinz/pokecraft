@@ -19,31 +19,46 @@
   "modelId": "omanyte",
   "learnset": {
     "1": [
-      "tackle"
+      "constrict",
+      "withdraw",
+      "bite",
+      "bind"
     ],
-    "4": [
-      "harden"
+    "5": [
+      "rollout"
     ],
-    "8": [
-      "rock_throw"
+    "10": [
+      "sand_attack"
     ],
-    "14": [
+    "15": [
       "water_gun"
     ],
     "20": [
-      "rock_slide"
+      "leer"
     ],
-    "32": [
-      "bubble_beam"
+    "25": [
+      "mud_shot"
     ],
-    "40": [
-      "stone_edge"
+    "30": [
+      "ancient_power"
     ],
-    "48": [
-      "waterfall"
+    "35": [
+      "brine"
     ],
-    "26": [
-      "harden"
+    "41": [
+      "protect"
+    ],
+    "45": [
+      "rock_blast"
+    ],
+    "50": [
+      "surf"
+    ],
+    "55": [
+      "shell_smash"
+    ],
+    "60": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

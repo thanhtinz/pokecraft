@@ -19,31 +19,50 @@
   "modelId": "hoopa",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
+      "destiny_bond",
+      "ally_switch",
       "confusion"
     ],
-    "14": [
-      "lick"
+    "6": [
+      "astonish"
     ],
-    "20": [
+    "10": [
+      "trick"
+    ],
+    "15": [
+      "light_screen"
+    ],
+    "19": [
       "psybeam"
     ],
-    "32": [
-      "night_shade"
+    "25": [
+      "skill_swap"
     ],
-    "40": [
-      "psychic"
+    "29": [
+      "power_split",
+      "guard_split"
     ],
-    "48": [
+    "35": [
+      "phantom_force"
+    ],
+    "46": [
+      "zen_headbutt"
+    ],
+    "50": [
+      "wonder_room",
+      "trick_room"
+    ],
+    "55": [
       "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "68": [
+      "nasty_plot"
+    ],
+    "75": [
+      "psychic"
+    ],
+    "85": [
+      "hyperspace_hole"
     ]
   },
   "evolution": null,

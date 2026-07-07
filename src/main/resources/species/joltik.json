@@ -19,31 +19,45 @@
   "modelId": "joltik",
   "learnset": {
     "1": [
-      "scratch"
+      "spider_web",
+      "fury_cutter",
+      "absorb"
     ],
     "4": [
-      "string_shot"
+      "electroweb"
     ],
     "8": [
-      "thunder_shock"
-    ],
-    "14": [
       "bug_bite"
     ],
+    "12": [
+      "string_shot"
+    ],
+    "16": [
+      "thunder_wave"
+    ],
     "20": [
-      "spark"
+      "electro_ball"
+    ],
+    "24": [
+      "agility"
+    ],
+    "28": [
+      "sucker_punch"
     ],
     "32": [
-      "pin_missile"
+      "slash"
+    ],
+    "37": [
+      "discharge"
     ],
     "40": [
-      "thunderbolt"
+      "screech"
+    ],
+    "44": [
+      "gastro_acid"
     ],
     "48": [
-      "thunder"
-    ],
-    "26": [
-      "agility"
+      "bug_buzz"
     ]
   },
   "evolution": null,

@@ -1,9 +1,78 @@
 {
-  "id": "bulbasaur", "dex": 1, "name": "Bulbasaur",
-  "types": ["GRASS", "POISON"],
-  "baseStats": { "hp": 45, "atk": 49, "def": 49, "spa": 65, "spd": 65, "spe": 45 },
-  "catchRate": 45, "expYield": 64, "modelId": "bulbasaur",
-  "learnset": { "1": ["tackle", "growl"], "3": ["vine_whip"], "9": ["razor_leaf"], "13": ["sleep_powder"], "25": ["growth"] },
-  "evolution": { "level": 16, "to": "ivysaur" },
-  "spawn": { "biomes": ["FOREST", "PLAINS", "FLOWER_FOREST", "BIRCH_FOREST"], "weight": 10, "minLevel": 3, "maxLevel": 8 }
+  "id": "bulbasaur",
+  "dex": 1,
+  "name": "Bulbasaur",
+  "types": [
+    "GRASS",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 49,
+    "def": 49,
+    "spa": 65,
+    "spd": 65,
+    "spe": 45
+  },
+  "catchRate": 45,
+  "expYield": 64,
+  "modelId": "bulbasaur",
+  "learnset": {
+    "1": [
+      "tackle",
+      "growl"
+    ],
+    "3": [
+      "vine_whip"
+    ],
+    "6": [
+      "growth"
+    ],
+    "9": [
+      "leech_seed"
+    ],
+    "12": [
+      "razor_leaf"
+    ],
+    "15": [
+      "poison_powder",
+      "sleep_powder"
+    ],
+    "18": [
+      "seed_bomb"
+    ],
+    "21": [
+      "take_down"
+    ],
+    "24": [
+      "sweet_scent"
+    ],
+    "27": [
+      "synthesis"
+    ],
+    "30": [
+      "worry_seed"
+    ],
+    "33": [
+      "power_whip"
+    ],
+    "36": [
+      "solar_beam"
+    ]
+  },
+  "evolution": {
+    "level": 16,
+    "to": "ivysaur"
+  },
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "PLAINS",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST"
+    ],
+    "weight": 10,
+    "minLevel": 3,
+    "maxLevel": 8
+  }
 }

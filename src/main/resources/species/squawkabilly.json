@@ -19,31 +19,48 @@
   "modelId": "squawkabilly",
   "learnset": {
     "1": [
-      "scratch"
+      "growl",
+      "peck",
+      "mimic"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
+    "6": [
       "quick_attack"
     ],
+    "10": [
+      "torment"
+    ],
+    "13": [
+      "aerial_ace"
+    ],
+    "17": [
+      "fury_attack"
+    ],
     "20": [
-      "gust"
+      "taunt"
     ],
-    "32": [
-      "hyper_fang"
+    "24": [
+      "uproar"
     ],
-    "40": [
-      "wing_attack"
+    "27": [
+      "copycat"
     ],
-    "48": [
-      "mega_punch"
+    "30": [
+      "fly"
     ],
-    "26": [
-      "swords_dance"
+    "34": [
+      "facade"
+    ],
+    "38": [
+      "swagger"
+    ],
+    "42": [
+      "brave_bird"
+    ],
+    "47": [
+      "roost"
+    ],
+    "52": [
+      "reversal"
     ]
   },
   "evolution": null,

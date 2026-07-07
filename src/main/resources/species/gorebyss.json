@@ -18,28 +18,51 @@
   "modelId": "gorebyss",
   "learnset": {
     "1": [
-      "pound"
+      "whirlpool",
+      "confusion",
+      "iron_defense",
+      "water_gun",
+      "shell_smash",
+      "clamp"
     ],
-    "4": [
-      "tail_whip"
+    "5": [
+      "water_sport"
     ],
-    "8": [
-      "water_gun"
+    "9": [
+      "agility"
+    ],
+    "11": [
+      "draining_kiss"
     ],
     "14": [
-      "bubble_beam"
+      "water_pulse"
     ],
-    "20": [
-      "waterfall"
+    "16": [
+      "amnesia"
     ],
-    "32": [
-      "surf"
+    "19": [
+      "aqua_ring"
     ],
-    "40": [
-      "hydro_pump"
+    "23": [
+      "captivate"
     ],
     "26": [
-      "calm_mind"
+      "dive"
+    ],
+    "29": [
+      "baton_pass"
+    ],
+    "34": [
+      "psychic"
+    ],
+    "39": [
+      "aqua_tail"
+    ],
+    "45": [
+      "coil"
+    ],
+    "50": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

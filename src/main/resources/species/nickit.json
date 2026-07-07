@@ -18,19 +18,35 @@
   "modelId": "nickit",
   "learnset": {
     "1": [
-      "pound"
+      "quick_attack",
+      "tail_whip"
     ],
     "4": [
-      "leer"
+      "beat_up"
     ],
     "8": [
-      "bite"
+      "hone_claws"
     ],
-    "14": [
-      "crunch"
+    "12": [
+      "snarl"
     ],
-    "26": [
-      "agility"
+    "16": [
+      "assurance"
+    ],
+    "20": [
+      "nasty_plot"
+    ],
+    "24": [
+      "sucker_punch"
+    ],
+    "28": [
+      "night_slash"
+    ],
+    "32": [
+      "tail_slap"
+    ],
+    "36": [
+      "foul_play"
     ]
   },
   "evolution": null,

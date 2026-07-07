@@ -18,19 +18,44 @@
   "modelId": "klink",
   "learnset": {
     "1": [
-      "pound"
+      "thunder_shock",
+      "mirror_shot"
     ],
     "4": [
-      "harden"
+      "bind"
     ],
     "8": [
-      "steel_wing"
+      "charge"
     ],
-    "14": [
-      "iron_head"
+    "12": [
+      "charge_beam"
     ],
-    "26": [
-      "harden"
+    "16": [
+      "metal_sound"
+    ],
+    "20": [
+      "autotomize"
+    ],
+    "24": [
+      "discharge"
+    ],
+    "28": [
+      "screech"
+    ],
+    "32": [
+      "gear_grind"
+    ],
+    "36": [
+      "lock_on"
+    ],
+    "40": [
+      "shift_gear"
+    ],
+    "44": [
+      "zap_cannon"
+    ],
+    "48": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

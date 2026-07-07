@@ -18,19 +18,40 @@
   "modelId": "granbull",
   "learnset": {
     "1": [
-      "tackle"
+      "ice_fang",
+      "fire_fang",
+      "thunder_fang",
+      "tackle",
+      "scary_face",
+      "tail_whip",
+      "charm",
+      "rage",
+      "outrage",
+      "growl"
     ],
-    "4": [
-      "sing"
+    "7": [
+      "bite"
     ],
-    "8": [
-      "fairy_wind"
+    "13": [
+      "lick"
     ],
-    "14": [
-      "dazzling_gleam"
+    "19": [
+      "headbutt"
     ],
-    "26": [
-      "swords_dance"
+    "27": [
+      "roar"
+    ],
+    "35": [
+      "last_resort"
+    ],
+    "43": [
+      "play_rough"
+    ],
+    "51": [
+      "payback"
+    ],
+    "59": [
+      "crunch"
     ]
   },
   "evolution": null,

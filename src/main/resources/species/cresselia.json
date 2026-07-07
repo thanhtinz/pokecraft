@@ -18,22 +18,45 @@
   "modelId": "cresselia",
   "learnset": {
     "1": [
-      "pound"
+      "confusion",
+      "double_team"
     ],
-    "4": [
-      "hypnosis"
+    "6": [
+      "mist"
     ],
-    "8": [
-      "confusion"
+    "12": [
+      "aurora_beam"
     ],
-    "14": [
+    "18": [
       "psybeam"
     ],
-    "20": [
+    "24": [
+      "psycho_shift"
+    ],
+    "30": [
+      "slash"
+    ],
+    "36": [
+      "psycho_cut"
+    ],
+    "42": [
+      "moonlight"
+    ],
+    "48": [
+      "safeguard"
+    ],
+    "54": [
       "psychic"
     ],
-    "26": [
-      "harden"
+    "60": [
+      "moonblast"
+    ],
+    "66": [
+      "future_sight"
+    ],
+    "72": [
+      "lunar_dance",
+      "lunar_blessing"
     ]
   },
   "evolution": null,

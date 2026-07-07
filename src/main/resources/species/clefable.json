@@ -18,19 +18,33 @@
   "modelId": "clefable",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "sing"
-    ],
-    "8": [
-      "fairy_wind"
-    ],
-    "14": [
-      "dazzling_gleam"
-    ],
-    "26": [
-      "calm_mind"
+      "sing",
+      "double_slap",
+      "minimize",
+      "metronome",
+      "gravity",
+      "after_you",
+      "disarming_voice",
+      "spotlight",
+      "sweet_kiss",
+      "encore",
+      "charm",
+      "stored_power",
+      "life_dew",
+      "moonlight",
+      "meteor_mash",
+      "follow_me",
+      "cosmic_power",
+      "moonblast",
+      "healing_wish",
+      "splash",
+      "pound",
+      "copycat",
+      "growl",
+      "defense_curl",
+      "wake_up_slap",
+      "lucky_chant",
+      "bestow"
     ]
   },
   "evolution": null,

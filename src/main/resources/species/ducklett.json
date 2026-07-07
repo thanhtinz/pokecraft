@@ -19,31 +19,47 @@
   "modelId": "ducklett",
   "learnset": {
     "1": [
-      "scratch"
+      "water_gun",
+      "water_sport"
     ],
-    "4": [
-      "tail_whip"
+    "6": [
+      "defog"
     ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "peck"
-    ],
-    "20": [
-      "bubble_beam"
-    ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "waterfall"
-    ],
-    "48": [
+    "9": [
       "wing_attack"
     ],
-    "26": [
-      "agility"
+    "13": [
+      "water_pulse"
+    ],
+    "15": [
+      "aerial_ace"
+    ],
+    "19": [
+      "bubble_beam"
+    ],
+    "21": [
+      "feather_dance"
+    ],
+    "24": [
+      "aqua_ring"
+    ],
+    "27": [
+      "air_slash"
+    ],
+    "30": [
+      "roost"
+    ],
+    "34": [
+      "rain_dance"
+    ],
+    "37": [
+      "tailwind"
+    ],
+    "41": [
+      "brave_bird"
+    ],
+    "46": [
+      "hurricane"
     ]
   },
   "evolution": null,

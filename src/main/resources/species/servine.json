@@ -18,28 +18,40 @@
   "modelId": "servine",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "leer",
+      "vine_whip",
+      "wrap"
     ],
-    "4": [
-      "sleep_powder"
+    "13": [
+      "growth"
     ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
-      "razor_leaf"
+    "16": [
+      "leaf_tornado"
     ],
     "20": [
-      "seed_bomb"
+      "leech_seed"
+    ],
+    "24": [
+      "mega_drain"
+    ],
+    "28": [
+      "slam"
     ],
     "32": [
-      "petal_dance"
+      "leaf_blade"
+    ],
+    "36": [
+      "coil"
     ],
     "40": [
-      "solar_beam"
+      "giga_drain"
     ],
-    "26": [
-      "agility"
+    "44": [
+      "wring_out"
+    ],
+    "48": [
+      "leaf_storm"
     ]
   },
   "evolution": null,

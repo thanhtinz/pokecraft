@@ -18,19 +18,52 @@
   "modelId": "accelgor",
   "learnset": {
     "1": [
-      "pound"
+      "acid_spray",
+      "double_team",
+      "quick_attack",
+      "me_first",
+      "water_shuriken",
+      "absorb",
+      "acid",
+      "curse",
+      "yawn",
+      "acid_armor",
+      "guard_swap",
+      "body_slam",
+      "bide"
     ],
-    "4": [
-      "string_shot"
+    "12": [
+      "mega_drain"
     ],
-    "8": [
-      "bug_bite"
+    "16": [
+      "struggle_bug"
     ],
-    "14": [
-      "pin_missile"
+    "20": [
+      "swift"
     ],
-    "26": [
+    "24": [
       "agility"
+    ],
+    "28": [
+      "giga_drain"
+    ],
+    "32": [
+      "power_swap"
+    ],
+    "36": [
+      "u_turn"
+    ],
+    "40": [
+      "recover"
+    ],
+    "44": [
+      "bug_buzz"
+    ],
+    "48": [
+      "final_gambit"
+    ],
+    "52": [
+      "toxic"
     ]
   },
   "evolution": null,

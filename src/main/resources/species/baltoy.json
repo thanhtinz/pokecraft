@@ -19,31 +19,52 @@
   "modelId": "baltoy",
   "learnset": {
     "1": [
-      "scratch"
+      "harden",
+      "mud_slap",
+      "heal_block"
     ],
-    "4": [
-      "leer"
+    "3": [
+      "rapid_spin"
     ],
-    "8": [
+    "6": [
       "confusion"
     ],
-    "14": [
-      "sand_tomb"
+    "9": [
+      "rock_tomb"
     ],
-    "20": [
+    "12": [
+      "power_trick"
+    ],
+    "15": [
       "psybeam"
     ],
-    "32": [
-      "dig"
+    "18": [
+      "ancient_power"
     ],
-    "40": [
-      "psychic"
+    "21": [
+      "imprison"
     ],
-    "48": [
-      "earthquake"
+    "24": [
+      "cosmic_power"
     ],
-    "26": [
-      "harden"
+    "27": [
+      "extrasensory"
+    ],
+    "30": [
+      "earth_power"
+    ],
+    "33": [
+      "self_destruct"
+    ],
+    "36": [
+      "guard_split",
+      "power_split"
+    ],
+    "39": [
+      "sandstorm"
+    ],
+    "42": [
+      "explosion"
     ]
   },
   "evolution": null,

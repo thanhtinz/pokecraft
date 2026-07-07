@@ -18,28 +18,36 @@
   "modelId": "wiglett",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "sand_attack",
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "4": [
+      "mud_slap"
+    ],
+    "8": [
+      "wrap"
+    ],
+    "12": [
+      "aqua_jet"
     ],
     "20": [
-      "waterfall"
+      "slam",
+      "water_pulse"
+    ],
+    "24": [
+      "headbutt"
+    ],
+    "28": [
+      "dig"
     ],
     "32": [
-      "surf"
+      "sucker_punch"
+    ],
+    "36": [
+      "throat_chop"
     ],
     "40": [
-      "hydro_pump"
-    ],
-    "26": [
-      "agility"
+      "liquidation"
     ]
   },
   "evolution": null,

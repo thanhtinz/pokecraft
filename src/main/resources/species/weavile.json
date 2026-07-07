@@ -19,31 +19,46 @@
   "modelId": "weavile",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+      "embargo",
+      "revenge",
+      "assurance",
+      "scratch",
+      "leer",
+      "taunt",
+      "quick_attack",
+      "feint_attack",
+      "punishment",
+      "beat_up",
+      "agility",
+      "slash",
       "ice_shard"
     ],
-    "14": [
-      "bite"
+    "18": [
+      "metal_claw"
     ],
-    "20": [
-      "aurora_beam"
+    "24": [
+      "icy_wind"
     ],
-    "32": [
-      "crunch"
+    "30": [
+      "fury_swipes"
     ],
-    "40": [
-      "ice_beam"
+    "36": [
+      "hone_claws"
+    ],
+    "42": [
+      "fling"
     ],
     "48": [
-      "blizzard"
+      "nasty_plot"
     ],
-    "26": [
-      "agility"
+    "54": [
+      "screech"
+    ],
+    "60": [
+      "night_slash"
+    ],
+    "66": [
+      "dark_pulse"
     ]
   },
   "evolution": null,

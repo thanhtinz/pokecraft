@@ -19,31 +19,56 @@
   "modelId": "drapion",
   "learnset": {
     "1": [
-      "pound"
+      "thunder_fang",
+      "ice_fang",
+      "fire_fang",
+      "poison_sting",
+      "leer",
+      "pursuit",
+      "hone_claws",
+      "fell_stinger"
     ],
-    "4": [
-      "poison_powder"
+    "9": [
+      "poison_fang"
     ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
+    "12": [
       "bite"
     ],
-    "20": [
-      "acid"
+    "15": [
+      "toxic_spikes"
     ],
-    "32": [
+    "18": [
+      "bug_bite"
+    ],
+    "21": [
+      "venoshock"
+    ],
+    "24": [
+      "knock_off"
+    ],
+    "27": [
+      "scary_face"
+    ],
+    "30": [
+      "pin_missile"
+    ],
+    "33": [
+      "toxic"
+    ],
+    "36": [
+      "night_slash"
+    ],
+    "39": [
+      "cross_poison"
+    ],
+    "44": [
+      "x_scissor"
+    ],
+    "49": [
+      "acupressure"
+    ],
+    "54": [
       "crunch"
-    ],
-    "40": [
-      "sludge"
-    ],
-    "48": [
-      "sludge_bomb"
-    ],
-    "26": [
-      "harden"
     ]
   },
   "evolution": null,

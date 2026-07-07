@@ -18,28 +18,39 @@
   "modelId": "sprigatito",
   "learnset": {
     "1": [
-      "tackle"
+      "scratch",
+      "tail_whip",
+      "leafage"
     ],
-    "4": [
-      "sleep_powder"
+    "7": [
+      "bite"
     ],
-    "8": [
-      "vine_whip"
+    "10": [
+      "hone_claws"
     ],
-    "14": [
-      "razor_leaf"
+    "13": [
+      "magical_leaf"
     ],
-    "20": [
+    "15": [
+      "quick_attack"
+    ],
+    "17": [
       "seed_bomb"
     ],
+    "21": [
+      "u_turn"
+    ],
+    "25": [
+      "worry_seed"
+    ],
+    "28": [
+      "slash"
+    ],
     "32": [
-      "petal_dance"
+      "energy_ball"
     ],
-    "40": [
-      "solar_beam"
-    ],
-    "26": [
-      "agility"
+    "36": [
+      "play_rough"
     ]
   },
   "evolution": null,

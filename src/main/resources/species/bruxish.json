@@ -19,31 +19,41 @@
   "modelId": "bruxish",
   "learnset": {
     "1": [
-      "pound"
+      "water_gun",
+      "psywave"
     ],
     "4": [
-      "tail_whip"
+      "astonish"
     ],
-    "8": [
+    "9": [
       "confusion"
     ],
-    "14": [
-      "water_gun"
+    "12": [
+      "bite"
+    ],
+    "17": [
+      "aqua_jet"
     ],
     "20": [
-      "psybeam"
+      "disable"
     ],
-    "32": [
-      "bubble_beam"
+    "25": [
+      "psyshock"
     ],
-    "40": [
-      "psychic"
+    "28": [
+      "crunch"
     ],
-    "48": [
-      "waterfall"
+    "33": [
+      "aqua_tail"
     ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "screech"
+    ],
+    "41": [
+      "psychic_fangs"
+    ],
+    "44": [
+      "wave_crash"
     ]
   },
   "evolution": null,

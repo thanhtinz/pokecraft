@@ -19,31 +19,61 @@
   "modelId": "lucario",
   "learnset": {
     "1": [
-      "scratch"
+      "quick_attack",
+      "foresight",
+      "detect",
+      "metal_claw",
+      "feint",
+      "me_first",
+      "aura_sphere",
+      "helping_hand",
+      "vacuum_wave",
+      "rock_smash",
+      "laser_focus",
+      "life_dew",
+      "screech",
+      "copycat",
+      "final_gambit",
+      "reversal"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "counter"
     ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
-      "steel_wing"
+    "16": [
+      "work_up"
     ],
     "20": [
-      "low_kick"
+      "force_palm"
+    ],
+    "24": [
+      "calm_mind"
+    ],
+    "28": [
+      "metal_sound"
     ],
     "32": [
-      "iron_head"
+      "quick_guard"
+    ],
+    "36": [
+      "bone_rush"
     ],
     "40": [
-      "brick_break"
+      "swords_dance"
+    ],
+    "44": [
+      "heal_pulse"
     ],
     "48": [
-      "cross_chop"
+      "meteor_mash"
     ],
-    "26": [
-      "calm_mind"
+    "52": [
+      "dragon_pulse"
+    ],
+    "56": [
+      "extreme_speed"
+    ],
+    "60": [
+      "close_combat"
     ]
   },
   "evolution": null,

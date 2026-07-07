@@ -18,22 +18,44 @@
   "modelId": "nacli",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
+      "tackle",
       "harden"
     ],
-    "8": [
+    "5": [
       "rock_throw"
     ],
-    "14": [
-      "rock_slide"
+    "7": [
+      "mud_shot"
+    ],
+    "10": [
+      "smack_down"
+    ],
+    "13": [
+      "rock_polish"
+    ],
+    "16": [
+      "headbutt"
     ],
     "20": [
-      "stone_edge"
+      "iron_defense"
     ],
-    "26": [
-      "harden"
+    "25": [
+      "recover"
+    ],
+    "30": [
+      "rock_slide"
+    ],
+    "33": [
+      "stealth_rock"
+    ],
+    "35": [
+      "heavy_slam"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "45": [
+      "stone_edge"
     ]
   },
   "evolution": null,

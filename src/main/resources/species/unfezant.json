@@ -19,31 +19,38 @@
   "modelId": "unfezant",
   "learnset": {
     "1": [
-      "pound"
+      "gust",
+      "growl",
+      "leer",
+      "quick_attack",
+      "razor_wind"
     ],
-    "4": [
-      "growl"
+    "12": [
+      "taunt"
     ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "quick_attack"
+    "16": [
+      "air_cutter"
     ],
     "20": [
-      "gust"
-    ],
-    "32": [
-      "hyper_fang"
-    ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "mega_punch"
+      "swagger"
     ],
     "26": [
-      "swords_dance"
+      "feather_dance"
+    ],
+    "36": [
+      "detect"
+    ],
+    "42": [
+      "air_slash"
+    ],
+    "50": [
+      "roost"
+    ],
+    "58": [
+      "tailwind"
+    ],
+    "66": [
+      "sky_attack"
     ]
   },
   "evolution": null,

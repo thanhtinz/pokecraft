@@ -19,31 +19,53 @@
   "modelId": "zarude",
   "learnset": {
     "1": [
-      "pound"
+      "bind",
+      "scratch"
     ],
-    "4": [
+    "6": [
       "leer"
     ],
-    "8": [
+    "12": [
       "vine_whip"
     ],
-    "14": [
+    "18": [
+      "growth"
+    ],
+    "24": [
+      "fury_swipes"
+    ],
+    "30": [
+      "scary_face"
+    ],
+    "36": [
+      "grass_knot"
+    ],
+    "42": [
       "bite"
     ],
-    "20": [
-      "razor_leaf"
-    ],
-    "32": [
-      "crunch"
-    ],
-    "40": [
-      "seed_bomb"
-    ],
     "48": [
-      "petal_dance"
+      "u_turn"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "swagger"
+    ],
+    "60": [
+      "energy_ball"
+    ],
+    "66": [
+      "synthesis"
+    ],
+    "72": [
+      "hammer_arm"
+    ],
+    "78": [
+      "thrash"
+    ],
+    "84": [
+      "power_whip"
+    ],
+    "90": [
+      "jungle_healing"
     ]
   },
   "evolution": null,

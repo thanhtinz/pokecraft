@@ -19,31 +19,42 @@
   "modelId": "dipplin",
   "learnset": {
     "1": [
-      "tackle"
+      "double_hit",
+      "withdraw",
+      "sweet_scent",
+      "recycle",
+      "astonish",
+      "infestation"
     ],
     "4": [
-      "sleep_powder"
+      "dragon_tail"
     ],
     "8": [
-      "twister"
+      "growth"
     ],
-    "14": [
-      "vine_whip"
-    ],
-    "20": [
+    "12": [
       "dragon_breath"
     ],
+    "16": [
+      "protect"
+    ],
+    "20": [
+      "bullet_seed"
+    ],
+    "28": [
+      "syrup_bomb"
+    ],
     "32": [
-      "razor_leaf"
+      "dragon_pulse"
+    ],
+    "36": [
+      "recover"
     ],
     "40": [
-      "dragon_claw"
+      "energy_ball"
     ],
-    "48": [
-      "seed_bomb"
-    ],
-    "26": [
-      "harden"
+    "44": [
+      "substitute"
     ]
   },
   "evolution": null,

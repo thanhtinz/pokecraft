@@ -19,31 +19,24 @@
   "modelId": "starmie",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "water_gun"
-    ],
-    "20": [
-      "psybeam"
-    ],
-    "32": [
-      "bubble_beam"
-    ],
-    "40": [
-      "psychic"
-    ],
-    "48": [
-      "waterfall"
-    ],
-    "26": [
-      "agility"
+      "water_gun",
+      "rapid_spin",
+      "recover",
+      "swift",
+      "confuse_ray",
+      "psychic",
+      "light_screen",
+      "brine",
+      "surf",
+      "hydro_pump",
+      "spotlight",
+      "minimize",
+      "psybeam",
+      "power_gem",
+      "cosmic_power",
+      "tackle",
+      "harden",
+      "psywave"
     ]
   },
   "evolution": null,

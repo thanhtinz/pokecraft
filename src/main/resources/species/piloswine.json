@@ -19,31 +19,44 @@
   "modelId": "piloswine",
   "learnset": {
     "1": [
-      "pound"
+      "ancient_power",
+      "peck",
+      "odor_sleuth",
+      "mud_sport",
+      "powder_snow",
+      "mud_slap",
+      "mud_bomb",
+      "ice_fang",
+      "fury_attack",
+      "tackle",
+      "flail"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
+    "15": [
       "ice_shard"
     ],
     "20": [
-      "dig"
+      "mist"
     ],
-    "32": [
-      "aurora_beam"
+    "25": [
+      "endure"
     ],
-    "40": [
+    "30": [
+      "icy_wind"
+    ],
+    "37": [
+      "amnesia"
+    ],
+    "44": [
+      "take_down"
+    ],
+    "51": [
       "earthquake"
     ],
-    "48": [
-      "ice_beam"
+    "58": [
+      "blizzard"
     ],
-    "26": [
-      "swords_dance"
+    "65": [
+      "thrash"
     ]
   },
   "evolution": null,

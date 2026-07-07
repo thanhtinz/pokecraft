@@ -19,31 +19,44 @@
   "modelId": "kabuto",
   "learnset": {
     "1": [
-      "pound"
+      "harden",
+      "absorb"
     ],
-    "4": [
-      "harden"
+    "5": [
+      "scratch"
     ],
-    "8": [
-      "rock_throw"
+    "10": [
+      "sand_attack"
     ],
-    "14": [
-      "water_gun"
+    "15": [
+      "aqua_jet"
     ],
     "20": [
-      "rock_slide"
+      "leer"
     ],
-    "32": [
-      "bubble_beam"
+    "25": [
+      "mud_shot"
     ],
-    "40": [
+    "30": [
+      "ancient_power"
+    ],
+    "35": [
+      "brine"
+    ],
+    "41": [
+      "protect"
+    ],
+    "45": [
+      "leech_life"
+    ],
+    "50": [
+      "wring_out"
+    ],
+    "55": [
+      "metal_sound"
+    ],
+    "60": [
       "stone_edge"
-    ],
-    "48": [
-      "waterfall"
-    ],
-    "26": [
-      "harden"
     ]
   },
   "evolution": null,

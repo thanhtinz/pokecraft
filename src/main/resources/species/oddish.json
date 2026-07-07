@@ -19,31 +19,44 @@
   "modelId": "oddish",
   "learnset": {
     "1": [
-      "scratch"
+      "absorb",
+      "growth"
     ],
     "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "vine_whip"
-    ],
-    "20": [
       "acid"
     ],
+    "8": [
+      "sweet_scent"
+    ],
+    "12": [
+      "mega_drain"
+    ],
+    "14": [
+      "poison_powder"
+    ],
+    "16": [
+      "stun_spore"
+    ],
+    "18": [
+      "sleep_powder"
+    ],
+    "20": [
+      "giga_drain"
+    ],
+    "24": [
+      "toxic"
+    ],
+    "28": [
+      "moonblast"
+    ],
     "32": [
-      "razor_leaf"
+      "grassy_terrain"
+    ],
+    "36": [
+      "moonlight"
     ],
     "40": [
-      "sludge"
-    ],
-    "48": [
-      "seed_bomb"
-    ],
-    "26": [
-      "calm_mind"
+      "petal_dance"
     ]
   },
   "evolution": null,

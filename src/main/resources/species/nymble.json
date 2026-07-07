@@ -18,19 +18,41 @@
   "modelId": "nymble",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "leer"
     ],
     "4": [
-      "string_shot"
+      "struggle_bug"
     ],
-    "8": [
-      "bug_bite"
+    "6": [
+      "astonish"
+    ],
+    "9": [
+      "assurance"
+    ],
+    "11": [
+      "double_kick"
     ],
     "14": [
-      "pin_missile"
+      "screech"
+    ],
+    "18": [
+      "endure"
+    ],
+    "22": [
+      "bug_bite"
     ],
     "26": [
-      "swords_dance"
+      "feint"
+    ],
+    "30": [
+      "agility"
+    ],
+    "38": [
+      "sucker_punch"
+    ],
+    "41": [
+      "first_impression"
     ]
   },
   "evolution": null,

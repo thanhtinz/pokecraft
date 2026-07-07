@@ -19,31 +19,45 @@
   "modelId": "rufflet",
   "learnset": {
     "1": [
-      "tackle"
+      "peck",
+      "leer",
+      "fury_attack"
     ],
-    "4": [
-      "growl"
+    "6": [
+      "hone_claws"
     ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "quick_attack"
-    ],
-    "20": [
-      "gust"
-    ],
-    "32": [
-      "hyper_fang"
-    ],
-    "40": [
+    "12": [
       "wing_attack"
     ],
-    "48": [
-      "mega_punch"
+    "18": [
+      "tailwind"
     ],
-    "26": [
-      "swords_dance"
+    "24": [
+      "scary_face"
+    ],
+    "30": [
+      "aerial_ace"
+    ],
+    "36": [
+      "slash"
+    ],
+    "42": [
+      "whirlwind"
+    ],
+    "48": [
+      "crush_claw"
+    ],
+    "55": [
+      "air_slash"
+    ],
+    "60": [
+      "defog"
+    ],
+    "66": [
+      "thrash"
+    ],
+    "72": [
+      "brave_bird"
     ]
   },
   "evolution": null,

@@ -18,28 +18,55 @@
   "modelId": "leafeon",
   "learnset": {
     "1": [
-      "pound"
+      "tail_whip",
+      "tackle",
+      "helping_hand",
+      "razor_leaf",
+      "grass_whistle",
+      "swift",
+      "covet",
+      "bite",
+      "copycat",
+      "baton_pass",
+      "take_down",
+      "charm",
+      "double_edge",
+      "growl",
+      "trump_card",
+      "refresh"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "sand_attack"
     ],
-    "8": [
-      "vine_whip"
+    "10": [
+      "quick_attack"
     ],
-    "14": [
-      "razor_leaf"
+    "15": [
+      "baby_doll_eyes"
     ],
     "20": [
-      "seed_bomb"
+      "leech_seed"
     ],
-    "32": [
-      "petal_dance"
+    "25": [
+      "magical_leaf"
+    ],
+    "30": [
+      "synthesis"
+    ],
+    "35": [
+      "sunny_day"
     ],
     "40": [
-      "solar_beam"
+      "giga_drain"
     ],
-    "26": [
-      "harden"
+    "45": [
+      "swords_dance"
+    ],
+    "50": [
+      "leaf_blade"
+    ],
+    "55": [
+      "last_resort"
     ]
   },
   "evolution": null,

@@ -19,31 +19,44 @@
   "modelId": "araquanid",
   "learnset": {
     "1": [
-      "pound"
+      "wide_guard",
+      "bubble",
+      "infestation",
+      "spider_web",
+      "bug_bite",
+      "bite",
+      "water_gun",
+      "water_sport"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "bug_bite"
-    ],
-    "20": [
+    "12": [
       "bubble_beam"
     ],
-    "32": [
-      "pin_missile"
+    "16": [
+      "aqua_ring"
     ],
-    "40": [
-      "waterfall"
-    ],
-    "48": [
-      "surf"
+    "20": [
+      "headbutt"
     ],
     "26": [
-      "harden"
+      "crunch"
+    ],
+    "32": [
+      "soak"
+    ],
+    "38": [
+      "entrainment"
+    ],
+    "44": [
+      "lunge"
+    ],
+    "50": [
+      "liquidation"
+    ],
+    "56": [
+      "leech_life"
+    ],
+    "62": [
+      "mirror_coat"
     ]
   },
   "evolution": null,

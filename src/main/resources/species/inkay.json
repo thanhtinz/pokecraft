@@ -19,28 +19,49 @@
   "modelId": "inkay",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "peck",
+      "constrict",
+      "psywave"
     ],
-    "4": [
-      "leer"
+    "3": [
+      "hypnosis"
     ],
-    "8": [
-      "bite"
+    "6": [
+      "wrap"
     ],
-    "14": [
-      "confusion"
+    "9": [
+      "payback"
     ],
-    "20": [
-      "crunch"
+    "12": [
+      "pluck"
     ],
-    "32": [
+    "15": [
       "psybeam"
     ],
-    "40": [
-      "psychic"
+    "18": [
+      "swagger"
     ],
-    "26": [
-      "swords_dance"
+    "21": [
+      "slash"
+    ],
+    "24": [
+      "night_slash"
+    ],
+    "27": [
+      "psycho_cut"
+    ],
+    "31": [
+      "switcheroo"
+    ],
+    "33": [
+      "foul_play"
+    ],
+    "36": [
+      "topsy_turvy"
+    ],
+    "39": [
+      "superpower"
     ]
   },
   "evolution": null,

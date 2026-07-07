@@ -18,28 +18,45 @@
   "modelId": "litten",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
+      "scratch",
+      "growl",
       "leer"
     ],
-    "8": [
+    "3": [
       "ember"
     ],
-    "14": [
-      "fire_spin"
+    "6": [
+      "lick"
     ],
-    "20": [
-      "fire_punch"
+    "9": [
+      "roar"
     ],
-    "32": [
+    "12": [
+      "fury_swipes"
+    ],
+    "15": [
+      "bite"
+    ],
+    "18": [
+      "double_kick"
+    ],
+    "21": [
+      "fire_fang"
+    ],
+    "24": [
+      "scary_face"
+    ],
+    "27": [
+      "swagger"
+    ],
+    "30": [
       "flamethrower"
     ],
-    "40": [
-      "fire_blast"
+    "33": [
+      "thrash"
     ],
-    "26": [
-      "agility"
+    "36": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

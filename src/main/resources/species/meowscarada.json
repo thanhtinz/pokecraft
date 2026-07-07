@@ -19,31 +19,54 @@
   "modelId": "meowscarada",
   "learnset": {
     "1": [
-      "pound"
+      "flower_trick",
+      "leafage",
+      "scratch",
+      "tail_whip",
+      "double_team",
+      "trick"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
+    "7": [
       "bite"
     ],
+    "10": [
+      "hone_claws"
+    ],
+    "13": [
+      "magical_leaf"
+    ],
+    "15": [
+      "quick_attack"
+    ],
     "20": [
-      "razor_leaf"
-    ],
-    "32": [
-      "crunch"
-    ],
-    "40": [
       "seed_bomb"
     ],
-    "48": [
-      "petal_dance"
+    "24": [
+      "u_turn"
     ],
-    "26": [
-      "agility"
+    "29": [
+      "worry_seed"
+    ],
+    "33": [
+      "slash"
+    ],
+    "38": [
+      "night_slash"
+    ],
+    "42": [
+      "energy_ball"
+    ],
+    "47": [
+      "play_rough"
+    ],
+    "52": [
+      "knock_off"
+    ],
+    "58": [
+      "grassy_terrain"
+    ],
+    "64": [
+      "leaf_storm"
     ]
   },
   "evolution": null,

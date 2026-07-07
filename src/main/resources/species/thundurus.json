@@ -19,31 +19,53 @@
   "modelId": "thundurus",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
+      "astonish",
       "thunder_shock"
     ],
-    "14": [
-      "peck"
+    "5": [
+      "leer"
+    ],
+    "10": [
+      "swagger"
+    ],
+    "15": [
+      "bite"
     ],
     "20": [
-      "spark"
+      "shock_wave"
     ],
-    "32": [
-      "gust"
+    "25": [
+      "heal_block"
+    ],
+    "30": [
+      "charge"
+    ],
+    "35": [
+      "volt_switch"
     ],
     "40": [
-      "thunderbolt"
+      "crunch"
     ],
-    "48": [
-      "wing_attack"
+    "45": [
+      "discharge"
     ],
-    "26": [
-      "calm_mind"
+    "50": [
+      "uproar"
+    ],
+    "55": [
+      "hammer_arm"
+    ],
+    "60": [
+      "rain_dance"
+    ],
+    "65": [
+      "thunder"
+    ],
+    "70": [
+      "thrash"
+    ],
+    "75": [
+      "wildbolt_storm"
     ]
   },
   "evolution": null,

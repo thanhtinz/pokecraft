@@ -18,28 +18,29 @@
   "modelId": "chewtle",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "tackle",
       "water_gun"
     ],
+    "7": [
+      "bite"
+    ],
     "14": [
-      "bubble_beam"
+      "protect"
     ],
-    "20": [
-      "waterfall"
+    "21": [
+      "headbutt"
     ],
-    "32": [
-      "surf"
+    "28": [
+      "counter"
     ],
-    "40": [
-      "hydro_pump"
+    "35": [
+      "jaw_lock"
     ],
-    "26": [
-      "swords_dance"
+    "42": [
+      "liquidation"
+    ],
+    "49": [
+      "body_slam"
     ]
   },
   "evolution": null,

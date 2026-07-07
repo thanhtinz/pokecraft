@@ -18,28 +18,38 @@
   "modelId": "seadra",
   "learnset": {
     "1": [
-      "tackle"
+      "bubble",
+      "smokescreen",
+      "leer",
+      "water_gun",
+      "twister"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "water_gun"
-    ],
-    "14": [
-      "bubble_beam"
+    "15": [
+      "focus_energy"
     ],
     "20": [
-      "waterfall"
+      "dragon_breath"
     ],
-    "32": [
-      "surf"
+    "25": [
+      "bubble_beam"
     ],
-    "40": [
+    "30": [
+      "agility"
+    ],
+    "37": [
+      "water_pulse"
+    ],
+    "44": [
+      "dragon_pulse"
+    ],
+    "51": [
       "hydro_pump"
     ],
-    "26": [
-      "harden"
+    "58": [
+      "dragon_dance"
+    ],
+    "65": [
+      "rain_dance"
     ]
   },
   "evolution": null,

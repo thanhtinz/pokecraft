@@ -19,31 +19,42 @@
   "modelId": "galvantula",
   "learnset": {
     "1": [
-      "pound"
+      "spider_web",
+      "fury_cutter",
+      "electroweb",
+      "bug_bite",
+      "sticky_web",
+      "absorb"
     ],
-    "4": [
+    "12": [
       "string_shot"
     ],
-    "8": [
-      "bug_bite"
-    ],
-    "14": [
-      "thunder_shock"
+    "16": [
+      "thunder_wave"
     ],
     "20": [
-      "pin_missile"
+      "electro_ball"
+    ],
+    "24": [
+      "agility"
+    ],
+    "28": [
+      "sucker_punch"
     ],
     "32": [
-      "spark"
+      "slash"
     ],
-    "40": [
-      "thunderbolt"
+    "39": [
+      "discharge"
     ],
-    "48": [
-      "thunder"
+    "44": [
+      "screech"
     ],
-    "26": [
-      "agility"
+    "50": [
+      "gastro_acid"
+    ],
+    "56": [
+      "bug_buzz"
     ]
   },
   "evolution": null,

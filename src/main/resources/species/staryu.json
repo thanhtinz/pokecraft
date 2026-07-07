@@ -18,28 +18,51 @@
   "modelId": "staryu",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "harden",
+      "psywave"
     ],
     "4": [
-      "tail_whip"
-    ],
-    "8": [
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "8": [
+      "confuse_ray"
+    ],
+    "12": [
+      "rapid_spin"
+    ],
+    "16": [
+      "minimize"
     ],
     "20": [
-      "waterfall"
+      "swift"
+    ],
+    "24": [
+      "psybeam"
+    ],
+    "28": [
+      "brine"
     ],
     "32": [
-      "surf"
+      "light_screen"
+    ],
+    "36": [
+      "power_gem"
     ],
     "40": [
-      "hydro_pump"
+      "psychic"
     ],
-    "26": [
-      "agility"
+    "44": [
+      "surf"
+    ],
+    "48": [
+      "recover"
+    ],
+    "52": [
+      "cosmic_power"
+    ],
+    "56": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

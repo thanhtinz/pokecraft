@@ -19,28 +19,42 @@
   "modelId": "mimikyu",
   "learnset": {
     "1": [
-      "scratch"
+      "wood_hammer",
+      "splash",
+      "scratch",
+      "astonish",
+      "copycat",
+      "feint_attack"
     ],
-    "4": [
-      "hypnosis"
+    "6": [
+      "shadow_sneak"
     ],
-    "8": [
-      "lick"
+    "12": [
+      "double_team"
     ],
-    "14": [
-      "fairy_wind"
+    "18": [
+      "baby_doll_eyes"
     ],
-    "20": [
-      "night_shade"
+    "24": [
+      "mimic"
     ],
-    "32": [
-      "dazzling_gleam"
+    "30": [
+      "hone_claws"
     ],
-    "40": [
-      "shadow_ball"
+    "36": [
+      "slash"
     ],
-    "26": [
-      "agility"
+    "42": [
+      "shadow_claw"
+    ],
+    "48": [
+      "charm"
+    ],
+    "54": [
+      "play_rough"
+    ],
+    "60": [
+      "pain_split"
     ]
   },
   "evolution": null,

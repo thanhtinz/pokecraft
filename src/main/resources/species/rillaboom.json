@@ -18,28 +18,38 @@
   "modelId": "rillaboom",
   "learnset": {
     "1": [
-      "pound"
+      "drum_beating",
+      "double_hit",
+      "grassy_terrain",
+      "noble_roar",
+      "scratch",
+      "growl",
+      "branch_poke",
+      "taunt"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
+    "12": [
       "razor_leaf"
     ],
-    "20": [
-      "seed_bomb"
+    "19": [
+      "screech"
     ],
-    "32": [
-      "petal_dance"
+    "24": [
+      "knock_off"
     ],
-    "40": [
-      "solar_beam"
+    "30": [
+      "slam"
     ],
-    "26": [
-      "swords_dance"
+    "38": [
+      "uproar"
+    ],
+    "46": [
+      "wood_hammer"
+    ],
+    "54": [
+      "endeavor"
+    ],
+    "62": [
+      "boomburst"
     ]
   },
   "evolution": null,

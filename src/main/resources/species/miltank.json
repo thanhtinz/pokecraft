@@ -18,31 +18,43 @@
   "modelId": "miltank",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "growl",
+      "bide",
+      "wake_up_slap"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "rollout"
     ],
-    "8": [
-      "quick_attack"
+    "10": [
+      "defense_curl"
     ],
-    "14": [
-      "hyper_fang"
+    "15": [
+      "stomp"
     ],
     "20": [
-      "mega_punch"
+      "heal_bell"
     ],
-    "32": [
-      "body_slam"
+    "25": [
+      "headbutt"
+    ],
+    "30": [
+      "zen_headbutt"
+    ],
+    "35": [
+      "milk_drink"
     ],
     "40": [
-      "double_edge"
+      "body_slam"
     ],
-    "48": [
-      "hyper_beam"
+    "45": [
+      "play_rough"
     ],
-    "26": [
-      "harden"
+    "50": [
+      "charm"
+    ],
+    "55": [
+      "high_horsepower"
     ]
   },
   "evolution": null,

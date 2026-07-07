@@ -18,28 +18,35 @@
   "modelId": "cherubi",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "morning_sun"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "leafage"
     ],
-    "8": [
-      "vine_whip"
+    "10": [
+      "growth"
     ],
-    "14": [
-      "razor_leaf"
+    "15": [
+      "helping_hand"
     ],
     "20": [
-      "seed_bomb"
-    ],
-    "32": [
-      "petal_dance"
-    ],
-    "40": [
-      "solar_beam"
+      "magical_leaf"
     ],
     "26": [
-      "calm_mind"
+      "leech_seed"
+    ],
+    "30": [
+      "take_down"
+    ],
+    "35": [
+      "petal_blizzard"
+    ],
+    "40": [
+      "lucky_chant"
+    ],
+    "45": [
+      "solar_beam"
     ]
   },
   "evolution": null,

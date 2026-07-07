@@ -18,19 +18,38 @@
   "modelId": "snubbull",
   "learnset": {
     "1": [
-      "pound"
+      "ice_fang",
+      "fire_fang",
+      "thunder_fang",
+      "tackle",
+      "scary_face",
+      "tail_whip",
+      "charm",
+      "growl"
     ],
-    "4": [
-      "sing"
+    "7": [
+      "bite"
     ],
-    "8": [
-      "fairy_wind"
+    "13": [
+      "lick"
     ],
-    "14": [
-      "dazzling_gleam"
+    "19": [
+      "headbutt"
     ],
-    "26": [
-      "swords_dance"
+    "25": [
+      "roar"
+    ],
+    "31": [
+      "rage"
+    ],
+    "37": [
+      "play_rough"
+    ],
+    "43": [
+      "payback"
+    ],
+    "49": [
+      "crunch"
     ]
   },
   "evolution": null,

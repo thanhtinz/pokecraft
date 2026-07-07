@@ -18,25 +18,54 @@
   "modelId": "jolteon",
   "learnset": {
     "1": [
-      "tackle"
+      "tail_whip",
+      "tackle",
+      "helping_hand",
+      "thunder_shock",
+      "swift",
+      "covet",
+      "bite",
+      "copycat",
+      "baton_pass",
+      "take_down",
+      "charm",
+      "double_edge",
+      "growl",
+      "trump_card",
+      "refresh"
     ],
-    "4": [
-      "thunder_wave"
+    "5": [
+      "sand_attack"
     ],
-    "8": [
-      "thunder_shock"
+    "10": [
+      "quick_attack"
     ],
-    "14": [
-      "spark"
+    "15": [
+      "baby_doll_eyes"
     ],
     "20": [
-      "thunderbolt"
+      "thunder_wave"
     ],
-    "32": [
+    "25": [
+      "double_kick"
+    ],
+    "30": [
+      "thunder_fang"
+    ],
+    "35": [
+      "pin_missile"
+    ],
+    "40": [
+      "discharge"
+    ],
+    "45": [
+      "agility"
+    ],
+    "50": [
       "thunder"
     ],
-    "26": [
-      "agility"
+    "55": [
+      "last_resort"
     ]
   },
   "evolution": null,

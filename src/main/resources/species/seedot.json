@@ -18,28 +18,42 @@
   "modelId": "seedot",
   "learnset": {
     "1": [
+      "bide",
+      "harden",
       "tackle"
     ],
-    "4": [
-      "sleep_powder"
+    "3": [
+      "absorb"
     ],
-    "8": [
-      "vine_whip"
+    "6": [
+      "astonish"
     ],
-    "14": [
-      "razor_leaf"
+    "9": [
+      "growth"
     ],
-    "20": [
-      "seed_bomb"
+    "12": [
+      "rollout"
     ],
-    "32": [
-      "petal_dance"
+    "15": [
+      "mega_drain"
     ],
-    "40": [
-      "solar_beam"
+    "18": [
+      "payback"
     ],
-    "26": [
-      "harden"
+    "21": [
+      "headbutt"
+    ],
+    "24": [
+      "sunny_day"
+    ],
+    "27": [
+      "synthesis"
+    ],
+    "30": [
+      "sucker_punch"
+    ],
+    "33": [
+      "explosion"
     ]
   },
   "evolution": null,

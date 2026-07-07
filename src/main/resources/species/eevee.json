@@ -18,31 +18,44 @@
   "modelId": "eevee",
   "learnset": {
     "1": [
-      "scratch"
+      "tail_whip",
+      "tackle",
+      "helping_hand",
+      "growl",
+      "covet"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "sand_attack"
     ],
-    "8": [
+    "10": [
       "quick_attack"
     ],
-    "14": [
-      "hyper_fang"
+    "15": [
+      "baby_doll_eyes"
     ],
     "20": [
-      "mega_punch"
+      "refresh"
     ],
-    "32": [
-      "body_slam"
+    "25": [
+      "bite"
+    ],
+    "30": [
+      "copycat"
+    ],
+    "35": [
+      "baton_pass"
     ],
     "40": [
+      "take_down"
+    ],
+    "45": [
+      "trump_card"
+    ],
+    "50": [
       "double_edge"
     ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "swords_dance"
+    "55": [
+      "last_resort"
     ]
   },
   "evolution": null,

@@ -18,22 +18,40 @@
   "modelId": "beheeyem",
   "learnset": {
     "1": [
-      "tackle"
+      "confusion",
+      "growl",
+      "heal_block",
+      "miracle_eye",
+      "imprison",
+      "simple_beam",
+      "synchronoise",
+      "psychic_terrain",
+      "teleport"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
+    "18": [
       "psybeam"
     ],
-    "20": [
-      "psychic"
+    "24": [
+      "guard_split",
+      "power_split"
     ],
-    "26": [
+    "30": [
+      "headbutt"
+    ],
+    "36": [
+      "zen_headbutt"
+    ],
+    "45": [
+      "recover"
+    ],
+    "52": [
       "calm_mind"
+    ],
+    "60": [
+      "wonder_room"
+    ],
+    "68": [
+      "psychic"
     ]
   },
   "evolution": null,

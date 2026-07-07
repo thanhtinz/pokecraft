@@ -19,31 +19,38 @@
   "modelId": "centiskorch",
   "learnset": {
     "1": [
-      "pound"
+      "inferno",
+      "ember",
+      "smokescreen",
+      "wrap",
+      "bite"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "bug_bite"
-    ],
-    "14": [
-      "ember"
+    "15": [
+      "flame_wheel"
     ],
     "20": [
-      "pin_missile"
+      "bug_bite"
+    ],
+    "25": [
+      "coil"
     ],
     "32": [
+      "slam"
+    ],
+    "39": [
       "fire_spin"
     ],
-    "40": [
-      "fire_punch"
+    "46": [
+      "crunch"
     ],
-    "48": [
-      "flamethrower"
+    "53": [
+      "fire_lash"
     ],
-    "26": [
-      "swords_dance"
+    "60": [
+      "lunge"
+    ],
+    "67": [
+      "burn_up"
     ]
   },
   "evolution": null,

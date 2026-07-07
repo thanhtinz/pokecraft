@@ -18,28 +18,50 @@
   "modelId": "pansear",
   "learnset": {
     "1": [
-      "tackle"
+      "scratch",
+      "play_nice"
     ],
     "4": [
       "leer"
     ],
-    "8": [
-      "ember"
+    "7": [
+      "lick"
     ],
-    "14": [
-      "fire_spin"
+    "10": [
+      "incinerate"
     ],
-    "20": [
-      "fire_punch"
+    "13": [
+      "fury_swipes"
     ],
-    "32": [
-      "flamethrower"
+    "16": [
+      "yawn"
     ],
-    "40": [
+    "19": [
+      "bite"
+    ],
+    "22": [
+      "flame_burst"
+    ],
+    "25": [
+      "amnesia"
+    ],
+    "28": [
+      "fling"
+    ],
+    "31": [
+      "acrobatics"
+    ],
+    "34": [
       "fire_blast"
     ],
-    "26": [
-      "agility"
+    "37": [
+      "recycle"
+    ],
+    "40": [
+      "natural_gift"
+    ],
+    "43": [
+      "crunch"
     ]
   },
   "evolution": null,

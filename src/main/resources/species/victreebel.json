@@ -19,31 +19,29 @@
   "modelId": "victreebel",
   "learnset": {
     "1": [
-      "pound"
+      "stockpile",
+      "swallow",
+      "spit_up",
+      "vine_whip",
+      "sleep_powder",
+      "sweet_scent",
+      "razor_leaf",
+      "leaf_storm",
+      "knock_off",
+      "gastro_acid",
+      "leaf_tornado",
+      "power_whip",
+      "poison_jab",
+      "growth",
+      "wrap",
+      "poison_powder",
+      "stun_spore",
+      "acid",
+      "slam",
+      "wring_out"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "vine_whip"
-    ],
-    "20": [
-      "acid"
-    ],
-    "32": [
-      "razor_leaf"
-    ],
-    "40": [
-      "sludge"
-    ],
-    "48": [
-      "seed_bomb"
-    ],
-    "26": [
-      "swords_dance"
+    "44": [
+      "leaf_blade"
     ]
   },
   "evolution": null,

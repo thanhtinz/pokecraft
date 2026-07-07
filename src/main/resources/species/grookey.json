@@ -18,28 +18,35 @@
   "modelId": "grookey",
   "learnset": {
     "1": [
-      "tackle"
+      "scratch",
+      "growl"
     ],
-    "4": [
-      "sleep_powder"
+    "6": [
+      "branch_poke"
     ],
     "8": [
-      "vine_whip"
+      "taunt"
     ],
-    "14": [
+    "12": [
       "razor_leaf"
     ],
+    "17": [
+      "screech"
+    ],
     "20": [
-      "seed_bomb"
+      "knock_off"
+    ],
+    "24": [
+      "slam"
+    ],
+    "28": [
+      "uproar"
     ],
     "32": [
-      "petal_dance"
+      "wood_hammer"
     ],
-    "40": [
-      "solar_beam"
-    ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "endeavor"
     ]
   },
   "evolution": null,

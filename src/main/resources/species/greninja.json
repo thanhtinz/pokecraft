@@ -19,31 +19,48 @@
   "modelId": "greninja",
   "learnset": {
     "1": [
-      "scratch"
+      "night_slash",
+      "role_play",
+      "mat_block",
+      "pound",
+      "growl",
+      "bubble",
+      "quick_attack",
+      "feint_attack",
+      "water_shuriken",
+      "haze",
+      "water_gun",
+      "round"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
-      "water_gun"
+    "10": [
+      "lick"
     ],
     "14": [
-      "bite"
+      "water_pulse"
     ],
-    "20": [
-      "bubble_beam"
+    "19": [
+      "smokescreen"
     ],
-    "32": [
-      "crunch"
+    "23": [
+      "shadow_sneak"
     ],
-    "40": [
-      "waterfall"
+    "28": [
+      "spikes"
     ],
-    "48": [
-      "surf"
+    "33": [
+      "aerial_ace"
     ],
-    "26": [
-      "agility"
+    "42": [
+      "substitute"
+    ],
+    "49": [
+      "extrasensory"
+    ],
+    "56": [
+      "double_team"
+    ],
+    "68": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

@@ -18,25 +18,44 @@
   "modelId": "glalie",
   "learnset": {
     "1": [
-      "pound"
+      "powder_snow",
+      "leer",
+      "double_team",
+      "headbutt",
+      "sheer_cold",
+      "freeze_dry",
+      "ice_ball",
+      "astonish"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+    "15": [
       "ice_shard"
     ],
-    "14": [
-      "aurora_beam"
-    ],
     "20": [
-      "ice_beam"
+      "protect"
     ],
-    "32": [
+    "25": [
+      "icy_wind"
+    ],
+    "30": [
+      "frost_breath"
+    ],
+    "35": [
+      "bite"
+    ],
+    "40": [
+      "ice_fang"
+    ],
+    "47": [
+      "snowscape"
+    ],
+    "54": [
+      "weather_ball"
+    ],
+    "61": [
+      "crunch"
+    ],
+    "68": [
       "blizzard"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

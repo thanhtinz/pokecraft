@@ -19,31 +19,42 @@
   "modelId": "larvesta",
   "learnset": {
     "1": [
-      "tackle"
+      "ember",
+      "string_shot",
+      "absorb"
     ],
-    "4": [
-      "string_shot"
+    "6": [
+      "flame_charge"
     ],
-    "8": [
+    "12": [
+      "struggle_bug"
+    ],
+    "18": [
+      "flame_wheel"
+    ],
+    "24": [
       "bug_bite"
     ],
-    "14": [
-      "ember"
+    "30": [
+      "screech"
     ],
-    "20": [
-      "pin_missile"
+    "36": [
+      "leech_life"
     ],
-    "32": [
-      "fire_spin"
-    ],
-    "40": [
-      "fire_punch"
+    "42": [
+      "bug_buzz"
     ],
     "48": [
-      "flamethrower"
+      "take_down"
     ],
-    "26": [
-      "swords_dance"
+    "54": [
+      "amnesia"
+    ],
+    "60": [
+      "double_edge"
+    ],
+    "66": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

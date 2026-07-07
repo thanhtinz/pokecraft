@@ -19,31 +19,40 @@
   "modelId": "swinub",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "odor_sleuth",
+      "mud_sport",
+      "mud_slap"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "powder_snow"
     ],
-    "8": [
+    "10": [
+      "flail"
+    ],
+    "15": [
       "ice_shard"
     ],
-    "14": [
-      "sand_tomb"
-    ],
     "20": [
-      "aurora_beam"
+      "mist"
     ],
-    "32": [
-      "dig"
+    "25": [
+      "endure"
+    ],
+    "30": [
+      "icy_wind"
+    ],
+    "35": [
+      "amnesia"
     ],
     "40": [
-      "ice_beam"
+      "take_down"
     ],
-    "48": [
+    "45": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "blizzard"
     ]
   },
   "evolution": null,

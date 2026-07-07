@@ -18,28 +18,53 @@
   "modelId": "luvdisc",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "charm",
+      "lucky_chant",
+      "captivate",
+      "heart_stamp"
     ],
     "4": [
-      "tail_whip"
-    ],
-    "8": [
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "7": [
+      "agility"
+    ],
+    "13": [
+      "wish"
+    ],
+    "17": [
+      "water_pulse"
     ],
     "20": [
-      "waterfall"
+      "attract"
     ],
-    "32": [
-      "surf"
-    ],
-    "40": [
-      "hydro_pump"
+    "22": [
+      "draining_kiss"
     ],
     "26": [
-      "agility"
+      "flail"
+    ],
+    "31": [
+      "sweet_kiss"
+    ],
+    "34": [
+      "take_down"
+    ],
+    "37": [
+      "baby_doll_eyes"
+    ],
+    "40": [
+      "aqua_ring"
+    ],
+    "42": [
+      "soak"
+    ],
+    "46": [
+      "hydro_pump"
+    ],
+    "49": [
+      "safeguard"
     ]
   },
   "evolution": null,

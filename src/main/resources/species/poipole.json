@@ -18,25 +18,38 @@
   "modelId": "poipole",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "poison_powder"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
+      "dragon_pulse",
+      "peck",
+      "growl",
+      "helping_hand",
       "acid"
     ],
-    "20": [
-      "sludge"
+    "7": [
+      "fury_attack"
     ],
-    "32": [
-      "sludge_bomb"
+    "14": [
+      "fell_stinger"
     ],
-    "26": [
-      "swords_dance"
+    "21": [
+      "charm"
+    ],
+    "28": [
+      "venoshock"
+    ],
+    "35": [
+      "venom_drench"
+    ],
+    "42": [
+      "nasty_plot"
+    ],
+    "49": [
+      "poison_jab"
+    ],
+    "56": [
+      "gastro_acid"
+    ],
+    "63": [
+      "toxic"
     ]
   },
   "evolution": null,

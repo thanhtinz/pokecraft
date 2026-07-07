@@ -18,28 +18,42 @@
   "modelId": "brionne",
   "learnset": {
     "1": [
-      "tackle"
+      "pound",
+      "water_gun",
+      "growl",
+      "disarming_voice",
+      "double_slap",
+      "captivate"
     ],
-    "4": [
-      "tail_whip"
+    "9": [
+      "aqua_jet"
     ],
-    "8": [
-      "water_gun"
+    "12": [
+      "baby_doll_eyes"
     ],
-    "14": [
-      "bubble_beam"
+    "15": [
+      "icy_wind"
     ],
     "20": [
-      "waterfall"
+      "sing"
     ],
-    "32": [
-      "surf"
+    "25": [
+      "bubble_beam"
+    ],
+    "30": [
+      "encore"
+    ],
+    "35": [
+      "misty_terrain"
     ],
     "40": [
-      "hydro_pump"
+      "hyper_voice"
     ],
-    "26": [
-      "calm_mind"
+    "45": [
+      "moonblast"
+    ],
+    "50": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

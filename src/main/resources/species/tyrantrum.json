@@ -19,31 +19,47 @@
   "modelId": "tyrantrum",
   "learnset": {
     "1": [
-      "scratch"
+      "tail_whip",
+      "tackle",
+      "roar",
+      "bide",
+      "ancient_power"
     ],
-    "4": [
-      "harden"
+    "12": [
+      "charm"
     ],
-    "8": [
-      "twister"
-    ],
-    "14": [
-      "rock_throw"
+    "16": [
+      "bite"
     ],
     "20": [
-      "dragon_breath"
+      "dragon_tail"
     ],
-    "32": [
+    "24": [
+      "stomp"
+    ],
+    "28": [
       "rock_slide"
     ],
-    "40": [
+    "32": [
+      "crunch"
+    ],
+    "36": [
       "dragon_claw"
     ],
-    "48": [
-      "stone_edge"
+    "42": [
+      "thrash"
     ],
-    "26": [
-      "swords_dance"
+    "48": [
+      "earthquake"
+    ],
+    "54": [
+      "horn_drill"
+    ],
+    "60": [
+      "giga_impact"
+    ],
+    "66": [
+      "head_smash"
     ]
   },
   "evolution": null,

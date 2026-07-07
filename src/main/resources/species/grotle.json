@@ -18,28 +18,36 @@
   "modelId": "grotle",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "withdraw",
+      "absorb"
     ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "vine_whip"
-    ],
-    "14": [
+    "13": [
       "razor_leaf"
     ],
-    "20": [
-      "seed_bomb"
+    "17": [
+      "curse"
+    ],
+    "22": [
+      "bite"
+    ],
+    "27": [
+      "mega_drain"
     ],
     "32": [
-      "petal_dance"
+      "leech_seed"
     ],
-    "40": [
-      "solar_beam"
+    "37": [
+      "synthesis"
     ],
-    "26": [
-      "swords_dance"
+    "42": [
+      "crunch"
+    ],
+    "47": [
+      "giga_drain"
+    ],
+    "52": [
+      "leaf_storm"
     ]
   },
   "evolution": null,

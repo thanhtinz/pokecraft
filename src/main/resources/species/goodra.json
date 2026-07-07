@@ -18,25 +18,42 @@
   "modelId": "goodra",
   "learnset": {
     "1": [
-      "scratch"
+      "feint",
+      "tackle",
+      "bubble",
+      "absorb",
+      "bide",
+      "dragon_breath",
+      "aqua_tail",
+      "acid_spray",
+      "poison_tail",
+      "tearful_look",
+      "water_gun",
+      "acid_armor"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "twister"
-    ],
-    "14": [
-      "dragon_breath"
+    "15": [
+      "protect"
     ],
     "20": [
-      "dragon_claw"
+      "flail"
     ],
-    "32": [
-      "outrage"
+    "25": [
+      "water_pulse"
     ],
-    "26": [
-      "calm_mind"
+    "30": [
+      "rain_dance"
+    ],
+    "43": [
+      "curse"
+    ],
+    "49": [
+      "body_slam"
+    ],
+    "58": [
+      "muddy_water"
+    ],
+    "67": [
+      "power_whip"
     ]
   },
   "evolution": null,

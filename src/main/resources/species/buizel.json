@@ -18,28 +18,51 @@
   "modelId": "buizel",
   "learnset": {
     "1": [
-      "scratch"
+      "sonic_boom",
+      "water_sport",
+      "tackle"
     ],
     "4": [
-      "tail_whip"
+      "growl"
     ],
-    "8": [
+    "7": [
+      "soak"
+    ],
+    "11": [
+      "quick_attack"
+    ],
+    "15": [
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "18": [
+      "pursuit"
     ],
-    "20": [
-      "waterfall"
+    "21": [
+      "swift"
     ],
-    "32": [
-      "surf"
+    "24": [
+      "aqua_jet"
     ],
-    "40": [
+    "27": [
+      "double_hit"
+    ],
+    "31": [
+      "whirlpool"
+    ],
+    "35": [
+      "razor_wind"
+    ],
+    "38": [
+      "aqua_tail"
+    ],
+    "41": [
+      "agility"
+    ],
+    "45": [
       "hydro_pump"
     ],
-    "26": [
-      "agility"
+    "49": [
+      "wave_crash"
     ]
   },
   "evolution": null,

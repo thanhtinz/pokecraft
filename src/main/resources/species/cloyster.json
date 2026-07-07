@@ -19,31 +19,27 @@
   "modelId": "cloyster",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "toxic_spikes",
+      "withdraw",
+      "supersonic",
+      "aurora_beam",
+      "protect",
+      "spikes",
+      "spike_cannon",
+      "ice_beam",
+      "whirlpool",
+      "iron_defense",
+      "icicle_crash",
+      "hydro_pump",
+      "shell_smash",
+      "icicle_spear",
+      "leer",
+      "tackle",
+      "water_gun",
       "ice_shard"
     ],
-    "14": [
-      "water_gun"
-    ],
-    "20": [
-      "aurora_beam"
-    ],
-    "32": [
-      "bubble_beam"
-    ],
-    "40": [
-      "ice_beam"
-    ],
-    "48": [
-      "waterfall"
-    ],
-    "26": [
-      "harden"
+    "5": [
+      "razor_shell"
     ]
   },
   "evolution": null,

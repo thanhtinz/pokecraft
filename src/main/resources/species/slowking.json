@@ -19,31 +19,53 @@
   "modelId": "slowking",
   "learnset": {
     "1": [
-      "scratch"
+      "power_gem",
+      "curse",
+      "tackle",
+      "growl",
+      "water_gun",
+      "zen_headbutt",
+      "nasty_plot",
+      "trump_card",
+      "swagger",
+      "future_sight",
+      "chilly_reception"
     ],
-    "4": [
-      "tail_whip"
+    "9": [
+      "yawn"
     ],
-    "8": [
+    "12": [
       "confusion"
     ],
-    "14": [
-      "water_gun"
+    "15": [
+      "disable"
     ],
-    "20": [
-      "psybeam"
+    "18": [
+      "water_pulse"
     ],
-    "32": [
-      "bubble_beam"
+    "21": [
+      "headbutt"
     ],
-    "40": [
+    "27": [
+      "amnesia"
+    ],
+    "30": [
+      "surf"
+    ],
+    "33": [
+      "slack_off"
+    ],
+    "36": [
       "psychic"
     ],
-    "48": [
-      "waterfall"
+    "39": [
+      "psych_up"
     ],
-    "26": [
-      "calm_mind"
+    "42": [
+      "rain_dance"
+    ],
+    "45": [
+      "heal_pulse"
     ]
   },
   "evolution": null,

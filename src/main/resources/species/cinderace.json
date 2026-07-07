@@ -18,28 +18,36 @@
   "modelId": "cinderace",
   "learnset": {
     "1": [
-      "pound"
+      "pyro_ball",
+      "feint",
+      "tackle",
+      "growl",
+      "ember",
+      "quick_attack"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "double_kick"
     ],
-    "8": [
-      "ember"
+    "19": [
+      "flame_charge"
     ],
-    "14": [
-      "fire_spin"
-    ],
-    "20": [
-      "fire_punch"
-    ],
-    "32": [
-      "flamethrower"
-    ],
-    "40": [
-      "fire_blast"
-    ],
-    "26": [
+    "24": [
       "agility"
+    ],
+    "30": [
+      "headbutt"
+    ],
+    "38": [
+      "counter"
+    ],
+    "46": [
+      "bounce"
+    ],
+    "54": [
+      "double_edge"
+    ],
+    "62": [
+      "court_change"
     ]
   },
   "evolution": null,

@@ -18,28 +18,46 @@
   "modelId": "psyduck",
   "learnset": {
     "1": [
-      "tackle"
+      "water_sport",
+      "scratch",
+      "tail_whip",
+      "bubble"
     ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+    "3": [
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "6": [
+      "confusion"
     ],
-    "20": [
-      "waterfall"
+    "9": [
+      "fury_swipes"
     ],
-    "32": [
-      "surf"
+    "12": [
+      "water_pulse"
     ],
-    "40": [
-      "hydro_pump"
+    "15": [
+      "disable"
     ],
-    "26": [
-      "calm_mind"
+    "18": [
+      "zen_headbutt"
+    ],
+    "21": [
+      "screech"
+    ],
+    "24": [
+      "aqua_tail"
+    ],
+    "27": [
+      "soak"
+    ],
+    "30": [
+      "psych_up"
+    ],
+    "34": [
+      "amnesia"
+    ],
+    "39": [
+      "wonder_room"
     ]
   },
   "evolution": null,

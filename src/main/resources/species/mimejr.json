@@ -19,28 +19,53 @@
   "modelId": "mimejr",
   "learnset": {
     "1": [
-      "scratch"
+      "tickle",
+      "barrier",
+      "copycat",
+      "meditate",
+      "double_slap",
+      "pound"
     ],
     "4": [
-      "hypnosis"
+      "baton_pass"
     ],
     "8": [
-      "fairy_wind"
+      "encore"
     ],
-    "14": [
+    "12": [
       "confusion"
     ],
-    "20": [
-      "dazzling_gleam"
+    "16": [
+      "role_play"
     ],
-    "32": [
+    "20": [
+      "protect"
+    ],
+    "24": [
+      "recycle"
+    ],
+    "28": [
       "psybeam"
     ],
+    "32": [
+      "mimic"
+    ],
+    "36": [
+      "light_screen",
+      "reflect",
+      "safeguard"
+    ],
     "40": [
+      "sucker_punch"
+    ],
+    "44": [
+      "dazzling_gleam"
+    ],
+    "48": [
       "psychic"
     ],
-    "26": [
-      "calm_mind"
+    "52": [
+      "teeter_dance"
     ]
   },
   "evolution": null,

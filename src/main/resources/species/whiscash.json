@@ -19,31 +19,39 @@
   "modelId": "whiscash",
   "learnset": {
     "1": [
-      "scratch"
+      "zen_headbutt",
+      "tickle",
+      "mud_slap",
+      "mud_sport",
+      "water_sport",
+      "water_gun",
+      "mud_bomb",
+      "magnitude",
+      "rest",
+      "thrash",
+      "belch",
+      "snore"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "water_pulse"
     ],
-    "8": [
-      "water_gun"
+    "18": [
+      "amnesia"
     ],
-    "14": [
-      "sand_tomb"
+    "24": [
+      "aqua_tail"
     ],
-    "20": [
-      "bubble_beam"
-    ],
-    "32": [
-      "dig"
+    "33": [
+      "muddy_water"
     ],
     "40": [
-      "waterfall"
-    ],
-    "48": [
       "earthquake"
     ],
-    "26": [
-      "swords_dance"
+    "48": [
+      "future_sight"
+    ],
+    "56": [
+      "fissure"
     ]
   },
   "evolution": null,

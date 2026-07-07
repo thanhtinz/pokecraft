@@ -19,31 +19,39 @@
   "modelId": "golbat",
   "learnset": {
     "1": [
-      "tackle"
+      "screech",
+      "supersonic",
+      "astonish",
+      "wing_attack",
+      "mean_look",
+      "absorb"
     ],
-    "4": [
-      "poison_powder"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "peck"
+    "15": [
+      "poison_fang"
     ],
     "20": [
-      "acid"
+      "quick_guard"
     ],
-    "32": [
-      "gust"
+    "27": [
+      "air_cutter"
     ],
-    "40": [
-      "sludge"
+    "34": [
+      "bite"
+    ],
+    "41": [
+      "haze"
     ],
     "48": [
-      "wing_attack"
+      "venoshock"
     ],
-    "26": [
-      "agility"
+    "55": [
+      "confuse_ray"
+    ],
+    "62": [
+      "air_slash"
+    ],
+    "69": [
+      "leech_life"
     ]
   },
   "evolution": null,

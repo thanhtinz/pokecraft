@@ -19,28 +19,55 @@
   "modelId": "tyranitar",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "harden"
-    ],
-    "8": [
+      "thunder_fang",
+      "ice_fang",
+      "fire_fang",
+      "leer",
+      "dark_pulse",
+      "payback",
+      "chip_away",
+      "iron_defense",
+      "tackle",
       "rock_throw"
     ],
-    "14": [
+    "9": [
       "bite"
     ],
-    "20": [
+    "12": [
+      "scary_face"
+    ],
+    "15": [
       "rock_slide"
     ],
-    "32": [
+    "18": [
+      "stomping_tantrum"
+    ],
+    "21": [
+      "screech"
+    ],
+    "24": [
+      "smack_down"
+    ],
+    "27": [
       "crunch"
     ],
-    "40": [
+    "33": [
+      "earthquake"
+    ],
+    "37": [
       "stone_edge"
     ],
-    "26": [
-      "swords_dance"
+    "42": [
+      "thrash"
+    ],
+    "47": [
+      "sandstorm"
+    ],
+    "52": [
+      "hyper_beam"
+    ],
+    "59": [
+      "giga_impact"
     ]
   },
   "evolution": null,

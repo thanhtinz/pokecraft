@@ -18,31 +18,46 @@
   "modelId": "ursaring",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "growl"
+      "covet",
+      "scratch",
+      "leer",
+      "lick",
+      "fake_tears",
+      "feint_attack"
     ],
     "8": [
-      "quick_attack"
+      "fury_swipes"
     ],
-    "14": [
-      "hyper_fang"
+    "13": [
+      "payback"
     ],
-    "20": [
-      "mega_punch"
+    "17": [
+      "sweet_scent"
     ],
-    "32": [
-      "body_slam"
+    "22": [
+      "slash"
     ],
-    "40": [
-      "double_edge"
+    "25": [
+      "play_nice"
+    ],
+    "29": [
+      "play_rough"
+    ],
+    "35": [
+      "scary_face"
+    ],
+    "41": [
+      "rest",
+      "snore"
     ],
     "48": [
-      "hyper_beam"
+      "high_horsepower"
     ],
-    "26": [
-      "swords_dance"
+    "56": [
+      "thrash"
+    ],
+    "64": [
+      "hammer_arm"
     ]
   },
   "evolution": null,

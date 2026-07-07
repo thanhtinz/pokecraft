@@ -18,22 +18,44 @@
   "modelId": "deoxys",
   "learnset": {
     "1": [
-      "pound"
+      "leer",
+      "wrap"
     ],
-    "4": [
-      "hypnosis"
+    "7": [
+      "night_shade"
     ],
-    "8": [
-      "confusion"
+    "13": [
+      "teleport"
     ],
-    "14": [
-      "psybeam"
+    "19": [
+      "knock_off"
     ],
-    "20": [
+    "25": [
+      "pursuit"
+    ],
+    "31": [
       "psychic"
     ],
-    "26": [
-      "swords_dance"
+    "37": [
+      "gravity"
+    ],
+    "43": [
+      "skill_swap"
+    ],
+    "49": [
+      "zen_headbutt"
+    ],
+    "55": [
+      "cosmic_power"
+    ],
+    "61": [
+      "recover"
+    ],
+    "67": [
+      "psycho_boost"
+    ],
+    "73": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

@@ -18,25 +18,45 @@
   "modelId": "snorunt",
   "learnset": {
     "1": [
-      "scratch"
+      "powder_snow",
+      "headbutt",
+      "astonish"
     ],
-    "4": [
+    "5": [
       "leer"
     ],
-    "8": [
+    "10": [
+      "double_team"
+    ],
+    "15": [
       "ice_shard"
     ],
-    "14": [
-      "aurora_beam"
-    ],
     "20": [
-      "ice_beam"
+      "protect"
     ],
-    "32": [
+    "25": [
+      "icy_wind"
+    ],
+    "30": [
+      "frost_breath"
+    ],
+    "35": [
+      "bite"
+    ],
+    "40": [
+      "ice_fang"
+    ],
+    "45": [
+      "snowscape"
+    ],
+    "50": [
+      "weather_ball"
+    ],
+    "55": [
+      "crunch"
+    ],
+    "60": [
       "blizzard"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

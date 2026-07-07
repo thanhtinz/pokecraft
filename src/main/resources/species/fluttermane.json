@@ -19,28 +19,49 @@
   "modelId": "fluttermane",
   "learnset": {
     "1": [
-      "tackle"
+      "confuse_ray",
+      "spite",
+      "astonish",
+      "sunny_day"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "fairy_wind"
+    "7": [
+      "psybeam"
     ],
     "14": [
-      "lick"
+      "mean_look"
     ],
-    "20": [
+    "21": [
+      "memento"
+    ],
+    "28": [
+      "wish"
+    ],
+    "35": [
       "dazzling_gleam"
     ],
-    "32": [
-      "night_shade"
-    ],
-    "40": [
+    "42": [
       "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "49": [
+      "mystical_fire"
+    ],
+    "56": [
+      "power_gem"
+    ],
+    "63": [
+      "psyshock"
+    ],
+    "70": [
+      "phantom_force"
+    ],
+    "77": [
+      "pain_split"
+    ],
+    "84": [
+      "moonblast"
+    ],
+    "91": [
+      "perish_song"
     ]
   },
   "evolution": null,

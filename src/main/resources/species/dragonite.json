@@ -19,31 +19,47 @@
   "modelId": "dragonite",
   "learnset": {
     "1": [
-      "pound"
+      "fire_punch",
+      "thunder_punch",
+      "roost",
+      "wrap",
+      "leer",
+      "thunder_wave",
+      "twister",
+      "dragon_rage",
+      "wing_attack",
+      "hurricane",
+      "extreme_speed"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "twister"
+    "15": [
+      "dragon_tail"
     ],
     "20": [
-      "gust"
+      "agility"
     ],
-    "32": [
-      "dragon_breath"
+    "25": [
+      "slam"
     ],
-    "40": [
-      "wing_attack"
+    "33": [
+      "aqua_tail"
     ],
-    "48": [
-      "dragon_claw"
+    "39": [
+      "dragon_rush"
     ],
-    "26": [
-      "swords_dance"
+    "41": [
+      "outrage"
+    ],
+    "46": [
+      "safeguard"
+    ],
+    "53": [
+      "rain_dance"
+    ],
+    "62": [
+      "dragon_dance"
+    ],
+    "80": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

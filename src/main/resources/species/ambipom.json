@@ -18,31 +18,42 @@
   "modelId": "ambipom",
   "learnset": {
     "1": [
-      "scratch"
+      "scratch",
+      "tail_whip",
+      "sand_attack",
+      "astonish",
+      "dual_chop",
+      "mud_bomb"
     ],
-    "4": [
-      "growl"
+    "11": [
+      "baton_pass"
     ],
-    "8": [
-      "quick_attack"
+    "15": [
+      "tickle"
     ],
-    "14": [
-      "hyper_fang"
+    "18": [
+      "fury_swipes"
     ],
-    "20": [
-      "mega_punch"
+    "22": [
+      "swift"
+    ],
+    "25": [
+      "screech"
+    ],
+    "29": [
+      "agility"
     ],
     "32": [
-      "body_slam"
+      "double_hit"
     ],
-    "40": [
-      "double_edge"
+    "36": [
+      "fling"
     ],
-    "48": [
-      "hyper_beam"
+    "39": [
+      "nasty_plot"
     ],
-    "26": [
-      "agility"
+    "43": [
+      "last_resort"
     ]
   },
   "evolution": null,

@@ -19,31 +19,50 @@
   "modelId": "houndour",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "bite"
-    ],
-    "14": [
+      "leer",
       "ember"
     ],
+    "4": [
+      "howl"
+    ],
+    "8": [
+      "smog"
+    ],
+    "13": [
+      "roar"
+    ],
+    "16": [
+      "bite"
+    ],
     "20": [
-      "crunch"
+      "odor_sleuth"
+    ],
+    "25": [
+      "beat_up"
+    ],
+    "28": [
+      "fire_fang"
     ],
     "32": [
-      "fire_spin"
+      "feint_attack"
+    ],
+    "37": [
+      "comeuppance"
     ],
     "40": [
-      "fire_punch"
+      "foul_play"
     ],
-    "48": [
+    "44": [
       "flamethrower"
     ],
-    "26": [
-      "calm_mind"
+    "49": [
+      "crunch"
+    ],
+    "52": [
+      "nasty_plot"
+    ],
+    "56": [
+      "inferno"
     ]
   },
   "evolution": null,

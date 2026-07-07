@@ -18,25 +18,36 @@
   "modelId": "grapploct",
   "learnset": {
     "1": [
-      "scratch"
+      "octolock",
+      "octazooka",
+      "rock_smash",
+      "leer",
+      "feint",
+      "bind"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
-      "low_kick"
+    "15": [
+      "detect"
     ],
     "20": [
       "brick_break"
     ],
-    "32": [
-      "cross_chop"
+    "25": [
+      "bulk_up"
     ],
-    "26": [
-      "swords_dance"
+    "30": [
+      "submission"
+    ],
+    "35": [
+      "taunt"
+    ],
+    "40": [
+      "reversal"
+    ],
+    "45": [
+      "superpower"
+    ],
+    "50": [
+      "topsy_turvy"
     ]
   },
   "evolution": null,

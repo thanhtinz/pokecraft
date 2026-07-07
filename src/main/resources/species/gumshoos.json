@@ -18,31 +18,44 @@
   "modelId": "gumshoos",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "leer",
+      "pursuit",
+      "sand_attack",
+      "odor_sleuth",
+      "bide",
+      "hyper_fang",
+      "payback"
     ],
-    "4": [
-      "growl"
+    "13": [
+      "work_up"
     ],
-    "8": [
-      "quick_attack"
+    "19": [
+      "bite"
     ],
-    "14": [
-      "hyper_fang"
+    "23": [
+      "mud_slap"
     ],
-    "20": [
-      "mega_punch"
+    "27": [
+      "super_fang"
     ],
-    "32": [
-      "body_slam"
+    "31": [
+      "take_down"
     ],
-    "40": [
-      "double_edge"
+    "35": [
+      "scary_face"
     ],
-    "48": [
-      "hyper_beam"
+    "39": [
+      "crunch"
     ],
-    "26": [
-      "swords_dance"
+    "43": [
+      "yawn"
+    ],
+    "47": [
+      "thrash"
+    ],
+    "52": [
+      "rest"
     ]
   },
   "evolution": null,

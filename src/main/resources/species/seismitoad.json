@@ -19,31 +19,43 @@
   "modelId": "seismitoad",
   "learnset": {
     "1": [
-      "tackle"
+      "bubble",
+      "growl",
+      "supersonic",
+      "acid",
+      "drain_punch",
+      "echoed_voice",
+      "gastro_acid"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "mud_shot"
     ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
-      "water_gun"
+    "16": [
+      "round"
     ],
     "20": [
-      "dig"
-    ],
-    "32": [
       "bubble_beam"
     ],
-    "40": [
-      "earthquake"
+    "24": [
+      "flail"
     ],
-    "48": [
-      "waterfall"
+    "30": [
+      "uproar"
     ],
-    "26": [
-      "swords_dance"
+    "39": [
+      "aqua_ring"
+    ],
+    "46": [
+      "hyper_voice"
+    ],
+    "54": [
+      "muddy_water"
+    ],
+    "62": [
+      "rain_dance"
+    ],
+    "70": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

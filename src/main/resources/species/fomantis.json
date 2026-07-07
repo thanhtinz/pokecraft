@@ -18,28 +18,38 @@
   "modelId": "fomantis",
   "learnset": {
     "1": [
-      "tackle"
+      "fury_cutter",
+      "leafage"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "growth"
     ],
-    "8": [
-      "vine_whip"
+    "10": [
+      "ingrain"
     ],
-    "14": [
+    "15": [
       "razor_leaf"
     ],
     "20": [
-      "seed_bomb"
+      "sweet_scent"
     ],
-    "32": [
-      "petal_dance"
+    "25": [
+      "slash"
+    ],
+    "30": [
+      "x_scissor"
+    ],
+    "35": [
+      "synthesis"
     ],
     "40": [
-      "solar_beam"
+      "leaf_blade"
     ],
-    "26": [
-      "swords_dance"
+    "45": [
+      "sunny_day"
+    ],
+    "50": [
+      "solar_beam"
     ]
   },
   "evolution": null,

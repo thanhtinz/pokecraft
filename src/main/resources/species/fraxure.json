@@ -18,25 +18,53 @@
   "modelId": "fraxure",
   "learnset": {
     "1": [
-      "pound"
+      "scratch",
+      "leer",
+      "dragon_rage",
+      "false_swipe",
+      "bite"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "assurance"
     ],
-    "8": [
-      "twister"
+    "12": [
+      "taunt"
     ],
-    "14": [
-      "dragon_breath"
+    "15": [
+      "slash"
     ],
-    "20": [
+    "18": [
       "dragon_claw"
     ],
-    "32": [
+    "21": [
+      "scary_face"
+    ],
+    "24": [
+      "crunch"
+    ],
+    "27": [
+      "dragon_dance"
+    ],
+    "30": [
+      "breaking_swipe"
+    ],
+    "33": [
+      "focus_energy"
+    ],
+    "36": [
+      "dragon_pulse"
+    ],
+    "41": [
+      "swords_dance"
+    ],
+    "46": [
       "outrage"
     ],
-    "26": [
-      "swords_dance"
+    "51": [
+      "guillotine"
+    ],
+    "56": [
+      "giga_impact"
     ]
   },
   "evolution": null,

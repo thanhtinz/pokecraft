@@ -19,31 +19,38 @@
   "modelId": "ferroseed",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "harden"
     ],
-    "4": [
-      "sleep_powder"
+    "5": [
+      "metal_claw"
     ],
-    "8": [
-      "steel_wing"
+    "10": [
+      "pin_missile"
     ],
-    "14": [
-      "vine_whip"
+    "15": [
+      "ingrain"
     ],
     "20": [
+      "flash_cannon"
+    ],
+    "25": [
       "iron_head"
     ],
-    "32": [
-      "razor_leaf"
+    "30": [
+      "mirror_shot"
     ],
-    "40": [
-      "seed_bomb"
+    "35": [
+      "iron_defense"
     ],
-    "48": [
-      "petal_dance"
+    "41": [
+      "curse"
     ],
-    "26": [
-      "harden"
+    "45": [
+      "gyro_ball"
+    ],
+    "50": [
+      "explosion"
     ]
   },
   "evolution": null,

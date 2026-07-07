@@ -19,31 +19,40 @@
   "modelId": "whirlipede",
   "learnset": {
     "1": [
-      "scratch"
+      "defense_curl",
+      "rollout",
+      "poison_sting",
+      "pursuit",
+      "protect",
+      "iron_defense",
+      "steamroller"
     ],
-    "4": [
-      "string_shot"
+    "12": [
+      "poison_tail"
     ],
-    "8": [
-      "bug_bite"
-    ],
-    "14": [
-      "poison_sting"
+    "16": [
+      "screech"
     ],
     "20": [
-      "pin_missile"
-    ],
-    "32": [
-      "acid"
-    ],
-    "40": [
-      "sludge"
-    ],
-    "48": [
-      "sludge_bomb"
+      "bug_bite"
     ],
     "26": [
-      "harden"
+      "venoshock"
+    ],
+    "32": [
+      "take_down"
+    ],
+    "38": [
+      "agility"
+    ],
+    "44": [
+      "toxic"
+    ],
+    "50": [
+      "venom_drench"
+    ],
+    "56": [
+      "double_edge"
     ]
   },
   "evolution": null,

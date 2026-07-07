@@ -19,31 +19,44 @@
   "modelId": "drifloon",
   "learnset": {
     "1": [
-      "pound"
+      "constrict",
+      "minimize",
+      "astonish"
     ],
     "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "peck"
-    ],
-    "14": [
-      "lick"
-    ],
-    "20": [
       "gust"
     ],
-    "32": [
-      "night_shade"
+    "8": [
+      "focus_energy"
     ],
-    "40": [
-      "wing_attack"
+    "12": [
+      "payback"
     ],
-    "48": [
+    "16": [
+      "hex"
+    ],
+    "20": [
       "shadow_ball"
     ],
-    "26": [
-      "agility"
+    "24": [
+      "stockpile",
+      "swallow",
+      "spit_up"
+    ],
+    "29": [
+      "self_destruct"
+    ],
+    "32": [
+      "destiny_bond"
+    ],
+    "36": [
+      "baton_pass"
+    ],
+    "40": [
+      "tailwind"
+    ],
+    "44": [
+      "explosion"
     ]
   },
   "evolution": null,

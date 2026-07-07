@@ -20,29 +20,53 @@
     "1": [
       "tackle"
     ],
-    "4": [
-      "growl"
+    "3": [
+      "leer"
+    ],
+    "6": [
+      "bite"
     ],
     "8": [
-      "quick_attack"
+      "bide"
     ],
-    "14": [
-      "hyper_fang"
+    "11": [
+      "detect"
     ],
-    "20": [
-      "mega_punch"
+    "13": [
+      "sand_attack"
     ],
-    "32": [
-      "body_slam"
+    "16": [
+      "crunch"
     ],
-    "40": [
-      "double_edge"
+    "18": [
+      "hypnosis"
     ],
-    "48": [
-      "hyper_beam"
+    "21": [
+      "super_fang"
+    ],
+    "23": [
+      "after_you"
     ],
     "26": [
-      "swords_dance"
+      "focus_energy"
+    ],
+    "28": [
+      "work_up"
+    ],
+    "31": [
+      "hyper_fang"
+    ],
+    "33": [
+      "nasty_plot"
+    ],
+    "36": [
+      "mean_look"
+    ],
+    "38": [
+      "baton_pass"
+    ],
+    "41": [
+      "slam"
     ]
   },
   "evolution": null,

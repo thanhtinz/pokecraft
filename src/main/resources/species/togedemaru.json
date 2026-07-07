@@ -19,31 +19,44 @@
   "modelId": "togedemaru",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "nuzzle"
     ],
-    "4": [
-      "thunder_wave"
+    "5": [
+      "defense_curl"
     ],
-    "8": [
-      "steel_wing"
+    "10": [
+      "charge"
     ],
-    "14": [
+    "15": [
       "thunder_shock"
     ],
     "20": [
-      "iron_head"
+      "fell_stinger"
     ],
-    "32": [
+    "25": [
       "spark"
     ],
+    "30": [
+      "pin_missile"
+    ],
+    "35": [
+      "magnet_rise"
+    ],
     "40": [
-      "thunderbolt"
+      "zing_zap"
     ],
-    "48": [
-      "thunder"
+    "45": [
+      "discharge"
     ],
-    "26": [
-      "swords_dance"
+    "50": [
+      "electric_terrain"
+    ],
+    "55": [
+      "wild_charge"
+    ],
+    "60": [
+      "spiky_shield"
     ]
   },
   "evolution": null,

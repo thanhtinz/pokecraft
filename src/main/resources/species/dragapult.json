@@ -19,31 +19,48 @@
   "modelId": "dragapult",
   "learnset": {
     "1": [
-      "pound"
+      "dragon_darts",
+      "dragon_breath",
+      "astonish",
+      "infestation",
+      "quick_attack",
+      "bite"
     ],
-    "4": [
-      "leer"
+    "6": [
+      "lock_on"
     ],
-    "8": [
-      "lick"
+    "12": [
+      "assurance"
     ],
-    "14": [
-      "twister"
+    "18": [
+      "hex"
     ],
-    "20": [
-      "night_shade"
+    "24": [
+      "agility"
     ],
-    "32": [
-      "dragon_breath"
+    "30": [
+      "double_hit"
     ],
-    "40": [
-      "shadow_ball"
+    "36": [
+      "u_turn"
+    ],
+    "42": [
+      "dragon_dance"
     ],
     "48": [
-      "dragon_claw"
+      "phantom_force"
     ],
-    "26": [
-      "agility"
+    "54": [
+      "take_down"
+    ],
+    "63": [
+      "dragon_rush"
+    ],
+    "70": [
+      "double_edge"
+    ],
+    "78": [
+      "last_resort"
     ]
   },
   "evolution": null,

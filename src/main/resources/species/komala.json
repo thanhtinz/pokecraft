@@ -18,31 +18,37 @@
   "modelId": "komala",
   "learnset": {
     "1": [
-      "scratch"
+      "defense_curl",
+      "rollout"
     ],
-    "4": [
-      "growl"
+    "6": [
+      "stockpile",
+      "spit_up",
+      "swallow"
     ],
-    "8": [
-      "quick_attack"
+    "11": [
+      "rapid_spin"
     ],
-    "14": [
-      "hyper_fang"
+    "16": [
+      "yawn"
     ],
-    "20": [
-      "mega_punch"
-    ],
-    "32": [
-      "body_slam"
-    ],
-    "40": [
-      "double_edge"
-    ],
-    "48": [
-      "hyper_beam"
+    "21": [
+      "slam"
     ],
     "26": [
-      "swords_dance"
+      "flail"
+    ],
+    "31": [
+      "sucker_punch"
+    ],
+    "36": [
+      "psych_up"
+    ],
+    "41": [
+      "wood_hammer"
+    ],
+    "46": [
+      "thrash"
     ]
   },
   "evolution": null,

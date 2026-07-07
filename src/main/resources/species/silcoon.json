@@ -18,19 +18,9 @@
   "modelId": "silcoon",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
-      "bug_bite"
-    ],
-    "14": [
-      "pin_missile"
-    ],
-    "26": [
-      "harden"
+      "harden",
+      "tackle",
+      "poison_sting"
     ]
   },
   "evolution": null,

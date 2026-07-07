@@ -18,31 +18,37 @@
   "modelId": "skwovet",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "tail_whip"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "bite"
     ],
-    "8": [
-      "quick_attack"
+    "10": [
+      "stuff_cheeks"
     ],
-    "14": [
-      "hyper_fang"
+    "15": [
+      "stockpile",
+      "swallow",
+      "spit_up"
     ],
     "20": [
-      "mega_punch"
-    ],
-    "32": [
       "body_slam"
     ],
+    "25": [
+      "rest"
+    ],
+    "30": [
+      "counter"
+    ],
+    "35": [
+      "bullet_seed"
+    ],
     "40": [
-      "double_edge"
+      "super_fang"
     ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "swords_dance"
+    "45": [
+      "belch"
     ]
   },
   "evolution": null,

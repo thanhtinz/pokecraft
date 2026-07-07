@@ -19,28 +19,46 @@
   "modelId": "carbink",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "harden",
+      "rock_throw",
+      "sharpen"
     ],
-    "4": [
-      "harden"
+    "5": [
+      "guard_split"
     ],
-    "8": [
-      "fairy_wind"
+    "10": [
+      "smack_down"
     ],
-    "14": [
-      "rock_throw"
+    "15": [
+      "flail"
     ],
     "20": [
-      "dazzling_gleam"
+      "ancient_power"
     ],
-    "32": [
+    "25": [
+      "rock_polish"
+    ],
+    "30": [
+      "light_screen"
+    ],
+    "35": [
       "rock_slide"
     ],
     "40": [
-      "stone_edge"
+      "skill_swap"
     ],
-    "26": [
-      "harden"
+    "45": [
+      "power_gem"
+    ],
+    "50": [
+      "stealth_rock"
+    ],
+    "55": [
+      "moonblast"
+    ],
+    "60": [
+      "stone_edge"
     ]
   },
   "evolution": null,

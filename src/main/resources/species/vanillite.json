@@ -18,25 +18,44 @@
   "modelId": "vanillite",
   "learnset": {
     "1": [
-      "tackle"
+      "harden",
+      "astonish"
     ],
     "4": [
-      "leer"
+      "taunt"
     ],
     "8": [
-      "ice_shard"
+      "mist"
     ],
-    "14": [
-      "aurora_beam"
+    "12": [
+      "icy_wind"
+    ],
+    "16": [
+      "avalanche"
     ],
     "20": [
-      "ice_beam"
+      "hail"
+    ],
+    "24": [
+      "icicle_spear"
+    ],
+    "28": [
+      "uproar"
     ],
     "32": [
+      "acid_armor"
+    ],
+    "36": [
+      "mirror_coat"
+    ],
+    "40": [
+      "ice_beam"
+    ],
+    "44": [
       "blizzard"
     ],
-    "26": [
-      "calm_mind"
+    "48": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

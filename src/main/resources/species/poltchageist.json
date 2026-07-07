@@ -19,31 +19,39 @@
   "modelId": "poltchageist",
   "learnset": {
     "1": [
-      "scratch"
+      "stun_spore",
+      "withdraw",
+      "astonish"
     ],
-    "4": [
-      "sleep_powder"
+    "6": [
+      "absorb"
     ],
-    "8": [
-      "vine_whip"
+    "12": [
+      "life_dew"
     ],
-    "14": [
-      "lick"
+    "18": [
+      "foul_play"
     ],
-    "20": [
-      "razor_leaf"
+    "24": [
+      "mega_drain"
     ],
-    "32": [
-      "night_shade"
+    "30": [
+      "hex"
     ],
-    "40": [
-      "seed_bomb"
+    "36": [
+      "rage_powder"
+    ],
+    "42": [
+      "giga_drain"
     ],
     "48": [
       "shadow_ball"
     ],
-    "26": [
-      "calm_mind"
+    "54": [
+      "memento"
+    ],
+    "60": [
+      "leaf_storm"
     ]
   },
   "evolution": null,

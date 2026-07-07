@@ -19,28 +19,43 @@
   "modelId": "metang",
   "learnset": {
     "1": [
+      "metal_claw",
+      "confusion",
+      "pursuit",
+      "bullet_punch",
+      "miracle_eye",
+      "hone_claws",
       "tackle"
     ],
-    "4": [
-      "harden"
+    "6": [
+      "zen_headbutt"
     ],
-    "8": [
-      "confusion"
+    "12": [
+      "magnet_rise"
     ],
-    "14": [
-      "steel_wing"
-    ],
-    "20": [
-      "psybeam"
-    ],
-    "32": [
-      "iron_head"
-    ],
-    "40": [
-      "psychic"
+    "18": [
+      "flash_cannon"
     ],
     "26": [
-      "harden"
+      "take_down"
+    ],
+    "34": [
+      "psychic"
+    ],
+    "42": [
+      "scary_face"
+    ],
+    "50": [
+      "meteor_mash"
+    ],
+    "58": [
+      "iron_defense"
+    ],
+    "66": [
+      "agility"
+    ],
+    "74": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

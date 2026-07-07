@@ -18,25 +18,23 @@
   "modelId": "pichu",
   "learnset": {
     "1": [
-      "scratch"
+      "thunder_shock",
+      "tail_whip"
     ],
     "4": [
-      "thunder_wave"
+      "play_nice"
     ],
     "8": [
-      "thunder_shock"
+      "sweet_kiss"
     ],
-    "14": [
-      "spark"
+    "12": [
+      "nuzzle"
+    ],
+    "16": [
+      "nasty_plot"
     ],
     "20": [
-      "thunderbolt"
-    ],
-    "32": [
-      "thunder"
-    ],
-    "26": [
-      "agility"
+      "charm"
     ]
   },
   "evolution": null,

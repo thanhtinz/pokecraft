@@ -18,25 +18,40 @@
   "modelId": "dragonair",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+      "wrap",
+      "leer",
+      "thunder_wave",
       "twister"
     ],
-    "14": [
-      "dragon_breath"
+    "15": [
+      "dragon_rage"
     ],
     "20": [
-      "dragon_claw"
+      "agility"
     ],
-    "32": [
+    "25": [
+      "slam"
+    ],
+    "33": [
+      "aqua_tail"
+    ],
+    "39": [
+      "dragon_rush"
+    ],
+    "46": [
+      "safeguard"
+    ],
+    "53": [
+      "rain_dance"
+    ],
+    "60": [
+      "dragon_dance"
+    ],
+    "67": [
       "outrage"
     ],
-    "26": [
-      "swords_dance"
+    "74": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

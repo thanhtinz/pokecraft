@@ -19,31 +19,49 @@
   "modelId": "ironboulder",
   "learnset": {
     "1": [
-      "pound"
+      "horn_attack",
+      "leer",
+      "rock_throw",
+      "electric_terrain"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "rock_throw"
+    "7": [
+      "quick_attack"
     ],
     "14": [
-      "confusion"
+      "slash"
     ],
-    "20": [
-      "rock_slide"
+    "21": [
+      "agility"
     ],
-    "32": [
-      "psybeam"
+    "28": [
+      "psycho_cut"
     ],
-    "40": [
+    "35": [
+      "counter"
+    ],
+    "42": [
+      "rock_tomb"
+    ],
+    "49": [
+      "sacred_sword"
+    ],
+    "56": [
+      "mighty_cleave"
+    ],
+    "63": [
+      "swords_dance"
+    ],
+    "70": [
+      "megahorn"
+    ],
+    "77": [
+      "quick_guard"
+    ],
+    "84": [
       "stone_edge"
     ],
-    "48": [
-      "psychic"
-    ],
-    "26": [
-      "agility"
+    "91": [
+      "giga_impact"
     ]
   },
   "evolution": null,

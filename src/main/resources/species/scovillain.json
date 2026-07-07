@@ -19,31 +19,45 @@
   "modelId": "scovillain",
   "learnset": {
     "1": [
-      "scratch"
+      "spicy_extract",
+      "flamethrower",
+      "leer",
+      "fire_fang",
+      "leafage"
     ],
     "4": [
-      "sleep_powder"
+      "bite"
     ],
-    "8": [
-      "vine_whip"
+    "10": [
+      "growth"
     ],
-    "14": [
-      "ember"
-    ],
-    "20": [
+    "13": [
       "razor_leaf"
     ],
-    "32": [
-      "fire_spin"
+    "17": [
+      "sunny_day"
     ],
-    "40": [
+    "21": [
+      "bullet_seed"
+    ],
+    "24": [
+      "headbutt"
+    ],
+    "28": [
+      "zen_headbutt"
+    ],
+    "33": [
+      "worry_seed"
+    ],
+    "38": [
+      "crunch"
+    ],
+    "44": [
       "seed_bomb"
     ],
     "48": [
-      "fire_punch"
-    ],
-    "26": [
-      "swords_dance"
+      "solar_beam",
+      "overheat"
     ]
   },
   "evolution": null,

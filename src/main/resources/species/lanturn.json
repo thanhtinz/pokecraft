@@ -19,31 +19,44 @@
   "modelId": "lanturn",
   "learnset": {
     "1": [
-      "tackle"
+      "bubble",
+      "supersonic",
+      "thunder_wave",
+      "water_gun",
+      "stockpile",
+      "swallow",
+      "spit_up",
+      "electro_ball",
+      "eerie_impulse",
+      "ion_deluge",
+      "spotlight"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "bubble_beam"
     ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
-      "water_gun"
+    "16": [
+      "confuse_ray"
     ],
     "20": [
       "spark"
     ],
-    "32": [
-      "bubble_beam"
+    "24": [
+      "charge"
     ],
-    "40": [
-      "thunderbolt"
+    "30": [
+      "discharge"
+    ],
+    "36": [
+      "aqua_ring"
+    ],
+    "42": [
+      "flail"
     ],
     "48": [
-      "waterfall"
+      "take_down"
     ],
-    "26": [
-      "calm_mind"
+    "54": [
+      "hydro_pump"
     ]
   },
   "evolution": null,

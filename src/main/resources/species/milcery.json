@@ -18,19 +18,38 @@
   "modelId": "milcery",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "aromatic_mist"
     ],
-    "4": [
-      "sing"
+    "5": [
+      "sweet_kiss"
     ],
-    "8": [
-      "fairy_wind"
+    "10": [
+      "sweet_scent"
     ],
-    "14": [
+    "15": [
+      "draining_kiss"
+    ],
+    "20": [
+      "aromatherapy"
+    ],
+    "25": [
+      "attract"
+    ],
+    "30": [
+      "acid_armor"
+    ],
+    "35": [
       "dazzling_gleam"
     ],
-    "26": [
-      "calm_mind"
+    "40": [
+      "recover"
+    ],
+    "45": [
+      "misty_terrain"
+    ],
+    "50": [
+      "entrainment"
     ]
   },
   "evolution": null,

@@ -19,31 +19,43 @@
   "modelId": "mothim",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "string_shot"
-    ],
-    "8": [
-      "bug_bite"
-    ],
-    "14": [
-      "peck"
+      "tackle",
+      "protect",
+      "bug_bite",
+      "quiver_dance"
     ],
     "20": [
-      "pin_missile"
+      "string_shot"
     ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "wing_attack"
-    ],
-    "48": [
-      "drill_peck"
+    "23": [
+      "confusion"
     ],
     "26": [
-      "swords_dance"
+      "gust"
+    ],
+    "29": [
+      "poison_powder"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "35": [
+      "camouflage"
+    ],
+    "38": [
+      "struggle_bug"
+    ],
+    "41": [
+      "air_slash"
+    ],
+    "44": [
+      "psychic"
+    ],
+    "47": [
+      "lunge"
+    ],
+    "50": [
+      "bug_buzz"
     ]
   },
   "evolution": null,

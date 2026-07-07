@@ -14,11 +14,21 @@ and converts the following fields into PokeCraft's format:
 - evolution chains (levels and stone requirements)
 - national dex numbers and legendary flags
 
-Learnsets and biome spawn tables are **generated locally** by PokeCraft
-(`tools/generate_gen1.py` helpers) and are not taken from Cobblemon.
+Biome spawn tables are **generated locally** by PokeCraft
+(`tools/generate_gen1.py` helpers). Each species' authentic **level-up
+learnset** is read from Cobblemon's species JSON (`moves` field) by
+`tools/enrich_learnsets.py` and matched onto PokeCraft's move pool.
 
 Under MPL 2.0 you may use and modify these data files; keep this attribution
 and the MPL notice if you redistribute them.
+
+## PokeAPI move data
+
+PokeCraft's move pool (`src/main/resources/moves/moves.json`, ~919 moves) is
+built by `tools/build_moves.py` from the **PokeAPI** CSV data dump
+(https://github.com/PokeAPI/pokeapi, `data/v2/csv/`), released under the
+**BSD 3-Clause License**. Move names, types, power, accuracy, PP and secondary
+effects come from those CSVs.
 
 ## Pokemon intellectual property
 

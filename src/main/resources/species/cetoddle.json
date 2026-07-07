@@ -18,25 +18,47 @@
   "modelId": "cetoddle",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "powder_snow"
     ],
-    "4": [
-      "leer"
+    "6": [
+      "growl"
     ],
-    "8": [
+    "9": [
+      "echoed_voice"
+    ],
+    "12": [
       "ice_shard"
     ],
-    "14": [
-      "aurora_beam"
+    "15": [
+      "rest"
     ],
-    "20": [
-      "ice_beam"
+    "19": [
+      "take_down"
     ],
-    "32": [
+    "25": [
+      "flail"
+    ],
+    "27": [
+      "avalanche"
+    ],
+    "31": [
+      "bounce"
+    ],
+    "36": [
+      "body_slam"
+    ],
+    "40": [
+      "amnesia"
+    ],
+    "44": [
+      "ice_spinner"
+    ],
+    "49": [
+      "double_edge"
+    ],
+    "53": [
       "blizzard"
-    ],
-    "26": [
-      "swords_dance"
     ]
   },
   "evolution": null,

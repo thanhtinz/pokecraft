@@ -19,31 +19,40 @@
   "modelId": "palossand",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "lick"
-    ],
-    "14": [
+      "harden",
+      "absorb",
+      "astonish",
       "sand_tomb"
     ],
-    "20": [
-      "night_shade"
+    "15": [
+      "mega_drain"
     ],
-    "32": [
-      "dig"
+    "20": [
+      "sand_attack"
+    ],
+    "25": [
+      "bulldoze"
+    ],
+    "30": [
+      "hypnosis"
+    ],
+    "35": [
+      "giga_drain"
     ],
     "40": [
+      "iron_defense"
+    ],
+    "47": [
       "shadow_ball"
     ],
-    "48": [
-      "earthquake"
+    "54": [
+      "earth_power"
     ],
-    "26": [
-      "harden"
+    "61": [
+      "shore_up"
+    ],
+    "68": [
+      "sandstorm"
     ]
   },
   "evolution": null,

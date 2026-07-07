@@ -19,28 +19,7 @@
   "modelId": "beldum",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "steel_wing"
-    ],
-    "14": [
-      "confusion"
-    ],
-    "20": [
-      "iron_head"
-    ],
-    "32": [
-      "psybeam"
-    ],
-    "40": [
-      "psychic"
-    ],
-    "26": [
-      "harden"
+      "tackle"
     ]
   },
   "evolution": null,

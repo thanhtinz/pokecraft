@@ -18,25 +18,35 @@
   "modelId": "boltund",
   "learnset": {
     "1": [
-      "pound"
+      "electrify",
+      "tackle",
+      "tail_whip",
+      "nuzzle",
+      "bite"
     ],
-    "4": [
-      "thunder_wave"
-    ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
-      "spark"
+    "15": [
+      "roar"
     ],
     "20": [
-      "thunderbolt"
+      "spark"
     ],
-    "32": [
-      "thunder"
+    "28": [
+      "charm"
     ],
-    "26": [
-      "agility"
+    "34": [
+      "crunch"
+    ],
+    "41": [
+      "charge"
+    ],
+    "48": [
+      "wild_charge"
+    ],
+    "55": [
+      "play_rough"
+    ],
+    "62": [
+      "electric_terrain"
     ]
   },
   "evolution": null,

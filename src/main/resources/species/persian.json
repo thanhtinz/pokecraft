@@ -18,31 +18,42 @@
   "modelId": "persian",
   "learnset": {
     "1": [
-      "pound"
+      "switcheroo",
+      "scratch",
+      "growl",
+      "fake_out",
+      "feint_attack",
+      "power_gem",
+      "night_slash",
+      "feint",
+      "captivate"
     ],
-    "4": [
-      "growl"
+    "12": [
+      "pay_day"
     ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "hyper_fang"
+    "16": [
+      "bite"
     ],
     "20": [
-      "mega_punch"
+      "taunt"
     ],
-    "32": [
-      "body_slam"
+    "24": [
+      "assurance"
     ],
-    "40": [
-      "double_edge"
+    "31": [
+      "fury_swipes"
+    ],
+    "36": [
+      "screech"
+    ],
+    "42": [
+      "slash"
     ],
     "48": [
-      "hyper_beam"
+      "nasty_plot"
     ],
-    "26": [
-      "agility"
+    "54": [
+      "play_rough"
     ]
   },
   "evolution": null,

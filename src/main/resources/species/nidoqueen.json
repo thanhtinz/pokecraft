@@ -19,31 +19,23 @@
   "modelId": "nidoqueen",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
-      "poison_powder"
-    ],
-    "8": [
-      "sand_tomb"
-    ],
-    "14": [
-      "poison_sting"
-    ],
-    "20": [
-      "dig"
-    ],
-    "32": [
-      "acid"
-    ],
-    "40": [
-      "earthquake"
-    ],
-    "48": [
-      "sludge"
-    ],
-    "26": [
-      "swords_dance"
+      "scratch",
+      "tail_whip",
+      "double_kick",
+      "poison_sting",
+      "earth_power",
+      "superpower",
+      "helping_hand",
+      "chip_away",
+      "fury_swipes",
+      "toxic_spikes",
+      "bite",
+      "toxic",
+      "flatter",
+      "crunch",
+      "growl",
+      "poison_fang",
+      "captivate"
     ]
   },
   "evolution": null,

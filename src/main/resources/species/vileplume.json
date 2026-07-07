@@ -19,31 +19,24 @@
   "modelId": "vileplume",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "sleep_powder"
-    ],
-    "8": [
-      "poison_sting"
-    ],
-    "14": [
-      "vine_whip"
-    ],
-    "20": [
-      "acid"
-    ],
-    "32": [
-      "razor_leaf"
-    ],
-    "40": [
-      "sludge"
-    ],
-    "48": [
-      "seed_bomb"
-    ],
-    "26": [
-      "calm_mind"
+      "mega_drain",
+      "aromatherapy",
+      "stun_spore",
+      "poison_powder",
+      "petal_dance",
+      "giga_drain",
+      "petal_blizzard",
+      "sleep_powder",
+      "toxic",
+      "moonblast",
+      "grassy_terrain",
+      "moonlight",
+      "absorb",
+      "growth",
+      "acid",
+      "sweet_scent",
+      "lucky_chant",
+      "natural_gift"
     ]
   },
   "evolution": null,

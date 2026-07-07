@@ -18,25 +18,50 @@
   "modelId": "bergmite",
   "learnset": {
     "1": [
-      "scratch"
+      "harden",
+      "rapid_spin"
     ],
-    "4": [
-      "leer"
+    "3": [
+      "tackle"
     ],
-    "8": [
-      "ice_shard"
+    "6": [
+      "powder_snow"
     ],
-    "14": [
-      "aurora_beam"
+    "9": [
+      "curse"
     ],
-    "20": [
-      "ice_beam"
+    "12": [
+      "icy_wind"
     ],
-    "32": [
+    "15": [
+      "protect"
+    ],
+    "18": [
+      "avalanche"
+    ],
+    "21": [
+      "bite"
+    ],
+    "24": [
+      "ice_fang"
+    ],
+    "27": [
+      "iron_defense"
+    ],
+    "30": [
+      "recover"
+    ],
+    "33": [
+      "crunch"
+    ],
+    "36": [
+      "take_down"
+    ],
+    "39": [
       "blizzard"
     ],
-    "26": [
-      "harden"
+    "42": [
+      "double_edge"
     ]
   },
   "evolution": null,

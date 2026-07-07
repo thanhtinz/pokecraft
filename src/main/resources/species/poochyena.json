@@ -18,19 +18,50 @@
   "modelId": "poochyena",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "odor_sleuth"
     ],
     "4": [
-      "leer"
+      "howl"
     ],
-    "8": [
+    "7": [
+      "sand_attack"
+    ],
+    "10": [
       "bite"
     ],
-    "14": [
+    "13": [
+      "leer"
+    ],
+    "16": [
+      "roar"
+    ],
+    "19": [
+      "swagger"
+    ],
+    "22": [
+      "assurance"
+    ],
+    "25": [
+      "scary_face"
+    ],
+    "28": [
+      "taunt"
+    ],
+    "31": [
       "crunch"
     ],
-    "26": [
-      "swords_dance"
+    "34": [
+      "yawn"
+    ],
+    "36": [
+      "take_down"
+    ],
+    "40": [
+      "sucker_punch"
+    ],
+    "44": [
+      "play_rough"
     ]
   },
   "evolution": null,

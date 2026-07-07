@@ -19,31 +19,32 @@
   "modelId": "drednaw",
   "learnset": {
     "1": [
-      "tackle"
+      "rock_tomb",
+      "razor_shell",
+      "crunch",
+      "rock_polish",
+      "tackle",
+      "water_gun",
+      "bite",
+      "protect"
     ],
-    "4": [
-      "tail_whip"
+    "21": [
+      "headbutt"
     ],
-    "8": [
-      "water_gun"
+    "30": [
+      "counter"
     ],
-    "14": [
-      "rock_throw"
-    ],
-    "20": [
-      "bubble_beam"
-    ],
-    "32": [
-      "rock_slide"
-    ],
-    "40": [
-      "waterfall"
+    "39": [
+      "jaw_lock"
     ],
     "48": [
-      "stone_edge"
+      "liquidation"
     ],
-    "26": [
-      "swords_dance"
+    "57": [
+      "body_slam"
+    ],
+    "66": [
+      "head_smash"
     ]
   },
   "evolution": null,

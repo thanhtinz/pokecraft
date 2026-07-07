@@ -19,28 +19,46 @@
   "modelId": "bronzong",
   "learnset": {
     "1": [
-      "pound"
+      "sunny_day",
+      "tackle",
+      "confusion",
+      "confuse_ray",
+      "block",
+      "feint_attack",
+      "payback",
+      "heal_block",
+      "psywave",
+      "weather_ball"
     ],
-    "4": [
-      "harden"
+    "12": [
+      "imprison"
     ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "steel_wing"
+    "16": [
+      "gyro_ball"
     ],
     "20": [
-      "psybeam"
+      "hypnosis"
+    ],
+    "24": [
+      "safeguard"
+    ],
+    "28": [
+      "extrasensory"
     ],
     "32": [
-      "iron_head"
+      "heavy_slam"
     ],
-    "40": [
-      "psychic"
+    "38": [
+      "iron_defense"
     ],
-    "26": [
-      "harden"
+    "44": [
+      "metal_sound"
+    ],
+    "50": [
+      "future_sight"
+    ],
+    "56": [
+      "rain_dance"
     ]
   },
   "evolution": null,

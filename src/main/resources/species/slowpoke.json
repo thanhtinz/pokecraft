@@ -19,31 +19,53 @@
   "modelId": "slowpoke",
   "learnset": {
     "1": [
-      "scratch"
+      "curse",
+      "tackle"
     ],
-    "4": [
-      "tail_whip"
+    "3": [
+      "growl"
     ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
+    "6": [
       "water_gun"
     ],
-    "20": [
-      "psybeam"
+    "9": [
+      "yawn"
     ],
-    "32": [
-      "bubble_beam"
+    "12": [
+      "confusion"
     ],
-    "40": [
+    "15": [
+      "disable"
+    ],
+    "18": [
+      "water_pulse"
+    ],
+    "21": [
+      "headbutt"
+    ],
+    "24": [
+      "zen_headbutt"
+    ],
+    "27": [
+      "amnesia"
+    ],
+    "30": [
+      "surf"
+    ],
+    "33": [
+      "slack_off"
+    ],
+    "36": [
       "psychic"
     ],
-    "48": [
-      "waterfall"
+    "39": [
+      "psych_up"
     ],
-    "26": [
-      "swords_dance"
+    "42": [
+      "rain_dance"
+    ],
+    "45": [
+      "heal_pulse"
     ]
   },
   "evolution": null,

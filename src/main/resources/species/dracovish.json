@@ -19,31 +19,41 @@
   "modelId": "dracovish",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "tackle",
       "water_gun"
     ],
+    "7": [
+      "protect"
+    ],
     "14": [
-      "twister"
+      "brutal_swing"
     ],
-    "20": [
-      "bubble_beam"
+    "21": [
+      "ancient_power"
     ],
-    "32": [
+    "28": [
+      "bite"
+    ],
+    "35": [
       "dragon_breath"
     ],
-    "40": [
-      "waterfall"
+    "42": [
+      "stomp"
     ],
-    "48": [
-      "dragon_claw"
+    "49": [
+      "super_fang"
     ],
-    "26": [
-      "harden"
+    "56": [
+      "crunch"
+    ],
+    "63": [
+      "fishious_rend"
+    ],
+    "70": [
+      "dragon_pulse"
+    ],
+    "77": [
+      "dragon_rush"
     ]
   },
   "evolution": null,

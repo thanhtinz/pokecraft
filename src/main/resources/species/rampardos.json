@@ -18,22 +18,39 @@
   "modelId": "rampardos",
   "learnset": {
     "1": [
-      "scratch"
+      "headbutt",
+      "leer",
+      "focus_energy",
+      "pursuit",
+      "endeavor",
+      "chip_away"
     ],
-    "4": [
-      "harden"
+    "10": [
+      "rock_smash"
     ],
-    "8": [
-      "rock_throw"
+    "15": [
+      "take_down"
     ],
-    "14": [
-      "rock_slide"
+    "19": [
+      "scary_face"
     ],
-    "20": [
-      "stone_edge"
+    "24": [
+      "assurance"
     ],
-    "26": [
-      "swords_dance"
+    "28": [
+      "slam"
+    ],
+    "36": [
+      "ancient_power"
+    ],
+    "43": [
+      "zen_headbutt"
+    ],
+    "51": [
+      "screech"
+    ],
+    "58": [
+      "head_smash"
     ]
   },
   "evolution": null,

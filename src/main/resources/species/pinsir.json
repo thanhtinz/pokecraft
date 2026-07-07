@@ -18,19 +18,47 @@
   "modelId": "pinsir",
   "learnset": {
     "1": [
-      "scratch"
+      "harden",
+      "thrash"
     ],
     "4": [
-      "string_shot"
+      "focus_energy"
     ],
     "8": [
+      "bind"
+    ],
+    "12": [
+      "seismic_toss"
+    ],
+    "16": [
       "bug_bite"
     ],
-    "14": [
-      "pin_missile"
+    "20": [
+      "storm_throw"
     ],
-    "26": [
+    "24": [
+      "double_hit"
+    ],
+    "28": [
+      "vital_throw"
+    ],
+    "32": [
+      "x_scissor"
+    ],
+    "36": [
+      "strength"
+    ],
+    "40": [
       "swords_dance"
+    ],
+    "44": [
+      "submission"
+    ],
+    "48": [
+      "guillotine"
+    ],
+    "52": [
+      "superpower"
     ]
   },
   "evolution": null,

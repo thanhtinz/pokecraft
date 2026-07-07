@@ -18,31 +18,41 @@
   "modelId": "furfrou",
   "learnset": {
     "1": [
-      "scratch"
-    ],
-    "4": [
+      "tackle",
       "growl"
     ],
-    "8": [
-      "quick_attack"
+    "5": [
+      "sand_attack"
     ],
-    "14": [
-      "hyper_fang"
+    "9": [
+      "baby_doll_eyes"
     ],
-    "20": [
-      "mega_punch"
+    "12": [
+      "headbutt"
     ],
-    "32": [
-      "body_slam"
+    "15": [
+      "tail_whip"
     ],
-    "40": [
-      "double_edge"
+    "22": [
+      "bite"
+    ],
+    "27": [
+      "odor_sleuth"
+    ],
+    "33": [
+      "retaliate"
+    ],
+    "35": [
+      "take_down"
+    ],
+    "38": [
+      "charm"
+    ],
+    "42": [
+      "sucker_punch"
     ],
     "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "agility"
+      "cotton_guard"
     ]
   },
   "evolution": null,

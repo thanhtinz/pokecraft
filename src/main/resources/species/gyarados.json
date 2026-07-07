@@ -19,31 +19,52 @@
   "modelId": "gyarados",
   "learnset": {
     "1": [
-      "scratch"
+      "bite",
+      "dragon_rage",
+      "leer",
+      "twister",
+      "flail",
+      "splash",
+      "tackle"
     ],
     "4": [
-      "tail_whip"
+      "whirlpool"
     ],
     "8": [
-      "water_gun"
+      "ice_fang"
     ],
-    "14": [
-      "peck"
+    "12": [
+      "brine"
     ],
-    "20": [
-      "bubble_beam"
+    "16": [
+      "scary_face"
     ],
-    "32": [
-      "gust"
-    ],
-    "40": [
+    "21": [
       "waterfall"
     ],
-    "48": [
-      "wing_attack"
+    "24": [
+      "crunch"
     ],
-    "26": [
-      "swords_dance"
+    "28": [
+      "rain_dance"
+    ],
+    "32": [
+      "aqua_tail"
+    ],
+    "36": [
+      "dragon_dance"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "44": [
+      "hurricane"
+    ],
+    "48": [
+      "thrash"
+    ],
+    "52": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

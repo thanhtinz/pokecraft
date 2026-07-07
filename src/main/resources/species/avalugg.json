@@ -18,25 +18,53 @@
   "modelId": "avalugg",
   "learnset": {
     "1": [
-      "pound"
+      "skull_bash",
+      "tackle",
+      "harden",
+      "powder_snow",
+      "sharpen",
+      "rapid_spin",
+      "body_slam",
+      "wide_guard"
     ],
-    "4": [
-      "leer"
+    "9": [
+      "curse"
     ],
-    "8": [
-      "ice_shard"
+    "12": [
+      "icy_wind"
     ],
-    "14": [
-      "aurora_beam"
+    "15": [
+      "protect"
     ],
-    "20": [
-      "ice_beam"
+    "18": [
+      "avalanche"
     ],
-    "32": [
+    "21": [
+      "bite"
+    ],
+    "24": [
+      "ice_fang"
+    ],
+    "27": [
+      "iron_defense"
+    ],
+    "30": [
+      "recover"
+    ],
+    "33": [
+      "crunch"
+    ],
+    "36": [
+      "take_down"
+    ],
+    "41": [
       "blizzard"
     ],
-    "26": [
-      "harden"
+    "46": [
+      "double_edge"
+    ],
+    "51": [
+      "icicle_crash"
     ]
   },
   "evolution": null,

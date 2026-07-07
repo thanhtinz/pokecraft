@@ -19,31 +19,45 @@
   "modelId": "croagunk",
   "learnset": {
     "1": [
-      "tackle"
+      "mud_slap",
+      "poison_sting",
+      "mud_bomb"
     ],
     "4": [
-      "poison_powder"
+      "astonish"
     ],
     "8": [
-      "karate_chop"
+      "taunt"
     ],
-    "14": [
-      "poison_sting"
+    "12": [
+      "flatter"
     ],
-    "20": [
+    "16": [
       "low_kick"
     ],
+    "20": [
+      "venoshock"
+    ],
+    "24": [
+      "sucker_punch"
+    ],
+    "28": [
+      "swagger"
+    ],
     "32": [
-      "acid"
+      "poison_jab"
+    ],
+    "36": [
+      "toxic"
     ],
     "40": [
-      "brick_break"
+      "nasty_plot"
+    ],
+    "44": [
+      "sludge_bomb"
     ],
     "48": [
-      "sludge"
-    ],
-    "26": [
-      "swords_dance"
+      "belch"
     ]
   },
   "evolution": null,

@@ -18,28 +18,35 @@
   "modelId": "scorbunny",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "growl"
     ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+    "6": [
       "ember"
     ],
-    "14": [
-      "fire_spin"
+    "8": [
+      "quick_attack"
+    ],
+    "12": [
+      "double_kick"
+    ],
+    "17": [
+      "flame_charge"
     ],
     "20": [
-      "fire_punch"
+      "agility"
+    ],
+    "24": [
+      "headbutt"
+    ],
+    "28": [
+      "counter"
     ],
     "32": [
-      "flamethrower"
+      "bounce"
     ],
-    "40": [
-      "fire_blast"
-    ],
-    "26": [
-      "swords_dance"
+    "36": [
+      "double_edge"
     ]
   },
   "evolution": null,

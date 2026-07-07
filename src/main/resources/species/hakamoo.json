@@ -19,31 +19,43 @@
   "modelId": "hakamoo",
   "learnset": {
     "1": [
-      "tackle"
+      "sky_uppercut",
+      "autotomize",
+      "tackle",
+      "leer",
+      "bide",
+      "protect",
+      "dragon_tail"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "scary_face"
     ],
-    "8": [
-      "karate_chop"
-    ],
-    "14": [
-      "twister"
+    "16": [
+      "headbutt"
     ],
     "20": [
-      "low_kick"
+      "work_up"
+    ],
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "iron_defense"
     ],
     "32": [
-      "dragon_breath"
-    ],
-    "40": [
-      "brick_break"
-    ],
-    "48": [
       "dragon_claw"
     ],
-    "26": [
-      "harden"
+    "38": [
+      "noble_roar"
+    ],
+    "44": [
+      "dragon_dance"
+    ],
+    "50": [
+      "outrage"
+    ],
+    "56": [
+      "close_combat"
     ]
   },
   "evolution": null,

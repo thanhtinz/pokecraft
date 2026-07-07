@@ -18,19 +18,45 @@
   "modelId": "spritzee",
   "learnset": {
     "1": [
-      "scratch"
+      "sweet_scent",
+      "fairy_wind",
+      "odor_sleuth"
     ],
-    "4": [
-      "sing"
+    "3": [
+      "sweet_kiss"
     ],
-    "8": [
-      "fairy_wind"
+    "6": [
+      "echoed_voice"
     ],
-    "14": [
-      "dazzling_gleam"
+    "9": [
+      "draining_kiss"
     ],
-    "26": [
+    "12": [
+      "aromatherapy"
+    ],
+    "18": [
+      "attract"
+    ],
+    "21": [
+      "flail"
+    ],
+    "24": [
+      "misty_terrain"
+    ],
+    "27": [
+      "psychic"
+    ],
+    "30": [
+      "charm"
+    ],
+    "33": [
       "calm_mind"
+    ],
+    "36": [
+      "moonblast"
+    ],
+    "39": [
+      "skill_swap"
     ]
   },
   "evolution": null,

@@ -19,28 +19,47 @@
   "modelId": "rabsca",
   "learnset": {
     "1": [
-      "tackle"
+      "revival_blessing",
+      "tackle",
+      "defense_curl",
+      "confusion",
+      "safeguard",
+      "psych_up"
     ],
     "4": [
-      "string_shot"
+      "sand_attack"
     ],
-    "8": [
-      "bug_bite"
+    "7": [
+      "struggle_bug"
     ],
-    "14": [
-      "confusion"
+    "11": [
+      "rollout"
     ],
-    "20": [
-      "pin_missile"
-    ],
-    "32": [
+    "15": [
       "psybeam"
     ],
-    "40": [
-      "psychic"
+    "20": [
+      "bug_bite"
     ],
-    "26": [
-      "calm_mind"
+    "24": [
+      "take_down"
+    ],
+    "29": [
+      "extrasensory"
+    ],
+    "35": [
+      "lunge"
+    ],
+    "40": [
+      "speed_swap",
+      "power_swap",
+      "guard_swap"
+    ],
+    "45": [
+      "bug_buzz"
+    ],
+    "50": [
+      "psychic"
     ]
   },
   "evolution": null,

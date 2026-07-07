@@ -18,19 +18,37 @@
   "modelId": "liepard",
   "learnset": {
     "1": [
-      "tackle"
+      "scratch",
+      "growl",
+      "assist",
+      "sand_attack",
+      "pursuit",
+      "fake_out",
+      "slash"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "fury_swipes"
     ],
-    "8": [
-      "bite"
+    "16": [
+      "torment"
     ],
-    "14": [
-      "crunch"
+    "23": [
+      "assurance"
     ],
-    "26": [
-      "agility"
+    "28": [
+      "hone_claws"
+    ],
+    "34": [
+      "sucker_punch"
+    ],
+    "40": [
+      "nasty_plot"
+    ],
+    "46": [
+      "night_slash"
+    ],
+    "52": [
+      "play_rough"
     ]
   },
   "evolution": null,

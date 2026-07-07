@@ -19,31 +19,54 @@
   "modelId": "tirtouga",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "tail_whip"
-    ],
-    "8": [
+      "bide",
+      "withdraw",
       "water_gun"
     ],
-    "14": [
-      "rock_throw"
+    "3": [
+      "protect"
     ],
-    "20": [
-      "bubble_beam"
+    "6": [
+      "aqua_jet"
     ],
-    "32": [
+    "9": [
+      "smack_down"
+    ],
+    "12": [
+      "ancient_power"
+    ],
+    "15": [
+      "bite"
+    ],
+    "18": [
+      "wide_guard"
+    ],
+    "21": [
+      "brine"
+    ],
+    "24": [
       "rock_slide"
     ],
-    "40": [
-      "waterfall"
+    "27": [
+      "crunch"
     ],
-    "48": [
-      "stone_edge"
+    "30": [
+      "curse"
     ],
-    "26": [
-      "harden"
+    "33": [
+      "iron_defense"
+    ],
+    "36": [
+      "aqua_tail"
+    ],
+    "39": [
+      "rain_dance"
+    ],
+    "42": [
+      "hydro_pump"
+    ],
+    "45": [
+      "shell_smash"
     ]
   },
   "evolution": null,

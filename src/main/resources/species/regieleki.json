@@ -18,25 +18,47 @@
   "modelId": "regieleki",
   "learnset": {
     "1": [
-      "tackle"
+      "thunder_shock",
+      "rapid_spin"
     ],
-    "4": [
+    "6": [
+      "electroweb"
+    ],
+    "12": [
+      "ancient_power"
+    ],
+    "18": [
+      "shock_wave"
+    ],
+    "24": [
       "thunder_wave"
     ],
-    "8": [
-      "thunder_shock"
+    "30": [
+      "extreme_speed"
     ],
-    "14": [
-      "spark"
+    "36": [
+      "thunder_cage"
     ],
-    "20": [
+    "42": [
       "thunderbolt"
     ],
-    "32": [
-      "thunder"
+    "48": [
+      "magnet_rise"
     ],
-    "26": [
-      "agility"
+    "54": [
+      "thrash"
+    ],
+    "60": [
+      "lock_on"
+    ],
+    "66": [
+      "zap_cannon"
+    ],
+    "72": [
+      "hyper_beam"
+    ],
+    "78": [
+      "explosion"
     ]
   },
   "evolution": null,

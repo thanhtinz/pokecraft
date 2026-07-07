@@ -18,22 +18,15 @@
   "modelId": "wynaut",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "psybeam"
-    ],
-    "20": [
-      "psychic"
-    ],
-    "26": [
-      "harden"
+      "tackle",
+      "splash",
+      "charm",
+      "encore",
+      "counter",
+      "mirror_coat",
+      "safeguard",
+      "destiny_bond",
+      "amnesia"
     ]
   },
   "evolution": null,

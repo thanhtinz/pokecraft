@@ -18,25 +18,41 @@
   "modelId": "vanillish",
   "learnset": {
     "1": [
-      "scratch"
+      "harden",
+      "astonish",
+      "mist",
+      "taunt",
+      "mirror_shot"
     ],
-    "4": [
-      "leer"
+    "12": [
+      "icy_wind"
     ],
-    "8": [
-      "ice_shard"
-    ],
-    "14": [
-      "aurora_beam"
+    "16": [
+      "avalanche"
     ],
     "20": [
-      "ice_beam"
+      "hail"
+    ],
+    "24": [
+      "icicle_spear"
+    ],
+    "28": [
+      "uproar"
     ],
     "32": [
+      "acid_armor"
+    ],
+    "38": [
+      "mirror_coat"
+    ],
+    "44": [
+      "ice_beam"
+    ],
+    "50": [
       "blizzard"
     ],
-    "26": [
-      "calm_mind"
+    "56": [
+      "sheer_cold"
     ]
   },
   "evolution": null,

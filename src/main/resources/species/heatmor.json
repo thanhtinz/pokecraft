@@ -18,28 +18,48 @@
   "modelId": "heatmor",
   "learnset": {
     "1": [
-      "scratch"
+      "lick",
+      "odor_sleuth",
+      "flame_burst",
+      "tackle"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "fury_swipes"
     ],
-    "8": [
-      "ember"
+    "10": [
+      "incinerate"
     ],
-    "14": [
-      "fire_spin"
+    "15": [
+      "bug_bite"
     ],
     "20": [
-      "fire_punch"
+      "stockpile",
+      "spit_up",
+      "swallow"
     ],
-    "32": [
-      "flamethrower"
+    "25": [
+      "slash"
+    ],
+    "30": [
+      "bind"
+    ],
+    "35": [
+      "fire_lash"
     ],
     "40": [
-      "fire_blast"
+      "hone_claws"
     ],
-    "26": [
-      "calm_mind"
+    "45": [
+      "amnesia"
+    ],
+    "50": [
+      "fire_spin"
+    ],
+    "55": [
+      "inferno"
+    ],
+    "60": [
+      "flare_blitz"
     ]
   },
   "evolution": null,

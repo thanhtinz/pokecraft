@@ -19,31 +19,44 @@
   "modelId": "meloetta",
   "learnset": {
     "1": [
-      "tackle"
+      "round",
+      "quick_attack",
+      "confusion",
+      "sing",
+      "wake_up_slap"
     ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "confusion"
-    ],
-    "20": [
-      "hyper_fang"
-    ],
-    "32": [
-      "psybeam"
-    ],
-    "40": [
-      "mega_punch"
-    ],
-    "48": [
-      "psychic"
+    "21": [
+      "teeter_dance"
     ],
     "26": [
-      "calm_mind"
+      "acrobatics"
+    ],
+    "31": [
+      "psybeam"
+    ],
+    "36": [
+      "echoed_voice"
+    ],
+    "43": [
+      "u_turn"
+    ],
+    "50": [
+      "relic_song"
+    ],
+    "57": [
+      "psychic"
+    ],
+    "64": [
+      "hyper_voice"
+    ],
+    "71": [
+      "role_play"
+    ],
+    "78": [
+      "close_combat"
+    ],
+    "85": [
+      "perish_song"
     ]
   },
   "evolution": null,

@@ -18,28 +18,42 @@
   "modelId": "remoraid",
   "learnset": {
     "1": [
-      "scratch"
+      "water_gun",
+      "bubble",
+      "helping_hand"
     ],
     "4": [
-      "tail_whip"
+      "water_pulse"
     ],
     "8": [
-      "water_gun"
+      "focus_energy"
     ],
-    "14": [
-      "bubble_beam"
+    "12": [
+      "psybeam"
+    ],
+    "16": [
+      "aurora_beam"
     ],
     "20": [
-      "waterfall"
+      "bubble_beam"
+    ],
+    "24": [
+      "lock_on"
+    ],
+    "28": [
+      "bullet_seed"
     ],
     "32": [
-      "surf"
+      "ice_beam"
     ],
-    "40": [
+    "36": [
       "hydro_pump"
     ],
-    "26": [
-      "swords_dance"
+    "40": [
+      "soak"
+    ],
+    "44": [
+      "hyper_beam"
     ]
   },
   "evolution": null,

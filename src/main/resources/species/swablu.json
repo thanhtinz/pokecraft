@@ -19,31 +19,42 @@
   "modelId": "swablu",
   "learnset": {
     "1": [
-      "tackle"
+      "peck",
+      "growl",
+      "astonish"
     ],
     "4": [
-      "growl"
+      "disarming_voice"
     ],
     "8": [
-      "peck"
+      "mist"
     ],
-    "14": [
-      "quick_attack"
+    "12": [
+      "fury_attack"
+    ],
+    "16": [
+      "round"
     ],
     "20": [
-      "gust"
+      "natural_gift"
+    ],
+    "24": [
+      "safeguard"
+    ],
+    "28": [
+      "sing"
     ],
     "32": [
-      "hyper_fang"
+      "cotton_guard"
+    ],
+    "36": [
+      "take_down"
     ],
     "40": [
-      "wing_attack"
+      "moonblast"
     ],
-    "48": [
-      "mega_punch"
-    ],
-    "26": [
-      "harden"
+    "44": [
+      "perish_song"
     ]
   },
   "evolution": null,

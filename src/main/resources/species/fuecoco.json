@@ -18,28 +18,36 @@
   "modelId": "fuecoco",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+      "tackle",
+      "leer",
       "ember"
     ],
-    "14": [
-      "fire_spin"
+    "7": [
+      "round"
     ],
-    "20": [
-      "fire_punch"
+    "12": [
+      "bite"
     ],
-    "32": [
+    "15": [
+      "incinerate"
+    ],
+    "17": [
+      "yawn"
+    ],
+    "21": [
+      "snarl"
+    ],
+    "25": [
+      "roar"
+    ],
+    "28": [
       "flamethrower"
     ],
-    "40": [
-      "fire_blast"
+    "32": [
+      "hyper_voice"
     ],
-    "26": [
-      "calm_mind"
+    "36": [
+      "fire_blast"
     ]
   },
   "evolution": null,

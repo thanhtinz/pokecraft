@@ -18,31 +18,42 @@
   "modelId": "purugly",
   "learnset": {
     "1": [
-      "tackle"
+      "fake_out",
+      "scratch",
+      "growl",
+      "sucker_punch",
+      "swagger",
+      "play_rough"
     ],
-    "4": [
-      "growl"
+    "13": [
+      "hypnosis"
     ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "hyper_fang"
+    "17": [
+      "feint_attack"
     ],
     "20": [
-      "mega_punch"
+      "fury_swipes"
+    ],
+    "25": [
+      "charm"
+    ],
+    "29": [
+      "assist"
     ],
     "32": [
+      "captivate"
+    ],
+    "37": [
+      "slash"
+    ],
+    "45": [
       "body_slam"
     ],
-    "40": [
-      "double_edge"
+    "52": [
+      "attract"
     ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "agility"
+    "60": [
+      "hone_claws"
     ]
   },
   "evolution": null,

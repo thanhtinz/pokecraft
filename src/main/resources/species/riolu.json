@@ -18,25 +18,51 @@
   "modelId": "riolu",
   "learnset": {
     "1": [
-      "tackle"
+      "quick_attack",
+      "foresight",
+      "endure"
     ],
     "4": [
-      "leer"
+      "feint"
     ],
     "8": [
-      "karate_chop"
+      "metal_claw"
     ],
-    "14": [
-      "low_kick"
+    "12": [
+      "counter"
+    ],
+    "16": [
+      "work_up"
     ],
     "20": [
-      "brick_break"
+      "rock_smash"
+    ],
+    "24": [
+      "vacuum_wave"
+    ],
+    "28": [
+      "screech"
     ],
     "32": [
-      "cross_chop"
+      "quick_guard"
     ],
-    "26": [
+    "36": [
+      "force_palm"
+    ],
+    "40": [
       "swords_dance"
+    ],
+    "44": [
+      "helping_hand"
+    ],
+    "48": [
+      "copycat"
+    ],
+    "52": [
+      "final_gambit"
+    ],
+    "56": [
+      "reversal"
     ]
   },
   "evolution": null,

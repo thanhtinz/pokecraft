@@ -18,31 +18,45 @@
   "modelId": "porygon",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "conversion",
+      "sharpen"
     ],
-    "4": [
-      "growl"
+    "5": [
+      "recycle"
     ],
-    "8": [
-      "quick_attack"
+    "10": [
+      "magnet_rise"
     ],
-    "14": [
-      "hyper_fang"
+    "15": [
+      "thunder_shock"
     ],
     "20": [
-      "mega_punch"
+      "psybeam"
     ],
-    "32": [
-      "body_slam"
+    "25": [
+      "conversion_2"
+    ],
+    "30": [
+      "agility"
+    ],
+    "35": [
+      "recover"
     ],
     "40": [
+      "discharge"
+    ],
+    "45": [
+      "tri_attack"
+    ],
+    "50": [
       "double_edge"
     ],
-    "48": [
-      "hyper_beam"
+    "55": [
+      "lock_on"
     ],
-    "26": [
-      "calm_mind"
+    "60": [
+      "zap_cannon"
     ]
   },
   "evolution": null,

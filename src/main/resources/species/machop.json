@@ -18,25 +18,49 @@
   "modelId": "machop",
   "learnset": {
     "1": [
-      "tackle"
+      "low_kick",
+      "leer",
+      "karate_chop",
+      "foresight"
     ],
     "4": [
-      "leer"
+      "focus_energy"
     ],
     "8": [
-      "karate_chop"
+      "revenge"
     ],
-    "14": [
-      "low_kick"
+    "12": [
+      "low_sweep"
+    ],
+    "16": [
+      "knock_off"
     ],
     "20": [
-      "brick_break"
+      "scary_face"
+    ],
+    "24": [
+      "vital_throw"
+    ],
+    "29": [
+      "strength"
     ],
     "32": [
+      "dual_chop"
+    ],
+    "36": [
+      "bulk_up"
+    ],
+    "40": [
+      "seismic_toss"
+    ],
+    "44": [
+      "dynamic_punch"
+    ],
+    "48": [
       "cross_chop"
     ],
-    "26": [
-      "swords_dance"
+    "52": [
+      "double_edge"
     ]
   },
   "evolution": null,

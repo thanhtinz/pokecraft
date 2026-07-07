@@ -1,9 +1,64 @@
 {
-  "id": "ivysaur", "dex": 2, "name": "Ivysaur",
-  "types": ["GRASS", "POISON"],
-  "baseStats": { "hp": 60, "atk": 62, "def": 63, "spa": 80, "spd": 80, "spe": 60 },
-  "catchRate": 45, "expYield": 142, "modelId": "ivysaur",
-  "learnset": { "1": ["tackle", "growl"], "3": ["vine_whip"], "9": ["razor_leaf"], "13": ["poison_sting"], "20": ["sleep_powder"], "25": ["growth"] },
-  "evolution": { "level": 32, "to": "venusaur" },
+  "id": "ivysaur",
+  "dex": 2,
+  "name": "Ivysaur",
+  "types": [
+    "GRASS",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 62,
+    "def": 63,
+    "spa": 80,
+    "spd": 80,
+    "spe": 60
+  },
+  "catchRate": 45,
+  "expYield": 142,
+  "modelId": "ivysaur",
+  "learnset": {
+    "1": [
+      "tackle",
+      "growl",
+      "vine_whip",
+      "growth"
+    ],
+    "9": [
+      "leech_seed"
+    ],
+    "12": [
+      "razor_leaf"
+    ],
+    "15": [
+      "poison_powder",
+      "sleep_powder"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "25": [
+      "take_down"
+    ],
+    "30": [
+      "sweet_scent"
+    ],
+    "35": [
+      "synthesis"
+    ],
+    "40": [
+      "worry_seed"
+    ],
+    "45": [
+      "power_whip"
+    ],
+    "50": [
+      "solar_beam"
+    ]
+  },
+  "evolution": {
+    "level": 32,
+    "to": "venusaur"
+  },
   "spawn": null
 }

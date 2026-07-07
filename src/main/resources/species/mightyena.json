@@ -18,19 +18,47 @@
   "modelId": "mightyena",
   "learnset": {
     "1": [
-      "scratch"
+      "tackle",
+      "sand_attack",
+      "bite",
+      "odor_sleuth",
+      "thief",
+      "snarl",
+      "crunch",
+      "fire_fang",
+      "thunder_fang",
+      "ice_fang"
     ],
-    "4": [
+    "13": [
+      "howl",
       "leer"
     ],
-    "8": [
-      "bite"
+    "16": [
+      "roar"
     ],
-    "14": [
-      "crunch"
+    "20": [
+      "swagger"
     ],
-    "26": [
-      "swords_dance"
+    "24": [
+      "assurance"
+    ],
+    "28": [
+      "scary_face"
+    ],
+    "36": [
+      "taunt"
+    ],
+    "44": [
+      "yawn"
+    ],
+    "48": [
+      "take_down"
+    ],
+    "52": [
+      "sucker_punch"
+    ],
+    "56": [
+      "play_rough"
     ]
   },
   "evolution": null,

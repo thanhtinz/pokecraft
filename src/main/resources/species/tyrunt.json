@@ -19,31 +19,45 @@
   "modelId": "tyrunt",
   "learnset": {
     "1": [
-      "tackle"
+      "tail_whip",
+      "tackle",
+      "bide"
     ],
     "4": [
-      "harden"
+      "roar"
     ],
     "8": [
-      "rock_throw"
+      "ancient_power"
     ],
-    "14": [
-      "twister"
+    "12": [
+      "charm"
+    ],
+    "16": [
+      "bite"
     ],
     "20": [
+      "dragon_tail"
+    ],
+    "24": [
+      "stomp"
+    ],
+    "28": [
       "rock_slide"
     ],
     "32": [
-      "dragon_breath"
+      "crunch"
     ],
-    "40": [
-      "stone_edge"
-    ],
-    "48": [
+    "36": [
       "dragon_claw"
     ],
-    "26": [
-      "swords_dance"
+    "40": [
+      "thrash"
+    ],
+    "44": [
+      "earthquake"
+    ],
+    "48": [
+      "horn_drill"
     ]
   },
   "evolution": null,

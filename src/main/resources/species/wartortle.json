@@ -1,9 +1,64 @@
 {
-  "id": "wartortle", "dex": 8, "name": "Wartortle",
-  "types": ["WATER"],
-  "baseStats": { "hp": 59, "atk": 63, "def": 80, "spa": 65, "spd": 80, "spe": 58 },
-  "catchRate": 45, "expYield": 142, "modelId": "wartortle",
-  "learnset": { "1": ["tackle"], "4": ["water_gun"], "7": ["tail_whip"], "10": ["withdraw"], "16": ["bite"], "24": ["bubble_beam"] },
-  "evolution": { "level": 36, "to": "blastoise" },
+  "id": "wartortle",
+  "dex": 8,
+  "name": "Wartortle",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 59,
+    "atk": 63,
+    "def": 80,
+    "spa": 65,
+    "spd": 80,
+    "spe": 58
+  },
+  "catchRate": 45,
+  "expYield": 142,
+  "modelId": "wartortle",
+  "learnset": {
+    "1": [
+      "tackle",
+      "tail_whip",
+      "bubble",
+      "withdraw",
+      "water_gun",
+      "skull_bash"
+    ],
+    "9": [
+      "rapid_spin"
+    ],
+    "12": [
+      "bite"
+    ],
+    "15": [
+      "water_pulse"
+    ],
+    "20": [
+      "protect"
+    ],
+    "25": [
+      "rain_dance"
+    ],
+    "30": [
+      "aqua_tail"
+    ],
+    "35": [
+      "shell_smash"
+    ],
+    "40": [
+      "iron_defense"
+    ],
+    "45": [
+      "hydro_pump"
+    ],
+    "50": [
+      "wave_crash"
+    ]
+  },
+  "evolution": {
+    "level": 36,
+    "to": "blastoise"
+  },
   "spawn": null
 }

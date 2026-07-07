@@ -18,25 +18,44 @@
   "modelId": "electivire",
   "learnset": {
     "1": [
-      "scratch"
+      "quick_attack",
+      "leer",
+      "thunder_shock",
+      "ion_deluge",
+      "charge"
     ],
-    "4": [
-      "thunder_wave"
+    "12": [
+      "swift"
     ],
-    "8": [
-      "thunder_shock"
-    ],
-    "14": [
-      "spark"
+    "16": [
+      "shock_wave"
     ],
     "20": [
+      "thunder_wave"
+    ],
+    "24": [
+      "screech"
+    ],
+    "28": [
+      "thunder_punch"
+    ],
+    "34": [
+      "discharge"
+    ],
+    "40": [
+      "low_kick"
+    ],
+    "46": [
       "thunderbolt"
     ],
-    "32": [
+    "52": [
+      "light_screen"
+    ],
+    "58": [
       "thunder"
     ],
-    "26": [
-      "swords_dance"
+    "64": [
+      "giga_impact"
     ]
   },
   "evolution": null,

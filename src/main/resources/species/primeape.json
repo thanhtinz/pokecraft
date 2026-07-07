@@ -18,25 +18,53 @@
   "modelId": "primeape",
   "learnset": {
     "1": [
-      "tackle"
+      "fling",
+      "scratch",
+      "leer",
+      "focus_energy",
+      "karate_chop",
+      "rage",
+      "punishment",
+      "pursuit"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "fury_swipes"
     ],
     "8": [
-      "karate_chop"
-    ],
-    "14": [
       "low_kick"
     ],
-    "20": [
-      "brick_break"
+    "15": [
+      "seismic_toss"
     ],
-    "32": [
+    "17": [
+      "swagger"
+    ],
+    "22": [
       "cross_chop"
     ],
     "26": [
-      "swords_dance"
+      "assurance"
+    ],
+    "30": [
+      "thrash"
+    ],
+    "35": [
+      "rage_fist"
+    ],
+    "39": [
+      "close_combat"
+    ],
+    "44": [
+      "screech"
+    ],
+    "48": [
+      "stomping_tantrum"
+    ],
+    "53": [
+      "outrage"
+    ],
+    "57": [
+      "final_gambit"
     ]
   },
   "evolution": null,

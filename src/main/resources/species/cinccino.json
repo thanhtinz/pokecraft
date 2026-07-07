@@ -18,31 +18,24 @@
   "modelId": "cinccino",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
-      "growl"
-    ],
-    "8": [
-      "quick_attack"
-    ],
-    "14": [
-      "hyper_fang"
-    ],
-    "20": [
-      "mega_punch"
-    ],
-    "32": [
-      "body_slam"
-    ],
-    "40": [
-      "double_edge"
-    ],
-    "48": [
-      "hyper_beam"
-    ],
-    "26": [
-      "agility"
+      "bullet_seed",
+      "rock_blast",
+      "helping_hand",
+      "tickle",
+      "sing",
+      "tail_slap",
+      "hyper_voice",
+      "last_resort",
+      "after_you",
+      "echoed_voice",
+      "charm",
+      "swift",
+      "encore",
+      "slam",
+      "pound",
+      "baby_doll_eyes",
+      "growl",
+      "double_slap"
     ]
   },
   "evolution": null,

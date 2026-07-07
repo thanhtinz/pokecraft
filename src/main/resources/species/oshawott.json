@@ -18,28 +18,50 @@
   "modelId": "oshawott",
   "learnset": {
     "1": [
-      "tackle"
+      "tackle",
+      "water_sport"
     ],
-    "4": [
+    "5": [
       "tail_whip"
     ],
-    "8": [
+    "7": [
       "water_gun"
     ],
-    "14": [
-      "bubble_beam"
+    "11": [
+      "soak"
     ],
-    "20": [
-      "waterfall"
+    "13": [
+      "focus_energy"
     ],
-    "32": [
-      "surf"
+    "17": [
+      "razor_shell"
     ],
-    "40": [
+    "19": [
+      "fury_cutter"
+    ],
+    "23": [
+      "water_pulse"
+    ],
+    "25": [
+      "aerial_ace"
+    ],
+    "29": [
+      "aqua_jet"
+    ],
+    "31": [
+      "encore"
+    ],
+    "35": [
+      "aqua_tail"
+    ],
+    "37": [
+      "retaliate"
+    ],
+    "41": [
+      "swords_dance"
+    ],
+    "43": [
       "hydro_pump"
-    ],
-    "26": [
-      "calm_mind"
     ]
   },
   "evolution": null,

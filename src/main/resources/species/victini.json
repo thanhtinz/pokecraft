@@ -19,31 +19,51 @@
   "modelId": "victini",
   "learnset": {
     "1": [
-      "pound"
+      "focus_energy",
+      "confusion",
+      "quick_attack",
+      "flame_charge",
+      "flame_burst",
+      "v_create"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
+    "7": [
+      "work_up"
     ],
     "14": [
-      "ember"
+      "incinerate"
     ],
-    "20": [
-      "psybeam"
+    "21": [
+      "stored_power"
     ],
-    "32": [
-      "fire_spin"
+    "28": [
+      "headbutt"
     ],
-    "40": [
-      "psychic"
+    "35": [
+      "endure"
     ],
-    "48": [
-      "fire_punch"
+    "42": [
+      "zen_headbutt"
     ],
-    "26": [
-      "swords_dance"
+    "49": [
+      "inferno"
+    ],
+    "56": [
+      "reversal"
+    ],
+    "63": [
+      "searing_shot"
+    ],
+    "70": [
+      "double_edge"
+    ],
+    "77": [
+      "flare_blitz"
+    ],
+    "84": [
+      "overheat"
+    ],
+    "91": [
+      "final_gambit"
     ]
   },
   "evolution": null,

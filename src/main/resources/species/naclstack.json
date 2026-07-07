@@ -18,22 +18,45 @@
   "modelId": "naclstack",
   "learnset": {
     "1": [
-      "tackle"
-    ],
-    "4": [
+      "salt_cure",
+      "tackle",
       "harden"
     ],
-    "8": [
+    "5": [
       "rock_throw"
     ],
-    "14": [
-      "rock_slide"
+    "7": [
+      "mud_shot"
+    ],
+    "10": [
+      "smack_down"
+    ],
+    "13": [
+      "rock_polish"
+    ],
+    "16": [
+      "headbutt"
     ],
     "20": [
-      "stone_edge"
+      "iron_defense"
     ],
-    "26": [
-      "harden"
+    "30": [
+      "recover"
+    ],
+    "34": [
+      "rock_slide"
+    ],
+    "38": [
+      "stealth_rock"
+    ],
+    "41": [
+      "heavy_slam"
+    ],
+    "45": [
+      "earthquake"
+    ],
+    "51": [
+      "stone_edge"
     ]
   },
   "evolution": null,

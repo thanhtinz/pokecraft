@@ -18,25 +18,42 @@
   "modelId": "pancham",
   "learnset": {
     "1": [
-      "pound"
-    ],
-    "4": [
-      "leer"
-    ],
-    "8": [
+      "tackle",
+      "leer",
       "karate_chop"
     ],
-    "14": [
-      "low_kick"
+    "4": [
+      "arm_thrust"
+    ],
+    "8": [
+      "taunt"
+    ],
+    "12": [
+      "circle_throw"
+    ],
+    "16": [
+      "low_sweep"
     ],
     "20": [
-      "brick_break"
+      "work_up"
     ],
-    "32": [
-      "cross_chop"
+    "24": [
+      "slash"
     ],
-    "26": [
-      "swords_dance"
+    "28": [
+      "vital_throw"
+    ],
+    "33": [
+      "crunch"
+    ],
+    "36": [
+      "body_slam"
+    ],
+    "40": [
+      "parting_shot"
+    ],
+    "44": [
+      "entrainment"
     ]
   },
   "evolution": null,

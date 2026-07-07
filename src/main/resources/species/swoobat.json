@@ -19,31 +19,39 @@
   "modelId": "swoobat",
   "learnset": {
     "1": [
-      "tackle"
+      "confusion",
+      "odor_sleuth",
+      "gust",
+      "heart_stamp",
+      "endeavor",
+      "attract"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "peck"
+    "15": [
+      "air_cutter"
     ],
     "20": [
-      "psybeam"
+      "imprison"
     ],
-    "32": [
-      "gust"
+    "25": [
+      "assurance"
+    ],
+    "30": [
+      "amnesia"
+    ],
+    "35": [
+      "air_slash"
     ],
     "40": [
       "psychic"
     ],
-    "48": [
-      "wing_attack"
+    "45": [
+      "calm_mind"
     ],
-    "26": [
-      "agility"
+    "50": [
+      "future_sight"
+    ],
+    "55": [
+      "simple_beam"
     ]
   },
   "evolution": null,

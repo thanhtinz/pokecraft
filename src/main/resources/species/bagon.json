@@ -18,25 +18,42 @@
   "modelId": "bagon",
   "learnset": {
     "1": [
-      "pound"
+      "rage",
+      "leer",
+      "ember"
     ],
-    "4": [
-      "leer"
+    "5": [
+      "bite"
     ],
-    "8": [
-      "twister"
-    ],
-    "14": [
+    "10": [
       "dragon_breath"
     ],
+    "15": [
+      "headbutt"
+    ],
     "20": [
+      "scary_face"
+    ],
+    "25": [
+      "crunch"
+    ],
+    "31": [
       "dragon_claw"
     ],
-    "32": [
+    "35": [
+      "zen_headbutt"
+    ],
+    "40": [
+      "focus_energy"
+    ],
+    "45": [
+      "flamethrower"
+    ],
+    "50": [
       "outrage"
     ],
-    "26": [
-      "swords_dance"
+    "55": [
+      "double_edge"
     ]
   },
   "evolution": null,

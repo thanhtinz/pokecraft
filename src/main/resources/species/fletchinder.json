@@ -19,31 +19,40 @@
   "modelId": "fletchinder",
   "learnset": {
     "1": [
-      "pound"
+      "tackle",
+      "growl",
+      "quick_attack",
+      "peck",
+      "ember",
+      "razor_wind",
+      "flame_charge",
+      "me_first",
+      "natural_gift",
+      "feint"
     ],
-    "4": [
-      "leer"
+    "15": [
+      "flail"
     ],
-    "8": [
-      "ember"
+    "22": [
+      "acrobatics"
     ],
-    "14": [
-      "peck"
-    ],
-    "20": [
-      "fire_spin"
-    ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "fire_punch"
-    ],
-    "48": [
-      "wing_attack"
-    ],
-    "26": [
+    "29": [
       "agility"
+    ],
+    "36": [
+      "aerial_ace"
+    ],
+    "43": [
+      "tailwind"
+    ],
+    "50": [
+      "steel_wing"
+    ],
+    "57": [
+      "roost"
+    ],
+    "64": [
+      "fly"
     ]
   },
   "evolution": null,

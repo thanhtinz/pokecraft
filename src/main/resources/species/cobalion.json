@@ -19,31 +19,40 @@
   "modelId": "cobalion",
   "learnset": {
     "1": [
-      "pound"
+      "quick_attack",
+      "leer",
+      "helping_hand",
+      "work_up"
     ],
-    "4": [
-      "harden"
-    ],
-    "8": [
-      "steel_wing"
+    "7": [
+      "metal_claw"
     ],
     "14": [
-      "karate_chop"
+      "quick_guard"
     ],
-    "20": [
+    "21": [
+      "double_kick"
+    ],
+    "28": [
+      "retaliate"
+    ],
+    "35": [
+      "metal_burst"
+    ],
+    "42": [
+      "take_down"
+    ],
+    "49": [
+      "sacred_sword"
+    ],
+    "56": [
+      "swords_dance"
+    ],
+    "63": [
       "iron_head"
     ],
-    "32": [
-      "low_kick"
-    ],
-    "40": [
-      "brick_break"
-    ],
-    "48": [
-      "cross_chop"
-    ],
-    "26": [
-      "harden"
+    "70": [
+      "close_combat"
     ]
   },
   "evolution": null,

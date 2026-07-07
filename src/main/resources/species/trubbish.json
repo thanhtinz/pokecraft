@@ -18,25 +18,52 @@
   "modelId": "trubbish",
   "learnset": {
     "1": [
-      "scratch"
+      "pound",
+      "poison_gas",
+      "double_slap"
     ],
-    "4": [
-      "poison_powder"
+    "3": [
+      "recycle"
     ],
-    "8": [
-      "poison_sting"
+    "6": [
+      "acid_spray"
     ],
-    "14": [
-      "acid"
+    "9": [
+      "amnesia"
     ],
-    "20": [
+    "12": [
+      "clear_smog"
+    ],
+    "15": [
+      "toxic_spikes"
+    ],
+    "18": [
       "sludge"
     ],
-    "32": [
+    "21": [
+      "stockpile",
+      "swallow"
+    ],
+    "24": [
+      "take_down"
+    ],
+    "27": [
       "sludge_bomb"
     ],
-    "26": [
-      "agility"
+    "30": [
+      "toxic"
+    ],
+    "33": [
+      "belch"
+    ],
+    "37": [
+      "pain_split"
+    ],
+    "39": [
+      "gunk_shot"
+    ],
+    "42": [
+      "explosion"
     ]
   },
   "evolution": null,

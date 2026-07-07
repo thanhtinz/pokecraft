@@ -18,31 +18,41 @@
   "modelId": "slaking",
   "learnset": {
     "1": [
-      "scratch"
+      "scratch",
+      "yawn",
+      "encore",
+      "slack_off",
+      "feint_attack",
+      "punishment",
+      "sucker_punch",
+      "chip_away",
+      "swagger",
+      "fury_swipes",
+      "slash"
     ],
-    "4": [
-      "growl"
+    "17": [
+      "amnesia"
     ],
-    "8": [
-      "quick_attack"
+    "23": [
+      "covet"
     ],
-    "14": [
-      "hyper_fang"
+    "27": [
+      "throat_chop"
     ],
-    "20": [
-      "mega_punch"
+    "33": [
+      "counter"
     ],
-    "32": [
-      "body_slam"
+    "39": [
+      "flail"
     ],
-    "40": [
-      "double_edge"
+    "45": [
+      "fling"
     ],
-    "48": [
-      "hyper_beam"
+    "52": [
+      "mega_kick"
     ],
-    "26": [
-      "swords_dance"
+    "63": [
+      "hammer_arm"
     ]
   },
   "evolution": null,

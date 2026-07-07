@@ -19,31 +19,49 @@
   "modelId": "noivern",
   "learnset": {
     "1": [
-      "scratch"
+      "moonlight",
+      "dragon_pulse",
+      "supersonic",
+      "tackle",
+      "gust",
+      "razor_wind",
+      "absorb"
     ],
-    "4": [
-      "tail_whip"
+    "12": [
+      "double_team"
     ],
-    "8": [
-      "twister"
-    ],
-    "14": [
-      "peck"
-    ],
-    "20": [
-      "dragon_breath"
-    ],
-    "32": [
-      "gust"
-    ],
-    "40": [
-      "dragon_claw"
-    ],
-    "48": [
+    "16": [
       "wing_attack"
     ],
-    "26": [
-      "agility"
+    "20": [
+      "bite"
+    ],
+    "24": [
+      "air_cutter"
+    ],
+    "28": [
+      "whirlwind"
+    ],
+    "32": [
+      "super_fang"
+    ],
+    "36": [
+      "air_slash"
+    ],
+    "40": [
+      "screech"
+    ],
+    "44": [
+      "roost"
+    ],
+    "51": [
+      "tailwind"
+    ],
+    "56": [
+      "hurricane"
+    ],
+    "62": [
+      "boomburst"
     ]
   },
   "evolution": null,

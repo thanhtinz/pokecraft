@@ -18,22 +18,39 @@
   "modelId": "mew",
   "learnset": {
     "1": [
-      "scratch"
+      "pound",
+      "barrier",
+      "reflect_type"
     ],
-    "4": [
-      "hypnosis"
-    ],
-    "8": [
-      "confusion"
-    ],
-    "14": [
-      "psybeam"
+    "10": [
+      "amnesia"
     ],
     "20": [
-      "psychic"
+      "baton_pass"
     ],
-    "26": [
-      "swords_dance"
+    "30": [
+      "ancient_power"
+    ],
+    "40": [
+      "life_dew"
+    ],
+    "50": [
+      "nasty_plot"
+    ],
+    "60": [
+      "metronome"
+    ],
+    "70": [
+      "me_first"
+    ],
+    "80": [
+      "transform"
+    ],
+    "90": [
+      "aura_sphere"
+    ],
+    "100": [
+      "psychic"
     ]
   },
   "evolution": null,

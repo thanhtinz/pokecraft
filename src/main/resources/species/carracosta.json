@@ -19,31 +19,50 @@
   "modelId": "carracosta",
   "learnset": {
     "1": [
-      "scratch"
+      "bide",
+      "withdraw",
+      "water_gun",
+      "protect",
+      "aqua_jet"
     ],
-    "4": [
-      "tail_whip"
+    "9": [
+      "smack_down"
     ],
-    "8": [
-      "rock_throw"
+    "12": [
+      "ancient_power"
     ],
-    "14": [
-      "water_gun"
+    "15": [
+      "bite"
     ],
-    "20": [
+    "18": [
+      "wide_guard"
+    ],
+    "21": [
+      "brine"
+    ],
+    "24": [
       "rock_slide"
     ],
-    "32": [
-      "bubble_beam"
+    "27": [
+      "crunch"
     ],
-    "40": [
-      "stone_edge"
+    "30": [
+      "curse"
     ],
-    "48": [
-      "waterfall"
+    "33": [
+      "iron_defense"
     ],
-    "26": [
-      "harden"
+    "36": [
+      "aqua_tail"
+    ],
+    "41": [
+      "rain_dance"
+    ],
+    "46": [
+      "hydro_pump"
+    ],
+    "51": [
+      "shell_smash"
     ]
   },
   "evolution": null,
