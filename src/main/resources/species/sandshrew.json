@@ -1,0 +1,57 @@
+{
+  "id": "sandshrew",
+  "dex": 27,
+  "name": "Sandshrew",
+  "types": [
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 75,
+    "def": 85,
+    "spa": 20,
+    "spd": 30,
+    "spe": 40
+  },
+  "catchRate": 255,
+  "expYield": 60,
+  "modelId": "sandshrew",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "dig"
+    ],
+    "20": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 22,
+      "to": "sandslash",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

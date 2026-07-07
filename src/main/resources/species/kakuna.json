@@ -1,0 +1,58 @@
+{
+  "id": "kakuna",
+  "dex": 14,
+  "name": "Kakuna",
+  "types": [
+    "BUG",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 25,
+    "def": 50,
+    "spa": 25,
+    "spd": 25,
+    "spe": 35
+  },
+  "catchRate": 120,
+  "expYield": 57,
+  "modelId": "kakuna",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "pin_missile"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "sludge_bomb"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 10,
+      "to": "beedrill",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

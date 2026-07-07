@@ -1,0 +1,68 @@
+{
+  "id": "kabuto",
+  "dex": 140,
+  "name": "Kabuto",
+  "types": [
+    "ROCK",
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 30,
+    "atk": 80,
+    "def": 90,
+    "spa": 55,
+    "spd": 45,
+    "spe": 55
+  },
+  "catchRate": 45,
+  "expYield": 71,
+  "modelId": "kabuto",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 40,
+      "to": "kabutops",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

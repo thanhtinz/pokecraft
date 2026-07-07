@@ -1,0 +1,64 @@
+{
+  "id": "staryu",
+  "dex": 120,
+  "name": "Staryu",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 30,
+    "atk": 45,
+    "def": 55,
+    "spa": 70,
+    "spd": 55,
+    "spe": 85
+  },
+  "catchRate": 225,
+  "expYield": 68,
+  "modelId": "staryu",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "starmie",
+      "item": "water_stone"
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 18,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

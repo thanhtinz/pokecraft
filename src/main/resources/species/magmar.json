@@ -1,0 +1,57 @@
+{
+  "id": "magmar",
+  "dex": 126,
+  "name": "Magmar",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 95,
+    "def": 57,
+    "spa": 100,
+    "spd": 85,
+    "spe": 93
+  },
+  "catchRate": 45,
+  "expYield": 148,
+  "modelId": "magmar",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

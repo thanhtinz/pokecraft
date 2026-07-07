@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-07-06 (Phase 2+ - PvP, economy, social, daycare, riding)
+Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 
 ## Legend
 - [x] Done - implemented in this build
@@ -22,9 +22,12 @@ Last updated: 2026-07-06 (Phase 2+ - PvP, economy, social, daycare, riding)
 - [x] Shiny roll (config `battle.shiny-rate`, default 1/4096)
 - [x] Move secondary effects: stat stage changes + status infliction w/ chance
 - [x] Move priority (Quick Attack)
-- [~] Species dataset: 14 species (4 evolution line + pikachu/raichu)
-- [x] Tiến hóa bằng đá (evolution.item trong species JSON, Thunder Stone -> raichu)
-- [~] Move dataset: 29 moves
+- [x] Species dataset: FULL GEN 1 - 151 pokemon (script tools/generate_gen1.py,
+      base stats chuẩn, spawn theo biome/hệ, evolution chains đầy đủ)
+- [x] Tiến hóa bằng đá: Thunder/Fire/Water/Leaf/Moon Stone (mua ở shop);
+      hỗ trợ nhiều nhánh (Eevee -> Vaporeon/Jolteon/Flareon)
+- [x] Trade evolution đổi thành level 36 (Alakazam/Machamp/Golem/Gengar)
+- [x] Move dataset: 89 moves phủ đủ 18 hệ
 - [ ] EVs (effort values)
 - [ ] Abilities
 - [ ] Held items
@@ -85,7 +88,8 @@ Last updated: 2026-07-06 (Phase 2+ - PvP, economy, social, daycare, riding)
       qua GUI (Java + Bedrock form)
 - [x] PvP duel 1v1 (/poke duel): 2 người chọn move đồng thời, resolve theo
       priority/speed, đủ status/stages/PP/switch/forfeit, thưởng tiền người thắng
-- [ ] Trainer NPC battle (Citizens)
+- [x] Trainer NPC battle theo đội 2-4 pokemon (không cần Citizens), thưởng tiền,
+      cooldown tái đấu, exp từng con khi hạ
 - [ ] Dùng item giữa trận (ball ném được; potion chỉ dùng ngoài trận)
 - [ ] Battle theo turn timeout (chống AFK)
 - [ ] Stat stages cho accuracy/evasion
@@ -162,7 +166,10 @@ Last updated: 2026-07-06 (Phase 2+ - PvP, economy, social, daycare, riding)
 - [x] /poke heal - admin (full HP + PP + status)
 - [x] /poke reload - admin
 - [x] Tab completion
-- [ ] Pokecenter block (heal station cho player thường - hiện dùng potion mua ở shop)
+- [x] NPC hệ thống: /poke npc create <healer|vendor|trainer> (admin)
+      - Healer = Pokecenter (heal miễn phí), Vendor = mở shop, Trainer = đấu đội
+- [x] Legendary (Articuno/Zapdos/Moltres/Mewtwo/Mew) không spawn hoang -
+      admin spawn hoặc event sau này
 - [ ] Web admin panel + REST API
 
 ## Infrastructure

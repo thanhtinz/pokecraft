@@ -1,0 +1,54 @@
+{
+  "id": "hitmonlee",
+  "dex": 106,
+  "name": "Hitmonlee",
+  "types": [
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 120,
+    "def": 53,
+    "spa": 35,
+    "spd": 110,
+    "spe": 87
+  },
+  "catchRate": 45,
+  "expYield": 136,
+  "modelId": "hitmonlee",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "low_kick"
+    ],
+    "20": [
+      "brick_break"
+    ],
+    "32": [
+      "cross_chop"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "WINDSWEPT_FOREST",
+      "STONY_SHORE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

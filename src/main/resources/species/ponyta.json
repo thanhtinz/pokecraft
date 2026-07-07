@@ -1,0 +1,63 @@
+{
+  "id": "ponyta",
+  "dex": 77,
+  "name": "Ponyta",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 85,
+    "def": 55,
+    "spa": 65,
+    "spd": 65,
+    "spe": 90
+  },
+  "catchRate": 190,
+  "expYield": 82,
+  "modelId": "ponyta",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 40,
+      "to": "rapidash",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

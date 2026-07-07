@@ -22,13 +22,14 @@
 - [ ] Held items, natures affecting spawn odds
 
 ## Phase 3
-- Trainer NPCs with Citizens integration, gym leaders + badges
+- [x] Trainer NPCs (built-in, no Citizens) + healer/vendor NPCs
+- [ ] Gym leaders + badges (dùng trainer NPC làm nền)
 - Egg items + hatching, day/night + weather spawn conditions
 - Legendary spawn events with server broadcasts
 - Trading GUI between players (Bedrock-safe)
 
 ## Phase 4
 - Next.js admin panel + REST API (species editor, player inspector)
-- Full 151 gen-1 dataset generation script
+- [x] Full 151 gen-1 dataset generation script (tools/generate_gen1.py)
 - Bedrock resource pack polish (custom pokeball item textures via
   Geyser custom item mappings)

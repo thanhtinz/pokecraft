@@ -1,0 +1,52 @@
+{
+  "id": "gengar",
+  "dex": 94,
+  "name": "Gengar",
+  "types": [
+    "GHOST",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 65,
+    "def": 60,
+    "spa": 130,
+    "spd": 75,
+    "spe": 110
+  },
+  "catchRate": 45,
+  "expYield": 225,
+  "modelId": "gengar",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

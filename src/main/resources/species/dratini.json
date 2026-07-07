@@ -1,0 +1,60 @@
+{
+  "id": "dratini",
+  "dex": 147,
+  "name": "Dratini",
+  "types": [
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 41,
+    "atk": 64,
+    "def": 45,
+    "spa": 50,
+    "spd": 50,
+    "spe": 50
+  },
+  "catchRate": 45,
+  "expYield": 60,
+  "modelId": "dratini",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "dragon_breath"
+    ],
+    "20": [
+      "dragon_claw"
+    ],
+    "32": [
+      "outrage"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "dragonair",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "JAGGED_PEAKS",
+      "FROZEN_PEAKS",
+      "STONY_PEAKS"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

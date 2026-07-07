@@ -1,0 +1,64 @@
+{
+  "id": "horsea",
+  "dex": 116,
+  "name": "Horsea",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 30,
+    "atk": 40,
+    "def": 70,
+    "spa": 70,
+    "spd": 25,
+    "spe": 60
+  },
+  "catchRate": 225,
+  "expYield": 59,
+  "modelId": "horsea",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 32,
+      "to": "seadra",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 18,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "grimer",
+  "dex": 88,
+  "name": "Grimer",
+  "types": [
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 80,
+    "def": 50,
+    "spa": 40,
+    "spd": 50,
+    "spe": 25
+  },
+  "catchRate": 190,
+  "expYield": 65,
+  "modelId": "grimer",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "acid"
+    ],
+    "20": [
+      "sludge"
+    ],
+    "32": [
+      "sludge_bomb"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 38,
+      "to": "muk",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

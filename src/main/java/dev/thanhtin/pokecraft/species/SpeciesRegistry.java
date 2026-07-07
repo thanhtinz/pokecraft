@@ -20,21 +20,13 @@ public class SpeciesRegistry {
         this.plugin = plugin;
     }
 
-    /** Species shipped in the jar, extracted to the data folder when missing. */
-    private static final List<String> BUNDLED_SPECIES = List.of(
-            "bulbasaur", "ivysaur", "venusaur",
-            "charmander", "charmeleon", "charizard",
-            "squirtle", "wartortle", "blastoise",
-            "pidgey", "pidgeotto", "pidgeot",
-            "pikachu", "raichu");
-
     public void load() {
         species.clear();
         moves.clear();
         File speciesDir = new File(plugin.getDataFolder(), "species");
         File movesFile = new File(plugin.getDataFolder(), "moves/moves.json");
 
-        for (String s : BUNDLED_SPECIES) {
+        for (String s : bundledSpecies()) {
             if (!new File(speciesDir, s + ".json").exists()) {
                 plugin.saveResource("species/" + s + ".json", false);
             }
@@ -62,6 +54,20 @@ public class SpeciesRegistry {
         plugin.getLogger().info("[OK] Loaded " + species.size() + " species, " + moves.size() + " moves");
     }
 
+    /** Ids of species bundled in the jar, from species/_index.json. */
+    private List<String> bundledSpecies() {
+        try (java.io.InputStream in = plugin.getResource("species/_index.json")) {
+            if (in == null) return List.of();
+            try (Reader r = new java.io.InputStreamReader(in, java.nio.charset.StandardCharsets.UTF_8)) {
+                List<String> ids = gson.fromJson(r, new TypeToken<List<String>>() {}.getType());
+                return ids == null ? List.of() : ids;
+            }
+        } catch (Exception e) {
+            plugin.getLogger().warning("[WARN] Failed to read species index: " + e.getMessage());
+            return List.of();
+        }
+    }
+
     public PokemonSpecies getSpecies(String id) { return species.get(id); }
     public MoveData getMove(String id) { return moves.get(id); }
     public Collection<PokemonSpecies> all() { return species.values(); }
@@ -70,7 +76,9 @@ public class SpeciesRegistry {
     public Map<String, String> childToParent() {
         Map<String, String> map = new LinkedHashMap<>();
         for (PokemonSpecies s : species.values()) {
-            if (s.evolution != null && s.evolution.to != null) map.put(s.evolution.to, s.id);
+            for (PokemonSpecies.Evolution evo : s.allEvolutions()) {
+                if (evo.to != null) map.put(evo.to, s.id);
+            }
         }
         return map;
     }

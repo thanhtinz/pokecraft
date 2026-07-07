@@ -1,0 +1,52 @@
+{
+  "id": "magneton",
+  "dex": 82,
+  "name": "Magneton",
+  "types": [
+    "ELECTRIC",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 60,
+    "def": 95,
+    "spa": 120,
+    "spd": 70,
+    "spe": 70
+  },
+  "catchRate": 60,
+  "expYield": 209,
+  "modelId": "magneton",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "spark"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "48": [
+      "thunder"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

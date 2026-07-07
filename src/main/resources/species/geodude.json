@@ -1,0 +1,68 @@
+{
+  "id": "geodude",
+  "dex": 74,
+  "name": "Geodude",
+  "types": [
+    "ROCK",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 80,
+    "def": 100,
+    "spa": 30,
+    "spd": 30,
+    "spe": 20
+  },
+  "catchRate": 255,
+  "expYield": 60,
+  "modelId": "geodude",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 25,
+      "to": "graveler",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

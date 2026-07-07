@@ -1,0 +1,54 @@
+{
+  "id": "poliwhirl",
+  "dex": 61,
+  "name": "Poliwhirl",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 65,
+    "def": 65,
+    "spa": 50,
+    "spd": 50,
+    "spe": 90
+  },
+  "catchRate": 120,
+  "expYield": 108,
+  "modelId": "poliwhirl",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "poliwrath",
+      "item": "water_stone"
+    }
+  ],
+  "spawn": null
+}

@@ -40,7 +40,15 @@ public class ShopGui implements Listener {
             new Entry("hyper-potion", 1000, 1, "Hyper Potion",
                     pl -> pl.items().create(UsableItems.ItemType.HYPER_POTION, 1)),
             new Entry("thunder-stone", 3000, 1, "Thunder Stone",
-                    pl -> pl.items().create(UsableItems.ItemType.THUNDER_STONE, 1)));
+                    pl -> pl.items().create(UsableItems.ItemType.THUNDER_STONE, 1)),
+            new Entry("fire-stone", 3000, 1, "Fire Stone",
+                    pl -> pl.items().create(UsableItems.ItemType.FIRE_STONE, 1)),
+            new Entry("water-stone", 3000, 1, "Water Stone",
+                    pl -> pl.items().create(UsableItems.ItemType.WATER_STONE, 1)),
+            new Entry("leaf-stone", 3000, 1, "Leaf Stone",
+                    pl -> pl.items().create(UsableItems.ItemType.LEAF_STONE, 1)),
+            new Entry("moon-stone", 3000, 1, "Moon Stone",
+                    pl -> pl.items().create(UsableItems.ItemType.MOON_STONE, 1)));
 
     private final PokeCraftPlugin plugin;
 

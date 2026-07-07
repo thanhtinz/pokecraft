@@ -1,0 +1,52 @@
+{
+  "id": "starmie",
+  "dex": 121,
+  "name": "Starmie",
+  "types": [
+    "WATER",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 75,
+    "def": 85,
+    "spa": 100,
+    "spd": 85,
+    "spe": 115
+  },
+  "catchRate": 60,
+  "expYield": 234,
+  "modelId": "starmie",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -36,7 +36,11 @@ public class UsableItems implements Listener {
         POTION("Potion", Material.HONEY_BOTTLE, 20, "Heals 20 HP"),
         SUPER_POTION("Super Potion", Material.OMINOUS_BOTTLE, 60, "Heals 60 HP"),
         HYPER_POTION("Hyper Potion", Material.DRAGON_BREATH, -1, "Fully heals HP"),
-        THUNDER_STONE("Thunder Stone", Material.LIGHTNING_ROD, 0, "Evolves certain pokemon");
+        THUNDER_STONE("Thunder Stone", Material.LIGHTNING_ROD, 0, "Evolves certain pokemon"),
+        FIRE_STONE("Fire Stone", Material.BLAZE_POWDER, 0, "Evolves certain pokemon"),
+        WATER_STONE("Water Stone", Material.HEART_OF_THE_SEA, 0, "Evolves certain pokemon"),
+        LEAF_STONE("Leaf Stone", Material.BIG_DRIPLEAF, 0, "Evolves certain pokemon"),
+        MOON_STONE("Moon Stone", Material.QUARTZ, 0, "Evolves certain pokemon");
 
         public final String display;
         public final Material material;

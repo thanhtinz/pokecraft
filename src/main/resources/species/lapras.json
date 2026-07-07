@@ -1,0 +1,62 @@
+{
+  "id": "lapras",
+  "dex": 131,
+  "name": "Lapras",
+  "types": [
+    "WATER",
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 130,
+    "atk": 85,
+    "def": 80,
+    "spa": 85,
+    "spd": 95,
+    "spe": 60
+  },
+  "catchRate": 45,
+  "expYield": 160,
+  "modelId": "lapras",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "aurora_beam"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "ice_beam"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "wigglytuff",
+  "dex": 40,
+  "name": "Wigglytuff",
+  "types": [
+    "NORMAL",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 140,
+    "atk": 70,
+    "def": 45,
+    "spa": 85,
+    "spd": 50,
+    "spe": 45
+  },
+  "catchRate": 50,
+  "expYield": 196,
+  "modelId": "wigglytuff",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "fairy_wind"
+    ],
+    "20": [
+      "hyper_fang"
+    ],
+    "32": [
+      "dazzling_gleam"
+    ],
+    "40": [
+      "mega_punch"
+    ],
+    "48": [
+      "body_slam"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

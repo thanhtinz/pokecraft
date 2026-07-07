@@ -1,0 +1,61 @@
+{
+  "id": "porygon",
+  "dex": 137,
+  "name": "Porygon",
+  "types": [
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 60,
+    "def": 70,
+    "spa": 85,
+    "spd": 75,
+    "spe": 40
+  },
+  "catchRate": 45,
+  "expYield": 118,
+  "modelId": "porygon",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "hyper_fang"
+    ],
+    "20": [
+      "mega_punch"
+    ],
+    "32": [
+      "body_slam"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "48": [
+      "hyper_beam"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

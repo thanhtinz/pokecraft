@@ -1,0 +1,67 @@
+{
+  "id": "zubat",
+  "dex": 41,
+  "name": "Zubat",
+  "types": [
+    "POISON",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 45,
+    "def": 35,
+    "spa": 30,
+    "spd": 40,
+    "spe": 55
+  },
+  "catchRate": 255,
+  "expYield": 49,
+  "modelId": "zubat",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 22,
+      "to": "golbat",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

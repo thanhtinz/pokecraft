@@ -1,0 +1,58 @@
+{
+  "id": "tangela",
+  "dex": 114,
+  "name": "Tangela",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 55,
+    "def": 115,
+    "spa": 100,
+    "spd": 40,
+    "spe": 60
+  },
+  "catchRate": 45,
+  "expYield": 130,
+  "modelId": "tangela",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

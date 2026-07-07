@@ -1,0 +1,48 @@
+{
+  "id": "rapidash",
+  "dex": 78,
+  "name": "Rapidash",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 100,
+    "def": 70,
+    "spa": 80,
+    "spd": 80,
+    "spe": 105
+  },
+  "catchRate": 60,
+  "expYield": 225,
+  "modelId": "rapidash",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

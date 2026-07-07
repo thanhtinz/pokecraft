@@ -1,0 +1,68 @@
+{
+  "id": "slowpoke",
+  "dex": 79,
+  "name": "Slowpoke",
+  "types": [
+    "WATER",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 65,
+    "def": 65,
+    "spa": 40,
+    "spd": 40,
+    "spe": 15
+  },
+  "catchRate": 190,
+  "expYield": 63,
+  "modelId": "slowpoke",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 37,
+      "to": "slowbro",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

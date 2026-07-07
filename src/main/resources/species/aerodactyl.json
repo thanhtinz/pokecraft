@@ -1,0 +1,62 @@
+{
+  "id": "aerodactyl",
+  "dex": 142,
+  "name": "Aerodactyl",
+  "types": [
+    "ROCK",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 105,
+    "def": 65,
+    "spa": 60,
+    "spd": 75,
+    "spe": 130
+  },
+  "catchRate": 45,
+  "expYield": 154,
+  "modelId": "aerodactyl",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

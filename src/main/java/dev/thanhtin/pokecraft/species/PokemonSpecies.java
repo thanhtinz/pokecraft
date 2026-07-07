@@ -15,7 +15,17 @@ public class PokemonSpecies {
     /** level -> move ids learned at that level */
     public Map<String, List<String>> learnset;
     public Evolution evolution;
+    /** Multiple possible evolutions (e.g. Eevee); used alongside {@link #evolution}. */
+    public List<Evolution> evolutions;
     public SpawnInfo spawn;
+
+    /** All evolution entries: {@link #evolution} plus {@link #evolutions}. */
+    public List<Evolution> allEvolutions() {
+        List<Evolution> out = new java.util.ArrayList<>();
+        if (evolution != null) out.add(evolution);
+        if (evolutions != null) out.addAll(evolutions);
+        return out;
+    }
 
     public static class Evolution {
         /** Level-based evolution threshold (ignored when {@link #item} is set). */

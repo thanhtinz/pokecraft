@@ -1,0 +1,62 @@
+{
+  "id": "jynx",
+  "dex": 124,
+  "name": "Jynx",
+  "types": [
+    "ICE",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 50,
+    "def": 35,
+    "spa": 115,
+    "spd": 95,
+    "spe": 95
+  },
+  "catchRate": 45,
+  "expYield": 136,
+  "modelId": "jynx",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "aurora_beam"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "ice_beam"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

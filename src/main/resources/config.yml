@@ -53,6 +53,10 @@ daycare:
   breed-chance: 0.15      # per check, when 2 compatible pokemon are deposited
   breed-shiny-rate: 2048  # 1 / N for bred babies (better than wild 1/4096)
 
+npc:
+  trainer-reward-per-level: 10  # money = sum of team levels * this
+  trainer-cooldown-minutes: 30
+
 menu:
   # give every player a menu item in the hotbar (right-click/tap to open panel)
   give-item: true

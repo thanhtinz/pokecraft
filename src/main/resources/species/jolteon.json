@@ -1,0 +1,45 @@
+{
+  "id": "jolteon",
+  "dex": 135,
+  "name": "Jolteon",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 65,
+    "def": 60,
+    "spa": 110,
+    "spd": 95,
+    "spe": 130
+  },
+  "catchRate": 45,
+  "expYield": 236,
+  "modelId": "jolteon",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

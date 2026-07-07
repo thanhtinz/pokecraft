@@ -1,0 +1,52 @@
+{
+  "id": "articuno",
+  "dex": 144,
+  "name": "Articuno",
+  "types": [
+    "ICE",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 85,
+    "def": 100,
+    "spa": 95,
+    "spd": 125,
+    "spe": 85
+  },
+  "catchRate": 3,
+  "expYield": 290,
+  "modelId": "articuno",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "aurora_beam"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "ice_beam"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

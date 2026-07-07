@@ -1,0 +1,68 @@
+{
+  "id": "bellsprout",
+  "dex": 69,
+  "name": "Bellsprout",
+  "types": [
+    "GRASS",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 75,
+    "def": 35,
+    "spa": 70,
+    "spd": 30,
+    "spe": 40
+  },
+  "catchRate": 255,
+  "expYield": 60,
+  "modelId": "bellsprout",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 21,
+      "to": "weepinbell",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

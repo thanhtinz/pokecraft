@@ -1,0 +1,52 @@
+{
+  "id": "butterfree",
+  "dex": 12,
+  "name": "Butterfree",
+  "types": [
+    "BUG",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 45,
+    "def": 50,
+    "spa": 90,
+    "spd": 80,
+    "spe": 70
+  },
+  "catchRate": 45,
+  "expYield": 178,
+  "modelId": "butterfree",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "pin_missile"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

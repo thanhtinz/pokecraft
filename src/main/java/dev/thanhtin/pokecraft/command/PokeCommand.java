@@ -65,6 +65,7 @@ public class PokeCommand implements TabExecutor {
             case "divorce" -> plugin.marriage().divorce(player);
             case "daycare" -> daycare(player, args);
             case "ride" -> ride(player, args);
+            case "npc" -> npc(player, args);
             case "give" -> {
                 if (!player.hasPermission("pokecraft.admin")) return noPerm(player);
                 PokeballItem.BallType type = PokeballItem.BallType.POKE_BALL;
@@ -243,6 +244,51 @@ public class PokeCommand implements TabExecutor {
         }
     }
 
+    private void npc(Player player, String[] args) {
+        if (!player.hasPermission("pokecraft.admin")) {
+            noPerm(player);
+            return;
+        }
+        if (args.length < 2) {
+            player.sendMessage(Component.text(
+                    "Usage: /poke npc <create <healer|vendor|trainer> [level] [name...]|remove>",
+                    NamedTextColor.RED));
+            return;
+        }
+        if (args[1].equalsIgnoreCase("remove")) {
+            plugin.npcs().removeNearest(player);
+            return;
+        }
+        if (!args[1].equalsIgnoreCase("create") || args.length < 3) {
+            player.sendMessage(Component.text(
+                    "Usage: /poke npc create <healer|vendor|trainer> [level] [name...]",
+                    NamedTextColor.RED));
+            return;
+        }
+        dev.thanhtin.pokecraft.npc.NpcManager.NpcType type;
+        try {
+            type = dev.thanhtin.pokecraft.npc.NpcManager.NpcType.valueOf(args[2].toUpperCase(Locale.ROOT));
+        } catch (IllegalArgumentException e) {
+            player.sendMessage(Component.text("Unknown NPC type: " + args[2], NamedTextColor.RED));
+            return;
+        }
+        int level = 10;
+        int nameFrom = 3;
+        if (type == dev.thanhtin.pokecraft.npc.NpcManager.NpcType.TRAINER
+                && args.length > 3 && args[3].matches("\\d+")) {
+            level = Math.max(2, Math.min(100, Integer.parseInt(args[3])));
+            nameFrom = 4;
+        }
+        String name = args.length > nameFrom
+                ? String.join(" ", List.of(args).subList(nameFrom, args.length))
+                : switch (type) {
+                    case HEALER -> "Nurse Joy";
+                    case VENDOR -> "Shop Keeper";
+                    case TRAINER -> "Trainer";
+                };
+        plugin.npcs().create(player, type, name, level);
+    }
+
     private void ride(Player player, String[] args) {
         if (args.length < 2) {
             if (plugin.rides().isRiding(player)) {
@@ -337,7 +383,7 @@ public class PokeCommand implements TabExecutor {
         List<String> out = new ArrayList<>();
         if (args.length == 1) {
             out.addAll(List.of("menu", "party", "pc", "shop", "balance", "pay", "top", "duel", "marry",
-                    "divorce", "daycare", "ride", "nickname", "release", "give", "spawn", "heal", "reload"));
+                    "divorce", "daycare", "ride", "nickname", "release", "give", "spawn", "heal", "reload", "npc"));
         } else if (args.length == 2 && args[0].equalsIgnoreCase("spawn")) {
             plugin.species().all().forEach(s -> out.add(s.id));
         } else if (args.length == 2 && args[0].equalsIgnoreCase("give")) {
@@ -353,6 +399,10 @@ public class PokeCommand implements TabExecutor {
             plugin.getServer().getOnlinePlayers().forEach(p -> out.add(p.getName()));
         } else if (args.length == 2 && args[0].equalsIgnoreCase("daycare")) {
             out.addAll(List.of("status", "deposit", "withdraw"));
+        } else if (args.length == 2 && args[0].equalsIgnoreCase("npc")) {
+            out.addAll(List.of("create", "remove"));
+        } else if (args.length == 3 && args[0].equalsIgnoreCase("npc") && args[1].equalsIgnoreCase("create")) {
+            out.addAll(List.of("healer", "vendor", "trainer"));
         }
         return out;
     }

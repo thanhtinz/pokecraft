@@ -1,0 +1,67 @@
+{
+  "id": "magnemite",
+  "dex": 81,
+  "name": "Magnemite",
+  "types": [
+    "ELECTRIC",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 25,
+    "atk": 35,
+    "def": 70,
+    "spa": 95,
+    "spd": 55,
+    "spe": 45
+  },
+  "catchRate": 190,
+  "expYield": 65,
+  "modelId": "magnemite",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "48": [
+      "thunder"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "magneton",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

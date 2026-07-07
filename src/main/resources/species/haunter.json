@@ -1,0 +1,58 @@
+{
+  "id": "haunter",
+  "dex": 93,
+  "name": "Haunter",
+  "types": [
+    "GHOST",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 50,
+    "def": 45,
+    "spa": 115,
+    "spd": 55,
+    "spe": 95
+  },
+  "catchRate": 90,
+  "expYield": 113,
+  "modelId": "haunter",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 36,
+      "to": "gengar",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

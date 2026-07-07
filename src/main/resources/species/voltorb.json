@@ -1,0 +1,60 @@
+{
+  "id": "voltorb",
+  "dex": 100,
+  "name": "Voltorb",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 30,
+    "def": 50,
+    "spa": 55,
+    "spd": 55,
+    "spe": 100
+  },
+  "catchRate": 190,
+  "expYield": 66,
+  "modelId": "voltorb",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "electrode",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "gastly",
+  "dex": 92,
+  "name": "Gastly",
+  "types": [
+    "GHOST",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 30,
+    "atk": 35,
+    "def": 30,
+    "spa": 100,
+    "spd": 35,
+    "spe": 80
+  },
+  "catchRate": 190,
+  "expYield": 62,
+  "modelId": "gastly",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 25,
+      "to": "haunter",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

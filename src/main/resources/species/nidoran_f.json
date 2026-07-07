@@ -1,0 +1,60 @@
+{
+  "id": "nidoran_f",
+  "dex": 29,
+  "name": "Nidoran F",
+  "types": [
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 47,
+    "def": 52,
+    "spa": 40,
+    "spd": 40,
+    "spe": 41
+  },
+  "catchRate": 235,
+  "expYield": 55,
+  "modelId": "nidoran_f",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "acid"
+    ],
+    "20": [
+      "sludge"
+    ],
+    "32": [
+      "sludge_bomb"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 16,
+      "to": "nidorina",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 19,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

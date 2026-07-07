@@ -1,0 +1,52 @@
+{
+  "id": "moltres",
+  "dex": 146,
+  "name": "Moltres",
+  "types": [
+    "FIRE",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 100,
+    "def": 90,
+    "spa": 125,
+    "spd": 85,
+    "spe": 90
+  },
+  "catchRate": 3,
+  "expYield": 290,
+  "modelId": "moltres",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

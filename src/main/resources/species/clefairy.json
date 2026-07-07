@@ -1,0 +1,54 @@
+{
+  "id": "clefairy",
+  "dex": 35,
+  "name": "Clefairy",
+  "types": [
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 45,
+    "def": 48,
+    "spa": 60,
+    "spd": 65,
+    "spe": 35
+  },
+  "catchRate": 150,
+  "expYield": 65,
+  "modelId": "clefairy",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sing"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "dazzling_gleam"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "clefable",
+      "item": "moon_stone"
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MEADOW"
+    ],
+    "weight": 12,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

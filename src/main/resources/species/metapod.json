@@ -1,0 +1,45 @@
+{
+  "id": "metapod",
+  "dex": 11,
+  "name": "Metapod",
+  "types": [
+    "BUG"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 20,
+    "def": 55,
+    "spa": 25,
+    "spd": 25,
+    "spe": 30
+  },
+  "catchRate": 120,
+  "expYield": 57,
+  "modelId": "metapod",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "pin_missile"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 10,
+      "to": "butterfree",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

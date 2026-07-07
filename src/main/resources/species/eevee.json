@@ -1,0 +1,77 @@
+{
+  "id": "eevee",
+  "dex": 133,
+  "name": "Eevee",
+  "types": [
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 55,
+    "def": 50,
+    "spa": 45,
+    "spd": 65,
+    "spe": 55
+  },
+  "catchRate": 45,
+  "expYield": 65,
+  "modelId": "eevee",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "hyper_fang"
+    ],
+    "20": [
+      "mega_punch"
+    ],
+    "32": [
+      "body_slam"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "48": [
+      "hyper_beam"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "vaporeon",
+      "item": "water_stone"
+    },
+    {
+      "level": 0,
+      "to": "jolteon",
+      "item": "thunder_stone"
+    },
+    {
+      "level": 0,
+      "to": "flareon",
+      "item": "fire_stone"
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

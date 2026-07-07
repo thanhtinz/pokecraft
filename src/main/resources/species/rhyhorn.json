@@ -1,0 +1,67 @@
+{
+  "id": "rhyhorn",
+  "dex": 111,
+  "name": "Rhyhorn",
+  "types": [
+    "GROUND",
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 85,
+    "def": 95,
+    "spa": 30,
+    "spd": 30,
+    "spe": 25
+  },
+  "catchRate": 120,
+  "expYield": 69,
+  "modelId": "rhyhorn",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 42,
+      "to": "rhydon",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

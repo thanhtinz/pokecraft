@@ -1,0 +1,68 @@
+{
+  "id": "exeggcute",
+  "dex": 102,
+  "name": "Exeggcute",
+  "types": [
+    "GRASS",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 40,
+    "def": 80,
+    "spa": 60,
+    "spd": 45,
+    "spe": 40
+  },
+  "catchRate": 90,
+  "expYield": 65,
+  "modelId": "exeggcute",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "exeggutor",
+      "item": "leaf_stone"
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 7,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "alakazam",
+  "dex": 65,
+  "name": "Alakazam",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 50,
+    "def": 45,
+    "spa": 135,
+    "spd": 95,
+    "spe": 120
+  },
+  "catchRate": 50,
+  "expYield": 225,
+  "modelId": "alakazam",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

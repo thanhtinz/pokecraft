@@ -1,0 +1,62 @@
+{
+  "id": "onix",
+  "dex": 95,
+  "name": "Onix",
+  "types": [
+    "ROCK",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 35,
+    "atk": 45,
+    "def": 160,
+    "spa": 30,
+    "spd": 45,
+    "spe": 70
+  },
+  "catchRate": 45,
+  "expYield": 116,
+  "modelId": "onix",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "rock_throw"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "48": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

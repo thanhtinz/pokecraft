@@ -1,0 +1,51 @@
+{
+  "id": "nidorina",
+  "dex": 30,
+  "name": "Nidorina",
+  "types": [
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 62,
+    "def": 67,
+    "spa": 55,
+    "spd": 55,
+    "spe": 56
+  },
+  "catchRate": 120,
+  "expYield": 102,
+  "modelId": "nidorina",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "acid"
+    ],
+    "20": [
+      "sludge"
+    ],
+    "32": [
+      "sludge_bomb"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "nidoqueen",
+      "item": "moon_stone"
+    }
+  ],
+  "spawn": null
+}

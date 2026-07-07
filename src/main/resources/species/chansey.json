@@ -1,0 +1,61 @@
+{
+  "id": "chansey",
+  "dex": 113,
+  "name": "Chansey",
+  "types": [
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 250,
+    "atk": 5,
+    "def": 5,
+    "spa": 35,
+    "spd": 105,
+    "spe": 50
+  },
+  "catchRate": 30,
+  "expYield": 135,
+  "modelId": "chansey",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "hyper_fang"
+    ],
+    "20": [
+      "mega_punch"
+    ],
+    "32": [
+      "body_slam"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "48": [
+      "hyper_beam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

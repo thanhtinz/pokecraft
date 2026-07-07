@@ -1,0 +1,62 @@
+{
+  "id": "scyther",
+  "dex": 123,
+  "name": "Scyther",
+  "types": [
+    "BUG",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 110,
+    "def": 80,
+    "spa": 55,
+    "spd": 80,
+    "spe": 105
+  },
+  "catchRate": 45,
+  "expYield": 150,
+  "modelId": "scyther",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

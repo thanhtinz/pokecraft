@@ -1,0 +1,68 @@
+{
+  "id": "doduo",
+  "dex": 84,
+  "name": "Doduo",
+  "types": [
+    "NORMAL",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 35,
+    "atk": 85,
+    "def": 45,
+    "spa": 35,
+    "spd": 35,
+    "spe": 75
+  },
+  "catchRate": 190,
+  "expYield": 62,
+  "modelId": "doduo",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "hyper_fang"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "mega_punch"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 31,
+      "to": "dodrio",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

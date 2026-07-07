@@ -1,0 +1,68 @@
+{
+  "id": "oddish",
+  "dex": 43,
+  "name": "Oddish",
+  "types": [
+    "GRASS",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 50,
+    "def": 55,
+    "spa": 75,
+    "spd": 65,
+    "spe": 30
+  },
+  "catchRate": 255,
+  "expYield": 64,
+  "modelId": "oddish",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 21,
+      "to": "gloom",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

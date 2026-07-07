@@ -1,0 +1,51 @@
+{
+  "id": "persian",
+  "dex": 53,
+  "name": "Persian",
+  "types": [
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 70,
+    "def": 60,
+    "spa": 65,
+    "spd": 65,
+    "spe": 115
+  },
+  "catchRate": 90,
+  "expYield": 198,
+  "modelId": "persian",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "hyper_fang"
+    ],
+    "20": [
+      "mega_punch"
+    ],
+    "32": [
+      "body_slam"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "48": [
+      "hyper_beam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

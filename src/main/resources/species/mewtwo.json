@@ -1,0 +1,42 @@
+{
+  "id": "mewtwo",
+  "dex": 150,
+  "name": "Mewtwo",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 106,
+    "atk": 110,
+    "def": 90,
+    "spa": 154,
+    "spd": 90,
+    "spe": 130
+  },
+  "catchRate": 3,
+  "expYield": 340,
+  "modelId": "mewtwo",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,64 @@
+{
+  "id": "magikarp",
+  "dex": 129,
+  "name": "Magikarp",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 20,
+    "atk": 10,
+    "def": 55,
+    "spa": 15,
+    "spd": 20,
+    "spe": 80
+  },
+  "catchRate": 255,
+  "expYield": 40,
+  "modelId": "magikarp",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 20,
+      "to": "gyarados",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

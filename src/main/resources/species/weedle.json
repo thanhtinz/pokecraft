@@ -1,0 +1,68 @@
+{
+  "id": "weedle",
+  "dex": 13,
+  "name": "Weedle",
+  "types": [
+    "BUG",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 35,
+    "def": 30,
+    "spa": 20,
+    "spd": 20,
+    "spe": 50
+  },
+  "catchRate": 255,
+  "expYield": 39,
+  "modelId": "weedle",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "sludge_bomb"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 7,
+      "to": "kakuna",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

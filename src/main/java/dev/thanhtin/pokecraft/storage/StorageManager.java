@@ -56,6 +56,13 @@ public class StorageManager {
                     owner TEXT NOT NULL,
                     deposited_at INTEGER NOT NULL
                 )""");
+            st.executeUpdate("""
+                CREATE TABLE IF NOT EXISTS npcs (
+                    entity_uuid TEXT PRIMARY KEY,
+                    type TEXT NOT NULL,
+                    name TEXT NOT NULL,
+                    data TEXT NOT NULL DEFAULT ''
+                )""");
         }
         plugin.getLogger().info("[OK] Storage initialized (" + type + ")");
     }
@@ -257,6 +264,46 @@ public class StorageManager {
             ps.executeUpdate();
         } catch (SQLException e) {
             plugin.getLogger().severe("[ERR] removeDaycare failed: " + e.getMessage());
+        }
+    }
+
+    // ---------- npcs ----------
+
+    public record NpcRow(String type, String name, String data) {}
+
+    public synchronized void saveNpc(UUID entityUuid, String type, String name, String data) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "INSERT OR REPLACE INTO npcs(entity_uuid, type, name, data) VALUES(?,?,?,?)")) {
+            ps.setString(1, entityUuid.toString());
+            ps.setString(2, type);
+            ps.setString(3, name);
+            ps.setString(4, data == null ? "" : data);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] saveNpc failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized NpcRow getNpc(UUID entityUuid) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT type, name, data FROM npcs WHERE entity_uuid=?")) {
+            ps.setString(1, entityUuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) return new NpcRow(rs.getString(1), rs.getString(2), rs.getString(3));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] getNpc failed: " + e.getMessage());
+        }
+        return null;
+    }
+
+    public synchronized void deleteNpc(UUID entityUuid) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "DELETE FROM npcs WHERE entity_uuid=?")) {
+            ps.setString(1, entityUuid.toString());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] deleteNpc failed: " + e.getMessage());
         }
     }
 

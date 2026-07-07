@@ -16,22 +16,27 @@ public class EvolutionService {
 
     /** Called after level-ups; item evolutions never trigger from levels. */
     public void tryLevelEvolve(Player player, PokemonInstance p, PokemonSpecies species) {
-        if (species.evolution == null || species.evolution.item != null) return;
-        if (p.level < species.evolution.level) return;
-        PokemonSpecies target = plugin.species().getSpecies(species.evolution.to);
-        if (target == null) return; // evolution species file not installed yet
-        apply(player, p, species, target);
+        for (PokemonSpecies.Evolution evo : species.allEvolutions()) {
+            if (evo.item != null || evo.to == null || p.level < evo.level) continue;
+            PokemonSpecies target = plugin.species().getSpecies(evo.to);
+            if (target == null) continue; // evolution species file not installed yet
+            apply(player, p, species, target);
+            return;
+        }
     }
 
     /** @return true if the item evolved this pokemon (item should be consumed). */
     public boolean tryItemEvolve(Player player, PokemonInstance p, String itemId) {
         PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
-        if (species == null || species.evolution == null) return false;
-        if (!itemId.equals(species.evolution.item)) return false;
-        PokemonSpecies target = plugin.species().getSpecies(species.evolution.to);
-        if (target == null) return false;
-        apply(player, p, species, target);
-        return true;
+        if (species == null) return false;
+        for (PokemonSpecies.Evolution evo : species.allEvolutions()) {
+            if (!itemId.equals(evo.item) || evo.to == null) continue;
+            PokemonSpecies target = plugin.species().getSpecies(evo.to);
+            if (target == null) continue;
+            apply(player, p, species, target);
+            return true;
+        }
+        return false;
     }
 
     private void apply(Player player, PokemonInstance p, PokemonSpecies from, PokemonSpecies to) {

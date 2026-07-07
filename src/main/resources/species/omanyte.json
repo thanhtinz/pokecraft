@@ -1,0 +1,68 @@
+{
+  "id": "omanyte",
+  "dex": 138,
+  "name": "Omanyte",
+  "types": [
+    "ROCK",
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 35,
+    "atk": 40,
+    "def": 100,
+    "spa": 90,
+    "spd": 55,
+    "spe": 35
+  },
+  "catchRate": 45,
+  "expYield": 71,
+  "modelId": "omanyte",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 40,
+      "to": "omastar",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

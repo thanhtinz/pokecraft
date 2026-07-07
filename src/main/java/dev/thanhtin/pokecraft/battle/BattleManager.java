@@ -72,6 +72,48 @@ public class BattleManager implements Listener {
         plugin.battleUi().open(player, battle);
     }
 
+    /** Starts a battle against an NPC trainer's team. */
+    public void startTrainerBattle(Player player, Entity npcEntity,
+                                   List<PokemonInstance> team, String trainerName, long reward) {
+        Battle existing = battles.get(player.getUniqueId());
+        if (existing != null) {
+            if (existing.awaitingSwitch) plugin.battleUi().openSwitchMenu(player, existing, true);
+            else plugin.battleUi().open(player, existing);
+            return;
+        }
+        if (plugin.pvp().get(player) != null) {
+            player.sendMessage(Component.text("You are in a duel right now.", NamedTextColor.RED));
+            return;
+        }
+        if (team == null || team.isEmpty()) return;
+        if (isWildInBattle(npcEntity.getUniqueId())) {
+            player.sendMessage(Component.text(trainerName + " is already battling someone else.",
+                    NamedTextColor.RED));
+            return;
+        }
+        if (plugin.rides().isRiding(player)) plugin.rides().dismount(player);
+        PokemonInstance mine = plugin.parties().get(player).firstAlive();
+        if (mine == null) {
+            player.sendMessage(Component.text("You have no usable pokemon.", NamedTextColor.RED));
+            return;
+        }
+        Battle battle = new Battle(player.getUniqueId(), mine, team.get(0), npcEntity);
+        battle.npcTeam = team;
+        battle.npcIndex = 0;
+        battle.npcName = trainerName;
+        battle.npcReward = reward;
+        battles.put(player.getUniqueId(), battle);
+        PokemonSpecies first = plugin.species().getSpecies(team.get(0).speciesId);
+        player.sendMessage(Component.text(trainerName + " challenges you with "
+                + team.size() + " pokemon! First up: " + team.get(0).displayName(first)
+                + " Lv." + team.get(0).level, NamedTextColor.GOLD));
+        plugin.battleUi().open(player, battle);
+    }
+
+    private String opponentPrefix(Battle battle) {
+        return battle.isTrainerBattle() ? battle.npcName + "'s " : "Wild ";
+    }
+
     /** True if the pokemon has at least one move with PP left. */
     public boolean hasUsableMove(PokemonInstance p) {
         if (p.moves == null) return false;
@@ -146,7 +188,7 @@ public class BattleManager implements Listener {
         PokemonSpecies defenderSpecies = plugin.species().getSpecies(defender.speciesId);
         int[] attackerStages = byPlayer ? battle.playerStages : battle.wildStages;
         int[] defenderStages = byPlayer ? battle.wildStages : battle.playerStages;
-        String prefix = byPlayer ? "Your " : "Wild ";
+        String prefix = byPlayer ? "Your " : opponentPrefix(battle);
         NamedTextColor color = byPlayer ? NamedTextColor.AQUA : NamedTextColor.LIGHT_PURPLE;
 
         if (!canAct(player, attacker, attackerSpecies, prefix)) return false;
@@ -236,7 +278,7 @@ public class BattleManager implements Listener {
                 case 1 -> "Attack"; case 2 -> "Defense"; case 3 -> "Sp. Atk";
                 case 4 -> "Sp. Def"; default -> "Speed";
             };
-            String who = (byPlayer == onSelf ? "Your " : "Wild ") + targetSpecies.name;
+            String who = (byPlayer == onSelf ? "Your " : opponentPrefix(battle)) + targetSpecies.name;
             if (stages[effect.stat] == before) {
                 player.sendMessage(Component.text(who + "'s " + statName + " can't go "
                         + (effect.stages > 0 ? "higher" : "lower") + "!", NamedTextColor.GRAY));
@@ -251,7 +293,7 @@ public class BattleManager implements Listener {
             defender.status = effect.status;
             if (effect.status == StatusCondition.SLEEP) defender.sleepTurns = 1 + rnd.nextInt(3);
             PokemonSpecies ds = plugin.species().getSpecies(defender.speciesId);
-            player.sendMessage(Component.text((byPlayer ? "Wild " : "Your ") + ds.name
+            player.sendMessage(Component.text((byPlayer ? opponentPrefix(battle) : "Your ") + ds.name
                     + " was " + effect.status.verb + "!", NamedTextColor.YELLOW));
         }
     }
@@ -266,7 +308,7 @@ public class BattleManager implements Listener {
             PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
             int dmg = Math.max(1, (int) (p.maxHp(species) * fraction));
             p.currentHp = Math.max(0, p.currentHp - dmg);
-            player.sendMessage(Component.text((playerSide ? "Your " : "Wild ") + species.name
+            player.sendMessage(Component.text((playerSide ? "Your " : opponentPrefix(battle)) + species.name
                     + " is hurt by its " + p.status.tag + " (" + dmg + " dmg)!", NamedTextColor.GRAY));
         }
         return checkFaints(player, battle);
@@ -275,13 +317,48 @@ public class BattleManager implements Listener {
     /** @return true if the battle ended or is now waiting for a switch. */
     private boolean checkFaints(Player player, Battle battle) {
         if (battle.wildPokemon.currentHp <= 0) {
-            endWithVictory(player, battle);
+            if (battle.isTrainerBattle() && battle.npcIndex + 1 < battle.npcTeam.size()) {
+                handleTrainerNext(player, battle);
+            } else {
+                endWithVictory(player, battle);
+            }
             return true;
         }
         if (battle.playerPokemon.currentHp <= 0) {
             return handlePlayerFaint(player, battle);
         }
         return false;
+    }
+
+    /** The trainer's pokemon fainted but more remain: award exp, send out the next one. */
+    private void handleTrainerNext(Player player, Battle battle) {
+        awardExp(player, battle);
+        battle.npcIndex++;
+        battle.wildPokemon = battle.npcTeam.get(battle.npcIndex);
+        battle.resetWildStages();
+        PokemonSpecies next = plugin.species().getSpecies(battle.wildPokemon.speciesId);
+        player.sendMessage(Component.text(battle.npcName + " sent out "
+                + battle.wildPokemon.displayName(next) + " Lv." + battle.wildPokemon.level + "!",
+                NamedTextColor.GOLD));
+        plugin.parties().saveParty(player.getUniqueId());
+        plugin.battleUi().open(player, battle);
+    }
+
+    /** Faint message + exp/level/evolution for the currently fainted opposing pokemon. */
+    private void awardExp(Player player, Battle battle) {
+        PokemonSpecies faintedSpecies = plugin.species().getSpecies(battle.wildPokemon.speciesId);
+        PokemonSpecies mySpecies = plugin.species().getSpecies(battle.playerPokemon.speciesId);
+        double mult = plugin.getConfig().getDouble("battle.exp-multiplier", 1.0)
+                * plugin.marriage().expMultiplier(player);
+        long gained = Math.round(faintedSpecies.expYield * battle.wildPokemon.level / 7.0 * mult);
+        int levels = battle.playerPokemon.addExp(mySpecies, gained);
+        player.sendMessage(Component.text(opponentPrefix(battle) + faintedSpecies.name
+                + " fainted! +" + gained + " EXP", NamedTextColor.GREEN));
+        if (levels > 0) {
+            player.sendMessage(Component.text(battle.playerPokemon.displayName(mySpecies)
+                    + " grew to Lv." + battle.playerPokemon.level + "!", NamedTextColor.GOLD));
+            plugin.evolutions().tryLevelEvolve(player, battle.playerPokemon, mySpecies);
+        }
     }
 
     private boolean handlePlayerFaint(Player player, Battle battle) {
@@ -352,7 +429,9 @@ public class BattleManager implements Listener {
 
     private void syncWildEntity(Battle battle) {
         // keep entity data in sync so pokeball capture chance reflects damage/status
-        if (battle.wildEntity != null && battle.wildEntity.isValid()) {
+        if (battle.isTrainerBattle()) return; // NPC entity carries no pokemon data
+        if (battle.wildEntity != null && battle.wildEntity.isValid()
+                && plugin.entities().isWild(battle.wildEntity)) {
             plugin.entities().writeData(battle.wildEntity, battle.wildPokemon);
         }
     }
@@ -360,27 +439,23 @@ public class BattleManager implements Listener {
     private void endWithVictory(Player player, Battle battle) {
         battle.finished = true;
         battles.remove(player.getUniqueId());
-        PokemonSpecies wildSpecies = plugin.species().getSpecies(battle.wildPokemon.speciesId);
-        PokemonSpecies mySpecies = plugin.species().getSpecies(battle.playerPokemon.speciesId);
-        if (battle.wildEntity.isValid()) battle.wildEntity.remove();
+        awardExp(player, battle);
 
-        double mult = plugin.getConfig().getDouble("battle.exp-multiplier", 1.0)
-                * plugin.marriage().expMultiplier(player);
-        long gained = Math.round(wildSpecies.expYield * battle.wildPokemon.level / 7.0 * mult);
-        int levels = battle.playerPokemon.addExp(mySpecies, gained);
-
-        long money = plugin.economy().wildBattleReward(battle.wildPokemon.level);
-        plugin.economy().deposit(player.getUniqueId(), money);
-        plugin.economy().addWildWin(player.getUniqueId());
-
-        player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1f, 1f);
-        player.sendMessage(Component.text("Wild " + wildSpecies.name + " fainted! +"
-                + gained + " EXP, +" + plugin.economy().format(money), NamedTextColor.GREEN));
-        if (levels > 0) {
-            player.sendMessage(Component.text(battle.playerPokemon.displayName(mySpecies)
-                    + " grew to Lv." + battle.playerPokemon.level + "!", NamedTextColor.GOLD));
-            plugin.evolutions().tryLevelEvolve(player, battle.playerPokemon, mySpecies);
+        long money;
+        if (battle.isTrainerBattle()) {
+            money = battle.npcReward;
+            plugin.economy().deposit(player.getUniqueId(), money);
+            player.sendMessage(Component.text("You defeated " + battle.npcName + "! +"
+                    + plugin.economy().format(money), NamedTextColor.GOLD));
+        } else {
+            if (battle.wildEntity.isValid()) battle.wildEntity.remove();
+            money = plugin.economy().wildBattleReward(battle.wildPokemon.level);
+            plugin.economy().deposit(player.getUniqueId(), money);
+            plugin.economy().addWildWin(player.getUniqueId());
+            player.sendMessage(Component.text("+" + plugin.economy().format(money),
+                    NamedTextColor.GREEN));
         }
+        player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1f, 1f);
         plugin.parties().saveParty(player.getUniqueId());
         player.closeInventory();
     }

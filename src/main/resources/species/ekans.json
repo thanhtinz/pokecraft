@@ -1,0 +1,60 @@
+{
+  "id": "ekans",
+  "dex": 23,
+  "name": "Ekans",
+  "types": [
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 35,
+    "atk": 60,
+    "def": 44,
+    "spa": 40,
+    "spd": 54,
+    "spe": 55
+  },
+  "catchRate": 255,
+  "expYield": 58,
+  "modelId": "ekans",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "acid"
+    ],
+    "20": [
+      "sludge"
+    ],
+    "32": [
+      "sludge_bomb"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 22,
+      "to": "arbok",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

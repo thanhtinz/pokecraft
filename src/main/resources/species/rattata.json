@@ -1,0 +1,67 @@
+{
+  "id": "rattata",
+  "dex": 19,
+  "name": "Rattata",
+  "types": [
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 30,
+    "atk": 56,
+    "def": 35,
+    "spa": 25,
+    "spd": 35,
+    "spe": 72
+  },
+  "catchRate": 255,
+  "expYield": 51,
+  "modelId": "rattata",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "hyper_fang"
+    ],
+    "20": [
+      "mega_punch"
+    ],
+    "32": [
+      "body_slam"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "48": [
+      "hyper_beam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 20,
+      "to": "raticate",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "poliwag",
+  "dex": 60,
+  "name": "Poliwag",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 50,
+    "def": 40,
+    "spa": 40,
+    "spd": 40,
+    "spe": 90
+  },
+  "catchRate": 255,
+  "expYield": 60,
+  "modelId": "poliwag",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 25,
+      "to": "poliwhirl",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

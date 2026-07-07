@@ -1,0 +1,68 @@
+{
+  "id": "tentacool",
+  "dex": 72,
+  "name": "Tentacool",
+  "types": [
+    "WATER",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 40,
+    "def": 35,
+    "spa": 50,
+    "spd": 100,
+    "spe": 70
+  },
+  "catchRate": 190,
+  "expYield": 67,
+  "modelId": "tentacool",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "tentacruel",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "slowbro",
+  "dex": 80,
+  "name": "Slowbro",
+  "types": [
+    "WATER",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 95,
+    "atk": 75,
+    "def": 110,
+    "spa": 100,
+    "spd": 80,
+    "spe": 30
+  },
+  "catchRate": 75,
+  "expYield": 220,
+  "modelId": "slowbro",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "sandslash",
+  "dex": 28,
+  "name": "Sandslash",
+  "types": [
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 100,
+    "def": 110,
+    "spa": 45,
+    "spd": 55,
+    "spe": 65
+  },
+  "catchRate": 90,
+  "expYield": 202,
+  "modelId": "sandslash",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "dig"
+    ],
+    "20": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}
