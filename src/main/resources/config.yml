@@ -11,6 +11,16 @@ spawning:
   spawn-radius-max: 32
   despawn-distance: 64
   despawn-seconds: 300
+  time-weather-influence: true  # night favors Ghost/Dark/Poison/Ice; day favors
+                                # Normal/Bug/Flying/Grass/Fairy; rain boosts Water/Electric
+
+legendary:
+  event-enabled: true
+  interval-minutes: 60   # a legendary event is rolled this often
+  chance: 0.5            # probability per roll (needs a player online)
+  min-level: 50
+  max-level: 60
+  shiny-rate: 1024       # 1 / N (better odds than wild)
 
 capture:
   # base entity used under ModelEngine models

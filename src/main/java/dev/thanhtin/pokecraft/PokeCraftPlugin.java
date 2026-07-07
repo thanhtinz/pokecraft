@@ -36,6 +36,7 @@ import dev.thanhtin.pokecraft.rank.RankManager;
 import dev.thanhtin.pokecraft.social.GuildManager;
 import dev.thanhtin.pokecraft.social.MarriageManager;
 import dev.thanhtin.pokecraft.trade.TradeManager;
+import dev.thanhtin.pokecraft.spawn.LegendaryManager;
 import dev.thanhtin.pokecraft.spawn.SpawnManager;
 import dev.thanhtin.pokecraft.species.SpeciesRegistry;
 import dev.thanhtin.pokecraft.storage.StorageManager;
@@ -72,6 +73,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private ModelManager modelManager;
     private WalkingPokemonManager walkingManager;
     private SpawnManager spawnManager;
+    private LegendaryManager legendaryManager;
     private BattleManager battleManager;
     private PokeballItem pokeballItem;
     private BedrockSupport bedrockSupport;
@@ -197,6 +199,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         rideManager = new RideManager(this);
         npcManager = new NpcManager(this);
         spawnManager = new SpawnManager(this);
+        legendaryManager = new LegendaryManager(this);
         walkingManager = new WalkingPokemonManager(this);
 
         getServer().getPluginManager().registerEvents(partyManager, this);
@@ -251,6 +254,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getCommand("poke").setTabCompleter(command);
 
         spawnManager.start();
+        legendaryManager.start();
         farmManager.start();
         minimapManager.start();
         daycareManager.start();
@@ -262,6 +266,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     @Override
     public void onDisable() {
         if (spawnManager != null) spawnManager.stop();
+        if (legendaryManager != null) legendaryManager.stop();
         if (farmManager != null) farmManager.stop();
         if (minimapManager != null) minimapManager.stop();
         if (daycareManager != null) daycareManager.stop();
@@ -310,6 +315,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public FarmManager farms() { return farmManager; }
     public AdminGui adminUi() { return adminGui; }
     public SpawnManager spawns() { return spawnManager; }
+    public LegendaryManager legendaries() { return legendaryManager; }
     public MinimapManager minimap() { return minimapManager; }
     public CasinoGui casinoUi() { return casinoGui; }
     public TriviaGui triviaUi() { return triviaGui; }

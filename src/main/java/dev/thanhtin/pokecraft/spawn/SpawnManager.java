@@ -3,6 +3,7 @@ package dev.thanhtin.pokecraft.spawn;
 import dev.thanhtin.pokecraft.PokeCraftPlugin;
 import dev.thanhtin.pokecraft.pokemon.PokemonInstance;
 import dev.thanhtin.pokecraft.species.PokemonSpecies;
+import dev.thanhtin.pokecraft.species.PokemonType;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;
@@ -113,21 +114,53 @@ public class SpawnManager {
 
     private PokemonSpecies pickSpecies(Location loc) {
         String biome = loc.getBlock().getBiome().getKey().getKey().toUpperCase(Locale.ROOT);
+        World world = loc.getWorld();
         List<PokemonSpecies> pool = new ArrayList<>();
+        List<Integer> weights = new ArrayList<>();
         int totalWeight = 0;
         for (PokemonSpecies s : plugin.species().all()) {
             if (s.spawn == null || s.spawn.biomes == null) continue;
             if (s.spawn.biomes.contains(biome)) {
+                int w = adjustedWeight(s, world);
                 pool.add(s);
-                totalWeight += s.spawn.weight;
+                weights.add(w);
+                totalWeight += w;
             }
         }
-        if (pool.isEmpty()) return null;
+        if (pool.isEmpty() || totalWeight <= 0) return null;
         int roll = ThreadLocalRandom.current().nextInt(totalWeight);
-        for (PokemonSpecies s : pool) {
-            roll -= s.spawn.weight;
-            if (roll < 0) return s;
+        for (int i = 0; i < pool.size(); i++) {
+            roll -= weights.get(i);
+            if (roll < 0) return pool.get(i);
         }
         return pool.get(0);
+    }
+
+    /** Spawn weight after day/night and weather influence (by type). */
+    private int adjustedWeight(PokemonSpecies s, World world) {
+        int w = Math.max(1, s.spawn.weight);
+        if (!plugin.getConfig().getBoolean("spawning.time-weather-influence", true)) return w;
+        boolean night = isNight(world);
+        boolean storm = world.hasStorm();
+        double mult = 1.0;
+        if (s.types != null) {
+            for (PokemonType t : s.types) {
+                if (night) {
+                    if (t == PokemonType.GHOST || t == PokemonType.DARK
+                            || t == PokemonType.POISON || t == PokemonType.ICE) mult *= 1.6;
+                } else {
+                    if (t == PokemonType.NORMAL || t == PokemonType.BUG
+                            || t == PokemonType.FLYING || t == PokemonType.GRASS
+                            || t == PokemonType.FAIRY) mult *= 1.3;
+                }
+                if (storm && (t == PokemonType.WATER || t == PokemonType.ELECTRIC)) mult *= 1.6;
+            }
+        }
+        return Math.max(1, (int) Math.round(w * mult));
+    }
+
+    private boolean isNight(World world) {
+        long t = world.getTime() % 24000L;
+        return t >= 13000 && t <= 23000;
     }
 }

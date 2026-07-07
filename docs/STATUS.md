@@ -59,9 +59,13 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Ground-check + height-check khi chọn vị trí spawn
 - [x] Active despawn sweep: `despawn-seconds` (tuổi tối đa) + `despawn-distance`
       (xa mọi player) - bỏ qua pokemon đang trong battle
-- [ ] Điều kiện spawn theo thời gian (ngày/đêm) và thời tiết
+- [x] Ảnh hưởng ngày/đêm & thời tiết tới spawn (theo hệ): đêm ưu tiên
+      Ghost/Dark/Poison/Ice, ngày ưu tiên Normal/Bug/Flying/Grass/Fairy, mưa
+      tăng Water/Electric (config spawning.time-weather-influence)
 - [ ] Spawn dưới nước / trên không (hiện chỉ spawn trên mặt đất)
-- [ ] Legendary spawn event + broadcast
+- [x] Legendary spawn event: định kỳ (config) có xác suất spawn 1 legendary
+      (30 loài Gen 1-9) gần 1 player + broadcast toàn server; OP panel có nút
+      spawn ngay; legendary vẫn không spawn thường
 
 ## Rendering / Bedrock
 

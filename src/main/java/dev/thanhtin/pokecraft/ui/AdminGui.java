@@ -51,9 +51,10 @@ public class AdminGui implements Listener {
             new Act(31, "npc_trainer", Material.IRON_SWORD, "Place Trainer NPC (here)"),
             new Act(32, "npc_gym", Material.GOLDEN_HELMET, "Place Gym Leader (pick)"),
             new Act(33, "models", Material.ARMOR_STAND, "Pokemon 3D models"),
-            new Act(34, "rankreset", Material.DIAMOND, "Reset rank season"),
-            new Act(35, "heal", Material.GOLDEN_APPLE, "Heal my party"),
-            new Act(36, "reload", Material.REDSTONE, "Reload config"));
+            new Act(34, "legendary", Material.NETHER_STAR, "Spawn a Legendary (near me)"),
+            new Act(35, "rankreset", Material.DIAMOND, "Reset rank season"),
+            new Act(36, "heal", Material.GOLDEN_APPLE, "Heal my party"),
+            new Act(37, "reload", Material.REDSTONE, "Reload config"));
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyToggle;
@@ -173,6 +174,13 @@ public class AdminGui implements Listener {
                     () -> plugin.gymPickerUi().open(player));
             case "models" -> plugin.getServer().getScheduler().runTask(plugin,
                     () -> plugin.modelUi().open(player, 0, false));
+            case "legendary" -> {
+                player.closeInventory();
+                if (!plugin.legendaries().spawnNow(player)) {
+                    player.sendMessage(Component.text("Could not find a spot to spawn a legendary.",
+                            NamedTextColor.RED));
+                }
+            }
             case "rankreset" -> { plugin.ranks().resetSeason(player); open(player); }
             case "heal" -> {
                 for (var p : plugin.parties().get(player).party()) {
