@@ -20,6 +20,8 @@ import dev.thanhtin.pokecraft.party.PartyManager;
 import dev.thanhtin.pokecraft.pokemon.EvolutionService;
 import dev.thanhtin.pokecraft.ride.RideManager;
 import dev.thanhtin.pokecraft.shop.ShopGui;
+import dev.thanhtin.pokecraft.rank.RankManager;
+import dev.thanhtin.pokecraft.social.GuildManager;
 import dev.thanhtin.pokecraft.social.MarriageManager;
 import dev.thanhtin.pokecraft.trade.TradeManager;
 import dev.thanhtin.pokecraft.spawn.SpawnManager;
@@ -30,6 +32,9 @@ import dev.thanhtin.pokecraft.ui.PartyGui;
 import dev.thanhtin.pokecraft.ui.DaycareGui;
 import dev.thanhtin.pokecraft.ui.LeaderboardGui;
 import dev.thanhtin.pokecraft.ui.ActivitiesGui;
+import dev.thanhtin.pokecraft.ui.GuildGui;
+import dev.thanhtin.pokecraft.ui.GuildNameInput;
+import dev.thanhtin.pokecraft.ui.RankGui;
 import dev.thanhtin.pokecraft.ui.MainMenuGui;
 import dev.thanhtin.pokecraft.ui.NicknameInput;
 import dev.thanhtin.pokecraft.ui.PayAmountGui;
@@ -70,6 +75,11 @@ public class PokeCraftPlugin extends JavaPlugin {
     private QuestManager questManager;
     private FishingManager fishingManager;
     private ActivitiesGui activitiesGui;
+    private GuildManager guildManager;
+    private RankManager rankManager;
+    private GuildGui guildGui;
+    private GuildNameInput guildNameInput;
+    private RankGui rankGui;
     private PvpBattleManager pvpManager;
     private EconomyManager economyManager;
     private MarriageManager marriageManager;
@@ -121,6 +131,11 @@ public class PokeCraftPlugin extends JavaPlugin {
         questManager = new QuestManager(this);
         fishingManager = new FishingManager(this);
         activitiesGui = new ActivitiesGui(this);
+        guildManager = new GuildManager(this);
+        rankManager = new RankManager(this);
+        guildGui = new GuildGui(this);
+        guildNameInput = new GuildNameInput(this);
+        rankGui = new RankGui(this);
         pvpManager = new PvpBattleManager(this);
         economyManager = new EconomyManager(this);
         marriageManager = new MarriageManager(this);
@@ -154,6 +169,9 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(payAmountGui, this);
         getServer().getPluginManager().registerEvents(fishingManager, this);
         getServer().getPluginManager().registerEvents(activitiesGui, this);
+        getServer().getPluginManager().registerEvents(guildGui, this);
+        getServer().getPluginManager().registerEvents(guildNameInput, this);
+        getServer().getPluginManager().registerEvents(rankGui, this);
         getServer().getPluginManager().registerEvents(pvpManager, this);
         getServer().getPluginManager().registerEvents(economyManager, this);
         getServer().getPluginManager().registerEvents(usableItems, this);
@@ -208,6 +226,11 @@ public class PokeCraftPlugin extends JavaPlugin {
     public QuestManager quests() { return questManager; }
     public FishingManager fishing() { return fishingManager; }
     public ActivitiesGui activitiesUi() { return activitiesGui; }
+    public GuildManager guilds() { return guildManager; }
+    public RankManager ranks() { return rankManager; }
+    public GuildGui guildUi() { return guildGui; }
+    public GuildNameInput guildNameInput() { return guildNameInput; }
+    public RankGui rankUi() { return rankGui; }
     public PvpBattleManager pvp() { return pvpManager; }
     public EconomyManager economy() { return economyManager; }
     public MarriageManager marriage() { return marriageManager; }

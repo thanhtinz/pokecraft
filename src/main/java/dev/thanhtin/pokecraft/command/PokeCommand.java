@@ -105,6 +105,10 @@ public class PokeCommand implements TabExecutor {
                 plugin.parties().saveParty(player.getUniqueId());
                 player.sendMessage(Component.text("Party fully healed (HP, PP and status).", NamedTextColor.GREEN));
             }
+            case "rankreset" -> {
+                if (!player.hasPermission("pokecraft.admin")) return noPerm(player);
+                plugin.ranks().resetSeason(player);
+            }
             case "reload" -> {
                 if (!player.hasPermission("pokecraft.admin")) return noPerm(player);
                 plugin.reloadConfig();
@@ -117,7 +121,7 @@ public class PokeCommand implements TabExecutor {
                         "Tip: everything is in the menu item (right-click / tap the star). "
                         + "Commands are optional.", NamedTextColor.YELLOW));
                 player.sendMessage(Component.text(
-                        "admin: /poke [give <ball>|spawn <species> [lvl]|heal|reload]",
+                        "admin: /poke [give <ball>|spawn <species> [lvl]|heal|reload|rankreset]",
                         NamedTextColor.GRAY));
             }
         }

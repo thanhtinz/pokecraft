@@ -86,6 +86,31 @@ public class StorageManager {
                     claimed INTEGER NOT NULL DEFAULT 0,
                     PRIMARY KEY(owner, quest_id)
                 )""");
+            st.executeUpdate("""
+                CREATE TABLE IF NOT EXISTS guilds (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name TEXT NOT NULL UNIQUE,
+                    owner TEXT NOT NULL,
+                    bank INTEGER NOT NULL DEFAULT 0
+                )""");
+            st.executeUpdate("""
+                CREATE TABLE IF NOT EXISTS guild_members (
+                    uuid TEXT PRIMARY KEY,
+                    guild_id INTEGER NOT NULL,
+                    name TEXT NOT NULL DEFAULT ''
+                )""");
+            st.executeUpdate("""
+                CREATE TABLE IF NOT EXISTS ranks (
+                    uuid TEXT PRIMARY KEY,
+                    name TEXT NOT NULL DEFAULT '',
+                    points INTEGER NOT NULL DEFAULT 0,
+                    season INTEGER NOT NULL DEFAULT 1
+                )""");
+            st.executeUpdate("""
+                CREATE TABLE IF NOT EXISTS meta (
+                    k TEXT PRIMARY KEY,
+                    v TEXT NOT NULL
+                )""");
         }
         plugin.getLogger().info("[OK] Storage initialized (" + type + ")");
     }
@@ -416,6 +441,217 @@ public class StorageManager {
         } catch (SQLException e) {
             plugin.getLogger().severe("[ERR] claimQuest failed: " + e.getMessage());
         }
+    }
+
+    // ---------- meta (key/value) ----------
+
+    public synchronized String getMeta(String key, String def) {
+        try (PreparedStatement ps = connection.prepareStatement("SELECT v FROM meta WHERE k=?")) {
+            ps.setString(1, key);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) return rs.getString(1);
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] getMeta failed: " + e.getMessage());
+        }
+        return def;
+    }
+
+    public synchronized void setMeta(String key, String value) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "INSERT INTO meta(k, v) VALUES(?,?) ON CONFLICT(k) DO UPDATE SET v=excluded.v")) {
+            ps.setString(1, key);
+            ps.setString(2, value);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] setMeta failed: " + e.getMessage());
+        }
+    }
+
+    // ---------- guilds ----------
+
+    public record GuildRow(int id, String name, UUID owner, long bank) {}
+
+    public synchronized GuildRow createGuild(String name, UUID owner) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "INSERT INTO guilds(name, owner, bank) VALUES(?,?,0)",
+                java.sql.Statement.RETURN_GENERATED_KEYS)) {
+            ps.setString(1, name);
+            ps.setString(2, owner.toString());
+            ps.executeUpdate();
+            try (ResultSet keys = ps.getGeneratedKeys()) {
+                if (keys.next()) return new GuildRow(keys.getInt(1), name, owner, 0);
+            }
+        } catch (SQLException e) {
+            return null; // name taken, etc.
+        }
+        return null;
+    }
+
+    public synchronized GuildRow getGuild(int id) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT id, name, owner, bank FROM guilds WHERE id=?")) {
+            ps.setInt(1, id);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) return new GuildRow(rs.getInt(1), rs.getString(2),
+                        UUID.fromString(rs.getString(3)), rs.getLong(4));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] getGuild failed: " + e.getMessage());
+        }
+        return null;
+    }
+
+    public synchronized GuildRow getGuildByName(String name) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT id, name, owner, bank FROM guilds WHERE name=? COLLATE NOCASE")) {
+            ps.setString(1, name);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) return new GuildRow(rs.getInt(1), rs.getString(2),
+                        UUID.fromString(rs.getString(3)), rs.getLong(4));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] getGuildByName failed: " + e.getMessage());
+        }
+        return null;
+    }
+
+    public synchronized List<GuildRow> allGuilds(int limit) {
+        List<GuildRow> out = new ArrayList<>();
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT id, name, owner, bank FROM guilds ORDER BY bank DESC LIMIT ?")) {
+            ps.setInt(1, limit);
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) out.add(new GuildRow(rs.getInt(1), rs.getString(2),
+                        UUID.fromString(rs.getString(3)), rs.getLong(4)));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] allGuilds failed: " + e.getMessage());
+        }
+        return out;
+    }
+
+    public synchronized void setGuildBank(int id, long bank) {
+        try (PreparedStatement ps = connection.prepareStatement("UPDATE guilds SET bank=? WHERE id=?")) {
+            ps.setLong(1, bank);
+            ps.setInt(2, id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] setGuildBank failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized void deleteGuild(int id) {
+        try (PreparedStatement ps = connection.prepareStatement("DELETE FROM guilds WHERE id=?")) {
+            ps.setInt(1, id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] deleteGuild failed: " + e.getMessage());
+        }
+        try (PreparedStatement ps = connection.prepareStatement("DELETE FROM guild_members WHERE guild_id=?")) {
+            ps.setInt(1, id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] deleteGuild members failed: " + e.getMessage());
+        }
+    }
+
+    /** guild id the player belongs to, or 0. */
+    public synchronized int guildOf(UUID uuid) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT guild_id FROM guild_members WHERE uuid=?")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) return rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] guildOf failed: " + e.getMessage());
+        }
+        return 0;
+    }
+
+    public synchronized void addGuildMember(UUID uuid, int guildId, String name) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "INSERT OR REPLACE INTO guild_members(uuid, guild_id, name) VALUES(?,?,?)")) {
+            ps.setString(1, uuid.toString());
+            ps.setInt(2, guildId);
+            ps.setString(3, name);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] addGuildMember failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized void removeGuildMember(UUID uuid) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "DELETE FROM guild_members WHERE uuid=?")) {
+            ps.setString(1, uuid.toString());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] removeGuildMember failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized List<String> guildMemberNames(int guildId) {
+        List<String> out = new ArrayList<>();
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT name FROM guild_members WHERE guild_id=? ORDER BY name")) {
+            ps.setInt(1, guildId);
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) out.add(rs.getString(1));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] guildMemberNames failed: " + e.getMessage());
+        }
+        return out;
+    }
+
+    // ---------- rank ladder ----------
+
+    public record RankRow(String name, int points, int season) {}
+
+    public synchronized RankRow getRank(UUID uuid) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT name, points, season FROM ranks WHERE uuid=?")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) return new RankRow(rs.getString(1), rs.getInt(2), rs.getInt(3));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] getRank failed: " + e.getMessage());
+        }
+        return new RankRow("", 0, 0);
+    }
+
+    public synchronized void setRank(UUID uuid, String name, int points, int season) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "INSERT INTO ranks(uuid, name, points, season) VALUES(?,?,?,?) " +
+                        "ON CONFLICT(uuid) DO UPDATE SET name=excluded.name, points=excluded.points, "
+                        + "season=excluded.season")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, name);
+            ps.setInt(3, points);
+            ps.setInt(4, season);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] setRank failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized List<TopEntry> topRanks(int season, int limit) {
+        List<TopEntry> out = new ArrayList<>();
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT name, points FROM ranks WHERE season=? AND points > 0 " +
+                        "ORDER BY points DESC LIMIT ?")) {
+            ps.setInt(1, season);
+            ps.setInt(2, limit);
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) out.add(new TopEntry(rs.getString(1), rs.getLong(2)));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] topRanks failed: " + e.getMessage());
+        }
+        return out;
     }
 
     // ---------- npcs ----------

@@ -42,6 +42,8 @@ public class MainMenuGui implements Listener {
     private static final int SLOT_DEX = 21;
     private static final int SLOT_TRADE = 23;
     private static final int SLOT_ACTIVITIES = 30;
+    private static final int SLOT_GUILD = 32;
+    private static final int SLOT_RANK = 33;
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyMenuItem;
@@ -195,6 +197,16 @@ public class MainMenuGui implements Listener {
         }
         inv.setItem(SLOT_MARRY, item(Material.POPPY, marryLabel, NamedTextColor.LIGHT_PURPLE, marryLore));
 
+        var guild = plugin.guilds().guildOf(player);
+        inv.setItem(SLOT_GUILD, item(Material.WHITE_BANNER,
+                guild != null ? "Guild: " + guild.name() : "Guilds", NamedTextColor.AQUA,
+                guild != null ? List.of("Manage your guild + bank")
+                        : List.of("Join or create a guild", "with your friends")));
+        int rp = plugin.ranks().points(player.getUniqueId());
+        inv.setItem(SLOT_RANK, item(Material.DIAMOND,
+                "Rank: " + plugin.ranks().tier(rp).name() + " (" + rp + ")", NamedTextColor.BLUE,
+                List.of("Seasonal PvP rank ladder", "Win duels to climb")));
+
         boolean daily = plugin.daily().canClaim(player);
         inv.setItem(SLOT_ACTIVITIES, item(Material.CLOCK,
                 daily ? "Activities - daily reward ready!" : "Activities", NamedTextColor.YELLOW,
@@ -260,6 +272,8 @@ public class MainMenuGui implements Listener {
                 case SLOT_TOP -> plugin.leaderboardUi().open(player);
                 case SLOT_DEX -> plugin.pokedexUi().open(player, 0);
                 case SLOT_ACTIVITIES -> plugin.activitiesUi().open(player);
+                case SLOT_GUILD -> plugin.guildUi().open(player);
+                case SLOT_RANK -> plugin.rankUi().open(player);
                 case SLOT_TRADE -> {
                     if (blocked(player, inBattle)) return;
                     if (plugin.trades().pendingRequesterName(player) != null) {

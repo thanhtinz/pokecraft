@@ -71,6 +71,17 @@ npc:
   trainer-reward-per-level: 10  # money = sum of team levels * this
   trainer-cooldown-minutes: 30
 
+guild:
+  create-cost: 5000
+  max-members: 20
+
+rank:
+  win-points: 25
+  loss-points: 15
+  reward-1st: 20000
+  reward-2nd: 10000
+  reward-3rd: 5000
+
 daily:
   base-reward: 200
   streak-bonus: 100       # extra money per consecutive day

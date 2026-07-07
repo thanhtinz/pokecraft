@@ -195,6 +195,14 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Câu cá: câu gần nước có tỉ lệ (config) móc trúng pokemon hệ Nước hoang
       -> mở battle luôn (bắt/đánh như thường)
 
+## Guild / Rank
+
+- [x] Guild: tạo (tốn tiền, đặt tên qua anvil), tham gia (click trong list),
+      rời/giải tán (xác nhận), bank chung (nạp tiền); GUI xếp theo bank
+- [x] Rank ladder PvP theo mùa: thắng duel +điểm, thua -điểm; 6 bậc
+      Bronze->Master; GUI xem bậc + top 10; admin reset mùa (thưởng top 3,
+      thông báo toàn server) qua /poke rankreset hoặc OP panel
+
 ## Commands / Admin
 
 - [x] /poke party (mở GUI), /poke pc, /poke shop
