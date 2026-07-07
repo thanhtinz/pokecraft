@@ -96,6 +96,16 @@ public class ModelImporter {
         }
         outDir.mkdirs();
 
+        // Converting a full pack (~900 models, each embedding a base64 texture) must
+        // NOT run on the main thread or it freezes startup. Do it async, then reload
+        // the model engine once, back on the main thread.
+        final File fImportDir = importDir;
+        final File fOutDir = outDir;
+        final String fReloadCmd = reloadCmd;
+        Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> convertAll(fImportDir, fOutDir, fReloadCmd));
+    }
+
+    private void convertAll(File importDir, File outDir, String reloadCmd) {
         List<File> geos = new ArrayList<>();
         collectGeos(importDir, geos);
         if (geos.isEmpty()) return;
@@ -116,8 +126,8 @@ public class ModelImporter {
         if (done > 0) {
             plugin.getLogger().info("[OK] Imported " + done + " model(s) into "
                     + outDir.getParentFile().getName() + " - reloading");
-            Bukkit.getScheduler().runTaskLater(plugin, () ->
-                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), reloadCmd), 40L);
+            Bukkit.getScheduler().runTask(plugin, () ->
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), reloadCmd));
         }
     }
 
