@@ -163,6 +163,11 @@ menu:
   give-item: true
   item-slot: 8
 
+items:
+  # the Pokedex is a carried book (right-click/tap to open); everything else
+  # is reached through the main menu panel
+  give-pokedex: true
+
 ride:
   speed: 0.45
   fly-speed: 0.6
