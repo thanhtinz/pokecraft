@@ -31,9 +31,14 @@ public class SummaryGui implements Listener {
     private static final int SLOT_STATS = 15;
     private static final int SLOT_EVOLVE = 16;
     private static final int SLOT_HELD = 19;
+    private static final int SLOT_RENAME = 25;
+    private static final int SLOT_RELEASE = 26;
     private static final int SLOT_BACK = 22;
 
     private final PokeCraftPlugin plugin;
+    /** players who armed the release button (need a second click to confirm) */
+    private final java.util.Set<java.util.UUID> releaseArmed =
+            java.util.concurrent.ConcurrentHashMap.newKeySet();
 
     private static class Holder implements InventoryHolder {
         final int partySlot;
@@ -165,6 +170,23 @@ public class SummaryGui implements Listener {
         heldStack.setItemMeta(heldMeta);
         inv.setItem(SLOT_HELD, heldStack);
 
+        ItemStack rename = new ItemStack(Material.NAME_TAG);
+        ItemMeta renameMeta = rename.getItemMeta();
+        renameMeta.displayName(Component.text("Set nickname", NamedTextColor.YELLOW));
+        renameMeta.lore(List.of(Component.text("Type a name (PC & mobile)", NamedTextColor.GRAY)));
+        rename.setItemMeta(renameMeta);
+        inv.setItem(SLOT_RENAME, rename);
+
+        boolean armed = releaseArmed.contains(player.getUniqueId());
+        ItemStack release = new ItemStack(armed ? Material.LAVA_BUCKET : Material.BUCKET);
+        ItemMeta releaseMeta = release.getItemMeta();
+        releaseMeta.displayName(Component.text(armed ? "Click again to CONFIRM release"
+                : "Release", armed ? NamedTextColor.RED : NamedTextColor.GRAY));
+        releaseMeta.lore(List.of(Component.text(armed
+                ? "This is permanent!" : "Let this pokemon go free", NamedTextColor.GRAY)));
+        release.setItemMeta(releaseMeta);
+        inv.setItem(SLOT_RELEASE, release);
+
         ItemStack back = new ItemStack(Material.ARROW);
         ItemMeta backMeta = back.getItemMeta();
         backMeta.displayName(Component.text("Back to party", NamedTextColor.GRAY));
@@ -209,13 +231,20 @@ public class SummaryGui implements Listener {
         if (!(e.getInventory().getHolder() instanceof Holder)) return;
         e.setCancelled(true);
         if (!(e.getWhoClicked() instanceof Player player)) return;
+        if (!(e.getInventory().getHolder() instanceof Holder holder)) return;
         int raw = e.getRawSlot();
+        java.util.UUID id = player.getUniqueId();
+        boolean busy = plugin.battles().get(player) != null || plugin.pvp().get(player) != null
+                || plugin.trades().get(player) != null;
+
         if (raw == SLOT_BACK) {
+            releaseArmed.remove(id);
             plugin.getServer().getScheduler().runTask(plugin, () -> plugin.partyUi().open(player));
             return;
         }
-        if (raw == SLOT_HELD && e.getInventory().getHolder() instanceof Holder holder) {
-            if (plugin.battles().get(player) != null || plugin.pvp().get(player) != null) return;
+        if (raw == SLOT_HELD) {
+            if (busy) return;
+            releaseArmed.remove(id);
             plugin.getServer().getScheduler().runTask(plugin, () -> {
                 PokemonInstance target = plugin.parties().get(player).get(holder.partySlot);
                 if (target != null && target.heldItem != null) {
@@ -223,6 +252,59 @@ public class SummaryGui implements Listener {
                 }
                 open(player, holder.partySlot);
             });
+            return;
         }
+        if (raw == SLOT_RENAME) {
+            if (busy) return;
+            releaseArmed.remove(id);
+            plugin.getServer().getScheduler().runTask(plugin,
+                    () -> plugin.nicknameInput().open(player, holder.partySlot));
+            return;
+        }
+        if (raw == SLOT_RELEASE) {
+            if (busy) return;
+            if (!releaseArmed.contains(id)) {
+                releaseArmed.add(id);
+                plugin.getServer().getScheduler().runTask(plugin, () -> open(player, holder.partySlot));
+                return;
+            }
+            releaseArmed.remove(id);
+            plugin.getServer().getScheduler().runTask(plugin, () -> doRelease(player, holder.partySlot));
+        }
+    }
+
+    private void doRelease(Player player, int slot) {
+        var party = plugin.parties().get(player);
+        PokemonInstance p = party.get(slot);
+        if (p == null) { plugin.partyUi().open(player); return; }
+        if (party.partySize() <= 1) {
+            player.sendMessage(Component.text("You can't release your last party pokemon.",
+                    NamedTextColor.RED));
+            open(player, slot);
+            return;
+        }
+        PokemonInstance removed = party.removeFromParty(slot);
+        if (removed != null) {
+            plugin.storage().delete(removed.uuid);
+            plugin.parties().saveParty(player.getUniqueId());
+            PokemonSpecies species = plugin.species().getSpecies(removed.speciesId);
+            player.sendMessage(Component.text("Bye bye, "
+                    + (species != null ? removed.displayName(species) : removed.speciesId) + "!",
+                    NamedTextColor.GREEN));
+        }
+        plugin.partyUi().open(player);
+    }
+
+    @EventHandler
+    public void onClose(org.bukkit.event.inventory.InventoryCloseEvent e) {
+        if (!(e.getInventory().getHolder() instanceof Holder)) return;
+        if (!(e.getPlayer() instanceof Player player)) return;
+        // a reopen (arm -> refresh) also fires close; only disarm when the
+        // summary truly stays closed
+        plugin.getServer().getScheduler().runTask(plugin, () -> {
+            if (!(player.getOpenInventory().getTopInventory().getHolder() instanceof Holder)) {
+                releaseArmed.remove(player.getUniqueId());
+            }
+        });
     }
 }

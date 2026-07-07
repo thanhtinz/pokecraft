@@ -21,7 +21,7 @@ import java.util.List;
 /** Picks an online player as the target of a duel challenge or a proposal. */
 public class PlayerPickerGui implements Listener {
 
-    public enum Purpose { DUEL, MARRY, TRADE }
+    public enum Purpose { DUEL, MARRY, TRADE, PAY }
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyTarget;
@@ -45,6 +45,7 @@ public class PlayerPickerGui implements Listener {
                     case DUEL -> "Duel who?";
                     case MARRY -> "Propose to whom?";
                     case TRADE -> "Trade with whom?";
+                    case PAY -> "Pay whom?";
                 }));
         holder.inventory = inv;
 
@@ -65,6 +66,7 @@ public class PlayerPickerGui implements Listener {
                     case DUEL -> "Click to challenge";
                     case MARRY -> "Click to propose";
                     case TRADE -> "Click to request a trade";
+                    case PAY -> "Click to send money";
                 }, NamedTextColor.GRAY)));
             meta.getPersistentDataContainer().set(keyTarget, PersistentDataType.STRING, other.getName());
             head.setItemMeta(meta);
@@ -102,6 +104,7 @@ public class PlayerPickerGui implements Listener {
                 case DUEL -> plugin.pvp().challenge(player, target);
                 case MARRY -> plugin.marriage().propose(player, target);
                 case TRADE -> plugin.trades().request(player, target);
+                case PAY -> plugin.payUi().open(player, target.getName());
             }
         });
     }

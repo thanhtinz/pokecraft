@@ -165,7 +165,15 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] /poke dex + nút trên menu panel, đếm tiến độ x/1016 (phân trang 45/trang)
 - [ ] Phần thưởng hoàn thành dex (milestone rewards)
 
-## In-game Menu (PC + Mobile)
+## In-game Menu (PC + Mobile) - NO COMMANDS NEEDED
+
+- [x] MỌI thao tác người chơi làm được qua panel, không cần gõ lệnh:
+      - Summary GUI: nút Set nickname (nhập chữ qua anvil - Geyser dịch sang
+        Bedrock), nút Release (xác nhận 2 lần)
+      - Menu: click Balance -> chọn người -> chọn mức tiền để Pay (không gõ số);
+        click ô Marriage khi đã cưới -> xác nhận Divorce
+      - Duel/Trade/Marry/Pay đều qua GUI chọn người chơi
+- [x] Lệnh /poke vẫn còn làm fallback nhưng không bắt buộc
 
 - [x] Item menu (Nether Star) phát khi join, right-click/tap để mở panel
       (không cần gõ lệnh; chest GUI nên Bedrock/Geyser dùng được luôn)

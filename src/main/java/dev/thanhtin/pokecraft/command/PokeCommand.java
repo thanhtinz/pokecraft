@@ -113,8 +113,8 @@ public class PokeCommand implements TabExecutor {
             }
             default -> {
                 player.sendMessage(Component.text(
-                        "/poke [party|pc|shop|balance|pay|top|duel|marry|divorce|daycare|ride|nickname|release]",
-                        NamedTextColor.YELLOW));
+                        "Tip: everything is in the menu item (right-click / tap the star). "
+                        + "Commands are optional.", NamedTextColor.YELLOW));
                 player.sendMessage(Component.text(
                         "admin: /poke [give <ball>|spawn <species> [lvl]|heal|reload]",
                         NamedTextColor.GRAY));

@@ -44,6 +44,9 @@ public class MainMenuGui implements Listener {
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyMenuItem;
+    /** players who armed the divorce button (need a second click) */
+    private final java.util.Set<java.util.UUID> divorceArmed =
+            java.util.concurrent.ConcurrentHashMap.newKeySet();
 
     private static class Holder implements InventoryHolder {
         Inventory inventory;
@@ -102,6 +105,17 @@ public class MainMenuGui implements Listener {
         if (isMenuItem(e.getItemDrop().getItemStack())) e.setCancelled(true);
     }
 
+    @EventHandler
+    public void onClose(org.bukkit.event.inventory.InventoryCloseEvent e) {
+        if (!(e.getInventory().getHolder() instanceof Holder)) return;
+        if (!(e.getPlayer() instanceof Player player)) return;
+        plugin.getServer().getScheduler().runTask(plugin, () -> {
+            if (!(player.getOpenInventory().getTopInventory().getHolder() instanceof Holder)) {
+                divorceArmed.remove(player.getUniqueId());
+            }
+        });
+    }
+
     /** Keep the menu item out of chests and crafting grids. */
     @EventHandler
     public void onMove(InventoryClickEvent e) {
@@ -124,7 +138,7 @@ public class MainMenuGui implements Listener {
         long balance = plugin.economy().balance(player.getUniqueId());
         inv.setItem(SLOT_BALANCE, item(Material.GOLD_NUGGET,
                 "Balance: " + plugin.economy().format(balance), NamedTextColor.GOLD,
-                List.of("Win battles to earn PokeDollars")));
+                List.of("Win battles to earn PokeDollars", "Click to send money to a player")));
 
         inv.setItem(SLOT_PARTY, item(Material.PLAYER_HEAD, "Party", NamedTextColor.AQUA,
                 List.of("View, reorder and manage", "your 6 party pokemon")));
@@ -167,8 +181,13 @@ public class MainMenuGui implements Listener {
                     + "/poke marry deny to refuse)");
         } else if (spouse != null) {
             String name = plugin.getServer().getOfflinePlayer(spouse).getName();
-            marryLabel = "Married to " + (name != null ? name : "someone");
-            marryLore = List.of("Bonus battle EXP while together online", "/poke divorce to end it");
+            if (divorceArmed.contains(player.getUniqueId())) {
+                marryLabel = "Click again to divorce " + (name != null ? name : "");
+                marryLore = List.of("This ends the marriage");
+            } else {
+                marryLabel = "Married to " + (name != null ? name : "someone");
+                marryLore = List.of("Bonus battle EXP while together online", "Click to divorce");
+            }
         } else {
             marryLabel = "Marry a player";
             marryLore = List.of("Propose to another player", "Couples earn bonus EXP");
@@ -242,12 +261,24 @@ public class MainMenuGui implements Listener {
                         plugin.playerPickerUi().open(player, PlayerPickerGui.Purpose.TRADE);
                     }
                 }
+                case SLOT_BALANCE -> {
+                    if (blocked(player, inBattle)) return;
+                    plugin.playerPickerUi().open(player, PlayerPickerGui.Purpose.PAY);
+                }
                 case SLOT_MARRY -> {
                     if (plugin.marriage().pendingProposerName(player) != null) {
+                        divorceArmed.remove(player.getUniqueId());
                         player.closeInventory();
                         plugin.marriage().accept(player);
                     } else if (plugin.marriage().spouseOf(player.getUniqueId()) == null) {
+                        divorceArmed.remove(player.getUniqueId());
                         plugin.playerPickerUi().open(player, PlayerPickerGui.Purpose.MARRY);
+                    } else if (divorceArmed.remove(player.getUniqueId())) {
+                        plugin.marriage().divorce(player);
+                        open(player);
+                    } else {
+                        divorceArmed.add(player.getUniqueId());
+                        open(player);
                     }
                 }
                 default -> {}

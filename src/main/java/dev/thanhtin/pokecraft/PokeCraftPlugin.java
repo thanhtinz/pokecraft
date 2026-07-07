@@ -27,6 +27,8 @@ import dev.thanhtin.pokecraft.ui.PartyGui;
 import dev.thanhtin.pokecraft.ui.DaycareGui;
 import dev.thanhtin.pokecraft.ui.LeaderboardGui;
 import dev.thanhtin.pokecraft.ui.MainMenuGui;
+import dev.thanhtin.pokecraft.ui.NicknameInput;
+import dev.thanhtin.pokecraft.ui.PayAmountGui;
 import dev.thanhtin.pokecraft.ui.PcGui;
 import dev.thanhtin.pokecraft.ui.PlayerPickerGui;
 import dev.thanhtin.pokecraft.ui.PokedexGui;
@@ -58,6 +60,8 @@ public class PokeCraftPlugin extends JavaPlugin {
     private SummaryGui summaryGui;
     private TradeManager tradeManager;
     private TradeGui tradeGui;
+    private NicknameInput nicknameInput;
+    private PayAmountGui payAmountGui;
     private PvpBattleManager pvpManager;
     private EconomyManager economyManager;
     private MarriageManager marriageManager;
@@ -103,6 +107,8 @@ public class PokeCraftPlugin extends JavaPlugin {
         summaryGui = new SummaryGui(this);
         tradeManager = new TradeManager(this);
         tradeGui = new TradeGui(this);
+        nicknameInput = new NicknameInput(this);
+        payAmountGui = new PayAmountGui(this);
         pvpManager = new PvpBattleManager(this);
         economyManager = new EconomyManager(this);
         marriageManager = new MarriageManager(this);
@@ -132,6 +138,8 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(summaryGui, this);
         getServer().getPluginManager().registerEvents(tradeManager, this);
         getServer().getPluginManager().registerEvents(tradeGui, this);
+        getServer().getPluginManager().registerEvents(nicknameInput, this);
+        getServer().getPluginManager().registerEvents(payAmountGui, this);
         getServer().getPluginManager().registerEvents(pvpManager, this);
         getServer().getPluginManager().registerEvents(economyManager, this);
         getServer().getPluginManager().registerEvents(usableItems, this);
@@ -180,6 +188,8 @@ public class PokeCraftPlugin extends JavaPlugin {
     public SummaryGui summaryUi() { return summaryGui; }
     public TradeManager trades() { return tradeManager; }
     public TradeGui tradeUi() { return tradeGui; }
+    public NicknameInput nicknameInput() { return nicknameInput; }
+    public PayAmountGui payUi() { return payAmountGui; }
     public PvpBattleManager pvp() { return pvpManager; }
     public EconomyManager economy() { return economyManager; }
     public MarriageManager marriage() { return marriageManager; }
