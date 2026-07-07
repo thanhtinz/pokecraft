@@ -79,12 +79,21 @@ public class ModelImporter {
             return;
         }
         File pluginsDir = plugin.getDataFolder().getParentFile();
+        // Prefer ModelEngine; fall back to BetterModel (free, supports newer MC versions).
         File meDir = new File(pluginsDir, "ModelEngine");
-        if (!meDir.isDirectory()) {
-            plugin.getLogger().info("[..] ModelEngine not installed - skipping model import");
+        File bmDir = new File(pluginsDir, "BetterModel");
+        File outDir;
+        String reloadCmd;
+        if (meDir.isDirectory()) {
+            outDir = new File(meDir, "blueprints/pokecraft");
+            reloadCmd = "meg reload";
+        } else if (bmDir.isDirectory()) {
+            outDir = new File(bmDir, "models");
+            reloadCmd = "bettermodel reload";
+        } else {
+            plugin.getLogger().info("[..] No model engine (ModelEngine/BetterModel) installed - skipping model import");
             return;
         }
-        File outDir = new File(meDir, "blueprints/pokecraft");
         outDir.mkdirs();
 
         List<File> geos = new ArrayList<>();
@@ -105,10 +114,10 @@ public class ModelImporter {
                     + " model(s) with no matching species (set models.import-only-species: false to keep them)");
         }
         if (done > 0) {
-            plugin.getLogger().info("[OK] Imported " + done
-                    + " model(s) into ModelEngine - reloading");
+            plugin.getLogger().info("[OK] Imported " + done + " model(s) into "
+                    + outDir.getParentFile().getName() + " - reloading");
             Bukkit.getScheduler().runTaskLater(plugin, () ->
-                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "meg reload"), 40L);
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), reloadCmd), 40L);
         }
     }
 

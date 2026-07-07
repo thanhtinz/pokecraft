@@ -6,6 +6,7 @@ author: thanhtinz
 description: Server-side Pokemon plugin. Geyser/Bedrock compatible via ModelEngine + GeyserModelEngine.
 softdepend:
   - ModelEngine
+  - BetterModel
   - floodgate
   - Geyser-Spigot
   - Vault

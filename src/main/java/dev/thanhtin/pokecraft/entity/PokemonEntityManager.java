@@ -33,12 +33,38 @@ public class PokemonEntityManager {
     private Method mAddModel;
     private Method mGetBlueprint;
 
+    // BetterModel (free alternative to ModelEngine, supports newer MC versions)
+    private boolean betterModel;
+    private Method mBmModel;
+
     public PokemonEntityManager(PokeCraftPlugin plugin) {
         this.plugin = plugin;
         this.keyWild = new NamespacedKey(plugin, "wild");
         this.keyData = new NamespacedKey(plugin, "data");
         this.keySpawnTime = new NamespacedKey(plugin, "spawn_time");
         hookModelEngine();
+        if (!modelEngine) hookBetterModel();
+    }
+
+    private void hookBetterModel() {
+        for (String cn : new String[]{"kr.toxicity.model.api.BetterModel",
+                "kr.toxicity.model.BetterModel"}) {
+            try {
+                Class<?> bm = Class.forName(cn);
+                try {
+                    mBmModel = bm.getMethod("modelOrNull", String.class);
+                } catch (NoSuchMethodException e) {
+                    mBmModel = bm.getMethod("model", String.class); // returns Optional
+                }
+                betterModel = true;
+                plugin.getLogger().info("[OK] BetterModel hooked - custom models enabled");
+                return;
+            } catch (Throwable ignored) {
+                // try the next candidate package
+            }
+        }
+        betterModel = false;
+        plugin.getLogger().info("[OK] No model engine found - wild pokemon use vanilla base entities");
     }
 
     private void hookModelEngine() {
@@ -86,14 +112,24 @@ public class PokemonEntityManager {
         return entity;
     }
 
-    /** True when a blueprint with this id is installed in ModelEngine. */
+    /** True when a blueprint with this id is installed in the active model engine. */
     public boolean hasBlueprint(String id) {
-        if (!modelEngine || mGetBlueprint == null || id == null || id.isEmpty()) return false;
-        try {
-            return mGetBlueprint.invoke(null, id) != null;
-        } catch (Exception e) {
-            return false;
+        if (id == null || id.isEmpty()) return false;
+        if (modelEngine && mGetBlueprint != null) {
+            try {
+                return mGetBlueprint.invoke(null, id) != null;
+            } catch (Exception e) {
+                return false;
+            }
         }
+        if (betterModel && mBmModel != null) {
+            try {
+                return unwrapOptional(mBmModel.invoke(null, id)) != null;
+            } catch (Exception e) {
+                return false;
+            }
+        }
+        return false;
     }
 
     /** Spawn a plain base entity (no tags, no model) for model previews. */
@@ -107,8 +143,12 @@ public class PokemonEntityManager {
     }
 
     public void applyModel(Entity entity, String modelId) {
-        if (!modelEngine || modelId == null || modelId.isEmpty()) return;
-        if (!plugin.models().enabled()) return;
+        if (modelId == null || modelId.isEmpty() || !plugin.models().enabled()) return;
+        if (modelEngine) { applyModelEngine(entity, modelId); return; }
+        if (betterModel) { applyBetterModel(entity, modelId); }
+    }
+
+    private void applyModelEngine(Entity entity, String modelId) {
         try {
             Object activeModel = mCreateActiveModel.invoke(null, modelId);
             if (activeModel == null) {
@@ -121,6 +161,33 @@ public class PokemonEntityManager {
         } catch (Exception e) {
             plugin.getLogger().warning("[WARN] Failed to apply model " + modelId + ": " + e.getMessage());
         }
+    }
+
+    private void applyBetterModel(Entity entity, String modelId) {
+        try {
+            Object renderer = unwrapOptional(mBmModel.invoke(null, modelId));
+            if (renderer == null) {
+                plugin.getLogger().warning("[WARN] BetterModel model not found: " + modelId);
+                return;
+            }
+            for (Method m : renderer.getClass().getMethods()) {
+                if (m.getName().equals("getOrCreate") && m.getParameterCount() == 1) {
+                    m.invoke(renderer, entity);
+                    if (entity instanceof LivingEntity le) le.setInvisible(true);
+                    return;
+                }
+            }
+            plugin.getLogger().warning("[WARN] BetterModel getOrCreate() not found for " + modelId);
+        } catch (Exception e) {
+            plugin.getLogger().warning("[WARN] Failed to apply BetterModel " + modelId + ": " + e.getMessage());
+        }
+    }
+
+    /** If o is an Optional, return its value (or null); otherwise return o. */
+    private Object unwrapOptional(Object o) {
+        if (o == null) return null;
+        if (o instanceof java.util.Optional<?> opt) return opt.orElse(null);
+        return o;
     }
 
     /**
@@ -176,5 +243,6 @@ public class PokemonEntityManager {
         entity.getPersistentDataContainer().set(keyData, PersistentDataType.STRING, gson.toJson(instance));
     }
 
-    public boolean hasModelEngine() { return modelEngine; }
+    /** True when any supported model engine (ModelEngine or BetterModel) is active. */
+    public boolean hasModelEngine() { return modelEngine || betterModel; }
 }
