@@ -14,12 +14,14 @@ repositories {
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://mvn.lumine.io/repository/maven-public/") // ModelEngine
     maven("https://repo.opencollab.dev/main/")              // Floodgate / Geyser API
+    maven("https://jitpack.io")                             // Vault API
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
     compileOnly("com.ticxo.modelengine:ModelEngine:R4.0.8")
     compileOnly("org.geysermc.floodgate:api:2.2.4-SNAPSHOT")
+    compileOnly("com.github.MilkBowl:VaultAPI:1.7.1")
     // Gson + SQLite JDBC are bundled inside Paper at runtime (Gson) and shaded here for SQLite
     implementation("org.xerial:sqlite-jdbc:3.46.1.3")
 

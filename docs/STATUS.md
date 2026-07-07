@@ -164,7 +164,8 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Pokemart GUI (/poke shop): ball bundle, 3 loại potion, Thunder Stone
 - [x] Potion dùng ngoài trận (right-click -> chọn pokemon; hồi được cả pokemon đã faint)
 - [x] Full Heal: chữa mọi status, dùng ngoài trận + trong Bag battle; mua ở shop
-- [ ] Vault integration
+- [x] Vault integration: đăng ký economy PokeDollar làm provider của Vault
+      (softdepend), plugin khác đọc/ghi số dư qua Vault; không hỗ trợ bank
 - [x] Bán đồ: Pokemart -> nút "Sell items" liệt kê đồ bán được (ball/potion/
       stone/held item), click bán 1 cái lấy tiền
 - [x] Bán pokemon: nút Sell trong Summary (xác nhận 2 lần), giá = base + level*

@@ -261,7 +261,22 @@ public class PokeCraftPlugin extends JavaPlugin {
         daycareManager.start();
         rideManager.start();
         walkingManager.start();
+        hookVault();
         getLogger().info("[OK] PokeCraft enabled");
+    }
+
+    /** Register PokeCraft's economy with Vault when Vault is installed. */
+    private void hookVault() {
+        if (getServer().getPluginManager().getPlugin("Vault") == null) return;
+        try {
+            getServer().getServicesManager().register(
+                    net.milkbowl.vault.economy.Economy.class,
+                    new dev.thanhtin.pokecraft.economy.VaultEconomyBridge(this),
+                    this, org.bukkit.plugin.ServicePriority.Normal);
+            getLogger().info("[OK] Economy registered with Vault");
+        } catch (Throwable t) {
+            getLogger().warning("[WARN] Vault hook failed: " + t.getMessage());
+        }
     }
 
     @Override
