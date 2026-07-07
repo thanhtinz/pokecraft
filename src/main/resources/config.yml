@@ -16,6 +16,17 @@ capture:
   # base entity used under ModelEngine models
   base-entity: HUSK
 
+models:
+  # 3D pokemon models via ModelEngine (optional soft-depend). A species uses the
+  # ModelEngine blueprint whose id equals the species id (e.g. "pikachu"). Add
+  # your own .bbmodel in ModelEngine to give a species a model - no restart, no
+  # code. See docs/SETUP.md "Adding your own 3D models".
+  enabled: true
+  default-scale: 1.0
+  preview-seconds: 8
+  # bind a species to a blueprint with a different name (species: blueprint)
+  overrides: {}
+
 battle:
   exp-multiplier: 1.0
   shiny-rate: 4096           # 1 / N

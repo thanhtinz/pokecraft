@@ -120,6 +120,10 @@ public class PokeCommand implements TabExecutor {
                 plugin.fishing().invalidate();
                 player.sendMessage(Component.text("PokeCraft reloaded.", NamedTextColor.GREEN));
             }
+            case "model", "models" -> {
+                if (!player.hasPermission("pokecraft.admin")) return noPerm(player);
+                model(player, args);
+            }
             default -> {
                 player.sendMessage(Component.text(
                         "Tip: everything is in the menu item (right-click / tap the star). "
@@ -252,6 +256,52 @@ public class PokeCommand implements TabExecutor {
                 plugin.daycare().withdraw(player, parseInt(args[2], 0) - 1);
             }
             default -> plugin.daycare().status(player);
+        }
+    }
+
+    private void model(Player player, String[] args) {
+        String sub = args.length > 1 ? args[1].toLowerCase(Locale.ROOT) : "panel";
+        switch (sub) {
+            case "panel", "gui", "list" -> plugin.modelUi().open(player, 0, false);
+            case "coverage" -> {
+                int[] c = plugin.models().coverage();
+                player.sendMessage(Component.text("Models installed: " + c[0] + "/" + c[1]
+                        + (plugin.entities().hasModelEngine() ? "" : " (ModelEngine not installed)"),
+                        NamedTextColor.YELLOW));
+            }
+            case "preview" -> {
+                if (args.length < 3) {
+                    player.sendMessage(Component.text("Usage: /poke model preview <blueprint>", NamedTextColor.RED));
+                    return;
+                }
+                plugin.models().preview(player, args[2]);
+            }
+            case "set" -> {
+                if (args.length < 4) {
+                    player.sendMessage(Component.text("Usage: /poke model set <species> <blueprint>", NamedTextColor.RED));
+                    return;
+                }
+                String sid = args[2].toLowerCase(Locale.ROOT);
+                if (plugin.species().getSpecies(sid) == null) {
+                    player.sendMessage(Component.text("Unknown species: " + args[2], NamedTextColor.RED));
+                    return;
+                }
+                plugin.models().setOverride(sid, args[3]);
+                player.sendMessage(Component.text("Bound " + sid + " -> blueprint \"" + args[3] + "\".",
+                        NamedTextColor.GREEN));
+            }
+            case "clear" -> {
+                if (args.length < 3) {
+                    player.sendMessage(Component.text("Usage: /poke model clear <species>", NamedTextColor.RED));
+                    return;
+                }
+                plugin.models().clearOverride(args[2].toLowerCase(Locale.ROOT));
+                player.sendMessage(Component.text("Cleared model override for " + args[2] + ".",
+                        NamedTextColor.GREEN));
+            }
+            default -> player.sendMessage(Component.text(
+                    "/poke model [panel|coverage|preview <bp>|set <species> <bp>|clear <species>]",
+                    NamedTextColor.GRAY));
         }
     }
 

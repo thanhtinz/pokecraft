@@ -30,13 +30,35 @@ from Maven Central / PaperMC / Lumine / OpenCollab repos.
    (plugins/Geyser-Spigot/extensions/).
 4. Drop PokeCraft-0.1.0.jar, restart.
 
-## Adding pokemon models
+## Adding your own 3D models
 
-1. Create/obtain a .bbmodel in BlockBench (Modded Entity or ME format).
-   Use original models - do not rip assets from Pixelmon or official games.
-2. Put it in plugins/ModelEngine/blueprints/ and run /meg reload.
-3. The `modelId` field in the species JSON must match the blueprint name.
-4. GeyserModelEngine picks it up automatically for Bedrock.
+PokeCraft does **not** ship any pokemon art/models (to avoid ripping assets).
+You supply the models; PokeCraft binds them to species and can preview them
+in-game. No code editing and no restart.
+
+1. Build (or obtain, originally) a `.bbmodel` in BlockBench. Do **not** rip
+   assets from Pixelmon, Cobblemon or the official games.
+2. Import it into ModelEngine: put it in `plugins/ModelEngine/blueprints/` and
+   run `/meg reload`. It now exists as a **blueprint** with an id.
+3. **Auto-bind by name:** if the blueprint id equals the species id
+   (e.g. a blueprint called `pikachu`), PokeCraft uses it automatically — no
+   further setup.
+4. **Different name?** bind it manually (persists in config, no restart):
+   ```
+   /poke model set pikachu my_custom_pikachu   # species -> blueprint
+   /poke model clear pikachu                    # revert to auto
+   ```
+5. **Check & preview in-game** (all panel-based):
+   - Menu → OP Setup → *Pokemon 3D models* opens the model panel: shows
+     `X / 1016` species that have a blueprint, browse all species (green = has
+     model), and click any pokemon to **spawn a live preview** of its model.
+   - Or `/poke model coverage`, `/poke model preview <blueprint>`.
+6. GeyserModelEngine shows the models to Bedrock/mobile players automatically.
+
+Species with no matching blueprint just fall back to a vanilla base entity
+(`capture.base-entity`), so the server works fine with zero models installed
+and gets prettier as you add them. Toggle the whole system with
+`models.enabled` in config.yml.
 
 ## Adding species
 

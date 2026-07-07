@@ -50,9 +50,10 @@ public class AdminGui implements Listener {
             new Act(30, "npc_vendor", Material.EMERALD, "Place Vendor NPC (here)"),
             new Act(31, "npc_trainer", Material.IRON_SWORD, "Place Trainer NPC (here)"),
             new Act(32, "npc_gym", Material.GOLDEN_HELMET, "Place Gym Leader (pick)"),
-            new Act(33, "rankreset", Material.DIAMOND, "Reset rank season"),
-            new Act(34, "heal", Material.GOLDEN_APPLE, "Heal my party"),
-            new Act(35, "reload", Material.REDSTONE, "Reload config"));
+            new Act(33, "models", Material.ARMOR_STAND, "Pokemon 3D models"),
+            new Act(34, "rankreset", Material.DIAMOND, "Reset rank season"),
+            new Act(35, "heal", Material.GOLDEN_APPLE, "Heal my party"),
+            new Act(36, "reload", Material.REDSTONE, "Reload config"));
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyToggle;
@@ -170,6 +171,8 @@ public class AdminGui implements Listener {
                 player.closeInventory(); }
             case "npc_gym" -> plugin.getServer().getScheduler().runTask(plugin,
                     () -> plugin.gymPickerUi().open(player));
+            case "models" -> plugin.getServer().getScheduler().runTask(plugin,
+                    () -> plugin.modelUi().open(player, 0, false));
             case "rankreset" -> { plugin.ranks().resetSeason(player); open(player); }
             case "heal" -> {
                 for (var p : plugin.parties().get(player).party()) {

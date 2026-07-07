@@ -66,7 +66,11 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Floodgate detection qua reflection
 - [x] Native Bedrock SimpleForm (Cumulus) cho battle menu + switch menu (PP, status)
 - [x] Chest GUI fallback cho mọi client (Geyser tự dịch)
-- [ ] Model .bbmodel cho pokemon (phải tự làm trong BlockBench - KHÔNG rip asset)
+- [x] Hệ thống quản lý model 3D: ModelManager map species -> blueprint
+      ModelEngine (auto theo tên hoặc override), panel OP xem coverage
+      X/1016 + duyệt loài + click PREVIEW model ngay trong game; lệnh
+      /poke model set|clear|preview|coverage; config models.enabled/scale.
+      (Model .bbmodel vẫn do chủ server tự làm trong BlockBench - KHÔNG rip asset)
 - [ ] Bedrock custom item texture cho pokeball (Geyser custom item mappings)
 - [ ] Hitbox scale theo species
 - [ ] Animation state (idle/walk/faint) binding với ModelEngine

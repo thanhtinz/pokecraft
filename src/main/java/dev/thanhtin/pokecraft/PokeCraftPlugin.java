@@ -19,6 +19,7 @@ import dev.thanhtin.pokecraft.bedrock.BedrockSupport;
 import dev.thanhtin.pokecraft.capture.CaptureListener;
 import dev.thanhtin.pokecraft.capture.PokeballItem;
 import dev.thanhtin.pokecraft.command.PokeCommand;
+import dev.thanhtin.pokecraft.entity.ModelManager;
 import dev.thanhtin.pokecraft.entity.PokemonEntityManager;
 import dev.thanhtin.pokecraft.entity.WalkingPokemonManager;
 import dev.thanhtin.pokecraft.entity.WildEntityListener;
@@ -51,6 +52,7 @@ import dev.thanhtin.pokecraft.ui.GuildNameInput;
 import dev.thanhtin.pokecraft.ui.RankGui;
 import dev.thanhtin.pokecraft.ui.HandheldItems;
 import dev.thanhtin.pokecraft.ui.MainMenuGui;
+import dev.thanhtin.pokecraft.ui.ModelGui;
 import dev.thanhtin.pokecraft.ui.NicknameInput;
 import dev.thanhtin.pokecraft.ui.PayAmountGui;
 import dev.thanhtin.pokecraft.ui.PcGui;
@@ -67,6 +69,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private StorageManager storageManager;
     private PartyManager partyManager;
     private PokemonEntityManager entityManager;
+    private ModelManager modelManager;
     private WalkingPokemonManager walkingManager;
     private SpawnManager spawnManager;
     private BattleManager battleManager;
@@ -78,6 +81,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private PvpGui pvpGui;
     private MainMenuGui mainMenuGui;
     private HandheldItems handheldItems;
+    private ModelGui modelGui;
     private PlayerPickerGui playerPickerGui;
     private RidePickerGui ridePickerGui;
     private DaycareGui daycareGui;
@@ -138,6 +142,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         }
 
         entityManager = new PokemonEntityManager(this);
+        modelManager = new ModelManager(this);
         partyManager = new PartyManager(this);
         battleManager = new BattleManager(this);
         pokeballItem = new PokeballItem(this);
@@ -148,6 +153,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         pvpGui = new PvpGui(this);
         mainMenuGui = new MainMenuGui(this);
         handheldItems = new HandheldItems(this);
+        modelGui = new ModelGui(this);
         playerPickerGui = new PlayerPickerGui(this);
         ridePickerGui = new RidePickerGui(this);
         daycareGui = new DaycareGui(this);
@@ -203,6 +209,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(pvpGui, this);
         getServer().getPluginManager().registerEvents(mainMenuGui, this);
         getServer().getPluginManager().registerEvents(handheldItems, this);
+        getServer().getPluginManager().registerEvents(modelGui, this);
         getServer().getPluginManager().registerEvents(playerPickerGui, this);
         getServer().getPluginManager().registerEvents(ridePickerGui, this);
         getServer().getPluginManager().registerEvents(daycareGui, this);
@@ -269,6 +276,8 @@ public class PokeCraftPlugin extends JavaPlugin {
     public StorageManager storage() { return storageManager; }
     public PartyManager parties() { return partyManager; }
     public PokemonEntityManager entities() { return entityManager; }
+    public ModelManager models() { return modelManager; }
+    public ModelGui modelUi() { return modelGui; }
     public WalkingPokemonManager walkers() { return walkingManager; }
     public BattleManager battles() { return battleManager; }
     public PokeballItem pokeballs() { return pokeballItem; }

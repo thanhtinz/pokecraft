@@ -31,6 +31,7 @@ public class PokemonEntityManager {
     private Method mCreateModeledEntity;
     private Method mCreateActiveModel;
     private Method mAddModel;
+    private Method mGetBlueprint;
 
     public PokemonEntityManager(PokeCraftPlugin plugin) {
         this.plugin = plugin;
@@ -48,6 +49,11 @@ public class PokemonEntityManager {
             Class<?> modeledEntity = Class.forName("com.ticxo.modelengine.api.model.ModeledEntity");
             Class<?> activeModel = Class.forName("com.ticxo.modelengine.api.model.ActiveModel");
             mAddModel = modeledEntity.getMethod("addModel", activeModel, boolean.class);
+            try {
+                mGetBlueprint = api.getMethod("getBlueprint", String.class);
+            } catch (NoSuchMethodException ex) {
+                mGetBlueprint = null; // older/newer API: enumeration unavailable, models still apply
+            }
             modelEngine = true;
             plugin.getLogger().info("[OK] ModelEngine hooked - custom models enabled");
         } catch (Exception e) {
@@ -76,12 +82,33 @@ public class PokemonEntityManager {
         entity.getPersistentDataContainer().set(keyData, PersistentDataType.STRING, gson.toJson(instance));
         entity.getPersistentDataContainer().set(keySpawnTime, PersistentDataType.LONG, System.currentTimeMillis());
 
-        applyModel(entity, species.modelId);
+        applyModel(entity, plugin.models().blueprintFor(species));
+        return entity;
+    }
+
+    /** True when a blueprint with this id is installed in ModelEngine. */
+    public boolean hasBlueprint(String id) {
+        if (!modelEngine || mGetBlueprint == null || id == null || id.isEmpty()) return false;
+        try {
+            return mGetBlueprint.invoke(null, id) != null;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /** Spawn a plain base entity (no tags, no model) for model previews. */
+    public LivingEntity spawnBareBase(Location loc) {
+        EntityType base = EntityType.valueOf(
+                plugin.getConfig().getString("capture.base-entity", "HUSK").toUpperCase(Locale.ROOT));
+        LivingEntity entity = (LivingEntity) loc.getWorld().spawnEntity(loc, base);
+        entity.setPersistent(false);
+        if (entity instanceof Mob mob) mob.setAware(false);
         return entity;
     }
 
     public void applyModel(Entity entity, String modelId) {
         if (!modelEngine || modelId == null || modelId.isEmpty()) return;
+        if (!plugin.models().enabled()) return;
         try {
             Object activeModel = mCreateActiveModel.invoke(null, modelId);
             if (activeModel == null) {
@@ -115,7 +142,7 @@ public class PokemonEntityManager {
         entity.customName(net.kyori.adventure.text.Component.text(
                 instance.displayName(species) + " Lv." + instance.level));
         entity.setCustomNameVisible(true);
-        applyModel(entity, species.modelId);
+        applyModel(entity, plugin.models().blueprintFor(species));
         return entity;
     }
 
