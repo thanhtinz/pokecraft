@@ -45,6 +45,18 @@ public class ShopGui implements Listener {
                     pl -> pl.items().create(UsableItems.ItemType.HYPER_POTION, 1)),
             new Entry("full-heal", 300, 1, "Full Heal",
                     pl -> pl.items().create(UsableItems.ItemType.FULL_HEAL, 1)),
+            new Entry("hp-up", 1000, 1, "HP Up (+10 HP EV)",
+                    pl -> pl.items().create(UsableItems.ItemType.HP_UP, 1)),
+            new Entry("protein", 1000, 1, "Protein (+10 Atk EV)",
+                    pl -> pl.items().create(UsableItems.ItemType.PROTEIN, 1)),
+            new Entry("iron", 1000, 1, "Iron (+10 Def EV)",
+                    pl -> pl.items().create(UsableItems.ItemType.IRON, 1)),
+            new Entry("calcium", 1000, 1, "Calcium (+10 SpA EV)",
+                    pl -> pl.items().create(UsableItems.ItemType.CALCIUM, 1)),
+            new Entry("zinc", 1000, 1, "Zinc (+10 SpD EV)",
+                    pl -> pl.items().create(UsableItems.ItemType.ZINC, 1)),
+            new Entry("carbos", 1000, 1, "Carbos (+10 Spe EV)",
+                    pl -> pl.items().create(UsableItems.ItemType.CARBOS, 1)),
             new Entry("thunder-stone", 3000, 1, "Thunder Stone",
                     pl -> pl.items().create(UsableItems.ItemType.THUNDER_STONE, 1)),
             new Entry("fire-stone", 3000, 1, "Fire Stone",
@@ -200,6 +212,7 @@ public class ShopGui implements Listener {
                 case HYPER_POTION -> 75;
                 case ORAN_BERRY -> 15;
                 case FULL_HEAL -> 150;
+                case HP_UP, PROTEIN, IRON, CALCIUM, ZINC, CARBOS -> 500;
                 default -> 375; // evolution stones
             };
         }

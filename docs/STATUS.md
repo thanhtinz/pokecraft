@@ -38,7 +38,8 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Move dataset: ~919 moves (build từ PokeAPI CSV qua tools/build_moves.py),
       phủ đủ 18 hệ, kèm hiệu ứng phụ (status/stat-change)
 - [x] EVs (effort values): +EV khi hạ pokemon theo evYield từng loài, cap
-      252/stat & 510 tổng, cộng vào công thức chỉ số; hiện trong Summary
+      252/stat & 510 tổng, cộng vào công thức chỉ số; hiện trong Summary.
+      Vitamin (HP Up/Protein/Iron/Calcium/Zinc/Carbos) mua ở shop +10 EV/stat
 - [x] Abilities: mỗi pokemon có 1 đặc tính (từ data Cobblemon, 1/20 ra hidden),
       hiện ở Summary; ~20 đặc tính tác động sát thương đã hoạt động trong battle:
       Levitate/Flash Fire/Water-Volt Absorb/Sap Sipper (miễn nhiễm hệ),

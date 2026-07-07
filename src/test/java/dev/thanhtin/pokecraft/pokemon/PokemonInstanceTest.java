@@ -128,6 +128,21 @@ class PokemonInstanceTest {
     }
 
     @Test
+    void addEvRespectsCaps() {
+        PokemonInstance p = instance(species(100), 50, 31, Nature.HARDY);
+        p.evs = new int[6];
+        assertEquals(10, p.addEv(1, 10));        // normal add
+        assertEquals(10, p.evs[1]);
+        p.evs[1] = 250;
+        assertEquals(2, p.addEv(1, 10));         // per-stat cap 252
+        assertEquals(252, p.evs[1]);
+        // total cap 510
+        p.evs = new int[]{0, 252, 250, 0, 0, 0}; // 502 total
+        assertEquals(8, p.addEv(3, 10));
+        assertEquals(0, p.addEv(4, 10));         // already at 510
+    }
+
+    @Test
     void genderRollsFromRatio() {
         PokemonSpecies male = species(50);
         male.maleRatio = 1.0;

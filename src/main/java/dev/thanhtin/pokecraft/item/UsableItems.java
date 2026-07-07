@@ -42,7 +42,13 @@ public class UsableItems implements Listener {
         LEAF_STONE("Leaf Stone", Material.BIG_DRIPLEAF, 0, "Evolves certain pokemon"),
         MOON_STONE("Moon Stone", Material.QUARTZ, 0, "Evolves certain pokemon"),
         ORAN_BERRY("Oran Berry", Material.GLOW_BERRIES, 30, "Heals 30 HP"),
-        FULL_HEAL("Full Heal", Material.MILK_BUCKET, 0, "Cures all status conditions", true);
+        FULL_HEAL("Full Heal", Material.MILK_BUCKET, 0, "Cures all status conditions", true, -1),
+        HP_UP("HP Up", Material.PINK_DYE, 0, "+10 HP EV", false, 0),
+        PROTEIN("Protein", Material.RED_DYE, 0, "+10 Attack EV", false, 1),
+        IRON("Iron", Material.GRAY_DYE, 0, "+10 Defense EV", false, 2),
+        CALCIUM("Calcium", Material.LIGHT_BLUE_DYE, 0, "+10 Sp. Atk EV", false, 3),
+        ZINC("Zinc", Material.WHITE_DYE, 0, "+10 Sp. Def EV", false, 4),
+        CARBOS("Carbos", Material.LIME_DYE, 0, "+10 Speed EV", false, 5);
 
         public final String display;
         public final Material material;
@@ -51,17 +57,21 @@ public class UsableItems implements Listener {
         public final String description;
         /** Whether using this item clears status conditions. */
         public final boolean curesStatus;
+        /** EV stat index (0=hp..5=spe) this item trains, or -1 if none. */
+        public final int evStat;
 
         ItemType(String display, Material material, int heal, String description) {
-            this(display, material, heal, description, false);
+            this(display, material, heal, description, false, -1);
         }
 
-        ItemType(String display, Material material, int heal, String description, boolean curesStatus) {
+        ItemType(String display, Material material, int heal, String description,
+                 boolean curesStatus, int evStat) {
             this.display = display;
             this.material = material;
             this.heal = heal;
             this.description = description;
             this.curesStatus = curesStatus;
+            this.evStat = evStat;
         }
 
         public boolean isPotion() { return heal != 0; }
@@ -200,6 +210,18 @@ public class UsableItems implements Listener {
             player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.8f, 1.6f);
             player.sendMessage(Component.text(p.displayName(species) + " was cured of all status!",
                     NamedTextColor.GREEN));
+            return true;
+        }
+        if (type.evStat >= 0) {
+            int added = p.addEv(type.evStat, 10);
+            if (added <= 0) {
+                player.sendMessage(Component.text(p.displayName(species)
+                        + " can't gain any more of that stat.", NamedTextColor.RED));
+                return false;
+            }
+            player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.8f, 1.4f);
+            player.sendMessage(Component.text(p.displayName(species) + " gained " + added
+                    + " EV from the " + type.display + "!", NamedTextColor.GREEN));
             return true;
         }
         // evolution stone

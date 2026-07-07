@@ -93,6 +93,21 @@ public class PokemonInstance {
     public static final int EV_TOTAL_CAP = 510;
 
     /**
+     * Add EVs to a single stat (0=hp..5=spe), respecting the per-stat and total
+     * caps. @return how many EVs were actually added (0 if already capped).
+     */
+    public int addEv(int index, int amount) {
+        if (index < 0 || index > 5 || amount <= 0) return 0;
+        if (evs == null) evs = new int[6];
+        int total = 0;
+        for (int e : evs) total += e;
+        int room = Math.min(EV_STAT_CAP - evs[index], EV_TOTAL_CAP - total);
+        int add = Math.max(0, Math.min(amount, room));
+        evs[index] += add;
+        return add;
+    }
+
+    /**
      * Award the EV yield of a defeated species, respecting the per-stat and
      * total caps. @return true if any EV was actually gained.
      */
