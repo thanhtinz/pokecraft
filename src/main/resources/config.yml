@@ -51,6 +51,21 @@ models:
   import-only-species: true
   # if imported models come out rotated wrong, try [1,1,1] or [-1,-1,-1]
   import-rotation-sign: [-1, -1, 1]
+  # extra blueprint names to import even though they aren't species (e.g. balls)
+  import-extra: []
+  # give the thrown Poke Ball a 3D model (BallType -> blueprint id). The blueprint
+  # is auto-imported and applied to the flying ball. Leave blank to keep the item.
+  ball-blueprints:
+    POKE_BALL: ''
+    GREAT_BALL: ''
+    ULTRA_BALL: ''
+    MASTER_BALL: ''
+  # give NPCs a 3D model (NpcType -> blueprint id); applied on spawn + chunk load
+  npc-blueprints:
+    HEALER: ''
+    VENDOR: ''
+    TRAINER: ''
+    GYM: ''
 
 battle:
   exp-multiplier: 1.0

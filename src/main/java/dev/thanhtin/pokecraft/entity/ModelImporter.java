@@ -43,6 +43,7 @@ public class ModelImporter {
     private final Gson gson = new GsonBuilder().create();
     private int[] rotSign = {-1, -1, 1};
     private boolean onlySpecies = true;
+    private final java.util.Set<String> extraNames = new java.util.HashSet<>();
     private int skipped = 0;
 
     public ModelImporter(PokeCraftPlugin plugin) {
@@ -55,6 +56,20 @@ public class ModelImporter {
         List<Integer> cfg = plugin.getConfig().getIntegerList("models.import-rotation-sign");
         if (cfg.size() == 3) rotSign = new int[]{cfg.get(0), cfg.get(1), cfg.get(2)};
         onlySpecies = plugin.getConfig().getBoolean("models.import-only-species", true);
+        extraNames.clear();
+        for (String n : plugin.getConfig().getStringList("models.import-extra")) {
+            extraNames.add(n.toLowerCase(Locale.ROOT));
+        }
+        // also allow any blueprint referenced by the ball / npc model maps
+        for (String key : new String[]{"models.ball-blueprints", "models.npc-blueprints"}) {
+            var sec = plugin.getConfig().getConfigurationSection(key);
+            if (sec != null) {
+                for (String k : sec.getKeys(false)) {
+                    String v = sec.getString(k);
+                    if (v != null && !v.isBlank()) extraNames.add(v.toLowerCase(Locale.ROOT));
+                }
+            }
+        }
         skipped = 0;
 
         File importDir = new File(plugin.getDataFolder(), "models-import");
@@ -163,9 +178,10 @@ public class ModelImporter {
         for (int gi = 0; gi < geos.size(); gi++) {
             JsonObject geo = geos.get(gi).getAsJsonObject();
             String modelName = geos.size() == 1 ? name : name + "_" + gi;
-            if (onlySpecies && plugin.species().getSpecies(modelName) == null) {
+            if (onlySpecies && plugin.species().getSpecies(modelName) == null
+                    && !extraNames.contains(modelName)) {
                 skipped++;
-                continue; // not a known pokemon (berry, ball, particle, ...) - skip
+                continue; // not a known pokemon or configured ball/npc - skip
             }
             JsonObject desc = geo.has("description") ? geo.getAsJsonObject("description") : new JsonObject();
             int resW = desc.has("texture_width") ? desc.get("texture_width").getAsInt() : 64;

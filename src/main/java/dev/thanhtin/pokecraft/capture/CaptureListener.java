@@ -35,6 +35,11 @@ public class CaptureListener implements Listener {
         if (type == null) return;
         ball.getPersistentDataContainer().set(
                 plugin.pokeballs().key(), PersistentDataType.STRING, type.name());
+        String bp = plugin.getConfig().getString("models.ball-blueprints." + type.name());
+        if (bp != null && !bp.isBlank()) {
+            ball.setItem(new org.bukkit.inventory.ItemStack(org.bukkit.Material.AIR)); // hide the vanilla snowball
+            plugin.entities().applyModel(ball, bp);
+        }
     }
 
     @EventHandler

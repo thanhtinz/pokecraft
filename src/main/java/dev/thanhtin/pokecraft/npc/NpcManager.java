@@ -72,6 +72,26 @@ public class NpcManager implements Listener {
         return entity.getPersistentDataContainer().has(keyNpc, PersistentDataType.BYTE);
     }
 
+    /** Apply the configured ModelEngine blueprint for this NPC type, if any. */
+    private void applyModel(LivingEntity entity, NpcType type) {
+        String bp = plugin.getConfig().getString("models.npc-blueprints." + type.name());
+        if (bp != null && !bp.isBlank()) plugin.entities().applyModel(entity, bp);
+    }
+
+    /** Re-apply NPC models when their chunks load (persistent villagers). */
+    @EventHandler
+    public void onEntitiesLoad(org.bukkit.event.world.EntitiesLoadEvent e) {
+        for (Entity ent : e.getEntities()) {
+            if (!(ent instanceof LivingEntity le) || !isNpc(ent)) continue;
+            StorageManager.NpcRow row = plugin.storage().getNpc(ent.getUniqueId());
+            if (row == null) continue;
+            try {
+                applyModel(le, NpcType.valueOf(row.type()));
+            } catch (IllegalArgumentException ignore) {
+            }
+        }
+    }
+
     /** Spawns and persists a new NPC at the given location. */
     public void create(Player creator, NpcType type, String name, int trainerLevel) {
         Location loc = creator.getLocation();
@@ -91,6 +111,7 @@ public class NpcManager implements Listener {
         }));
         entity.setCustomNameVisible(true);
         entity.getPersistentDataContainer().set(keyNpc, PersistentDataType.BYTE, (byte) 1);
+        applyModel(entity, type);
 
         String data = "";
         if (type == NpcType.TRAINER) {
@@ -121,6 +142,7 @@ public class NpcManager implements Listener {
         entity.customName(Component.text(name, NamedTextColor.GOLD));
         entity.setCustomNameVisible(true);
         entity.getPersistentDataContainer().set(keyNpc, PersistentDataType.BYTE, (byte) 1);
+        applyModel(entity, NpcType.GYM);
 
         TrainerData data = new TrainerData();
         data.badge = gym.badge();
