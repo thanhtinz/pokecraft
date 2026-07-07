@@ -34,12 +34,14 @@ public class BattleGui implements Listener {
     private final NamespacedKey keyMove;
     private final NamespacedKey keyAction;
     private final NamespacedKey keySlot;
+    private final NamespacedKey keyBagItem;
 
     public BattleGui(PokeCraftPlugin plugin) {
         this.plugin = plugin;
         this.keyMove = new NamespacedKey(plugin, "move");
         this.keyAction = new NamespacedKey(plugin, "action");
         this.keySlot = new NamespacedKey(plugin, "slot");
+        this.keyBagItem = new NamespacedKey(plugin, "bag_item");
     }
 
     public void open(Player player, Battle battle) {
@@ -85,6 +87,14 @@ public class BattleGui implements Listener {
             inv.setItem(4, struggle);
         }
 
+        ItemStack bag = new ItemStack(Material.HONEY_BOTTLE);
+        ItemMeta bagMeta = bag.getItemMeta();
+        bagMeta.displayName(Component.text("Bag", NamedTextColor.GOLD));
+        bagMeta.lore(List.of(Component.text("Use a potion (costs your turn)", NamedTextColor.GRAY)));
+        bagMeta.getPersistentDataContainer().set(keyAction, PersistentDataType.STRING, "bag-menu");
+        bag.setItemMeta(bagMeta);
+        inv.setItem(6, bag);
+
         ItemStack party = new ItemStack(Material.ENDER_PEARL);
         ItemMeta partyMeta = party.getItemMeta();
         partyMeta.displayName(Component.text("Switch Pokemon", NamedTextColor.YELLOW));
@@ -100,6 +110,46 @@ public class BattleGui implements Listener {
         run.setItemMeta(runMeta);
         inv.setItem(8, run);
 
+        player.openInventory(inv);
+    }
+
+    /** In-battle bag: the potions the player owns, one click uses one. */
+    public void openBagMenu(Player player, Battle battle) {
+        Inventory inv = plugin.getServer().createInventory(null, 9, Component.text("Bag - use a potion"));
+        java.util.Map<dev.thanhtin.pokecraft.item.UsableItems.ItemType, Integer> counts =
+                new java.util.EnumMap<>(dev.thanhtin.pokecraft.item.UsableItems.ItemType.class);
+        for (ItemStack item : player.getInventory().getContents()) {
+            if (item == null) continue;
+            var type = plugin.items().read(item);
+            if (type != null && type.isPotion()) {
+                counts.merge(type, item.getAmount(), Integer::sum);
+            }
+        }
+        int slot = 0;
+        for (var entry : counts.entrySet()) {
+            if (slot >= 8) break;
+            var type = entry.getKey();
+            ItemStack item = new ItemStack(type.material, Math.min(64, entry.getValue()));
+            ItemMeta meta = item.getItemMeta();
+            meta.displayName(Component.text(type.display + " x" + entry.getValue(), NamedTextColor.AQUA));
+            meta.lore(List.of(Component.text(type.description, NamedTextColor.GRAY)));
+            meta.getPersistentDataContainer().set(keyBagItem, PersistentDataType.STRING, type.name());
+            item.setItemMeta(meta);
+            inv.setItem(slot++, item);
+        }
+        if (slot == 0) {
+            ItemStack none = new ItemStack(Material.BARRIER);
+            ItemMeta meta = none.getItemMeta();
+            meta.displayName(Component.text("No potions in your bag", NamedTextColor.RED));
+            none.setItemMeta(meta);
+            inv.setItem(4, none);
+        }
+        ItemStack back = new ItemStack(Material.ARROW);
+        ItemMeta backMeta = back.getItemMeta();
+        backMeta.displayName(Component.text("Back", NamedTextColor.GRAY));
+        backMeta.getPersistentDataContainer().set(keyAction, PersistentDataType.STRING, "back");
+        back.setItemMeta(backMeta);
+        inv.setItem(8, back);
         player.openInventory(inv);
     }
 
@@ -172,18 +222,30 @@ public class BattleGui implements Listener {
                 .get(keyAction, PersistentDataType.STRING);
         Integer slot = item.getItemMeta().getPersistentDataContainer()
                 .get(keySlot, PersistentDataType.INTEGER);
-        if (moveId == null && action == null && slot == null) return;
+        String bagItem = item.getItemMeta().getPersistentDataContainer()
+                .get(keyBagItem, PersistentDataType.STRING);
+        if (moveId == null && action == null && slot == null && bagItem == null) return;
 
         final Integer targetSlot = slot;
         final String targetMove = moveId;
+        final String targetBagItem = bagItem;
         // defer: opening/closing inventories inside a click handler is unsafe
         plugin.getServer().getScheduler().runTask(plugin, () -> {
             if ("run".equals(action)) {
                 plugin.battles().flee(player);
             } else if ("switch-menu".equals(action)) {
                 openSwitchMenu(player, battle, false);
+            } else if ("bag-menu".equals(action)) {
+                openBagMenu(player, battle);
             } else if ("back".equals(action)) {
                 open(player, battle);
+            } else if (targetBagItem != null) {
+                try {
+                    plugin.battles().useItemInBattle(player,
+                            dev.thanhtin.pokecraft.item.UsableItems.ItemType.valueOf(targetBagItem));
+                } catch (IllegalArgumentException ignored) {
+                    open(player, battle);
+                }
             } else if (targetSlot != null) {
                 plugin.battles().switchPokemon(player, targetSlot);
             } else if (targetMove != null) {

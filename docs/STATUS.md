@@ -116,9 +116,12 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Gym Leader + Badge: 8 gym Kanto (Brock->Giovanni), đội theo hệ & level
       tăng dần; hạ leader nhận badge; panel Badges (menu Activities) xem 8 badge;
       OP panel -> "Place Gym Leader" chọn gym để đặt tại chỗ đứng
-- [ ] Dùng item giữa trận (ball ném được; potion chỉ dùng ngoài trận)
+- [x] Dùng item giữa trận: nút Bag trong battle menu -> chọn potion (Potion/
+      Super/Hyper/Oran Berry) hồi HP cho pokemon đang đánh; tốn lượt (pokemon
+      hoang được đánh 1 phát), không cho phí khi đã đầy HP
 - [ ] Battle theo turn timeout (chống AFK)
-- [ ] Stat stages cho accuracy/evasion
+- [~] Stat stages cho accuracy/evasion: khung có sẵn nhưng chưa có move chỉnh
+      accuracy/evasion trong pool nên chưa kích hoạt
 
 ## Party / Storage
 

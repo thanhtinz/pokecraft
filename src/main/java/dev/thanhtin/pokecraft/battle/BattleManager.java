@@ -170,6 +170,58 @@ public class BattleManager implements Listener {
         plugin.battleUi().open(player, battle);
     }
 
+    /**
+     * Use a potion on the active pokemon mid-battle. This costs the player's
+     * turn: the wild pokemon then gets a free attack. Wasting a potion on a
+     * full-HP pokemon is refused (no turn lost).
+     */
+    public void useItemInBattle(Player player, dev.thanhtin.pokecraft.item.UsableItems.ItemType type) {
+        Battle battle = battles.get(player.getUniqueId());
+        if (battle == null || battle.finished || battle.awaitingSwitch) return;
+        if (type == null || !type.isPotion()) return;
+        PokemonSpecies mySpecies = plugin.species().getSpecies(battle.playerPokemon.speciesId);
+        if (mySpecies == null) return;
+
+        PokemonInstance mine = battle.playerPokemon;
+        int max = mine.maxHp(mySpecies);
+        if (mine.currentHp >= max) {
+            player.sendMessage(Component.text(mine.displayName(mySpecies) + " is already at full HP.",
+                    NamedTextColor.YELLOW));
+            plugin.battleUi().open(player, battle);
+            return;
+        }
+        if (!consumeItem(player, type)) {
+            player.sendMessage(Component.text("You have no " + type.display + " left.", NamedTextColor.RED));
+            plugin.battleUi().open(player, battle);
+            return;
+        }
+        int before = mine.currentHp;
+        mine.currentHp = type.heal < 0 ? max : Math.min(max, mine.currentHp + type.heal);
+        player.sendMessage(Component.text("Used " + type.display + " - restored "
+                + (mine.currentHp - before) + " HP.", NamedTextColor.GREEN));
+
+        // spending a turn: the wild pokemon attacks
+        MoveData wildMove = pickWildMove(battle.wildPokemon);
+        if (wildMove != null && act(player, battle, false, wildMove)) return;
+        if (endOfTurn(player, battle)) return;
+        syncWildEntity(battle);
+        plugin.battleUi().open(player, battle);
+    }
+
+    /** Remove one item of the given usable type from the player's inventory. */
+    private boolean consumeItem(Player player, dev.thanhtin.pokecraft.item.UsableItems.ItemType type) {
+        var contents = player.getInventory().getContents();
+        for (int i = 0; i < contents.length; i++) {
+            org.bukkit.inventory.ItemStack item = contents[i];
+            if (item == null) continue;
+            if (plugin.items().read(item) != type) continue;
+            if (item.getAmount() <= 1) player.getInventory().setItem(i, null);
+            else item.setAmount(item.getAmount() - 1);
+            return true;
+        }
+        return false;
+    }
+
     private boolean playerActsFirst(Battle battle, PokemonSpecies mySpecies, PokemonSpecies wildSpecies,
                                     MoveData myMove, MoveData wildMove) {
         ThreadLocalRandom rnd = ThreadLocalRandom.current();
