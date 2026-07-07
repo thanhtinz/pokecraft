@@ -1,0 +1,61 @@
+{
+  "id": "blissey",
+  "dex": 242,
+  "name": "Blissey",
+  "types": [
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 255,
+    "atk": 10,
+    "def": 10,
+    "spa": 75,
+    "spd": 135,
+    "spe": 55
+  },
+  "catchRate": 30,
+  "expYield": 635,
+  "modelId": "blissey",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "hyper_fang"
+    ],
+    "20": [
+      "mega_punch"
+    ],
+    "32": [
+      "body_slam"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "48": [
+      "hyper_beam"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

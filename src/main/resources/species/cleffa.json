@@ -1,0 +1,54 @@
+{
+  "id": "cleffa",
+  "dex": 173,
+  "name": "Cleffa",
+  "types": [
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 25,
+    "def": 28,
+    "spa": 45,
+    "spd": 55,
+    "spe": 15
+  },
+  "catchRate": 150,
+  "expYield": 44,
+  "modelId": "cleffa",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sing"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "dazzling_gleam"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "clefairy",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MEADOW"
+    ],
+    "weight": 12,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

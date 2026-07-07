@@ -1,0 +1,55 @@
+{
+  "id": "pineco",
+  "dex": 204,
+  "name": "Pineco",
+  "types": [
+    "BUG"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 65,
+    "def": 90,
+    "spa": 35,
+    "spd": 35,
+    "spe": 15
+  },
+  "catchRate": 190,
+  "expYield": 58,
+  "modelId": "pineco",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "pin_missile"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 31,
+      "to": "forretress",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

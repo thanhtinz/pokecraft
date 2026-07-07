@@ -31,5 +31,8 @@
 ## Phase 4
 - Next.js admin panel + REST API (species editor, player inspector)
 - [x] Full 151 gen-1 dataset generation script (tools/generate_gen1.py)
+- [x] Gen 2 (152-251) imported from Cobblemon data (tools/import_cobblemon.py);
+      script generalizes to further generations
+- [ ] Import Gen 3+ (same script, needs a wider move pool for authentic learnsets)
 - Bedrock resource pack polish (custom pokeball item textures via
   Geyser custom item mappings)

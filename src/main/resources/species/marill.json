@@ -1,0 +1,68 @@
+{
+  "id": "marill",
+  "dex": 183,
+  "name": "Marill",
+  "types": [
+    "WATER",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 20,
+    "def": 50,
+    "spa": 20,
+    "spd": 50,
+    "spe": 40
+  },
+  "catchRate": 190,
+  "expYield": 88,
+  "modelId": "marill",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "dazzling_gleam"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "surf"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 18,
+      "to": "azumarill",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

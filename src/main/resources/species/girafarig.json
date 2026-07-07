@@ -1,0 +1,62 @@
+{
+  "id": "girafarig",
+  "dex": 203,
+  "name": "Girafarig",
+  "types": [
+    "NORMAL",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 80,
+    "def": 65,
+    "spa": 90,
+    "spd": 65,
+    "spe": 85
+  },
+  "catchRate": 60,
+  "expYield": 159,
+  "modelId": "girafarig",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 5,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "ledyba",
+  "dex": 165,
+  "name": "Ledyba",
+  "types": [
+    "BUG",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 20,
+    "def": 30,
+    "spa": 40,
+    "spd": 80,
+    "spe": 55
+  },
+  "catchRate": 255,
+  "expYield": 53,
+  "modelId": "ledyba",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 18,
+      "to": "ledian",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "meganium",
+  "dex": 154,
+  "name": "Meganium",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 82,
+    "def": 100,
+    "spa": 83,
+    "spd": 100,
+    "spe": 80
+  },
+  "catchRate": 45,
+  "expYield": 263,
+  "modelId": "meganium",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

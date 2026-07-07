@@ -1,0 +1,64 @@
+{
+  "id": "remoraid",
+  "dex": 223,
+  "name": "Remoraid",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 35,
+    "atk": 65,
+    "def": 35,
+    "spa": 65,
+    "spd": 35,
+    "spe": 65
+  },
+  "catchRate": 190,
+  "expYield": 60,
+  "modelId": "remoraid",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 25,
+      "to": "octillery",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

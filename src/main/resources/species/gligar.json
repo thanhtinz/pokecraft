@@ -1,0 +1,61 @@
+{
+  "id": "gligar",
+  "dex": 207,
+  "name": "Gligar",
+  "types": [
+    "GROUND",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 75,
+    "def": 105,
+    "spa": 35,
+    "spd": 65,
+    "spe": 85
+  },
+  "catchRate": 60,
+  "expYield": 86,
+  "modelId": "gligar",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 5,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

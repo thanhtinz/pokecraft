@@ -1,0 +1,52 @@
+{
+  "id": "lanturn",
+  "dex": 171,
+  "name": "Lanturn",
+  "types": [
+    "WATER",
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 125,
+    "atk": 58,
+    "def": 58,
+    "spa": 76,
+    "spd": 76,
+    "spe": 67
+  },
+  "catchRate": 75,
+  "expYield": 161,
+  "modelId": "lanturn",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "spark"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

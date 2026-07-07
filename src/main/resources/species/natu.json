@@ -1,0 +1,67 @@
+{
+  "id": "natu",
+  "dex": 177,
+  "name": "Natu",
+  "types": [
+    "PSYCHIC",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 50,
+    "def": 45,
+    "spa": 70,
+    "spd": 45,
+    "spe": 70
+  },
+  "catchRate": 190,
+  "expYield": 64,
+  "modelId": "natu",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 25,
+      "to": "xatu",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "slugma",
+  "dex": 218,
+  "name": "Slugma",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 40,
+    "def": 40,
+    "spa": 70,
+    "spd": 40,
+    "spe": 20
+  },
+  "catchRate": 190,
+  "expYield": 50,
+  "modelId": "slugma",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 38,
+      "to": "magcargo",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

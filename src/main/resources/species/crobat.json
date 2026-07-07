@@ -1,0 +1,61 @@
+{
+  "id": "crobat",
+  "dex": 169,
+  "name": "Crobat",
+  "types": [
+    "POISON",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 90,
+    "def": 80,
+    "spa": 70,
+    "spd": 80,
+    "spe": 130
+  },
+  "catchRate": 90,
+  "expYield": 268,
+  "modelId": "crobat",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 7,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mareep",
+  "dex": 179,
+  "name": "Mareep",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 40,
+    "def": 40,
+    "spa": 65,
+    "spd": 45,
+    "spe": 35
+  },
+  "catchRate": 235,
+  "expYield": 56,
+  "modelId": "mareep",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 15,
+      "to": "flaaffy",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 19,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

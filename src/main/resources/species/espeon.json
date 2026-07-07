@@ -1,0 +1,51 @@
+{
+  "id": "espeon",
+  "dex": 196,
+  "name": "Espeon",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 65,
+    "def": 60,
+    "spa": 130,
+    "spd": 95,
+    "spe": 110
+  },
+  "catchRate": 45,
+  "expYield": 184,
+  "modelId": "espeon",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

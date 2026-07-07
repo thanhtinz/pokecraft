@@ -1,0 +1,52 @@
+{
+  "id": "lugia",
+  "dex": 249,
+  "name": "Lugia",
+  "types": [
+    "PSYCHIC",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 106,
+    "atk": 90,
+    "def": 130,
+    "spa": 90,
+    "spd": 154,
+    "spe": 110
+  },
+  "catchRate": 3,
+  "expYield": 340,
+  "modelId": "lugia",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

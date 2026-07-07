@@ -1,0 +1,60 @@
+{
+  "id": "murkrow",
+  "dex": 198,
+  "name": "Murkrow",
+  "types": [
+    "DARK",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 85,
+    "def": 42,
+    "spa": 85,
+    "spd": 42,
+    "spe": 91
+  },
+  "catchRate": 30,
+  "expYield": 81,
+  "modelId": "murkrow",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "crunch"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

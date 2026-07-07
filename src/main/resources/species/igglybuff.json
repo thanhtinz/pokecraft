@@ -1,0 +1,68 @@
+{
+  "id": "igglybuff",
+  "dex": 174,
+  "name": "Igglybuff",
+  "types": [
+    "NORMAL",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 30,
+    "def": 15,
+    "spa": 40,
+    "spd": 20,
+    "spe": 15
+  },
+  "catchRate": 170,
+  "expYield": 42,
+  "modelId": "igglybuff",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "fairy_wind"
+    ],
+    "20": [
+      "hyper_fang"
+    ],
+    "32": [
+      "dazzling_gleam"
+    ],
+    "40": [
+      "mega_punch"
+    ],
+    "48": [
+      "body_slam"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "jigglypuff",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 14,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

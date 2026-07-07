@@ -1,0 +1,45 @@
+{
+  "id": "ampharos",
+  "dex": 181,
+  "name": "Ampharos",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 75,
+    "def": 85,
+    "spa": 115,
+    "spd": 90,
+    "spe": 55
+  },
+  "catchRate": 45,
+  "expYield": 255,
+  "modelId": "ampharos",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

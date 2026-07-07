@@ -1,0 +1,63 @@
+{
+  "id": "magby",
+  "dex": 240,
+  "name": "Magby",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 75,
+    "def": 37,
+    "spa": 70,
+    "spd": 55,
+    "spe": 83
+  },
+  "catchRate": 45,
+  "expYield": 73,
+  "modelId": "magby",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "magmar",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

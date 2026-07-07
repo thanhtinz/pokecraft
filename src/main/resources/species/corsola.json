@@ -1,0 +1,62 @@
+{
+  "id": "corsola",
+  "dex": 222,
+  "name": "Corsola",
+  "types": [
+    "WATER",
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 55,
+    "def": 95,
+    "spa": 65,
+    "spd": 95,
+    "spe": 35
+  },
+  "catchRate": 60,
+  "expYield": 144,
+  "modelId": "corsola",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "rock_throw"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 5,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

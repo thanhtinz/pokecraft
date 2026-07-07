@@ -1,0 +1,59 @@
+{
+  "id": "quilava",
+  "dex": 156,
+  "name": "Quilava",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 58,
+    "atk": 64,
+    "def": 58,
+    "spa": 80,
+    "spd": 65,
+    "spe": 80
+  },
+  "catchRate": 45,
+  "expYield": 142,
+  "modelId": "quilava",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 36,
+      "to": "typhlosion",
+      "item": null
+    },
+    {
+      "level": 36,
+      "to": "typhlosion",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

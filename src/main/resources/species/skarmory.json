@@ -1,0 +1,60 @@
+{
+  "id": "skarmory",
+  "dex": 227,
+  "name": "Skarmory",
+  "types": [
+    "STEEL",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 80,
+    "def": 140,
+    "spa": 40,
+    "spd": 70,
+    "spe": 70
+  },
+  "catchRate": 25,
+  "expYield": 163,
+  "modelId": "skarmory",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

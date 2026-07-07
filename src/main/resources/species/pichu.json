@@ -1,0 +1,60 @@
+{
+  "id": "pichu",
+  "dex": 172,
+  "name": "Pichu",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 20,
+    "atk": 40,
+    "def": 15,
+    "spa": 35,
+    "spd": 35,
+    "spe": 60
+  },
+  "catchRate": 190,
+  "expYield": 41,
+  "modelId": "pichu",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "pikachu",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

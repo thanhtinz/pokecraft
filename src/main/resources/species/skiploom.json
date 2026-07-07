@@ -1,0 +1,58 @@
+{
+  "id": "skiploom",
+  "dex": 188,
+  "name": "Skiploom",
+  "types": [
+    "GRASS",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 45,
+    "def": 50,
+    "spa": 45,
+    "spd": 65,
+    "spe": 80
+  },
+  "catchRate": 120,
+  "expYield": 119,
+  "modelId": "skiploom",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 27,
+      "to": "jumpluff",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

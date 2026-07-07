@@ -1,0 +1,62 @@
+{
+  "id": "slowking",
+  "dex": 199,
+  "name": "Slowking",
+  "types": [
+    "WATER",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 95,
+    "atk": 75,
+    "def": 80,
+    "spa": 100,
+    "spd": 110,
+    "spe": 30
+  },
+  "catchRate": 70,
+  "expYield": 172,
+  "modelId": "slowking",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 5,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

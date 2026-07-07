@@ -1,0 +1,60 @@
+{
+  "id": "elekid",
+  "dex": 239,
+  "name": "Elekid",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 63,
+    "def": 37,
+    "spa": 65,
+    "spd": 55,
+    "spe": 95
+  },
+  "catchRate": 45,
+  "expYield": 72,
+  "modelId": "elekid",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "electabuzz",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

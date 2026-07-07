@@ -1,0 +1,52 @@
+{
+  "id": "houndoom",
+  "dex": 229,
+  "name": "Houndoom",
+  "types": [
+    "DARK",
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 90,
+    "def": 50,
+    "spa": 110,
+    "spd": 80,
+    "spe": 95
+  },
+  "catchRate": 45,
+  "expYield": 175,
+  "modelId": "houndoom",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "bite"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "crunch"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "flamethrower"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

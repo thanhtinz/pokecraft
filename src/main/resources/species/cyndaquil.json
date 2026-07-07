@@ -1,0 +1,63 @@
+{
+  "id": "cyndaquil",
+  "dex": 155,
+  "name": "Cyndaquil",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 39,
+    "atk": 52,
+    "def": 43,
+    "spa": 60,
+    "spd": 50,
+    "spe": 65
+  },
+  "catchRate": 45,
+  "expYield": 62,
+  "modelId": "cyndaquil",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 14,
+      "to": "quilava",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

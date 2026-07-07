@@ -1,0 +1,66 @@
+{
+  "id": "houndour",
+  "dex": 228,
+  "name": "Houndour",
+  "types": [
+    "DARK",
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 60,
+    "def": 30,
+    "spa": 80,
+    "spd": 50,
+    "spe": 65
+  },
+  "catchRate": 120,
+  "expYield": 66,
+  "modelId": "houndour",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "ember"
+    ],
+    "20": [
+      "crunch"
+    ],
+    "32": [
+      "fire_spin"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "flamethrower"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 24,
+      "to": "houndoom",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

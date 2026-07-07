@@ -1,0 +1,57 @@
+{
+  "id": "steelix",
+  "dex": 208,
+  "name": "Steelix",
+  "types": [
+    "STEEL",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 85,
+    "def": 200,
+    "spa": 55,
+    "spd": 65,
+    "spe": 30
+  },
+  "catchRate": 25,
+  "expYield": 179,
+  "modelId": "steelix",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

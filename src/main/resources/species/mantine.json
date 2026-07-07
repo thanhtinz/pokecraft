@@ -1,0 +1,62 @@
+{
+  "id": "mantine",
+  "dex": 226,
+  "name": "Mantine",
+  "types": [
+    "WATER",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 40,
+    "def": 70,
+    "spa": 80,
+    "spd": 140,
+    "spe": 70
+  },
+  "catchRate": 25,
+  "expYield": 170,
+  "modelId": "mantine",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

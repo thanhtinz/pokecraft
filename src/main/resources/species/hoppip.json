@@ -1,0 +1,68 @@
+{
+  "id": "hoppip",
+  "dex": 187,
+  "name": "Hoppip",
+  "types": [
+    "GRASS",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 35,
+    "atk": 35,
+    "def": 40,
+    "spa": 35,
+    "spd": 55,
+    "spe": 50
+  },
+  "catchRate": 255,
+  "expYield": 50,
+  "modelId": "hoppip",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 18,
+      "to": "skiploom",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

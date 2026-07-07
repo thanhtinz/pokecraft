@@ -1,0 +1,68 @@
+{
+  "id": "smoochum",
+  "dex": 238,
+  "name": "Smoochum",
+  "types": [
+    "ICE",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 30,
+    "def": 15,
+    "spa": 85,
+    "spd": 65,
+    "spe": 65
+  },
+  "catchRate": 45,
+  "expYield": 61,
+  "modelId": "smoochum",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "aurora_beam"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "ice_beam"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "jynx",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

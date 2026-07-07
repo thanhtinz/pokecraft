@@ -1,0 +1,62 @@
+{
+  "id": "yanma",
+  "dex": 193,
+  "name": "Yanma",
+  "types": [
+    "BUG",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 65,
+    "def": 45,
+    "spa": 75,
+    "spd": 45,
+    "spe": 95
+  },
+  "catchRate": 75,
+  "expYield": 78,
+  "modelId": "yanma",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 6,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

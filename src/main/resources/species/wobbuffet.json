@@ -1,0 +1,51 @@
+{
+  "id": "wobbuffet",
+  "dex": 202,
+  "name": "Wobbuffet",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 190,
+    "atk": 33,
+    "def": 58,
+    "spa": 33,
+    "spd": 58,
+    "spe": 33
+  },
+  "catchRate": 45,
+  "expYield": 142,
+  "modelId": "wobbuffet",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "chinchou",
+  "dex": 170,
+  "name": "Chinchou",
+  "types": [
+    "WATER",
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 38,
+    "def": 38,
+    "spa": 56,
+    "spd": 56,
+    "spe": 67
+  },
+  "catchRate": 190,
+  "expYield": 66,
+  "modelId": "chinchou",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "thunderbolt"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 27,
+      "to": "lanturn",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

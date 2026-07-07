@@ -5,3 +5,5 @@ Bedrock/mobile players join via Geyser + Floodgate and see full 3D pokemon
 models through the GeyserModelEngine extension.
 
 See docs/ for architecture, setup and roadmap.
+
+Species data credits and licensing: see docs/CREDITS.md

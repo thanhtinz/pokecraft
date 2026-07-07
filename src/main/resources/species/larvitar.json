@@ -1,0 +1,68 @@
+{
+  "id": "larvitar",
+  "dex": 246,
+  "name": "Larvitar",
+  "types": [
+    "ROCK",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 64,
+    "def": 50,
+    "spa": 45,
+    "spd": 50,
+    "spe": 41
+  },
+  "catchRate": 45,
+  "expYield": 60,
+  "modelId": "larvitar",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "earthquake"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "pupitar",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "furret",
+  "dex": 162,
+  "name": "Furret",
+  "types": [
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 76,
+    "def": 64,
+    "spa": 45,
+    "spd": 55,
+    "spe": 90
+  },
+  "catchRate": 90,
+  "expYield": 145,
+  "modelId": "furret",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "hyper_fang"
+    ],
+    "20": [
+      "mega_punch"
+    ],
+    "32": [
+      "body_slam"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "48": [
+      "hyper_beam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

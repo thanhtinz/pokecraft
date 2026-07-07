@@ -1,0 +1,62 @@
+{
+  "id": "qwilfish",
+  "dex": 211,
+  "name": "Qwilfish",
+  "types": [
+    "WATER",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 95,
+    "def": 85,
+    "spa": 55,
+    "spd": 55,
+    "spe": 85
+  },
+  "catchRate": 45,
+  "expYield": 88,
+  "modelId": "qwilfish",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

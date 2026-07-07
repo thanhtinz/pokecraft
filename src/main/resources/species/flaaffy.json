@@ -1,0 +1,51 @@
+{
+  "id": "flaaffy",
+  "dex": 180,
+  "name": "Flaaffy",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 55,
+    "def": 55,
+    "spa": 80,
+    "spd": 60,
+    "spe": 45
+  },
+  "catchRate": 120,
+  "expYield": 128,
+  "modelId": "flaaffy",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "ampharos",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

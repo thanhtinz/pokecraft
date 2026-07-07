@@ -1,0 +1,50 @@
+{
+  "id": "misdreavus",
+  "dex": 200,
+  "name": "Misdreavus",
+  "types": [
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 60,
+    "def": 60,
+    "spa": 85,
+    "spd": 85,
+    "spe": 85
+  },
+  "catchRate": 45,
+  "expYield": 87,
+  "modelId": "misdreavus",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "night_shade"
+    ],
+    "20": [
+      "shadow_ball"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

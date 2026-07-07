@@ -1,0 +1,60 @@
+{
+  "id": "sneasel",
+  "dex": 215,
+  "name": "Sneasel",
+  "types": [
+    "DARK",
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 95,
+    "def": 55,
+    "spa": 35,
+    "spd": 75,
+    "spe": 115
+  },
+  "catchRate": 60,
+  "expYield": 86,
+  "modelId": "sneasel",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "bite"
+    ],
+    "20": [
+      "aurora_beam"
+    ],
+    "32": [
+      "crunch"
+    ],
+    "40": [
+      "ice_beam"
+    ],
+    "48": [
+      "blizzard"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 5,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

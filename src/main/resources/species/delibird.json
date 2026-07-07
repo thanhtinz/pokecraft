@@ -1,0 +1,62 @@
+{
+  "id": "delibird",
+  "dex": 225,
+  "name": "Delibird",
+  "types": [
+    "ICE",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 55,
+    "def": 45,
+    "spa": 65,
+    "spd": 45,
+    "spe": 75
+  },
+  "catchRate": 45,
+  "expYield": 116,
+  "modelId": "delibird",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "ice_shard"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "aurora_beam"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "ice_beam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ledian",
+  "dex": 166,
+  "name": "Ledian",
+  "types": [
+    "BUG",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 35,
+    "def": 50,
+    "spa": 55,
+    "spd": 110,
+    "spe": 85
+  },
+  "catchRate": 90,
+  "expYield": 137,
+  "modelId": "ledian",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "pin_missile"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}
