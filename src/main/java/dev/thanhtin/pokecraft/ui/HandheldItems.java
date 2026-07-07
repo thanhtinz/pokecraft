@@ -35,8 +35,13 @@ public class HandheldItems implements Listener {
     private record Handheld(String configKey, String id, Material material, String name, String lore) {}
 
     private static final List<Handheld> ITEMS = List.of(
-            new Handheld("items.give-pokedex", "pokedex", Material.BOOK,
+            new Handheld("items.give-pokedex", "pokedex", Material.RED_DYE,
                     "Pokedex", "Right-click / tap to open your Pokedex"));
+
+    // custom_model_data on the Pokedex so a resource pack can give it the real
+    // red Pokedex device texture (Java client). Vanilla clients / Bedrock just
+    // see the red base item.
+    private static final int POKEDEX_MODEL_DATA = 1;
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyItem;
@@ -49,8 +54,10 @@ public class HandheldItems implements Listener {
     private ItemStack build(Handheld h) {
         ItemStack item = new ItemStack(h.material());
         ItemMeta meta = item.getItemMeta();
-        meta.displayName(Component.text(h.name(), NamedTextColor.AQUA));
+        meta.displayName(Component.text(h.name(), NamedTextColor.RED)
+                .decoration(net.kyori.adventure.text.format.TextDecoration.ITALIC, false));
         meta.lore(List.of(Component.text(h.lore(), NamedTextColor.GRAY)));
+        if ("pokedex".equals(h.id())) meta.setCustomModelData(POKEDEX_MODEL_DATA);
         meta.getPersistentDataContainer().set(keyItem, PersistentDataType.STRING, h.id());
         item.setItemMeta(meta);
         return item;
@@ -78,7 +85,11 @@ public class HandheldItems implements Listener {
     public void cleanupAndGive(Player player) {
         for (ItemStack item : player.getInventory().getContents()) {
             String id = idOf(item);
-            if (id != null && ITEMS.stream().noneMatch(h -> h.id().equals(id))) {
+            if (id == null) continue;
+            Handheld current = ITEMS.stream().filter(h -> h.id().equals(id)).findFirst().orElse(null);
+            // remove retired items, and stale versions (e.g. the old BOOK Pokedex)
+            // so the refreshed look is handed back below
+            if (current == null || item.getType() != current.material()) {
                 player.getInventory().remove(item);
             }
         }
