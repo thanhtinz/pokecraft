@@ -490,6 +490,15 @@ public class BattleManager implements Listener {
                 player.sendMessage(Component.text((playerSide ? "Your " : opponentPrefix(battle)) + species.name
                         + " restored " + heal + " HP with its Leftovers.", NamedTextColor.GRAY));
             }
+            if (p.currentHp > 0 && species != null
+                    && "speedboost".equals(Abilities.norm(p.ability(species)))) {
+                int[] stages = playerSide ? battle.playerStages : battle.wildStages;
+                if (stages[5] < 6) {
+                    stages[5]++;
+                    player.sendMessage(Component.text((playerSide ? "Your " : opponentPrefix(battle))
+                            + species.name + "'s Speed rose with Speed Boost!", NamedTextColor.YELLOW));
+                }
+            }
         }
         return checkFaints(player, battle);
     }

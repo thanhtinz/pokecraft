@@ -459,6 +459,15 @@ public class PvpBattleManager implements Listener {
                 broadcast(battle, Component.text(who + " restored " + heal
                         + " HP with its Leftovers.", NamedTextColor.GRAY));
             }
+            if (p.currentHp > 0 && species != null
+                    && "speedboost".equals(Abilities.norm(p.ability(species)))) {
+                int[] stages = battle.stagesOf(side);
+                if (stages[5] < 6) {
+                    stages[5]++;
+                    broadcast(battle, Component.text(who + "'s Speed rose with Speed Boost!",
+                            NamedTextColor.YELLOW));
+                }
+            }
         }
         checkFaints(battle);
     }
