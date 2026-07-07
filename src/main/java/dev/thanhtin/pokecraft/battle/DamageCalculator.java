@@ -34,6 +34,13 @@ public final class DamageCalculator {
             return new Result(0, 1.0, false, false);
         }
 
+        String attackerAbility = attacker.ability(attackerSpecies);
+        String defenderAbility = defender.ability(defenderSpecies);
+        // ability-based immunity (Levitate, Flash Fire, Water/Volt Absorb, ...)
+        if (Abilities.immune(defenderAbility, move.type)) {
+            return new Result(0, 0.0, false, false);
+        }
+
         boolean physical = move.category == MoveData.Category.PHYSICAL;
         int atkIndex = physical ? 1 : 3;
         int defIndex = physical ? 2 : 4;
@@ -41,7 +48,13 @@ public final class DamageCalculator {
                 * stageMultiplier(attackerStages == null ? 0 : attackerStages[atkIndex]);
         double def = defender.stat(defenderSpecies, defIndex)
                 * stageMultiplier(defenderStages == null ? 0 : defenderStages[defIndex]);
-        if (physical && attacker.status == StatusCondition.BURN) atk *= 0.5;
+        double hpFraction = attacker.currentHp / (double) Math.max(1, attacker.maxHp(attackerSpecies));
+        atk *= Abilities.attackMultiplier(attackerAbility, move.type, physical,
+                attacker.status != null, hpFraction);
+        if (physical && attacker.status == StatusCondition.BURN
+                && !Abilities.ignoresBurn(attackerAbility)) {
+            atk *= 0.5;
+        }
 
         double effectiveness = 1.0;
         for (PokemonType t : defenderSpecies.types) {
@@ -54,9 +67,12 @@ public final class DamageCalculator {
         double crit = critical ? 1.5 : 1.0;
         double random = rnd.nextDouble(0.85, 1.0);
 
+        boolean atFullHp = defender.currentHp >= defender.maxHp(defenderSpecies);
+        double abilityDef = Abilities.defenseMultiplier(defenderAbility, move.type, effectiveness, atFullHp);
+
         double base = ((2.0 * attacker.level / 5.0 + 2.0) * move.power * atk / Math.max(1.0, def)) / 50.0 + 2.0;
         int damage = (int) Math.max(effectiveness == 0 ? 0 : 1,
-                Math.floor(base * stab * held * effectiveness * crit * random));
+                Math.floor(base * stab * held * effectiveness * crit * random * abilityDef));
         return new Result(damage, effectiveness, critical, false);
     }
 }

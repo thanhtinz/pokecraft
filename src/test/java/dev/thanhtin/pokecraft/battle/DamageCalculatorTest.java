@@ -190,6 +190,33 @@ class DamageCalculatorTest {
     }
 
     @Test
+    void levitateBlocksGroundMoves() {
+        PokemonSpecies ground = species("ground", PokemonType.GROUND);
+        PokemonSpecies flyer = species("flyer", PokemonType.NORMAL);
+        PokemonInstance atk = instance(ground, 30);
+        PokemonInstance def = instance(flyer, 30);
+        def.ability = "levitate";
+        MoveData quake = move(PokemonType.GROUND, MoveData.Category.PHYSICAL, 100, 100);
+        DamageCalculator.Result r = DamageCalculator.calculate(atk, ground, null, def, flyer, null, quake);
+        assertEquals(0, r.damage());
+        assertEquals(0.0, r.effectiveness());
+    }
+
+    @Test
+    void hugePowerDoublesPhysicalDamage() {
+        PokemonSpecies s = species("a", PokemonType.FIRE); // FIRE so a NORMAL move gets no STAB
+        PokemonInstance atk = instance(s, 50);
+        PokemonInstance def = instance(s, 50);
+        atk.ability = "huge-power";
+        MoveData hit = move(PokemonType.NORMAL, MoveData.Category.PHYSICAL, 70, 100);
+        double atkStat = atk.stat(s, 1);
+        for (int i = 0; i < 200; i++) {
+            DamageCalculator.Result r = DamageCalculator.calculate(atk, s, null, def, s, null, hit);
+            assertDamageInRange(r, atk, atkStat * 2.0, def.stat(s, 2), 70, 1.0);
+        }
+    }
+
+    @Test
     void zeroAccuracyAlwaysMisses() {
         PokemonSpecies s = species("a", PokemonType.NORMAL);
         PokemonInstance atk = instance(s, 20);

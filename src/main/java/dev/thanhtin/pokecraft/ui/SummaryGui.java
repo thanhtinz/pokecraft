@@ -81,6 +81,12 @@ public class SummaryGui implements Listener {
                     g == dev.thanhtin.pokecraft.pokemon.Gender.MALE
                             ? NamedTextColor.AQUA : NamedTextColor.LIGHT_PURPLE));
         }
+        String ability = p.ability(species);
+        if (ability != null && !ability.isBlank()) {
+            String pretty = ability.substring(0, 1).toUpperCase()
+                    + ability.substring(1).replace('-', ' ').replace('_', ' ');
+            lore.add(Component.text("Ability: " + pretty, NamedTextColor.GOLD));
+        }
         lore.add(Component.text("Nature: " + p.nature
                 + (p.nature.up != p.nature.down
                         ? " (+" + statName(p.nature.up) + " -" + statName(p.nature.down) + ")"

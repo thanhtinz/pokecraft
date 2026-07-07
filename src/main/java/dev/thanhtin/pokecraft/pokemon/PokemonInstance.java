@@ -23,6 +23,8 @@ public class PokemonInstance {
     public Nature nature;
     public boolean shiny;
     public Gender gender;
+    /** Ability id (from the species' ability list, occasionally the hidden one). */
+    public String ability;
     public List<String> moves; // up to 4 move ids
     public UUID owner;         // null = wild
     /** Remaining PP per move id. Missing entry = full PP. */
@@ -50,6 +52,7 @@ public class PokemonInstance {
         p.nature = Nature.random();
         p.shiny = shinyRate > 0 && rnd.nextInt(shinyRate) == 0;
         p.gender = Gender.roll(species);
+        p.ability = pickAbility(species, rnd);
         p.moves = latestMoves(species, p.level);
         p.currentHp = p.maxHp(species);
         return p;
@@ -115,6 +118,25 @@ public class PokemonInstance {
     public Gender gender(PokemonSpecies species) {
         if (gender == null) gender = Gender.roll(species);
         return gender;
+    }
+
+    /** Pick an ability for a fresh pokemon: 1/20 hidden, else a random normal one. */
+    private static String pickAbility(PokemonSpecies species, ThreadLocalRandom rnd) {
+        if (species.hiddenAbility != null && !species.hiddenAbility.isBlank() && rnd.nextInt(20) == 0) {
+            return species.hiddenAbility;
+        }
+        if (species.abilities != null && !species.abilities.isEmpty()) {
+            return species.abilities.get(rnd.nextInt(species.abilities.size()));
+        }
+        return species.hiddenAbility;
+    }
+
+    /** Ability, lazily assigned for pokemon created before abilities existed. */
+    public String ability(PokemonSpecies species) {
+        if ((ability == null || ability.isBlank()) && species != null) {
+            ability = pickAbility(species, ThreadLocalRandom.current());
+        }
+        return ability == null ? "" : ability;
     }
 
     public String displayName(PokemonSpecies species) {

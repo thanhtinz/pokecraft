@@ -39,7 +39,12 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
       phủ đủ 18 hệ, kèm hiệu ứng phụ (status/stat-change)
 - [x] EVs (effort values): +EV khi hạ pokemon theo evYield từng loài, cap
       252/stat & 510 tổng, cộng vào công thức chỉ số; hiện trong Summary
-- [ ] Abilities
+- [x] Abilities: mỗi pokemon có 1 đặc tính (từ data Cobblemon, 1/20 ra hidden),
+      hiện ở Summary; ~20 đặc tính tác động sát thương đã hoạt động trong battle:
+      Levitate/Flash Fire/Water-Volt Absorb/Sap Sipper (miễn nhiễm hệ),
+      Thick Fat/Heatproof/Multiscale/Filter-Solid Rock (giảm sát thương),
+      Huge Power/Pure Power/Hustle/Guts (tăng công), Overgrow/Blaze/Torrent/Swarm
+      (pinch +50%). Đặc tính on-entry/on-hit (Intimidate/Static) chưa có.
 - [x] Held items: Leftovers (hồi 1/16/lượt), Muscle Band (+10% physical),
       Wise Glasses (+10% special), Quick Claw (20% đánh trước), Lucky Egg
       (+50% EXP), Everstone (chặn tiến hóa), Focus Band (10% trụ 1 HP) -
