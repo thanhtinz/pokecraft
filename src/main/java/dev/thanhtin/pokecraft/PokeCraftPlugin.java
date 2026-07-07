@@ -254,6 +254,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getCommand("poke").setTabCompleter(command);
 
         pokeballItem.registerRecipes();
+        new dev.thanhtin.pokecraft.entity.ModelImporter(this).run();
         spawnManager.start();
         legendaryManager.start();
         farmManager.start();

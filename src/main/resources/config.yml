@@ -41,6 +41,12 @@ models:
   preview-seconds: 8
   # bind a species to a blueprint with a different name (species: blueprint)
   overrides: {}
+  # auto-convert Bedrock models dropped in plugins/PokeCraft/models-import/ into
+  # ModelEngine blueprints on startup (each <species>.geo.json + .png + optional
+  # .animation.json). Requires ModelEngine installed.
+  auto-import: true
+  # if imported models come out rotated wrong, try [1,1,1] or [-1,-1,-1]
+  import-rotation-sign: [-1, -1, 1]
 
 battle:
   exp-multiplier: 1.0
