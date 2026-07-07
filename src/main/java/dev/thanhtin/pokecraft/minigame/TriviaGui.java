@@ -69,6 +69,7 @@ public class TriviaGui implements Listener {
             return;
         }
         Question question = DEFAULTS.get(ThreadLocalRandom.current().nextInt(DEFAULTS.size()));
+        if (openForm(player, question)) return;
         Holder holder = new Holder();
         Inventory inv = plugin.getServer().createInventory(holder, 27, Component.text("Trivia Quiz"));
         holder.inventory = inv;
@@ -97,6 +98,36 @@ public class TriviaGui implements Listener {
         player.openInventory(inv);
     }
 
+    /** Native Bedrock version: the question as content, four answer buttons. */
+    private boolean openForm(Player player, Question question) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+        for (int i = 0; i < question.answers().size(); i++) {
+            final int idx = i;
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    (char) ('A' + i) + ". " + question.answers().get(i),
+                    () -> answer(player, idx, question.correct())));
+        }
+        long reward = plugin.getConfig().getLong("trivia.reward", 300);
+        return plugin.bedrock().openForm(player, "Trivia Quiz",
+                "§e" + question.q() + "§r\nReward: " + plugin.economy().format(reward), buttons);
+    }
+
+    private void answer(Player player, int chosen, int correct) {
+        cooldowns.put(player.getUniqueId(), System.currentTimeMillis());
+        player.closeInventory();
+        if (chosen == correct) {
+            long reward = plugin.getConfig().getLong("trivia.reward", 300);
+            plugin.economy().deposit(player.getUniqueId(), reward);
+            player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1f, 1.3f);
+            player.sendMessage(Component.text("Correct! +" + plugin.economy().format(reward),
+                    NamedTextColor.GREEN));
+        } else {
+            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 1f, 0.7f);
+            player.sendMessage(Component.text("Wrong answer! Try again soon.", NamedTextColor.RED));
+        }
+    }
+
     @EventHandler
     public void onClick(InventoryClickEvent e) {
         if (!(e.getInventory().getHolder() instanceof Holder)) return;
@@ -109,17 +140,6 @@ public class TriviaGui implements Listener {
         Integer correct = item.getItemMeta().getPersistentDataContainer()
                 .get(keyCorrect, PersistentDataType.INTEGER);
         if (answer == null || correct == null) return;
-        cooldowns.put(player.getUniqueId(), System.currentTimeMillis());
-        player.closeInventory();
-        if (answer.equals(correct)) {
-            long reward = plugin.getConfig().getLong("trivia.reward", 300);
-            plugin.economy().deposit(player.getUniqueId(), reward);
-            player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1f, 1.3f);
-            player.sendMessage(Component.text("Correct! +" + plugin.economy().format(reward),
-                    NamedTextColor.GREEN));
-        } else {
-            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 1f, 0.7f);
-            player.sendMessage(Component.text("Wrong answer! Try again soon.", NamedTextColor.RED));
-        }
+        answer(player, answer, correct);
     }
 }

@@ -335,6 +335,7 @@ public class BoardGameManager implements Listener {
 
     private void openHl(Player player, HlHolder holder) {
         if (holder.current == 0) holder.current = ThreadLocalRandom.current().nextInt(1, 14);
+        if (openHlForm(player, holder)) return;
         Inventory inv = plugin.getServer().createInventory(holder, 27,
                 Component.text("Higher or Lower - streak " + holder.streak));
         holder.inventory = inv;
@@ -353,6 +354,22 @@ public class BoardGameManager implements Listener {
         inv.setItem(16, hlButton(Material.GOLD_INGOT, "Cash out"));
         GuiFiller.fill(inv);
         player.openInventory(inv);
+    }
+
+    /** Native Bedrock Higher-or-Lower: current card as content, Higher/Lower/Cash-out buttons. */
+    private boolean openHlForm(Player player, HlHolder holder) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = List.of(
+                new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Higher",
+                        () -> handleHl(player, holder, 10)),
+                new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Lower",
+                        () -> handleHl(player, holder, 12)),
+                new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                        "Cash out (" + plugin.economy().format(holder.pot) + ")",
+                        () -> handleHl(player, holder, 16)));
+        return plugin.bedrock().openForm(player, "Higher or Lower - streak " + holder.streak,
+                "Card: " + holder.current + " (1-13)\nPot: " + plugin.economy().format(holder.pot)
+                        + "\nWill the next card be higher or lower?", buttons);
     }
 
     private ItemStack hlButton(Material m, String name) {
