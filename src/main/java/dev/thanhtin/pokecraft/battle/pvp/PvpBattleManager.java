@@ -204,11 +204,16 @@ public class PvpBattleManager implements Listener {
             String choice = battle.choiceOf(side);
             if (choice != null && choice.startsWith("move:")) movers.add(side);
         }
+        java.util.Map<UUID, Integer> clawBonus = new java.util.HashMap<>();
+        for (UUID side : movers) {
+            clawBonus.put(side, battle.activeOf(side).holds("quick_claw")
+                    && ThreadLocalRandom.current().nextInt(100) < 20 ? 10 : 0);
+        }
         movers.sort((a, b) -> {
             MoveData ma = chosenMove(battle, a);
             MoveData mb = chosenMove(battle, b);
-            int pa = ma == null ? 0 : ma.priority;
-            int pb = mb == null ? 0 : mb.priority;
+            int pa = (ma == null ? 0 : ma.priority) + clawBonus.getOrDefault(a, 0);
+            int pb = (mb == null ? 0 : mb.priority) + clawBonus.getOrDefault(b, 0);
             if (pa != pb) return Integer.compare(pb, pa);
             return Double.compare(effectiveSpeed(battle, b), effectiveSpeed(battle, a));
         });
@@ -273,9 +278,16 @@ public class PvpBattleManager implements Listener {
         }
 
         if (move.category != MoveData.Category.STATUS) {
-            defender.currentHp = Math.max(0, defender.currentHp - result.damage());
+            int damage = result.damage();
+            if (damage >= defender.currentHp && defender.currentHp > 1
+                    && defender.holds("focus_band") && ThreadLocalRandom.current().nextInt(100) < 10) {
+                damage = defender.currentHp - 1;
+                broadcast(battle, Component.text(defenderSpecies.name
+                        + " hung on with its Focus Band!", NamedTextColor.YELLOW));
+            }
+            defender.currentHp = Math.max(0, defender.currentHp - damage);
             StringBuilder msg = new StringBuilder(who + " used " + move.name
-                    + " (" + result.damage() + " dmg)");
+                    + " (" + damage + " dmg)");
             if (result.critical()) msg.append(" - Critical hit!");
             if (result.effectiveness() > 1.0) msg.append(" It's super effective!");
             if (result.effectiveness() > 0 && result.effectiveness() < 1.0) msg.append(" Not very effective...");
@@ -368,16 +380,22 @@ public class PvpBattleManager implements Listener {
     private void endOfTurnResidual(PvpBattle battle) {
         for (UUID side : new UUID[]{battle.p1, battle.p2}) {
             PokemonInstance p = battle.activeOf(side);
-            if (p.currentHp <= 0 || p.status == null) continue;
-            double fraction = p.status.residualDamage();
-            if (fraction <= 0) continue;
+            if (p.currentHp <= 0) continue;
             PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
-            int dmg = Math.max(1, (int) (p.maxHp(species) * fraction));
-            p.currentHp = Math.max(0, p.currentHp - dmg);
             Player owner = plugin.getServer().getPlayer(side);
-            broadcast(battle, Component.text((owner != null ? owner.getName() : "???") + "'s "
-                    + species.name + " is hurt by its " + p.status.tag + " (" + dmg + " dmg)!",
-                    NamedTextColor.GRAY));
+            String who = (owner != null ? owner.getName() : "???") + "'s " + species.name;
+            if (p.status != null && p.status.residualDamage() > 0) {
+                int dmg = Math.max(1, (int) (p.maxHp(species) * p.status.residualDamage()));
+                p.currentHp = Math.max(0, p.currentHp - dmg);
+                broadcast(battle, Component.text(who + " is hurt by its " + p.status.tag
+                        + " (" + dmg + " dmg)!", NamedTextColor.GRAY));
+            }
+            if (p.currentHp > 0 && p.holds("leftovers") && p.currentHp < p.maxHp(species)) {
+                int heal = Math.max(1, p.maxHp(species) / 16);
+                p.currentHp = Math.min(p.maxHp(species), p.currentHp + heal);
+                broadcast(battle, Component.text(who + " restored " + heal
+                        + " HP with its Leftovers.", NamedTextColor.GRAY));
+            }
         }
         checkFaints(battle);
     }

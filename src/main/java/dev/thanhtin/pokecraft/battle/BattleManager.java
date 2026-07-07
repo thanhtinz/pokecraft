@@ -165,8 +165,11 @@ public class BattleManager implements Listener {
 
     private boolean playerActsFirst(Battle battle, PokemonSpecies mySpecies, PokemonSpecies wildSpecies,
                                     MoveData myMove, MoveData wildMove) {
-        int myPriority = myMove.priority;
-        int wildPriority = wildMove == null ? 0 : wildMove.priority;
+        ThreadLocalRandom rnd = ThreadLocalRandom.current();
+        int myPriority = myMove.priority
+                + (battle.playerPokemon.holds("quick_claw") && rnd.nextInt(100) < 20 ? 10 : 0);
+        int wildPriority = (wildMove == null ? 0 : wildMove.priority)
+                + (battle.wildPokemon.holds("quick_claw") && rnd.nextInt(100) < 20 ? 10 : 0);
         if (myPriority != wildPriority) return myPriority > wildPriority;
         double mySpeed = effectiveSpeed(battle.playerPokemon, mySpecies, battle.playerStages);
         double wildSpeed = effectiveSpeed(battle.wildPokemon, wildSpecies, battle.wildStages);
@@ -207,9 +210,17 @@ public class BattleManager implements Listener {
         }
 
         if (move.category != MoveData.Category.STATUS) {
-            defender.currentHp = Math.max(0, defender.currentHp - result.damage());
+            int damage = result.damage();
+            if (damage >= defender.currentHp && defender.currentHp > 1
+                    && defender.holds("focus_band") && ThreadLocalRandom.current().nextInt(100) < 10) {
+                damage = defender.currentHp - 1;
+                PokemonSpecies ds = plugin.species().getSpecies(defender.speciesId);
+                player.sendMessage(Component.text((byPlayer ? opponentPrefix(battle) : "Your ")
+                        + ds.name + " hung on with its Focus Band!", NamedTextColor.YELLOW));
+            }
+            defender.currentHp = Math.max(0, defender.currentHp - damage);
             StringBuilder msg = new StringBuilder(prefix + attackerSpecies.name + " used " + move.name
-                    + " (" + result.damage() + " dmg)");
+                    + " (" + damage + " dmg)");
             if (result.critical()) msg.append(" - Critical hit!");
             if (result.effectiveness() > 1.0) msg.append(" It's super effective!");
             if (result.effectiveness() > 0 && result.effectiveness() < 1.0) msg.append(" Not very effective...");
@@ -300,18 +311,24 @@ public class BattleManager implements Listener {
         }
     }
 
-    /** Residual burn/poison damage at the end of the round. @return true if the battle ended. */
+    /** Residual burn/poison damage + Leftovers at the end of the round. @return true if the battle ended. */
     private boolean endOfTurn(Player player, Battle battle) {
         for (boolean playerSide : new boolean[]{true, false}) {
             PokemonInstance p = playerSide ? battle.playerPokemon : battle.wildPokemon;
-            if (p.currentHp <= 0 || p.status == null) continue;
-            double fraction = p.status.residualDamage();
-            if (fraction <= 0) continue;
+            if (p.currentHp <= 0) continue;
             PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
-            int dmg = Math.max(1, (int) (p.maxHp(species) * fraction));
-            p.currentHp = Math.max(0, p.currentHp - dmg);
-            player.sendMessage(Component.text((playerSide ? "Your " : opponentPrefix(battle)) + species.name
-                    + " is hurt by its " + p.status.tag + " (" + dmg + " dmg)!", NamedTextColor.GRAY));
+            if (p.status != null && p.status.residualDamage() > 0) {
+                int dmg = Math.max(1, (int) (p.maxHp(species) * p.status.residualDamage()));
+                p.currentHp = Math.max(0, p.currentHp - dmg);
+                player.sendMessage(Component.text((playerSide ? "Your " : opponentPrefix(battle)) + species.name
+                        + " is hurt by its " + p.status.tag + " (" + dmg + " dmg)!", NamedTextColor.GRAY));
+            }
+            if (p.currentHp > 0 && p.holds("leftovers") && p.currentHp < p.maxHp(species)) {
+                int heal = Math.max(1, p.maxHp(species) / 16);
+                p.currentHp = Math.min(p.maxHp(species), p.currentHp + heal);
+                player.sendMessage(Component.text((playerSide ? "Your " : opponentPrefix(battle)) + species.name
+                        + " restored " + heal + " HP with its Leftovers.", NamedTextColor.GRAY));
+            }
         }
         return checkFaints(player, battle);
     }
@@ -354,6 +371,7 @@ public class BattleManager implements Listener {
         double mult = plugin.getConfig().getDouble("battle.exp-multiplier", 1.0)
                 * plugin.marriage().expMultiplier(player);
         long gained = Math.round(faintedSpecies.expYield * battle.wildPokemon.level / 7.0 * mult);
+        if (battle.playerPokemon.holds("lucky_egg")) gained = Math.round(gained * 1.5);
         int levels = battle.playerPokemon.addExp(mySpecies, gained);
         player.sendMessage(Component.text(opponentPrefix(battle) + faintedSpecies.name
                 + " fainted! +" + gained + " EXP", NamedTextColor.GREEN));

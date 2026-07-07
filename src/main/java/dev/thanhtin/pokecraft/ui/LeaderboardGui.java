@@ -66,6 +66,7 @@ public class LeaderboardGui implements Listener {
             item.setItemMeta(meta);
             inv.setItem(category.slot(), item);
         }
+        GuiFiller.fill(inv);
         player.openInventory(inv);
     }
 

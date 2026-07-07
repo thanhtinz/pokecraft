@@ -2,6 +2,8 @@ package dev.thanhtin.pokecraft.shop;
 
 import dev.thanhtin.pokecraft.PokeCraftPlugin;
 import dev.thanhtin.pokecraft.capture.PokeballItem;
+import dev.thanhtin.pokecraft.item.HeldItems;
+import dev.thanhtin.pokecraft.ui.GuiFiller;
 import dev.thanhtin.pokecraft.item.UsableItems;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
@@ -48,7 +50,21 @@ public class ShopGui implements Listener {
             new Entry("leaf-stone", 3000, 1, "Leaf Stone",
                     pl -> pl.items().create(UsableItems.ItemType.LEAF_STONE, 1)),
             new Entry("moon-stone", 3000, 1, "Moon Stone",
-                    pl -> pl.items().create(UsableItems.ItemType.MOON_STONE, 1)));
+                    pl -> pl.items().create(UsableItems.ItemType.MOON_STONE, 1)),
+            new Entry("leftovers", 4000, 1, "Leftovers",
+                    pl -> pl.heldItems().create(HeldItems.HeldType.LEFTOVERS, 1)),
+            new Entry("muscle-band", 3000, 1, "Muscle Band",
+                    pl -> pl.heldItems().create(HeldItems.HeldType.MUSCLE_BAND, 1)),
+            new Entry("wise-glasses", 3000, 1, "Wise Glasses",
+                    pl -> pl.heldItems().create(HeldItems.HeldType.WISE_GLASSES, 1)),
+            new Entry("quick-claw", 2500, 1, "Quick Claw",
+                    pl -> pl.heldItems().create(HeldItems.HeldType.QUICK_CLAW, 1)),
+            new Entry("lucky-egg", 5000, 1, "Lucky Egg",
+                    pl -> pl.heldItems().create(HeldItems.HeldType.LUCKY_EGG, 1)),
+            new Entry("everstone", 1000, 1, "Everstone",
+                    pl -> pl.heldItems().create(HeldItems.HeldType.EVERSTONE, 1)),
+            new Entry("focus-band", 3000, 1, "Focus Band",
+                    pl -> pl.heldItems().create(HeldItems.HeldType.FOCUS_BAND, 1)));
 
     private final PokeCraftPlugin plugin;
 
@@ -68,7 +84,7 @@ public class ShopGui implements Listener {
     public void open(Player player) {
         Holder holder = new Holder();
         long balance = plugin.economy().balance(player.getUniqueId());
-        Inventory inv = plugin.getServer().createInventory(holder, 27,
+        Inventory inv = plugin.getServer().createInventory(holder, 36,
                 Component.text("Pokemart - balance " + plugin.economy().format(balance)));
         holder.inventory = inv;
 
@@ -94,6 +110,7 @@ public class ShopGui implements Listener {
         info.setItemMeta(meta);
         inv.setItem(4, info);
 
+        GuiFiller.fill(inv);
         player.openInventory(inv);
     }
 

@@ -168,6 +168,7 @@ public class MainMenuGui implements Listener {
         }
         inv.setItem(SLOT_MARRY, item(Material.POPPY, marryLabel, NamedTextColor.LIGHT_PURPLE, marryLore));
 
+        GuiFiller.fill(inv);
         player.openInventory(inv);
     }
 

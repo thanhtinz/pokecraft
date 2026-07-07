@@ -10,6 +10,7 @@ import dev.thanhtin.pokecraft.capture.PokeballItem;
 import dev.thanhtin.pokecraft.command.PokeCommand;
 import dev.thanhtin.pokecraft.entity.PokemonEntityManager;
 import dev.thanhtin.pokecraft.entity.WildEntityListener;
+import dev.thanhtin.pokecraft.item.HeldItems;
 import dev.thanhtin.pokecraft.item.UsableItems;
 import dev.thanhtin.pokecraft.npc.NpcManager;
 import dev.thanhtin.pokecraft.party.PartyManager;
@@ -58,6 +59,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private MarriageManager marriageManager;
     private EvolutionService evolutionService;
     private UsableItems usableItems;
+    private HeldItems heldItems;
     private ShopGui shopGui;
     private DaycareManager daycareManager;
     private RideManager rideManager;
@@ -100,6 +102,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         marriageManager = new MarriageManager(this);
         evolutionService = new EvolutionService(this);
         usableItems = new UsableItems(this);
+        heldItems = new HeldItems(this);
         shopGui = new ShopGui(this);
         daycareManager = new DaycareManager(this);
         rideManager = new RideManager(this);
@@ -124,6 +127,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(pvpManager, this);
         getServer().getPluginManager().registerEvents(economyManager, this);
         getServer().getPluginManager().registerEvents(usableItems, this);
+        getServer().getPluginManager().registerEvents(heldItems, this);
         getServer().getPluginManager().registerEvents(shopGui, this);
         getServer().getPluginManager().registerEvents(rideManager, this);
         getServer().getPluginManager().registerEvents(npcManager, this);
@@ -171,6 +175,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public MarriageManager marriage() { return marriageManager; }
     public EvolutionService evolutions() { return evolutionService; }
     public UsableItems items() { return usableItems; }
+    public HeldItems heldItems() { return heldItems; }
     public ShopGui shop() { return shopGui; }
     public DaycareManager daycare() { return daycareManager; }
     public RideManager rides() { return rideManager; }

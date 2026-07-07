@@ -169,6 +169,27 @@ class DamageCalculatorTest {
     }
 
     @Test
+    void heldItemsBoostMatchingCategory() {
+        PokemonSpecies s = species("a", PokemonType.NORMAL);
+        PokemonInstance atk = instance(s, 50);
+        PokemonInstance def = instance(s, 50);
+        MoveData physical = move(PokemonType.FIGHTING, MoveData.Category.PHYSICAL, 70, 100);
+        double atkStat = atk.stat(s, 1);
+        double defStat = def.stat(s, 2);
+        atk.heldItem = "muscle_band";
+        for (int i = 0; i < 200; i++) {
+            DamageCalculator.Result r = DamageCalculator.calculate(atk, s, null, def, s, null, physical);
+            assertDamageInRange(r, atk, atkStat, defStat, 70, 2.0 * 1.1); // SE * muscle band
+        }
+        // wise glasses must NOT boost physical moves
+        atk.heldItem = "wise_glasses";
+        for (int i = 0; i < 200; i++) {
+            DamageCalculator.Result r = DamageCalculator.calculate(atk, s, null, def, s, null, physical);
+            assertDamageInRange(r, atk, atkStat, defStat, 70, 2.0);
+        }
+    }
+
+    @Test
     void zeroAccuracyAlwaysMisses() {
         PokemonSpecies s = species("a", PokemonType.NORMAL);
         PokemonInstance atk = instance(s, 20);

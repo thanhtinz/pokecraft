@@ -48,13 +48,15 @@ public final class DamageCalculator {
             effectiveness *= move.type.effectivenessAgainst(t);
         }
         double stab = attackerSpecies.types.contains(move.type) ? 1.5 : 1.0;
+        double held = (physical && attacker.holds("muscle_band"))
+                || (!physical && attacker.holds("wise_glasses")) ? 1.1 : 1.0;
         boolean critical = rnd.nextInt(24) == 0;
         double crit = critical ? 1.5 : 1.0;
         double random = rnd.nextDouble(0.85, 1.0);
 
         double base = ((2.0 * attacker.level / 5.0 + 2.0) * move.power * atk / Math.max(1.0, def)) / 50.0 + 2.0;
         int damage = (int) Math.max(effectiveness == 0 ? 0 : 1,
-                Math.floor(base * stab * effectiveness * crit * random));
+                Math.floor(base * stab * held * effectiveness * crit * random));
         return new Result(damage, effectiveness, critical, false);
     }
 }

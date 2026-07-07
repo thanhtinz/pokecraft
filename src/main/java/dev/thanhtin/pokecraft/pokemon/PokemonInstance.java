@@ -28,6 +28,12 @@ public class PokemonInstance {
     public StatusCondition status;
     /** Turns of sleep remaining while {@link #status} == SLEEP. */
     public int sleepTurns;
+    /** Held item id (see item.HeldItems), or null. */
+    public String heldItem;
+
+    public boolean holds(String itemId) {
+        return itemId.equals(heldItem);
+    }
 
     public static PokemonInstance generate(PokemonSpecies species, int level, int shinyRate) {
         PokemonInstance p = new PokemonInstance();

@@ -16,6 +16,7 @@ public class EvolutionService {
 
     /** Called after level-ups; item evolutions never trigger from levels. */
     public void tryLevelEvolve(Player player, PokemonInstance p, PokemonSpecies species) {
+        if (p.holds("everstone")) return;
         for (PokemonSpecies.Evolution evo : species.allEvolutions()) {
             if (evo.item != null || evo.to == null || p.level < evo.level) continue;
             PokemonSpecies target = plugin.species().getSpecies(evo.to);

@@ -38,6 +38,17 @@ shop:
     super-potion: 400
     hyper-potion: 1000
     thunder-stone: 3000
+    fire-stone: 3000
+    water-stone: 3000
+    leaf-stone: 3000
+    moon-stone: 3000
+    leftovers: 4000
+    muscle-band: 3000
+    wise-glasses: 3000
+    quick-claw: 2500
+    lucky-egg: 5000
+    everstone: 1000
+    focus-band: 3000
 
 pvp:
   win-reward: 250

@@ -104,6 +104,7 @@ public class DaycareGui implements Listener {
         info.setItemMeta(meta);
         inv.setItem(SLOT_INFO, info);
 
+        GuiFiller.fill(inv);
         player.openInventory(inv);
     }
 

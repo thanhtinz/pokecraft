@@ -30,12 +30,15 @@ public class SummaryGui implements Listener {
     private static final int[] MOVE_SLOTS = {10, 11, 12, 13};
     private static final int SLOT_STATS = 15;
     private static final int SLOT_EVOLVE = 16;
+    private static final int SLOT_HELD = 19;
     private static final int SLOT_BACK = 22;
 
     private final PokeCraftPlugin plugin;
 
     private static class Holder implements InventoryHolder {
+        final int partySlot;
         Inventory inventory;
+        Holder(int partySlot) { this.partySlot = partySlot; }
         @Override public Inventory getInventory() { return inventory; }
     }
 
@@ -52,7 +55,7 @@ public class SummaryGui implements Listener {
         PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
         if (species == null) return;
 
-        Holder holder = new Holder();
+        Holder holder = new Holder(partySlot);
         Inventory inv = plugin.getServer().createInventory(holder, 27,
                 Component.text("#" + String.format("%03d", species.dex) + " "
                         + p.displayName(species) + " Lv." + p.level));
@@ -149,12 +152,26 @@ public class SummaryGui implements Listener {
         evolve.setItemMeta(evoMeta);
         inv.setItem(SLOT_EVOLVE, evolve);
 
+        // ---- held item ----
+        var held = plugin.heldItems().byId(p.heldItem);
+        ItemStack heldStack = new ItemStack(held != null ? held.material : Material.ITEM_FRAME);
+        ItemMeta heldMeta = heldStack.getItemMeta();
+        heldMeta.displayName(Component.text(held != null ? "Holding: " + held.display : "Held Item: none",
+                held != null ? NamedTextColor.GOLD : NamedTextColor.DARK_GRAY));
+        heldMeta.lore(List.of(Component.text(held != null
+                ? held.description : "Buy held items in the shop,", NamedTextColor.GRAY),
+                Component.text(held != null
+                ? "Click to take it back" : "then right-click one to equip", NamedTextColor.GRAY)));
+        heldStack.setItemMeta(heldMeta);
+        inv.setItem(SLOT_HELD, heldStack);
+
         ItemStack back = new ItemStack(Material.ARROW);
         ItemMeta backMeta = back.getItemMeta();
         backMeta.displayName(Component.text("Back to party", NamedTextColor.GRAY));
         back.setItemMeta(backMeta);
         inv.setItem(SLOT_BACK, back);
 
+        GuiFiller.fill(inv);
         player.openInventory(inv);
     }
 
@@ -192,8 +209,20 @@ public class SummaryGui implements Listener {
         if (!(e.getInventory().getHolder() instanceof Holder)) return;
         e.setCancelled(true);
         if (!(e.getWhoClicked() instanceof Player player)) return;
-        if (e.getRawSlot() == SLOT_BACK) {
+        int raw = e.getRawSlot();
+        if (raw == SLOT_BACK) {
             plugin.getServer().getScheduler().runTask(plugin, () -> plugin.partyUi().open(player));
+            return;
+        }
+        if (raw == SLOT_HELD && e.getInventory().getHolder() instanceof Holder holder) {
+            if (plugin.battles().get(player) != null || plugin.pvp().get(player) != null) return;
+            plugin.getServer().getScheduler().runTask(plugin, () -> {
+                PokemonInstance target = plugin.parties().get(player).get(holder.partySlot);
+                if (target != null && target.heldItem != null) {
+                    plugin.heldItems().unequip(player, target);
+                }
+                open(player, holder.partySlot);
+            });
         }
     }
 }
