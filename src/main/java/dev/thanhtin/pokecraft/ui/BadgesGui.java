@@ -35,6 +35,7 @@ public class BadgesGui implements Listener {
     }
 
     public void open(Player player) {
+        if (openForm(player)) return;
         Holder holder = new Holder();
         Set<String> earned = plugin.badges().badgesOf(player.getUniqueId());
         Inventory inv = plugin.getServer().createInventory(holder, 27,
@@ -60,6 +61,26 @@ public class BadgesGui implements Listener {
         }
         GuiFiller.fill(inv);
         player.openInventory(inv);
+    }
+
+    private boolean openForm(Player player) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        Set<String> earned = plugin.badges().badgesOf(player.getUniqueId());
+        String title = "Badges  " + earned.size() + "/8";
+        StringBuilder content = new StringBuilder();
+        List<BadgeService.Gym> gyms = BadgeService.GYMS;
+        for (int i = 0; i < gyms.size() && i < SLOTS.length; i++) {
+            BadgeService.Gym g = gyms.get(i);
+            boolean got = earned.contains(g.badge());
+            if (i > 0) content.append("\n\n");
+            content.append(got ? "§6" : "§8").append(g.badgeName()).append("\n");
+            content.append("§7Leader: ").append(g.leader()).append("\n");
+            content.append("§7Team Lv.").append(g.level()).append("\n");
+            content.append(got ? "§aEARNED" : "§cNot yet earned");
+        }
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+        return plugin.bedrock().openForm(player, title, content.toString(), buttons);
     }
 
     @EventHandler

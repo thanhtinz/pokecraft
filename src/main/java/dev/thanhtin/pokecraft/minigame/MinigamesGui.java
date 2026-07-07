@@ -34,6 +34,7 @@ public class MinigamesGui implements Listener {
     }
 
     public void open(Player player) {
+        if (openForm(player)) return;
         Holder holder = new Holder();
         Inventory inv = plugin.getServer().createInventory(holder, 45, Component.text("Minigames"));
         holder.inventory = inv;
@@ -62,6 +63,43 @@ public class MinigamesGui implements Listener {
         player.openInventory(inv);
     }
 
+    private boolean openForm(Player player) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        java.util.List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new java.util.ArrayList<>();
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Casino",
+                () -> plugin.getServer().getScheduler().runTask(plugin, () -> launchGame(player, "casino"))));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Trivia Quiz",
+                () -> plugin.getServer().getScheduler().runTask(plugin, () -> launchGame(player, "trivia"))));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Tic-Tac-Toe (vs AI)",
+                () -> plugin.getServer().getScheduler().runTask(plugin, () -> launchGame(player, "tictactoe"))));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Connect Four (vs AI)",
+                () -> plugin.getServer().getScheduler().runTask(plugin, () -> launchGame(player, "connect4"))));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Minesweeper",
+                () -> plugin.getServer().getScheduler().runTask(plugin, () -> launchGame(player, "minesweeper"))));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Higher or Lower",
+                () -> plugin.getServer().getScheduler().runTask(plugin, () -> launchGame(player, "higherlower"))));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Tic-Tac-Toe (PvP)",
+                () -> plugin.getServer().getScheduler().runTask(plugin, () -> launchGame(player, "pvp_ttt"))));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Connect Four (PvP)",
+                () -> plugin.getServer().getScheduler().runTask(plugin, () -> launchGame(player, "pvp_c4"))));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+        return plugin.bedrock().openForm(player, "Minigames", "", buttons);
+    }
+
+    private void launchGame(Player player, String game) {
+        switch (game) {
+            case "casino" -> plugin.casinoUi().open(player);
+            case "trivia" -> plugin.triviaUi().open(player);
+            case "tictactoe", "connect4", "minesweeper", "higherlower" ->
+                    plugin.boardGames().play(player, game);
+            case "pvp_ttt" -> plugin.playerPickerUi().open(player,
+                    dev.thanhtin.pokecraft.ui.PlayerPickerGui.Purpose.BOARD_TTT);
+            case "pvp_c4" -> plugin.playerPickerUi().open(player,
+                    dev.thanhtin.pokecraft.ui.PlayerPickerGui.Purpose.BOARD_C4);
+            default -> {}
+        }
+    }
+
     private ItemStack game(String id, Material material, String name, List<String> lore) {
         ItemStack item = new ItemStack(material);
         ItemMeta meta = item.getItemMeta();
@@ -84,18 +122,6 @@ public class MinigamesGui implements Listener {
         String game = item.getItemMeta().getPersistentDataContainer()
                 .get(keyGame, PersistentDataType.STRING);
         if (game == null) return;
-        plugin.getServer().getScheduler().runTask(plugin, () -> {
-            switch (game) {
-                case "casino" -> plugin.casinoUi().open(player);
-                case "trivia" -> plugin.triviaUi().open(player);
-                case "tictactoe", "connect4", "minesweeper", "higherlower" ->
-                        plugin.boardGames().play(player, game);
-                case "pvp_ttt" -> plugin.playerPickerUi().open(player,
-                        dev.thanhtin.pokecraft.ui.PlayerPickerGui.Purpose.BOARD_TTT);
-                case "pvp_c4" -> plugin.playerPickerUi().open(player,
-                        dev.thanhtin.pokecraft.ui.PlayerPickerGui.Purpose.BOARD_C4);
-                default -> {}
-            }
-        });
+        plugin.getServer().getScheduler().runTask(plugin, () -> launchGame(player, game));
     }
 }

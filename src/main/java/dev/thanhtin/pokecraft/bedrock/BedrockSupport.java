@@ -92,6 +92,57 @@ public class BedrockSupport {
         }
     }
 
+    /**
+     * A native CustomForm with a single text input, for panels that ask for a
+     * value (a nickname, an amount, a guild name). onSubmit runs on the main
+     * thread with the entered text (empty string if left blank).
+     * @return true if the form was sent.
+     */
+    public boolean openInputForm(Player player, String title, String label,
+                                 String placeholder, java.util.function.Consumer<String> onSubmit) {
+        if (!formsEnabled(player)) return false;
+        try {
+            Class<?> customForm = Class.forName("org.geysermc.cumulus.form.CustomForm");
+            Object builder = customForm.getMethod("builder").invoke(null);
+            Class<?> builderClass = builder.getClass();
+            invoke(builderClass, builder, "title", title);
+            // input(String label, String placeholder)
+            for (Method m : builderClass.getMethods()) {
+                if (m.getName().equals("input") && m.getParameterCount() == 2
+                        && m.getParameterTypes()[0] == String.class
+                        && m.getParameterTypes()[1] == String.class) {
+                    m.invoke(builder, label, placeholder == null ? "" : placeholder);
+                    break;
+                }
+            }
+            Method validResult = findMethod(builderClass, "validResultHandler", Consumer.class);
+            Consumer<Object> handler = response -> {
+                try {
+                    // CustomFormResponse#asInput(int) returns the field's text
+                    String value;
+                    try {
+                        value = (String) response.getClass().getMethod("asInput", int.class).invoke(response, 0);
+                    } catch (NoSuchMethodException ex) {
+                        value = (String) response.getClass().getMethod("asInput", Integer.class).invoke(response, 0);
+                    }
+                    final String text = value == null ? "" : value;
+                    plugin.getServer().getScheduler().runTask(plugin, () -> onSubmit.accept(text));
+                } catch (Exception ex) {
+                    plugin.getLogger().warning("[WARN] Bedrock input form response failed: " + ex.getMessage());
+                }
+            };
+            validResult.invoke(builder, handler);
+            setNoOpHandler(builderClass, builder, "closedResultHandler");
+            setNoOpHandler(builderClass, builder, "invalidResultHandler");
+            Object form = builderClass.getMethod("build").invoke(builder);
+            mSendForm.invoke(floodgateApi, player.getUniqueId(), form);
+            return true;
+        } catch (Exception e) {
+            plugin.getLogger().warning("[WARN] Bedrock input form failed: " + e.getMessage());
+            return false;
+        }
+    }
+
     /** @return true if a native form was sent (caller should skip the chest GUI) */
     public boolean tryOpenBattleForm(Player player, Battle battle) {
         if (!formsEnabled(player)) return false;

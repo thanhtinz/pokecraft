@@ -127,6 +127,7 @@ public class HeldItems implements Listener {
     }
 
     private void openPicker(Player player, HeldType type) {
+        if (openForm(player, type)) return;
         PickerHolder holder = new PickerHolder(type);
         Inventory inv = plugin.getServer().createInventory(holder, 9,
                 Component.text("Give " + type.display + " to..."));
@@ -162,12 +163,16 @@ public class HeldItems implements Listener {
         Integer slot = clicked.getItemMeta().getPersistentDataContainer()
                 .get(keySlot, PersistentDataType.INTEGER);
         if (slot == null) return;
+        giveHeld(player, slot, holder.type);
+    }
 
+    /** Gives the held item currently in hand to the party pokemon at {@code slot}. Shared by chest GUI and Bedrock form. */
+    private void giveHeld(Player player, int slot, HeldType expected) {
         PokemonInstance p = plugin.parties().get(player).get(slot);
         if (p == null) return;
         ItemStack hand = player.getInventory().getItemInMainHand();
         HeldType type = read(hand);
-        if (type != holder.type) {
+        if (type != expected) {
             player.closeInventory();
             return;
         }
@@ -186,5 +191,28 @@ public class HeldItems implements Listener {
                 + type.display + "." + (previous != null ? " (returned the " + previous.display + ")" : ""),
                 NamedTextColor.GREEN));
         plugin.getServer().getScheduler().runTask(plugin, (Runnable) () -> player.closeInventory());
+    }
+
+    private boolean openForm(Player player, HeldType type) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        String title = "Give " + type.display + " to...";
+        PlayerParty party = plugin.parties().get(player);
+        java.util.List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons =
+                new java.util.ArrayList<>();
+        for (int i = 0; i < PlayerParty.SIZE; i++) {
+            PokemonInstance p = party.get(i);
+            if (p == null) continue;
+            PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
+            if (species == null) continue;
+            HeldType current = byId(p.heldItem);
+            String label = p.displayName(species) + " Lv." + p.level + "\n" + (current != null
+                    ? "Holding: " + current.display + " (will be swapped)"
+                    : "Holding nothing");
+            int slot = i;
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    label, () -> giveHeld(player, slot, type)));
+        }
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+        return plugin.bedrock().openForm(player, title, "", buttons);
     }
 }

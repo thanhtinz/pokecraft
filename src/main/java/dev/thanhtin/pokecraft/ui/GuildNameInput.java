@@ -34,6 +34,8 @@ public class GuildNameInput implements Listener {
     }
 
     public void open(Player player) {
+        if (plugin.bedrock().openInputForm(player, "Name your guild", "Guild name", "",
+                text -> createGuild(player, text))) return;
         Holder holder = new Holder();
         Inventory inv = plugin.getServer().createInventory(holder, InventoryType.ANVIL,
                 Component.text("Name your guild"));
@@ -67,6 +69,11 @@ public class GuildNameInput implements Listener {
         if (e.getRawSlot() != RESULT_SLOT) return;
         if (!(e.getWhoClicked() instanceof Player player)) return;
         String name = ((AnvilInventory) e.getInventory()).getRenameText();
+        createGuild(player, name);
+    }
+
+    /** Commit logic shared by the anvil GUI and the native Bedrock input form. */
+    private void createGuild(Player player, String name) {
         plugin.getServer().getScheduler().runTask(plugin, () -> {
             player.closeInventory();
             if (name != null && !name.isBlank()) plugin.guilds().create(player, name);

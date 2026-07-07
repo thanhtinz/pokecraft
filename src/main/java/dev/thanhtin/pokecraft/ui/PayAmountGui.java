@@ -37,8 +37,24 @@ public class PayAmountGui implements Listener {
     }
 
     public void open(Player player, String targetName) {
-        Holder holder = new Holder(targetName);
         long balance = plugin.economy().balance(player.getUniqueId());
+        if (plugin.bedrock().openInputForm(player, "Pay " + targetName,
+                "Amount (you have " + plugin.economy().format(balance) + ")", "",
+                text -> {
+                    long amount;
+                    try {
+                        amount = Long.parseLong(text == null ? "" : text.trim());
+                    } catch (NumberFormatException ex) {
+                        player.sendMessage(Component.text("Enter a valid amount.", NamedTextColor.RED));
+                        return;
+                    }
+                    if (amount <= 0) {
+                        player.sendMessage(Component.text("Enter a valid amount.", NamedTextColor.RED));
+                        return;
+                    }
+                    pay(player, targetName, amount);
+                })) return;
+        Holder holder = new Holder(targetName);
         Inventory inv = plugin.getServer().createInventory(holder, 27,
                 Component.text("Pay " + targetName + " (you have "
                         + plugin.economy().format(balance) + ")"));
@@ -71,10 +87,14 @@ public class PayAmountGui implements Listener {
         Long amount = item.getItemMeta().getPersistentDataContainer()
                 .get(keyAmount, PersistentDataType.LONG);
         if (amount == null) return;
+        pay(player, holder.target, amount);
+    }
 
+    /** Commit logic shared by the chest GUI and the native Bedrock input form. */
+    private void pay(Player player, String targetName, long amount) {
         plugin.getServer().getScheduler().runTask(plugin, () -> {
             player.closeInventory();
-            Player target = plugin.getServer().getPlayerExact(holder.target);
+            Player target = plugin.getServer().getPlayerExact(targetName);
             if (target == null || target.getUniqueId().equals(player.getUniqueId())) {
                 player.sendMessage(Component.text("That player is not available.", NamedTextColor.RED));
                 return;

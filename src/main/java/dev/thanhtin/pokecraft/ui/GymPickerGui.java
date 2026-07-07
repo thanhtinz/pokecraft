@@ -36,6 +36,7 @@ public class GymPickerGui implements Listener {
     }
 
     public void open(Player player) {
+        if (openForm(player)) return;
         Holder holder = new Holder();
         Inventory inv = plugin.getServer().createInventory(holder, 27,
                 Component.text("Place a Gym Leader"));
@@ -58,6 +59,27 @@ public class GymPickerGui implements Listener {
         player.openInventory(inv);
     }
 
+    private boolean openForm(Player player) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        List<BadgeService.Gym> gyms = BadgeService.GYMS;
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new java.util.ArrayList<>();
+        for (int i = 0; i < gyms.size() && i < SLOTS.length; i++) {
+            BadgeService.Gym g = gyms.get(i);
+            String badge = g.badge();
+            String label = g.leader() + " - " + g.badgeName() + "\n§7Team Lv." + g.level();
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    label, () -> placeGym(player, badge)));
+        }
+        return plugin.bedrock().openForm(player, "Place a Gym Leader", "", buttons);
+    }
+
+    private void placeGym(Player player, String badge) {
+        plugin.getServer().getScheduler().runTask(plugin, () -> {
+            player.closeInventory();
+            plugin.npcs().createGym(player, badge);
+        });
+    }
+
     @EventHandler
     public void onClick(InventoryClickEvent e) {
         if (!(e.getInventory().getHolder() instanceof Holder)) return;
@@ -68,9 +90,6 @@ public class GymPickerGui implements Listener {
         String badge = item.getItemMeta().getPersistentDataContainer()
                 .get(keyBadge, PersistentDataType.STRING);
         if (badge == null) return;
-        plugin.getServer().getScheduler().runTask(plugin, () -> {
-            player.closeInventory();
-            plugin.npcs().createGym(player, badge);
-        });
+        placeGym(player, badge);
     }
 }

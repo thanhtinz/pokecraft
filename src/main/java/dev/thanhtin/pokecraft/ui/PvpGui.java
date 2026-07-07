@@ -46,6 +46,7 @@ public class PvpGui implements Listener {
     }
 
     public void openMoveMenu(Player player, PvpBattle battle) {
+        if (openMoveForm(player, battle)) return;
         PokemonInstance mine = battle.activeOf(player.getUniqueId());
         PokemonInstance theirs = battle.activeOf(battle.opponentOf(player.getUniqueId()));
         PokemonSpecies mySpecies = plugin.species().getSpecies(mine.speciesId);
@@ -104,6 +105,7 @@ public class PvpGui implements Listener {
     }
 
     public void openSwitchMenu(Player player, PvpBattle battle, boolean forced) {
+        if (openSwitchForm(player, battle, forced)) return;
         Holder holder = new Holder(true);
         Inventory inv = plugin.getServer().createInventory(holder, 9,
                 Component.text(forced ? "Choose your next pokemon" : "Switch to which pokemon?"));
@@ -140,6 +142,90 @@ public class PvpGui implements Listener {
         return p.status == null ? "" : "[" + p.status.tag + "] ";
     }
 
+    private void dispatch(Player player, PvpBattle battle, String moveId, String action, Integer slot) {
+        plugin.getServer().getScheduler().runTask(plugin, () -> {
+            if ("forfeit".equals(action)) {
+                plugin.pvp().forfeit(player);
+            } else if ("switch-menu".equals(action)) {
+                openSwitchMenu(player, battle, false);
+            } else if ("back".equals(action)) {
+                openMoveMenu(player, battle);
+            } else if (slot != null) {
+                plugin.pvp().chooseSwitch(player, slot);
+            } else if (moveId != null) {
+                plugin.pvp().chooseMove(player, moveId);
+            }
+        });
+    }
+
+    private boolean openMoveForm(Player player, PvpBattle battle) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        PokemonInstance mine = battle.activeOf(player.getUniqueId());
+        PokemonInstance theirs = battle.activeOf(battle.opponentOf(player.getUniqueId()));
+        PokemonSpecies mySpecies = plugin.species().getSpecies(mine.speciesId);
+        PokemonSpecies theirSpecies = plugin.species().getSpecies(theirs.speciesId);
+
+        String title = statusTag(mine) + mine.displayName(mySpecies)
+                + " " + mine.currentHp + "/" + mine.maxHp(mySpecies)
+                + "  vs  " + statusTag(theirs) + theirs.displayName(theirSpecies)
+                + " " + theirs.currentHp + "/" + theirs.maxHp(theirSpecies);
+
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new java.util.ArrayList<>();
+        boolean anyPp = false;
+        List<String> moves = mine.moves;
+        for (int i = 0; i < Math.min(4, moves.size()); i++) {
+            MoveData move = plugin.species().getMove(moves.get(i));
+            if (move == null) continue;
+            int pp = mine.ppFor(move);
+            if (pp > 0) {
+                anyPp = true;
+                final String moveId = move.id;
+                String label = "§b" + move.name + "\n§7" + move.type + " / " + move.category
+                        + "  PP " + pp + "/" + move.pp;
+                buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                        label, () -> dispatch(player, battle, moveId, null, null)));
+            }
+        }
+        if (!anyPp) {
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "§cStruggle", () -> dispatch(player, battle, BattleManager.STRUGGLE_ID, null, null)));
+        }
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "§eSwitch Pokemon", () -> dispatch(player, battle, null, "switch-menu", null)));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "§cForfeit", () -> dispatch(player, battle, null, "forfeit", null)));
+
+        return plugin.bedrock().openForm(player, title, "", buttons);
+    }
+
+    private boolean openSwitchForm(Player player, PvpBattle battle, boolean forced) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        String title = forced ? "Choose your next pokemon" : "Switch to which pokemon?";
+        PlayerParty party = plugin.parties().get(player);
+        PokemonInstance active = battle.activeOf(player.getUniqueId());
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new java.util.ArrayList<>();
+        for (int i = 0; i < PlayerParty.SIZE; i++) {
+            PokemonInstance p = party.get(i);
+            if (p == null) continue;
+            PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
+            boolean usable = p.currentHp > 0 && p != active;
+            String label = (usable ? "§b" : "§8") + statusTag(p) + p.displayName(species) + " Lv." + p.level
+                    + "\n§7HP " + p.currentHp + "/" + p.maxHp(species);
+            if (usable) {
+                final int slot = i;
+                buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                        label, () -> dispatch(player, battle, null, null, slot)));
+            } else {
+                buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(label, null));
+            }
+        }
+        if (!forced) {
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "§7Back", () -> dispatch(player, battle, null, "back", null)));
+        }
+        return plugin.bedrock().openForm(player, title, "", buttons);
+    }
+
     @EventHandler
     public void onClick(InventoryClickEvent e) {
         if (!(e.getInventory().getHolder() instanceof Holder)) return;
@@ -157,19 +243,7 @@ public class PvpGui implements Listener {
                 .get(keySlot, PersistentDataType.INTEGER);
         if (moveId == null && action == null && slot == null) return;
 
-        plugin.getServer().getScheduler().runTask(plugin, () -> {
-            if ("forfeit".equals(action)) {
-                plugin.pvp().forfeit(player);
-            } else if ("switch-menu".equals(action)) {
-                openSwitchMenu(player, battle, false);
-            } else if ("back".equals(action)) {
-                openMoveMenu(player, battle);
-            } else if (slot != null) {
-                plugin.pvp().chooseSwitch(player, slot);
-            } else if (moveId != null) {
-                plugin.pvp().chooseMove(player, moveId);
-            }
-        });
+        dispatch(player, battle, moveId, action, slot);
     }
 
     /** Forced switch menus may not be escaped. */

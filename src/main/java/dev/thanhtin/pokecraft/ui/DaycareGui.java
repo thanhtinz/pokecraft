@@ -45,6 +45,7 @@ public class DaycareGui implements Listener {
     }
 
     public void open(Player player) {
+        if (openForm(player)) return;
         Holder holder = new Holder();
         Inventory inv = plugin.getServer().createInventory(holder, 27, Component.text("Daycare"));
         holder.inventory = inv;
@@ -108,6 +109,56 @@ public class DaycareGui implements Listener {
         player.openInventory(inv);
     }
 
+    private boolean openForm(Player player) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+
+        java.util.List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons =
+                new java.util.ArrayList<>();
+
+        PlayerParty party = plugin.parties().get(player);
+        for (int i = 0; i < PlayerParty.SIZE; i++) {
+            PokemonInstance p = party.get(i);
+            if (p == null) continue;
+            PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
+            if (species == null) continue;
+            final int index = i;
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "Deposit " + p.displayName(species) + " Lv." + p.level,
+                    () -> performAction(player, index, null)));
+        }
+
+        List<StorageManager.DaycareEntry> entries = plugin.storage().daycareOf(player.getUniqueId());
+        for (int pen = 0; pen < PEN_SLOTS.length && pen < entries.size(); pen++) {
+            StorageManager.DaycareEntry entry = entries.get(pen);
+            PokemonInstance p = plugin.storage().loadPokemon(entry.pokemonUuid());
+            long minutes = Math.max(0, (System.currentTimeMillis() - entry.depositedAt()) / 60_000);
+            String name = "?";
+            if (p != null) {
+                PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
+                name = (species != null ? p.displayName(species) : p.speciesId) + " Lv." + p.level;
+            }
+            final int penIndex = pen;
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "Take back " + name + " (" + minutes + "min)",
+                    () -> performAction(player, null, penIndex)));
+        }
+
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+
+        String content = "§7Deposited pokemon gain EXP over time\n"
+                + "§7Two pokemon of the same family\n"
+                + "§7may produce a baby!";
+        return plugin.bedrock().openForm(player, "Daycare", content, buttons);
+    }
+
+    private void performAction(Player player, Integer deposit, Integer withdraw) {
+        plugin.getServer().getScheduler().runTask(plugin, () -> {
+            if (deposit != null) plugin.daycare().deposit(player, deposit);
+            else plugin.daycare().withdraw(player, withdraw);
+            open(player); // refresh
+        });
+    }
+
     @EventHandler
     public void onClick(InventoryClickEvent e) {
         if (!(e.getInventory().getHolder() instanceof Holder)) return;
@@ -121,10 +172,6 @@ public class DaycareGui implements Listener {
         Integer withdraw = item.getItemMeta().getPersistentDataContainer()
                 .get(keyWithdraw, PersistentDataType.INTEGER);
         if (deposit == null && withdraw == null) return;
-        plugin.getServer().getScheduler().runTask(plugin, () -> {
-            if (deposit != null) plugin.daycare().deposit(player, deposit);
-            else plugin.daycare().withdraw(player, withdraw);
-            open(player); // refresh
-        });
+        performAction(player, deposit, withdraw);
     }
 }

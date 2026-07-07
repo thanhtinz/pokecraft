@@ -43,6 +43,7 @@ public class ActivitiesGui implements Listener {
     }
 
     public void open(Player player) {
+        if (openForm(player)) return;
         plugin.quests().ensureToday(player);
         Holder holder = new Holder();
         Inventory inv = plugin.getServer().createInventory(holder, 36, Component.text("Activities"));
@@ -106,6 +107,69 @@ public class ActivitiesGui implements Listener {
 
         GuiFiller.fill(inv);
         player.openInventory(inv);
+    }
+
+    private boolean openForm(Player player) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        plugin.quests().ensureToday(player);
+
+        boolean canClaim = plugin.daily().canClaim(player);
+        int streak = plugin.daily().streakPreview(player);
+
+        StringBuilder content = new StringBuilder();
+        content.append(canClaim
+                ? "§6Daily reward - claim! §7Day " + streak + " streak available"
+                : "§7Daily reward - claimed. Come back tomorrow");
+        content.append("\n§7Longer streaks pay more; day 7 gives Ultra Balls");
+
+        java.util.List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new java.util.ArrayList<>();
+        if (canClaim) {
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Daily reward - claim!",
+                    () -> plugin.getServer().getScheduler().runTask(plugin, () -> handleDaily(player))));
+        }
+
+        content.append("\n\n§eDaily quests:");
+        List<StorageManager.QuestRow> rows = plugin.storage().questsOf(player.getUniqueId());
+        for (int i = 0; i < QuestManager.QUESTS.size() && i < QUEST_SLOTS.length; i++) {
+            QuestManager.QuestDef def = QuestManager.QUESTS.get(i);
+            StorageManager.QuestRow row = rows.stream()
+                    .filter(r -> r.questId().equals(def.id())).findFirst().orElse(null);
+            int progress = row == null ? 0 : Math.min(row.progress(), def.target());
+            boolean claimed = row != null && row.claimed();
+            boolean complete = progress >= def.target();
+            String label = def.description() + " (" + progress + "/" + def.target() + ")";
+            content.append("\n§7").append(label).append(" - ")
+                    .append(claimed ? "Claimed" : complete ? "Ready to claim!" : "In progress")
+                    .append(" §8[Reward: ").append(plugin.economy().format(def.reward())).append("]");
+            if (complete && !claimed) {
+                final String questId = def.id();
+                buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(label,
+                        () -> plugin.getServer().getScheduler().runTask(plugin, () -> handleQuest(player, questId))));
+            }
+        }
+
+        content.append("\n\n§bGo fishing! §7Fish near water - you may hook a wild Water pokemon to battle");
+
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "Gym Badges  " + plugin.badges().count(player.getUniqueId()) + "/8",
+                () -> plugin.getServer().getScheduler().runTask(plugin, () -> handleBadges(player))));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+
+        return plugin.bedrock().openForm(player, "Activities", content.toString(), buttons);
+    }
+
+    private void handleDaily(Player player) {
+        plugin.daily().claim(player);
+        open(player);
+    }
+
+    private void handleQuest(Player player, String quest) {
+        plugin.quests().claim(player, quest);
+        open(player);
+    }
+
+    private void handleBadges(Player player) {
+        plugin.badgesUi().open(player);
     }
 
     @EventHandler

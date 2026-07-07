@@ -40,6 +40,7 @@ public class LeaderboardGui implements Listener {
     }
 
     public void open(Player player) {
+        if (openForm(player)) return;
         Holder holder = new Holder();
         Inventory inv = plugin.getServer().createInventory(holder, 27,
                 Component.text("Leaderboards"));
@@ -68,6 +69,25 @@ public class LeaderboardGui implements Listener {
         }
         GuiFiller.fill(inv);
         player.openInventory(inv);
+    }
+
+    private boolean openForm(Player player) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        StringBuilder sb = new StringBuilder();
+        for (Category category : CATEGORIES) {
+            sb.append("§6").append(category.title()).append("§r\n");
+            List<StorageManager.TopEntry> entries = plugin.storage().top(category.column(), 10);
+            if (entries.isEmpty()) sb.append("§8No entries yet\n");
+            for (int i = 0; i < entries.size(); i++) {
+                StorageManager.TopEntry entry = entries.get(i);
+                String value = category.money()
+                        ? plugin.economy().format(entry.value()) : String.valueOf(entry.value());
+                sb.append(i + 1).append(". ").append(entry.name()).append(" - ").append(value).append("\n");
+            }
+            sb.append("\n");
+        }
+        return plugin.bedrock().openForm(player, "Leaderboards", sb.toString(),
+                List.of(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null)));
     }
 
     @EventHandler

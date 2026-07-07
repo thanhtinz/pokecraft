@@ -33,6 +33,7 @@ public class RankGui implements Listener {
 
     public void open(Player player) {
         int season = plugin.ranks().season();
+        if (openForm(player, season)) return;
         Holder holder = new Holder();
         Inventory inv = plugin.getServer().createInventory(holder, 36,
                 Component.text("Rank Ladder - Season " + season));
@@ -82,6 +83,26 @@ public class RankGui implements Listener {
 
         GuiFiller.fill(inv);
         player.openInventory(inv);
+    }
+
+    private boolean openForm(Player player, int season) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        int points = plugin.ranks().points(player.getUniqueId());
+        RankManager.Tier tier = plugin.ranks().tier(points);
+        RankManager.Tier next = plugin.ranks().nextTier(points);
+        StringBuilder sb = new StringBuilder();
+        sb.append("§lYou:§r ").append(tier.name()).append(" - ").append(points).append(" pts\n");
+        sb.append(next != null ? (next.min() - points) + " pts to " + next.name()
+                : "Top tier reached!").append("\n\n§lThis season's top 10§r\n");
+        List<StorageManager.TopEntry> top = plugin.storage().topRanks(season, 10);
+        if (top.isEmpty()) sb.append("§8No ranked players yet - duel to start!\n");
+        for (int i = 0; i < top.size(); i++) {
+            StorageManager.TopEntry entry = top.get(i);
+            sb.append(i + 1).append(". ").append(entry.name()).append(" - ").append(entry.value())
+                    .append(" pts (").append(plugin.ranks().tier((int) entry.value()).name()).append(")\n");
+        }
+        return plugin.bedrock().openForm(player, "Rank Ladder - Season " + season, sb.toString(),
+                List.of(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null)));
     }
 
     @EventHandler

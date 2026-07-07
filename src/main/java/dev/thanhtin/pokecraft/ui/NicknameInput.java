@@ -48,14 +48,17 @@ public class NicknameInput implements Listener {
             return;
         }
         PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
+        String current = p.nickname != null && !p.nickname.isEmpty()
+                ? p.nickname : (species != null ? species.name : p.speciesId);
+        if (plugin.bedrock().openInputForm(player, "Type a nickname",
+                "Name (blank or 'off' to clear)", current,
+                text -> applyNickname(player, partySlot, text))) return;
         Holder holder = new Holder(partySlot);
         Inventory inv = plugin.getServer().createInventory(holder, InventoryType.ANVIL,
                 Component.text("Type a nickname"));
         holder.inventory = inv;
         ItemStack paper = new ItemStack(Material.PAPER);
         ItemMeta meta = paper.getItemMeta();
-        String current = p.nickname != null && !p.nickname.isEmpty()
-                ? p.nickname : (species != null ? species.name : p.speciesId);
         meta.displayName(Component.text(current));
         meta.lore(List.of(Component.text("Type a name, then click the result",
                 NamedTextColor.GRAY)));
@@ -85,12 +88,16 @@ public class NicknameInput implements Listener {
         if (!(e.getWhoClicked() instanceof Player player)) return;
 
         AnvilInventory anvil = (AnvilInventory) e.getInventory();
-        String raw = anvil.getRenameText();
+        applyNickname(player, holder.partySlot, anvil.getRenameText());
+    }
+
+    /** Commit logic shared by the anvil GUI and the native Bedrock input form. */
+    private void applyNickname(Player player, int partySlot, String raw) {
         if (raw == null) raw = "";
         raw = raw.trim();
         if (raw.length() > 24) raw = raw.substring(0, 24);
 
-        PokemonInstance p = plugin.parties().get(player).get(holder.partySlot);
+        PokemonInstance p = plugin.parties().get(player).get(partySlot);
         if (p != null) {
             p.nickname = raw.isEmpty() || raw.equalsIgnoreCase("off") ? null : raw;
             plugin.parties().saveParty(player.getUniqueId());
@@ -98,7 +105,6 @@ public class NicknameInput implements Listener {
             player.sendMessage(Component.text("Nickname set: "
                     + (species != null ? p.displayName(species) : raw), NamedTextColor.GREEN));
         }
-        int slot = holder.partySlot;
-        plugin.getServer().getScheduler().runTask(plugin, () -> plugin.summaryUi().open(player, slot));
+        plugin.getServer().getScheduler().runTask(plugin, () -> plugin.summaryUi().open(player, partySlot));
     }
 }

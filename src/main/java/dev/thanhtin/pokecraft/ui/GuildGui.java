@@ -42,6 +42,7 @@ public class GuildGui implements Listener {
     }
 
     public void open(Player player) {
+        if (openForm(player)) return;
         StorageManager.GuildRow guild = plugin.guilds().guildOf(player);
         Holder holder = new Holder();
         Inventory inv = plugin.getServer().createInventory(holder, 54,
@@ -125,19 +126,76 @@ public class GuildGui implements Listener {
         player.openInventory(inv);
     }
 
-    @EventHandler
-    public void onClick(InventoryClickEvent e) {
-        if (!(e.getInventory().getHolder() instanceof Holder)) return;
-        e.setCancelled(true);
-        if (!(e.getWhoClicked() instanceof Player player)) return;
-        ItemStack item = e.getCurrentItem();
-        if (item == null || !item.hasItemMeta()) return;
-        var pdc = item.getItemMeta().getPersistentDataContainer();
-        String join = pdc.get(keyJoin, PersistentDataType.STRING);
-        String action = pdc.get(keyAction, PersistentDataType.STRING);
-        Long deposit = pdc.get(keyDeposit, PersistentDataType.LONG);
-        java.util.UUID id = player.getUniqueId();
+    private boolean openForm(Player player) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
 
+        StorageManager.GuildRow guild = plugin.guilds().guildOf(player);
+        java.util.List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons =
+                new java.util.ArrayList<>();
+        String title;
+        String content;
+
+        if (guild == null) {
+            title = "Guilds";
+            content = "§7Join an existing guild or create your own";
+            List<StorageManager.GuildRow> guilds = plugin.storage().allGuilds(45);
+            for (int i = 0; i < guilds.size() && i < 45; i++) {
+                StorageManager.GuildRow g = guilds.get(i);
+                int members = plugin.storage().guildMemberNames(g.id()).size();
+                final String gname = g.name();
+                buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                        "Join " + g.name() + " (Members: " + members
+                                + ", Bank: " + plugin.economy().format(g.bank()) + ")",
+                        () -> performAction(player, gname, null, null)));
+            }
+            long cost = plugin.getConfig().getLong("guild.create-cost", 5000);
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "Create a guild (Cost: " + plugin.economy().format(cost) + ")",
+                    () -> performAction(player, null, "create", null)));
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+        } else {
+            boolean owner = guild.owner().equals(player.getUniqueId());
+            List<String> members = plugin.storage().guildMemberNames(guild.id());
+            title = "Guild: " + guild.name();
+            StringBuilder sb = new StringBuilder();
+            sb.append("§6").append(guild.name()).append("\n");
+            sb.append("§7Bank: ").append(plugin.economy().format(guild.bank())).append("\n");
+            sb.append("§7Members: ").append(members.size()).append("\n");
+            sb.append("§7You are the ").append(owner ? "leader" : "member").append("\n");
+            for (String name : members) {
+                sb.append("§b").append(name)
+                        .append(guild.owner().equals(player.getUniqueId()) && name.equals(player.getName())
+                                ? " (you, leader)" : "").append("\n");
+            }
+            content = sb.toString();
+
+            for (long amount : DEPOSITS) {
+                boolean afford = plugin.economy().balance(player.getUniqueId()) >= amount;
+                if (afford) {
+                    final long amt = amount;
+                    buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                            "Deposit " + plugin.economy().format(amount),
+                            () -> performAction(player, null, null, amt)));
+                } else {
+                    buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                            "Deposit " + plugin.economy().format(amount) + " (can't afford)", null));
+                }
+            }
+
+            boolean armed = leaveArmed.contains(player.getUniqueId());
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    armed
+                            ? (owner ? "Click again to DISBAND" : "Click again to LEAVE")
+                            : (owner ? "Disband guild" : "Leave guild"),
+                    () -> performAction(player, null, "leave", null)));
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+        }
+
+        return plugin.bedrock().openForm(player, title, content, buttons);
+    }
+
+    private void performAction(Player player, String join, String action, Long deposit) {
+        java.util.UUID id = player.getUniqueId();
         plugin.getServer().getScheduler().runTask(plugin, () -> {
             if (join != null) {
                 leaveArmed.remove(id);
@@ -159,6 +217,21 @@ public class GuildGui implements Listener {
                 }
             }
         });
+    }
+
+    @EventHandler
+    public void onClick(InventoryClickEvent e) {
+        if (!(e.getInventory().getHolder() instanceof Holder)) return;
+        e.setCancelled(true);
+        if (!(e.getWhoClicked() instanceof Player player)) return;
+        ItemStack item = e.getCurrentItem();
+        if (item == null || !item.hasItemMeta()) return;
+        var pdc = item.getItemMeta().getPersistentDataContainer();
+        String join = pdc.get(keyJoin, PersistentDataType.STRING);
+        String action = pdc.get(keyAction, PersistentDataType.STRING);
+        Long deposit = pdc.get(keyDeposit, PersistentDataType.LONG);
+
+        performAction(player, join, action, deposit);
     }
 
     @EventHandler

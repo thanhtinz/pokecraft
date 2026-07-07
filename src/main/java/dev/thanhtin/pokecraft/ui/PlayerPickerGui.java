@@ -39,6 +39,7 @@ public class PlayerPickerGui implements Listener {
     }
 
     public void open(Player player, Purpose purpose) {
+        if (openForm(player, purpose)) return;
         Holder holder = new Holder(purpose);
         Inventory inv = plugin.getServer().createInventory(holder, 54,
                 Component.text(switch (purpose) {
@@ -98,6 +99,11 @@ public class PlayerPickerGui implements Listener {
         String targetName = item.getItemMeta().getPersistentDataContainer()
                 .get(keyTarget, PersistentDataType.STRING);
         if (targetName == null) return;
+        select(player, holder.purpose, targetName);
+    }
+
+    /** Runs the chosen action against the named target. Shared by the chest GUI and the Bedrock form. */
+    private void select(Player player, Purpose purpose, String targetName) {
         plugin.getServer().getScheduler().runTask(plugin, () -> {
             player.closeInventory();
             Player target = plugin.getServer().getPlayerExact(targetName);
@@ -105,7 +111,7 @@ public class PlayerPickerGui implements Listener {
                 player.sendMessage(Component.text("Player is no longer online.", NamedTextColor.RED));
                 return;
             }
-            switch (holder.purpose) {
+            switch (purpose) {
                 case DUEL -> plugin.pvp().challenge(player, target);
                 case MARRY -> plugin.marriage().propose(player, target);
                 case TRADE -> plugin.trades().request(player, target);
@@ -114,5 +120,40 @@ public class PlayerPickerGui implements Listener {
                 case BOARD_C4 -> plugin.boardPvp().challenge(player, target, "connect4");
             }
         });
+    }
+
+    private boolean openForm(Player player, Purpose purpose) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        String title = switch (purpose) {
+            case DUEL -> "Duel who?";
+            case MARRY -> "Propose to whom?";
+            case TRADE -> "Trade with whom?";
+            case PAY -> "Pay whom?";
+            case BOARD_TTT -> "Tic-Tac-Toe with whom?";
+            case BOARD_C4 -> "Connect Four with whom?";
+        };
+        double maxDistance = plugin.getConfig().getDouble("pvp.max-distance", 50);
+        java.util.List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons =
+                new java.util.ArrayList<>();
+        for (Player other : plugin.getServer().getOnlinePlayers()) {
+            if (other.getUniqueId().equals(player.getUniqueId())) continue;
+            if (purpose == Purpose.DUEL || purpose == Purpose.TRADE) {
+                if (!other.getWorld().equals(player.getWorld())
+                        || other.getLocation().distance(player.getLocation()) > maxDistance) continue;
+            }
+            String targetName = other.getName();
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    targetName, () -> select(player, purpose, targetName)));
+        }
+        String content;
+        if (buttons.isEmpty()) {
+            boolean anywhere = purpose == Purpose.MARRY || purpose == Purpose.PAY
+                    || purpose == Purpose.BOARD_TTT || purpose == Purpose.BOARD_C4;
+            content = anywhere ? "No other players online" : "No players nearby";
+        } else {
+            content = "";
+        }
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+        return plugin.bedrock().openForm(player, title, content, buttons);
     }
 }
