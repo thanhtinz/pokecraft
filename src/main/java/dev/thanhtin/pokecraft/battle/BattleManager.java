@@ -278,6 +278,12 @@ public class BattleManager implements Listener {
 
         if (move.category != MoveData.Category.STATUS) {
             int damage = result.damage();
+            if (damage >= defender.currentHp && defender.currentHp >= defender.maxHp(defenderSpecies)
+                    && Abilities.sturdy(defender.ability(defenderSpecies))) {
+                damage = defender.currentHp - 1;
+                player.sendMessage(Component.text((byPlayer ? opponentPrefix(battle) : "Your ")
+                        + defenderSpecies.name + " endured the hit with Sturdy!", NamedTextColor.YELLOW));
+            }
             if (damage >= defender.currentHp && defender.currentHp > 1
                     && defender.holds("focus_band") && ThreadLocalRandom.current().nextInt(100) < 10) {
                 damage = defender.currentHp - 1;
@@ -301,9 +307,17 @@ public class BattleManager implements Listener {
             applyEffect(player, battle, byPlayer, move, attacker, defender, defenderSpecies);
         }
 
-        if (result.effectiveness() > 0 && move.category == MoveData.Category.PHYSICAL
-                && defender.currentHp > 0) {
-            contactStatus(player, battle, byPlayer, attacker, attackerSpecies, defender, defenderSpecies);
+        if (result.effectiveness() > 0 && move.category == MoveData.Category.PHYSICAL) {
+            if (defender.currentHp > 0) {
+                contactStatus(player, battle, byPlayer, attacker, attackerSpecies, defender, defenderSpecies);
+            }
+            if (!STRUGGLE_ID.equals(move.id) && attacker.currentHp > 0
+                    && Abilities.roughSkin(defender.ability(defenderSpecies))) {
+                int recoil = Math.max(1, attacker.maxHp(attackerSpecies) / 8);
+                attacker.currentHp = Math.max(0, attacker.currentHp - recoil);
+                player.sendMessage(Component.text(prefix + attackerSpecies.name + " was hurt by "
+                        + defenderSpecies.name + "'s ability (" + recoil + " dmg)!", NamedTextColor.GRAY));
+            }
         }
 
         if (STRUGGLE_ID.equals(move.id)) {

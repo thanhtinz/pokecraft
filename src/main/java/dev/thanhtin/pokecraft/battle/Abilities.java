@@ -51,6 +51,17 @@ public final class Abilities {
         return norm(attackerAbility).equals("guts");
     }
 
+    /** Sturdy: survive a would-be OHKO from full HP with 1 HP left. */
+    public static boolean sturdy(String defenderAbility) {
+        return norm(defenderAbility).equals("sturdy");
+    }
+
+    /** Rough Skin / Iron Barbs: a physical attacker takes 1/8 recoil on contact. */
+    public static boolean roughSkin(String defenderAbility) {
+        String a = norm(defenderAbility);
+        return a.equals("roughskin") || a.equals("ironbarbs");
+    }
+
     /** Multiplier applied to the damage the defender takes. */
     public static double defenseMultiplier(String defenderAbility, PokemonType moveType,
                                            double effectiveness, boolean atFullHp) {

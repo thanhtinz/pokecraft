@@ -285,6 +285,12 @@ public class PvpBattleManager implements Listener {
 
         if (move.category != MoveData.Category.STATUS) {
             int damage = result.damage();
+            if (damage >= defender.currentHp && defender.currentHp >= defender.maxHp(defenderSpecies)
+                    && Abilities.sturdy(defender.ability(defenderSpecies))) {
+                damage = defender.currentHp - 1;
+                broadcast(battle, Component.text(defenderSpecies.name
+                        + " endured the hit with Sturdy!", NamedTextColor.YELLOW));
+            }
             if (damage >= defender.currentHp && defender.currentHp > 1
                     && defender.holds("focus_band") && ThreadLocalRandom.current().nextInt(100) < 10) {
                 damage = defender.currentHp - 1;
@@ -307,9 +313,17 @@ public class PvpBattleManager implements Listener {
             applyEffect(battle, actor, move, attacker, defender);
         }
 
-        if (result.effectiveness() > 0 && move.category == MoveData.Category.PHYSICAL
-                && defender.currentHp > 0) {
-            pvpContactStatus(battle, attacker, attackerSpecies, defender, defenderSpecies);
+        if (result.effectiveness() > 0 && move.category == MoveData.Category.PHYSICAL) {
+            if (defender.currentHp > 0) {
+                pvpContactStatus(battle, attacker, attackerSpecies, defender, defenderSpecies);
+            }
+            if (!BattleManager.STRUGGLE_ID.equals(move.id) && attacker.currentHp > 0
+                    && Abilities.roughSkin(defender.ability(defenderSpecies))) {
+                int recoil = Math.max(1, attacker.maxHp(attackerSpecies) / 8);
+                attacker.currentHp = Math.max(0, attacker.currentHp - recoil);
+                broadcast(battle, Component.text(attackerSpecies.name + " was hurt by "
+                        + defenderSpecies.name + "'s ability (" + recoil + " dmg)!", NamedTextColor.GRAY));
+            }
         }
 
         if (BattleManager.STRUGGLE_ID.equals(move.id)) {

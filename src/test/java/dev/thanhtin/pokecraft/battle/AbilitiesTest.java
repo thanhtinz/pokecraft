@@ -48,4 +48,13 @@ class AbilitiesTest {
         assertTrue(Abilities.ignoresBurn("guts"));
         assertFalse(Abilities.ignoresBurn("blaze"));
     }
+
+    @Test
+    void sturdyAndRoughSkinRecognised() {
+        assertTrue(Abilities.sturdy("sturdy"));
+        assertFalse(Abilities.sturdy("levitate"));
+        assertTrue(Abilities.roughSkin("rough-skin"));
+        assertTrue(Abilities.roughSkin("Iron_Barbs"));
+        assertFalse(Abilities.roughSkin("static"));
+    }
 }
