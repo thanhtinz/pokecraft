@@ -71,6 +71,9 @@ npc:
   trainer-reward-per-level: 10  # money = sum of team levels * this
   trainer-cooldown-minutes: 30
 
+minimap:
+  radius: 100             # blocks scanned for pokemon/player markers
+
 farm:
   grow-seconds: 300       # time for a planted berry to ripen
   harvest-money: 150

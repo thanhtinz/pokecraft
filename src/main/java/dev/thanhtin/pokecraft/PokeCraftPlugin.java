@@ -8,6 +8,7 @@ import dev.thanhtin.pokecraft.battle.pvp.PvpBattleManager;
 import dev.thanhtin.pokecraft.daycare.DaycareManager;
 import dev.thanhtin.pokecraft.dungeon.DungeonManager;
 import dev.thanhtin.pokecraft.economy.EconomyManager;
+import dev.thanhtin.pokecraft.minimap.MinimapManager;
 import dev.thanhtin.pokecraft.farm.FarmManager;
 import dev.thanhtin.pokecraft.bedrock.BedrockSupport;
 import dev.thanhtin.pokecraft.capture.CaptureListener;
@@ -86,6 +87,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private DungeonManager dungeonManager;
     private FarmManager farmManager;
     private AdminGui adminGui;
+    private MinimapManager minimapManager;
     private PvpBattleManager pvpManager;
     private EconomyManager economyManager;
     private MarriageManager marriageManager;
@@ -145,6 +147,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         dungeonManager = new DungeonManager(this);
         farmManager = new FarmManager(this);
         adminGui = new AdminGui(this);
+        minimapManager = new MinimapManager(this);
         pvpManager = new PvpBattleManager(this);
         economyManager = new EconomyManager(this);
         marriageManager = new MarriageManager(this);
@@ -184,6 +187,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(dungeonManager, this);
         getServer().getPluginManager().registerEvents(farmManager, this);
         getServer().getPluginManager().registerEvents(adminGui, this);
+        getServer().getPluginManager().registerEvents(minimapManager, this);
         getServer().getPluginManager().registerEvents(pvpManager, this);
         getServer().getPluginManager().registerEvents(economyManager, this);
         getServer().getPluginManager().registerEvents(usableItems, this);
@@ -198,6 +202,7 @@ public class PokeCraftPlugin extends JavaPlugin {
 
         spawnManager.start();
         farmManager.start();
+        minimapManager.start();
         daycareManager.start();
         rideManager.start();
         getLogger().info("[OK] PokeCraft enabled");
@@ -207,6 +212,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public void onDisable() {
         if (spawnManager != null) spawnManager.stop();
         if (farmManager != null) farmManager.stop();
+        if (minimapManager != null) minimapManager.stop();
         if (daycareManager != null) daycareManager.stop();
         if (rideManager != null) rideManager.stop();
         if (partyManager != null) partyManager.saveAll();
@@ -249,6 +255,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public FarmManager farms() { return farmManager; }
     public AdminGui adminUi() { return adminGui; }
     public SpawnManager spawns() { return spawnManager; }
+    public MinimapManager minimap() { return minimapManager; }
     public PvpBattleManager pvp() { return pvpManager; }
     public EconomyManager economy() { return economyManager; }
     public MarriageManager marriage() { return marriageManager; }
