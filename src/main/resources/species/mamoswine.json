@@ -1,0 +1,62 @@
+{
+  "id": "mamoswine",
+  "dex": 473,
+  "name": "Mamoswine",
+  "types": [
+    "ICE",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 110,
+    "atk": 130,
+    "def": 80,
+    "spa": 70,
+    "spd": 60,
+    "spe": 80
+  },
+  "catchRate": 50,
+  "expYield": 265,
+  "modelId": "mamoswine",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "ice_shard"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "aurora_beam"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "48": [
+      "ice_beam"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 4,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "grumpig",
+  "dex": 326,
+  "name": "Grumpig",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 45,
+    "def": 65,
+    "spa": 90,
+    "spd": 110,
+    "spe": 80
+  },
+  "catchRate": 60,
+  "expYield": 165,
+  "modelId": "grumpig",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

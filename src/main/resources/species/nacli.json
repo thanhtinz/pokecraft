@@ -1,0 +1,58 @@
+{
+  "id": "nacli",
+  "dex": 932,
+  "name": "Nacli",
+  "types": [
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 55,
+    "def": 75,
+    "spa": 35,
+    "spd": 35,
+    "spe": 25
+  },
+  "catchRate": 255,
+  "expYield": 56,
+  "modelId": "nacli",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "rock_slide"
+    ],
+    "20": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 24,
+      "to": "naclstack",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

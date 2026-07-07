@@ -1,0 +1,60 @@
+{
+  "id": "yamper",
+  "dex": 835,
+  "name": "Yamper",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 59,
+    "atk": 45,
+    "def": 50,
+    "spa": 40,
+    "spd": 50,
+    "spe": 26
+  },
+  "catchRate": 255,
+  "expYield": 54,
+  "modelId": "yamper",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 25,
+      "to": "boltund",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

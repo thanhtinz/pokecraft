@@ -1,0 +1,64 @@
+{
+  "id": "chespin",
+  "dex": 650,
+  "name": "Chespin",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 56,
+    "atk": 61,
+    "def": 65,
+    "spa": 48,
+    "spd": 45,
+    "spe": 38
+  },
+  "catchRate": 45,
+  "expYield": 63,
+  "modelId": "chespin",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 16,
+      "to": "quilladin",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

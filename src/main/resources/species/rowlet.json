@@ -1,0 +1,68 @@
+{
+  "id": "rowlet",
+  "dex": 722,
+  "name": "Rowlet",
+  "types": [
+    "GRASS",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 68,
+    "atk": 55,
+    "def": 55,
+    "spa": 50,
+    "spd": 50,
+    "spe": 42
+  },
+  "catchRate": 45,
+  "expYield": 64,
+  "modelId": "rowlet",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 17,
+      "to": "dartrix",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

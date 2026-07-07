@@ -1,0 +1,52 @@
+{
+  "id": "blacephalon",
+  "dex": 806,
+  "name": "Blacephalon",
+  "types": [
+    "FIRE",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 53,
+    "atk": 127,
+    "def": 53,
+    "spa": 151,
+    "spd": 79,
+    "spe": 107
+  },
+  "catchRate": 30,
+  "expYield": 285,
+  "modelId": "blacephalon",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

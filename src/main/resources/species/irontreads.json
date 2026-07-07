@@ -1,0 +1,58 @@
+{
+  "id": "irontreads",
+  "dex": 990,
+  "name": "Iron Treads",
+  "types": [
+    "GROUND",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 112,
+    "def": 120,
+    "spa": 72,
+    "spd": 70,
+    "spe": 106
+  },
+  "catchRate": 30,
+  "expYield": 285,
+  "modelId": "irontreads",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "minun",
+  "dex": 312,
+  "name": "Minun",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 40,
+    "def": 50,
+    "spa": 75,
+    "spd": 85,
+    "spe": 95
+  },
+  "catchRate": 200,
+  "expYield": 142,
+  "modelId": "minun",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 16,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

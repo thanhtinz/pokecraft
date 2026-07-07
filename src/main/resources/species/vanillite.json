@@ -1,0 +1,61 @@
+{
+  "id": "vanillite",
+  "dex": 582,
+  "name": "Vanillite",
+  "types": [
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 36,
+    "atk": 50,
+    "def": 50,
+    "spa": 65,
+    "spd": 60,
+    "spe": 44
+  },
+  "catchRate": 255,
+  "expYield": 61,
+  "modelId": "vanillite",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "aurora_beam"
+    ],
+    "20": [
+      "ice_beam"
+    ],
+    "32": [
+      "blizzard"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 35,
+      "to": "vanillish",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

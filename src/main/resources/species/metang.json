@@ -1,0 +1,55 @@
+{
+  "id": "metang",
+  "dex": 375,
+  "name": "Metang",
+  "types": [
+    "STEEL",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 75,
+    "def": 100,
+    "spa": 55,
+    "spd": 80,
+    "spe": 50
+  },
+  "catchRate": 3,
+  "expYield": 147,
+  "modelId": "metang",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 45,
+      "to": "metagross",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

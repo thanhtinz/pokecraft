@@ -1,0 +1,67 @@
+{
+  "id": "wattrel",
+  "dex": 940,
+  "name": "Wattrel",
+  "types": [
+    "ELECTRIC",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 40,
+    "def": 35,
+    "spa": 55,
+    "spd": 40,
+    "spe": 70
+  },
+  "catchRate": 180,
+  "expYield": 56,
+  "modelId": "wattrel",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "spark"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 25,
+      "to": "kilowattrel",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

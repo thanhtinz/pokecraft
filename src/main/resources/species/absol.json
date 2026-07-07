@@ -1,0 +1,47 @@
+{
+  "id": "absol",
+  "dex": 359,
+  "name": "Absol",
+  "types": [
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 130,
+    "def": 60,
+    "spa": 75,
+    "spd": 60,
+    "spe": 75
+  },
+  "catchRate": 30,
+  "expYield": 163,
+  "modelId": "absol",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "crunch"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "cottonee",
+  "dex": 546,
+  "name": "Cottonee",
+  "types": [
+    "GRASS",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 27,
+    "def": 60,
+    "spa": 37,
+    "spd": 50,
+    "spe": 66
+  },
+  "catchRate": 190,
+  "expYield": 56,
+  "modelId": "cottonee",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "fairy_wind"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "dazzling_gleam"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "petal_dance"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "whimsicott",
+      "item": "leaf_stone"
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

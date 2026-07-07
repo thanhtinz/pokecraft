@@ -1,0 +1,52 @@
+{
+  "id": "drifblim",
+  "dex": 426,
+  "name": "Drifblim",
+  "types": [
+    "GHOST",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 150,
+    "atk": 80,
+    "def": 44,
+    "spa": 90,
+    "spd": 54,
+    "spe": 80
+  },
+  "catchRate": 60,
+  "expYield": 174,
+  "modelId": "drifblim",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

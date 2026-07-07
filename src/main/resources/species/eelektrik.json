@@ -1,0 +1,51 @@
+{
+  "id": "eelektrik",
+  "dex": 603,
+  "name": "Eelektrik",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 85,
+    "def": 70,
+    "spa": 75,
+    "spd": 70,
+    "spe": 40
+  },
+  "catchRate": 60,
+  "expYield": 142,
+  "modelId": "eelektrik",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "eelektross",
+      "item": "thunder_stone"
+    }
+  ],
+  "spawn": null
+}

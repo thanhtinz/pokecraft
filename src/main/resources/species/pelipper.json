@@ -1,0 +1,52 @@
+{
+  "id": "pelipper",
+  "dex": 279,
+  "name": "Pelipper",
+  "types": [
+    "WATER",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 50,
+    "def": 100,
+    "spa": 95,
+    "spd": 70,
+    "spe": 65
+  },
+  "catchRate": 45,
+  "expYield": 154,
+  "modelId": "pelipper",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

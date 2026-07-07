@@ -1,0 +1,54 @@
+{
+  "id": "torracat",
+  "dex": 726,
+  "name": "Torracat",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 85,
+    "def": 50,
+    "spa": 80,
+    "spd": 50,
+    "spe": 90
+  },
+  "catchRate": 45,
+  "expYield": 147,
+  "modelId": "torracat",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 34,
+      "to": "incineroar",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

@@ -1,0 +1,45 @@
+{
+  "id": "regieleki",
+  "dex": 894,
+  "name": "Regieleki",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 100,
+    "def": 50,
+    "spa": 100,
+    "spd": 50,
+    "spe": 200
+  },
+  "catchRate": 3,
+  "expYield": 290,
+  "modelId": "regieleki",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

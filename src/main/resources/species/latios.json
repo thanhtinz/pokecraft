@@ -1,0 +1,52 @@
+{
+  "id": "latios",
+  "dex": 381,
+  "name": "Latios",
+  "types": [
+    "DRAGON",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 90,
+    "def": 80,
+    "spa": 130,
+    "spd": 110,
+    "spe": 110
+  },
+  "catchRate": 3,
+  "expYield": 300,
+  "modelId": "latios",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "dragon_claw"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

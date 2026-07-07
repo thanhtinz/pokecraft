@@ -1,0 +1,57 @@
+{
+  "id": "chingling",
+  "dex": 433,
+  "name": "Chingling",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 30,
+    "def": 50,
+    "spa": 65,
+    "spd": 50,
+    "spe": 45
+  },
+  "catchRate": 120,
+  "expYield": 57,
+  "modelId": "chingling",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "chimecho",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

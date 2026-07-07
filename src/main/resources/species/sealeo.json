@@ -1,0 +1,58 @@
+{
+  "id": "sealeo",
+  "dex": 364,
+  "name": "Sealeo",
+  "types": [
+    "ICE",
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 60,
+    "def": 70,
+    "spa": 75,
+    "spd": 70,
+    "spe": 45
+  },
+  "catchRate": 120,
+  "expYield": 144,
+  "modelId": "sealeo",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "aurora_beam"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "ice_beam"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 44,
+      "to": "walrein",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

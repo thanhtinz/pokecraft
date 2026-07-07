@@ -1,0 +1,58 @@
+{
+  "id": "roggenrola",
+  "dex": 524,
+  "name": "Roggenrola",
+  "types": [
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 75,
+    "def": 85,
+    "spa": 25,
+    "spd": 25,
+    "spe": 15
+  },
+  "catchRate": 255,
+  "expYield": 56,
+  "modelId": "roggenrola",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "rock_slide"
+    ],
+    "20": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 25,
+      "to": "boldore",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

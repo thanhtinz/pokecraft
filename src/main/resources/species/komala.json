@@ -1,0 +1,61 @@
+{
+  "id": "komala",
+  "dex": 775,
+  "name": "Komala",
+  "types": [
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 115,
+    "def": 65,
+    "spa": 75,
+    "spd": 95,
+    "spe": 65
+  },
+  "catchRate": 45,
+  "expYield": 168,
+  "modelId": "komala",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "hyper_fang"
+    ],
+    "20": [
+      "mega_punch"
+    ],
+    "32": [
+      "body_slam"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "48": [
+      "hyper_beam"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

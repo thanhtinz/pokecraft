@@ -1,0 +1,62 @@
+{
+  "id": "solrock",
+  "dex": 338,
+  "name": "Solrock",
+  "types": [
+    "ROCK",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 95,
+    "def": 85,
+    "spa": 55,
+    "spd": 65,
+    "spe": 70
+  },
+  "catchRate": 45,
+  "expYield": 161,
+  "modelId": "solrock",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

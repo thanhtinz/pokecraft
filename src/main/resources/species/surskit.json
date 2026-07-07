@@ -1,0 +1,68 @@
+{
+  "id": "surskit",
+  "dex": 283,
+  "name": "Surskit",
+  "types": [
+    "BUG",
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 30,
+    "def": 32,
+    "spa": 50,
+    "spd": 52,
+    "spe": 65
+  },
+  "catchRate": 200,
+  "expYield": 54,
+  "modelId": "surskit",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "surf"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 22,
+      "to": "masquerain",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 16,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

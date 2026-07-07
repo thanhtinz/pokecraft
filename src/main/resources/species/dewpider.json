@@ -1,0 +1,68 @@
+{
+  "id": "dewpider",
+  "dex": 751,
+  "name": "Dewpider",
+  "types": [
+    "WATER",
+    "BUG"
+  ],
+  "baseStats": {
+    "hp": 38,
+    "atk": 40,
+    "def": 52,
+    "spa": 40,
+    "spd": 72,
+    "spe": 27
+  },
+  "catchRate": 200,
+  "expYield": 54,
+  "modelId": "dewpider",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "pin_missile"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "surf"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 22,
+      "to": "araquanid",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 16,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

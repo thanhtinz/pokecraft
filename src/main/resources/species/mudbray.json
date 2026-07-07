@@ -1,0 +1,57 @@
+{
+  "id": "mudbray",
+  "dex": 749,
+  "name": "Mudbray",
+  "types": [
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 100,
+    "def": 70,
+    "spa": 45,
+    "spd": 55,
+    "spe": 45
+  },
+  "catchRate": 190,
+  "expYield": 77,
+  "modelId": "mudbray",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "dig"
+    ],
+    "20": [
+      "earthquake"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "mudsdale",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

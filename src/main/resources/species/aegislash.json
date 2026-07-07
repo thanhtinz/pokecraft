@@ -1,0 +1,49 @@
+{
+  "id": "aegislash",
+  "dex": 681,
+  "name": "Aegislash",
+  "types": [
+    "STEEL",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 50,
+    "def": 140,
+    "spa": 50,
+    "spd": 140,
+    "spe": 60
+  },
+  "catchRate": 45,
+  "expYield": 250,
+  "modelId": "aegislash",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

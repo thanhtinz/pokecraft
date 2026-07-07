@@ -1,0 +1,39 @@
+{
+  "id": "thievul",
+  "dex": 828,
+  "name": "Thievul",
+  "types": [
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 58,
+    "def": 58,
+    "spa": 87,
+    "spd": 92,
+    "spe": 90
+  },
+  "catchRate": 127,
+  "expYield": 159,
+  "modelId": "thievul",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "crunch"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

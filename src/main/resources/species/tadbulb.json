@@ -1,0 +1,60 @@
+{
+  "id": "tadbulb",
+  "dex": 938,
+  "name": "Tadbulb",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 61,
+    "atk": 31,
+    "def": 41,
+    "spa": 59,
+    "spd": 35,
+    "spe": 45
+  },
+  "catchRate": 190,
+  "expYield": 54,
+  "modelId": "tadbulb",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "bellibolt",
+      "item": "thunder_stone"
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

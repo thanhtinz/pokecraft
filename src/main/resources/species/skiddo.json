@@ -1,0 +1,64 @@
+{
+  "id": "skiddo",
+  "dex": 672,
+  "name": "Skiddo",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 66,
+    "atk": 65,
+    "def": 48,
+    "spa": 62,
+    "spd": 57,
+    "spe": 52
+  },
+  "catchRate": 200,
+  "expYield": 70,
+  "modelId": "skiddo",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 32,
+      "to": "gogoat",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 16,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

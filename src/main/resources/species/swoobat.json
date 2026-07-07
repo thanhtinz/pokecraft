@@ -1,0 +1,52 @@
+{
+  "id": "swoobat",
+  "dex": 528,
+  "name": "Swoobat",
+  "types": [
+    "PSYCHIC",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 67,
+    "atk": 57,
+    "def": 55,
+    "spa": 77,
+    "spd": 55,
+    "spe": 114
+  },
+  "catchRate": 45,
+  "expYield": 149,
+  "modelId": "swoobat",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

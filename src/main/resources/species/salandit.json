@@ -1,0 +1,67 @@
+{
+  "id": "salandit",
+  "dex": 757,
+  "name": "Salandit",
+  "types": [
+    "POISON",
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 48,
+    "atk": 44,
+    "def": 40,
+    "spa": 71,
+    "spd": 40,
+    "spe": 77
+  },
+  "catchRate": 120,
+  "expYield": 64,
+  "modelId": "salandit",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 33,
+      "to": "salazzle",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

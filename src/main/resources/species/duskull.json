@@ -1,0 +1,56 @@
+{
+  "id": "duskull",
+  "dex": 355,
+  "name": "Duskull",
+  "types": [
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 20,
+    "atk": 40,
+    "def": 90,
+    "spa": 30,
+    "spd": 90,
+    "spe": 25
+  },
+  "catchRate": 190,
+  "expYield": 59,
+  "modelId": "duskull",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "night_shade"
+    ],
+    "20": [
+      "shadow_ball"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 37,
+      "to": "dusclops",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

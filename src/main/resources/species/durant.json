@@ -1,0 +1,56 @@
+{
+  "id": "durant",
+  "dex": 632,
+  "name": "Durant",
+  "types": [
+    "BUG",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 58,
+    "atk": 109,
+    "def": 112,
+    "spa": 48,
+    "spd": 48,
+    "spe": 109
+  },
+  "catchRate": 90,
+  "expYield": 169,
+  "modelId": "durant",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "pin_missile"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 7,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

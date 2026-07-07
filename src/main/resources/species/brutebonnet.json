@@ -1,0 +1,62 @@
+{
+  "id": "brutebonnet",
+  "dex": 986,
+  "name": "Brute Bonnet",
+  "types": [
+    "GRASS",
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 111,
+    "atk": 127,
+    "def": 99,
+    "spa": 79,
+    "spd": 99,
+    "spe": 55
+  },
+  "catchRate": 50,
+  "expYield": 285,
+  "modelId": "brutebonnet",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "bite"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "crunch"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "petal_dance"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 4,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

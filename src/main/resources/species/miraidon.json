@@ -1,0 +1,52 @@
+{
+  "id": "miraidon",
+  "dex": 1008,
+  "name": "Miraidon",
+  "types": [
+    "ELECTRIC",
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 100,
+    "atk": 85,
+    "def": 100,
+    "spa": 135,
+    "spd": 115,
+    "spe": 135
+  },
+  "catchRate": 3,
+  "expYield": 335,
+  "modelId": "miraidon",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "spark"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "48": [
+      "dragon_claw"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

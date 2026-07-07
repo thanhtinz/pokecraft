@@ -1,0 +1,58 @@
+{
+  "id": "tranquill",
+  "dex": 520,
+  "name": "Tranquill",
+  "types": [
+    "NORMAL",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 62,
+    "atk": 77,
+    "def": 62,
+    "spa": 50,
+    "spd": 42,
+    "spe": 65
+  },
+  "catchRate": 120,
+  "expYield": 125,
+  "modelId": "tranquill",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "hyper_fang"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "mega_punch"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 32,
+      "to": "unfezant",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

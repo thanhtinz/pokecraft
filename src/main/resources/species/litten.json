@@ -1,0 +1,63 @@
+{
+  "id": "litten",
+  "dex": 725,
+  "name": "Litten",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 65,
+    "def": 40,
+    "spa": 60,
+    "spd": 40,
+    "spe": 70
+  },
+  "catchRate": 45,
+  "expYield": 64,
+  "modelId": "litten",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 17,
+      "to": "torracat",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

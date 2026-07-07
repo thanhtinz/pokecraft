@@ -1,0 +1,52 @@
+{
+  "id": "hydrapple",
+  "dex": 1019,
+  "name": "Hydrapple",
+  "types": [
+    "GRASS",
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 106,
+    "atk": 80,
+    "def": 110,
+    "spa": 120,
+    "spd": 80,
+    "spe": 44
+  },
+  "catchRate": 10,
+  "expYield": 270,
+  "modelId": "hydrapple",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "dragon_breath"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "dragon_claw"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

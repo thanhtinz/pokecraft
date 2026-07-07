@@ -1,0 +1,67 @@
+{
+  "id": "helioptile",
+  "dex": 694,
+  "name": "Helioptile",
+  "types": [
+    "ELECTRIC",
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 44,
+    "atk": 38,
+    "def": 33,
+    "spa": 61,
+    "spd": 43,
+    "spe": 70
+  },
+  "catchRate": 190,
+  "expYield": 58,
+  "modelId": "helioptile",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "spark"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "heliolisk",
+      "item": "leaf_stone"
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

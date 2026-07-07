@@ -1,0 +1,53 @@
+{
+  "id": "cufant",
+  "dex": 878,
+  "name": "Cufant",
+  "types": [
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 72,
+    "atk": 80,
+    "def": 49,
+    "spa": 40,
+    "spd": 49,
+    "spe": 40
+  },
+  "catchRate": 190,
+  "expYield": 66,
+  "modelId": "cufant",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "iron_head"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 34,
+      "to": "copperajah",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

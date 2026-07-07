@@ -1,0 +1,52 @@
+{
+  "id": "noivern",
+  "dex": 715,
+  "name": "Noivern",
+  "types": [
+    "FLYING",
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 70,
+    "def": 80,
+    "spa": 97,
+    "spd": 80,
+    "spe": 123
+  },
+  "catchRate": 45,
+  "expYield": 187,
+  "modelId": "noivern",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "dragon_breath"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "dragon_claw"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

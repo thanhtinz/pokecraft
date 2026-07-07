@@ -1,0 +1,61 @@
+{
+  "id": "cubchoo",
+  "dex": 613,
+  "name": "Cubchoo",
+  "types": [
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 70,
+    "def": 40,
+    "spa": 60,
+    "spd": 40,
+    "spe": 40
+  },
+  "catchRate": 120,
+  "expYield": 61,
+  "modelId": "cubchoo",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "aurora_beam"
+    ],
+    "20": [
+      "ice_beam"
+    ],
+    "32": [
+      "blizzard"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 37,
+      "to": "beartic",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

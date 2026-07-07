@@ -22,10 +22,13 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Shiny roll (config `battle.shiny-rate`, default 1/4096)
 - [x] Move secondary effects: stat stage changes + status infliction w/ chance
 - [x] Move priority (Quick Attack)
-- [x] Species dataset: 251 pokemon (Gen 1 + Gen 2). Gen 1 tự sinh
-      (tools/generate_gen1.py); Gen 2 import từ Cobblemon MPL-2.0
-      (tools/import_cobblemon.py) - lấy stats/types/catchRate/expYield/evolution,
-      learnset+spawn sinh cục bộ. Xem docs/CREDITS.md
+- [x] Species dataset: FULL NATIONAL DEX - 1016 pokemon (Gen 1-9). Gen 1 tự
+      sinh (tools/generate_gen1.py); Gen 2-9 import từ Cobblemon MPL-2.0
+      (tools/import_cobblemon.py) - lấy stats/types/catchRate/expYield/evolution
+      chính xác, learnset+spawn sinh cục bộ trong 89-move pool. Xem docs/CREDITS.md
+- [~] Learnset dùng chung type-pool (mọi con cùng hệ chia sẻ pool move) - đủ chơi,
+      chưa authentic từng loài (Gen 3+ cần mở rộng move pool để chính xác hơn)
+- [x] ~506 loài spawn hoang theo biome/hệ; legendary/final-evo không spawn
 - [x] Tiến hóa bằng đá: Thunder/Fire/Water/Leaf/Moon Stone (mua ở shop);
       hỗ trợ nhiều nhánh (Eevee -> Vaporeon/Jolteon/Flareon)
 - [x] Trade evolution đổi thành level 36 (Alakazam/Machamp/Golem/Gengar)
@@ -157,7 +160,7 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
       bắt/lai tạo/tiến hóa/sở hữu = caught
 - [x] GUI phân trang theo số dex: caught hiện đủ stats/evolution/spawn biome,
       seen hiện tên, chưa gặp hiện "???"
-- [x] /poke dex + nút trên menu panel, đếm tiến độ x/151
+- [x] /poke dex + nút trên menu panel, đếm tiến độ x/1016 (phân trang 45/trang)
 - [ ] Phần thưởng hoàn thành dex (milestone rewards)
 
 ## In-game Menu (PC + Mobile)

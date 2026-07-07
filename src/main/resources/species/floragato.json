@@ -1,0 +1,54 @@
+{
+  "id": "floragato",
+  "dex": 907,
+  "name": "Floragato",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 61,
+    "atk": 80,
+    "def": 63,
+    "spa": 60,
+    "spd": 63,
+    "spe": 83
+  },
+  "catchRate": 45,
+  "expYield": 144,
+  "modelId": "floragato",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 36,
+      "to": "meowscarada",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

@@ -1,0 +1,61 @@
+{
+  "id": "cyclizar",
+  "dex": 967,
+  "name": "Cyclizar",
+  "types": [
+    "DRAGON",
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 95,
+    "def": 65,
+    "spa": 85,
+    "spd": 65,
+    "spe": 121
+  },
+  "catchRate": 190,
+  "expYield": 175,
+  "modelId": "cyclizar",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "hyper_fang"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "mega_punch"
+    ],
+    "48": [
+      "dragon_claw"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "JAGGED_PEAKS",
+      "FROZEN_PEAKS",
+      "STONY_PEAKS"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

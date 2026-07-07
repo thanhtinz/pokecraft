@@ -1,0 +1,57 @@
+{
+  "id": "hatenna",
+  "dex": 856,
+  "name": "Hatenna",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 42,
+    "atk": 30,
+    "def": 45,
+    "spa": 56,
+    "spd": 53,
+    "spe": 39
+  },
+  "catchRate": 235,
+  "expYield": 53,
+  "modelId": "hatenna",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 32,
+      "to": "hattrem",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 19,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

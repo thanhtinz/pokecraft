@@ -1,0 +1,51 @@
+{
+  "id": "shelgon",
+  "dex": 372,
+  "name": "Shelgon",
+  "types": [
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 95,
+    "def": 100,
+    "spa": 60,
+    "spd": 50,
+    "spe": 50
+  },
+  "catchRate": 45,
+  "expYield": 147,
+  "modelId": "shelgon",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "dragon_breath"
+    ],
+    "20": [
+      "dragon_claw"
+    ],
+    "32": [
+      "outrage"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 50,
+      "to": "salamence",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

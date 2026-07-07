@@ -1,0 +1,52 @@
+{
+  "id": "chiyu",
+  "dex": 1004,
+  "name": "Chi-Yu",
+  "types": [
+    "DARK",
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 80,
+    "def": 80,
+    "spa": 135,
+    "spd": 120,
+    "spe": 100
+  },
+  "catchRate": 6,
+  "expYield": 285,
+  "modelId": "chiyu",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "ember"
+    ],
+    "20": [
+      "crunch"
+    ],
+    "32": [
+      "fire_spin"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "flamethrower"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "zacian",
+  "dex": 888,
+  "name": "Zacian",
+  "types": [
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 92,
+    "atk": 120,
+    "def": 115,
+    "spa": 80,
+    "spd": 115,
+    "spe": 138
+  },
+  "catchRate": 10,
+  "expYield": 330,
+  "modelId": "zacian",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sing"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "dazzling_gleam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

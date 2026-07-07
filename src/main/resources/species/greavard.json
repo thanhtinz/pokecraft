@@ -1,0 +1,56 @@
+{
+  "id": "greavard",
+  "dex": 971,
+  "name": "Greavard",
+  "types": [
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 61,
+    "def": 60,
+    "spa": 30,
+    "spd": 55,
+    "spe": 34
+  },
+  "catchRate": 120,
+  "expYield": 58,
+  "modelId": "greavard",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "night_shade"
+    ],
+    "20": [
+      "shadow_ball"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "houndstone",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

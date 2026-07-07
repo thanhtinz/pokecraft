@@ -1,0 +1,52 @@
+{
+  "id": "celesteela",
+  "dex": 797,
+  "name": "Celesteela",
+  "types": [
+    "STEEL",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 97,
+    "atk": 101,
+    "def": 103,
+    "spa": 107,
+    "spd": 101,
+    "spe": 61
+  },
+  "catchRate": 45,
+  "expYield": 285,
+  "modelId": "celesteela",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

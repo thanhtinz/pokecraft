@@ -1,0 +1,60 @@
+{
+  "id": "pawmi",
+  "dex": 921,
+  "name": "Pawmi",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 50,
+    "def": 20,
+    "spa": 40,
+    "spd": 25,
+    "spe": 60
+  },
+  "catchRate": 190,
+  "expYield": 48,
+  "modelId": "pawmi",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 18,
+      "to": "pawmo",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

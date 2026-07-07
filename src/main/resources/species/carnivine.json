@@ -1,0 +1,58 @@
+{
+  "id": "carnivine",
+  "dex": 455,
+  "name": "Carnivine",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 74,
+    "atk": 100,
+    "def": 72,
+    "spa": 90,
+    "spd": 72,
+    "spe": 46
+  },
+  "catchRate": 200,
+  "expYield": 159,
+  "modelId": "carnivine",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 16,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

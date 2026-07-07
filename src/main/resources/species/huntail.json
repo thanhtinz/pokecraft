@@ -1,0 +1,48 @@
+{
+  "id": "huntail",
+  "dex": 367,
+  "name": "Huntail",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 104,
+    "def": 105,
+    "spa": 94,
+    "spd": 75,
+    "spe": 52
+  },
+  "catchRate": 60,
+  "expYield": 170,
+  "modelId": "huntail",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

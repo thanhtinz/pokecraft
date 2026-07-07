@@ -1,0 +1,67 @@
+{
+  "id": "numel",
+  "dex": 322,
+  "name": "Numel",
+  "types": [
+    "FIRE",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 60,
+    "def": 40,
+    "spa": 65,
+    "spd": 45,
+    "spe": 35
+  },
+  "catchRate": 255,
+  "expYield": 61,
+  "modelId": "numel",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "earthquake"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 33,
+      "to": "camerupt",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

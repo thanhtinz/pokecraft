@@ -1,0 +1,42 @@
+{
+  "id": "sandaconda",
+  "dex": 844,
+  "name": "Sandaconda",
+  "types": [
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 72,
+    "atk": 107,
+    "def": 125,
+    "spa": 65,
+    "spd": 70,
+    "spe": 71
+  },
+  "catchRate": 120,
+  "expYield": 179,
+  "modelId": "sandaconda",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "dig"
+    ],
+    "20": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

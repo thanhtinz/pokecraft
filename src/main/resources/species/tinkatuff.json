@@ -1,0 +1,52 @@
+{
+  "id": "tinkatuff",
+  "dex": 958,
+  "name": "Tinkatuff",
+  "types": [
+    "FAIRY",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 55,
+    "def": 55,
+    "spa": 45,
+    "spd": 82,
+    "spe": 78
+  },
+  "catchRate": 90,
+  "expYield": 133,
+  "modelId": "tinkatuff",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sing"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "dazzling_gleam"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 38,
+      "to": "tinkaton",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

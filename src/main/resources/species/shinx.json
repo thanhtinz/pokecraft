@@ -1,0 +1,60 @@
+{
+  "id": "shinx",
+  "dex": 403,
+  "name": "Shinx",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 65,
+    "def": 34,
+    "spa": 40,
+    "spd": 34,
+    "spe": 45
+  },
+  "catchRate": 235,
+  "expYield": 53,
+  "modelId": "shinx",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 15,
+      "to": "luxio",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 19,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "tarountula",
+  "dex": 917,
+  "name": "Tarountula",
+  "types": [
+    "BUG"
+  ],
+  "baseStats": {
+    "hp": 35,
+    "atk": 41,
+    "def": 45,
+    "spa": 29,
+    "spd": 40,
+    "spe": 20
+  },
+  "catchRate": 255,
+  "expYield": 42,
+  "modelId": "tarountula",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "pin_missile"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 15,
+      "to": "spidops",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "sprigatito",
+  "dex": 906,
+  "name": "Sprigatito",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 61,
+    "def": 54,
+    "spa": 45,
+    "spd": 45,
+    "spe": 65
+  },
+  "catchRate": 45,
+  "expYield": 62,
+  "modelId": "sprigatito",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 16,
+      "to": "floragato",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "combee",
+  "dex": 415,
+  "name": "Combee",
+  "types": [
+    "BUG",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 30,
+    "atk": 30,
+    "def": 42,
+    "spa": 30,
+    "spd": 42,
+    "spe": 70
+  },
+  "catchRate": 120,
+  "expYield": 49,
+  "modelId": "combee",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 21,
+      "to": "vespiquen",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

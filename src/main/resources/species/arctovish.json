@@ -1,0 +1,62 @@
+{
+  "id": "arctovish",
+  "dex": 883,
+  "name": "Arctovish",
+  "types": [
+    "WATER",
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 90,
+    "def": 100,
+    "spa": 80,
+    "spd": 90,
+    "spe": 55
+  },
+  "catchRate": 45,
+  "expYield": 177,
+  "modelId": "arctovish",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "aurora_beam"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "ice_beam"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "obstagoon",
+  "dex": 862,
+  "name": "Obstagoon",
+  "types": [
+    "DARK",
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 93,
+    "atk": 90,
+    "def": 101,
+    "spa": 60,
+    "spd": 81,
+    "spe": 95
+  },
+  "catchRate": 45,
+  "expYield": 260,
+  "modelId": "obstagoon",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "crunch"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "mega_punch"
+    ],
+    "48": [
+      "body_slam"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "carbink",
+  "dex": 703,
+  "name": "Carbink",
+  "types": [
+    "ROCK",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 50,
+    "def": 150,
+    "spa": 50,
+    "spd": 150,
+    "spe": 50
+  },
+  "catchRate": 60,
+  "expYield": 100,
+  "modelId": "carbink",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "rock_throw"
+    ],
+    "20": [
+      "dazzling_gleam"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 5,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

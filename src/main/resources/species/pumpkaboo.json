@@ -1,0 +1,66 @@
+{
+  "id": "pumpkaboo",
+  "dex": 710,
+  "name": "Pumpkaboo",
+  "types": [
+    "GHOST",
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 49,
+    "atk": 66,
+    "def": 70,
+    "spa": 44,
+    "spd": 55,
+    "spe": 51
+  },
+  "catchRate": 120,
+  "expYield": 67,
+  "modelId": "pumpkaboo",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 37,
+      "to": "gourgeist",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

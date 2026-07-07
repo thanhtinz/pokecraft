@@ -1,0 +1,68 @@
+{
+  "id": "poltchageist",
+  "dex": 1012,
+  "name": "Poltchageist",
+  "types": [
+    "GRASS",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 45,
+    "def": 45,
+    "spa": 74,
+    "spd": 54,
+    "spe": 50
+  },
+  "catchRate": 120,
+  "expYield": 62,
+  "modelId": "poltchageist",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "sinistcha",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

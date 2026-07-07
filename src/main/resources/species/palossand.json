@@ -1,0 +1,52 @@
+{
+  "id": "palossand",
+  "dex": 770,
+  "name": "Palossand",
+  "types": [
+    "GHOST",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 75,
+    "def": 110,
+    "spa": 100,
+    "spd": 75,
+    "spe": 35
+  },
+  "catchRate": 60,
+  "expYield": 168,
+  "modelId": "palossand",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "48": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

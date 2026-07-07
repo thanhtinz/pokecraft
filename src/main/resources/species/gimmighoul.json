@@ -1,0 +1,96 @@
+{
+  "id": "gimmighoul",
+  "dex": 999,
+  "name": "Gimmighoul",
+  "types": [
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 30,
+    "def": 70,
+    "spa": 75,
+    "spd": 70,
+    "spe": 10
+  },
+  "catchRate": 45,
+  "expYield": 60,
+  "modelId": "gimmighoul",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "night_shade"
+    ],
+    "20": [
+      "shadow_ball"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "gholdengo",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "gholdengo",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "gholdengo",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "gholdengo",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "gholdengo",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "gholdengo",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "gholdengo",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "gholdengo",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "gholdengo",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

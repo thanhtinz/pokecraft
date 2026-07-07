@@ -1,0 +1,52 @@
+{
+  "id": "pawmot",
+  "dex": 923,
+  "name": "Pawmot",
+  "types": [
+    "ELECTRIC",
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 115,
+    "def": 70,
+    "spa": 70,
+    "spd": 60,
+    "spe": 105
+  },
+  "catchRate": 45,
+  "expYield": 245,
+  "modelId": "pawmot",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "low_kick"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "brick_break"
+    ],
+    "48": [
+      "thunderbolt"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

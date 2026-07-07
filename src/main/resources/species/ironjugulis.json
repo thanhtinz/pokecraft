@@ -1,0 +1,60 @@
+{
+  "id": "ironjugulis",
+  "dex": 993,
+  "name": "Iron Jugulis",
+  "types": [
+    "DARK",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 94,
+    "atk": 80,
+    "def": 86,
+    "spa": 122,
+    "spd": 80,
+    "spe": 108
+  },
+  "catchRate": 30,
+  "expYield": 285,
+  "modelId": "ironjugulis",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "bite"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "crunch"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

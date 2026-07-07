@@ -1,0 +1,52 @@
+{
+  "id": "kilowattrel",
+  "dex": 941,
+  "name": "Kilowattrel",
+  "types": [
+    "ELECTRIC",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 70,
+    "def": 60,
+    "spa": 105,
+    "spd": 60,
+    "spe": 125
+  },
+  "catchRate": 90,
+  "expYield": 172,
+  "modelId": "kilowattrel",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "thunderbolt"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

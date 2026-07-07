@@ -1,0 +1,65 @@
+{
+  "id": "shieldon",
+  "dex": 410,
+  "name": "Shieldon",
+  "types": [
+    "ROCK",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 30,
+    "atk": 42,
+    "def": 118,
+    "spa": 42,
+    "spd": 88,
+    "spe": 30
+  },
+  "catchRate": 45,
+  "expYield": 70,
+  "modelId": "shieldon",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "bastiodon",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

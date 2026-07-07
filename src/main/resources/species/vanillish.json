@@ -1,0 +1,51 @@
+{
+  "id": "vanillish",
+  "dex": 583,
+  "name": "Vanillish",
+  "types": [
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 51,
+    "atk": 65,
+    "def": 65,
+    "spa": 80,
+    "spd": 75,
+    "spe": 59
+  },
+  "catchRate": 120,
+  "expYield": 138,
+  "modelId": "vanillish",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "aurora_beam"
+    ],
+    "20": [
+      "ice_beam"
+    ],
+    "32": [
+      "blizzard"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 47,
+      "to": "vanilluxe",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

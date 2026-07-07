@@ -1,0 +1,58 @@
+{
+  "id": "dondozo",
+  "dex": 977,
+  "name": "Dondozo",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 150,
+    "atk": 100,
+    "def": 115,
+    "spa": 65,
+    "spd": 65,
+    "spe": 35
+  },
+  "catchRate": 25,
+  "expYield": 265,
+  "modelId": "dondozo",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "spheal",
+  "dex": 363,
+  "name": "Spheal",
+  "types": [
+    "ICE",
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 40,
+    "def": 50,
+    "spa": 55,
+    "spd": 50,
+    "spe": 25
+  },
+  "catchRate": 255,
+  "expYield": 58,
+  "modelId": "spheal",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "ice_shard"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "aurora_beam"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "ice_beam"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 32,
+      "to": "sealeo",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

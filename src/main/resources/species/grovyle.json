@@ -1,0 +1,54 @@
+{
+  "id": "grovyle",
+  "dex": 253,
+  "name": "Grovyle",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 65,
+    "def": 45,
+    "spa": 85,
+    "spd": 65,
+    "spe": 95
+  },
+  "catchRate": 45,
+  "expYield": 142,
+  "modelId": "grovyle",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 36,
+      "to": "sceptile",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

@@ -1,0 +1,61 @@
+{
+  "id": "gallade",
+  "dex": 475,
+  "name": "Gallade",
+  "types": [
+    "PSYCHIC",
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 68,
+    "atk": 125,
+    "def": 65,
+    "spa": 65,
+    "spd": 115,
+    "spe": 80
+  },
+  "catchRate": 45,
+  "expYield": 259,
+  "modelId": "gallade",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "low_kick"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "brick_break"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

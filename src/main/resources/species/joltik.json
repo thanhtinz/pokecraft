@@ -1,0 +1,68 @@
+{
+  "id": "joltik",
+  "dex": 595,
+  "name": "Joltik",
+  "types": [
+    "BUG",
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 47,
+    "def": 50,
+    "spa": 57,
+    "spd": 50,
+    "spe": 65
+  },
+  "catchRate": 190,
+  "expYield": 64,
+  "modelId": "joltik",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "spark"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "48": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 36,
+      "to": "galvantula",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

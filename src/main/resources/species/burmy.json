@@ -1,0 +1,60 @@
+{
+  "id": "burmy",
+  "dex": 412,
+  "name": "Burmy",
+  "types": [
+    "BUG"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 29,
+    "def": 45,
+    "spa": 29,
+    "spd": 45,
+    "spe": 36
+  },
+  "catchRate": 120,
+  "expYield": 45,
+  "modelId": "burmy",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "pin_missile"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 20,
+      "to": "wormadam",
+      "item": null
+    },
+    {
+      "level": 20,
+      "to": "mothim",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

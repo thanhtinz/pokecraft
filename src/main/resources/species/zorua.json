@@ -1,0 +1,53 @@
+{
+  "id": "zorua",
+  "dex": 570,
+  "name": "Zorua",
+  "types": [
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 65,
+    "def": 40,
+    "spa": 80,
+    "spd": 40,
+    "spe": 65
+  },
+  "catchRate": 75,
+  "expYield": 66,
+  "modelId": "zorua",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "crunch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "zoroark",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 6,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

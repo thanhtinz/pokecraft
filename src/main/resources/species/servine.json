@@ -1,0 +1,54 @@
+{
+  "id": "servine",
+  "dex": 496,
+  "name": "Servine",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 60,
+    "def": 75,
+    "spa": 60,
+    "spd": 75,
+    "spe": 83
+  },
+  "catchRate": 45,
+  "expYield": 145,
+  "modelId": "servine",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 36,
+      "to": "serperior",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

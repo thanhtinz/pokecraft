@@ -1,0 +1,68 @@
+{
+  "id": "lotad",
+  "dex": 270,
+  "name": "Lotad",
+  "types": [
+    "WATER",
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 30,
+    "def": 30,
+    "spa": 40,
+    "spd": 50,
+    "spe": 30
+  },
+  "catchRate": 255,
+  "expYield": 44,
+  "modelId": "lotad",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 14,
+      "to": "lombre",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

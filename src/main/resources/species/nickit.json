@@ -1,0 +1,53 @@
+{
+  "id": "nickit",
+  "dex": 827,
+  "name": "Nickit",
+  "types": [
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 28,
+    "def": 28,
+    "spa": 47,
+    "spd": 52,
+    "spe": 50
+  },
+  "catchRate": 255,
+  "expYield": 49,
+  "modelId": "nickit",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "crunch"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 18,
+      "to": "thievul",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

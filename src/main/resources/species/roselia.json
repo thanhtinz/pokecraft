@@ -1,0 +1,62 @@
+{
+  "id": "roselia",
+  "dex": 315,
+  "name": "Roselia",
+  "types": [
+    "GRASS",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 60,
+    "def": 45,
+    "spa": 100,
+    "spd": 80,
+    "spe": 65
+  },
+  "catchRate": 150,
+  "expYield": 140,
+  "modelId": "roselia",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 12,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

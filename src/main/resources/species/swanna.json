@@ -1,0 +1,52 @@
+{
+  "id": "swanna",
+  "dex": 581,
+  "name": "Swanna",
+  "types": [
+    "WATER",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 87,
+    "def": 63,
+    "spa": 87,
+    "spd": 63,
+    "spe": 98
+  },
+  "catchRate": 45,
+  "expYield": 166,
+  "modelId": "swanna",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

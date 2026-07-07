@@ -2,8 +2,8 @@
 
 ## Cobblemon species data
 
-Part of PokeCraft's species dataset (Generation 2, national dex 152-251) was
-derived from **Cobblemon** (https://gitlab.com/cable-mc/cobblemon), which is
+Most of PokeCraft's species dataset (Generations 2-9, national dex 152-1025;
+Generation 1 is generated separately) was derived from **Cobblemon** (https://gitlab.com/cable-mc/cobblemon), which is
 licensed under the **Mozilla Public License 2.0**.
 
 Specifically, `tools/import_cobblemon.py` reads Cobblemon's species JSON files

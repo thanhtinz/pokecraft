@@ -1,0 +1,61 @@
+{
+  "id": "togekiss",
+  "dex": 468,
+  "name": "Togekiss",
+  "types": [
+    "FAIRY",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 50,
+    "def": 95,
+    "spa": 120,
+    "spd": 115,
+    "spe": 80
+  },
+  "catchRate": 30,
+  "expYield": 273,
+  "modelId": "togekiss",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sing"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "dazzling_gleam"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MEADOW"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

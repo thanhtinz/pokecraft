@@ -1,0 +1,54 @@
+{
+  "id": "prinplup",
+  "dex": 394,
+  "name": "Prinplup",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 64,
+    "atk": 66,
+    "def": 68,
+    "spa": 81,
+    "spd": 76,
+    "spe": 50
+  },
+  "catchRate": 45,
+  "expYield": 142,
+  "modelId": "prinplup",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 36,
+      "to": "empoleon",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

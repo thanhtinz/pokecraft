@@ -1,0 +1,61 @@
+{
+  "id": "emolga",
+  "dex": 587,
+  "name": "Emolga",
+  "types": [
+    "ELECTRIC",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 75,
+    "def": 60,
+    "spa": 75,
+    "spd": 60,
+    "spe": 103
+  },
+  "catchRate": 200,
+  "expYield": 150,
+  "modelId": "emolga",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "thunderbolt"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 16,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

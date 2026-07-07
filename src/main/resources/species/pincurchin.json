@@ -1,0 +1,54 @@
+{
+  "id": "pincurchin",
+  "dex": 871,
+  "name": "Pincurchin",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 48,
+    "atk": 101,
+    "def": 95,
+    "spa": 91,
+    "spd": 85,
+    "spe": 15
+  },
+  "catchRate": 75,
+  "expYield": 152,
+  "modelId": "pincurchin",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 6,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "raboot",
+  "dex": 814,
+  "name": "Raboot",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 86,
+    "def": 60,
+    "spa": 55,
+    "spd": 60,
+    "spe": 94
+  },
+  "catchRate": 45,
+  "expYield": 147,
+  "modelId": "raboot",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 35,
+      "to": "cinderace",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

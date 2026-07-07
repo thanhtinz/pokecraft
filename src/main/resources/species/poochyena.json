@@ -1,0 +1,53 @@
+{
+  "id": "poochyena",
+  "dex": 261,
+  "name": "Poochyena",
+  "types": [
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 35,
+    "atk": 55,
+    "def": 35,
+    "spa": 30,
+    "spd": 30,
+    "spe": 35
+  },
+  "catchRate": 255,
+  "expYield": 56,
+  "modelId": "poochyena",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "crunch"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 18,
+      "to": "mightyena",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

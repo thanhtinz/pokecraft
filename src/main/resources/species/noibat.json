@@ -1,0 +1,68 @@
+{
+  "id": "noibat",
+  "dex": 714,
+  "name": "Noibat",
+  "types": [
+    "FLYING",
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 30,
+    "def": 35,
+    "spa": 45,
+    "spd": 40,
+    "spe": 55
+  },
+  "catchRate": 190,
+  "expYield": 49,
+  "modelId": "noibat",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "dragon_claw"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 48,
+      "to": "noivern",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "FOREST",
+      "WINDSWEPT_HILLS",
+      "MEADOW"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

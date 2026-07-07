@@ -1,0 +1,52 @@
+{
+  "id": "altaria",
+  "dex": 334,
+  "name": "Altaria",
+  "types": [
+    "DRAGON",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 70,
+    "def": 90,
+    "spa": 70,
+    "spd": 105,
+    "spe": 80
+  },
+  "catchRate": 45,
+  "expYield": 172,
+  "modelId": "altaria",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "dragon_breath"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "dragon_claw"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

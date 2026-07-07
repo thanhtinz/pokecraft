@@ -1,0 +1,52 @@
+{
+  "id": "meloetta",
+  "dex": 648,
+  "name": "Meloetta",
+  "types": [
+    "NORMAL",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 100,
+    "atk": 77,
+    "def": 77,
+    "spa": 128,
+    "spd": 128,
+    "spe": 90
+  },
+  "catchRate": 3,
+  "expYield": 300,
+  "modelId": "meloetta",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "hyper_fang"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "mega_punch"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

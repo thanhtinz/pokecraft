@@ -1,0 +1,61 @@
+{
+  "id": "ragingbolt",
+  "dex": 1021,
+  "name": "Raging Bolt",
+  "types": [
+    "ELECTRIC",
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 125,
+    "atk": 73,
+    "def": 91,
+    "spa": 137,
+    "spd": 89,
+    "spe": 75
+  },
+  "catchRate": 10,
+  "expYield": 295,
+  "modelId": "ragingbolt",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "dragon_breath"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "dragon_claw"
+    ],
+    "48": [
+      "thunderbolt"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "ferroseed",
+  "dex": 597,
+  "name": "Ferroseed",
+  "types": [
+    "GRASS",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 44,
+    "atk": 50,
+    "def": 91,
+    "spa": 24,
+    "spd": 86,
+    "spe": 10
+  },
+  "catchRate": 255,
+  "expYield": 61,
+  "modelId": "ferroseed",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "petal_dance"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 40,
+      "to": "ferrothorn",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

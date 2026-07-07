@@ -1,0 +1,53 @@
+{
+  "id": "purrloin",
+  "dex": 509,
+  "name": "Purrloin",
+  "types": [
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 41,
+    "atk": 50,
+    "def": 37,
+    "spa": 50,
+    "spd": 37,
+    "spe": 66
+  },
+  "catchRate": 255,
+  "expYield": 56,
+  "modelId": "purrloin",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "crunch"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 20,
+      "to": "liepard",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

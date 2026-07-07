@@ -1,0 +1,57 @@
+{
+  "id": "heatmor",
+  "dex": 631,
+  "name": "Heatmor",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 97,
+    "def": 66,
+    "spa": 105,
+    "spd": 66,
+    "spe": 65
+  },
+  "catchRate": 90,
+  "expYield": 169,
+  "modelId": "heatmor",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 7,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

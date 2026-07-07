@@ -1,0 +1,52 @@
+{
+  "id": "infernape",
+  "dex": 392,
+  "name": "Infernape",
+  "types": [
+    "FIRE",
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 76,
+    "atk": 104,
+    "def": 71,
+    "spa": 104,
+    "spd": 71,
+    "spe": 108
+  },
+  "catchRate": 45,
+  "expYield": 267,
+  "modelId": "infernape",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "karate_chop"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "low_kick"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "brick_break"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,61 @@
+{
+  "id": "clodsire",
+  "dex": 980,
+  "name": "Clodsire",
+  "types": [
+    "POISON",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 130,
+    "atk": 75,
+    "def": 60,
+    "spa": 45,
+    "spd": 100,
+    "spe": 20
+  },
+  "catchRate": 90,
+  "expYield": 151,
+  "modelId": "clodsire",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "earthquake"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 7,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

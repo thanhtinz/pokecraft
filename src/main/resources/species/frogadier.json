@@ -1,0 +1,54 @@
+{
+  "id": "frogadier",
+  "dex": 657,
+  "name": "Frogadier",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 54,
+    "atk": 63,
+    "def": 52,
+    "spa": 83,
+    "spd": 56,
+    "spe": 97
+  },
+  "catchRate": 45,
+  "expYield": 142,
+  "modelId": "frogadier",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 36,
+      "to": "greninja",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

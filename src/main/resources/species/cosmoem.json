@@ -1,0 +1,53 @@
+{
+  "id": "cosmoem",
+  "dex": 790,
+  "name": "Cosmoem",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 43,
+    "atk": 29,
+    "def": 131,
+    "spa": 29,
+    "spd": 131,
+    "spe": 37
+  },
+  "catchRate": 3,
+  "expYield": 140,
+  "modelId": "cosmoem",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 53,
+      "to": "solgaleo",
+      "item": null
+    },
+    {
+      "level": 53,
+      "to": "lunala",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

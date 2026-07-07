@@ -1,0 +1,49 @@
+{
+  "id": "gholdengo",
+  "dex": 1000,
+  "name": "Gholdengo",
+  "types": [
+    "STEEL",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 87,
+    "atk": 60,
+    "def": 95,
+    "spa": 133,
+    "spd": 91,
+    "spe": 84
+  },
+  "catchRate": 45,
+  "expYield": 275,
+  "modelId": "gholdengo",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,49 @@
+{
+  "id": "hatterene",
+  "dex": 858,
+  "name": "Hatterene",
+  "types": [
+    "PSYCHIC",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 57,
+    "atk": 90,
+    "def": 95,
+    "spa": 136,
+    "spd": 103,
+    "spe": 29
+  },
+  "catchRate": 45,
+  "expYield": 255,
+  "modelId": "hatterene",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "fairy_wind"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "dazzling_gleam"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,48 @@
+{
+  "id": "gothorita",
+  "dex": 575,
+  "name": "Gothorita",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 45,
+    "def": 70,
+    "spa": 75,
+    "spd": 85,
+    "spe": 55
+  },
+  "catchRate": 100,
+  "expYield": 137,
+  "modelId": "gothorita",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 41,
+      "to": "gothitelle",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

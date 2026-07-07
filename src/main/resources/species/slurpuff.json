@@ -1,0 +1,39 @@
+{
+  "id": "slurpuff",
+  "dex": 685,
+  "name": "Slurpuff",
+  "types": [
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 82,
+    "atk": 80,
+    "def": 86,
+    "spa": 85,
+    "spd": 75,
+    "spe": 72
+  },
+  "catchRate": 140,
+  "expYield": 168,
+  "modelId": "slurpuff",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sing"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "dazzling_gleam"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,62 @@
+{
+  "id": "chatot",
+  "dex": 441,
+  "name": "Chatot",
+  "types": [
+    "NORMAL",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 76,
+    "atk": 65,
+    "def": 45,
+    "spa": 92,
+    "spd": 42,
+    "spe": 91
+  },
+  "catchRate": 30,
+  "expYield": 144,
+  "modelId": "chatot",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

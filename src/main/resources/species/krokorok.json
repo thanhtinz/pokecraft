@@ -1,0 +1,55 @@
+{
+  "id": "krokorok",
+  "dex": 552,
+  "name": "Krokorok",
+  "types": [
+    "GROUND",
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 82,
+    "def": 45,
+    "spa": 45,
+    "spd": 45,
+    "spe": 74
+  },
+  "catchRate": 90,
+  "expYield": 123,
+  "modelId": "krokorok",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "bite"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "crunch"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 40,
+      "to": "krookodile",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

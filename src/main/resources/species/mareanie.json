@@ -1,0 +1,67 @@
+{
+  "id": "mareanie",
+  "dex": 747,
+  "name": "Mareanie",
+  "types": [
+    "POISON",
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 53,
+    "def": 62,
+    "spa": 43,
+    "spd": 52,
+    "spe": 45
+  },
+  "catchRate": 190,
+  "expYield": 61,
+  "modelId": "mareanie",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 38,
+      "to": "toxapex",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

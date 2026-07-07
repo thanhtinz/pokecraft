@@ -1,0 +1,57 @@
+{
+  "id": "trapinch",
+  "dex": 328,
+  "name": "Trapinch",
+  "types": [
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 100,
+    "def": 45,
+    "spa": 45,
+    "spd": 45,
+    "spe": 10
+  },
+  "catchRate": 255,
+  "expYield": 58,
+  "modelId": "trapinch",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "dig"
+    ],
+    "20": [
+      "earthquake"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 35,
+      "to": "vibrava",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

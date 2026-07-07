@@ -1,0 +1,52 @@
+{
+  "id": "volcarona",
+  "dex": 637,
+  "name": "Volcarona",
+  "types": [
+    "BUG",
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 60,
+    "def": 65,
+    "spa": 135,
+    "spd": 105,
+    "spe": 100
+  },
+  "catchRate": 15,
+  "expYield": 275,
+  "modelId": "volcarona",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "flamethrower"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,52 @@
+{
+  "id": "toxtricity",
+  "dex": 849,
+  "name": "Toxtricity",
+  "types": [
+    "ELECTRIC",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 98,
+    "def": 70,
+    "spa": 114,
+    "spd": 70,
+    "spe": 75
+  },
+  "catchRate": 45,
+  "expYield": 176,
+  "modelId": "toxtricity",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "thunderbolt"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

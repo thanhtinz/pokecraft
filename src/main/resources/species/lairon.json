@@ -1,0 +1,55 @@
+{
+  "id": "lairon",
+  "dex": 305,
+  "name": "Lairon",
+  "types": [
+    "STEEL",
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 90,
+    "def": 140,
+    "spa": 50,
+    "spd": 50,
+    "spe": 40
+  },
+  "catchRate": 90,
+  "expYield": 151,
+  "modelId": "lairon",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 42,
+      "to": "aggron",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

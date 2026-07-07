@@ -1,0 +1,42 @@
+{
+  "id": "cresselia",
+  "dex": 488,
+  "name": "Cresselia",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 120,
+    "atk": 70,
+    "def": 110,
+    "spa": 75,
+    "spd": 120,
+    "spe": 85
+  },
+  "catchRate": 3,
+  "expYield": 290,
+  "modelId": "cresselia",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

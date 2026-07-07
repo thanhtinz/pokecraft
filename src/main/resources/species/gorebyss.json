@@ -1,0 +1,48 @@
+{
+  "id": "gorebyss",
+  "dex": 368,
+  "name": "Gorebyss",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 84,
+    "def": 105,
+    "spa": 114,
+    "spd": 75,
+    "spe": 52
+  },
+  "catchRate": 60,
+  "expYield": 170,
+  "modelId": "gorebyss",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,51 @@
+{
+  "id": "poipole",
+  "dex": 803,
+  "name": "Poipole",
+  "types": [
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 67,
+    "atk": 73,
+    "def": 67,
+    "spa": 73,
+    "spd": 67,
+    "spe": 73
+  },
+  "catchRate": 45,
+  "expYield": 210,
+  "modelId": "poipole",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "acid"
+    ],
+    "20": [
+      "sludge"
+    ],
+    "32": [
+      "sludge_bomb"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "naganadel",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

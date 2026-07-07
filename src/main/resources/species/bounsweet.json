@@ -1,0 +1,64 @@
+{
+  "id": "bounsweet",
+  "dex": 761,
+  "name": "Bounsweet",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 42,
+    "atk": 30,
+    "def": 38,
+    "spa": 30,
+    "spd": 38,
+    "spe": 32
+  },
+  "catchRate": 235,
+  "expYield": 42,
+  "modelId": "bounsweet",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 18,
+      "to": "steenee",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 19,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

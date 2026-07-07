@@ -1,0 +1,69 @@
+{
+  "id": "clamperl",
+  "dex": 366,
+  "name": "Clamperl",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 35,
+    "atk": 64,
+    "def": 85,
+    "spa": 74,
+    "spd": 55,
+    "spe": 32
+  },
+  "catchRate": 255,
+  "expYield": 69,
+  "modelId": "clamperl",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 37,
+      "to": "huntail",
+      "item": null
+    },
+    {
+      "level": 37,
+      "to": "gorebyss",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

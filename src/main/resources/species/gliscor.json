@@ -1,0 +1,61 @@
+{
+  "id": "gliscor",
+  "dex": 472,
+  "name": "Gliscor",
+  "types": [
+    "GROUND",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 95,
+    "def": 125,
+    "spa": 45,
+    "spd": 75,
+    "spe": 95
+  },
+  "catchRate": 30,
+  "expYield": 179,
+  "modelId": "gliscor",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

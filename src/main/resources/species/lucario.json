@@ -1,0 +1,52 @@
+{
+  "id": "lucario",
+  "dex": 448,
+  "name": "Lucario",
+  "types": [
+    "FIGHTING",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 110,
+    "def": 70,
+    "spa": 115,
+    "spd": 70,
+    "spe": 90
+  },
+  "catchRate": 45,
+  "expYield": 184,
+  "modelId": "lucario",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "low_kick"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "40": [
+      "brick_break"
+    ],
+    "48": [
+      "cross_chop"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

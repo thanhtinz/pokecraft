@@ -1,0 +1,49 @@
+{
+  "id": "aggron",
+  "dex": 306,
+  "name": "Aggron",
+  "types": [
+    "STEEL",
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 110,
+    "def": 180,
+    "spa": 60,
+    "spd": 60,
+    "spe": 50
+  },
+  "catchRate": 45,
+  "expYield": 265,
+  "modelId": "aggron",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "rock_throw"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

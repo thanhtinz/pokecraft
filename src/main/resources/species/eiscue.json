@@ -1,0 +1,55 @@
+{
+  "id": "eiscue",
+  "dex": 875,
+  "name": "Eiscue",
+  "types": [
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 80,
+    "def": 110,
+    "spa": 65,
+    "spd": 90,
+    "spe": 50
+  },
+  "catchRate": 60,
+  "expYield": 165,
+  "modelId": "eiscue",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "aurora_beam"
+    ],
+    "20": [
+      "ice_beam"
+    ],
+    "32": [
+      "blizzard"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 5,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

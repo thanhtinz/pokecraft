@@ -1,0 +1,64 @@
+{
+  "id": "corphish",
+  "dex": 341,
+  "name": "Corphish",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 43,
+    "atk": 80,
+    "def": 65,
+    "spa": 50,
+    "spd": 35,
+    "spe": 35
+  },
+  "catchRate": 205,
+  "expYield": 62,
+  "modelId": "corphish",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "crawdaunt",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 17,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

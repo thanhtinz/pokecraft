@@ -1,0 +1,62 @@
+{
+  "id": "oranguru",
+  "dex": 765,
+  "name": "Oranguru",
+  "types": [
+    "NORMAL",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 60,
+    "def": 80,
+    "spa": 90,
+    "spd": 110,
+    "spe": 60
+  },
+  "catchRate": 45,
+  "expYield": 172,
+  "modelId": "oranguru",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

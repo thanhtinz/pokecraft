@@ -1,0 +1,62 @@
+{
+  "id": "lunatone",
+  "dex": 337,
+  "name": "Lunatone",
+  "types": [
+    "ROCK",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 55,
+    "def": 65,
+    "spa": 95,
+    "spd": 85,
+    "spe": 70
+  },
+  "catchRate": 45,
+  "expYield": 161,
+  "modelId": "lunatone",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "rock_throw"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "stone_edge"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

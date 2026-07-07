@@ -1,0 +1,55 @@
+{
+  "id": "glaceon",
+  "dex": 471,
+  "name": "Glaceon",
+  "types": [
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 60,
+    "def": 110,
+    "spa": 130,
+    "spd": 95,
+    "spe": 65
+  },
+  "catchRate": 45,
+  "expYield": 184,
+  "modelId": "glaceon",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "aurora_beam"
+    ],
+    "20": [
+      "ice_beam"
+    ],
+    "32": [
+      "blizzard"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

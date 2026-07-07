@@ -1,0 +1,61 @@
+{
+  "id": "rotom",
+  "dex": 479,
+  "name": "Rotom",
+  "types": [
+    "ELECTRIC",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 50,
+    "def": 77,
+    "spa": 95,
+    "spd": 77,
+    "spe": 91
+  },
+  "catchRate": 45,
+  "expYield": 154,
+  "modelId": "rotom",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "48": [
+      "thunderbolt"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

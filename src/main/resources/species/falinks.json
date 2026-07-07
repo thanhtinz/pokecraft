@@ -1,0 +1,54 @@
+{
+  "id": "falinks",
+  "dex": 870,
+  "name": "Falinks",
+  "types": [
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 100,
+    "def": 100,
+    "spa": 70,
+    "spd": 60,
+    "spe": 75
+  },
+  "catchRate": 45,
+  "expYield": 165,
+  "modelId": "falinks",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "low_kick"
+    ],
+    "20": [
+      "brick_break"
+    ],
+    "32": [
+      "cross_chop"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "WINDSWEPT_FOREST",
+      "STONY_SHORE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

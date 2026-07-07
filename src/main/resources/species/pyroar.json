@@ -1,0 +1,52 @@
+{
+  "id": "pyroar",
+  "dex": 668,
+  "name": "Pyroar",
+  "types": [
+    "FIRE",
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 86,
+    "atk": 68,
+    "def": 72,
+    "spa": 109,
+    "spd": 66,
+    "spe": 106
+  },
+  "catchRate": 65,
+  "expYield": 177,
+  "modelId": "pyroar",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

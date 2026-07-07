@@ -1,0 +1,68 @@
+{
+  "id": "wimpod",
+  "dex": 767,
+  "name": "Wimpod",
+  "types": [
+    "BUG",
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 25,
+    "atk": 35,
+    "def": 40,
+    "spa": 20,
+    "spd": 30,
+    "spe": 80
+  },
+  "catchRate": 90,
+  "expYield": 46,
+  "modelId": "wimpod",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "surf"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "golisopod",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 7,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

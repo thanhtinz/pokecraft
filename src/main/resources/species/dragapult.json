@@ -1,0 +1,52 @@
+{
+  "id": "dragapult",
+  "dex": 887,
+  "name": "Dragapult",
+  "types": [
+    "DRAGON",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 88,
+    "atk": 120,
+    "def": 75,
+    "spa": 100,
+    "spd": 75,
+    "spe": 142
+  },
+  "catchRate": 45,
+  "expYield": 300,
+  "modelId": "dragapult",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "48": [
+      "dragon_claw"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

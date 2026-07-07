@@ -1,0 +1,62 @@
+{
+  "id": "bombirdier",
+  "dex": 962,
+  "name": "Bombirdier",
+  "types": [
+    "FLYING",
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 103,
+    "def": 85,
+    "spa": 60,
+    "spd": 85,
+    "spe": 82
+  },
+  "catchRate": 25,
+  "expYield": 243,
+  "modelId": "bombirdier",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "bite"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "crunch"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "FOREST",
+      "WINDSWEPT_HILLS",
+      "MEADOW"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

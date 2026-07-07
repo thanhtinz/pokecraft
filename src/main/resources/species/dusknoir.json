@@ -1,0 +1,50 @@
+{
+  "id": "dusknoir",
+  "dex": 477,
+  "name": "Dusknoir",
+  "types": [
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 100,
+    "def": 135,
+    "spa": 65,
+    "spd": 135,
+    "spe": 45
+  },
+  "catchRate": 45,
+  "expYield": 263,
+  "modelId": "dusknoir",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "night_shade"
+    ],
+    "20": [
+      "shadow_ball"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

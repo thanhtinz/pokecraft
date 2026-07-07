@@ -1,0 +1,61 @@
+{
+  "id": "runerigus",
+  "dex": 867,
+  "name": "Runerigus",
+  "types": [
+    "GROUND",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 58,
+    "atk": 95,
+    "def": 145,
+    "spa": 50,
+    "spd": 105,
+    "spe": 30
+  },
+  "catchRate": 90,
+  "expYield": 169,
+  "modelId": "runerigus",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "48": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 7,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

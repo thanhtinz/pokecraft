@@ -1,0 +1,61 @@
+{
+  "id": "bouffalant",
+  "dex": 626,
+  "name": "Bouffalant",
+  "types": [
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 95,
+    "atk": 110,
+    "def": 95,
+    "spa": 40,
+    "spd": 95,
+    "spe": 55
+  },
+  "catchRate": 45,
+  "expYield": 172,
+  "modelId": "bouffalant",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "hyper_fang"
+    ],
+    "20": [
+      "mega_punch"
+    ],
+    "32": [
+      "body_slam"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "48": [
+      "hyper_beam"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

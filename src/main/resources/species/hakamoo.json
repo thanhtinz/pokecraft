@@ -1,0 +1,58 @@
+{
+  "id": "hakamoo",
+  "dex": 783,
+  "name": "Hakamo-o",
+  "types": [
+    "DRAGON",
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 75,
+    "def": 90,
+    "spa": 65,
+    "spd": 70,
+    "spe": 65
+  },
+  "catchRate": 45,
+  "expYield": 147,
+  "modelId": "hakamoo",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "low_kick"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "brick_break"
+    ],
+    "48": [
+      "dragon_claw"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 45,
+      "to": "kommoo",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

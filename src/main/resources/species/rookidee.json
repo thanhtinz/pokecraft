@@ -1,0 +1,61 @@
+{
+  "id": "rookidee",
+  "dex": 821,
+  "name": "Rookidee",
+  "types": [
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 38,
+    "atk": 47,
+    "def": 35,
+    "spa": 33,
+    "spd": 35,
+    "spe": 57
+  },
+  "catchRate": 255,
+  "expYield": 49,
+  "modelId": "rookidee",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "gust"
+    ],
+    "20": [
+      "wing_attack"
+    ],
+    "32": [
+      "drill_peck"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 18,
+      "to": "corvisquire",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "FOREST",
+      "WINDSWEPT_HILLS",
+      "MEADOW"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "skorupi",
+  "dex": 451,
+  "name": "Skorupi",
+  "types": [
+    "POISON",
+    "BUG"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 50,
+    "def": 90,
+    "spa": 30,
+    "spd": 55,
+    "spe": 65
+  },
+  "catchRate": 120,
+  "expYield": 66,
+  "modelId": "skorupi",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "pin_missile"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "sludge_bomb"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 40,
+      "to": "drapion",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

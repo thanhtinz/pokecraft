@@ -1,0 +1,52 @@
+{
+  "id": "armarouge",
+  "dex": 936,
+  "name": "Armarouge",
+  "types": [
+    "FIRE",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 60,
+    "def": 100,
+    "spa": 125,
+    "spd": 80,
+    "spe": 75
+  },
+  "catchRate": 25,
+  "expYield": 263,
+  "modelId": "armarouge",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

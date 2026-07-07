@@ -1,0 +1,57 @@
+{
+  "id": "munna",
+  "dex": 517,
+  "name": "Munna",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 76,
+    "atk": 25,
+    "def": 45,
+    "spa": 67,
+    "spd": 55,
+    "spe": 24
+  },
+  "catchRate": 190,
+  "expYield": 58,
+  "modelId": "munna",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "musharna",
+      "item": "moon_stone"
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "beheeyem",
+  "dex": 606,
+  "name": "Beheeyem",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 75,
+    "def": 75,
+    "spa": 125,
+    "spd": 95,
+    "spe": 40
+  },
+  "catchRate": 90,
+  "expYield": 170,
+  "modelId": "beheeyem",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mienfoo",
+  "dex": 619,
+  "name": "Mienfoo",
+  "types": [
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 85,
+    "def": 50,
+    "spa": 55,
+    "spd": 50,
+    "spe": 65
+  },
+  "catchRate": 180,
+  "expYield": 70,
+  "modelId": "mienfoo",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "low_kick"
+    ],
+    "20": [
+      "brick_break"
+    ],
+    "32": [
+      "cross_chop"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 50,
+      "to": "mienshao",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "WINDSWEPT_FOREST",
+      "STONY_SHORE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

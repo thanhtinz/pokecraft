@@ -1,0 +1,66 @@
+{
+  "id": "varoom",
+  "dex": 965,
+  "name": "Varoom",
+  "types": [
+    "STEEL",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 70,
+    "def": 63,
+    "spa": 30,
+    "spd": 45,
+    "spe": 47
+  },
+  "catchRate": 190,
+  "expYield": 60,
+  "modelId": "varoom",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "sludge_bomb"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 40,
+      "to": "revavroom",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

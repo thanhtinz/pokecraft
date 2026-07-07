@@ -1,0 +1,187 @@
+{
+  "id": "toxel",
+  "dex": 848,
+  "name": "Toxel",
+  "types": [
+    "ELECTRIC",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 38,
+    "def": 35,
+    "spa": 54,
+    "spd": 35,
+    "spe": 40
+  },
+  "catchRate": 75,
+  "expYield": 48,
+  "modelId": "toxel",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "spark"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "toxtricity",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 6,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

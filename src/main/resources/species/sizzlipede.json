@@ -1,0 +1,67 @@
+{
+  "id": "sizzlipede",
+  "dex": 850,
+  "name": "Sizzlipede",
+  "types": [
+    "FIRE",
+    "BUG"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 65,
+    "def": 45,
+    "spa": 50,
+    "spd": 50,
+    "spe": 45
+  },
+  "catchRate": 190,
+  "expYield": 61,
+  "modelId": "sizzlipede",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "flamethrower"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 28,
+      "to": "centiskorch",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

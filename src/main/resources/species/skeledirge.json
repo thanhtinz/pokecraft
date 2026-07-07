@@ -1,0 +1,52 @@
+{
+  "id": "skeledirge",
+  "dex": 911,
+  "name": "Skeledirge",
+  "types": [
+    "FIRE",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 104,
+    "atk": 75,
+    "def": 100,
+    "spa": 110,
+    "spd": 75,
+    "spe": 66
+  },
+  "catchRate": 45,
+  "expYield": 265,
+  "modelId": "skeledirge",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "ember"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "fire_spin"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "48": [
+      "fire_punch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

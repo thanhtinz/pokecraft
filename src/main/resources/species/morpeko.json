@@ -1,0 +1,61 @@
+{
+  "id": "morpeko",
+  "dex": 877,
+  "name": "Morpeko",
+  "types": [
+    "ELECTRIC",
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 58,
+    "atk": 95,
+    "def": 58,
+    "spa": 70,
+    "spd": 58,
+    "spe": 97
+  },
+  "catchRate": 180,
+  "expYield": 153,
+  "modelId": "morpeko",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "crunch"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "48": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "cetoddle",
+  "dex": 974,
+  "name": "Cetoddle",
+  "types": [
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 108,
+    "atk": 68,
+    "def": 45,
+    "spa": 30,
+    "spd": 40,
+    "spe": 43
+  },
+  "catchRate": 150,
+  "expYield": 67,
+  "modelId": "cetoddle",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "aurora_beam"
+    ],
+    "20": [
+      "ice_beam"
+    ],
+    "32": [
+      "blizzard"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "cetitan",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 12,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "rhyperior",
+  "dex": 464,
+  "name": "Rhyperior",
+  "types": [
+    "GROUND",
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 115,
+    "atk": 140,
+    "def": 130,
+    "spa": 55,
+    "spd": 55,
+    "spe": 40
+  },
+  "catchRate": 30,
+  "expYield": 268,
+  "modelId": "rhyperior",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "rock_throw"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "48": [
+      "stone_edge"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "orthworm",
+  "dex": 968,
+  "name": "Orthworm",
+  "types": [
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 85,
+    "def": 145,
+    "spa": 60,
+    "spd": 55,
+    "spe": 65
+  },
+  "catchRate": 25,
+  "expYield": 240,
+  "modelId": "orthworm",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "iron_head"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

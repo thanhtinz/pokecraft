@@ -1,0 +1,68 @@
+{
+  "id": "foongus",
+  "dex": 590,
+  "name": "Foongus",
+  "types": [
+    "GRASS",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 69,
+    "atk": 55,
+    "def": 45,
+    "spa": 55,
+    "spd": 55,
+    "spe": 15
+  },
+  "catchRate": 190,
+  "expYield": 59,
+  "modelId": "foongus",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 39,
+      "to": "amoonguss",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

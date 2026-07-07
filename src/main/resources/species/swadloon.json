@@ -1,0 +1,58 @@
+{
+  "id": "swadloon",
+  "dex": 541,
+  "name": "Swadloon",
+  "types": [
+    "BUG",
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 63,
+    "def": 90,
+    "spa": 50,
+    "spd": 80,
+    "spe": 42
+  },
+  "catchRate": 120,
+  "expYield": 133,
+  "modelId": "swadloon",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "petal_dance"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "leavanny",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

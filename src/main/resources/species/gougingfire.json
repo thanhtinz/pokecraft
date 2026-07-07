@@ -1,0 +1,61 @@
+{
+  "id": "gougingfire",
+  "dex": 1020,
+  "name": "Gouging Fire",
+  "types": [
+    "FIRE",
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 105,
+    "atk": 115,
+    "def": 121,
+    "spa": 65,
+    "spd": 93,
+    "spe": 91
+  },
+  "catchRate": 10,
+  "expYield": 295,
+  "modelId": "gougingfire",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "dragon_claw"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

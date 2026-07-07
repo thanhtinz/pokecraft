@@ -1,0 +1,64 @@
+{
+  "id": "oshawott",
+  "dex": 501,
+  "name": "Oshawott",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 55,
+    "def": 45,
+    "spa": 63,
+    "spd": 45,
+    "spe": 45
+  },
+  "catchRate": 45,
+  "expYield": 62,
+  "modelId": "oshawott",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 17,
+      "to": "dewott",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "golett",
+  "dex": 622,
+  "name": "Golett",
+  "types": [
+    "GROUND",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 59,
+    "atk": 74,
+    "def": 50,
+    "spa": 35,
+    "spd": 50,
+    "spe": 35
+  },
+  "catchRate": 190,
+  "expYield": 61,
+  "modelId": "golett",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 43,
+      "to": "golurk",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

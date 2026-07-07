@@ -1,0 +1,52 @@
+{
+  "id": "lunala",
+  "dex": 792,
+  "name": "Lunala",
+  "types": [
+    "PSYCHIC",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 137,
+    "atk": 113,
+    "def": 89,
+    "spa": 137,
+    "spd": 107,
+    "spe": 97
+  },
+  "catchRate": 3,
+  "expYield": 340,
+  "modelId": "lunala",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

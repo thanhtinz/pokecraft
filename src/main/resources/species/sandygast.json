@@ -1,0 +1,66 @@
+{
+  "id": "sandygast",
+  "dex": 769,
+  "name": "Sandygast",
+  "types": [
+    "GHOST",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 55,
+    "def": 80,
+    "spa": 70,
+    "spd": 45,
+    "spe": 15
+  },
+  "catchRate": 140,
+  "expYield": 64,
+  "modelId": "sandygast",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 42,
+      "to": "palossand",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 11,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

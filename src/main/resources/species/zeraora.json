@@ -1,0 +1,45 @@
+{
+  "id": "zeraora",
+  "dex": 807,
+  "name": "Zeraora",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 88,
+    "atk": 112,
+    "def": 75,
+    "spa": 102,
+    "spd": 80,
+    "spe": 143
+  },
+  "catchRate": 3,
+  "expYield": 300,
+  "modelId": "zeraora",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

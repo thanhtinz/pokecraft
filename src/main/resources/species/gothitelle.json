@@ -1,0 +1,42 @@
+{
+  "id": "gothitelle",
+  "dex": 576,
+  "name": "Gothitelle",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 55,
+    "def": 95,
+    "spa": 95,
+    "spd": 110,
+    "spe": 65
+  },
+  "catchRate": 50,
+  "expYield": 245,
+  "modelId": "gothitelle",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

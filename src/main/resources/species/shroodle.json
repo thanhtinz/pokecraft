@@ -1,0 +1,67 @@
+{
+  "id": "shroodle",
+  "dex": 944,
+  "name": "Shroodle",
+  "types": [
+    "POISON",
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 65,
+    "def": 35,
+    "spa": 40,
+    "spd": 35,
+    "spe": 75
+  },
+  "catchRate": 190,
+  "expYield": 58,
+  "modelId": "shroodle",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 28,
+      "to": "grafaiai",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

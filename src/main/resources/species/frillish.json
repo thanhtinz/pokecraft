@@ -1,0 +1,68 @@
+{
+  "id": "frillish",
+  "dex": 592,
+  "name": "Frillish",
+  "types": [
+    "WATER",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 40,
+    "def": 50,
+    "spa": 65,
+    "spd": 85,
+    "spe": 40
+  },
+  "catchRate": 190,
+  "expYield": 67,
+  "modelId": "frillish",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 40,
+      "to": "jellicent",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

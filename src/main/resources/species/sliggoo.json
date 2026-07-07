@@ -1,0 +1,51 @@
+{
+  "id": "sliggoo",
+  "dex": 705,
+  "name": "Sliggoo",
+  "types": [
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 68,
+    "atk": 75,
+    "def": 53,
+    "spa": 83,
+    "spd": 113,
+    "spe": 60
+  },
+  "catchRate": 45,
+  "expYield": 158,
+  "modelId": "sliggoo",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "dragon_breath"
+    ],
+    "20": [
+      "dragon_claw"
+    ],
+    "32": [
+      "outrage"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 50,
+      "to": "goodra",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

@@ -1,0 +1,45 @@
+{
+  "id": "goodra",
+  "dex": 706,
+  "name": "Goodra",
+  "types": [
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 100,
+    "def": 70,
+    "spa": 110,
+    "spd": 150,
+    "spe": 80
+  },
+  "catchRate": 45,
+  "expYield": 300,
+  "modelId": "goodra",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "dragon_breath"
+    ],
+    "20": [
+      "dragon_claw"
+    ],
+    "32": [
+      "outrage"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

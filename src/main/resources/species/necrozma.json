@@ -1,0 +1,42 @@
+{
+  "id": "necrozma",
+  "dex": 800,
+  "name": "Necrozma",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 97,
+    "atk": 107,
+    "def": 101,
+    "spa": 127,
+    "spd": 89,
+    "spe": 79
+  },
+  "catchRate": 3,
+  "expYield": 300,
+  "modelId": "necrozma",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

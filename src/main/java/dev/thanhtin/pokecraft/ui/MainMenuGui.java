@@ -148,7 +148,7 @@ public class MainMenuGui implements Listener {
                 List.of("Top catchers, richest,", "battle and duel winners")));
 
         inv.setItem(SLOT_DEX, item(Material.BOOK, "Pokedex", NamedTextColor.RED,
-                List.of("Your seen/caught progress", "for all 151 pokemon")));
+                List.of("Your seen/caught progress", "across the whole dex")));
 
         String proposer = plugin.marriage().pendingProposerName(player);
         UUID spouse = plugin.marriage().spouseOf(player.getUniqueId());

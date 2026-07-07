@@ -1,0 +1,52 @@
+{
+  "id": "heatran",
+  "dex": 485,
+  "name": "Heatran",
+  "types": [
+    "FIRE",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 91,
+    "atk": 90,
+    "def": 106,
+    "spa": 130,
+    "spd": 106,
+    "spe": 77
+  },
+  "catchRate": 3,
+  "expYield": 300,
+  "modelId": "heatran",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "ember"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "fire_spin"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "flamethrower"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

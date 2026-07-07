@@ -1,0 +1,46 @@
+{
+  "id": "tinkaton",
+  "dex": 959,
+  "name": "Tinkaton",
+  "types": [
+    "FAIRY",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 75,
+    "def": 77,
+    "spa": 70,
+    "spd": 105,
+    "spe": 94
+  },
+  "catchRate": 45,
+  "expYield": 253,
+  "modelId": "tinkaton",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sing"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "fairy_wind"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "dazzling_gleam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

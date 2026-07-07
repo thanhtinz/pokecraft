@@ -1,0 +1,62 @@
+{
+  "id": "relicanth",
+  "dex": 369,
+  "name": "Relicanth",
+  "types": [
+    "WATER",
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 100,
+    "atk": 90,
+    "def": 130,
+    "spa": 45,
+    "spd": 65,
+    "spe": 55
+  },
+  "catchRate": 25,
+  "expYield": 170,
+  "modelId": "relicanth",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

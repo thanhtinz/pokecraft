@@ -1,0 +1,55 @@
+{
+  "id": "dottler",
+  "dex": 825,
+  "name": "Dottler",
+  "types": [
+    "BUG",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 35,
+    "def": 80,
+    "spa": 50,
+    "spd": 90,
+    "spe": 30
+  },
+  "catchRate": 120,
+  "expYield": 117,
+  "modelId": "dottler",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "orbeetle",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

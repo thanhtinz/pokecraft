@@ -1,0 +1,52 @@
+{
+  "id": "chandelure",
+  "dex": 609,
+  "name": "Chandelure",
+  "types": [
+    "GHOST",
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 55,
+    "def": 90,
+    "spa": 145,
+    "spd": 90,
+    "spe": 80
+  },
+  "catchRate": 45,
+  "expYield": 260,
+  "modelId": "chandelure",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

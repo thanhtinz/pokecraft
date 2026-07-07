@@ -1,0 +1,54 @@
+{
+  "id": "plusle",
+  "dex": 311,
+  "name": "Plusle",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 50,
+    "def": 40,
+    "spa": 85,
+    "spd": 75,
+    "spe": 95
+  },
+  "catchRate": 200,
+  "expYield": 142,
+  "modelId": "plusle",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 16,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

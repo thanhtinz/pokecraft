@@ -1,0 +1,51 @@
+{
+  "id": "luxio",
+  "dex": 404,
+  "name": "Luxio",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 85,
+    "def": 49,
+    "spa": 60,
+    "spd": 49,
+    "spe": 60
+  },
+  "catchRate": 120,
+  "expYield": 127,
+  "modelId": "luxio",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "luxray",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

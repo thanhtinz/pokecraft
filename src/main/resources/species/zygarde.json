@@ -1,0 +1,52 @@
+{
+  "id": "zygarde",
+  "dex": 718,
+  "name": "Zygarde",
+  "types": [
+    "DRAGON",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 108,
+    "atk": 100,
+    "def": 121,
+    "spa": 81,
+    "spd": 95,
+    "spe": 95
+  },
+  "catchRate": 3,
+  "expYield": 300,
+  "modelId": "zygarde",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "dragon_breath"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "dragon_claw"
+    ],
+    "48": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

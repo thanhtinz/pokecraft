@@ -1,0 +1,60 @@
+{
+  "id": "riolu",
+  "dex": 447,
+  "name": "Riolu",
+  "types": [
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 70,
+    "def": 40,
+    "spa": 35,
+    "spd": 40,
+    "spe": 60
+  },
+  "catchRate": 75,
+  "expYield": 57,
+  "modelId": "riolu",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "low_kick"
+    ],
+    "20": [
+      "brick_break"
+    ],
+    "32": [
+      "cross_chop"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "lucario",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "WINDSWEPT_FOREST",
+      "STONY_SHORE"
+    ],
+    "weight": 6,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

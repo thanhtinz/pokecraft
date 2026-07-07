@@ -1,0 +1,68 @@
+{
+  "id": "ducklett",
+  "dex": 580,
+  "name": "Ducklett",
+  "types": [
+    "WATER",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 62,
+    "atk": 44,
+    "def": 50,
+    "spa": 44,
+    "spd": 50,
+    "spe": 55
+  },
+  "catchRate": 190,
+  "expYield": 61,
+  "modelId": "ducklett",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 35,
+      "to": "swanna",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

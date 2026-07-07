@@ -1,0 +1,59 @@
+{
+  "id": "dewott",
+  "dex": 502,
+  "name": "Dewott",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 75,
+    "def": 60,
+    "spa": 83,
+    "spd": 60,
+    "spe": 60
+  },
+  "catchRate": 45,
+  "expYield": 145,
+  "modelId": "dewott",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 36,
+      "to": "samurott",
+      "item": null
+    },
+    {
+      "level": 36,
+      "to": "samurott",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

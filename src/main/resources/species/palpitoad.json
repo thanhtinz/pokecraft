@@ -1,0 +1,58 @@
+{
+  "id": "palpitoad",
+  "dex": 536,
+  "name": "Palpitoad",
+  "types": [
+    "WATER",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 65,
+    "def": 55,
+    "spa": 65,
+    "spd": 55,
+    "spe": 69
+  },
+  "catchRate": 120,
+  "expYield": 134,
+  "modelId": "palpitoad",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "earthquake"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 36,
+      "to": "seismitoad",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

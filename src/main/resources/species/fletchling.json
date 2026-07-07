@@ -1,0 +1,68 @@
+{
+  "id": "fletchling",
+  "dex": 661,
+  "name": "Fletchling",
+  "types": [
+    "NORMAL",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 50,
+    "def": 43,
+    "spa": 40,
+    "spd": 38,
+    "spe": 62
+  },
+  "catchRate": 255,
+  "expYield": 56,
+  "modelId": "fletchling",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 17,
+      "to": "fletchinder",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

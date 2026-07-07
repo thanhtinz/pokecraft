@@ -1,0 +1,51 @@
+{
+  "id": "corvisquire",
+  "dex": 822,
+  "name": "Corvisquire",
+  "types": [
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 68,
+    "atk": 67,
+    "def": 55,
+    "spa": 43,
+    "spd": 55,
+    "spe": 77
+  },
+  "catchRate": 120,
+  "expYield": 128,
+  "modelId": "corvisquire",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "gust"
+    ],
+    "20": [
+      "wing_attack"
+    ],
+    "32": [
+      "drill_peck"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 38,
+      "to": "corviknight",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

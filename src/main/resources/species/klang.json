@@ -1,0 +1,45 @@
+{
+  "id": "klang",
+  "dex": 600,
+  "name": "Klang",
+  "types": [
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 80,
+    "def": 95,
+    "spa": 70,
+    "spd": 85,
+    "spe": 50
+  },
+  "catchRate": 60,
+  "expYield": 154,
+  "modelId": "klang",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "iron_head"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 49,
+      "to": "klinklang",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

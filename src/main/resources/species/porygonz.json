@@ -1,0 +1,61 @@
+{
+  "id": "porygonz",
+  "dex": 474,
+  "name": "Porygon-Z",
+  "types": [
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 80,
+    "def": 70,
+    "spa": 135,
+    "spd": 75,
+    "spe": 90
+  },
+  "catchRate": 30,
+  "expYield": 268,
+  "modelId": "porygonz",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "hyper_fang"
+    ],
+    "20": [
+      "mega_punch"
+    ],
+    "32": [
+      "body_slam"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "48": [
+      "hyper_beam"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

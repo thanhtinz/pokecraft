@@ -1,0 +1,68 @@
+{
+  "id": "azurill",
+  "dex": 298,
+  "name": "Azurill",
+  "types": [
+    "NORMAL",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 20,
+    "def": 40,
+    "spa": 20,
+    "spd": 40,
+    "spe": 20
+  },
+  "catchRate": 150,
+  "expYield": 38,
+  "modelId": "azurill",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "fairy_wind"
+    ],
+    "20": [
+      "hyper_fang"
+    ],
+    "32": [
+      "dazzling_gleam"
+    ],
+    "40": [
+      "mega_punch"
+    ],
+    "48": [
+      "body_slam"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "marill",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 12,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

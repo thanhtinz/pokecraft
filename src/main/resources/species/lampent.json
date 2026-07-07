@@ -1,0 +1,58 @@
+{
+  "id": "lampent",
+  "dex": 608,
+  "name": "Lampent",
+  "types": [
+    "GHOST",
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 40,
+    "def": 60,
+    "spa": 95,
+    "spd": 60,
+    "spe": 55
+  },
+  "catchRate": 90,
+  "expYield": 130,
+  "modelId": "lampent",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "ember"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "fire_spin"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "48": [
+      "fire_punch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "chandelure",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

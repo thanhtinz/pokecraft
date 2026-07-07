@@ -1,0 +1,63 @@
+{
+  "id": "tepig",
+  "dex": 498,
+  "name": "Tepig",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 63,
+    "def": 45,
+    "spa": 45,
+    "spd": 45,
+    "spe": 45
+  },
+  "catchRate": 45,
+  "expYield": 62,
+  "modelId": "tepig",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 17,
+      "to": "pignite",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

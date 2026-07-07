@@ -1,0 +1,52 @@
+{
+  "id": "salazzle",
+  "dex": 758,
+  "name": "Salazzle",
+  "types": [
+    "POISON",
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 68,
+    "atk": 64,
+    "def": 60,
+    "spa": 111,
+    "spd": 60,
+    "spe": 117
+  },
+  "catchRate": 45,
+  "expYield": 168,
+  "modelId": "salazzle",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "ember"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "fire_spin"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "fire_punch"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,60 @@
+{
+  "id": "dhelmise",
+  "dex": 781,
+  "name": "Dhelmise",
+  "types": [
+    "GHOST",
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 131,
+    "def": 100,
+    "spa": 86,
+    "spd": 90,
+    "spe": 40
+  },
+  "catchRate": 25,
+  "expYield": 181,
+  "modelId": "dhelmise",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

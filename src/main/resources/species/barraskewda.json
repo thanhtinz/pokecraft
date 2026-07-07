@@ -1,0 +1,48 @@
+{
+  "id": "barraskewda",
+  "dex": 847,
+  "name": "Barraskewda",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 61,
+    "atk": 123,
+    "def": 60,
+    "spa": 60,
+    "spd": 50,
+    "spe": 136
+  },
+  "catchRate": 60,
+  "expYield": 172,
+  "modelId": "barraskewda",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

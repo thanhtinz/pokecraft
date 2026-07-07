@@ -1,0 +1,68 @@
+{
+  "id": "mantyke",
+  "dex": 458,
+  "name": "Mantyke",
+  "types": [
+    "WATER",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 20,
+    "def": 50,
+    "spa": 60,
+    "spd": 120,
+    "spe": 50
+  },
+  "catchRate": 25,
+  "expYield": 69,
+  "modelId": "mantyke",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "mantine",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

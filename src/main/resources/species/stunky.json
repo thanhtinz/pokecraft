@@ -1,0 +1,67 @@
+{
+  "id": "stunky",
+  "dex": 434,
+  "name": "Stunky",
+  "types": [
+    "POISON",
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 63,
+    "atk": 63,
+    "def": 47,
+    "spa": 41,
+    "spd": 41,
+    "spe": 74
+  },
+  "catchRate": 225,
+  "expYield": 66,
+  "modelId": "stunky",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "bite"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "crunch"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "sludge_bomb"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 34,
+      "to": "skuntank",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 18,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

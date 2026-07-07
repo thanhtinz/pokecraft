@@ -1,0 +1,63 @@
+{
+  "id": "bronzor",
+  "dex": 436,
+  "name": "Bronzor",
+  "types": [
+    "STEEL",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 57,
+    "atk": 24,
+    "def": 86,
+    "spa": 24,
+    "spd": 86,
+    "spe": 23
+  },
+  "catchRate": 255,
+  "expYield": 60,
+  "modelId": "bronzor",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 33,
+      "to": "bronzong",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

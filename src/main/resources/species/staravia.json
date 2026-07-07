@@ -1,0 +1,58 @@
+{
+  "id": "staravia",
+  "dex": 397,
+  "name": "Staravia",
+  "types": [
+    "NORMAL",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 75,
+    "def": 50,
+    "spa": 40,
+    "spd": 40,
+    "spe": 80
+  },
+  "catchRate": 120,
+  "expYield": 119,
+  "modelId": "staravia",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 34,
+      "to": "staraptor",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

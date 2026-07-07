@@ -1,0 +1,66 @@
+{
+  "id": "duraludon",
+  "dex": 884,
+  "name": "Duraludon",
+  "types": [
+    "STEEL",
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 95,
+    "def": 115,
+    "spa": 120,
+    "spd": 50,
+    "spe": 85
+  },
+  "catchRate": 45,
+  "expYield": 187,
+  "modelId": "duraludon",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "dragon_claw"
+    ],
+    "48": [
+      "outrage"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "archaludon",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

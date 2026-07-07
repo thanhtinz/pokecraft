@@ -1,0 +1,67 @@
+{
+  "id": "dreepy",
+  "dex": 885,
+  "name": "Dreepy",
+  "types": [
+    "DRAGON",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 28,
+    "atk": 60,
+    "def": 30,
+    "spa": 40,
+    "spd": 30,
+    "spe": 82
+  },
+  "catchRate": 45,
+  "expYield": 54,
+  "modelId": "dreepy",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "48": [
+      "dragon_claw"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 50,
+      "to": "drakloak",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "JAGGED_PEAKS",
+      "FROZEN_PEAKS",
+      "STONY_PEAKS"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

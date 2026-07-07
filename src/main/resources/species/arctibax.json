@@ -1,0 +1,58 @@
+{
+  "id": "arctibax",
+  "dex": 997,
+  "name": "Arctibax",
+  "types": [
+    "DRAGON",
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 95,
+    "def": 66,
+    "spa": 45,
+    "spd": 65,
+    "spe": 62
+  },
+  "catchRate": 25,
+  "expYield": 148,
+  "modelId": "arctibax",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "aurora_beam"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "ice_beam"
+    ],
+    "48": [
+      "dragon_claw"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 54,
+      "to": "baxcalibur",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

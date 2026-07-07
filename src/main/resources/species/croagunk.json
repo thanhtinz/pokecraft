@@ -1,0 +1,67 @@
+{
+  "id": "croagunk",
+  "dex": 453,
+  "name": "Croagunk",
+  "types": [
+    "POISON",
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 48,
+    "atk": 61,
+    "def": 40,
+    "spa": 61,
+    "spd": 40,
+    "spe": 50
+  },
+  "catchRate": 140,
+  "expYield": 60,
+  "modelId": "croagunk",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "low_kick"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "brick_break"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 37,
+      "to": "toxicroak",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 11,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

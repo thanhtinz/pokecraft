@@ -1,0 +1,62 @@
+{
+  "id": "drampa",
+  "dex": 780,
+  "name": "Drampa",
+  "types": [
+    "NORMAL",
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 78,
+    "atk": 60,
+    "def": 85,
+    "spa": 135,
+    "spd": 91,
+    "spe": 36
+  },
+  "catchRate": 70,
+  "expYield": 170,
+  "modelId": "drampa",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "hyper_fang"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "mega_punch"
+    ],
+    "48": [
+      "dragon_claw"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 5,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

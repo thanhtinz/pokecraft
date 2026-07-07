@@ -1,0 +1,68 @@
+{
+  "id": "tirtouga",
+  "dex": 564,
+  "name": "Tirtouga",
+  "types": [
+    "WATER",
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 54,
+    "atk": 78,
+    "def": 103,
+    "spa": 53,
+    "spd": 45,
+    "spe": 22
+  },
+  "catchRate": 45,
+  "expYield": 71,
+  "modelId": "tirtouga",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "rock_throw"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 37,
+      "to": "carracosta",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

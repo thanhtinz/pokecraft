@@ -1,0 +1,57 @@
+{
+  "id": "mimikyu",
+  "dex": 778,
+  "name": "Mimikyu",
+  "types": [
+    "GHOST",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 90,
+    "def": 80,
+    "spa": 50,
+    "spd": 105,
+    "spe": 96
+  },
+  "catchRate": 45,
+  "expYield": 167,
+  "modelId": "mimikyu",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "fairy_wind"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "dazzling_gleam"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

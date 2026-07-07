@@ -1,0 +1,68 @@
+{
+  "id": "swablu",
+  "dex": 333,
+  "name": "Swablu",
+  "types": [
+    "NORMAL",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 40,
+    "def": 60,
+    "spa": 40,
+    "spd": 75,
+    "spe": 50
+  },
+  "catchRate": 255,
+  "expYield": 62,
+  "modelId": "swablu",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 35,
+      "to": "altaria",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

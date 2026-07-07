@@ -1,0 +1,60 @@
+{
+  "id": "gulpin",
+  "dex": 316,
+  "name": "Gulpin",
+  "types": [
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 43,
+    "def": 53,
+    "spa": 43,
+    "spd": 53,
+    "spe": 40
+  },
+  "catchRate": 225,
+  "expYield": 60,
+  "modelId": "gulpin",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "acid"
+    ],
+    "20": [
+      "sludge"
+    ],
+    "32": [
+      "sludge_bomb"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 26,
+      "to": "swalot",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SWAMP",
+      "MANGROVE_SWAMP",
+      "DARK_FOREST"
+    ],
+    "weight": 18,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

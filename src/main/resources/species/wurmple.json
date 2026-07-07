@@ -1,0 +1,60 @@
+{
+  "id": "wurmple",
+  "dex": 265,
+  "name": "Wurmple",
+  "types": [
+    "BUG"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 45,
+    "def": 35,
+    "spa": 20,
+    "spd": 30,
+    "spe": 20
+  },
+  "catchRate": 255,
+  "expYield": 56,
+  "modelId": "wurmple",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "pin_missile"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 7,
+      "to": "silcoon",
+      "item": null
+    },
+    {
+      "level": 7,
+      "to": "cascoon",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

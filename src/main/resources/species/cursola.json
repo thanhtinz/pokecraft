@@ -1,0 +1,50 @@
+{
+  "id": "cursola",
+  "dex": 864,
+  "name": "Cursola",
+  "types": [
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 95,
+    "def": 50,
+    "spa": 145,
+    "spd": 130,
+    "spe": 30
+  },
+  "catchRate": 30,
+  "expYield": 179,
+  "modelId": "cursola",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "night_shade"
+    ],
+    "20": [
+      "shadow_ball"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

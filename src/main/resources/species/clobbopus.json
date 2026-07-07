@@ -1,0 +1,60 @@
+{
+  "id": "clobbopus",
+  "dex": 852,
+  "name": "Clobbopus",
+  "types": [
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 68,
+    "def": 60,
+    "spa": 50,
+    "spd": 50,
+    "spe": 32
+  },
+  "catchRate": 180,
+  "expYield": 62,
+  "modelId": "clobbopus",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "low_kick"
+    ],
+    "20": [
+      "brick_break"
+    ],
+    "32": [
+      "cross_chop"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "grapploct",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "WINDSWEPT_FOREST",
+      "STONY_SHORE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

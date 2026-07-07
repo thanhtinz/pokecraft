@@ -1,0 +1,49 @@
+{
+  "id": "gardevoir",
+  "dex": 282,
+  "name": "Gardevoir",
+  "types": [
+    "PSYCHIC",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 68,
+    "atk": 65,
+    "def": 65,
+    "spa": 125,
+    "spd": 115,
+    "spe": 80
+  },
+  "catchRate": 45,
+  "expYield": 259,
+  "modelId": "gardevoir",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "fairy_wind"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "dazzling_gleam"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

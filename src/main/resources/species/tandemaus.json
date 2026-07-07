@@ -1,0 +1,67 @@
+{
+  "id": "tandemaus",
+  "dex": 924,
+  "name": "Tandemaus",
+  "types": [
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 50,
+    "def": 45,
+    "spa": 40,
+    "spd": 45,
+    "spe": 75
+  },
+  "catchRate": 150,
+  "expYield": 61,
+  "modelId": "tandemaus",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "hyper_fang"
+    ],
+    "20": [
+      "mega_punch"
+    ],
+    "32": [
+      "body_slam"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "48": [
+      "hyper_beam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 25,
+      "to": "maushold",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 12,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

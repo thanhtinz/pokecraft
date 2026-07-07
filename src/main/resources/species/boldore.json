@@ -1,0 +1,48 @@
+{
+  "id": "boldore",
+  "dex": 525,
+  "name": "Boldore",
+  "types": [
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 105,
+    "def": 105,
+    "spa": 50,
+    "spd": 40,
+    "spe": 20
+  },
+  "catchRate": 120,
+  "expYield": 137,
+  "modelId": "boldore",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "rock_slide"
+    ],
+    "20": [
+      "stone_edge"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 37,
+      "to": "gigalith",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

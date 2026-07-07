@@ -1,0 +1,62 @@
+{
+  "id": "mrrime",
+  "dex": 866,
+  "name": "Mr. Rime",
+  "types": [
+    "ICE",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 85,
+    "def": 75,
+    "spa": 110,
+    "spd": 100,
+    "spe": 70
+  },
+  "catchRate": 45,
+  "expYield": 182,
+  "modelId": "mrrime",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "aurora_beam"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "ice_beam"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

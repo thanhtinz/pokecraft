@@ -1,0 +1,45 @@
+{
+  "id": "vanilluxe",
+  "dex": 584,
+  "name": "Vanilluxe",
+  "types": [
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 71,
+    "atk": 95,
+    "def": 85,
+    "spa": 110,
+    "spd": 95,
+    "spe": 79
+  },
+  "catchRate": 45,
+  "expYield": 268,
+  "modelId": "vanilluxe",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "aurora_beam"
+    ],
+    "20": [
+      "ice_beam"
+    ],
+    "32": [
+      "blizzard"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

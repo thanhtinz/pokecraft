@@ -1,0 +1,68 @@
+{
+  "id": "smoliv",
+  "dex": 928,
+  "name": "Smoliv",
+  "types": [
+    "GRASS",
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 41,
+    "atk": 35,
+    "def": 45,
+    "spa": 58,
+    "spd": 51,
+    "spe": 30
+  },
+  "catchRate": 255,
+  "expYield": 52,
+  "modelId": "smoliv",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 25,
+      "to": "dolliv",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

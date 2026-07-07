@@ -1,0 +1,60 @@
+{
+  "id": "jangmoo",
+  "dex": 782,
+  "name": "Jangmo-o",
+  "types": [
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 55,
+    "def": 65,
+    "spa": 45,
+    "spd": 45,
+    "spe": 45
+  },
+  "catchRate": 45,
+  "expYield": 60,
+  "modelId": "jangmoo",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "dragon_breath"
+    ],
+    "20": [
+      "dragon_claw"
+    ],
+    "32": [
+      "outrage"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 35,
+      "to": "hakamoo",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "JAGGED_PEAKS",
+      "FROZEN_PEAKS",
+      "STONY_PEAKS"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "glimmora",
+  "dex": 970,
+  "name": "Glimmora",
+  "types": [
+    "ROCK",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 83,
+    "atk": 55,
+    "def": 90,
+    "spa": 130,
+    "spd": 81,
+    "spe": 86
+  },
+  "catchRate": 25,
+  "expYield": 184,
+  "modelId": "glimmora",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

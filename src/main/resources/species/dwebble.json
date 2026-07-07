@@ -1,0 +1,65 @@
+{
+  "id": "dwebble",
+  "dex": 557,
+  "name": "Dwebble",
+  "types": [
+    "BUG",
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 65,
+    "def": 85,
+    "spa": 35,
+    "spd": 35,
+    "spe": 55
+  },
+  "catchRate": 190,
+  "expYield": 65,
+  "modelId": "dwebble",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 34,
+      "to": "crustle",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

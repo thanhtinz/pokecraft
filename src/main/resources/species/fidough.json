@@ -1,0 +1,54 @@
+{
+  "id": "fidough",
+  "dex": 926,
+  "name": "Fidough",
+  "types": [
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 37,
+    "atk": 55,
+    "def": 70,
+    "spa": 30,
+    "spd": 55,
+    "spe": 65
+  },
+  "catchRate": 190,
+  "expYield": 62,
+  "modelId": "fidough",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sing"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "dazzling_gleam"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 26,
+      "to": "dachsbun",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MEADOW"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

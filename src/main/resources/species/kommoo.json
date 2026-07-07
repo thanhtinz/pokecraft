@@ -1,0 +1,52 @@
+{
+  "id": "kommoo",
+  "dex": 784,
+  "name": "Kommo-o",
+  "types": [
+    "DRAGON",
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 110,
+    "def": 125,
+    "spa": 100,
+    "spd": 105,
+    "spe": 85
+  },
+  "catchRate": 45,
+  "expYield": 300,
+  "modelId": "kommoo",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "karate_chop"
+    ],
+    "20": [
+      "dragon_breath"
+    ],
+    "32": [
+      "low_kick"
+    ],
+    "40": [
+      "dragon_claw"
+    ],
+    "48": [
+      "brick_break"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

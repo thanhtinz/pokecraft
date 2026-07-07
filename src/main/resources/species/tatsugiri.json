@@ -1,0 +1,61 @@
+{
+  "id": "tatsugiri",
+  "dex": 978,
+  "name": "Tatsugiri",
+  "types": [
+    "DRAGON",
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 68,
+    "atk": 50,
+    "def": 60,
+    "spa": 120,
+    "spd": 95,
+    "spe": 82
+  },
+  "catchRate": 100,
+  "expYield": 166,
+  "modelId": "tatsugiri",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "dragon_breath"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "dragon_claw"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "JAGGED_PEAKS",
+      "FROZEN_PEAKS",
+      "STONY_PEAKS"
+    ],
+    "weight": 8,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "nuzleaf",
+  "dex": 274,
+  "name": "Nuzleaf",
+  "types": [
+    "GRASS",
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 70,
+    "def": 40,
+    "spa": 60,
+    "spd": 40,
+    "spe": 60
+  },
+  "catchRate": 120,
+  "expYield": 119,
+  "modelId": "nuzleaf",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "bite"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "crunch"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "petal_dance"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "shiftry",
+      "item": "leaf_stone"
+    }
+  ],
+  "spawn": null
+}

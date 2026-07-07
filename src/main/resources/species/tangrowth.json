@@ -1,0 +1,58 @@
+{
+  "id": "tangrowth",
+  "dex": 465,
+  "name": "Tangrowth",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 100,
+    "atk": 100,
+    "def": 125,
+    "spa": 110,
+    "spd": 50,
+    "spe": 50
+  },
+  "catchRate": 30,
+  "expYield": 187,
+  "modelId": "tangrowth",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

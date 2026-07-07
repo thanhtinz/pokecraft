@@ -1,0 +1,61 @@
+{
+  "id": "tinkatink",
+  "dex": 957,
+  "name": "Tinkatink",
+  "types": [
+    "FAIRY",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 45,
+    "def": 45,
+    "spa": 35,
+    "spd": 64,
+    "spe": 58
+  },
+  "catchRate": 190,
+  "expYield": 59,
+  "modelId": "tinkatink",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sing"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "fairy_wind"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "dazzling_gleam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 24,
+      "to": "tinkatuff",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MEADOW"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

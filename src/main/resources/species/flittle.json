@@ -1,0 +1,57 @@
+{
+  "id": "flittle",
+  "dex": 955,
+  "name": "Flittle",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 30,
+    "atk": 35,
+    "def": 30,
+    "spa": 55,
+    "spd": 30,
+    "spe": 75
+  },
+  "catchRate": 120,
+  "expYield": 51,
+  "modelId": "flittle",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 35,
+      "to": "espathra",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "elgyem",
+  "dex": 605,
+  "name": "Elgyem",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 55,
+    "def": 55,
+    "spa": 85,
+    "spd": 55,
+    "spe": 30
+  },
+  "catchRate": 255,
+  "expYield": 67,
+  "modelId": "elgyem",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 42,
+      "to": "beheeyem",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "medicham",
+  "dex": 308,
+  "name": "Medicham",
+  "types": [
+    "FIGHTING",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 60,
+    "def": 75,
+    "spa": 60,
+    "spd": 75,
+    "spe": 80
+  },
+  "catchRate": 90,
+  "expYield": 144,
+  "modelId": "medicham",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "low_kick"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "brick_break"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

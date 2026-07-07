@@ -1,0 +1,58 @@
+{
+  "id": "wishiwashi",
+  "dex": 746,
+  "name": "Wishiwashi",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 20,
+    "def": 20,
+    "spa": 25,
+    "spd": 25,
+    "spe": 40
+  },
+  "catchRate": 60,
+  "expYield": 61,
+  "modelId": "wishiwashi",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 5,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

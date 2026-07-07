@@ -1,0 +1,39 @@
+{
+  "id": "aromatisse",
+  "dex": 683,
+  "name": "Aromatisse",
+  "types": [
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 101,
+    "atk": 72,
+    "def": 72,
+    "spa": 99,
+    "spd": 89,
+    "spe": 29
+  },
+  "catchRate": 140,
+  "expYield": 162,
+  "modelId": "aromatisse",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sing"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "dazzling_gleam"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

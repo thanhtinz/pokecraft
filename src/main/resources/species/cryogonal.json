@@ -1,0 +1,55 @@
+{
+  "id": "cryogonal",
+  "dex": 615,
+  "name": "Cryogonal",
+  "types": [
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 50,
+    "def": 50,
+    "spa": 95,
+    "spd": 135,
+    "spe": 105
+  },
+  "catchRate": 25,
+  "expYield": 180,
+  "modelId": "cryogonal",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "aurora_beam"
+    ],
+    "20": [
+      "ice_beam"
+    ],
+    "32": [
+      "blizzard"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

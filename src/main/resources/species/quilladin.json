@@ -1,0 +1,54 @@
+{
+  "id": "quilladin",
+  "dex": 651,
+  "name": "Quilladin",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 61,
+    "atk": 78,
+    "def": 95,
+    "spa": 56,
+    "spd": 58,
+    "spe": 57
+  },
+  "catchRate": 45,
+  "expYield": 142,
+  "modelId": "quilladin",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 36,
+      "to": "chesnaught",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

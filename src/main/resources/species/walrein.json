@@ -1,0 +1,52 @@
+{
+  "id": "walrein",
+  "dex": 365,
+  "name": "Walrein",
+  "types": [
+    "ICE",
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 110,
+    "atk": 80,
+    "def": 90,
+    "spa": 95,
+    "spd": 90,
+    "spe": 65
+  },
+  "catchRate": 45,
+  "expYield": 265,
+  "modelId": "walrein",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "ice_shard"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "aurora_beam"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "ice_beam"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

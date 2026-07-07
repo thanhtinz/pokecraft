@@ -1,0 +1,53 @@
+{
+  "id": "klink",
+  "dex": 599,
+  "name": "Klink",
+  "types": [
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 55,
+    "def": 70,
+    "spa": 45,
+    "spd": 60,
+    "spe": 30
+  },
+  "catchRate": 130,
+  "expYield": 60,
+  "modelId": "klink",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "iron_head"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 38,
+      "to": "klang",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

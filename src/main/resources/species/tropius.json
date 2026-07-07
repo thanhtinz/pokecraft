@@ -1,0 +1,62 @@
+{
+  "id": "tropius",
+  "dex": 357,
+  "name": "Tropius",
+  "types": [
+    "GRASS",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 99,
+    "atk": 68,
+    "def": 83,
+    "spa": 72,
+    "spd": 87,
+    "spe": 51
+  },
+  "catchRate": 200,
+  "expYield": 161,
+  "modelId": "tropius",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 16,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

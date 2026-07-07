@@ -1,0 +1,52 @@
+{
+  "id": "klawf",
+  "dex": 950,
+  "name": "Klawf",
+  "types": [
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 100,
+    "def": 115,
+    "spa": 35,
+    "spd": 55,
+    "spe": 75
+  },
+  "catchRate": 120,
+  "expYield": 158,
+  "modelId": "klawf",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "rock_slide"
+    ],
+    "20": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

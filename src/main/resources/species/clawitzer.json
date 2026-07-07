@@ -1,0 +1,48 @@
+{
+  "id": "clawitzer",
+  "dex": 693,
+  "name": "Clawitzer",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 71,
+    "atk": 73,
+    "def": 88,
+    "spa": 120,
+    "spd": 89,
+    "spe": 59
+  },
+  "catchRate": 55,
+  "expYield": 100,
+  "modelId": "clawitzer",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

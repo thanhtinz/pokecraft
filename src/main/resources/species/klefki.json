@@ -1,0 +1,54 @@
+{
+  "id": "klefki",
+  "dex": 707,
+  "name": "Klefki",
+  "types": [
+    "STEEL",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 57,
+    "atk": 80,
+    "def": 91,
+    "spa": 80,
+    "spd": 87,
+    "spe": 75
+  },
+  "catchRate": 75,
+  "expYield": 165,
+  "modelId": "klefki",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "dazzling_gleam"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 6,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "steenee",
+  "dex": 762,
+  "name": "Steenee",
+  "types": [
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 52,
+    "atk": 40,
+    "def": 48,
+    "spa": 40,
+    "spd": 48,
+    "spe": 62
+  },
+  "catchRate": 120,
+  "expYield": 102,
+  "modelId": "steenee",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "razor_leaf"
+    ],
+    "20": [
+      "seed_bomb"
+    ],
+    "32": [
+      "petal_dance"
+    ],
+    "40": [
+      "solar_beam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "tsareena",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

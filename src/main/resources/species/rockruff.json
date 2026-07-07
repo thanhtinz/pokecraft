@@ -1,0 +1,63 @@
+{
+  "id": "rockruff",
+  "dex": 744,
+  "name": "Rockruff",
+  "types": [
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 65,
+    "def": 40,
+    "spa": 30,
+    "spd": 40,
+    "spe": 60
+  },
+  "catchRate": 190,
+  "expYield": 56,
+  "modelId": "rockruff",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "rock_slide"
+    ],
+    "20": [
+      "stone_edge"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 25,
+      "to": "lycanroc",
+      "item": null
+    },
+    {
+      "level": 25,
+      "to": "lycanroc",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "woobat",
+  "dex": 527,
+  "name": "Woobat",
+  "types": [
+    "PSYCHIC",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 45,
+    "def": 43,
+    "spa": 55,
+    "spd": 43,
+    "spe": 72
+  },
+  "catchRate": 190,
+  "expYield": 65,
+  "modelId": "woobat",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "swoobat",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

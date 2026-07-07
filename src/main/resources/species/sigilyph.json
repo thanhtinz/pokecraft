@@ -1,0 +1,61 @@
+{
+  "id": "sigilyph",
+  "dex": 561,
+  "name": "Sigilyph",
+  "types": [
+    "PSYCHIC",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 72,
+    "atk": 58,
+    "def": 80,
+    "spa": 103,
+    "spd": 80,
+    "spe": 97
+  },
+  "catchRate": 45,
+  "expYield": 172,
+  "modelId": "sigilyph",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "mawile",
+  "dex": 303,
+  "name": "Mawile",
+  "types": [
+    "STEEL",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 85,
+    "def": 85,
+    "spa": 55,
+    "spd": 55,
+    "spe": 50
+  },
+  "catchRate": 45,
+  "expYield": 133,
+  "modelId": "mawile",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "dazzling_gleam"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

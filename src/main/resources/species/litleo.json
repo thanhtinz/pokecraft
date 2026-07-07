@@ -1,0 +1,67 @@
+{
+  "id": "litleo",
+  "dex": 667,
+  "name": "Litleo",
+  "types": [
+    "FIRE",
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 62,
+    "atk": 50,
+    "def": 58,
+    "spa": 73,
+    "spd": 54,
+    "spe": 72
+  },
+  "catchRate": 220,
+  "expYield": 74,
+  "modelId": "litleo",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "ember"
+    ],
+    "20": [
+      "hyper_fang"
+    ],
+    "32": [
+      "fire_spin"
+    ],
+    "40": [
+      "mega_punch"
+    ],
+    "48": [
+      "fire_punch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 35,
+      "to": "pyroar",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 18,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

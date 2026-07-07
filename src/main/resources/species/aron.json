@@ -1,0 +1,63 @@
+{
+  "id": "aron",
+  "dex": 304,
+  "name": "Aron",
+  "types": [
+    "STEEL",
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 70,
+    "def": 100,
+    "spa": 40,
+    "spd": 40,
+    "spe": 30
+  },
+  "catchRate": 180,
+  "expYield": 66,
+  "modelId": "aron",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "rock_throw"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 32,
+      "to": "lairon",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

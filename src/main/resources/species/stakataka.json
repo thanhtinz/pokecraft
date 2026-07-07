@@ -1,0 +1,49 @@
+{
+  "id": "stakataka",
+  "dex": 805,
+  "name": "Stakataka",
+  "types": [
+    "ROCK",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 61,
+    "atk": 131,
+    "def": 211,
+    "spa": 53,
+    "spd": 101,
+    "spe": 13
+  },
+  "catchRate": 30,
+  "expYield": 285,
+  "modelId": "stakataka",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "rock_throw"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

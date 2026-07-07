@@ -1,0 +1,68 @@
+{
+  "id": "lileep",
+  "dex": 345,
+  "name": "Lileep",
+  "types": [
+    "ROCK",
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 66,
+    "atk": 41,
+    "def": 77,
+    "spa": 61,
+    "spd": 87,
+    "spe": 23
+  },
+  "catchRate": 45,
+  "expYield": 71,
+  "modelId": "lileep",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "rock_throw"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 40,
+      "to": "cradily",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

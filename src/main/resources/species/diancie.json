@@ -1,0 +1,49 @@
+{
+  "id": "diancie",
+  "dex": 719,
+  "name": "Diancie",
+  "types": [
+    "ROCK",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 100,
+    "def": 150,
+    "spa": 100,
+    "spd": 150,
+    "spe": 50
+  },
+  "catchRate": 3,
+  "expYield": 300,
+  "modelId": "diancie",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "rock_throw"
+    ],
+    "20": [
+      "dazzling_gleam"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

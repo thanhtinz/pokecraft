@@ -1,0 +1,68 @@
+{
+  "id": "sewaddle",
+  "dex": 540,
+  "name": "Sewaddle",
+  "types": [
+    "BUG",
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 53,
+    "def": 70,
+    "spa": 40,
+    "spd": 60,
+    "spe": 42
+  },
+  "catchRate": 255,
+  "expYield": 62,
+  "modelId": "sewaddle",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "pin_missile"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "petal_dance"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 20,
+      "to": "swadloon",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

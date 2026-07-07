@@ -1,0 +1,52 @@
+{
+  "id": "morgrem",
+  "dex": 860,
+  "name": "Morgrem",
+  "types": [
+    "DARK",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 60,
+    "def": 45,
+    "spa": 75,
+    "spd": 55,
+    "spe": 70
+  },
+  "catchRate": 120,
+  "expYield": 130,
+  "modelId": "morgrem",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "fairy_wind"
+    ],
+    "20": [
+      "crunch"
+    ],
+    "32": [
+      "dazzling_gleam"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 42,
+      "to": "grimmsnarl",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

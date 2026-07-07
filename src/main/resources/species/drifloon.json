@@ -1,0 +1,66 @@
+{
+  "id": "drifloon",
+  "dex": 425,
+  "name": "Drifloon",
+  "types": [
+    "GHOST",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 50,
+    "def": 34,
+    "spa": 60,
+    "spd": 44,
+    "spe": 70
+  },
+  "catchRate": 125,
+  "expYield": 70,
+  "modelId": "drifloon",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 28,
+      "to": "drifblim",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

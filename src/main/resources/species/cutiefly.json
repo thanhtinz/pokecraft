@@ -1,0 +1,62 @@
+{
+  "id": "cutiefly",
+  "dex": 742,
+  "name": "Cutiefly",
+  "types": [
+    "BUG",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 45,
+    "def": 40,
+    "spa": 55,
+    "spd": 40,
+    "spe": 84
+  },
+  "catchRate": 190,
+  "expYield": 61,
+  "modelId": "cutiefly",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "fairy_wind"
+    ],
+    "20": [
+      "pin_missile"
+    ],
+    "32": [
+      "dazzling_gleam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 25,
+      "to": "ribombee",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "BIRCH_FOREST",
+      "DARK_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "stunfisk",
+  "dex": 618,
+  "name": "Stunfisk",
+  "types": [
+    "GROUND",
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 109,
+    "atk": 66,
+    "def": 84,
+    "spa": 81,
+    "spd": 99,
+    "spe": 32
+  },
+  "catchRate": 75,
+  "expYield": 165,
+  "modelId": "stunfisk",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "48": [
+      "thunderbolt"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 6,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "fluttermane",
+  "dex": 987,
+  "name": "Flutter Mane",
+  "types": [
+    "GHOST",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 55,
+    "def": 55,
+    "spa": 135,
+    "spd": 135,
+    "spe": 135
+  },
+  "catchRate": 30,
+  "expYield": 285,
+  "modelId": "fluttermane",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "dazzling_gleam"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

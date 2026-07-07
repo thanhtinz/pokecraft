@@ -1,0 +1,64 @@
+{
+  "id": "clauncher",
+  "dex": 692,
+  "name": "Clauncher",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 53,
+    "def": 62,
+    "spa": 58,
+    "spd": 63,
+    "spe": 44
+  },
+  "catchRate": 225,
+  "expYield": 66,
+  "modelId": "clauncher",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 37,
+      "to": "clawitzer",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 18,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

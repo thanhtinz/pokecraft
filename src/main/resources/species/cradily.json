@@ -1,0 +1,52 @@
+{
+  "id": "cradily",
+  "dex": 346,
+  "name": "Cradily",
+  "types": [
+    "ROCK",
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 86,
+    "atk": 81,
+    "def": 97,
+    "spa": 81,
+    "spd": 107,
+    "spe": 43
+  },
+  "catchRate": 45,
+  "expYield": 173,
+  "modelId": "cradily",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,45 @@
+{
+  "id": "tornadus",
+  "dex": 641,
+  "name": "Tornadus",
+  "types": [
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 79,
+    "atk": 115,
+    "def": 70,
+    "spa": 125,
+    "spd": 80,
+    "spe": 111
+  },
+  "catchRate": 3,
+  "expYield": 290,
+  "modelId": "tornadus",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "gust"
+    ],
+    "20": [
+      "wing_attack"
+    ],
+    "32": [
+      "drill_peck"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

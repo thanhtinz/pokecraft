@@ -1,0 +1,61 @@
+{
+  "id": "ironmoth",
+  "dex": 994,
+  "name": "Iron Moth",
+  "types": [
+    "FIRE",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 70,
+    "def": 60,
+    "spa": 140,
+    "spd": 110,
+    "spe": 110
+  },
+  "catchRate": 30,
+  "expYield": 285,
+  "modelId": "ironmoth",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

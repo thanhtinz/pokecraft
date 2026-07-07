@@ -1,0 +1,67 @@
+{
+  "id": "meditite",
+  "dex": 307,
+  "name": "Meditite",
+  "types": [
+    "FIGHTING",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 30,
+    "atk": 40,
+    "def": 55,
+    "spa": 40,
+    "spd": 55,
+    "spe": 60
+  },
+  "catchRate": 180,
+  "expYield": 56,
+  "modelId": "meditite",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "karate_chop"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "low_kick"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "brick_break"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 37,
+      "to": "medicham",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "WINDSWEPT_FOREST",
+      "STONY_SHORE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

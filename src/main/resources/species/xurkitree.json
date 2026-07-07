@@ -1,0 +1,45 @@
+{
+  "id": "xurkitree",
+  "dex": 796,
+  "name": "Xurkitree",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 83,
+    "atk": 89,
+    "def": 71,
+    "spa": 173,
+    "spd": 71,
+    "spe": 83
+  },
+  "catchRate": 45,
+  "expYield": 285,
+  "modelId": "xurkitree",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,68 @@
+{
+  "id": "charcadet",
+  "dex": 935,
+  "name": "Charcadet",
+  "types": [
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 50,
+    "def": 40,
+    "spa": 50,
+    "spd": 40,
+    "spe": 35
+  },
+  "catchRate": 90,
+  "expYield": 51,
+  "modelId": "charcadet",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "fire_spin"
+    ],
+    "20": [
+      "fire_punch"
+    ],
+    "32": [
+      "flamethrower"
+    ],
+    "40": [
+      "fire_blast"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "armarouge",
+      "item": null
+    },
+    {
+      "level": 30,
+      "to": "ceruledge",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "SAVANNA"
+    ],
+    "weight": 7,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

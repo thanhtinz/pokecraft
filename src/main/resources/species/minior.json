@@ -1,0 +1,62 @@
+{
+  "id": "minior",
+  "dex": 774,
+  "name": "Minior",
+  "types": [
+    "ROCK",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 100,
+    "def": 60,
+    "spa": 100,
+    "spd": 60,
+    "spe": 120
+  },
+  "catchRate": 255,
+  "expYield": 175,
+  "modelId": "minior",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

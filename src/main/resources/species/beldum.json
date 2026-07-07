@@ -1,0 +1,63 @@
+{
+  "id": "beldum",
+  "dex": 374,
+  "name": "Beldum",
+  "types": [
+    "STEEL",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 55,
+    "def": 80,
+    "spa": 35,
+    "spd": 60,
+    "spe": 30
+  },
+  "catchRate": 3,
+  "expYield": 60,
+  "modelId": "beldum",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 20,
+      "to": "metang",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

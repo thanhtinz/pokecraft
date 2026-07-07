@@ -1,0 +1,61 @@
+{
+  "id": "hawlucha",
+  "dex": 701,
+  "name": "Hawlucha",
+  "types": [
+    "FIGHTING",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 78,
+    "atk": 92,
+    "def": 75,
+    "spa": 74,
+    "spd": 63,
+    "spe": 118
+  },
+  "catchRate": 100,
+  "expYield": 175,
+  "modelId": "hawlucha",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "karate_chop"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "low_kick"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "brick_break"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "WINDSWEPT_FOREST",
+      "STONY_SHORE"
+    ],
+    "weight": 8,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "pikipek",
+  "dex": 731,
+  "name": "Pikipek",
+  "types": [
+    "NORMAL",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 35,
+    "atk": 75,
+    "def": 30,
+    "spa": 30,
+    "spd": 30,
+    "spe": 65
+  },
+  "catchRate": 255,
+  "expYield": 53,
+  "modelId": "pikipek",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 14,
+      "to": "trumbeak",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "drakloak",
+  "dex": 886,
+  "name": "Drakloak",
+  "types": [
+    "DRAGON",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 68,
+    "atk": 80,
+    "def": 50,
+    "spa": 60,
+    "spd": 50,
+    "spe": 102
+  },
+  "catchRate": 45,
+  "expYield": 144,
+  "modelId": "drakloak",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "dragon_breath"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "dragon_claw"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 60,
+      "to": "dragapult",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

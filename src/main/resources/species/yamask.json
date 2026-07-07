@@ -1,0 +1,56 @@
+{
+  "id": "yamask",
+  "dex": 562,
+  "name": "Yamask",
+  "types": [
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 38,
+    "atk": 30,
+    "def": 85,
+    "spa": 55,
+    "spd": 65,
+    "spe": 30
+  },
+  "catchRate": 190,
+  "expYield": 61,
+  "modelId": "yamask",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "night_shade"
+    ],
+    "20": [
+      "shadow_ball"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 34,
+      "to": "cofagrigus",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

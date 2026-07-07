@@ -1,0 +1,61 @@
+{
+  "id": "togedemaru",
+  "dex": 777,
+  "name": "Togedemaru",
+  "types": [
+    "ELECTRIC",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 98,
+    "def": 63,
+    "spa": 40,
+    "spd": 73,
+    "spe": 96
+  },
+  "catchRate": 180,
+  "expYield": 152,
+  "modelId": "togedemaru",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "48": [
+      "thunder"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

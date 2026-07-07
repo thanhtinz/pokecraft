@@ -1,0 +1,58 @@
+{
+  "id": "mimejr",
+  "dex": 439,
+  "name": "Mime Jr.",
+  "types": [
+    "PSYCHIC",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 20,
+    "atk": 25,
+    "def": 45,
+    "spa": 70,
+    "spd": 90,
+    "spe": 60
+  },
+  "catchRate": 145,
+  "expYield": 62,
+  "modelId": "mimejr",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "dazzling_gleam"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 12,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

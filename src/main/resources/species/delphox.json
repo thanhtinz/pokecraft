@@ -1,0 +1,52 @@
+{
+  "id": "delphox",
+  "dex": 655,
+  "name": "Delphox",
+  "types": [
+    "FIRE",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 69,
+    "def": 72,
+    "spa": 114,
+    "spd": 100,
+    "spe": 104
+  },
+  "catchRate": 45,
+  "expYield": 267,
+  "modelId": "delphox",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "ember"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "fire_spin"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "fire_punch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

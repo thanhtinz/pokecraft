@@ -1,0 +1,62 @@
+{
+  "id": "ironleaves",
+  "dex": 1010,
+  "name": "Iron Leaves",
+  "types": [
+    "GRASS",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 130,
+    "def": 88,
+    "spa": 70,
+    "spd": 108,
+    "spe": 104
+  },
+  "catchRate": 5,
+  "expYield": 295,
+  "modelId": "ironleaves",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

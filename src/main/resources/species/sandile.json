@@ -1,0 +1,64 @@
+{
+  "id": "sandile",
+  "dex": 551,
+  "name": "Sandile",
+  "types": [
+    "GROUND",
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 72,
+    "def": 35,
+    "spa": 35,
+    "spd": 35,
+    "spe": 65
+  },
+  "catchRate": 180,
+  "expYield": 58,
+  "modelId": "sandile",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "crunch"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 29,
+      "to": "krokorok",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

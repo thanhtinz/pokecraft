@@ -1,0 +1,60 @@
+{
+  "id": "blitzle",
+  "dex": 522,
+  "name": "Blitzle",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 60,
+    "def": 32,
+    "spa": 50,
+    "spd": 32,
+    "spe": 76
+  },
+  "catchRate": 190,
+  "expYield": 59,
+  "modelId": "blitzle",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 27,
+      "to": "zebstrika",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

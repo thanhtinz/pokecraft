@@ -1,0 +1,58 @@
+{
+  "id": "pawmo",
+  "dex": 922,
+  "name": "Pawmo",
+  "types": [
+    "ELECTRIC",
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 75,
+    "def": 40,
+    "spa": 50,
+    "spd": 40,
+    "spe": 85
+  },
+  "catchRate": 80,
+  "expYield": 123,
+  "modelId": "pawmo",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "karate_chop"
+    ],
+    "20": [
+      "spark"
+    ],
+    "32": [
+      "low_kick"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "48": [
+      "brick_break"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "pawmot",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

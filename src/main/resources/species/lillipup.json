@@ -1,0 +1,67 @@
+{
+  "id": "lillipup",
+  "dex": 506,
+  "name": "Lillipup",
+  "types": [
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 60,
+    "def": 45,
+    "spa": 25,
+    "spd": 45,
+    "spe": 55
+  },
+  "catchRate": 255,
+  "expYield": 55,
+  "modelId": "lillipup",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "hyper_fang"
+    ],
+    "20": [
+      "mega_punch"
+    ],
+    "32": [
+      "body_slam"
+    ],
+    "40": [
+      "double_edge"
+    ],
+    "48": [
+      "hyper_beam"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 16,
+      "to": "herdier",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

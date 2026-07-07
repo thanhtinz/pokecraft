@@ -1,0 +1,155 @@
+{
+  "id": "spewpa",
+  "dex": 665,
+  "name": "Spewpa",
+  "types": [
+    "BUG"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 22,
+    "def": 60,
+    "spa": 27,
+    "spd": 30,
+    "spe": 29
+  },
+  "catchRate": 120,
+  "expYield": 75,
+  "modelId": "spewpa",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "bug_bite"
+    ],
+    "14": [
+      "pin_missile"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    },
+    {
+      "level": 12,
+      "to": "vivillon",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

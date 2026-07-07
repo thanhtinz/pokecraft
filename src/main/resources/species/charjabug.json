@@ -1,0 +1,58 @@
+{
+  "id": "charjabug",
+  "dex": 737,
+  "name": "Charjabug",
+  "types": [
+    "BUG",
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 57,
+    "atk": 82,
+    "def": 95,
+    "spa": 55,
+    "spd": 75,
+    "spe": 36
+  },
+  "catchRate": 120,
+  "expYield": 140,
+  "modelId": "charjabug",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "spark"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "thunderbolt"
+    ],
+    "48": [
+      "thunder"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 0,
+      "to": "vikavolt",
+      "item": "thunder_stone"
+    }
+  ],
+  "spawn": null
+}

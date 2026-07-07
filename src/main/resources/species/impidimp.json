@@ -1,0 +1,60 @@
+{
+  "id": "impidimp",
+  "dex": 859,
+  "name": "Impidimp",
+  "types": [
+    "DARK",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 45,
+    "def": 30,
+    "spa": 55,
+    "spd": 40,
+    "spe": 50
+  },
+  "catchRate": 255,
+  "expYield": 53,
+  "modelId": "impidimp",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "bite"
+    ],
+    "20": [
+      "dazzling_gleam"
+    ],
+    "32": [
+      "crunch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 32,
+      "to": "morgrem",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "barboach",
+  "dex": 339,
+  "name": "Barboach",
+  "types": [
+    "WATER",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 48,
+    "def": 43,
+    "spa": 46,
+    "spd": 41,
+    "spe": 60
+  },
+  "catchRate": 190,
+  "expYield": 58,
+  "modelId": "barboach",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "whiscash",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

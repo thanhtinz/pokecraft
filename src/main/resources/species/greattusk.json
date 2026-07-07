@@ -1,0 +1,61 @@
+{
+  "id": "greattusk",
+  "dex": 984,
+  "name": "Great Tusk",
+  "types": [
+    "GROUND",
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 115,
+    "atk": 131,
+    "def": 131,
+    "spa": 53,
+    "spd": 53,
+    "spe": 87
+  },
+  "catchRate": 30,
+  "expYield": 285,
+  "modelId": "greattusk",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "karate_chop"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "low_kick"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "48": [
+      "brick_break"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

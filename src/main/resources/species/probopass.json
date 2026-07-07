@@ -1,0 +1,59 @@
+{
+  "id": "probopass",
+  "dex": 476,
+  "name": "Probopass",
+  "types": [
+    "ROCK",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 55,
+    "def": 145,
+    "spa": 75,
+    "spd": 150,
+    "spe": 40
+  },
+  "catchRate": 60,
+  "expYield": 184,
+  "modelId": "probopass",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 5,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

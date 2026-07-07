@@ -1,0 +1,58 @@
+{
+  "id": "dolliv",
+  "dex": 929,
+  "name": "Dolliv",
+  "types": [
+    "GRASS",
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 52,
+    "atk": 53,
+    "def": 60,
+    "spa": 78,
+    "spd": 78,
+    "spe": 33
+  },
+  "catchRate": 120,
+  "expYield": 124,
+  "modelId": "dolliv",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "hyper_fang"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "mega_punch"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 35,
+      "to": "arboliva",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

@@ -1,0 +1,45 @@
+{
+  "id": "floette",
+  "dex": 670,
+  "name": "Floette",
+  "types": [
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 54,
+    "atk": 45,
+    "def": 47,
+    "spa": 75,
+    "spd": 98,
+    "spe": 52
+  },
+  "catchRate": 120,
+  "expYield": 130,
+  "modelId": "floette",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sing"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "dazzling_gleam"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "florges",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

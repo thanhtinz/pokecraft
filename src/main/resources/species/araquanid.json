@@ -1,0 +1,52 @@
+{
+  "id": "araquanid",
+  "dex": 752,
+  "name": "Araquanid",
+  "types": [
+    "WATER",
+    "BUG"
+  ],
+  "baseStats": {
+    "hp": 68,
+    "atk": 70,
+    "def": 92,
+    "spa": 50,
+    "spd": 132,
+    "spe": 42
+  },
+  "catchRate": 100,
+  "expYield": 159,
+  "modelId": "araquanid",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "surf"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

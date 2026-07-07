@@ -107,16 +107,15 @@ def is_legendary(data):
     return bool(labels & {"legendary", "mythical", "ultra_beast"})
 
 
-def convert(data, evo_targets):
+def convert(sid, data, evo_targets):
     stats = data["baseStats"]
     s = (stats["hp"], stats["attack"], stats["defence"],
          stats["special_attack"], stats["special_defence"], stats["speed"])
     types = parse_types(data)
-    dex = data["nationalPokedexNumber"]
-    sid = data["name"].lower().replace(" ", "").replace(".", "").replace("'", "")
+    dex = data.get("nationalPokedexNumber", 9999)
     legendary = is_legendary(data)
     evolutions = parse_evolutions(data)
-    return sid, {
+    return {
         "id": sid,
         "dex": dex,
         "name": data["name"],
@@ -141,7 +140,9 @@ def main():
         sys.exit(1)
 
     curated = existing_ids()
-    # first pass: fetch everything so we know all evolution targets
+    # first pass: fetch everything so we know all evolution targets.
+    # The Cobblemon filename is used as the species id so evolution "result"
+    # references (which are filenames) line up.
     raw = {}
     for gen in gens:
         names = list_species(gen)
@@ -157,11 +158,12 @@ def main():
         for evo in parse_evolutions(data):
             evo_targets.add(evo["to"])
 
-    written = 0
-    for data in raw.values():
-        sid, out = convert(data, evo_targets)
-        if sid in curated:
-            continue  # keep the hand-curated Gen 1 file
+    written = skipped = 0
+    for sid, data in raw.items():
+        if sid in curated or "baseStats" not in data:
+            skipped += 1
+            continue  # keep hand-curated files; skip form stubs without stats
+        out = convert(sid, data, evo_targets)
         with open(os.path.join(SPECIES_DIR, sid + ".json"), "w") as f:
             json.dump(out, f, indent=2)
             f.write("\n")

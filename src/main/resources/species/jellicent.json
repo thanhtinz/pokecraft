@@ -1,0 +1,52 @@
+{
+  "id": "jellicent",
+  "dex": 593,
+  "name": "Jellicent",
+  "types": [
+    "WATER",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 100,
+    "atk": 60,
+    "def": 70,
+    "spa": 85,
+    "spd": 105,
+    "spe": 60
+  },
+  "catchRate": 60,
+  "expYield": 168,
+  "modelId": "jellicent",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "night_shade"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "shadow_ball"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

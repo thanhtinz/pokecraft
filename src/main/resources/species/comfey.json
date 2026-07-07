@@ -1,0 +1,48 @@
+{
+  "id": "comfey",
+  "dex": 764,
+  "name": "Comfey",
+  "types": [
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 51,
+    "atk": 52,
+    "def": 90,
+    "spa": 82,
+    "spd": 110,
+    "spe": 100
+  },
+  "catchRate": 60,
+  "expYield": 170,
+  "modelId": "comfey",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sing"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "dazzling_gleam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MEADOW"
+    ],
+    "weight": 5,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

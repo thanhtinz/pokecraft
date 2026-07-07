@@ -1,0 +1,66 @@
+{
+  "id": "litwick",
+  "dex": 607,
+  "name": "Litwick",
+  "types": [
+    "GHOST",
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 30,
+    "def": 55,
+    "spa": 65,
+    "spd": 55,
+    "spe": 20
+  },
+  "catchRate": 190,
+  "expYield": 55,
+  "modelId": "litwick",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 41,
+      "to": "lampent",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

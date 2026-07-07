@@ -1,0 +1,42 @@
+{
+  "id": "regirock",
+  "dex": 377,
+  "name": "Regirock",
+  "types": [
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 100,
+    "def": 200,
+    "spa": 50,
+    "spd": 100,
+    "spe": 50
+  },
+  "catchRate": 3,
+  "expYield": 290,
+  "modelId": "regirock",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "rock_slide"
+    ],
+    "20": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

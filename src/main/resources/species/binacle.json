@@ -1,0 +1,68 @@
+{
+  "id": "binacle",
+  "dex": 688,
+  "name": "Binacle",
+  "types": [
+    "ROCK",
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 42,
+    "atk": 52,
+    "def": 67,
+    "spa": 39,
+    "spd": 56,
+    "spe": 50
+  },
+  "catchRate": 120,
+  "expYield": 61,
+  "modelId": "binacle",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 39,
+      "to": "barbaracle",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 10,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

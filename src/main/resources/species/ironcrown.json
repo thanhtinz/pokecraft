@@ -1,0 +1,57 @@
+{
+  "id": "ironcrown",
+  "dex": 1023,
+  "name": "Iron Crown",
+  "types": [
+    "STEEL",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 72,
+    "def": 100,
+    "spa": 122,
+    "spd": 108,
+    "spe": 98
+  },
+  "catchRate": 10,
+  "expYield": 295,
+  "modelId": "ironcrown",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "steel_wing"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "iron_head"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "STONY_PEAKS",
+      "WINDSWEPT_HILLS"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

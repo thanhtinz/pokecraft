@@ -1,0 +1,68 @@
+{
+  "id": "archen",
+  "dex": 566,
+  "name": "Archen",
+  "types": [
+    "ROCK",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 112,
+    "def": 45,
+    "spa": 74,
+    "spd": 45,
+    "spe": 70
+  },
+  "catchRate": 45,
+  "expYield": 71,
+  "modelId": "archen",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 37,
+      "to": "archeops",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

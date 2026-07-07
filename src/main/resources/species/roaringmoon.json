@@ -1,0 +1,61 @@
+{
+  "id": "roaringmoon",
+  "dex": 1005,
+  "name": "Roaring Moon",
+  "types": [
+    "DRAGON",
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 105,
+    "atk": 139,
+    "def": 71,
+    "spa": 55,
+    "spd": 101,
+    "spe": 119
+  },
+  "catchRate": 10,
+  "expYield": 295,
+  "modelId": "roaringmoon",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "crunch"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "dragon_claw"
+    ],
+    "48": [
+      "outrage"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "JAGGED_PEAKS",
+      "FROZEN_PEAKS",
+      "STONY_PEAKS"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

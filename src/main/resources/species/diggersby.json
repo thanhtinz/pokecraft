@@ -1,0 +1,52 @@
+{
+  "id": "diggersby",
+  "dex": 660,
+  "name": "Diggersby",
+  "types": [
+    "NORMAL",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 56,
+    "def": 77,
+    "spa": 50,
+    "spd": 77,
+    "spe": 78
+  },
+  "catchRate": 127,
+  "expYield": 148,
+  "modelId": "diggersby",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "quick_attack"
+    ],
+    "14": [
+      "sand_tomb"
+    ],
+    "20": [
+      "hyper_fang"
+    ],
+    "32": [
+      "dig"
+    ],
+    "40": [
+      "mega_punch"
+    ],
+    "48": [
+      "earthquake"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

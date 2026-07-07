@@ -1,0 +1,39 @@
+{
+  "id": "liepard",
+  "dex": 510,
+  "name": "Liepard",
+  "types": [
+    "DARK"
+  ],
+  "baseStats": {
+    "hp": 64,
+    "atk": 88,
+    "def": 50,
+    "spa": 88,
+    "spd": 50,
+    "spe": 106
+  },
+  "catchRate": 90,
+  "expYield": 156,
+  "modelId": "liepard",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "bite"
+    ],
+    "14": [
+      "crunch"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,52 @@
+{
+  "id": "beautifly",
+  "dex": 267,
+  "name": "Beautifly",
+  "types": [
+    "BUG",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 70,
+    "def": 50,
+    "spa": 100,
+    "spd": 50,
+    "spe": 65
+  },
+  "catchRate": 45,
+  "expYield": 198,
+  "modelId": "beautifly",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "string_shot"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "bug_bite"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "pin_missile"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

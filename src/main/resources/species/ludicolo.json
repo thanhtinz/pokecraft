@@ -1,0 +1,52 @@
+{
+  "id": "ludicolo",
+  "dex": 272,
+  "name": "Ludicolo",
+  "types": [
+    "WATER",
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 70,
+    "def": 70,
+    "spa": 90,
+    "spd": 100,
+    "spe": 70
+  },
+  "catchRate": 45,
+  "expYield": 240,
+  "modelId": "ludicolo",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

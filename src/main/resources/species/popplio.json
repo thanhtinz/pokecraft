@@ -1,0 +1,64 @@
+{
+  "id": "popplio",
+  "dex": 728,
+  "name": "Popplio",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "atk": 54,
+    "def": 54,
+    "spa": 66,
+    "spd": 56,
+    "spe": 40
+  },
+  "catchRate": 45,
+  "expYield": 64,
+  "modelId": "popplio",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 17,
+      "to": "brionne",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

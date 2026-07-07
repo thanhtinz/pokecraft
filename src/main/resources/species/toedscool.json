@@ -1,0 +1,67 @@
+{
+  "id": "toedscool",
+  "dex": 948,
+  "name": "Toedscool",
+  "types": [
+    "GROUND",
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 40,
+    "def": 35,
+    "spa": 50,
+    "spd": 100,
+    "spe": 70
+  },
+  "catchRate": 190,
+  "expYield": 67,
+  "modelId": "toedscool",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "toedscruel",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DESERT",
+      "BADLANDS",
+      "STONY_SHORE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

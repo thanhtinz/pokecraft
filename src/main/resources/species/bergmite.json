@@ -1,0 +1,61 @@
+{
+  "id": "bergmite",
+  "dex": 712,
+  "name": "Bergmite",
+  "types": [
+    "ICE"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "atk": 69,
+    "def": 85,
+    "spa": 32,
+    "spd": 35,
+    "spe": 28
+  },
+  "catchRate": 190,
+  "expYield": 61,
+  "modelId": "bergmite",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "aurora_beam"
+    ],
+    "20": [
+      "ice_beam"
+    ],
+    "32": [
+      "blizzard"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 37,
+      "to": "avalugg",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

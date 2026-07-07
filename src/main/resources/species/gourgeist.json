@@ -1,0 +1,52 @@
+{
+  "id": "gourgeist",
+  "dex": 711,
+  "name": "Gourgeist",
+  "types": [
+    "GHOST",
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 65,
+    "atk": 90,
+    "def": 122,
+    "spa": 58,
+    "spd": 75,
+    "spe": 84
+  },
+  "catchRate": 60,
+  "expYield": 173,
+  "modelId": "gourgeist",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

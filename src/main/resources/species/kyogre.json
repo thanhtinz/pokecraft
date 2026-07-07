@@ -1,0 +1,48 @@
+{
+  "id": "kyogre",
+  "dex": 382,
+  "name": "Kyogre",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 100,
+    "atk": 100,
+    "def": 90,
+    "spa": 150,
+    "spd": 140,
+    "spe": 90
+  },
+  "catchRate": 3,
+  "expYield": 335,
+  "modelId": "kyogre",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

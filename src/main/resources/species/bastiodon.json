@@ -1,0 +1,49 @@
+{
+  "id": "bastiodon",
+  "dex": 411,
+  "name": "Bastiodon",
+  "types": [
+    "ROCK",
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 52,
+    "def": 168,
+    "spa": 47,
+    "spd": 138,
+    "spe": 30
+  },
+  "catchRate": 45,
+  "expYield": 173,
+  "modelId": "bastiodon",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "rock_throw"
+    ],
+    "20": [
+      "iron_head"
+    ],
+    "32": [
+      "rock_slide"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

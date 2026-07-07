@@ -1,0 +1,62 @@
+{
+  "id": "flamigo",
+  "dex": 973,
+  "name": "Flamigo",
+  "types": [
+    "FLYING",
+    "FIGHTING"
+  ],
+  "baseStats": {
+    "hp": 82,
+    "atk": 115,
+    "def": 74,
+    "spa": 75,
+    "spd": 64,
+    "spe": 90
+  },
+  "catchRate": 100,
+  "expYield": 175,
+  "modelId": "flamigo",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "low_kick"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "brick_break"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "FOREST",
+      "WINDSWEPT_HILLS",
+      "MEADOW"
+    ],
+    "weight": 8,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "ironbundle",
+  "dex": 991,
+  "name": "Iron Bundle",
+  "types": [
+    "ICE",
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 56,
+    "atk": 80,
+    "def": 114,
+    "spa": 124,
+    "spd": 60,
+    "spe": 136
+  },
+  "catchRate": 50,
+  "expYield": 285,
+  "modelId": "ironbundle",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "ice_shard"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "aurora_beam"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "ice_beam"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 4,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

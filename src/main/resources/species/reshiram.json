@@ -1,0 +1,52 @@
+{
+  "id": "reshiram",
+  "dex": 643,
+  "name": "Reshiram",
+  "types": [
+    "DRAGON",
+    "FIRE"
+  ],
+  "baseStats": {
+    "hp": 100,
+    "atk": 120,
+    "def": 100,
+    "spa": 150,
+    "spd": 120,
+    "spe": 90
+  },
+  "catchRate": 3,
+  "expYield": 340,
+  "modelId": "reshiram",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "dragon_claw"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

@@ -1,0 +1,66 @@
+{
+  "id": "vullaby",
+  "dex": 629,
+  "name": "Vullaby",
+  "types": [
+    "DARK",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 55,
+    "def": 75,
+    "spa": 45,
+    "spd": 65,
+    "spe": 60
+  },
+  "catchRate": 190,
+  "expYield": 74,
+  "modelId": "vullaby",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "peck"
+    ],
+    "14": [
+      "bite"
+    ],
+    "20": [
+      "gust"
+    ],
+    "32": [
+      "crunch"
+    ],
+    "40": [
+      "wing_attack"
+    ],
+    "48": [
+      "drill_peck"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 54,
+      "to": "mandibuzz",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "DARK_FOREST",
+      "PALE_GARDEN"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

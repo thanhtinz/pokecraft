@@ -1,0 +1,65 @@
+{
+  "id": "goomy",
+  "dex": 704,
+  "name": "Goomy",
+  "types": [
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 45,
+    "atk": 50,
+    "def": 35,
+    "spa": 55,
+    "spd": 75,
+    "spe": 40
+  },
+  "catchRate": 45,
+  "expYield": 60,
+  "modelId": "goomy",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "dragon_breath"
+    ],
+    "20": [
+      "dragon_claw"
+    ],
+    "32": [
+      "outrage"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 40,
+      "to": "sliggoo",
+      "item": null
+    },
+    {
+      "level": 40,
+      "to": "sliggoo",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "JAGGED_PEAKS",
+      "FROZEN_PEAKS",
+      "STONY_PEAKS"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "registeel",
+  "dex": 379,
+  "name": "Registeel",
+  "types": [
+    "STEEL"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 75,
+    "def": 150,
+    "spa": 75,
+    "spd": 150,
+    "spe": 50
+  },
+  "catchRate": 3,
+  "expYield": 290,
+  "modelId": "registeel",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "steel_wing"
+    ],
+    "14": [
+      "iron_head"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

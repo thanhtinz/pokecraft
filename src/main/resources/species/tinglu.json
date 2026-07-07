@@ -1,0 +1,49 @@
+{
+  "id": "tinglu",
+  "dex": 1003,
+  "name": "Ting-Lu",
+  "types": [
+    "DARK",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 155,
+    "atk": 110,
+    "def": 125,
+    "spa": 55,
+    "spd": 80,
+    "spe": 45
+  },
+  "catchRate": 6,
+  "expYield": 285,
+  "modelId": "tinglu",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "bite"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "crunch"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

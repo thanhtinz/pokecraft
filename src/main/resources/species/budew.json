@@ -1,0 +1,68 @@
+{
+  "id": "budew",
+  "dex": 406,
+  "name": "Budew",
+  "types": [
+    "GRASS",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "atk": 30,
+    "def": 35,
+    "spa": 50,
+    "spd": 70,
+    "spe": 55
+  },
+  "catchRate": 255,
+  "expYield": 56,
+  "modelId": "budew",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "roselia",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 20,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

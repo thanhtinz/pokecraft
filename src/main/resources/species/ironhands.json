@@ -1,0 +1,61 @@
+{
+  "id": "ironhands",
+  "dex": 992,
+  "name": "Iron Hands",
+  "types": [
+    "FIGHTING",
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 154,
+    "atk": 140,
+    "def": 108,
+    "spa": 50,
+    "spd": 68,
+    "spe": 50
+  },
+  "catchRate": 50,
+  "expYield": 285,
+  "modelId": "ironhands",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "karate_chop"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "low_kick"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "brick_break"
+    ],
+    "48": [
+      "thunderbolt"
+    ],
+    "26": [
+      "swords_dance"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "WINDSWEPT_FOREST",
+      "STONY_SHORE"
+    ],
+    "weight": 4,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "munkidori",
+  "dex": 1015,
+  "name": "Munkidori",
+  "types": [
+    "POISON",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 88,
+    "atk": 75,
+    "def": 66,
+    "spa": 130,
+    "spd": 90,
+    "spe": 106
+  },
+  "catchRate": 3,
+  "expYield": 278,
+  "modelId": "munkidori",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "poison_powder"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "poison_sting"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "acid"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "sludge"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

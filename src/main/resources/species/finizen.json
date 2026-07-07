@@ -1,0 +1,64 @@
+{
+  "id": "finizen",
+  "dex": 963,
+  "name": "Finizen",
+  "types": [
+    "WATER"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 45,
+    "def": 40,
+    "spa": 45,
+    "spd": 40,
+    "spe": 75
+  },
+  "catchRate": 200,
+  "expYield": 63,
+  "modelId": "finizen",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "bubble_beam"
+    ],
+    "20": [
+      "waterfall"
+    ],
+    "32": [
+      "surf"
+    ],
+    "40": [
+      "hydro_pump"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 38,
+      "to": "palafin",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 16,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

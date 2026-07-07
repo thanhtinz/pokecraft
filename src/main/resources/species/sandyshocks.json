@@ -1,0 +1,61 @@
+{
+  "id": "sandyshocks",
+  "dex": 989,
+  "name": "Sandy Shocks",
+  "types": [
+    "ELECTRIC",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 81,
+    "def": 97,
+    "spa": 121,
+    "spd": 85,
+    "spe": 101
+  },
+  "catchRate": 30,
+  "expYield": 285,
+  "modelId": "sandyshocks",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "thunder_shock"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "spark"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "48": [
+      "thunderbolt"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "DARK_FOREST",
+      "BAMBOO_JUNGLE"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

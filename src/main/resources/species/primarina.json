@@ -1,0 +1,52 @@
+{
+  "id": "primarina",
+  "dex": 730,
+  "name": "Primarina",
+  "types": [
+    "WATER",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 74,
+    "def": 74,
+    "spa": 126,
+    "spd": 116,
+    "spe": 60
+  },
+  "catchRate": 45,
+  "expYield": 265,
+  "modelId": "primarina",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "fairy_wind"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "dazzling_gleam"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "surf"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

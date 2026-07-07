@@ -1,0 +1,61 @@
+{
+  "id": "indeedee",
+  "dex": 876,
+  "name": "Indeedee",
+  "types": [
+    "PSYCHIC",
+    "NORMAL"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 65,
+    "def": 55,
+    "spa": 105,
+    "spd": 95,
+    "spe": 95
+  },
+  "catchRate": 30,
+  "expYield": 166,
+  "modelId": "indeedee",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "psybeam"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FLOWER_FOREST",
+      "CHERRY_GROVE",
+      "MUSHROOM_FIELDS"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

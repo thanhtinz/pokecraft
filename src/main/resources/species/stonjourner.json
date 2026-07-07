@@ -1,0 +1,52 @@
+{
+  "id": "stonjourner",
+  "dex": 874,
+  "name": "Stonjourner",
+  "types": [
+    "ROCK"
+  ],
+  "baseStats": {
+    "hp": 100,
+    "atk": 125,
+    "def": 135,
+    "spa": 20,
+    "spd": 20,
+    "spe": 70
+  },
+  "catchRate": 60,
+  "expYield": 165,
+  "modelId": "stonjourner",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "rock_slide"
+    ],
+    "20": [
+      "stone_edge"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 5,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

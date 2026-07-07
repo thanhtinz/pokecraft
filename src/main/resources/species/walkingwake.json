@@ -1,0 +1,62 @@
+{
+  "id": "walkingwake",
+  "dex": 1009,
+  "name": "Walking Wake",
+  "types": [
+    "WATER",
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 99,
+    "atk": 83,
+    "def": 91,
+    "spa": 125,
+    "spd": 83,
+    "spe": 109
+  },
+  "catchRate": 5,
+  "expYield": 295,
+  "modelId": "walkingwake",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "water_gun"
+    ],
+    "20": [
+      "dragon_breath"
+    ],
+    "32": [
+      "bubble_beam"
+    ],
+    "40": [
+      "dragon_claw"
+    ],
+    "48": [
+      "waterfall"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

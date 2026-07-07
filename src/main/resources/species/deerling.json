@@ -1,0 +1,68 @@
+{
+  "id": "deerling",
+  "dex": 585,
+  "name": "Deerling",
+  "types": [
+    "NORMAL",
+    "GRASS"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 60,
+    "def": 50,
+    "spa": 40,
+    "spd": 50,
+    "spe": 75
+  },
+  "catchRate": 190,
+  "expYield": 67,
+  "modelId": "deerling",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "growl"
+    ],
+    "8": [
+      "vine_whip"
+    ],
+    "14": [
+      "quick_attack"
+    ],
+    "20": [
+      "razor_leaf"
+    ],
+    "32": [
+      "hyper_fang"
+    ],
+    "40": [
+      "seed_bomb"
+    ],
+    "48": [
+      "mega_punch"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 34,
+      "to": "sawsbuck",
+      "item": null
+    }
+  ],
+  "spawn": {
+    "biomes": [
+      "PLAINS",
+      "SUNFLOWER_PLAINS",
+      "MEADOW",
+      "SAVANNA"
+    ],
+    "weight": 15,
+    "minLevel": 2,
+    "maxLevel": 10
+  }
+}

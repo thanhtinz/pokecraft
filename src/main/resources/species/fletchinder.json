@@ -1,0 +1,58 @@
+{
+  "id": "fletchinder",
+  "dex": 662,
+  "name": "Fletchinder",
+  "types": [
+    "FIRE",
+    "FLYING"
+  ],
+  "baseStats": {
+    "hp": 62,
+    "atk": 73,
+    "def": 55,
+    "spa": 56,
+    "spd": 52,
+    "spe": 84
+  },
+  "catchRate": 120,
+  "expYield": 134,
+  "modelId": "fletchinder",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ember"
+    ],
+    "14": [
+      "peck"
+    ],
+    "20": [
+      "fire_spin"
+    ],
+    "32": [
+      "gust"
+    ],
+    "40": [
+      "fire_punch"
+    ],
+    "48": [
+      "wing_attack"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 35,
+      "to": "talonflame",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

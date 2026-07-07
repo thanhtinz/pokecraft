@@ -1,0 +1,42 @@
+{
+  "id": "espathra",
+  "dex": 956,
+  "name": "Espathra",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 95,
+    "atk": 60,
+    "def": 60,
+    "spa": 101,
+    "spd": 60,
+    "spe": 105
+  },
+  "catchRate": 60,
+  "expYield": 168,
+  "modelId": "espathra",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

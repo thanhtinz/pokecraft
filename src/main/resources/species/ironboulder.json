@@ -1,0 +1,62 @@
+{
+  "id": "ironboulder",
+  "dex": 1022,
+  "name": "Iron Boulder",
+  "types": [
+    "ROCK",
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 120,
+    "def": 80,
+    "spa": 68,
+    "spd": 108,
+    "spe": 124
+  },
+  "catchRate": 10,
+  "expYield": 295,
+  "modelId": "ironboulder",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "harden"
+    ],
+    "8": [
+      "rock_throw"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "rock_slide"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "stone_edge"
+    ],
+    "48": [
+      "psychic"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "WINDSWEPT_HILLS",
+      "STONY_PEAKS",
+      "JAGGED_PEAKS",
+      "STONY_SHORE"
+    ],
+    "weight": 2,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

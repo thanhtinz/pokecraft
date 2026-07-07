@@ -1,0 +1,42 @@
+{
+  "id": "cofagrigus",
+  "dex": 563,
+  "name": "Cofagrigus",
+  "types": [
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 58,
+    "atk": 50,
+    "def": 145,
+    "spa": 95,
+    "spd": 105,
+    "spe": 30
+  },
+  "catchRate": 90,
+  "expYield": 169,
+  "modelId": "cofagrigus",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "lick"
+    ],
+    "14": [
+      "night_shade"
+    ],
+    "20": [
+      "shadow_ball"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

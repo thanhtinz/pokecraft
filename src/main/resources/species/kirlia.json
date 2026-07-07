@@ -1,0 +1,55 @@
+{
+  "id": "kirlia",
+  "dex": 281,
+  "name": "Kirlia",
+  "types": [
+    "PSYCHIC",
+    "FAIRY"
+  ],
+  "baseStats": {
+    "hp": 38,
+    "atk": 35,
+    "def": 35,
+    "spa": 65,
+    "spd": 55,
+    "spe": 50
+  },
+  "catchRate": 120,
+  "expYield": 97,
+  "modelId": "kirlia",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "fairy_wind"
+    ],
+    "14": [
+      "confusion"
+    ],
+    "20": [
+      "dazzling_gleam"
+    ],
+    "32": [
+      "psybeam"
+    ],
+    "40": [
+      "psychic"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "gardevoir",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

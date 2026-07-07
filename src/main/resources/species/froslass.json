@@ -1,0 +1,62 @@
+{
+  "id": "froslass",
+  "dex": 478,
+  "name": "Froslass",
+  "types": [
+    "ICE",
+    "GHOST"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 80,
+    "def": 70,
+    "spa": 80,
+    "spd": 70,
+    "spe": 110
+  },
+  "catchRate": 75,
+  "expYield": 168,
+  "modelId": "froslass",
+  "learnset": {
+    "1": [
+      "scratch"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "ice_shard"
+    ],
+    "14": [
+      "lick"
+    ],
+    "20": [
+      "aurora_beam"
+    ],
+    "32": [
+      "night_shade"
+    ],
+    "40": [
+      "ice_beam"
+    ],
+    "48": [
+      "shadow_ball"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "SNOWY_PLAINS",
+      "SNOWY_TAIGA",
+      "ICE_SPIKES",
+      "GROVE"
+    ],
+    "weight": 6,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}

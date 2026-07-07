@@ -1,0 +1,42 @@
+{
+  "id": "hippowdon",
+  "dex": 450,
+  "name": "Hippowdon",
+  "types": [
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 108,
+    "atk": 112,
+    "def": 118,
+    "spa": 68,
+    "spd": 72,
+    "spe": 47
+  },
+  "catchRate": 60,
+  "expYield": 184,
+  "modelId": "hippowdon",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "dig"
+    ],
+    "20": [
+      "earthquake"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

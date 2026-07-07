@@ -1,0 +1,62 @@
+{
+  "id": "dracovish",
+  "dex": 882,
+  "name": "Dracovish",
+  "types": [
+    "WATER",
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "atk": 90,
+    "def": 100,
+    "spa": 70,
+    "spd": 80,
+    "spe": 75
+  },
+  "catchRate": 45,
+  "expYield": 177,
+  "modelId": "dracovish",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "tail_whip"
+    ],
+    "8": [
+      "water_gun"
+    ],
+    "14": [
+      "twister"
+    ],
+    "20": [
+      "bubble_beam"
+    ],
+    "32": [
+      "dragon_breath"
+    ],
+    "40": [
+      "waterfall"
+    ],
+    "48": [
+      "dragon_claw"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "BEACH",
+      "RIVER",
+      "OCEAN",
+      "SWAMP"
+    ],
+    "weight": 3,
+    "minLevel": 8,
+    "maxLevel": 20
+  }
+}

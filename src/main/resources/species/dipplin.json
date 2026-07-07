@@ -1,0 +1,58 @@
+{
+  "id": "dipplin",
+  "dex": 1011,
+  "name": "Dipplin",
+  "types": [
+    "GRASS",
+    "DRAGON"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 80,
+    "def": 110,
+    "spa": 95,
+    "spd": 80,
+    "spe": 40
+  },
+  "catchRate": 45,
+  "expYield": 170,
+  "modelId": "dipplin",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "twister"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "dragon_breath"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "dragon_claw"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 30,
+      "to": "hydrapple",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

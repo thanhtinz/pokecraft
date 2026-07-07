@@ -1,0 +1,42 @@
+{
+  "id": "uxie",
+  "dex": 480,
+  "name": "Uxie",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "atk": 75,
+    "def": 130,
+    "spa": 75,
+    "spd": 130,
+    "spe": 95
+  },
+  "catchRate": 3,
+  "expYield": 290,
+  "modelId": "uxie",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "harden"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

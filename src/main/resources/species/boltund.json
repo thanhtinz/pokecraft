@@ -1,0 +1,45 @@
+{
+  "id": "boltund",
+  "dex": 836,
+  "name": "Boltund",
+  "types": [
+    "ELECTRIC"
+  ],
+  "baseStats": {
+    "hp": 69,
+    "atk": 90,
+    "def": 60,
+    "spa": 90,
+    "spd": 60,
+    "spe": 121
+  },
+  "catchRate": 45,
+  "expYield": 172,
+  "modelId": "boltund",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "thunder_wave"
+    ],
+    "8": [
+      "thunder_shock"
+    ],
+    "14": [
+      "spark"
+    ],
+    "20": [
+      "thunderbolt"
+    ],
+    "32": [
+      "thunder"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

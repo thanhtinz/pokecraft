@@ -1,0 +1,48 @@
+{
+  "id": "cosmog",
+  "dex": 789,
+  "name": "Cosmog",
+  "types": [
+    "PSYCHIC"
+  ],
+  "baseStats": {
+    "hp": 43,
+    "atk": 29,
+    "def": 31,
+    "spa": 29,
+    "spd": 31,
+    "spe": 37
+  },
+  "catchRate": 3,
+  "expYield": 40,
+  "modelId": "cosmog",
+  "learnset": {
+    "1": [
+      "tackle"
+    ],
+    "4": [
+      "hypnosis"
+    ],
+    "8": [
+      "confusion"
+    ],
+    "14": [
+      "psybeam"
+    ],
+    "20": [
+      "psychic"
+    ],
+    "26": [
+      "agility"
+    ]
+  },
+  "evolution": null,
+  "evolutions": [
+    {
+      "level": 43,
+      "to": "cosmoem",
+      "item": null
+    }
+  ],
+  "spawn": null
+}

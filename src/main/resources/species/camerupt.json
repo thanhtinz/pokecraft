@@ -1,0 +1,52 @@
+{
+  "id": "camerupt",
+  "dex": 323,
+  "name": "Camerupt",
+  "types": [
+    "FIRE",
+    "GROUND"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "atk": 100,
+    "def": 70,
+    "spa": 105,
+    "spd": 75,
+    "spe": 40
+  },
+  "catchRate": 150,
+  "expYield": 161,
+  "modelId": "camerupt",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "leer"
+    ],
+    "8": [
+      "sand_tomb"
+    ],
+    "14": [
+      "ember"
+    ],
+    "20": [
+      "dig"
+    ],
+    "32": [
+      "fire_spin"
+    ],
+    "40": [
+      "earthquake"
+    ],
+    "48": [
+      "fire_punch"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": null
+}

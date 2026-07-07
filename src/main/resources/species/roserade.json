@@ -1,0 +1,62 @@
+{
+  "id": "roserade",
+  "dex": 407,
+  "name": "Roserade",
+  "types": [
+    "GRASS",
+    "POISON"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 70,
+    "def": 65,
+    "spa": 125,
+    "spd": 105,
+    "spe": 90
+  },
+  "catchRate": 75,
+  "expYield": 258,
+  "modelId": "roserade",
+  "learnset": {
+    "1": [
+      "pound"
+    ],
+    "4": [
+      "sleep_powder"
+    ],
+    "8": [
+      "poison_sting"
+    ],
+    "14": [
+      "vine_whip"
+    ],
+    "20": [
+      "acid"
+    ],
+    "32": [
+      "razor_leaf"
+    ],
+    "40": [
+      "sludge"
+    ],
+    "48": [
+      "seed_bomb"
+    ],
+    "26": [
+      "calm_mind"
+    ]
+  },
+  "evolution": null,
+  "evolutions": null,
+  "spawn": {
+    "biomes": [
+      "FOREST",
+      "FLOWER_FOREST",
+      "BIRCH_FOREST",
+      "JUNGLE"
+    ],
+    "weight": 6,
+    "minLevel": 4,
+    "maxLevel": 14
+  }
+}
