@@ -84,7 +84,7 @@ public class PokemonEntityManager {
             plugin.getLogger().info("[OK] ModelEngine hooked - custom models enabled");
         } catch (Exception e) {
             modelEngine = false;
-            plugin.getLogger().warning("[WARN] ModelEngine not found - wild pokemon use vanilla base entities");
+            plugin.getLogger().info("[..] ModelEngine not found - trying BetterModel");
         }
     }
 
