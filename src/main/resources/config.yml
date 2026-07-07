@@ -26,6 +26,33 @@ legendary:
 capture:
   # base entity used under ModelEngine models
   base-entity: HUSK
+
+# When you are NOT using a 3D model engine (recommended on Bedrock/mobile, where
+# custom models can't render), each pokemon shows as a fitting vanilla mob so
+# they aren't all the same husk. by-species overrides by-type; both fall back to
+# capture.base-entity. Set models.enabled: false so the base mob stays visible.
+mobs:
+  by-type:
+    NORMAL: PIG
+    FIRE: STRIDER
+    WATER: AXOLOTL
+    GRASS: FROG
+    ELECTRIC: RABBIT
+    ICE: RABBIT
+    FIGHTING: IRON_GOLEM
+    POISON: FROG
+    GROUND: ARMADILLO
+    FLYING: CHICKEN
+    PSYCHIC: ALLAY
+    BUG: BEE
+    ROCK: ARMADILLO
+    GHOST: ALLAY
+    DRAGON: HORSE
+    DARK: CAT
+    STEEL: IRON_GOLEM
+    FAIRY: ALLAY
+  # per-species overrides, e.g.  pikachu: RABBIT
+  by-species: {}
   craftable: true   # allow crafting Poke/Great/Ultra Balls (Master stays uncraftable)
   # throw a Poke Ball into the open (not at a wild) to send out your lead
   # pokemon so it walks with you; the ball is refunded so it isn't wasted

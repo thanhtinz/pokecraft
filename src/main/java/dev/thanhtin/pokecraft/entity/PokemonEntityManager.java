@@ -88,9 +88,34 @@ public class PokemonEntityManager {
         }
     }
 
+    /**
+     * The vanilla mob used to represent a species. Without a working 3D model
+     * engine (e.g. on Bedrock/mobile, where custom models can't render), this
+     * lets each pokemon look like a fitting vanilla mob instead of all being
+     * the same husk. Order: mobs.by-species &gt; mobs.by-type &gt; capture.base-entity.
+     */
+    public EntityType baseEntityFor(PokemonSpecies species) {
+        String pick = null;
+        if (species != null && species.id != null) {
+            pick = plugin.getConfig().getString("mobs.by-species." + species.id);
+        }
+        if (pick == null && species != null && species.types != null && !species.types.isEmpty()) {
+            pick = plugin.getConfig().getString("mobs.by-type." + species.types.get(0).name());
+        }
+        if (pick == null) pick = plugin.getConfig().getString("capture.base-entity", "HUSK");
+        try {
+            EntityType t = EntityType.valueOf(pick.toUpperCase(Locale.ROOT));
+            if (t.getEntityClass() != null && LivingEntity.class.isAssignableFrom(t.getEntityClass())
+                    && t.isSpawnable()) {
+                return t;
+            }
+        } catch (IllegalArgumentException ignored) {
+        }
+        return EntityType.HUSK;
+    }
+
     public LivingEntity spawnWild(PokemonSpecies species, PokemonInstance instance, Location loc) {
-        EntityType base = EntityType.valueOf(
-                plugin.getConfig().getString("capture.base-entity", "HUSK").toUpperCase(Locale.ROOT));
+        EntityType base = baseEntityFor(species);
         LivingEntity entity = (LivingEntity) loc.getWorld().spawnEntity(loc, base);
         entity.setSilent(true);
         entity.setRemoveWhenFarAway(false);
@@ -195,8 +220,7 @@ public class PokemonEntityManager {
      * battles and the despawn sweep). Caller is responsible for removal.
      */
     public LivingEntity spawnMount(PokemonSpecies species, PokemonInstance instance, Location loc) {
-        EntityType base = EntityType.valueOf(
-                plugin.getConfig().getString("capture.base-entity", "HUSK").toUpperCase(Locale.ROOT));
+        EntityType base = baseEntityFor(species);
         LivingEntity entity = (LivingEntity) loc.getWorld().spawnEntity(loc, base);
         entity.setSilent(true);
         entity.setPersistent(false);
