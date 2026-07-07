@@ -23,16 +23,25 @@ Format used is the 1.21.4+ item-model system
 `custom_model_data`). On older versions use an `overrides` block in
 `models/item/red_dye.json` instead.
 
-## Bedrock / mobile (Geyser) (`geyser/`)
+## Bedrock / mobile (Geyser) (`geyser/` + `bedrock/`)
 
-Custom item textures only reach Bedrock players through Geyser custom items:
+Custom item textures only reach Bedrock players through Geyser custom items.
+Everything is pre-built here - you only swap the texture:
 
 1. Put `geyser/pokecraft_mappings.json` in
    `plugins/Geyser-Spigot/custom_mappings/`.
-2. Build a **Bedrock resource pack** containing an item texture named `pokedex`
-   (referenced by the mapping's `icon`) and place it in
-   `plugins/Geyser-Spigot/packs/`. Use `geyser/pokedex.png` as the texture.
+2. Zip the **contents** of the `bedrock/` folder (so `manifest.json` is at the
+   zip root) into e.g. `pokecraft.mcpack` and drop it in
+   `plugins/Geyser-Spigot/packs/`. It already contains:
+   - `manifest.json` (resource pack module)
+   - `textures/item_texture.json` (maps the `pokedex` icon to the PNG)
+   - `textures/items/pokedex.png` (the texture - **replace with your art**)
+   - `pack_icon.png`
 3. In Geyser's `config.yml` set `add-non-bedrock-items: true`, then restart.
+
+The mapping's `icon: "pokedex"` matches the `texture_data.pokedex` key in
+`item_texture.json`, which points at `textures/items/pokedex.png`. Keep those
+three names in sync if you rename anything.
 
 See the Geyser docs: https://geysermc.org/wiki/geyser/custom-items/
 
