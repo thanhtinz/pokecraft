@@ -1,12 +1,14 @@
 package dev.thanhtin.pokecraft.battle.pvp;
 
 import dev.thanhtin.pokecraft.PokeCraftPlugin;
+import dev.thanhtin.pokecraft.battle.Abilities;
 import dev.thanhtin.pokecraft.battle.BattleManager;
 import dev.thanhtin.pokecraft.battle.DamageCalculator;
 import dev.thanhtin.pokecraft.battle.MoveData;
 import dev.thanhtin.pokecraft.pokemon.PokemonInstance;
 import dev.thanhtin.pokecraft.pokemon.StatusCondition;
 import dev.thanhtin.pokecraft.species.PokemonSpecies;
+import dev.thanhtin.pokecraft.species.PokemonType;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Sound;
@@ -130,6 +132,8 @@ public class PvpBattleManager implements Listener {
         battles.put(b.getUniqueId(), battle);
         broadcast(battle, Component.text("Duel: " + a.getName() + " vs " + b.getName() + "!",
                 NamedTextColor.GOLD));
+        pvpOnEnter(battle, battle.p1);
+        pvpOnEnter(battle, battle.p2);
         openMenus(battle);
     }
 
@@ -165,6 +169,7 @@ public class PvpBattleManager implements Listener {
             battle.setAwaitingSwitch(id, false);
             battle.setActive(id, target);
             broadcastSendOut(battle, player, target);
+            pvpOnEnter(battle, id);
             if (!battle.anyAwaitingSwitch()) openMenus(battle);
             return;
         }
@@ -196,6 +201,7 @@ public class PvpBattleManager implements Listener {
             if (target != null && target.currentHp > 0) {
                 battle.setActive(side, target);
                 broadcastSendOut(battle, player, target);
+                pvpOnEnter(battle, side);
             }
         }
 
@@ -301,6 +307,11 @@ public class PvpBattleManager implements Listener {
             applyEffect(battle, actor, move, attacker, defender);
         }
 
+        if (result.effectiveness() > 0 && move.category == MoveData.Category.PHYSICAL
+                && defender.currentHp > 0) {
+            pvpContactStatus(battle, attacker, attackerSpecies, defender, defenderSpecies);
+        }
+
         if (BattleManager.STRUGGLE_ID.equals(move.id)) {
             int recoil = Math.max(1, attacker.maxHp(attackerSpecies) / 4);
             attacker.currentHp = Math.max(0, attacker.currentHp - recoil);
@@ -309,6 +320,44 @@ public class PvpBattleManager implements Listener {
         }
 
         checkFaints(battle);
+    }
+
+    /** Intimidate: lower the opponent's Attack when this side's pokemon enters. */
+    private void pvpOnEnter(PvpBattle battle, UUID side) {
+        PokemonInstance entering = battle.activeOf(side);
+        if (entering == null) return;
+        PokemonSpecies species = plugin.species().getSpecies(entering.speciesId);
+        if (species == null || !"intimidate".equals(Abilities.norm(entering.ability(species)))) return;
+        UUID other = battle.opponentOf(side);
+        int[] oppStages = battle.stagesOf(other);
+        PokemonInstance opp = battle.activeOf(other);
+        if (opp == null || opp.currentHp <= 0 || oppStages[1] <= -6) return;
+        oppStages[1] = Math.max(-6, oppStages[1] - 1);
+        PokemonSpecies oppSpecies = plugin.species().getSpecies(opp.speciesId);
+        broadcast(battle, Component.text(species.name + "'s Intimidate lowered "
+                + (oppSpecies != null ? oppSpecies.name : "the foe") + "'s Attack!", NamedTextColor.YELLOW));
+    }
+
+    /** Static / Flame Body / Poison Point on a physical hit against the ability holder. */
+    private void pvpContactStatus(PvpBattle battle, PokemonInstance attacker, PokemonSpecies attackerSpecies,
+                                  PokemonInstance defender, PokemonSpecies defenderSpecies) {
+        if (attacker.status != null || attacker.currentHp <= 0) return;
+        StatusCondition inflict = switch (Abilities.norm(defender.ability(defenderSpecies))) {
+            case "static" -> StatusCondition.PARALYSIS;
+            case "flamebody" -> StatusCondition.BURN;
+            case "poisonpoint" -> StatusCondition.POISON;
+            default -> null;
+        };
+        if (inflict == null) return;
+        if (attackerSpecies.types != null) {
+            if (inflict == StatusCondition.BURN && attackerSpecies.types.contains(PokemonType.FIRE)) return;
+            if (inflict == StatusCondition.POISON && (attackerSpecies.types.contains(PokemonType.POISON)
+                    || attackerSpecies.types.contains(PokemonType.STEEL))) return;
+        }
+        if (ThreadLocalRandom.current().nextInt(100) >= 30) return;
+        attacker.status = inflict;
+        broadcast(battle, Component.text(attackerSpecies.name + " was " + inflict.verb
+                + " by " + defenderSpecies.name + "'s ability!", NamedTextColor.YELLOW));
     }
 
     private boolean canAct(PvpBattle battle, PokemonInstance attacker, PokemonSpecies species, String who) {

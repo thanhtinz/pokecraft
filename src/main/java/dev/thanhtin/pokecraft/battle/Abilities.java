@@ -11,7 +11,7 @@ public final class Abilities {
 
     private Abilities() {}
 
-    static String norm(String ability) {
+    public static String norm(String ability) {
         return ability == null ? "" : ability.toLowerCase().replace("-", "").replace("_", "").replace(" ", "");
     }
 
