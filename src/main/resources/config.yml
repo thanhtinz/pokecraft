@@ -25,6 +25,7 @@ legendary:
 capture:
   # base entity used under ModelEngine models
   base-entity: HUSK
+  craftable: true   # allow crafting Poke/Great/Ultra Balls (Master stays uncraftable)
 
 models:
   # 3D pokemon models via ModelEngine (optional soft-depend). A species uses the

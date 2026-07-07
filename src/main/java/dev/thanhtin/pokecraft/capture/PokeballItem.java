@@ -31,10 +31,45 @@ public final class PokeballItem {
         }
     }
 
+    private final PokeCraftPlugin plugin;
     private final NamespacedKey keyBall;
 
     public PokeballItem(PokeCraftPlugin plugin) {
+        this.plugin = plugin;
         this.keyBall = new NamespacedKey(plugin, "ball");
+    }
+
+    /**
+     * Register crafting recipes for the three catchable balls (Master Ball stays
+     * uncraftable). Safe to call again after a reload - existing recipes are
+     * replaced.
+     */
+    public void registerRecipes() {
+        if (!plugin.getConfig().getBoolean("capture.craftable", true)) return;
+        recipe("poke_ball", create(BallType.POKE_BALL, 4),
+                new String[]{"RRR", "NBN", "NNN"},
+                'R', Material.REDSTONE, 'N', Material.IRON_NUGGET, 'B', Material.STONE_BUTTON);
+        recipe("great_ball", create(BallType.GREAT_BALL, 4),
+                new String[]{"RRR", "IBI", "III"},
+                'R', Material.REDSTONE, 'I', Material.IRON_INGOT, 'B', Material.STONE_BUTTON);
+        recipe("ultra_ball", create(BallType.ULTRA_BALL, 2),
+                new String[]{"RRR", "GBG", "GGG"},
+                'R', Material.REDSTONE, 'G', Material.GOLD_INGOT, 'B', Material.STONE_BUTTON);
+    }
+
+    private void recipe(String id, ItemStack result, String[] shape, Object... ingredients) {
+        NamespacedKey key = new NamespacedKey(plugin, id);
+        plugin.getServer().removeRecipe(key); // idempotent across reloads
+        org.bukkit.inventory.ShapedRecipe r = new org.bukkit.inventory.ShapedRecipe(key, result);
+        r.shape(shape);
+        for (int i = 0; i + 1 < ingredients.length; i += 2) {
+            r.setIngredient((Character) ingredients[i], (Material) ingredients[i + 1]);
+        }
+        try {
+            plugin.getServer().addRecipe(r);
+        } catch (IllegalStateException ignored) {
+            // recipe already present (e.g. duplicate reload) - fine
+        }
     }
 
     public ItemStack create(BallType type, int amount) {

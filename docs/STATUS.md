@@ -99,7 +99,9 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Bắt thành công khi đang battle sẽ kết thúc battle sạch sẽ
 - [x] Party đầy thì tự chuyển vào PC box
 - [ ] Animation ném ball / ball rung 3 lần
-- [ ] Craft recipe cho pokeball
+- [x] Craft recipe cho pokeball: Poke Ball (redstone+iron nugget+button, ra 4),
+      Great Ball (iron ingot, ra 4), Ultra Ball (gold ingot, ra 2); Master Ball
+      không craft được. Bật/tắt qua capture.craftable
 
 ## Battle
 

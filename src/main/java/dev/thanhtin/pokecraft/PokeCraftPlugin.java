@@ -253,6 +253,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getCommand("poke").setExecutor(command);
         getCommand("poke").setTabCompleter(command);
 
+        pokeballItem.registerRecipes();
         spawnManager.start();
         legendaryManager.start();
         farmManager.start();
