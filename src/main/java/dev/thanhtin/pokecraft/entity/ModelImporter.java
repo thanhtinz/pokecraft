@@ -187,13 +187,17 @@ public class ModelImporter {
             int resW = desc.has("texture_width") ? desc.get("texture_width").getAsInt() : 64;
             int resH = desc.has("texture_height") ? desc.get("texture_height").getAsInt() : 64;
 
+            File out = new File(outDir, modelName + ".bbmodel");
+            if (out.isFile() && out.lastModified() >= geoFile.lastModified()) {
+                continue; // already converted and up to date - skip (fast restarts)
+            }
+
             Map<String, String> boneUuid = new HashMap<>();
             JsonObject model = buildModel(geo, modelName, texB64, resW, resH, boneUuid);
             if (animData != null) {
                 JsonArray anims = buildAnimations(animData, modelName, boneUuid);
                 if (anims.size() > 0) model.add("animations", anims);
             }
-            File out = new File(outDir, modelName + ".bbmodel");
             try (FileWriter w = new FileWriter(out)) {
                 gson.toJson(model, w);
             }
