@@ -40,7 +40,8 @@ public class UsableItems implements Listener {
         FIRE_STONE("Fire Stone", Material.BLAZE_POWDER, 0, "Evolves certain pokemon"),
         WATER_STONE("Water Stone", Material.HEART_OF_THE_SEA, 0, "Evolves certain pokemon"),
         LEAF_STONE("Leaf Stone", Material.BIG_DRIPLEAF, 0, "Evolves certain pokemon"),
-        MOON_STONE("Moon Stone", Material.QUARTZ, 0, "Evolves certain pokemon");
+        MOON_STONE("Moon Stone", Material.QUARTZ, 0, "Evolves certain pokemon"),
+        ORAN_BERRY("Oran Berry", Material.GLOW_BERRIES, 30, "Heals 30 HP");
 
         public final String display;
         public final Material material;

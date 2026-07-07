@@ -195,6 +195,12 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Câu cá: câu gần nước có tỉ lệ (config) móc trúng pokemon hệ Nước hoang
       -> mở battle luôn (bắt/đánh như thường)
 
+## Farming (berries)
+
+- [x] Berry Seed mua ở shop, trồng trên cỏ/đất (chuột phải), mọc theo thời
+      gian (config), chuột phải khi chín để thu Oran Berry + tiền
+- [x] Oran Berry là item hồi 30 HP; plot lưu DB (giữ qua restart)
+
 ## Dungeon
 
 - [x] Dungeon: /poke menu -> Dungeon, tốn phí + cooldown; đánh N wave trainer

@@ -111,6 +111,12 @@ public class StorageManager {
                     k TEXT PRIMARY KEY,
                     v TEXT NOT NULL
                 )""");
+            st.executeUpdate("""
+                CREATE TABLE IF NOT EXISTS farms (
+                    loc TEXT PRIMARY KEY,
+                    owner TEXT NOT NULL,
+                    planted_at INTEGER NOT NULL
+                )""");
         }
         plugin.getLogger().info("[OK] Storage initialized (" + type + ")");
     }
@@ -441,6 +447,45 @@ public class StorageManager {
         } catch (SQLException e) {
             plugin.getLogger().severe("[ERR] claimQuest failed: " + e.getMessage());
         }
+    }
+
+    // ---------- farms (berry plots) ----------
+
+    public record FarmRow(String loc, UUID owner, long plantedAt) {}
+
+    public synchronized void addFarm(String loc, UUID owner, long plantedAt) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "INSERT OR REPLACE INTO farms(loc, owner, planted_at) VALUES(?,?,?)")) {
+            ps.setString(1, loc);
+            ps.setString(2, owner.toString());
+            ps.setLong(3, plantedAt);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] addFarm failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized void removeFarm(String loc) {
+        try (PreparedStatement ps = connection.prepareStatement("DELETE FROM farms WHERE loc=?")) {
+            ps.setString(1, loc);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] removeFarm failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized List<FarmRow> allFarms() {
+        List<FarmRow> out = new ArrayList<>();
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT loc, owner, planted_at FROM farms")) {
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) out.add(new FarmRow(rs.getString(1),
+                        UUID.fromString(rs.getString(2)), rs.getLong(3)));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] allFarms failed: " + e.getMessage());
+        }
+        return out;
     }
 
     // ---------- meta (key/value) ----------

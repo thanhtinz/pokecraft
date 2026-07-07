@@ -71,6 +71,10 @@ npc:
   trainer-reward-per-level: 10  # money = sum of team levels * this
   trainer-cooldown-minutes: 30
 
+farm:
+  grow-seconds: 300       # time for a planted berry to ripen
+  harvest-money: 150
+
 dungeon:
   waves: 3                # trainer waves before the boss
   base-level: 15

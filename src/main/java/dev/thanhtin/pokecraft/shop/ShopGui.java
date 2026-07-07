@@ -64,7 +64,9 @@ public class ShopGui implements Listener {
             new Entry("everstone", 1000, 1, "Everstone",
                     pl -> pl.heldItems().create(HeldItems.HeldType.EVERSTONE, 1)),
             new Entry("focus-band", 3000, 1, "Focus Band",
-                    pl -> pl.heldItems().create(HeldItems.HeldType.FOCUS_BAND, 1)));
+                    pl -> pl.heldItems().create(HeldItems.HeldType.FOCUS_BAND, 1)),
+            new Entry("berry-seed", 100, 3, "3x Berry Seed",
+                    pl -> pl.farms().createSeed(3)));
 
     private final PokeCraftPlugin plugin;
 

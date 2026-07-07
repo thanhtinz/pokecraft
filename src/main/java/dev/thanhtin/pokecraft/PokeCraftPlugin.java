@@ -8,6 +8,7 @@ import dev.thanhtin.pokecraft.battle.pvp.PvpBattleManager;
 import dev.thanhtin.pokecraft.daycare.DaycareManager;
 import dev.thanhtin.pokecraft.dungeon.DungeonManager;
 import dev.thanhtin.pokecraft.economy.EconomyManager;
+import dev.thanhtin.pokecraft.farm.FarmManager;
 import dev.thanhtin.pokecraft.bedrock.BedrockSupport;
 import dev.thanhtin.pokecraft.capture.CaptureListener;
 import dev.thanhtin.pokecraft.capture.PokeballItem;
@@ -82,6 +83,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private GuildNameInput guildNameInput;
     private RankGui rankGui;
     private DungeonManager dungeonManager;
+    private FarmManager farmManager;
     private PvpBattleManager pvpManager;
     private EconomyManager economyManager;
     private MarriageManager marriageManager;
@@ -139,6 +141,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         guildNameInput = new GuildNameInput(this);
         rankGui = new RankGui(this);
         dungeonManager = new DungeonManager(this);
+        farmManager = new FarmManager(this);
         pvpManager = new PvpBattleManager(this);
         economyManager = new EconomyManager(this);
         marriageManager = new MarriageManager(this);
@@ -176,6 +179,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(guildNameInput, this);
         getServer().getPluginManager().registerEvents(rankGui, this);
         getServer().getPluginManager().registerEvents(dungeonManager, this);
+        getServer().getPluginManager().registerEvents(farmManager, this);
         getServer().getPluginManager().registerEvents(pvpManager, this);
         getServer().getPluginManager().registerEvents(economyManager, this);
         getServer().getPluginManager().registerEvents(usableItems, this);
@@ -189,6 +193,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getCommand("poke").setTabCompleter(command);
 
         spawnManager.start();
+        farmManager.start();
         daycareManager.start();
         rideManager.start();
         getLogger().info("[OK] PokeCraft enabled");
@@ -197,6 +202,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     @Override
     public void onDisable() {
         if (spawnManager != null) spawnManager.stop();
+        if (farmManager != null) farmManager.stop();
         if (daycareManager != null) daycareManager.stop();
         if (rideManager != null) rideManager.stop();
         if (partyManager != null) partyManager.saveAll();
@@ -236,6 +242,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public GuildNameInput guildNameInput() { return guildNameInput; }
     public RankGui rankUi() { return rankGui; }
     public DungeonManager dungeons() { return dungeonManager; }
+    public FarmManager farms() { return farmManager; }
     public PvpBattleManager pvp() { return pvpManager; }
     public EconomyManager economy() { return economyManager; }
     public MarriageManager marriage() { return marriageManager; }
