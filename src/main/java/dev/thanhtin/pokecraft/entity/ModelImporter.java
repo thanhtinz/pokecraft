@@ -89,7 +89,7 @@ public class ModelImporter {
             reloadCmd = "meg reload";
         } else if (bmDir.isDirectory()) {
             outDir = new File(bmDir, "models");
-            reloadCmd = "bettermodel reload";
+            reloadCmd = "bm reload"; // BetterModel's command is /bm
         } else {
             plugin.getLogger().info("[..] No model engine (ModelEngine/BetterModel) installed - skipping model import");
             return;
