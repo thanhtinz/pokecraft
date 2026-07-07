@@ -102,6 +102,8 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Pokemon lưu dạng JSON row, index theo owner (PP/status persist)
 - [x] Party GUI: xem chi tiết (HP, type, nature, exp, moves+PP, status),
       click-chọn rồi click slot khác để đổi chỗ, gửi vào PC, mở PC box
+- [x] Summary GUI per pokemon (kiểu Cobblemon): info/nature/EXP, 4 move
+      với PP-power-accuracy-effect, 6 stat + IV, yêu cầu tiến hóa
 - [x] PC box GUI phân trang (45/trang), click để rút về party
 - [x] /poke nickname, /poke release (xác nhận 2 lần trong 15s)
 - [ ] Trade giữa 2 player

@@ -31,6 +31,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class PartyGui implements Listener {
     private static final int SLOT_DEPOSIT = 18;
+    private static final int SLOT_DETAILS = 20;
     private static final int SLOT_INFO = 22;
     private static final int SLOT_PC = 26;
 
@@ -95,6 +96,9 @@ public class PartyGui implements Listener {
         inv.setItem(SLOT_DEPOSIT, button(Material.CHEST_MINECART,
                 sel != null ? "Deposit selected to PC" : "Deposit: select a pokemon first",
                 sel != null ? NamedTextColor.YELLOW : NamedTextColor.DARK_GRAY));
+        inv.setItem(SLOT_DETAILS, button(Material.BOOK,
+                sel != null ? "View details of selected" : "Details: select a pokemon first",
+                sel != null ? NamedTextColor.YELLOW : NamedTextColor.DARK_GRAY));
         inv.setItem(SLOT_INFO, button(Material.PAPER,
                 "PC stores " + party.pc().size() + " pokemon", NamedTextColor.GRAY));
         inv.setItem(SLOT_PC, button(Material.ENDER_CHEST, "Open PC Box", NamedTextColor.YELLOW));
@@ -152,6 +156,14 @@ public class PartyGui implements Listener {
                 plugin.parties().saveParty(id);
             }
             refresh(player);
+            return;
+        }
+
+        if (raw == SLOT_DETAILS && sel != null) {
+            final int detailSlot = sel;
+            selected.remove(id);
+            plugin.getServer().getScheduler().runTask(plugin,
+                    () -> plugin.summaryUi().open(player, detailSlot));
             return;
         }
 
