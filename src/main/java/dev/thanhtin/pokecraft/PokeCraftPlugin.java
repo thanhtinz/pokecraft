@@ -107,6 +107,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private DungeonManager dungeonManager;
     private FarmManager farmManager;
     private dev.thanhtin.pokecraft.pokemon.FossilManager fossilManager;
+    private dev.thanhtin.pokecraft.pokemon.ChainManager chainManager;
     private AdminGui adminGui;
     private BadgeService badgeService;
     private BadgesGui badgesGui;
@@ -181,6 +182,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         dungeonManager = new DungeonManager(this);
         farmManager = new FarmManager(this);
         fossilManager = new dev.thanhtin.pokecraft.pokemon.FossilManager(this);
+        chainManager = new dev.thanhtin.pokecraft.pokemon.ChainManager(this);
         adminGui = new AdminGui(this);
         badgeService = new BadgeService(this);
         badgesGui = new BadgesGui(this);
@@ -343,6 +345,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public RankGui rankUi() { return rankGui; }
     public DungeonManager dungeons() { return dungeonManager; }
     public FarmManager farms() { return farmManager; }
+    public dev.thanhtin.pokecraft.pokemon.ChainManager chains() { return chainManager; }
     public AdminGui adminUi() { return adminGui; }
     public SpawnManager spawns() { return spawnManager; }
     public LegendaryManager legendaries() { return legendaryManager; }

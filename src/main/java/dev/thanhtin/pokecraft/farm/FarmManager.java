@@ -135,7 +135,17 @@ public class FarmManager implements Listener {
         long money = plugin.getConfig().getLong("farm.harvest-money", 150);
         plugin.economy().deposit(player.getUniqueId(), money);
         player.playSound(player.getLocation(), Sound.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, 1f, 1.2f);
-        player.sendMessage(Component.text("Harvested " + berries + " Oran Berry + "
+        String extra = "";
+        if (ThreadLocalRandom.current().nextDouble() < plugin.getConfig().getDouble("farm.held-berry-chance", 0.15)) {
+            var held = new dev.thanhtin.pokecraft.item.HeldItems.HeldType[]{
+                    dev.thanhtin.pokecraft.item.HeldItems.HeldType.ORAN_BERRY,
+                    dev.thanhtin.pokecraft.item.HeldItems.HeldType.SITRUS_BERRY,
+                    dev.thanhtin.pokecraft.item.HeldItems.HeldType.LUM_BERRY};
+            var pick = held[ThreadLocalRandom.current().nextInt(held.length)];
+            player.getInventory().addItem(plugin.heldItems().create(pick, 1));
+            extra = " and a " + pick.display;
+        }
+        player.sendMessage(Component.text("Harvested " + berries + " Oran Berry" + extra + " + "
                 + plugin.economy().format(money) + "!", NamedTextColor.GREEN));
     }
 

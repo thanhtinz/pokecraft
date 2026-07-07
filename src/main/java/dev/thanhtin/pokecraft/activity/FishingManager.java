@@ -67,7 +67,7 @@ public class FishingManager implements Listener {
 
         Location loc = player.getLocation();
         PokemonInstance instance = PokemonInstance.generate(species, level,
-                plugin.getConfig().getInt("battle.shiny-rate", 4096));
+                plugin.chains().shinyRate(player, plugin.getConfig().getInt("battle.shiny-rate", 4096)));
         LivingEntity entity = plugin.entities().spawnWild(species, instance, loc);
         player.sendMessage(Component.text("A wild " + species.name + " is biting!", NamedTextColor.AQUA));
         plugin.quests().progress(player, "fish", 1);

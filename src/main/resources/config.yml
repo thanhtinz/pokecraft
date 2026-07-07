@@ -97,6 +97,12 @@ wild:
   held-item-chance: 0.05
   held-items: [oran_berry, sitrus_berry, lum_berry, leftovers, focus_band]
 
+chain:
+  # catching the same species in a row improves its shiny odds (applies to
+  # fishing); catching a different species resets the chain
+  enabled: true
+  min-shiny-rate: 128        # best (lowest) 1/N the chain can reach
+
 battle:
   exp-multiplier: 1.0
   shiny-rate: 4096           # 1 / N
