@@ -57,5 +57,18 @@
       "item": "thunder_stone"
     }
   ],
-  "spawn": null
+  "spawn": null,
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 2,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": 0.5,
+  "abilities": [
+    "battery"
+  ],
+  "hiddenAbility": "battery"
 }

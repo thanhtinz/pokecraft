@@ -74,6 +74,13 @@ public class SummaryGui implements Listener {
                 p.shiny ? NamedTextColor.GOLD : NamedTextColor.AQUA));
         List<Component> lore = new ArrayList<>();
         lore.add(Component.text("Type: " + species.types, NamedTextColor.GRAY));
+        dev.thanhtin.pokecraft.pokemon.Gender g = p.gender(species);
+        if (g != dev.thanhtin.pokecraft.pokemon.Gender.GENDERLESS) {
+            lore.add(Component.text("Gender: " + g.symbol + " " + g.name().charAt(0)
+                    + g.name().substring(1).toLowerCase(),
+                    g == dev.thanhtin.pokecraft.pokemon.Gender.MALE
+                            ? NamedTextColor.AQUA : NamedTextColor.LIGHT_PURPLE));
+        }
         lore.add(Component.text("Nature: " + p.nature
                 + (p.nature.up != p.nature.down
                         ? " (+" + statName(p.nature.up) + " -" + statName(p.nature.down) + ")"
@@ -126,8 +133,9 @@ public class SummaryGui implements Listener {
         List<Component> statsLore = new ArrayList<>();
         String[] names = {"HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed"};
         for (int i = 0; i < 6; i++) {
+            int ev = (p.evs != null && i < p.evs.length) ? p.evs[i] : 0;
             statsLore.add(Component.text(names[i] + ": " + p.stat(species, i)
-                    + "  (IV " + p.ivs[i] + "/31)", NamedTextColor.GRAY));
+                    + "  (IV " + p.ivs[i] + "/31, EV " + ev + ")", NamedTextColor.GRAY));
         }
         statsMeta.lore(statsLore);
         stats.setItemMeta(statsMeta);

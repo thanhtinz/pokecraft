@@ -3,6 +3,7 @@ package dev.thanhtin.pokecraft.daycare;
 import dev.thanhtin.pokecraft.PokeCraftPlugin;
 import dev.thanhtin.pokecraft.party.PlayerParty;
 import dev.thanhtin.pokecraft.pokemon.Breeding;
+import dev.thanhtin.pokecraft.pokemon.Gender;
 import dev.thanhtin.pokecraft.pokemon.PokemonInstance;
 import dev.thanhtin.pokecraft.species.PokemonSpecies;
 import dev.thanhtin.pokecraft.storage.StorageManager;
@@ -140,11 +141,11 @@ public class DaycareManager {
             PokemonInstance b = plugin.storage().loadPokemon(entries.get(1).pokemonUuid());
             if (a == null || b == null) continue;
             Map<String, String> parents = plugin.species().childToParent();
-            if (!Breeding.compatible(a.speciesId, b.speciesId, parents)) continue;
+            String baseId = breedingResult(a, b, parents);
+            if (baseId == null) continue;
             if (ThreadLocalRandom.current().nextDouble() >= chance) continue;
 
-            PokemonSpecies babySpecies = plugin.species().getSpecies(
-                    Breeding.baseForm(a.speciesId, parents));
+            PokemonSpecies babySpecies = plugin.species().getSpecies(baseId);
             if (babySpecies == null) continue;
             int shinyRate = plugin.getConfig().getInt("daycare.breed-shiny-rate", 2048);
             boolean shiny = shinyRate > 0 && ThreadLocalRandom.current().nextInt(shinyRate) == 0;
@@ -153,5 +154,28 @@ public class DaycareManager {
             player.sendMessage(Component.text("Surprise! The daycare found an Egg for you - "
                     + "walk around to hatch it!", NamedTextColor.LIGHT_PURPLE));
         }
+    }
+
+    /**
+     * Decide the baby's base-form species, or null if the pair can't breed.
+     * A Ditto breeds with any non-Ditto (baby = that species' base form);
+     * otherwise the pair must share an evolution family AND be male + female.
+     */
+    private String breedingResult(PokemonInstance a, PokemonInstance b, Map<String, String> parents) {
+        boolean aDitto = "ditto".equals(a.speciesId);
+        boolean bDitto = "ditto".equals(b.speciesId);
+        if (aDitto && bDitto) return null;          // two Dittos can't breed
+        if (aDitto) return Breeding.baseForm(b.speciesId, parents);
+        if (bDitto) return Breeding.baseForm(a.speciesId, parents);
+
+        if (!Breeding.compatible(a.speciesId, b.speciesId, parents)) return null;
+        PokemonSpecies sa = plugin.species().getSpecies(a.speciesId);
+        PokemonSpecies sb = plugin.species().getSpecies(b.speciesId);
+        if (sa == null || sb == null) return null;
+        Gender ga = a.gender(sa), gb = b.gender(sb);
+        boolean malefemale = (ga == Gender.MALE && gb == Gender.FEMALE)
+                || (ga == Gender.FEMALE && gb == Gender.MALE);
+        if (!malefemale) return null;               // need one of each gender
+        return Breeding.baseForm(a.speciesId, parents);
     }
 }

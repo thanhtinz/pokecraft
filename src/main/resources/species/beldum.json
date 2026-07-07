@@ -38,5 +38,18 @@
     "weight": 2,
     "minLevel": 8,
     "maxLevel": 20
-  }
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 1,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": -1,
+  "abilities": [
+    "clearbody"
+  ],
+  "hiddenAbility": "lightmetal"
 }

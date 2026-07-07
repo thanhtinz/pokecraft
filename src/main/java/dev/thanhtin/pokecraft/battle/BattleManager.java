@@ -379,6 +379,7 @@ public class BattleManager implements Listener {
                 * plugin.marriage().expMultiplier(player);
         long gained = Math.round(faintedSpecies.expYield * battle.wildPokemon.level / 7.0 * mult);
         if (battle.playerPokemon.holds("lucky_egg")) gained = Math.round(gained * 1.5);
+        battle.playerPokemon.gainEvs(faintedSpecies);
         int levels = battle.playerPokemon.addExp(mySpecies, gained);
         player.sendMessage(Component.text(opponentPrefix(battle) + faintedSpecies.name
                 + " fainted! +" + gained + " EXP", NamedTextColor.GREEN));

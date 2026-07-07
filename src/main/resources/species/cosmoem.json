@@ -37,5 +37,18 @@
       "item": null
     }
   ],
-  "spawn": null
+  "spawn": null,
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 1,
+    "spa": 0,
+    "spd": 1,
+    "spe": 0
+  },
+  "maleRatio": -1,
+  "abilities": [
+    "sturdy"
+  ],
+  "hiddenAbility": "sturdy"
 }

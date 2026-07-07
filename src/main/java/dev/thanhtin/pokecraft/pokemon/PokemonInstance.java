@@ -19,8 +19,10 @@ public class PokemonInstance {
     public long exp;
     public int currentHp;
     public int[] ivs;          // hp atk def spa spd spe (0-31)
+    public int[] evs;          // hp atk def spa spd spe (0-252, sum <= 510)
     public Nature nature;
     public boolean shiny;
+    public Gender gender;
     public List<String> moves; // up to 4 move ids
     public UUID owner;         // null = wild
     /** Remaining PP per move id. Missing entry = full PP. */
@@ -44,8 +46,10 @@ public class PokemonInstance {
         p.exp = ExperienceCurve.expForLevel(p.level);
         p.ivs = new int[6];
         for (int i = 0; i < 6; i++) p.ivs[i] = rnd.nextInt(32);
+        p.evs = new int[6];
         p.nature = Nature.random();
         p.shiny = shinyRate > 0 && rnd.nextInt(shinyRate) == 0;
+        p.gender = Gender.roll(species);
         p.moves = latestMoves(species, p.level);
         p.currentHp = p.maxHp(species);
         return p;
@@ -73,14 +77,45 @@ public class PokemonInstance {
             case 0 -> b.hp; case 1 -> b.atk; case 2 -> b.def;
             case 3 -> b.spa; case 4 -> b.spd; default -> b.spe;
         };
+        int ev = (evs != null && index < evs.length) ? evs[index] : 0;
         if (index == 0) {
-            return ((2 * base + ivs[0]) * level) / 100 + level + 10;
+            return ((2 * base + ivs[0] + ev / 4) * level) / 100 + level + 10;
         }
-        int raw = ((2 * base + ivs[index]) * level) / 100 + 5;
+        int raw = ((2 * base + ivs[index] + ev / 4) * level) / 100 + 5;
         return (int) Math.floor(raw * nature.multiplier(index));
     }
 
+    /** Cap for a single EV stat and for the total across all stats. */
+    public static final int EV_STAT_CAP = 252;
+    public static final int EV_TOTAL_CAP = 510;
+
+    /**
+     * Award the EV yield of a defeated species, respecting the per-stat and
+     * total caps. @return true if any EV was actually gained.
+     */
+    public boolean gainEvs(PokemonSpecies defeated) {
+        if (defeated == null) return false;
+        if (evs == null) evs = new int[6];
+        int total = 0;
+        for (int e : evs) total += e;
+        boolean changed = false;
+        for (int i = 0; i < 6; i++) {
+            int yield = defeated.evYieldFor(i);
+            if (yield <= 0 || total >= EV_TOTAL_CAP) continue;
+            int room = Math.min(EV_STAT_CAP - evs[i], EV_TOTAL_CAP - total);
+            int add = Math.min(yield, room);
+            if (add > 0) { evs[i] += add; total += add; changed = true; }
+        }
+        return changed;
+    }
+
     public int maxHp(PokemonSpecies species) { return stat(species, 0); }
+
+    /** Gender, lazily assigned for pokemon created before genders existed. */
+    public Gender gender(PokemonSpecies species) {
+        if (gender == null) gender = Gender.roll(species);
+        return gender;
+    }
 
     public String displayName(PokemonSpecies species) {
         String base = nickname != null && !nickname.isEmpty() ? nickname : species.name;

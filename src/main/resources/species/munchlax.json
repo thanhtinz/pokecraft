@@ -81,5 +81,19 @@
     "weight": 4,
     "minLevel": 8,
     "maxLevel": 20
-  }
+  },
+  "evYield": {
+    "hp": 1,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": 0.875,
+  "abilities": [
+    "pickup",
+    "thickfat"
+  ],
+  "hiddenAbility": "gluttony"
 }

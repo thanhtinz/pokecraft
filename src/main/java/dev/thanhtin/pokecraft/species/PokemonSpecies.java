@@ -19,6 +19,29 @@ public class PokemonSpecies {
     public List<Evolution> evolutions;
     public SpawnInfo spawn;
 
+    /** Effort values a defeated pokemon of this species awards (hp/atk/def/spa/spd/spe). */
+    public Map<String, Integer> evYield;
+    /** Fraction male (0..1); -1 means genderless. Defaults to 0.5 when absent. */
+    public Double maleRatio;
+    /** Ordinary abilities (ids); one is chosen when the pokemon is generated. */
+    public List<String> abilities;
+    /** Hidden ability id, or null. */
+    public String hiddenAbility;
+
+    /** EV yield for a stat index (0=hp..5=spe), 0 when unset. */
+    public int evYieldFor(int index) {
+        if (evYield == null) return 0;
+        String key = switch (index) {
+            case 0 -> "hp"; case 1 -> "atk"; case 2 -> "def";
+            case 3 -> "spa"; case 4 -> "spd"; default -> "spe";
+        };
+        return evYield.getOrDefault(key, 0);
+    }
+
+    public double genderMaleRatio() {
+        return maleRatio == null ? 0.5 : maleRatio;
+    }
+
     /** All evolution entries: {@link #evolution} plus {@link #evolutions}. */
     public List<Evolution> allEvolutions() {
         List<Evolution> out = new java.util.ArrayList<>();

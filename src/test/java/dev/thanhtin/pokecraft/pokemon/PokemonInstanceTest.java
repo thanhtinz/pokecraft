@@ -103,6 +103,44 @@ class PokemonInstanceTest {
     }
 
     @Test
+    void evsRaiseStatsAndRespectCaps() {
+        PokemonSpecies s = species(100);
+        PokemonInstance p = instance(s, 50, 31, Nature.HARDY);
+        int before = p.stat(s, 1);
+        p.evs = new int[]{0, 252, 0, 0, 0, 0};
+        // 252 EV folds into the Gen-3 formula: ((2*100+31+63)*50)/100+5 = 152
+        assertEquals(152, p.stat(s, 1));
+        assertTrue(p.stat(s, 1) > before);
+
+        // a defeated species with an EV yield adds toward the caps
+        PokemonSpecies foe = species(50);
+        foe.evYield = Map.of("atk", 2, "spe", 1);
+        PokemonInstance q = instance(s, 50, 31, Nature.HARDY);
+        q.evs = new int[6];
+        assertTrue(q.gainEvs(foe));
+        assertEquals(2, q.evs[1]);
+        assertEquals(1, q.evs[5]);
+
+        // per-stat cap of 252 is never exceeded
+        q.evs = new int[]{0, 251, 0, 0, 0, 0};
+        q.gainEvs(foe);
+        assertEquals(PokemonInstance.EV_STAT_CAP, q.evs[1]);
+    }
+
+    @Test
+    void genderRollsFromRatio() {
+        PokemonSpecies male = species(50);
+        male.maleRatio = 1.0;
+        assertEquals(Gender.MALE, Gender.roll(male));
+        PokemonSpecies female = species(50);
+        female.maleRatio = 0.0;
+        assertEquals(Gender.FEMALE, Gender.roll(female));
+        PokemonSpecies none = species(50);
+        none.maleRatio = -1.0;
+        assertEquals(Gender.GENDERLESS, Gender.roll(none));
+    }
+
+    @Test
     void healRestoresEverything() {
         PokemonSpecies s = species(100);
         PokemonInstance p = instance(s, 20, 31, Nature.HARDY);

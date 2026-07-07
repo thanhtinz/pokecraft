@@ -54,5 +54,19 @@
     "weight": 2,
     "minLevel": 8,
     "maxLevel": 20
-  }
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 2,
+    "spd": 1,
+    "spe": 0
+  },
+  "maleRatio": 0.875,
+  "abilities": [
+    "hustle",
+    "serenegrace"
+  ],
+  "hiddenAbility": "superluck"
 }

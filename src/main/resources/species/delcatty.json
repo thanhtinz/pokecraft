@@ -44,5 +44,19 @@
   },
   "evolution": null,
   "evolutions": null,
-  "spawn": null
+  "spawn": null,
+  "evYield": {
+    "hp": 1,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 1
+  },
+  "maleRatio": 0.25,
+  "abilities": [
+    "cutecharm",
+    "normalize"
+  ],
+  "hiddenAbility": "wonderskin"
 }

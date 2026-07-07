@@ -68,5 +68,18 @@
     "weight": 3,
     "minLevel": 8,
     "maxLevel": 20
-  }
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 2
+  },
+  "maleRatio": 0.75,
+  "abilities": [
+    "static"
+  ],
+  "hiddenAbility": "vitalspirit"
 }

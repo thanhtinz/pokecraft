@@ -84,5 +84,19 @@
     "weight": 15,
     "minLevel": 2,
     "maxLevel": 10
-  }
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 1,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": 0.5,
+  "abilities": [
+    "sturdy",
+    "rockhead"
+  ],
+  "hiddenAbility": "heavymetal"
 }

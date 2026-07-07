@@ -60,5 +60,19 @@
   },
   "evolution": null,
   "evolutions": null,
-  "spawn": null
+  "spawn": null,
+  "evYield": {
+    "hp": 0,
+    "atk": 1,
+    "def": 0,
+    "spa": 1,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": 0.5,
+  "abilities": [
+    "suctioncups",
+    "sniper"
+  ],
+  "hiddenAbility": "moody"
 }

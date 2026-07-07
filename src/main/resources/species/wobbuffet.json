@@ -40,5 +40,18 @@
     "weight": 3,
     "minLevel": 8,
     "maxLevel": 20
-  }
+  },
+  "evYield": {
+    "hp": 2,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": 0.5,
+  "abilities": [
+    "shadowtag"
+  ],
+  "hiddenAbility": "telepathy"
 }

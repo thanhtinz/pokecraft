@@ -79,5 +79,19 @@
     "weight": 18,
     "minLevel": 2,
     "maxLevel": 10
-  }
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 1,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": 0.125,
+  "abilities": [
+    "rivalry",
+    "unnerve"
+  ],
+  "hiddenAbility": "moxie"
 }

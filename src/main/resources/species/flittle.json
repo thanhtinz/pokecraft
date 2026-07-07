@@ -63,5 +63,19 @@
     "weight": 10,
     "minLevel": 4,
     "maxLevel": 14
-  }
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 1
+  },
+  "maleRatio": 0.5,
+  "abilities": [
+    "anticipation",
+    "frisk"
+  ],
+  "hiddenAbility": "speedboost"
 }

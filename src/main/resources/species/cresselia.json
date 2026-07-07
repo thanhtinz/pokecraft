@@ -61,5 +61,18 @@
   },
   "evolution": null,
   "evolutions": null,
-  "spawn": null
+  "spawn": null,
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 3,
+    "spe": 0
+  },
+  "maleRatio": 0,
+  "abilities": [
+    "levitate"
+  ],
+  "hiddenAbility": "levitate"
 }

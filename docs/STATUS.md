@@ -37,14 +37,15 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
       Haunter->Gengar, Boldore, Gurdurr, Phantump, Pumpkaboo); Everstone chặn
 - [x] Move dataset: ~919 moves (build từ PokeAPI CSV qua tools/build_moves.py),
       phủ đủ 18 hệ, kèm hiệu ứng phụ (status/stat-change)
-- [ ] EVs (effort values)
+- [x] EVs (effort values): +EV khi hạ pokemon theo evYield từng loài, cap
+      252/stat & 510 tổng, cộng vào công thức chỉ số; hiện trong Summary
 - [ ] Abilities
 - [x] Held items: Leftovers (hồi 1/16/lượt), Muscle Band (+10% physical),
       Wise Glasses (+10% special), Quick Claw (20% đánh trước), Lucky Egg
       (+50% EXP), Everstone (chặn tiến hóa), Focus Band (10% trụ 1 HP) -
       mua ở shop, right-click để trang bị, tháo trong Summary GUI,
       hoạt động ở cả wild/trainer/PvP battle
-- [ ] Genders + breeding compatibility data
+- [x] Giới tính (♂/♀/vô tính theo maleRatio từng loài), hiện ở Summary
 
 ## Spawning
 
@@ -159,7 +160,8 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
       con non thừa hưởng 3 IV từ bố mẹ, shiny rate x2
 - [x] Egg item (turtle egg) + đi bộ để nở: dữ liệu con non nằm trong item nên
       egg có thể cất/thả/trade; đi đủ egg.steps block thì nở ra pokemon
-- [ ] Giới tính / everstone / ditto
+- [x] Ditto: lai được với mọi loài (ra base form của con kia); lai thường
+      cần đực+cái. Everstone: chặn tiến hóa (đã có)
 
 ## Riding
 

@@ -72,5 +72,18 @@
       "item": null
     }
   ],
-  "spawn": null
+  "spawn": null,
+  "evYield": {
+    "hp": 0,
+    "atk": 1,
+    "def": 0,
+    "spa": 1,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": 0.875,
+  "abilities": [
+    "blaze"
+  ],
+  "hiddenAbility": "speedboost"
 }

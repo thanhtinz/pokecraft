@@ -40,5 +40,18 @@
   },
   "evolution": null,
   "evolutions": null,
-  "spawn": null
+  "spawn": null,
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 1,
+    "spe": 1
+  },
+  "maleRatio": 0.25,
+  "abilities": [
+    "flashfire"
+  ],
+  "hiddenAbility": "drought"
 }

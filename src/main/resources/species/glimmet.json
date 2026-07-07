@@ -75,5 +75,18 @@
     "weight": 5,
     "minLevel": 8,
     "maxLevel": 20
-  }
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 1,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": 0.5,
+  "abilities": [
+    "toxicdebris"
+  ],
+  "hiddenAbility": "corrosion"
 }

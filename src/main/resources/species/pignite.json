@@ -68,5 +68,18 @@
       "item": null
     }
   ],
-  "spawn": null
+  "spawn": null,
+  "evYield": {
+    "hp": 0,
+    "atk": 2,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": 0.875,
+  "abilities": [
+    "blaze"
+  ],
+  "hiddenAbility": "thickfat"
 }

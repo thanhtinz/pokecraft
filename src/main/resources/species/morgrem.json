@@ -61,5 +61,19 @@
       "item": null
     }
   ],
-  "spawn": null
+  "spawn": null,
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 2,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": 1,
+  "abilities": [
+    "prankster",
+    "frisk"
+  ],
+  "hiddenAbility": "pickpocket"
 }

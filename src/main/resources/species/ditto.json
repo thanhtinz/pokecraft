@@ -34,5 +34,18 @@
     "weight": 2,
     "minLevel": 8,
     "maxLevel": 20
-  }
+  },
+  "evYield": {
+    "hp": 1,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": -1,
+  "abilities": [
+    "limber"
+  ],
+  "hiddenAbility": "imposter"
 }

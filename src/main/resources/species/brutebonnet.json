@@ -73,5 +73,18 @@
     "weight": 4,
     "minLevel": 8,
     "maxLevel": 20
-  }
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 3,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": -1,
+  "abilities": [
+    "protosynthesis"
+  ],
+  "hiddenAbility": "protosynthesis"
 }

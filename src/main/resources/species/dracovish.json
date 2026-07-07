@@ -68,5 +68,19 @@
     "weight": 3,
     "minLevel": 8,
     "maxLevel": 20
-  }
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 2,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": -1,
+  "abilities": [
+    "waterabsorb",
+    "strongjaw"
+  ],
+  "hiddenAbility": "sandrush"
 }

@@ -75,5 +75,18 @@
     "weight": 7,
     "minLevel": 4,
     "maxLevel": 14
-  }
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 1,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": 0.5,
+  "abilities": [
+    "chlorophyll"
+  ],
+  "hiddenAbility": "harvest"
 }

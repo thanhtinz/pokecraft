@@ -66,5 +66,18 @@
     "weight": 3,
     "minLevel": 8,
     "maxLevel": 20
-  }
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 1
+  },
+  "maleRatio": 0.875,
+  "abilities": [
+    "blaze"
+  ],
+  "hiddenAbility": "libero"
 }

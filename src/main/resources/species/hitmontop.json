@@ -66,5 +66,19 @@
   },
   "evolution": null,
   "evolutions": null,
-  "spawn": null
+  "spawn": null,
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 2,
+    "spe": 0
+  },
+  "maleRatio": 1,
+  "abilities": [
+    "intimidate",
+    "technician"
+  ],
+  "hiddenAbility": "steadfast"
 }

@@ -58,5 +58,19 @@
   },
   "evolution": null,
   "evolutions": null,
-  "spawn": null
+  "spawn": null,
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 2
+  },
+  "maleRatio": 0.25,
+  "abilities": [
+    "thickfat",
+    "owntempo"
+  ],
+  "hiddenAbility": "defiant"
 }

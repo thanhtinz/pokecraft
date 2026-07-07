@@ -77,5 +77,19 @@
     "weight": 3,
     "minLevel": 8,
     "maxLevel": 20
-  }
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 1,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "maleRatio": 0.875,
+  "abilities": [
+    "swiftswim",
+    "battlearmor"
+  ],
+  "hiddenAbility": "weakarmor"
 }
