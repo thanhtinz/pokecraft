@@ -68,6 +68,10 @@ public class PokeCommand implements TabExecutor {
             case "daycare" -> daycare(player, args);
             case "ride" -> ride(player, args);
             case "npc" -> npc(player, args);
+            case "admin", "setup" -> {
+                if (!player.hasPermission("pokecraft.admin")) return noPerm(player);
+                plugin.adminUi().open(player);
+            }
             case "give" -> {
                 if (!player.hasPermission("pokecraft.admin")) return noPerm(player);
                 PokeballItem.BallType type = PokeballItem.BallType.POKE_BALL;

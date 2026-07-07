@@ -45,6 +45,7 @@ public class MainMenuGui implements Listener {
     private static final int SLOT_GUILD = 32;
     private static final int SLOT_RANK = 33;
     private static final int SLOT_DUNGEON = 34;
+    private static final int SLOT_ADMIN = 8;
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyMenuItem;
@@ -217,6 +218,11 @@ public class MainMenuGui implements Listener {
                 daily ? List.of("Daily check-in + quests", "Your daily reward is waiting!")
                         : List.of("Daily check-in + quests", "Fish, catch and battle for rewards")));
 
+        if (player.hasPermission("pokecraft.admin")) {
+            inv.setItem(SLOT_ADMIN, item(Material.COMMAND_BLOCK, "OP Setup", NamedTextColor.RED,
+                    List.of("Configure the whole plugin", "in-game (ops only)")));
+        }
+
         GuiFiller.fill(inv);
         player.openInventory(inv);
     }
@@ -282,6 +288,9 @@ public class MainMenuGui implements Listener {
                     if (blocked(player, inBattle)) return;
                     player.closeInventory();
                     plugin.dungeons().start(player);
+                }
+                case SLOT_ADMIN -> {
+                    if (player.hasPermission("pokecraft.admin")) plugin.adminUi().open(player);
                 }
                 case SLOT_TRADE -> {
                     if (blocked(player, inBattle)) return;

@@ -216,6 +216,15 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
       Bronze->Master; GUI xem bậc + top 10; admin reset mùa (thưởng top 3,
       thông báo toàn server) qua /poke rankreset hoặc OP panel
 
+## OP Setup Panel
+
+- [x] Panel cấu hình trong game cho OP (menu -> OP Setup, chỉ hiện với admin;
+      hoặc /poke admin): bật/tắt tính năng (spawn/fishing/bedrock forms/menu
+      item), chỉnh số (spawn interval/cap, shiny rate, daily reward, dungeon
+      cost/reward) bằng click trái +/phải -, đặt NPC (healer/vendor/trainer)
+      tại chỗ, reset mùa rank, heal, reload - ghi thẳng vào config, không cần
+      sửa file hay gõ lệnh
+
 ## Commands / Admin
 
 - [x] /poke party (mở GUI), /poke pc, /poke shop
