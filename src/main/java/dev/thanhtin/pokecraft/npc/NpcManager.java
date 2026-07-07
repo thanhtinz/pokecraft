@@ -42,12 +42,14 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class NpcManager implements Listener {
 
-    public enum NpcType { HEALER, VENDOR, TRAINER }
+    public enum NpcType { HEALER, VENDOR, TRAINER, GYM }
 
     /** Serialized trainer data stored in the npcs table. */
     public static class TrainerData {
         public List<TeamEntry> team = new ArrayList<>();
         public long reward;
+        /** Non-null on gym leaders: the badge id awarded when they are beaten. */
+        public String badge;
     }
 
     public static class TeamEntry {
@@ -85,6 +87,7 @@ public class NpcManager implements Listener {
             case HEALER -> NamedTextColor.LIGHT_PURPLE;
             case VENDOR -> NamedTextColor.GREEN;
             case TRAINER -> NamedTextColor.RED;
+            case GYM -> NamedTextColor.GOLD;
         }));
         entity.setCustomNameVisible(true);
         entity.getPersistentDataContainer().set(keyNpc, PersistentDataType.BYTE, (byte) 1);
@@ -97,6 +100,42 @@ public class NpcManager implements Listener {
         plugin.storage().saveNpc(entity.getUniqueId(), type.name(), name, data);
         creator.sendMessage(Component.text("Created " + type.name().toLowerCase(Locale.ROOT)
                 + " NPC \"" + name + "\".", NamedTextColor.GREEN));
+    }
+
+    /** Places a gym-leader NPC that awards its badge when beaten. */
+    public void createGym(Player creator, String badgeId) {
+        dev.thanhtin.pokecraft.gym.BadgeService.Gym gym =
+                dev.thanhtin.pokecraft.gym.BadgeService.gym(badgeId);
+        if (gym == null) {
+            creator.sendMessage(Component.text("Unknown gym badge.", NamedTextColor.RED));
+            return;
+        }
+        Location loc = creator.getLocation();
+        LivingEntity entity = (LivingEntity) loc.getWorld().spawnEntity(loc, EntityType.VILLAGER);
+        entity.setSilent(true);
+        entity.setInvulnerable(true);
+        entity.setPersistent(true);
+        entity.setRemoveWhenFarAway(false);
+        if (entity instanceof Mob mob) mob.setAware(false);
+        String name = "Leader " + gym.leader();
+        entity.customName(Component.text(name, NamedTextColor.GOLD));
+        entity.setCustomNameVisible(true);
+        entity.getPersistentDataContainer().set(keyNpc, PersistentDataType.BYTE, (byte) 1);
+
+        TrainerData data = new TrainerData();
+        data.badge = gym.badge();
+        for (String species : gym.team()) {
+            TeamEntry entry = new TeamEntry();
+            entry.species = species;
+            entry.level = gym.level();
+            data.team.add(entry);
+        }
+        long perLevel = plugin.getConfig().getLong("npc.trainer-reward-per-level", 10);
+        data.reward = data.team.stream().mapToLong(t -> t.level).sum() * perLevel;
+
+        plugin.storage().saveNpc(entity.getUniqueId(), NpcType.GYM.name(), name, gson.toJson(data));
+        creator.sendMessage(Component.text("Placed gym leader " + gym.leader() + " ("
+                + gym.badgeName() + ").", NamedTextColor.GREEN));
     }
 
     /** Removes the NPC nearest to the player within 5 blocks. */
@@ -182,7 +221,7 @@ public class NpcManager implements Listener {
                 if (inBattle(player)) return;
                 plugin.shop().open(player);
             }
-            case TRAINER -> startTrainer(player, e.getRightClicked(), row);
+            case TRAINER, GYM -> startTrainer(player, e.getRightClicked(), row);
         }
     }
 
@@ -230,7 +269,7 @@ public class NpcManager implements Listener {
         }
         if (team.isEmpty()) return;
         trainerCooldowns.put(key, now);
-        plugin.battles().startTrainerBattle(player, npcEntity, team, row.name(), data.reward);
+        plugin.battles().startTrainerBattle(player, npcEntity, team, row.name(), data.reward, data.badge);
     }
 
     private boolean inBattle(Player player) {

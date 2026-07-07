@@ -103,6 +103,9 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
       priority/speed, đủ status/stages/PP/switch/forfeit, thưởng tiền người thắng
 - [x] Trainer NPC battle theo đội 2-4 pokemon (không cần Citizens), thưởng tiền,
       cooldown tái đấu, exp từng con khi hạ
+- [x] Gym Leader + Badge: 8 gym Kanto (Brock->Giovanni), đội theo hệ & level
+      tăng dần; hạ leader nhận badge; panel Badges (menu Activities) xem 8 badge;
+      OP panel -> "Place Gym Leader" chọn gym để đặt tại chỗ đứng
 - [ ] Dùng item giữa trận (ball ném được; potion chỉ dùng ngoài trận)
 - [ ] Battle theo turn timeout (chống AFK)
 - [ ] Stat stages cho accuracy/evasion

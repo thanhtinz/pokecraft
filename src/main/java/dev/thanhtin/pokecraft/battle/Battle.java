@@ -19,6 +19,8 @@ public class Battle {
     public int npcIndex;
     public String npcName;
     public long npcReward;
+    /** Non-null on gym leaders: the badge id awarded on victory. */
+    public String npcBadge;
     public boolean finished;
     /** Set after the active pokemon faints: player must pick a replacement. */
     public boolean awaitingSwitch;

@@ -23,6 +23,7 @@ import dev.thanhtin.pokecraft.entity.PokemonEntityManager;
 import dev.thanhtin.pokecraft.entity.WildEntityListener;
 import dev.thanhtin.pokecraft.item.HeldItems;
 import dev.thanhtin.pokecraft.item.UsableItems;
+import dev.thanhtin.pokecraft.gym.BadgeService;
 import dev.thanhtin.pokecraft.npc.NpcManager;
 import dev.thanhtin.pokecraft.party.PartyManager;
 import dev.thanhtin.pokecraft.pokemon.EggManager;
@@ -42,6 +43,8 @@ import dev.thanhtin.pokecraft.ui.DaycareGui;
 import dev.thanhtin.pokecraft.ui.LeaderboardGui;
 import dev.thanhtin.pokecraft.ui.ActivitiesGui;
 import dev.thanhtin.pokecraft.ui.AdminGui;
+import dev.thanhtin.pokecraft.ui.BadgesGui;
+import dev.thanhtin.pokecraft.ui.GymPickerGui;
 import dev.thanhtin.pokecraft.ui.GuildGui;
 import dev.thanhtin.pokecraft.ui.GuildNameInput;
 import dev.thanhtin.pokecraft.ui.RankGui;
@@ -93,6 +96,9 @@ public class PokeCraftPlugin extends JavaPlugin {
     private DungeonManager dungeonManager;
     private FarmManager farmManager;
     private AdminGui adminGui;
+    private BadgeService badgeService;
+    private BadgesGui badgesGui;
+    private GymPickerGui gymPickerGui;
     private MinimapManager minimapManager;
     private CasinoGui casinoGui;
     private TriviaGui triviaGui;
@@ -159,6 +165,9 @@ public class PokeCraftPlugin extends JavaPlugin {
         dungeonManager = new DungeonManager(this);
         farmManager = new FarmManager(this);
         adminGui = new AdminGui(this);
+        badgeService = new BadgeService(this);
+        badgesGui = new BadgesGui(this);
+        gymPickerGui = new GymPickerGui(this);
         minimapManager = new MinimapManager(this);
         casinoGui = new CasinoGui(this);
         triviaGui = new TriviaGui(this);
@@ -205,6 +214,8 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(dungeonManager, this);
         getServer().getPluginManager().registerEvents(farmManager, this);
         getServer().getPluginManager().registerEvents(adminGui, this);
+        getServer().getPluginManager().registerEvents(badgesGui, this);
+        getServer().getPluginManager().registerEvents(gymPickerGui, this);
         getServer().getPluginManager().registerEvents(minimapManager, this);
         getServer().getPluginManager().registerEvents(casinoGui, this);
         getServer().getPluginManager().registerEvents(triviaGui, this);
@@ -296,4 +307,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public EggManager eggs() { return eggManager; }
     public RideManager rides() { return rideManager; }
     public NpcManager npcs() { return npcManager; }
+    public BadgeService badges() { return badgeService; }
+    public BadgesGui badgesUi() { return badgesGui; }
+    public GymPickerGui gymPickerUi() { return gymPickerGui; }
 }

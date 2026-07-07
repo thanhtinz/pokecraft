@@ -76,6 +76,12 @@ public class BattleManager implements Listener {
     /** Starts a battle against an NPC trainer's team. */
     public void startTrainerBattle(Player player, Entity npcEntity,
                                    List<PokemonInstance> team, String trainerName, long reward) {
+        startTrainerBattle(player, npcEntity, team, trainerName, reward, null);
+    }
+
+    public void startTrainerBattle(Player player, Entity npcEntity,
+                                   List<PokemonInstance> team, String trainerName, long reward,
+                                   String badge) {
         Battle existing = battles.get(player.getUniqueId());
         if (existing != null) {
             if (existing.awaitingSwitch) plugin.battleUi().openSwitchMenu(player, existing, true);
@@ -103,6 +109,7 @@ public class BattleManager implements Listener {
         battle.npcIndex = 0;
         battle.npcName = trainerName;
         battle.npcReward = reward;
+        battle.npcBadge = badge;
         battles.put(player.getUniqueId(), battle);
         plugin.storage().markSeen(player.getUniqueId(), team.get(0).speciesId);
         PokemonSpecies first = plugin.species().getSpecies(team.get(0).speciesId);
@@ -469,6 +476,7 @@ public class BattleManager implements Listener {
             plugin.economy().deposit(player.getUniqueId(), money);
             player.sendMessage(Component.text("You defeated " + battle.npcName + "! +"
                     + plugin.economy().format(money), NamedTextColor.GOLD));
+            if (battle.npcBadge != null) plugin.badges().award(player, battle.npcBadge);
         } else {
             if (battle.wildEntity.isValid()) battle.wildEntity.remove();
             money = plugin.economy().wildBattleReward(battle.wildPokemon.level);

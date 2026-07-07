@@ -28,6 +28,7 @@ public class ActivitiesGui implements Listener {
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyDaily;
     private final NamespacedKey keyQuest;
+    private final NamespacedKey keyBadges;
 
     private static class Holder implements InventoryHolder {
         Inventory inventory;
@@ -38,6 +39,7 @@ public class ActivitiesGui implements Listener {
         this.plugin = plugin;
         this.keyDaily = new NamespacedKey(plugin, "act_daily");
         this.keyQuest = new NamespacedKey(plugin, "act_quest");
+        this.keyBadges = new NamespacedKey(plugin, "act_badges");
     }
 
     public void open(Player player) {
@@ -93,6 +95,15 @@ public class ActivitiesGui implements Listener {
         fish.setItemMeta(fishMeta);
         inv.setItem(31, fish);
 
+        ItemStack badges = new ItemStack(Material.GOLDEN_HELMET);
+        ItemMeta badgesMeta = badges.getItemMeta();
+        badgesMeta.displayName(Component.text("Gym Badges  " + plugin.badges().count(player.getUniqueId())
+                + "/8", NamedTextColor.GOLD));
+        badgesMeta.lore(List.of(Component.text("Beat gym leaders to earn badges", NamedTextColor.GRAY)));
+        badgesMeta.getPersistentDataContainer().set(keyBadges, PersistentDataType.BYTE, (byte) 1);
+        badges.setItemMeta(badgesMeta);
+        inv.setItem(33, badges);
+
         GuiFiller.fill(inv);
         player.openInventory(inv);
     }
@@ -108,7 +119,10 @@ public class ActivitiesGui implements Listener {
                 .has(keyDaily, PersistentDataType.BYTE);
         String quest = item.getItemMeta().getPersistentDataContainer()
                 .get(keyQuest, PersistentDataType.STRING);
+        boolean badges = item.getItemMeta().getPersistentDataContainer()
+                .has(keyBadges, PersistentDataType.BYTE);
         plugin.getServer().getScheduler().runTask(plugin, () -> {
+            if (badges) { plugin.badgesUi().open(player); return; }
             if (daily) plugin.daily().claim(player);
             else if (quest != null) plugin.quests().claim(player, quest);
             open(player);
