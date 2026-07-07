@@ -21,7 +21,7 @@ public class MoveData {
 
     /** Optional secondary effect: a stat stage change and/or a status condition. */
     public static class Effect {
-        /** Stat index 1-5 (atk/def/spa/spd/spe), 0 = no stat change. */
+        /** Stat index 1-5 (atk/def/spa/spd/spe), 6 = accuracy, 7 = evasion; 0 = none. */
         public int stat;
         /** Stages added to the stat (-6..+6). */
         public int stages;

@@ -37,8 +37,9 @@ STATUS_BY_AILMENT = {
     "poison": "POISON",
 }
 
-# PokeAPI stat_id -> PokeCraft Effect.stat index (1=atk 2=def 3=spa 4=spd 5=spe)
-STAT_INDEX = {2: 1, 3: 2, 4: 3, 5: 4, 6: 5}
+# PokeAPI stat_id -> PokeCraft Effect.stat index
+# 1=atk 2=def 3=spa 4=spd 5=spe 6=accuracy 7=evasion
+STAT_INDEX = {2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7}
 
 
 def read_csv(path):

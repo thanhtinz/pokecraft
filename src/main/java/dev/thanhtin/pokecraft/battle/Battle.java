@@ -27,6 +27,8 @@ public class Battle {
     /** Per-battle stat stages, indexed like PokemonInstance#stat (1-5). */
     public final int[] playerStages = new int[6];
     public final int[] wildStages = new int[6];
+    /** Accuracy/evasion stages (-6..+6), kept separate from the stat array. */
+    public int playerAcc, playerEva, wildAcc, wildEva;
 
     public Battle(UUID playerId, PokemonInstance playerPokemon,
                   PokemonInstance wildPokemon, Entity wildEntity) {
@@ -39,6 +41,8 @@ public class Battle {
     /** Stages reset when the player's pokemon leaves the field. */
     public void resetPlayerStages() {
         Arrays.fill(playerStages, 0);
+        playerAcc = 0;
+        playerEva = 0;
     }
 
     public boolean isTrainerBattle() {
@@ -48,5 +52,7 @@ public class Battle {
     /** Opposing side reset when the NPC sends out its next pokemon. */
     public void resetWildStages() {
         Arrays.fill(wildStages, 0);
+        wildAcc = 0;
+        wildEva = 0;
     }
 }

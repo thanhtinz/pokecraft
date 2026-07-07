@@ -106,7 +106,8 @@ class DataIntegrityTest {
             assertNotNull(m.category, "no category on " + e.getKey());
             assertFalse(m.name == null || m.name.isBlank(), "no name on " + e.getKey());
             if (m.effect != null && m.effect.stat != 0) {
-                assertTrue(m.effect.stat >= 1 && m.effect.stat <= 5,
+                // 1-5 = atk/def/spa/spd/spe, 6 = accuracy, 7 = evasion
+                assertTrue(m.effect.stat >= 1 && m.effect.stat <= 7,
                         "bad stat index on " + e.getKey());
             }
         }

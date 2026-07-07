@@ -217,6 +217,33 @@ class DamageCalculatorTest {
     }
 
     @Test
+    void accuracyStageMultiplierFollowsTable() {
+        assertEquals(1.0, DamageCalculator.accuracyStageMultiplier(0));
+        assertEquals(4.0 / 3.0, DamageCalculator.accuracyStageMultiplier(1), 1e-9);
+        assertEquals(3.0 / 4.0, DamageCalculator.accuracyStageMultiplier(-1), 1e-9);
+        assertEquals(3.0, DamageCalculator.accuracyStageMultiplier(6));   // +6 => 9/3
+        assertEquals(3.0 / 9.0, DamageCalculator.accuracyStageMultiplier(-6), 1e-9);
+    }
+
+    @Test
+    void loweredAccuracyCausesMisses() {
+        PokemonSpecies s = species("a", PokemonType.NORMAL);
+        PokemonInstance atk = instance(s, 30);
+        PokemonInstance def = instance(s, 30);
+        MoveData hit = move(PokemonType.NORMAL, MoveData.Category.PHYSICAL, 40, 100);
+        // attacker accuracy at -6 (or defender evasion +6): effective accuracy ~33%
+        int misses = 0;
+        for (int i = 0; i < 400; i++) {
+            if (DamageCalculator.calculate(atk, s, null, def, s, null, hit, -6, 0).missed()) misses++;
+        }
+        assertTrue(misses > 150, "expected many misses at -6 accuracy, got " + misses);
+        // full accuracy, no stages: never misses
+        for (int i = 0; i < 200; i++) {
+            assertFalse(DamageCalculator.calculate(atk, s, null, def, s, null, hit, 0, 0).missed());
+        }
+    }
+
+    @Test
     void zeroAccuracyAlwaysMisses() {
         PokemonSpecies s = species("a", PokemonType.NORMAL);
         PokemonInstance atk = instance(s, 20);

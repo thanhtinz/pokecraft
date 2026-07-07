@@ -126,8 +126,9 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
       Super/Hyper/Oran Berry) hồi HP cho pokemon đang đánh; tốn lượt (pokemon
       hoang được đánh 1 phát), không cho phí khi đã đầy HP
 - [ ] Battle theo turn timeout (chống AFK)
-- [~] Stat stages cho accuracy/evasion: khung có sẵn nhưng chưa có move chỉnh
-      accuracy/evasion trong pool nên chưa kích hoạt
+- [x] Stat stages cho accuracy/evasion: Sand-Attack/Smokescreen/Flash (giảm
+      accuracy đối thủ), Double Team/Minimize (tăng evasion) -> ảnh hưởng tỉ lệ
+      trúng đòn (bảng 3-based). 11 move giảm accuracy + 5 move evasion
 
 ## Party / Storage
 

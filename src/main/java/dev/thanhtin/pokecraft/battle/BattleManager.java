@@ -264,8 +264,11 @@ public class BattleManager implements Listener {
 
         if (!STRUGGLE_ID.equals(move.id)) attacker.usePp(move);
 
+        int accStage = byPlayer ? battle.playerAcc : battle.wildAcc;
+        int evaStage = byPlayer ? battle.wildEva : battle.playerEva;
         DamageCalculator.Result result = DamageCalculator.calculate(
-                attacker, attackerSpecies, attackerStages, defender, defenderSpecies, defenderStages, move);
+                attacker, attackerSpecies, attackerStages, defender, defenderSpecies, defenderStages,
+                move, accStage, evaStage);
 
         if (result.missed()) {
             player.sendMessage(Component.text(prefix + attackerSpecies.name + " used "
@@ -348,6 +351,32 @@ public class BattleManager implements Listener {
         MoveData.Effect effect = move.effect;
         if (effect == null) return;
         ThreadLocalRandom rnd = ThreadLocalRandom.current();
+
+        if ((effect.stat == 6 || effect.stat == 7) && effect.stages != 0) {
+            boolean onSelf = effect.target == MoveData.Target.SELF;
+            boolean playerSide = (byPlayer == onSelf);
+            boolean accuracy = effect.stat == 6;
+            int before = playerSide ? (accuracy ? battle.playerAcc : battle.playerEva)
+                                    : (accuracy ? battle.wildAcc : battle.wildEva);
+            int after = Math.max(-6, Math.min(6, before + effect.stages));
+            if (playerSide) {
+                if (accuracy) battle.playerAcc = after; else battle.playerEva = after;
+            } else {
+                if (accuracy) battle.wildAcc = after; else battle.wildEva = after;
+            }
+            PokemonInstance target = onSelf ? attacker : defender;
+            PokemonSpecies targetSpecies = plugin.species().getSpecies(target.speciesId);
+            String who = (playerSide ? "Your " : opponentPrefix(battle)) + targetSpecies.name;
+            String statName = accuracy ? "accuracy" : "evasiveness";
+            if (after == before) {
+                player.sendMessage(Component.text(who + "'s " + statName + " can't go "
+                        + (effect.stages > 0 ? "higher" : "lower") + "!", NamedTextColor.GRAY));
+            } else {
+                player.sendMessage(Component.text(who + "'s " + statName
+                        + (effect.stages > 0 ? " rose!" : " fell!"), NamedTextColor.YELLOW));
+            }
+            return;
+        }
 
         if (effect.stat >= 1 && effect.stat <= 5 && effect.stages != 0) {
             boolean onSelf = effect.target == MoveData.Target.SELF;

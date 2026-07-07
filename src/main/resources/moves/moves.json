@@ -1625,7 +1625,12 @@
   "category": "STATUS",
   "power": 0,
   "accuracy": 100,
-  "pp": 15
+  "pp": 15,
+  "effect": {
+   "stat": 7,
+   "stages": -1,
+   "target": "TARGET"
+  }
  },
  "destiny_bond": {
   "name": "Destiny Bond",
@@ -1803,7 +1808,12 @@
   "category": "STATUS",
   "power": 0,
   "accuracy": 100,
-  "pp": 15
+  "pp": 15,
+  "effect": {
+   "stat": 7,
+   "stages": 1,
+   "target": "SELF"
+  }
  },
  "draco_meteor": {
   "name": "Draco Meteor",
@@ -2577,7 +2587,12 @@
   "category": "STATUS",
   "power": 0,
   "accuracy": 100,
-  "pp": 20
+  "pp": 20,
+  "effect": {
+   "stat": 6,
+   "stages": -1,
+   "target": "TARGET"
+  }
  },
  "flash_cannon": {
   "name": "Flash Cannon",
@@ -3867,7 +3882,12 @@
   "category": "STATUS",
   "power": 0,
   "accuracy": 80,
-  "pp": 15
+  "pp": 15,
+  "effect": {
+   "stat": 6,
+   "stages": -1,
+   "target": "TARGET"
+  }
  },
  "kings_shield": {
   "name": "Kings Shield",
@@ -3973,7 +3993,12 @@
   "category": "SPECIAL",
   "power": 65,
   "accuracy": 90,
-  "pp": 10
+  "pp": 10,
+  "effect": {
+   "stat": 6,
+   "stages": -1,
+   "target": "TARGET"
+  }
  },
  "leafage": {
   "name": "Leafage",
@@ -4673,7 +4698,12 @@
   "category": "STATUS",
   "power": 0,
   "accuracy": 100,
-  "pp": 10
+  "pp": 10,
+  "effect": {
+   "stat": 7,
+   "stages": 2,
+   "target": "SELF"
+  }
  },
  "miracle_eye": {
   "name": "Miracle Eye",
@@ -4706,7 +4736,12 @@
   "category": "SPECIAL",
   "power": 65,
   "accuracy": 85,
-  "pp": 10
+  "pp": 10,
+  "effect": {
+   "stat": 6,
+   "stages": -1,
+   "target": "TARGET"
+  }
  },
  "mist": {
   "name": "Mist",
@@ -4804,7 +4839,12 @@
   "category": "SPECIAL",
   "power": 65,
   "accuracy": 85,
-  "pp": 10
+  "pp": 10,
+  "effect": {
+   "stat": 6,
+   "stages": -1,
+   "target": "TARGET"
+  }
  },
  "mud_shot": {
   "name": "Mud Shot",
@@ -4825,7 +4865,12 @@
   "category": "SPECIAL",
   "power": 20,
   "accuracy": 100,
-  "pp": 10
+  "pp": 10,
+  "effect": {
+   "stat": 6,
+   "stages": -1,
+   "target": "TARGET"
+  }
  },
  "mud_sport": {
   "name": "Mud Sport",
@@ -4841,7 +4886,12 @@
   "category": "SPECIAL",
   "power": 90,
   "accuracy": 85,
-  "pp": 10
+  "pp": 10,
+  "effect": {
+   "stat": 6,
+   "stages": -1,
+   "target": "TARGET"
+  }
  },
  "multi_attack": {
   "name": "Multi Attack",
@@ -4939,7 +4989,12 @@
   "category": "SPECIAL",
   "power": 85,
   "accuracy": 95,
-  "pp": 10
+  "pp": 10,
+  "effect": {
+   "stat": 6,
+   "stages": -1,
+   "target": "TARGET"
+  }
  },
  "night_shade": {
   "name": "Night Shade",
@@ -5042,7 +5097,12 @@
   "category": "SPECIAL",
   "power": 65,
   "accuracy": 85,
-  "pp": 10
+  "pp": 10,
+  "effect": {
+   "stat": 6,
+   "stages": -1,
+   "target": "TARGET"
+  }
  },
  "octolock": {
   "name": "Octolock",
@@ -6121,7 +6181,12 @@
   "category": "STATUS",
   "power": 0,
   "accuracy": 100,
-  "pp": 15
+  "pp": 15,
+  "effect": {
+   "stat": 6,
+   "stages": -1,
+   "target": "TARGET"
+  }
  },
  "sand_tomb": {
   "name": "Sand Tomb",
@@ -6743,7 +6808,12 @@
   "category": "STATUS",
   "power": 0,
   "accuracy": 100,
-  "pp": 20
+  "pp": 20,
+  "effect": {
+   "stat": 6,
+   "stages": -1,
+   "target": "TARGET"
+  }
  },
  "snap_trap": {
   "name": "Snap Trap",
@@ -7439,7 +7509,12 @@
   "category": "STATUS",
   "power": 0,
   "accuracy": 100,
-  "pp": 20
+  "pp": 20,
+  "effect": {
+   "stat": 7,
+   "stages": -2,
+   "target": "TARGET"
+  }
  },
  "swift": {
   "name": "Swift",
@@ -8497,6 +8572,11 @@
   "power": 80,
   "accuracy": 100,
   "pp": 10,
-  "priority": 2
+  "priority": 2,
+  "effect": {
+   "stat": 7,
+   "stages": 1,
+   "target": "SELF"
+  }
  }
 }

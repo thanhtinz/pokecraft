@@ -19,15 +19,34 @@ public final class DamageCalculator {
         return s >= 0 ? (2.0 + s) / 2.0 : 2.0 / (2.0 - s);
     }
 
+    /** Accuracy/evasion stages use a 3-based table: (3+s)/3 or 3/(3-s). */
+    public static double accuracyStageMultiplier(int stage) {
+        int s = Math.max(-6, Math.min(6, stage));
+        return s >= 0 ? (3.0 + s) / 3.0 : 3.0 / (3.0 - s);
+    }
+
+    public static Result calculate(PokemonInstance attacker, PokemonSpecies attackerSpecies, int[] attackerStages,
+                                   PokemonInstance defender, PokemonSpecies defenderSpecies, int[] defenderStages,
+                                   MoveData move) {
+        return calculate(attacker, attackerSpecies, attackerStages,
+                defender, defenderSpecies, defenderStages, move, 0, 0);
+    }
+
     /**
      * @param attackerStages/defenderStages per-battle stat stages indexed like
      *        {@link PokemonInstance#stat} (1=atk 2=def 3=spa 4=spd 5=spe); may be null.
      */
+    /**
+     * @param accStage attacker's accuracy stage, evaStage defender's evasion stage
+     *                 (both -6..+6); pass 0 to ignore.
+     */
     public static Result calculate(PokemonInstance attacker, PokemonSpecies attackerSpecies, int[] attackerStages,
                                    PokemonInstance defender, PokemonSpecies defenderSpecies, int[] defenderStages,
-                                   MoveData move) {
+                                   MoveData move, int accStage, int evaStage) {
         ThreadLocalRandom rnd = ThreadLocalRandom.current();
-        if (move.accuracy < 100 && rnd.nextInt(100) >= move.accuracy) {
+        int effAccuracy = (int) Math.round(move.accuracy
+                * accuracyStageMultiplier(Math.max(-6, Math.min(6, accStage - evaStage))));
+        if (effAccuracy < 100 && rnd.nextInt(100) >= effAccuracy) {
             return new Result(0, 1.0, false, true);
         }
         if (move.category == MoveData.Category.STATUS || move.power <= 0) {
