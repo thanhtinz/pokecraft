@@ -32,7 +32,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public class PartyGui implements Listener {
     private static final int SLOT_DEPOSIT = 18;
     private static final int SLOT_DETAILS = 20;
-    private static final int SLOT_INFO = 22;
+    private static final int SLOT_WALK = 22;
+    private static final int SLOT_INFO = 24;
     private static final int SLOT_PC = 26;
 
     private final PokeCraftPlugin plugin;
@@ -99,6 +100,15 @@ public class PartyGui implements Listener {
         inv.setItem(SLOT_DETAILS, button(Material.BOOK,
                 sel != null ? "View details of selected" : "Details: select a pokemon first",
                 sel != null ? NamedTextColor.YELLOW : NamedTextColor.DARK_GRAY));
+        boolean walking = plugin.walkers().isFollowing(player);
+        inv.setItem(SLOT_WALK, buttonLore(Material.LEAD,
+                walking ? "Buddy is walking with you" : "Send out your buddy",
+                walking ? NamedTextColor.GREEN : NamedTextColor.YELLOW,
+                walking ? List.of("Tap your pokemon in-world to ride it",
+                                "Sneak-tap it - or click here - to recall")
+                        : List.of("Throw a Poke Ball into the open to send",
+                                "out your lead pokemon - or click here",
+                                "Then tap it in-world to ride it")));
         inv.setItem(SLOT_INFO, button(Material.PAPER,
                 "PC stores " + party.pc().size() + " pokemon", NamedTextColor.GRAY));
         inv.setItem(SLOT_PC, button(Material.ENDER_CHEST, "Open PC Box", NamedTextColor.YELLOW));
@@ -110,6 +120,16 @@ public class PartyGui implements Listener {
         ItemStack item = new ItemStack(material);
         ItemMeta meta = item.getItemMeta();
         meta.displayName(Component.text(label, color));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    private ItemStack buttonLore(Material material, String label, NamedTextColor color, List<String> lore) {
+        ItemStack item = button(material, label, color);
+        ItemMeta meta = item.getItemMeta();
+        List<Component> lines = new ArrayList<>();
+        for (String s : lore) lines.add(Component.text(s, NamedTextColor.GRAY));
+        meta.lore(lines);
         item.setItemMeta(meta);
         return item;
     }
@@ -164,6 +184,13 @@ public class PartyGui implements Listener {
             selected.remove(id);
             plugin.getServer().getScheduler().runTask(plugin,
                     () -> plugin.summaryUi().open(player, detailSlot));
+            return;
+        }
+
+        if (raw == SLOT_WALK) {
+            selected.remove(id);
+            plugin.walkers().toggle(player);
+            refresh(player);
             return;
         }
 

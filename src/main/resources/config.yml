@@ -27,6 +27,9 @@ capture:
   # base entity used under ModelEngine models
   base-entity: HUSK
   craftable: true   # allow crafting Poke/Great/Ultra Balls (Master stays uncraftable)
+  # throw a Poke Ball into the open (not at a wild) to send out your lead
+  # pokemon so it walks with you; the ball is refunded so it isn't wasted
+  buddy-throw: true
 
 models:
   # 3D pokemon models via ModelEngine (optional soft-depend). A species uses the

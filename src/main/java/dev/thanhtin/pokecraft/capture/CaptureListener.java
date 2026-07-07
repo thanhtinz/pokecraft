@@ -43,9 +43,21 @@ public class CaptureListener implements Listener {
         String ballName = ball.getPersistentDataContainer()
                 .get(plugin.pokeballs().key(), PersistentDataType.STRING);
         if (ballName == null) return;
-        Entity hit = e.getHitEntity();
-        if (hit == null || !plugin.entities().isWild(hit)) return;
         if (!(ball.getShooter() instanceof Player player)) return;
+        Entity hit = e.getHitEntity();
+        if (hit == null || !plugin.entities().isWild(hit)) {
+            // Not a wild pokemon: use this throw to send out (or recall) your
+            // buddy, and refund the ball so summoning it costs nothing.
+            if (plugin.getConfig().getBoolean("capture.buddy-throw", true)) {
+                e.setCancelled(true);
+                org.bukkit.Location where = ball.getLocation();
+                PokeballItem.BallType thrown = PokeballItem.BallType.valueOf(ballName);
+                player.getInventory().addItem(plugin.pokeballs().create(thrown, 1));
+                ball.remove();
+                plugin.walkers().throwOut(player, where);
+            }
+            return;
+        }
 
         e.setCancelled(true);
         ball.remove();

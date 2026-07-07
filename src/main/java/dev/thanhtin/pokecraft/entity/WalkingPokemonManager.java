@@ -83,15 +83,46 @@ public class WalkingPokemonManager implements Listener {
     }
 
     private boolean spawn(Player player) {
+        return spawnAt(player, behind(player));
+    }
+
+    private boolean spawnAt(Player player, Location loc) {
         despawn(player.getUniqueId());
         List<PokemonInstance> party = plugin.parties().get(player).party();
         if (party.isEmpty()) return false;
         PokemonInstance lead = party.get(0);
         PokemonSpecies species = plugin.species().getSpecies(lead.speciesId);
         if (species == null) return false;
-        Location loc = behind(player);
         LivingEntity follower = plugin.entities().spawnFollower(species, lead, loc);
         followers.put(player.getUniqueId(), follower);
+        return true;
+    }
+
+    /**
+     * Send the lead pokemon out at the given spot (where its ball landed) so it
+     * follows the player, or recall it if it's already out. This is what
+     * throwing a Poke Ball into the open does - your buddy pops out and walks
+     * with you by default.
+     * @return true if a pokemon was sent out, false if it was recalled/failed
+     */
+    public boolean throwOut(Player player, Location loc) {
+        if (followers.containsKey(player.getUniqueId())) {
+            despawn(player.getUniqueId());
+            plugin.storage().setMeta(metaKey(player.getUniqueId()), "0");
+            player.sendMessage(Component.text("Your pokemon returned to its ball.",
+                    NamedTextColor.GRAY));
+            return false;
+        }
+        if (!spawnAt(player, loc)) {
+            player.sendMessage(Component.text("You have no pokemon to send out.",
+                    NamedTextColor.RED));
+            return false;
+        }
+        plugin.storage().setMeta(metaKey(player.getUniqueId()), "1");
+        PokemonInstance lead = plugin.parties().get(player).party().get(0);
+        PokemonSpecies species = plugin.species().getSpecies(lead.speciesId);
+        player.sendMessage(Component.text("Go, " + lead.displayName(species) + "!",
+                NamedTextColor.GREEN));
         return true;
     }
 

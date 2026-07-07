@@ -172,19 +172,6 @@ public class BedrockSupport {
                     () -> { if (!menuBlocked(player)) plugin.shop().open(player); });
             addButton(builderClass, builder, actions, "Daycare",
                     () -> { if (!menuBlocked(player)) plugin.daycareUi().open(player); });
-            addButton(builderClass, builder, actions,
-                    plugin.rides().isRiding(player) ? "Dismount" : "Ride your Buddy",
-                    () -> {
-                        if (menuBlocked(player)) return;
-                        if (plugin.rides().isRiding(player)) plugin.rides().dismount(player);
-                        else if (plugin.walkers().isFollowing(player)) plugin.rides().rideFollower(player);
-                        else {
-                            plugin.walkers().toggle(player);
-                            player.sendMessage(net.kyori.adventure.text.Component.text(
-                                    "Tap your pokemon to hop on and ride it.",
-                                    net.kyori.adventure.text.format.NamedTextColor.AQUA));
-                        }
-                    });
 
             String challenger = plugin.pvp().pendingChallengerName(player);
             addButton(builderClass, builder, actions,
@@ -212,9 +199,6 @@ public class BedrockSupport {
                     () -> plugin.minimap().give(player));
             addButton(builderClass, builder, actions, "Minigames",
                     () -> plugin.minigamesUi().open(player));
-            addButton(builderClass, builder, actions,
-                    "Walking Pokemon: " + (plugin.walkers().isFollowing(player) ? "ON" : "OFF"),
-                    () -> { plugin.walkers().toggle(player); tryOpenMenuForm(player); });
             addButton(builderClass, builder, actions, "Activities",
                     () -> plugin.activitiesUi().open(player));
 

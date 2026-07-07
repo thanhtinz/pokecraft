@@ -76,7 +76,9 @@ public final class PokeballItem {
         ItemStack item = new ItemStack(Material.SNOWBALL, amount);
         ItemMeta meta = item.getItemMeta();
         meta.displayName(Component.text(type.display, NamedTextColor.RED));
-        meta.lore(List.of(Component.text("Throw at a wild pokemon to capture it", NamedTextColor.GRAY)));
+        meta.lore(List.of(
+                Component.text("Throw at a wild pokemon to capture it", NamedTextColor.GRAY),
+                Component.text("Throw into the open to send out your buddy", NamedTextColor.GRAY)));
         meta.setCustomModelData(type.customModelData);
         meta.getPersistentDataContainer().set(keyBall, PersistentDataType.STRING, type.name());
         item.setItemMeta(meta);

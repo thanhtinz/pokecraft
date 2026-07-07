@@ -34,7 +34,6 @@ public class MainMenuGui implements Listener {
     private static final int SLOT_PC = 11;
     private static final int SLOT_SHOP = 12;
     private static final int SLOT_DAYCARE = 13;
-    private static final int SLOT_RIDE = 14;
     private static final int SLOT_DUEL = 15;
     private static final int SLOT_TOP = 16;
     private static final int SLOT_BALANCE = 4;
@@ -48,7 +47,6 @@ public class MainMenuGui implements Listener {
     private static final int SLOT_ADMIN = 8;
     private static final int SLOT_MAP = 5;
     private static final int SLOT_MINIGAMES = 6;
-    private static final int SLOT_WALK = 7;
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyMenuItem;
@@ -153,13 +151,6 @@ public class MainMenuGui implements Listener {
                 List.of("A minimap that works on mobile", "Shows wild pokemon + players")));
         inv.setItem(SLOT_MINIGAMES, item(Material.OAK_SIGN, "Minigames", NamedTextColor.GOLD,
                 List.of("Casino, trivia, tic-tac-toe", "and connect four")));
-        boolean walking = plugin.walkers().isFollowing(player);
-        inv.setItem(SLOT_WALK, item(Material.LEAD,
-                walking ? "Buddy: out with you" : "Send out your Buddy",
-                walking ? NamedTextColor.GREEN : NamedTextColor.GRAY,
-                walking ? List.of("Your lead pokemon walks beside you",
-                                "Tap it in-world to ride it", "Sneak-tap it to put it away")
-                        : List.of("Send your lead pokemon out to walk", "Then tap it to ride")));
 
         inv.setItem(SLOT_PARTY, item(Material.PLAYER_HEAD, "Party", NamedTextColor.AQUA,
                 List.of("View, reorder and manage", "your 6 party pokemon")));
@@ -169,11 +160,6 @@ public class MainMenuGui implements Listener {
                 List.of("Buy pokeballs, potions", "and evolution stones")));
         inv.setItem(SLOT_DAYCARE, item(Material.TURTLE_EGG, "Daycare", NamedTextColor.YELLOW,
                 List.of("Drop pokemon off to level up", "Two compatible ones may breed")));
-        inv.setItem(SLOT_RIDE, item(Material.SADDLE,
-                plugin.rides().isRiding(player) ? "Dismount" : "Ride your Buddy", NamedTextColor.AQUA,
-                List.of("Tap your walking pokemon to ride it",
-                        "FLYING types can fly - sneak to dismount")));
-
         String challenger = plugin.pvp().pendingChallengerName(player);
         inv.setItem(SLOT_DUEL, item(Material.IRON_SWORD,
                 challenger != null ? "Accept duel vs " + challenger : "PvP Duel", NamedTextColor.RED,
@@ -278,19 +264,6 @@ public class MainMenuGui implements Listener {
                     if (blocked(player, inBattle)) return;
                     plugin.daycareUi().open(player);
                 }
-                case SLOT_RIDE -> {
-                    if (blocked(player, inBattle)) return;
-                    player.closeInventory();
-                    if (plugin.rides().isRiding(player)) {
-                        plugin.rides().dismount(player);
-                    } else if (plugin.walkers().isFollowing(player)) {
-                        plugin.rides().rideFollower(player);
-                    } else {
-                        plugin.walkers().toggle(player); // send buddy out
-                        player.sendMessage(Component.text(
-                                "Tap your pokemon to hop on and ride it.", NamedTextColor.AQUA));
-                    }
-                }
                 case SLOT_DUEL -> {
                     if (blocked(player, inBattle)) return;
                     if (plugin.pvp().pendingChallengerName(player) != null) {
@@ -304,7 +277,6 @@ public class MainMenuGui implements Listener {
                 case SLOT_DEX -> plugin.pokedexUi().open(player, 0);
                 case SLOT_MAP -> { player.closeInventory(); plugin.minimap().give(player); }
                 case SLOT_MINIGAMES -> plugin.minigamesUi().open(player);
-                case SLOT_WALK -> { plugin.walkers().toggle(player); open(player); }
                 case SLOT_ACTIVITIES -> plugin.activitiesUi().open(player);
                 case SLOT_GUILD -> plugin.guildUi().open(player);
                 case SLOT_RANK -> plugin.rankUi().open(player);
