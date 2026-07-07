@@ -42,6 +42,8 @@ public class ModelImporter {
     private final PokeCraftPlugin plugin;
     private final Gson gson = new GsonBuilder().create();
     private int[] rotSign = {-1, -1, 1};
+    private boolean onlySpecies = true;
+    private int skipped = 0;
 
     public ModelImporter(PokeCraftPlugin plugin) {
         this.plugin = plugin;
@@ -52,6 +54,8 @@ public class ModelImporter {
         if (!plugin.getConfig().getBoolean("models.auto-import", true)) return;
         List<Integer> cfg = plugin.getConfig().getIntegerList("models.import-rotation-sign");
         if (cfg.size() == 3) rotSign = new int[]{cfg.get(0), cfg.get(1), cfg.get(2)};
+        onlySpecies = plugin.getConfig().getBoolean("models.import-only-species", true);
+        skipped = 0;
 
         File importDir = new File(plugin.getDataFolder(), "models-import");
         if (!importDir.exists()) {
@@ -80,6 +84,10 @@ public class ModelImporter {
                 plugin.getLogger().warning("[WARN] Model import failed for "
                         + geo.getName() + ": " + e.getMessage());
             }
+        }
+        if (skipped > 0) {
+            plugin.getLogger().info("[..] Skipped " + skipped
+                    + " model(s) with no matching species (set models.import-only-species: false to keep them)");
         }
         if (done > 0) {
             plugin.getLogger().info("[OK] Imported " + done
@@ -155,6 +163,10 @@ public class ModelImporter {
         for (int gi = 0; gi < geos.size(); gi++) {
             JsonObject geo = geos.get(gi).getAsJsonObject();
             String modelName = geos.size() == 1 ? name : name + "_" + gi;
+            if (onlySpecies && plugin.species().getSpecies(modelName) == null) {
+                skipped++;
+                continue; // not a known pokemon (berry, ball, particle, ...) - skip
+            }
             JsonObject desc = geo.has("description") ? geo.getAsJsonObject("description") : new JsonObject();
             int resW = desc.has("texture_width") ? desc.get("texture_width").getAsInt() : 64;
             int resH = desc.has("texture_height") ? desc.get("texture_height").getAsInt() : 64;

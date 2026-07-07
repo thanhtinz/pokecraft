@@ -45,6 +45,10 @@ models:
   # ModelEngine blueprints on startup (each <species>.geo.json + .png + optional
   # .animation.json). Requires ModelEngine installed.
   auto-import: true
+  # only convert models whose file name matches a known species id (skips
+  # berries, poke balls, particles, etc. from a full model pack). Set false to
+  # convert every .geo.json found.
+  import-only-species: true
   # if imported models come out rotated wrong, try [1,1,1] or [-1,-1,-1]
   import-rotation-sign: [-1, -1, 1]
 
