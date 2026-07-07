@@ -459,7 +459,7 @@ public class PvpBattleManager implements Listener {
             plugin.economy().addPvpWin(winner);
             if (winPlayer != null) {
                 plugin.quests().progress(winPlayer, "pvp", 1);
-                plugin.ranks().recordResult(winPlayer, battle.other(winner));
+                plugin.ranks().recordResult(winPlayer, battle.opponentOf(winner));
             }
             broadcast(battle, Component.text((winPlayer != null ? winPlayer.getName() : "???")
                     + " wins the duel! (+" + plugin.economy().format(reward) + ")", NamedTextColor.GOLD));

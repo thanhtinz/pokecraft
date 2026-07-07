@@ -71,6 +71,16 @@ npc:
   trainer-reward-per-level: 10  # money = sum of team levels * this
   trainer-cooldown-minutes: 30
 
+dungeon:
+  waves: 3                # trainer waves before the boss
+  base-level: 15
+  level-step: 5           # each wave is this much stronger
+  boss-level-bonus: 10
+  cost: 1000
+  cooldown-minutes: 30
+  reward: 8000
+  boss-species: []        # e.g. [gyarados, dragonite]; empty = random rare
+
 guild:
   create-cost: 5000
   max-members: 20

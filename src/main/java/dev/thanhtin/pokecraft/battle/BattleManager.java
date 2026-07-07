@@ -87,7 +87,7 @@ public class BattleManager implements Listener {
             return;
         }
         if (team == null || team.isEmpty()) return;
-        if (isWildInBattle(npcEntity.getUniqueId())) {
+        if (npcEntity != null && isWildInBattle(npcEntity.getUniqueId())) {
             player.sendMessage(Component.text(trainerName + " is already battling someone else.",
                     NamedTextColor.RED));
             return;
@@ -399,6 +399,7 @@ public class BattleManager implements Listener {
                 NamedTextColor.RED));
         plugin.parties().saveParty(player.getUniqueId());
         player.closeInventory();
+        plugin.dungeons().onBattleLost(player);
         return true;
     }
 
@@ -480,6 +481,7 @@ public class BattleManager implements Listener {
         player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1f, 1f);
         plugin.parties().saveParty(player.getUniqueId());
         player.closeInventory();
+        plugin.dungeons().onBattleWon(player);
     }
 
     public void flee(Player player) {
@@ -488,6 +490,7 @@ public class BattleManager implements Listener {
             player.sendMessage(Component.text("Got away safely!", NamedTextColor.GRAY));
             plugin.parties().saveParty(player.getUniqueId());
             player.closeInventory();
+            plugin.dungeons().onBattleLost(player);
         }
     }
 

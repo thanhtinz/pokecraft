@@ -6,6 +6,7 @@ import dev.thanhtin.pokecraft.activity.QuestManager;
 import dev.thanhtin.pokecraft.battle.BattleManager;
 import dev.thanhtin.pokecraft.battle.pvp.PvpBattleManager;
 import dev.thanhtin.pokecraft.daycare.DaycareManager;
+import dev.thanhtin.pokecraft.dungeon.DungeonManager;
 import dev.thanhtin.pokecraft.economy.EconomyManager;
 import dev.thanhtin.pokecraft.bedrock.BedrockSupport;
 import dev.thanhtin.pokecraft.capture.CaptureListener;
@@ -80,6 +81,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private GuildGui guildGui;
     private GuildNameInput guildNameInput;
     private RankGui rankGui;
+    private DungeonManager dungeonManager;
     private PvpBattleManager pvpManager;
     private EconomyManager economyManager;
     private MarriageManager marriageManager;
@@ -136,6 +138,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         guildGui = new GuildGui(this);
         guildNameInput = new GuildNameInput(this);
         rankGui = new RankGui(this);
+        dungeonManager = new DungeonManager(this);
         pvpManager = new PvpBattleManager(this);
         economyManager = new EconomyManager(this);
         marriageManager = new MarriageManager(this);
@@ -172,6 +175,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(guildGui, this);
         getServer().getPluginManager().registerEvents(guildNameInput, this);
         getServer().getPluginManager().registerEvents(rankGui, this);
+        getServer().getPluginManager().registerEvents(dungeonManager, this);
         getServer().getPluginManager().registerEvents(pvpManager, this);
         getServer().getPluginManager().registerEvents(economyManager, this);
         getServer().getPluginManager().registerEvents(usableItems, this);
@@ -231,6 +235,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public GuildGui guildUi() { return guildGui; }
     public GuildNameInput guildNameInput() { return guildNameInput; }
     public RankGui rankUi() { return rankGui; }
+    public DungeonManager dungeons() { return dungeonManager; }
     public PvpBattleManager pvp() { return pvpManager; }
     public EconomyManager economy() { return economyManager; }
     public MarriageManager marriage() { return marriageManager; }

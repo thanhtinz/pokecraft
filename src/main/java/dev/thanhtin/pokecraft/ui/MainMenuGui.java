@@ -44,6 +44,7 @@ public class MainMenuGui implements Listener {
     private static final int SLOT_ACTIVITIES = 30;
     private static final int SLOT_GUILD = 32;
     private static final int SLOT_RANK = 33;
+    private static final int SLOT_DUNGEON = 34;
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyMenuItem;
@@ -207,6 +208,9 @@ public class MainMenuGui implements Listener {
                 "Rank: " + plugin.ranks().tier(rp).name() + " (" + rp + ")", NamedTextColor.BLUE,
                 List.of("Seasonal PvP rank ladder", "Win duels to climb")));
 
+        inv.setItem(SLOT_DUNGEON, item(Material.NETHERITE_SWORD, "Dungeon", NamedTextColor.DARK_RED,
+                List.of("Fight waves of trainers", "and a boss for big rewards")));
+
         boolean daily = plugin.daily().canClaim(player);
         inv.setItem(SLOT_ACTIVITIES, item(Material.CLOCK,
                 daily ? "Activities - daily reward ready!" : "Activities", NamedTextColor.YELLOW,
@@ -274,6 +278,11 @@ public class MainMenuGui implements Listener {
                 case SLOT_ACTIVITIES -> plugin.activitiesUi().open(player);
                 case SLOT_GUILD -> plugin.guildUi().open(player);
                 case SLOT_RANK -> plugin.rankUi().open(player);
+                case SLOT_DUNGEON -> {
+                    if (blocked(player, inBattle)) return;
+                    player.closeInventory();
+                    plugin.dungeons().start(player);
+                }
                 case SLOT_TRADE -> {
                     if (blocked(player, inBattle)) return;
                     if (plugin.trades().pendingRequesterName(player) != null) {

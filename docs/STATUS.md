@@ -195,6 +195,13 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Câu cá: câu gần nước có tỉ lệ (config) móc trúng pokemon hệ Nước hoang
       -> mở battle luôn (bắt/đánh như thường)
 
+## Dungeon
+
+- [x] Dungeon: /poke menu -> Dungeon, tốn phí + cooldown; đánh N wave trainer
+      (level tăng dần) rồi 1 BOSS (pokemon hiếm/legendary buff level cao);
+      thắng cả run được thưởng lớn + 10 Ultra Ball; thua/chạy = kết thúc run
+- [x] Cấu hình waves/level/cost/cooldown/reward/boss-species trong config
+
 ## Guild / Rank
 
 - [x] Guild: tạo (tốn tiền, đặt tên qua anvil), tham gia (click trong list),
