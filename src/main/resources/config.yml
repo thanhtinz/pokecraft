@@ -51,6 +51,9 @@ economy:
   wild-win-per-level: 5.0
 
 shop:
+  # selling a pokemon pays: pokemon-sell-base + level * pokemon-sell-per-level (x3 if shiny)
+  pokemon-sell-base: 200
+  pokemon-sell-per-level: 20
   prices:
     poke-ball: 200        # bundle of 8
     great-ball: 600       # bundle of 8

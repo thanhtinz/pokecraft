@@ -155,7 +155,10 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Pokemart GUI (/poke shop): ball bundle, 3 loại potion, Thunder Stone
 - [x] Potion dùng ngoài trận (right-click -> chọn pokemon; hồi được cả pokemon đã faint)
 - [ ] Vault integration
-- [ ] Bán đồ / bán pokemon lấy tiền
+- [x] Bán đồ: Pokemart -> nút "Sell items" liệt kê đồ bán được (ball/potion/
+      stone/held item), click bán 1 cái lấy tiền
+- [x] Bán pokemon: nút Sell trong Summary (xác nhận 2 lần), giá = base + level*
+      hệ số (x3 nếu shiny); không bán con cuối cùng
 
 ## Leaderboard
 

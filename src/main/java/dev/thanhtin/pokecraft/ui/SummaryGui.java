@@ -33,11 +33,15 @@ public class SummaryGui implements Listener {
     private static final int SLOT_HELD = 19;
     private static final int SLOT_RENAME = 25;
     private static final int SLOT_RELEASE = 26;
+    private static final int SLOT_SELL = 24;
     private static final int SLOT_BACK = 22;
 
     private final PokeCraftPlugin plugin;
     /** players who armed the release button (need a second click to confirm) */
     private final java.util.Set<java.util.UUID> releaseArmed =
+            java.util.concurrent.ConcurrentHashMap.newKeySet();
+    /** players who armed the sell button (need a second click to confirm) */
+    private final java.util.Set<java.util.UUID> sellArmed =
             java.util.concurrent.ConcurrentHashMap.newKeySet();
 
     private static class Holder implements InventoryHolder {
@@ -201,6 +205,18 @@ public class SummaryGui implements Listener {
         release.setItemMeta(releaseMeta);
         inv.setItem(SLOT_RELEASE, release);
 
+        boolean sellReady = sellArmed.contains(player.getUniqueId());
+        long sellValue = sellPrice(p);
+        ItemStack sell = new ItemStack(Material.EMERALD);
+        ItemMeta sellMeta = sell.getItemMeta();
+        sellMeta.displayName(Component.text(sellReady ? "Click again to CONFIRM sale"
+                : "Sell for " + plugin.economy().format(sellValue),
+                sellReady ? NamedTextColor.RED : NamedTextColor.GREEN));
+        sellMeta.lore(List.of(Component.text(sellReady
+                ? "This is permanent!" : "Sell this pokemon for money", NamedTextColor.GRAY)));
+        sell.setItemMeta(sellMeta);
+        inv.setItem(SLOT_SELL, sell);
+
         ItemStack back = new ItemStack(Material.ARROW);
         ItemMeta backMeta = back.getItemMeta();
         backMeta.displayName(Component.text("Back to party", NamedTextColor.GRAY));
@@ -251,14 +267,16 @@ public class SummaryGui implements Listener {
         boolean busy = plugin.battles().get(player) != null || plugin.pvp().get(player) != null
                 || plugin.trades().get(player) != null;
 
+        // any button other than the two confirm buttons disarms both
+        if (raw != SLOT_RELEASE) releaseArmed.remove(id);
+        if (raw != SLOT_SELL) sellArmed.remove(id);
+
         if (raw == SLOT_BACK) {
-            releaseArmed.remove(id);
             plugin.getServer().getScheduler().runTask(plugin, () -> plugin.partyUi().open(player));
             return;
         }
         if (raw == SLOT_HELD) {
             if (busy) return;
-            releaseArmed.remove(id);
             plugin.getServer().getScheduler().runTask(plugin, () -> {
                 PokemonInstance target = plugin.parties().get(player).get(holder.partySlot);
                 if (target != null && target.heldItem != null) {
@@ -284,7 +302,51 @@ public class SummaryGui implements Listener {
             }
             releaseArmed.remove(id);
             plugin.getServer().getScheduler().runTask(plugin, () -> doRelease(player, holder.partySlot));
+            return;
         }
+        if (raw == SLOT_SELL) {
+            if (busy) return;
+            if (!sellArmed.contains(id)) {
+                sellArmed.add(id);
+                plugin.getServer().getScheduler().runTask(plugin, () -> open(player, holder.partySlot));
+                return;
+            }
+            sellArmed.remove(id);
+            plugin.getServer().getScheduler().runTask(plugin, () -> doSell(player, holder.partySlot));
+        }
+    }
+
+    /** Sell value of a pokemon: a base plus level, tripled if shiny. */
+    private long sellPrice(PokemonInstance p) {
+        long base = plugin.getConfig().getLong("shop.pokemon-sell-base", 200);
+        long perLevel = plugin.getConfig().getLong("shop.pokemon-sell-per-level", 20);
+        long value = base + perLevel * Math.max(1, p.level);
+        if (p.shiny) value *= 3;
+        return value;
+    }
+
+    private void doSell(Player player, int slot) {
+        var party = plugin.parties().get(player);
+        PokemonInstance p = party.get(slot);
+        if (p == null) { plugin.partyUi().open(player); return; }
+        if (party.partySize() <= 1) {
+            player.sendMessage(Component.text("You can't sell your last party pokemon.",
+                    NamedTextColor.RED));
+            open(player, slot);
+            return;
+        }
+        long value = sellPrice(p);
+        PokemonInstance removed = party.removeFromParty(slot);
+        if (removed != null) {
+            plugin.storage().delete(removed.uuid);
+            plugin.parties().saveParty(player.getUniqueId());
+            plugin.economy().deposit(player.getUniqueId(), value);
+            PokemonSpecies species = plugin.species().getSpecies(removed.speciesId);
+            player.sendMessage(Component.text("Sold "
+                    + (species != null ? removed.displayName(species) : removed.speciesId)
+                    + " for " + plugin.economy().format(value) + "!", NamedTextColor.GREEN));
+        }
+        plugin.partyUi().open(player);
     }
 
     private void doRelease(Player player, int slot) {
@@ -318,6 +380,7 @@ public class SummaryGui implements Listener {
         plugin.getServer().getScheduler().runTask(plugin, () -> {
             if (!(player.getOpenInventory().getTopInventory().getHolder() instanceof Holder)) {
                 releaseArmed.remove(player.getUniqueId());
+                sellArmed.remove(player.getUniqueId());
             }
         });
     }
