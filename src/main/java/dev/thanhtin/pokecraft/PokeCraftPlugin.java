@@ -20,6 +20,7 @@ import dev.thanhtin.pokecraft.capture.CaptureListener;
 import dev.thanhtin.pokecraft.capture.PokeballItem;
 import dev.thanhtin.pokecraft.command.PokeCommand;
 import dev.thanhtin.pokecraft.entity.PokemonEntityManager;
+import dev.thanhtin.pokecraft.entity.WalkingPokemonManager;
 import dev.thanhtin.pokecraft.entity.WildEntityListener;
 import dev.thanhtin.pokecraft.item.HeldItems;
 import dev.thanhtin.pokecraft.item.UsableItems;
@@ -65,6 +66,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private StorageManager storageManager;
     private PartyManager partyManager;
     private PokemonEntityManager entityManager;
+    private WalkingPokemonManager walkingManager;
     private SpawnManager spawnManager;
     private BattleManager battleManager;
     private PokeballItem pokeballItem;
@@ -186,6 +188,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         rideManager = new RideManager(this);
         npcManager = new NpcManager(this);
         spawnManager = new SpawnManager(this);
+        walkingManager = new WalkingPokemonManager(this);
 
         getServer().getPluginManager().registerEvents(partyManager, this);
         getServer().getPluginManager().registerEvents(battleManager, this);
@@ -230,6 +233,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(rideManager, this);
         getServer().getPluginManager().registerEvents(npcManager, this);
         getServer().getPluginManager().registerEvents(eggManager, this);
+        getServer().getPluginManager().registerEvents(walkingManager, this);
 
         PokeCommand command = new PokeCommand(this);
         getCommand("poke").setExecutor(command);
@@ -240,6 +244,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         minimapManager.start();
         daycareManager.start();
         rideManager.start();
+        walkingManager.start();
         getLogger().info("[OK] PokeCraft enabled");
     }
 
@@ -250,6 +255,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         if (minimapManager != null) minimapManager.stop();
         if (daycareManager != null) daycareManager.stop();
         if (rideManager != null) rideManager.stop();
+        if (walkingManager != null) walkingManager.stop();
         if (partyManager != null) partyManager.saveAll();
         if (storageManager != null) storageManager.shutdown();
         getLogger().info("[OK] PokeCraft disabled");
@@ -259,6 +265,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public StorageManager storage() { return storageManager; }
     public PartyManager parties() { return partyManager; }
     public PokemonEntityManager entities() { return entityManager; }
+    public WalkingPokemonManager walkers() { return walkingManager; }
     public BattleManager battles() { return battleManager; }
     public PokeballItem pokeballs() { return pokeballItem; }
     public BedrockSupport bedrock() { return bedrockSupport; }

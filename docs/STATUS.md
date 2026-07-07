@@ -162,6 +162,9 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] /poke ride <slot> - cưỡi pokemon của mình, đi theo hướng nhìn
 - [x] Pokemon hệ FLYING bay được (config ride.allow-fly)
 - [x] Sneak để xuống, tự dismount khi vào battle/quit
+- [x] Walking pokemon: bật/tắt ở menu (nút Walking Pokemon) - con đầu đội đi
+      theo người chơi (entity không AI, glide mỗi tick, dùng model ModelEngine
+      nếu có); trạng thái lưu meta nên relog vẫn theo; chạy cả PC + mobile
 - [ ] Điều khiển WASD thật (cần saddle-entity hack), tốc độ theo chỉ số Speed
 
 ## Pokedex

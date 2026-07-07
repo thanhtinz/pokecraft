@@ -119,6 +119,17 @@ public class PokemonEntityManager {
         return entity;
     }
 
+    /**
+     * Spawns a cosmetic follower pokemon (no wild tag, no AI, no gravity,
+     * non-collidable). The caller drives its position and removes it.
+     */
+    public LivingEntity spawnFollower(PokemonSpecies species, PokemonInstance instance, Location loc) {
+        LivingEntity entity = spawnMount(species, instance, loc);
+        entity.setGravity(false);
+        entity.setCollidable(false);
+        return entity;
+    }
+
     /** Epoch millis when the wild entity spawned, or 0 when unknown. */
     public long spawnTime(Entity entity) {
         Long t = entity.getPersistentDataContainer().get(keySpawnTime, PersistentDataType.LONG);
