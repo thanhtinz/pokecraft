@@ -226,6 +226,71 @@ public class BedrockSupport {
         }
     }
 
+    /**
+     * A native "radar" popup for Bedrock/mobile: lists nearby wild pokemon and
+     * players with a compass direction and distance. Bedrock can't render an
+     * off-hand map as a corner minimap (that's a Java-client feature), so this
+     * form is the mobile minimap.
+     * @return true if the form was sent
+     */
+    public boolean tryOpenRadarForm(Player player) {
+        if (!formsEnabled(player)) return false;
+        try {
+            List<Runnable> actions = new ArrayList<>();
+            Class<?> simpleForm = Class.forName("org.geysermc.cumulus.form.SimpleForm");
+            Object builder = simpleForm.getMethod("builder").invoke(null);
+            Class<?> builderClass = builder.getClass();
+
+            int radius = plugin.getConfig().getInt("minimap.radius", 100);
+            List<String> lines = new ArrayList<>();
+            record Blip(double dist, String text) {}
+            List<Blip> blips = new ArrayList<>();
+            for (org.bukkit.entity.Entity ent : player.getNearbyEntities(radius, radius, radius)) {
+                if (plugin.entities().isWild(ent)) {
+                    var inst = plugin.entities().readData(ent);
+                    PokemonSpecies sp = inst == null ? null : plugin.species().getSpecies(inst.speciesId);
+                    String name = sp != null ? inst.displayName(sp) : "Wild pokemon";
+                    double d = player.getLocation().distance(ent.getLocation());
+                    blips.add(new Blip(d, "§c▲ " + name + "  §7" + Math.round(d)
+                            + "m " + bearing(player.getLocation(), ent.getLocation())));
+                } else if (ent instanceof Player other && !other.equals(player)) {
+                    double d = player.getLocation().distance(ent.getLocation());
+                    blips.add(new Blip(d, "§9● " + other.getName() + "  §7"
+                            + Math.round(d) + "m " + bearing(player.getLocation(), ent.getLocation())));
+                }
+            }
+            blips.sort((a, b) -> Double.compare(a.dist(), b.dist()));
+            for (Blip b : blips) lines.add(b.text());
+
+            invoke(builderClass, builder, "title", "PokeMap Radar");
+            String content = lines.isEmpty()
+                    ? "Nothing nearby within " + radius + " blocks."
+                    : String.join("\n", lines);
+            invoke(builderClass, builder, "content",
+                    "§cWild pokemon  §9Players  §7(within " + radius + "m)\n\n" + content);
+            invoke(builderClass, builder, "button", "Refresh");
+            actions.add(() -> tryOpenRadarForm(player));
+            invoke(builderClass, builder, "button", "Close");
+            actions.add(() -> {});
+
+            sendForm(player, simpleForm, builder, builderClass, actions);
+            return true;
+        } catch (Exception e) {
+            plugin.getLogger().warning("[WARN] Bedrock radar form failed: " + e.getMessage());
+            return false;
+        }
+    }
+
+    /** 8-point compass direction from one location to another (N = -Z). */
+    private String bearing(org.bukkit.Location from, org.bukkit.Location to) {
+        double dx = to.getX() - from.getX();
+        double dz = to.getZ() - from.getZ();
+        double deg = Math.toDegrees(Math.atan2(dx, -dz));
+        if (deg < 0) deg += 360;
+        String[] dirs = {"N", "NE", "E", "SE", "S", "SW", "W", "NW"};
+        return dirs[(int) Math.round(deg / 45.0) % 8];
+    }
+
     private boolean menuBlocked(Player player) {
         if (plugin.battles().get(player) != null || plugin.pvp().get(player) != null) {
             player.sendMessage(net.kyori.adventure.text.Component.text(
@@ -256,8 +321,33 @@ public class BedrockSupport {
         };
         validResult.invoke(builder, handler);
 
+        // Without close/invalid handlers, dismissing a form without picking a
+        // button leaves Floodgate thinking a form is still pending, so the next
+        // sendForm is dropped and the menu "only opens once". No-op handlers let
+        // the form close cleanly so it can be reopened.
+        setNoOpHandler(builderClass, builder, "closedResultHandler");
+        setNoOpHandler(builderClass, builder, "invalidResultHandler");
+        setNoOpHandler(builderClass, builder, "closedOrInvalidResultHandler");
+
         Object form = builderClass.getMethod("build").invoke(builder);
         mSendForm.invoke(floodgateApi, player.getUniqueId(), form);
+    }
+
+    /** Attach a do-nothing handler for a builder callback, whatever its functional type. */
+    private void setNoOpHandler(Class<?> builderClass, Object builder, String methodName) {
+        for (Method m : builderClass.getMethods()) {
+            if (!m.getName().equals(methodName) || m.getParameterCount() != 1) continue;
+            Class<?> type = m.getParameterTypes()[0];
+            if (!type.isInterface()) continue;
+            try {
+                Object proxy = java.lang.reflect.Proxy.newProxyInstance(
+                        type.getClassLoader(), new Class[]{type}, (p, method, a) -> null);
+                m.invoke(builder, proxy);
+            } catch (Exception ignored) {
+                // handler couldn't be attached - not fatal, form still sends
+            }
+            return;
+        }
     }
 
     private String statusSuffix(PokemonInstance p) {

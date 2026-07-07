@@ -66,6 +66,14 @@ public class MinimapManager implements Listener {
             var leftover = player.getInventory().addItem(createNav());
             leftover.values().forEach(i -> player.getWorld().dropItemNaturally(player.getLocation(), i));
         }
+        // Bedrock/mobile can't show an off-hand map in the corner, so open the
+        // native radar popup instead of equipping a filled map.
+        if (plugin.bedrock().isBedrock(player)) {
+            plugin.bedrock().tryOpenRadarForm(player);
+            player.sendMessage(Component.text(
+                    "Tap the PokeNav compass anytime to open your radar.", NamedTextColor.GREEN));
+            return;
+        }
         showMinimap(player);
         player.sendMessage(Component.text(
                 "PokeMap is now in the corner. Use the PokeNav compass to hide/show it.",
@@ -149,6 +157,11 @@ public class MinimapManager implements Listener {
 
     /** Compass action: pop the minimap up if hidden, put it away if shown. */
     public void toggle(Player player) {
+        // Bedrock/mobile: open the native radar popup each tap.
+        if (plugin.bedrock().isBedrock(player)) {
+            plugin.bedrock().tryOpenRadarForm(player);
+            return;
+        }
         if (hideMinimap(player)) {
             player.sendMessage(Component.text("Minimap hidden.", NamedTextColor.GRAY));
         } else {

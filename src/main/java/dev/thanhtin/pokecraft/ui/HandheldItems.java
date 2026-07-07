@@ -34,9 +34,7 @@ public class HandheldItems implements Listener {
 
     private static final List<Handheld> ITEMS = List.of(
             new Handheld("items.give-pokedex", "pokedex", Material.BOOK,
-                    "Pokedex", "Right-click / tap to open your Pokedex"),
-            new Handheld("items.give-party", "party", Material.BUNDLE,
-                    "Team", "Right-click / tap to view your party"));
+                    "Pokedex", "Right-click / tap to open your Pokedex"));
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyItem;
@@ -72,6 +70,13 @@ public class HandheldItems implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
+        // clean up hand-held items that are no longer offered (e.g. the old Team bag)
+        for (ItemStack item : player.getInventory().getContents()) {
+            String id = idOf(item);
+            if (id != null && ITEMS.stream().noneMatch(h -> h.id().equals(id))) {
+                player.getInventory().remove(item);
+            }
+        }
         for (Handheld h : ITEMS) {
             if (!plugin.getConfig().getBoolean(h.configKey(), true)) continue;
             if (hasItem(player, h.id())) continue;
@@ -89,7 +94,6 @@ public class HandheldItems implements Listener {
         Player player = e.getPlayer();
         switch (id) {
             case "pokedex" -> plugin.pokedexUi().open(player, 0);
-            case "party" -> plugin.partyUi().open(player);
             default -> {}
         }
     }
