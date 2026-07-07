@@ -471,7 +471,9 @@ public class ModelImporter {
             double d = Double.parseDouble(v);
             return String.valueOf(-d);
         } catch (NumberFormatException e) {
-            return "-(" + v + ")";
+            // molang: BetterModel's parser can't negate a parenthesis ("-(...)"),
+            // so multiply by -1 instead - mathematically identical, parses fine.
+            return "-1*(" + v + ")";
         }
     }
 
