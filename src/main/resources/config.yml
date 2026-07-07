@@ -71,6 +71,16 @@ npc:
   trainer-reward-per-level: 10  # money = sum of team levels * this
   trainer-cooldown-minutes: 30
 
+minigame:
+  board-reward: 500       # money for beating the AI at a board game
+
+casino:
+  slot-cost: 500
+
+trivia:
+  reward: 300
+  cooldown-seconds: 60
+
 minimap:
   radius: 100             # blocks scanned for pokemon/player markers
 

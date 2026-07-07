@@ -1,0 +1,85 @@
+package dev.thanhtin.pokecraft.minigame;
+
+import dev.thanhtin.pokecraft.PokeCraftPlugin;
+import dev.thanhtin.pokecraft.ui.GuiFiller;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryHolder;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.persistence.PersistentDataType;
+
+import java.util.List;
+
+/** Minigames hub: pick a mini-game to play. */
+public class MinigamesGui implements Listener {
+    private final PokeCraftPlugin plugin;
+    private final NamespacedKey keyGame;
+
+    private static class Holder implements InventoryHolder {
+        Inventory inventory;
+        @Override public Inventory getInventory() { return inventory; }
+    }
+
+    public MinigamesGui(PokeCraftPlugin plugin) {
+        this.plugin = plugin;
+        this.keyGame = new NamespacedKey(plugin, "minigame");
+    }
+
+    public void open(Player player) {
+        Holder holder = new Holder();
+        Inventory inv = plugin.getServer().createInventory(holder, 27, Component.text("Minigames"));
+        holder.inventory = inv;
+
+        inv.setItem(10, game("casino", Material.GOLD_INGOT, "Casino",
+                List.of("Coin flip and slot machine", "Bet your PokeDollars")));
+        inv.setItem(12, game("trivia", Material.BOOK, "Trivia Quiz",
+                List.of("Answer pokemon questions", "for a money reward")));
+        inv.setItem(14, game("tictactoe", Material.OAK_SIGN, "Tic-Tac-Toe",
+                List.of("Beat the AI in a 3x3 grid", "for a small reward")));
+        inv.setItem(16, game("connect4", Material.BLUE_WOOL, "Connect Four",
+                List.of("Line up 4 vs the AI", "for a reward")));
+
+        GuiFiller.fill(inv);
+        player.openInventory(inv);
+    }
+
+    private ItemStack game(String id, Material material, String name, List<String> lore) {
+        ItemStack item = new ItemStack(material);
+        ItemMeta meta = item.getItemMeta();
+        meta.displayName(Component.text(name, NamedTextColor.AQUA));
+        java.util.List<Component> l = new java.util.ArrayList<>();
+        for (String s : lore) l.add(Component.text(s, NamedTextColor.GRAY));
+        meta.lore(l);
+        meta.getPersistentDataContainer().set(keyGame, PersistentDataType.STRING, id);
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    @EventHandler
+    public void onClick(InventoryClickEvent e) {
+        if (!(e.getInventory().getHolder() instanceof Holder)) return;
+        e.setCancelled(true);
+        if (!(e.getWhoClicked() instanceof Player player)) return;
+        ItemStack item = e.getCurrentItem();
+        if (item == null || !item.hasItemMeta()) return;
+        String game = item.getItemMeta().getPersistentDataContainer()
+                .get(keyGame, PersistentDataType.STRING);
+        if (game == null) return;
+        plugin.getServer().getScheduler().runTask(plugin, () -> {
+            switch (game) {
+                case "casino" -> plugin.casinoUi().open(player);
+                case "trivia" -> plugin.triviaUi().open(player);
+                case "tictactoe", "connect4" -> plugin.boardGames().play(player, game);
+                default -> {}
+            }
+        });
+    }
+}

@@ -216,6 +216,15 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
       Bronze->Master; GUI xem bậc + top 10; admin reset mùa (thưởng top 3,
       thông báo toàn server) qua /poke rankreset hoặc OP panel
 
+## Minimap & Minigames
+
+- [x] PokeMap: item bản đồ (filled map) chạy CẢ mobile qua Geyser (overlay
+      minimap mod client-only không hiện trên Bedrock), tự bám theo player,
+      chấm đỏ = pokemon hoang, mũi tên = người chơi
+- [x] Minigame hub (menu -> Minigames): Casino (tung xu/slot máy), Trivia
+      (đố vui pokemon), Tic-Tac-Toe & Connect Four (đấu AI) - đều chest GUI
+      chạy PC + mobile, thắng được thưởng tiền
+
 ## OP Setup Panel
 
 - [x] Panel cấu hình trong game cho OP (menu -> OP Setup, chỉ hiện với admin;

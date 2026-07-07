@@ -8,6 +8,10 @@ import dev.thanhtin.pokecraft.battle.pvp.PvpBattleManager;
 import dev.thanhtin.pokecraft.daycare.DaycareManager;
 import dev.thanhtin.pokecraft.dungeon.DungeonManager;
 import dev.thanhtin.pokecraft.economy.EconomyManager;
+import dev.thanhtin.pokecraft.minigame.BoardGameManager;
+import dev.thanhtin.pokecraft.minigame.CasinoGui;
+import dev.thanhtin.pokecraft.minigame.MinigamesGui;
+import dev.thanhtin.pokecraft.minigame.TriviaGui;
 import dev.thanhtin.pokecraft.minimap.MinimapManager;
 import dev.thanhtin.pokecraft.farm.FarmManager;
 import dev.thanhtin.pokecraft.bedrock.BedrockSupport;
@@ -88,6 +92,10 @@ public class PokeCraftPlugin extends JavaPlugin {
     private FarmManager farmManager;
     private AdminGui adminGui;
     private MinimapManager minimapManager;
+    private CasinoGui casinoGui;
+    private TriviaGui triviaGui;
+    private BoardGameManager boardGameManager;
+    private MinigamesGui minigamesGui;
     private PvpBattleManager pvpManager;
     private EconomyManager economyManager;
     private MarriageManager marriageManager;
@@ -148,6 +156,10 @@ public class PokeCraftPlugin extends JavaPlugin {
         farmManager = new FarmManager(this);
         adminGui = new AdminGui(this);
         minimapManager = new MinimapManager(this);
+        casinoGui = new CasinoGui(this);
+        triviaGui = new TriviaGui(this);
+        boardGameManager = new BoardGameManager(this);
+        minigamesGui = new MinigamesGui(this);
         pvpManager = new PvpBattleManager(this);
         economyManager = new EconomyManager(this);
         marriageManager = new MarriageManager(this);
@@ -188,6 +200,10 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(farmManager, this);
         getServer().getPluginManager().registerEvents(adminGui, this);
         getServer().getPluginManager().registerEvents(minimapManager, this);
+        getServer().getPluginManager().registerEvents(casinoGui, this);
+        getServer().getPluginManager().registerEvents(triviaGui, this);
+        getServer().getPluginManager().registerEvents(boardGameManager, this);
+        getServer().getPluginManager().registerEvents(minigamesGui, this);
         getServer().getPluginManager().registerEvents(pvpManager, this);
         getServer().getPluginManager().registerEvents(economyManager, this);
         getServer().getPluginManager().registerEvents(usableItems, this);
@@ -256,6 +272,10 @@ public class PokeCraftPlugin extends JavaPlugin {
     public AdminGui adminUi() { return adminGui; }
     public SpawnManager spawns() { return spawnManager; }
     public MinimapManager minimap() { return minimapManager; }
+    public CasinoGui casinoUi() { return casinoGui; }
+    public TriviaGui triviaUi() { return triviaGui; }
+    public BoardGameManager boardGames() { return boardGameManager; }
+    public MinigamesGui minigamesUi() { return minigamesGui; }
     public PvpBattleManager pvp() { return pvpManager; }
     public EconomyManager economy() { return economyManager; }
     public MarriageManager marriage() { return marriageManager; }

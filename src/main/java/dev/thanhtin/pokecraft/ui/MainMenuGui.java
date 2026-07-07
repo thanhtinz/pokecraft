@@ -47,6 +47,7 @@ public class MainMenuGui implements Listener {
     private static final int SLOT_DUNGEON = 34;
     private static final int SLOT_ADMIN = 8;
     private static final int SLOT_MAP = 5;
+    private static final int SLOT_MINIGAMES = 6;
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyMenuItem;
@@ -148,6 +149,8 @@ public class MainMenuGui implements Listener {
 
         inv.setItem(SLOT_MAP, item(Material.FILLED_MAP, "Get PokeMap", NamedTextColor.AQUA,
                 List.of("A minimap that works on mobile", "Shows wild pokemon + players")));
+        inv.setItem(SLOT_MINIGAMES, item(Material.OAK_SIGN, "Minigames", NamedTextColor.GOLD,
+                List.of("Casino, trivia, tic-tac-toe", "and connect four")));
 
         inv.setItem(SLOT_PARTY, item(Material.PLAYER_HEAD, "Party", NamedTextColor.AQUA,
                 List.of("View, reorder and manage", "your 6 party pokemon")));
@@ -286,6 +289,7 @@ public class MainMenuGui implements Listener {
                 case SLOT_TOP -> plugin.leaderboardUi().open(player);
                 case SLOT_DEX -> plugin.pokedexUi().open(player, 0);
                 case SLOT_MAP -> { player.closeInventory(); plugin.minimap().give(player); }
+                case SLOT_MINIGAMES -> plugin.minigamesUi().open(player);
                 case SLOT_ACTIVITIES -> plugin.activitiesUi().open(player);
                 case SLOT_GUILD -> plugin.guildUi().open(player);
                 case SLOT_RANK -> plugin.rankUi().open(player);

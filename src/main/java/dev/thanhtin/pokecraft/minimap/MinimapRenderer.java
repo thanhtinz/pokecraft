@@ -35,18 +35,18 @@ public class MinimapRenderer extends MapRenderer {
         int centerZ = view.getCenterZ();
         int radius = plugin.getConfig().getInt("minimap.radius", 100);
 
-        // self, at the centre, pointing where the player looks
+        // self, at the centre, pointing where the player looks (white arrow)
         cursors.addCursor(cursor(0, 0, yawToDir(player.getLocation().getYaw()),
-                MapCursor.Type.WHITE_POINTER));
+                MapCursor.Type.PLAYER));
 
         for (Entity e : player.getNearbyEntities(radius, radius, radius)) {
             int cx = pixel(e.getLocation().getBlockX() - centerX, scale);
             int cz = pixel(e.getLocation().getBlockZ() - centerZ, scale);
             if (cx > 200 || cz > 200) continue; // off the map (sentinel)
             if (plugin.entities().isWild(e)) {
-                cursors.addCursor(cursor(cx, cz, (byte) 8, MapCursor.Type.RED_MARKER));
+                cursors.addCursor(cursor(cx, cz, (byte) 8, MapCursor.Type.RED_MARKER)); // wild = red dot
             } else if (e instanceof Player) {
-                cursors.addCursor(cursor(cx, cz, (byte) 8, MapCursor.Type.BLUE_POINTER));
+                cursors.addCursor(cursor(cx, cz, (byte) 8, MapCursor.Type.PLAYER)); // players = white arrow
             }
         }
         canvas.setCursors(cursors);
