@@ -131,7 +131,8 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Dùng item giữa trận: nút Bag trong battle menu -> chọn potion (Potion/
       Super/Hyper/Oran Berry) hồi HP, Full Heal chữa status - cho pokemon đang đánh; tốn lượt (pokemon
       hoang được đánh 1 phát), không cho phí khi đã đầy HP
-- [ ] Battle theo turn timeout (chống AFK)
+- [x] Turn timeout chống AFK (PvP): nếu 1 người không chọn trong
+      pvp.turn-timeout-seconds thì tự chọn 1 chiêu ngẫu nhiên, duel không treo
 - [x] Stat stages cho accuracy/evasion: Sand-Attack/Smokescreen/Flash (giảm
       accuracy đối thủ), Double Team/Minimize (tăng evasion) -> ảnh hưởng tỉ lệ
       trúng đòn (bảng 3-based). 11 move giảm accuracy + 5 move evasion

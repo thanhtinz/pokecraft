@@ -78,6 +78,7 @@ shop:
 
 pvp:
   win-reward: 250
+  turn-timeout-seconds: 45   # auto-pick a move if a player stalls (0 = off)
   max-distance: 50        # blocks between challenger and target
 
 trade:

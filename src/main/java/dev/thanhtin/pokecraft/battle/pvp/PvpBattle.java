@@ -16,6 +16,8 @@ public class PvpBattle {
     /** Set when that side's active fainted and must pick a replacement. */
     public boolean awaitingSwitch1, awaitingSwitch2;
     public boolean finished;
+    /** Increments each time the move menus open; used to expire stale turn timeouts. */
+    public int turn;
 
     public PvpBattle(UUID p1, PokemonInstance active1, UUID p2, PokemonInstance active2) {
         this.p1 = p1;

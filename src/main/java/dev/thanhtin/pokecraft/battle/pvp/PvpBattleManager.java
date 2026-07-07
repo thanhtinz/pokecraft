@@ -556,6 +556,43 @@ public class PvpBattleManager implements Listener {
         Player pl2 = plugin.getServer().getPlayer(battle.p2);
         if (pl1 != null) plugin.pvpUi().openMoveMenu(pl1, battle);
         if (pl2 != null) plugin.pvpUi().openMoveMenu(pl2, battle);
+
+        int seconds = plugin.getConfig().getInt("pvp.turn-timeout-seconds", 45);
+        if (seconds <= 0) return;
+        battle.turn++;
+        int thisTurn = battle.turn;
+        plugin.getServer().getScheduler().runTaskLater(plugin,
+                () -> onTurnTimeout(battle, thisTurn), seconds * 20L);
+    }
+
+    /** If a side hasn't chosen when the timer fires, pick a random move for them. */
+    private void onTurnTimeout(PvpBattle battle, int turn) {
+        if (battle.finished || battle.turn != turn) return; // resolved already / stale
+        boolean acted = false;
+        for (UUID side : new UUID[]{battle.p1, battle.p2}) {
+            if (battle.awaitingSwitch(side) || battle.choiceOf(side) != null) continue;
+            Player p = plugin.getServer().getPlayer(side);
+            if (p == null) return; // offline - let the quit handler end the duel
+            battle.setChoice(side, "move:" + randomUsableMove(battle.activeOf(side)));
+            p.closeInventory();
+            p.sendMessage(Component.text("Time's up - a move was chosen for you.", NamedTextColor.GRAY));
+            acted = true;
+        }
+        if (acted && battle.bothChosen()) resolveTurn(battle);
+    }
+
+    private String randomUsableMove(PokemonInstance active) {
+        if (active != null && active.moves != null) {
+            java.util.List<String> usable = active.moves.stream()
+                    .filter(id -> {
+                        MoveData m = plugin.species().getMove(id);
+                        return m != null && active.ppFor(m) > 0;
+                    }).toList();
+            if (!usable.isEmpty()) {
+                return usable.get(ThreadLocalRandom.current().nextInt(usable.size()));
+            }
+        }
+        return BattleManager.STRUGGLE_ID;
     }
 
     private void openForcedSwitchMenus(PvpBattle battle) {
