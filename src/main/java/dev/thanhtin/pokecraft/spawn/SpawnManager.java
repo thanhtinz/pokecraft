@@ -5,9 +5,12 @@ import dev.thanhtin.pokecraft.pokemon.PokemonInstance;
 import dev.thanhtin.pokecraft.species.PokemonSpecies;
 import dev.thanhtin.pokecraft.species.PokemonType;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -53,18 +56,65 @@ public class SpawnManager {
             }
             if (nearby >= cap) continue;
 
-            Location loc = pickLocation(player, rMin, rMax);
+            boolean water = plugin.getConfig().getBoolean("spawning.water-spawns", true)
+                    && ThreadLocalRandom.current().nextInt(100) < 30;
+            Location loc = water ? pickWaterLocation(player, rMin, rMax)
+                                 : pickLocation(player, rMin, rMax);
             if (loc == null) continue;
 
-            PokemonSpecies species = pickSpecies(loc);
+            PokemonSpecies species = water ? pickWaterSpecies() : pickSpecies(loc);
             if (species == null) continue;
 
             int level = ThreadLocalRandom.current().nextInt(
                     species.spawn.minLevel, species.spawn.maxLevel + 1);
             int shinyRate = plugin.getConfig().getInt("battle.shiny-rate", 4096);
             PokemonInstance instance = PokemonInstance.generate(species, level, shinyRate);
-            plugin.entities().spawnWild(species, instance, loc);
+            LivingEntity entity = plugin.entities().spawnWild(species, instance, loc);
+            if (water && entity != null) {
+                // float at the surface instead of sinking, and stay put
+                entity.setGravity(false);
+                if (entity instanceof Mob mob) mob.setAware(false);
+            }
         }
+    }
+
+    /** A location on the surface of nearby water, or null if none was found. */
+    private Location pickWaterLocation(Player player, int rMin, int rMax) {
+        ThreadLocalRandom rnd = ThreadLocalRandom.current();
+        World world = player.getWorld();
+        for (int attempt = 0; attempt < 8; attempt++) {
+            double angle = rnd.nextDouble() * Math.PI * 2;
+            double dist = rnd.nextDouble(rMin, rMax);
+            int x = player.getLocation().getBlockX() + (int) (Math.cos(angle) * dist);
+            int z = player.getLocation().getBlockZ() + (int) (Math.sin(angle) * dist);
+            int y = world.getHighestBlockYAt(x, z);
+            if (world.getBlockAt(x, y, z).getType() != Material.WATER) continue;
+            Location loc = new Location(world, x + 0.5, y + 1, z + 0.5);
+            if (Math.abs(loc.getY() - player.getLocation().getY()) > 24) continue;
+            return loc;
+        }
+        return null;
+    }
+
+    /** Weighted pick among spawnable Water-type species (any biome). */
+    private PokemonSpecies pickWaterSpecies() {
+        List<PokemonSpecies> pool = new ArrayList<>();
+        List<Integer> weights = new ArrayList<>();
+        int total = 0;
+        for (PokemonSpecies s : plugin.species().all()) {
+            if (s.spawn == null || s.types == null || !s.types.contains(PokemonType.WATER)) continue;
+            int w = Math.max(1, s.spawn.weight);
+            pool.add(s);
+            weights.add(w);
+            total += w;
+        }
+        if (pool.isEmpty() || total <= 0) return null;
+        int roll = ThreadLocalRandom.current().nextInt(total);
+        for (int i = 0; i < pool.size(); i++) {
+            roll -= weights.get(i);
+            if (roll < 0) return pool.get(i);
+        }
+        return pool.get(0);
     }
 
     /** Remove wild pokemon that are too old or too far from every player. */

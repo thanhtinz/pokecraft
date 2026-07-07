@@ -11,6 +11,7 @@ spawning:
   spawn-radius-max: 32
   despawn-distance: 64
   despawn-seconds: 300
+  water-spawns: true         # Water-type pokemon appear on nearby water surfaces
   time-weather-influence: true  # night favors Ghost/Dark/Poison/Ice; day favors
                                 # Normal/Bug/Flying/Grass/Fairy; rain boosts Water/Electric
 
