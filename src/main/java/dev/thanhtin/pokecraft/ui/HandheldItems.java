@@ -11,6 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -81,21 +82,31 @@ public class HandheldItems implements Listener {
         cleanupAndGive(e.getPlayer());
     }
 
-    /** Strip retired hand-held items (e.g. the old Team bundle) and hand out the current ones. */
+    /**
+     * Strip retired hand-held items (e.g. the old Team bundle) and hand out the
+     * current ones. Also collapses any duplicates/stacks down to exactly one per
+     * item so a bad pickup or respawn race can never leave a player with two.
+     */
     public void cleanupAndGive(Player player) {
-        for (ItemStack item : player.getInventory().getContents()) {
+        java.util.Set<String> kept = new java.util.HashSet<>();
+        ItemStack[] contents = player.getInventory().getContents();
+        for (int i = 0; i < contents.length; i++) {
+            ItemStack item = contents[i];
             String id = idOf(item);
             if (id == null) continue;
             Handheld current = ITEMS.stream().filter(h -> h.id().equals(id)).findFirst().orElse(null);
-            // remove retired items, and stale versions (e.g. the old BOOK Pokedex)
-            // so the refreshed look is handed back below
-            if (current == null || item.getType() != current.material()) {
-                player.getInventory().remove(item);
+            // drop retired items, stale versions (old BOOK Pokedex), and any
+            // extra copies of an item we've already kept once
+            if (current == null || item.getType() != current.material() || kept.contains(id)) {
+                player.getInventory().setItem(i, null);
+            } else {
+                if (item.getAmount() > 1) item.setAmount(1); // never let it stack
+                kept.add(id);
             }
         }
         for (Handheld h : ITEMS) {
             if (!plugin.getConfig().getBoolean(h.configKey(), true)) continue;
-            if (hasItem(player, h.id())) continue;
+            if (kept.contains(h.id())) continue;
             player.getInventory().addItem(build(h));
         }
     }
@@ -124,6 +135,22 @@ public class HandheldItems implements Listener {
     @EventHandler
     public void onDeath(PlayerDeathEvent e) {
         e.getDrops().removeIf(item -> idOf(item) != null);
+    }
+
+    /**
+     * Never let a carried item duplicate: if a tagged copy is lying on the
+     * ground and the player already has one, void the pickup instead of adding
+     * a second. This kills the "pick the death drop back up = 2" case.
+     */
+    @EventHandler
+    public void onPickup(EntityPickupItemEvent e) {
+        if (!(e.getEntity() instanceof Player player)) return;
+        String id = idOf(e.getItem().getItemStack());
+        if (id == null) return;
+        if (hasItem(player, id)) {
+            e.setCancelled(true);
+            e.getItem().remove();
+        }
     }
 
     /** Hand the Pokedex back after respawning so death never loses it. */

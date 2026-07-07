@@ -89,12 +89,26 @@ public class MainMenuGui implements Listener {
         giveMenuItem(e.getPlayer());
     }
 
-    /** Give the hotbar menu item if enabled and the player doesn't already have it. */
+    /**
+     * Give the hotbar menu item if enabled. Collapses any duplicates/stacks down
+     * to exactly one first, so a bad pickup or respawn race can never leave a
+     * player holding two menu items.
+     */
     public void giveMenuItem(Player player) {
-        if (!plugin.getConfig().getBoolean("menu.give-item", true)) return;
-        for (ItemStack item : player.getInventory().getContents()) {
-            if (isMenuItem(item)) return;
+        boolean kept = false;
+        ItemStack[] contents = player.getInventory().getContents();
+        for (int i = 0; i < contents.length; i++) {
+            ItemStack item = contents[i];
+            if (!isMenuItem(item)) continue;
+            if (kept) {
+                player.getInventory().setItem(i, null); // remove extra copies
+            } else {
+                if (item.getAmount() > 1) item.setAmount(1); // never let it stack
+                kept = true;
+            }
         }
+        if (kept) return;
+        if (!plugin.getConfig().getBoolean("menu.give-item", true)) return;
         int slot = plugin.getConfig().getInt("menu.item-slot", 8);
         if (slot >= 0 && slot <= 8 && player.getInventory().getItem(slot) == null) {
             player.getInventory().setItem(slot, createMenuItem());
@@ -114,6 +128,23 @@ public class MainMenuGui implements Listener {
     public void onRespawn(PlayerRespawnEvent e) {
         Player player = e.getPlayer();
         plugin.getServer().getScheduler().runTask(plugin, () -> giveMenuItem(player));
+    }
+
+    /**
+     * Never let the menu item duplicate: if a copy is on the ground and the
+     * player already has one, void the pickup instead of adding a second.
+     */
+    @EventHandler
+    public void onPickup(org.bukkit.event.entity.EntityPickupItemEvent e) {
+        if (!(e.getEntity() instanceof Player player)) return;
+        if (!isMenuItem(e.getItem().getItemStack())) return;
+        for (ItemStack item : player.getInventory().getContents()) {
+            if (isMenuItem(item)) {
+                e.setCancelled(true);
+                e.getItem().remove();
+                return;
+            }
+        }
     }
 
     @EventHandler
