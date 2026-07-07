@@ -247,17 +247,17 @@ public class BedrockSupport {
             invoke(builderClass, builder, "content",
                     "Balance: " + plugin.economy().format(balance));
 
-            addButton(builderClass, builder, actions, "Party",
+            addMenuButton(builderClass, builder, actions, "party", "Party",
                     () -> plugin.partyUi().open(player));
-            addButton(builderClass, builder, actions, "PC Box",
+            addMenuButton(builderClass, builder, actions, "pc", "PC Box",
                     () -> { if (!menuBlocked(player)) plugin.pcUi().open(player, 0); });
-            addButton(builderClass, builder, actions, "Pokemart",
+            addMenuButton(builderClass, builder, actions, "shop", "Pokemart",
                     () -> { if (!menuBlocked(player)) plugin.shop().open(player); });
-            addButton(builderClass, builder, actions, "Daycare",
+            addMenuButton(builderClass, builder, actions, "daycare", "Daycare",
                     () -> { if (!menuBlocked(player)) plugin.daycareUi().open(player); });
 
             String challenger = plugin.pvp().pendingChallengerName(player);
-            addButton(builderClass, builder, actions,
+            addMenuButton(builderClass, builder, actions, "duel",
                     challenger != null ? "Accept duel vs " + challenger : "PvP Duel",
                     () -> {
                         if (menuBlocked(player)) return;
@@ -266,7 +266,7 @@ public class BedrockSupport {
                     });
 
             String trader = plugin.trades().pendingRequesterName(player);
-            addButton(builderClass, builder, actions,
+            addMenuButton(builderClass, builder, actions, "trade",
                     trader != null ? "Accept trade from " + trader : "Trade",
                     () -> {
                         if (menuBlocked(player)) return;
@@ -274,26 +274,26 @@ public class BedrockSupport {
                         else plugin.playerPickerUi().open(player, PlayerPickerGui.Purpose.TRADE);
                     });
 
-            addButton(builderClass, builder, actions, "Pokedex",
+            addMenuButton(builderClass, builder, actions, "dex", "Pokedex",
                     () -> plugin.pokedexUi().open(player, 0));
-            addButton(builderClass, builder, actions, "Leaderboards",
+            addMenuButton(builderClass, builder, actions, "top", "Leaderboards",
                     () -> plugin.leaderboardUi().open(player));
-            addButton(builderClass, builder, actions, "Get PokeMap",
+            addMenuButton(builderClass, builder, actions, "map", "Get PokeMap",
                     () -> plugin.minimap().toggle(player));
-            addButton(builderClass, builder, actions, "Minigames",
+            addMenuButton(builderClass, builder, actions, "minigames", "Minigames",
                     () -> plugin.minigamesUi().open(player));
-            addButton(builderClass, builder, actions, "Activities",
+            addMenuButton(builderClass, builder, actions, "activities", "Activities",
                     () -> plugin.activitiesUi().open(player));
 
             var guild = plugin.guilds().guildOf(player);
-            addButton(builderClass, builder, actions,
+            addMenuButton(builderClass, builder, actions, "guild",
                     guild != null ? "Guild: " + guild.name() : "Guilds",
                     () -> plugin.guildUi().open(player));
-            addButton(builderClass, builder, actions, "Rank",
+            addMenuButton(builderClass, builder, actions, "rank", "Rank",
                     () -> plugin.rankUi().open(player));
-            addButton(builderClass, builder, actions, "Dungeon",
+            addMenuButton(builderClass, builder, actions, "dungeon", "Dungeon",
                     () -> { if (!menuBlocked(player)) plugin.dungeons().start(player); });
-            addButton(builderClass, builder, actions, "Send Money",
+            addMenuButton(builderClass, builder, actions, "balance", "Send Money",
                     () -> { if (!menuBlocked(player)) plugin.playerPickerUi().open(player, PlayerPickerGui.Purpose.PAY); });
 
             if (player.hasPermission("pokecraft.admin")) {
@@ -387,6 +387,13 @@ public class BedrockSupport {
                            String label, Runnable action) throws Exception {
         invoke(builderClass, builder, "button", label);
         actions.add(action);
+    }
+
+    /** Add a menu-form button unless that entry is hidden via menu.hide. */
+    private void addMenuButton(Class<?> builderClass, Object builder, List<Runnable> actions,
+                              String key, String label, Runnable action) throws Exception {
+        if (plugin.mainMenu().menuHidden(key)) return;
+        addButton(builderClass, builder, actions, label, action);
     }
 
     private void sendForm(Player player, Class<?> simpleForm, Object builder,

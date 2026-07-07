@@ -226,8 +226,38 @@ public class MainMenuGui implements Listener {
                     List.of("Configure the whole plugin", "in-game (ops only)")));
         }
 
+        for (var en : MENU_KEYS.entrySet()) {
+            if (menuHidden(en.getKey())) inv.setItem(en.getValue(), null);
+        }
         GuiFiller.fill(inv);
         player.openInventory(inv);
+    }
+
+    /** Config key -> menu slot, for hiding entries via menu.hide. */
+    private static final java.util.Map<String, Integer> MENU_KEYS = java.util.Map.ofEntries(
+            java.util.Map.entry("party", SLOT_PARTY),
+            java.util.Map.entry("pc", SLOT_PC),
+            java.util.Map.entry("shop", SLOT_SHOP),
+            java.util.Map.entry("daycare", SLOT_DAYCARE),
+            java.util.Map.entry("duel", SLOT_DUEL),
+            java.util.Map.entry("top", SLOT_TOP),
+            java.util.Map.entry("dex", SLOT_DEX),
+            java.util.Map.entry("trade", SLOT_TRADE),
+            java.util.Map.entry("map", SLOT_MAP),
+            java.util.Map.entry("minigames", SLOT_MINIGAMES),
+            java.util.Map.entry("activities", SLOT_ACTIVITIES),
+            java.util.Map.entry("guild", SLOT_GUILD),
+            java.util.Map.entry("rank", SLOT_RANK),
+            java.util.Map.entry("dungeon", SLOT_DUNGEON),
+            java.util.Map.entry("balance", SLOT_BALANCE),
+            java.util.Map.entry("marry", SLOT_MARRY));
+
+    /** True if this menu entry is hidden via the menu.hide config list. */
+    public boolean menuHidden(String key) {
+        for (String h : plugin.getConfig().getStringList("menu.hide")) {
+            if (h.equalsIgnoreCase(key)) return true;
+        }
+        return false;
     }
 
     private ItemStack item(Material material, String name, NamedTextColor color, List<String> lore) {

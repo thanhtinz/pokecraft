@@ -212,6 +212,10 @@ menu:
   # give every player a menu item in the hotbar (right-click/tap to open panel)
   give-item: true
   item-slot: 8
+  # hide these entries from the main menu (chest + Bedrock form) - handy once you
+  # place NPCs for them. Keys: party pc shop daycare duel top dex trade map
+  # minigames activities guild rank dungeon balance marry
+  hide: []
 
 items:
   # the Pokedex is a carried book (right-click/tap to open); everything else
