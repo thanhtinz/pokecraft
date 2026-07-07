@@ -182,9 +182,25 @@ public class PokemonEntityManager {
             }
             Object modeledEntity = mCreateModeledEntity.invoke(null, entity);
             mAddModel.invoke(modeledEntity, activeModel, true);
-            if (entity instanceof LivingEntity le) le.setInvisible(true);
+            hideBaseAfterModel(entity);
         } catch (Exception e) {
             plugin.getLogger().warning("[WARN] Failed to apply model " + modelId + ": " + e.getMessage());
+        }
+    }
+
+    /**
+     * Hide the base mob now that a model is on it. Normally the whole entity is
+     * made invisible; with models.hide-base-java-only, it's hidden only from Java
+     * players (who can render the 3D model) so Bedrock/mobile players keep seeing
+     * the mapped vanilla mob instead of an invisible pokemon.
+     */
+    private void hideBaseAfterModel(Entity entity) {
+        if (plugin.getConfig().getBoolean("models.hide-base-java-only", false)) {
+            for (org.bukkit.entity.Player p : org.bukkit.Bukkit.getOnlinePlayers()) {
+                if (!plugin.bedrock().isBedrock(p)) p.hideEntity(plugin, entity);
+            }
+        } else if (entity instanceof LivingEntity le) {
+            le.setInvisible(true);
         }
     }
 
@@ -198,7 +214,7 @@ public class PokemonEntityManager {
             for (Method m : renderer.getClass().getMethods()) {
                 if (m.getName().equals("getOrCreate") && m.getParameterCount() == 1) {
                     m.invoke(renderer, entity);
-                    if (entity instanceof LivingEntity le) le.setInvisible(true);
+                    hideBaseAfterModel(entity);
                     return;
                 }
             }

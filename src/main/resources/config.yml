@@ -66,6 +66,11 @@ models:
   enabled: true
   default-scale: 1.0
   preview-seconds: 8
+  # keep a model engine (e.g. BetterModel) for PC while mobile still shows a mob:
+  # when true, the base entity is hidden only from Java players (who see the 3D
+  # model), so Bedrock/mobile players keep seeing the mapped vanilla mob instead
+  # of an invisible pokemon. Requires enabled: true and a model engine installed.
+  hide-base-java-only: false
   # bind a species to a blueprint with a different name (species: blueprint)
   overrides: {}
   # auto-convert Bedrock models dropped in plugins/PokeCraft/models-import/ into
