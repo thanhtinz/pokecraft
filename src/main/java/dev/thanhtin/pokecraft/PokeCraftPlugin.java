@@ -25,6 +25,7 @@ import dev.thanhtin.pokecraft.item.HeldItems;
 import dev.thanhtin.pokecraft.item.UsableItems;
 import dev.thanhtin.pokecraft.npc.NpcManager;
 import dev.thanhtin.pokecraft.party.PartyManager;
+import dev.thanhtin.pokecraft.pokemon.EggManager;
 import dev.thanhtin.pokecraft.pokemon.EvolutionService;
 import dev.thanhtin.pokecraft.ride.RideManager;
 import dev.thanhtin.pokecraft.shop.ShopGui;
@@ -106,6 +107,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private HeldItems heldItems;
     private ShopGui shopGui;
     private DaycareManager daycareManager;
+    private EggManager eggManager;
     private RideManager rideManager;
     private NpcManager npcManager;
 
@@ -171,6 +173,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         heldItems = new HeldItems(this);
         shopGui = new ShopGui(this);
         daycareManager = new DaycareManager(this);
+        eggManager = new EggManager(this);
         rideManager = new RideManager(this);
         npcManager = new NpcManager(this);
         spawnManager = new SpawnManager(this);
@@ -215,6 +218,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(shopGui, this);
         getServer().getPluginManager().registerEvents(rideManager, this);
         getServer().getPluginManager().registerEvents(npcManager, this);
+        getServer().getPluginManager().registerEvents(eggManager, this);
 
         PokeCommand command = new PokeCommand(this);
         getCommand("poke").setExecutor(command);
@@ -289,6 +293,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public HeldItems heldItems() { return heldItems; }
     public ShopGui shop() { return shopGui; }
     public DaycareManager daycare() { return daycareManager; }
+    public EggManager eggs() { return eggManager; }
     public RideManager rides() { return rideManager; }
     public NpcManager npcs() { return npcManager; }
 }

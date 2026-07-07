@@ -6,12 +6,35 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.entity.Player;
 
-/** Level-up and item (evolution stone) evolutions. */
+/** Level-up, item (evolution stone) and trade evolutions. */
 public class EvolutionService {
     private final PokeCraftPlugin plugin;
 
+    /** Classic no-item trade evolutions: species id -> what it becomes when traded. */
+    private static final java.util.Map<String, String> TRADE_EVOLUTIONS = java.util.Map.of(
+            "kadabra", "alakazam",
+            "machoke", "machamp",
+            "graveler", "golem",
+            "haunter", "gengar",
+            "boldore", "gigalith",
+            "gurdurr", "conkeldurr",
+            "phantump", "trevenant",
+            "pumpkaboo", "gourgeist");
+
     public EvolutionService(PokeCraftPlugin plugin) {
         this.plugin = plugin;
+    }
+
+    /** Called after a pokemon changes hands in a trade. @return true if it evolved. */
+    public boolean tryTradeEvolve(Player receiver, PokemonInstance p) {
+        if (p.holds("everstone")) return false;
+        String targetId = TRADE_EVOLUTIONS.get(p.speciesId);
+        if (targetId == null) return false;
+        PokemonSpecies from = plugin.species().getSpecies(p.speciesId);
+        PokemonSpecies to = plugin.species().getSpecies(targetId);
+        if (from == null || to == null) return false;
+        apply(receiver, p, from, to);
+        return true;
     }
 
     /** Called after level-ups; item evolutions never trigger from levels. */

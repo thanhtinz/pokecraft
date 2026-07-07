@@ -32,7 +32,9 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] ~506 loài spawn hoang theo biome/hệ; legendary/final-evo không spawn
 - [x] Tiến hóa bằng đá: Thunder/Fire/Water/Leaf/Moon Stone (mua ở shop);
       hỗ trợ nhiều nhánh (Eevee -> Vaporeon/Jolteon/Flareon)
-- [x] Trade evolution đổi thành level 36 (Alakazam/Machamp/Golem/Gengar)
+- [x] Trade evolution THẬT: khi trao đổi giữa 2 người chơi, các loài trade-evo
+      cổ điển tự tiến hóa (Kadabra->Alakazam, Machoke->Machamp, Graveler->Golem,
+      Haunter->Gengar, Boldore, Gurdurr, Phantump, Pumpkaboo); Everstone chặn
 - [x] Move dataset: ~919 moves (build từ PokeAPI CSV qua tools/build_moves.py),
       phủ đủ 18 hệ, kèm hiệu ứng phụ (status/stat-change)
 - [ ] EVs (effort values)
@@ -146,9 +148,10 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 
 - [x] /poke daycare deposit|withdraw|status (tối đa 2 slot, config)
 - [x] EXP thụ động theo phút khi gửi (config exp-per-minute)
-- [x] Lai tạo: 2 pokemon cùng dòng tiến hóa -> có xác suất ra con non Lv.1
-      dạng gốc (base form), thừa hưởng 3 IV từ bố mẹ, shiny rate x2
-- [ ] Egg item + đi bộ để nở (hiện nở ngay)
+- [x] Lai tạo: 2 pokemon cùng dòng tiến hóa -> ra 1 EGG (dạng gốc base form),
+      con non thừa hưởng 3 IV từ bố mẹ, shiny rate x2
+- [x] Egg item (turtle egg) + đi bộ để nở: dữ liệu con non nằm trong item nên
+      egg có thể cất/thả/trade; đi đủ egg.steps block thì nở ra pokemon
 - [ ] Giới tính / everstone / ditto
 
 ## Riding

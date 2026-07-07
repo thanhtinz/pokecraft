@@ -67,6 +67,10 @@ daycare:
   breed-chance: 0.15      # per check, when 2 compatible pokemon are deposited
   breed-shiny-rate: 2048  # 1 / N for bred babies (better than wild 1/4096)
 
+egg:
+  steps: 300         # blocks the holder must walk for an egg to hatch
+  hatch-level: 1     # level the pokemon hatches at
+
 npc:
   trainer-reward-per-level: 10  # money = sum of team levels * this
   trainer-cooldown-minutes: 30

@@ -231,6 +231,17 @@ public class TradeManager implements Listener {
                 NamedTextColor.GREEN));
         pl2.sendMessage(Component.text("Trade complete! You received " + a.displayName(sa) + ".",
                 NamedTextColor.GREEN));
+
+        // classic trade evolution: each traded pokemon may evolve for its new owner
+        if (plugin.evolutions().tryTradeEvolve(pl2, a)) {
+            plugin.storage().save(a, newA);
+            plugin.parties().saveParty(session.p2);
+        }
+        if (plugin.evolutions().tryTradeEvolve(pl1, b)) {
+            plugin.storage().save(b, newB);
+            plugin.parties().saveParty(session.p1);
+        }
+
         pl1.playSound(pl1.getLocation(), Sound.UI_TOAST_CHALLENGE_COMPLETE, 1f, 1f);
         pl2.playSound(pl2.getLocation(), Sound.UI_TOAST_CHALLENGE_COMPLETE, 1f, 1f);
         pl1.closeInventory();

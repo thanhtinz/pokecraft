@@ -147,17 +147,11 @@ public class DaycareManager {
                     Breeding.baseForm(a.speciesId, parents));
             if (babySpecies == null) continue;
             int shinyRate = plugin.getConfig().getInt("daycare.breed-shiny-rate", 2048);
-            PokemonInstance baby = PokemonInstance.generate(babySpecies, 1, shinyRate);
-            baby.ivs = Breeding.childIvs(a.ivs, b.ivs, ThreadLocalRandom.current());
-            baby.currentHp = baby.maxHp(babySpecies);
-            baby.owner = player.getUniqueId();
-            int slot = plugin.parties().get(player).add(baby);
-            plugin.storage().save(baby, slot);
-            plugin.storage().markCaught(player.getUniqueId(), baby.speciesId);
-            plugin.parties().saveParty(player.getUniqueId());
-            player.sendMessage(Component.text("Surprise! The daycare found an egg - it hatched into "
-                    + baby.displayName(babySpecies) + " Lv.1" + (slot < 0 ? " (sent to PC)" : "!"),
-                    NamedTextColor.LIGHT_PURPLE));
+            boolean shiny = shinyRate > 0 && ThreadLocalRandom.current().nextInt(shinyRate) == 0;
+            int[] ivs = Breeding.childIvs(a.ivs, b.ivs, ThreadLocalRandom.current());
+            plugin.eggs().giveEgg(player, babySpecies.id, ivs, shiny);
+            player.sendMessage(Component.text("Surprise! The daycare found an Egg for you - "
+                    + "walk around to hatch it!", NamedTextColor.LIGHT_PURPLE));
         }
     }
 }
