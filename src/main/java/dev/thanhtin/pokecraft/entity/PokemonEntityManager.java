@@ -157,17 +157,30 @@ public class PokemonEntityManager {
         try {
             Object renderer = unwrapOptional(mBmModel.invoke(null, modelId));
             if (renderer == null) {
-                plugin.getLogger().warning("[WARN] BetterModel model not found: " + modelId);
+                // normal for a species that simply has no model - stay quiet
                 return;
             }
+            // BetterModel exposes several 1-arg getOrCreate/create overloads
+            // (Entity, UUID, int...). Pick the one whose parameter actually
+            // accepts our Bukkit entity, otherwise reflection throws
+            // "argument type mismatch".
+            Method target = null;
             for (Method m : renderer.getClass().getMethods()) {
-                if (m.getName().equals("getOrCreate") && m.getParameterCount() == 1) {
-                    m.invoke(renderer, entity);
-                    hideBaseAfterModel(entity);
-                    return;
-                }
+                if (m.getParameterCount() != 1) continue;
+                String n = m.getName();
+                if (!n.equals("getOrCreate") && !n.equals("create") && !n.equals("spawn")) continue;
+                Class<?> pt = m.getParameterTypes()[0];
+                // must be an Entity-typed parameter that accepts this entity
+                // (skip UUID/int/Object overloads that cause the type mismatch)
+                if (Entity.class.isAssignableFrom(pt) && pt.isInstance(entity)) { target = m; break; }
             }
-            plugin.getLogger().warning("[WARN] BetterModel getOrCreate() not found for " + modelId);
+            if (target == null) {
+                plugin.getLogger().warning("[WARN] BetterModel: no getOrCreate(Entity) for " + modelId);
+                return;
+            }
+            target.setAccessible(true);
+            target.invoke(renderer, entity);
+            hideBaseAfterModel(entity);
         } catch (Exception e) {
             plugin.getLogger().warning("[WARN] Failed to apply BetterModel " + modelId + ": " + e.getMessage());
         }
