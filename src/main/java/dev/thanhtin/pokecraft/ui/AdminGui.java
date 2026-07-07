@@ -78,6 +78,7 @@ public class AdminGui implements Listener {
             player.sendMessage(Component.text("Ops only.", NamedTextColor.RED));
             return;
         }
+        if (openForm(player)) return;
         Holder holder = new Holder();
         Inventory inv = plugin.getServer().createInventory(holder, 45,
                 Component.text("PokeCraft Setup (OP)"));
@@ -135,12 +136,7 @@ public class AdminGui implements Listener {
         ClickType click = e.getClick();
 
         if (toggle != null) {
-            boolean now = !plugin.getConfig().getBoolean(toggle, true);
-            plugin.getConfig().set(toggle, now);
-            plugin.saveConfig();
-            if (toggles.stream().anyMatch(t -> t.path().equals(toggle) && t.spawnRestart())) {
-                restartSpawn();
-            }
+            applyToggle(toggle);
             open(player);
             return;
         }
@@ -150,10 +146,7 @@ public class AdminGui implements Listener {
             long step = n.step() * (click.isShiftClick() ? 5 : 1);
             long val = plugin.getConfig().getLong(num, 0);
             val += click.isRightClick() ? -step : step;
-            val = Math.max(n.min(), Math.min(n.max(), val));
-            plugin.getConfig().set(num, val);
-            plugin.saveConfig();
-            if (n.spawnRestart()) restartSpawn();
+            applyNum(n, val);
             open(player);
             return;
         }
@@ -199,6 +192,70 @@ public class AdminGui implements Listener {
             }
             default -> {}
         }
+    }
+
+    /** Flip a toggle's config value and persist (shared by chest and native form). */
+    private void applyToggle(String path) {
+        boolean now = !plugin.getConfig().getBoolean(path, true);
+        plugin.getConfig().set(path, now);
+        plugin.saveConfig();
+        if (toggles.stream().anyMatch(t -> t.path().equals(path) && t.spawnRestart())) {
+            restartSpawn();
+        }
+    }
+
+    /** Clamp, set and persist a numeric setting (shared by chest and native form). */
+    private void applyNum(Num n, long val) {
+        val = Math.max(n.min(), Math.min(n.max(), val));
+        plugin.getConfig().set(n.path(), val);
+        plugin.saveConfig();
+        if (n.spawnRestart()) restartSpawn();
+    }
+
+    /**
+     * Native Cumulus form version of this panel for Bedrock players: one button
+     * per setting whose action mirrors the chest click, then re-opens the form so
+     * the new value shows. @return true if a native form was sent (skip the chest).
+     */
+    private boolean openForm(Player player) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+
+        for (Toggle t : toggles) {
+            boolean on = plugin.getConfig().getBoolean(t.path(), true);
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    t.label() + " : " + (on ? "ON" : "OFF"),
+                    () -> { applyToggle(t.path()); open(player); }));
+        }
+        for (Num n : nums) {
+            long val = plugin.getConfig().getLong(n.path(), 0);
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    n.label() + " : " + val,
+                    () -> plugin.bedrock().openInputForm(player, "PokeCraft Setup (OP)",
+                            n.label() + " (" + n.min() + " - " + n.max() + ")",
+                            String.valueOf(plugin.getConfig().getLong(n.path(), 0)),
+                            text -> {
+                                String s = text == null ? "" : text.trim();
+                                if (!s.isEmpty()) {
+                                    try {
+                                        applyNum(n, Long.parseLong(s));
+                                    } catch (NumberFormatException ex) {
+                                        player.sendMessage(Component.text(
+                                                "Not a whole number: " + s, NamedTextColor.RED));
+                                    }
+                                }
+                                open(player);
+                            })));
+        }
+        for (Act a : acts) {
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    a.label(),
+                    () -> runAction(player, a.id())));
+        }
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+
+        return plugin.bedrock().openForm(player, "PokeCraft Setup (OP)", "", buttons);
     }
 
     private void restartSpawn() {

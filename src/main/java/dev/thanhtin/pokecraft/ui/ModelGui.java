@@ -49,6 +49,7 @@ public class ModelGui implements Listener {
     }
 
     public void open(Player player, int page, boolean missingOnly) {
+        if (openForm(player, page, missingOnly)) return;
         List<PokemonSpecies> list = new ArrayList<>(
                 missingOnly ? plugin.models().speciesByModel(false) : plugin.species().all());
         list.sort(Comparator.comparingInt(s -> s.dex));
@@ -140,7 +141,61 @@ public class ModelGui implements Listener {
         if (speciesId == null) return;
         PokemonSpecies s = plugin.species().getSpecies(speciesId);
         if (s == null) return;
+        clickSpecies(player, s);
+    }
+
+    private void clickSpecies(Player player, PokemonSpecies s) {
         player.closeInventory();
         plugin.models().preview(player, plugin.models().blueprintFor(s));
+    }
+
+    private boolean openForm(Player player, int page, boolean missingOnly) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+
+        List<PokemonSpecies> list = new ArrayList<>(
+                missingOnly ? plugin.models().speciesByModel(false) : plugin.species().all());
+        list.sort(Comparator.comparingInt(s -> s.dex));
+
+        int pages = Math.max(1, (int) Math.ceil(list.size() / (double) PAGE_SIZE));
+        page = Math.max(0, Math.min(page, pages - 1));
+
+        int start = page * PAGE_SIZE;
+        boolean hasPrev = page > 0;
+        boolean hasNext = start + PAGE_SIZE < list.size();
+
+        int[] cov = plugin.models().coverage();
+        String content = (plugin.entities().hasModelEngine()
+                ? "ModelEngine: hooked" : "ModelEngine: NOT installed")
+                + "\nModels with a blueprint: " + cov[0] + "/" + cov[1]
+                + "\nShowing: " + (missingOnly ? "missing a model" : "all species")
+                + "\nPage " + (page + 1) + "/" + pages;
+
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+
+        final int fromPage = page;
+        final boolean fromMissingOnly = missingOnly;
+        if (hasPrev) {
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "Previous page", () -> open(player, fromPage - 1, fromMissingOnly)));
+        }
+
+        for (int i = 0; i < PAGE_SIZE && start + i < list.size(); i++) {
+            PokemonSpecies s = list.get(start + i);
+            boolean has = plugin.models().hasModel(s);
+            String label = "#" + s.dex + " " + s.name
+                    + (has ? " - model installed" : " - no model");
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    label, () -> clickSpecies(player, s)));
+        }
+
+        if (hasNext) {
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "Next page", () -> open(player, fromPage + 1, fromMissingOnly)));
+        }
+
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+
+        plugin.bedrock().openForm(player, "Pokemon Models", content, buttons);
+        return true;
     }
 }

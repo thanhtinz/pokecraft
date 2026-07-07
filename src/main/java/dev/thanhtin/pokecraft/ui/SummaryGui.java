@@ -56,6 +56,7 @@ public class SummaryGui implements Listener {
     }
 
     public void open(Player player, int partySlot) {
+        if (openForm(player, partySlot)) return;
         PokemonInstance p = plugin.parties().get(player).get(partySlot);
         if (p == null) {
             plugin.partyUi().open(player);
@@ -277,13 +278,8 @@ public class SummaryGui implements Listener {
         }
         if (raw == SLOT_HELD) {
             if (busy) return;
-            plugin.getServer().getScheduler().runTask(plugin, () -> {
-                PokemonInstance target = plugin.parties().get(player).get(holder.partySlot);
-                if (target != null && target.heldItem != null) {
-                    plugin.heldItems().unequip(player, target);
-                }
-                open(player, holder.partySlot);
-            });
+            plugin.getServer().getScheduler().runTask(plugin,
+                    () -> doHeldItem(player, holder.partySlot));
             return;
         }
         if (raw == SLOT_RENAME) {
@@ -323,6 +319,112 @@ public class SummaryGui implements Listener {
         long value = base + perLevel * Math.max(1, p.level);
         if (p.shiny) value *= 3;
         return value;
+    }
+
+    /**
+     * Bedrock players get a native Cumulus form instead of the chest GUI.
+     * Returns true if a form was sent (so {@link #open} should stop); false
+     * for Java players, who fall through to the chest GUI.
+     */
+    private boolean openForm(Player player, int partySlot) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        PokemonInstance p = plugin.parties().get(player).get(partySlot);
+        if (p == null) {
+            plugin.partyUi().open(player);
+            return true;
+        }
+        PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
+        if (species == null) return true;
+
+        String name = p.displayName(species);
+        String title = "#" + String.format("%03d", species.dex) + " " + name + " Lv." + p.level;
+
+        // ---- content mirroring the chest header / stats / moves ----
+        StringBuilder sb = new StringBuilder();
+        sb.append("§b").append(name).append(" §7Lv.").append(p.level);
+        if (p.shiny) sb.append(" §6✦");
+        sb.append("\n");
+        sb.append("§7Type: §f").append(species.types).append("\n");
+        dev.thanhtin.pokecraft.pokemon.Gender g = p.gender(species);
+        if (g != dev.thanhtin.pokecraft.pokemon.Gender.GENDERLESS) {
+            sb.append("§7Gender: §f").append(g.symbol).append(" ")
+                    .append(g.name().charAt(0)).append(g.name().substring(1).toLowerCase())
+                    .append("\n");
+        }
+        String ability = p.ability(species);
+        if (ability != null && !ability.isBlank()) {
+            String pretty = ability.substring(0, 1).toUpperCase()
+                    + ability.substring(1).replace('-', ' ').replace('_', ' ');
+            sb.append("§7Ability: §6").append(pretty).append("\n");
+        }
+        sb.append("§7Nature: §f").append(p.nature)
+                .append(p.nature.up != p.nature.down
+                        ? " §8(+" + statName(p.nature.up) + " -" + statName(p.nature.down) + ")"
+                        : "")
+                .append("\n");
+        sb.append("§7HP: §f").append(p.currentHp).append("/").append(p.maxHp(species)).append("\n");
+
+        sb.append("\n§eStats:\n");
+        String[] names = {"HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed"};
+        for (int i = 0; i < 6; i++) {
+            int ev = (p.evs != null && i < p.evs.length) ? p.evs[i] : 0;
+            sb.append("§7").append(names[i]).append(": §f").append(p.stat(species, i))
+                    .append(" §8(IV ").append(p.ivs[i]).append("/31, EV ").append(ev).append(")\n");
+        }
+
+        sb.append("\n§eMoves:\n");
+        if (p.moves != null) {
+            for (String moveId : p.moves) {
+                MoveData move = plugin.species().getMove(moveId);
+                if (move == null) continue;
+                int pp = p.ppFor(move);
+                sb.append("§7- §b").append(move.name)
+                        .append(" §8").append(move.type).append("/").append(move.category)
+                        .append(" §7PP ").append(pp).append("/").append(move.pp).append("\n");
+            }
+        }
+
+        // ---- buttons mirroring the chest actions ----
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+        var held = plugin.heldItems().byId(p.heldItem);
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                held != null ? "Take back held item (" + held.display + ")" : "Give/Change held item",
+                () -> doHeldItem(player, partySlot)));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "Rename", () -> plugin.nicknameInput().open(player, partySlot)));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "Release", () -> plugin.bedrock().openForm(player, "Confirm",
+                        "Release " + name + "? This is permanent!",
+                        List.of(
+                                new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                                        "Yes, do it", () -> doRelease(player, partySlot)),
+                                new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                                        "Cancel", () -> open(player, partySlot))))));
+        long sellValue = sellPrice(p);
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "Sell for " + plugin.economy().format(sellValue),
+                () -> plugin.bedrock().openForm(player, "Confirm",
+                        "Sell " + name + " for " + plugin.economy().format(sellValue)
+                                + "? This is permanent!",
+                        List.of(
+                                new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                                        "Yes, do it", () -> doSell(player, partySlot)),
+                                new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                                        "Cancel", () -> open(player, partySlot))))));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "Back", () -> plugin.partyUi().open(player)));
+
+        plugin.bedrock().openForm(player, title, sb.toString(), buttons);
+        return true;
+    }
+
+    /** Take back the held item (if any) then refresh the summary. */
+    private void doHeldItem(Player player, int slot) {
+        PokemonInstance target = plugin.parties().get(player).get(slot);
+        if (target != null && target.heldItem != null) {
+            plugin.heldItems().unequip(player, target);
+        }
+        open(player, slot);
     }
 
     private void doSell(Player player, int slot) {

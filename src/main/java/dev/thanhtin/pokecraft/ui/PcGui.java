@@ -37,6 +37,7 @@ public class PcGui implements Listener {
     }
 
     public void open(Player player, int page) {
+        if (openForm(player, page)) return;
         PlayerParty party = plugin.parties().get(player);
         List<PokemonInstance> pc = party.pc();
         int pages = Math.max(1, (pc.size() + PAGE_SIZE - 1) / PAGE_SIZE);
@@ -73,6 +74,52 @@ public class PcGui implements Listener {
         player.openInventory(inv);
     }
 
+    private boolean openForm(Player player, int page) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        PlayerParty party = plugin.parties().get(player);
+        List<PokemonInstance> pc = party.pc();
+        int pages = Math.max(1, (pc.size() + PAGE_SIZE - 1) / PAGE_SIZE);
+        int current = Math.max(0, Math.min(page, pages - 1));
+        int start = current * PAGE_SIZE;
+
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+        for (int i = 0; i < PAGE_SIZE && start + i < pc.size(); i++) {
+            PokemonInstance p = pc.get(start + i);
+            PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
+            if (species == null) continue;
+            int pcIndex = start + i;
+            String label = p.displayName(species) + " Lv." + p.level;
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    label, () -> withdraw(player, pcIndex)));
+        }
+
+        if (current > 0) buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "← Previous page", () -> open(player, current - 1)));
+        if (current < pages - 1) buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "Next page →", () -> open(player, current + 1)));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+
+        String title = "PC Box - page " + (current + 1) + "/" + pages + " (" + pc.size() + " stored)";
+        return plugin.bedrock().openForm(player, title, "", buttons);
+    }
+
+    private void withdraw(Player player, int pcIndex) {
+        PlayerParty party = plugin.parties().get(player);
+        if (pcIndex >= party.pc().size()) return;
+        PokemonInstance p = party.pc().get(pcIndex);
+        int slot = party.withdrawFromPc(pcIndex);
+        if (slot < 0) {
+            player.sendMessage(Component.text("Your party is full. Deposit one first (/poke party).",
+                    NamedTextColor.RED));
+            return;
+        }
+        PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
+        player.sendMessage(Component.text(p.displayName(species) + " moved to party slot " + (slot + 1) + ".",
+                NamedTextColor.GREEN));
+        plugin.parties().saveParty(player.getUniqueId());
+        plugin.getServer().getScheduler().runTask(plugin, () -> open(player, pcIndex / PAGE_SIZE));
+    }
+
     private ItemStack button(Material material, String label) {
         ItemStack item = new ItemStack(material);
         ItemMeta meta = item.getItemMeta();
@@ -100,20 +147,7 @@ public class PcGui implements Listener {
         }
         if (raw >= PAGE_SIZE) return;
 
-        PlayerParty party = plugin.parties().get(player);
         int pcIndex = holder.page * PAGE_SIZE + raw;
-        if (pcIndex >= party.pc().size()) return;
-        PokemonInstance p = party.pc().get(pcIndex);
-        int slot = party.withdrawFromPc(pcIndex);
-        if (slot < 0) {
-            player.sendMessage(Component.text("Your party is full. Deposit one first (/poke party).",
-                    NamedTextColor.RED));
-            return;
-        }
-        PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
-        player.sendMessage(Component.text(p.displayName(species) + " moved to party slot " + (slot + 1) + ".",
-                NamedTextColor.GREEN));
-        plugin.parties().saveParty(player.getUniqueId());
-        plugin.getServer().getScheduler().runTask(plugin, () -> open(player, holder.page));
+        withdraw(player, pcIndex);
     }
 }

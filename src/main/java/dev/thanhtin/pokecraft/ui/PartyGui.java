@@ -49,6 +49,7 @@ public class PartyGui implements Listener {
     }
 
     public void open(Player player) {
+        if (openForm(player)) return;
         PlayerParty party = plugin.parties().get(player);
         Holder holder = new Holder();
         Inventory inv = plugin.getServer().createInventory(holder, 27, Component.text("Your Party"));
@@ -114,6 +115,37 @@ public class PartyGui implements Listener {
         inv.setItem(SLOT_PC, button(Material.ENDER_CHEST, "Open PC Box", NamedTextColor.YELLOW));
 
         player.openInventory(inv);
+    }
+
+    private boolean openForm(Player player) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        PlayerParty party = plugin.parties().get(player);
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+
+        PokemonInstance[] slots = party.rawSlots();
+        for (int i = 0; i < slots.length; i++) {
+            PokemonInstance p = slots[i];
+            if (p == null) continue;
+            final int slot = i;
+            PokemonSpecies species = plugin.species().getSpecies(p.speciesId);
+            String label = p.displayName(species) + " Lv." + p.level
+                    + " (" + p.currentHp + "/" + p.maxHp(species) + ")";
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(label,
+                    () -> plugin.summaryUi().open(player, slot)));
+        }
+
+        boolean walking = plugin.walkers().isFollowing(player);
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                walking ? "Recall buddy" : "Send out buddy",
+                () -> {
+                    plugin.walkers().toggle(player);
+                    open(player);
+                }));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Open PC Box",
+                () -> plugin.pcUi().open(player, 0)));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+
+        return plugin.bedrock().openForm(player, "Your Party", "", buttons);
     }
 
     private ItemStack button(Material material, String label, NamedTextColor color) {
