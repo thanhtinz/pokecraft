@@ -125,7 +125,7 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
       tăng dần; hạ leader nhận badge; panel Badges (menu Activities) xem 8 badge;
       OP panel -> "Place Gym Leader" chọn gym để đặt tại chỗ đứng
 - [x] Dùng item giữa trận: nút Bag trong battle menu -> chọn potion (Potion/
-      Super/Hyper/Oran Berry) hồi HP cho pokemon đang đánh; tốn lượt (pokemon
+      Super/Hyper/Oran Berry) hồi HP, Full Heal chữa status - cho pokemon đang đánh; tốn lượt (pokemon
       hoang được đánh 1 phát), không cho phí khi đã đầy HP
 - [ ] Battle theo turn timeout (chống AFK)
 - [x] Stat stages cho accuracy/evasion: Sand-Attack/Smokescreen/Flash (giảm
@@ -156,6 +156,7 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] /poke balance, /poke pay <player> <amount>
 - [x] Pokemart GUI (/poke shop): ball bundle, 3 loại potion, Thunder Stone
 - [x] Potion dùng ngoài trận (right-click -> chọn pokemon; hồi được cả pokemon đã faint)
+- [x] Full Heal: chữa mọi status, dùng ngoài trận + trong Bag battle; mua ở shop
 - [ ] Vault integration
 - [x] Bán đồ: Pokemart -> nút "Sell items" liệt kê đồ bán được (ball/potion/
       stone/held item), click bán 1 cái lấy tiền

@@ -61,6 +61,7 @@ shop:
     potion: 150
     super-potion: 400
     hyper-potion: 1000
+    full-heal: 300
     thunder-stone: 3000
     fire-stone: 3000
     water-stone: 3000

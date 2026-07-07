@@ -43,6 +43,8 @@ public class ShopGui implements Listener {
                     pl -> pl.items().create(UsableItems.ItemType.SUPER_POTION, 1)),
             new Entry("hyper-potion", 1000, 1, "Hyper Potion",
                     pl -> pl.items().create(UsableItems.ItemType.HYPER_POTION, 1)),
+            new Entry("full-heal", 300, 1, "Full Heal",
+                    pl -> pl.items().create(UsableItems.ItemType.FULL_HEAL, 1)),
             new Entry("thunder-stone", 3000, 1, "Thunder Stone",
                     pl -> pl.items().create(UsableItems.ItemType.THUNDER_STONE, 1)),
             new Entry("fire-stone", 3000, 1, "Fire Stone",
@@ -197,6 +199,7 @@ public class ShopGui implements Listener {
                 case SUPER_POTION -> 30;
                 case HYPER_POTION -> 75;
                 case ORAN_BERRY -> 15;
+                case FULL_HEAL -> 150;
                 default -> 375; // evolution stones
             };
         }

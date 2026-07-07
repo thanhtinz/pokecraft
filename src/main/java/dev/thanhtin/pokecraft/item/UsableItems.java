@@ -41,19 +41,27 @@ public class UsableItems implements Listener {
         WATER_STONE("Water Stone", Material.HEART_OF_THE_SEA, 0, "Evolves certain pokemon"),
         LEAF_STONE("Leaf Stone", Material.BIG_DRIPLEAF, 0, "Evolves certain pokemon"),
         MOON_STONE("Moon Stone", Material.QUARTZ, 0, "Evolves certain pokemon"),
-        ORAN_BERRY("Oran Berry", Material.GLOW_BERRIES, 30, "Heals 30 HP");
+        ORAN_BERRY("Oran Berry", Material.GLOW_BERRIES, 30, "Heals 30 HP"),
+        FULL_HEAL("Full Heal", Material.MILK_BUCKET, 0, "Cures all status conditions", true);
 
         public final String display;
         public final Material material;
         /** HP healed; -1 = full; 0 = not a potion. */
         public final int heal;
         public final String description;
+        /** Whether using this item clears status conditions. */
+        public final boolean curesStatus;
 
         ItemType(String display, Material material, int heal, String description) {
+            this(display, material, heal, description, false);
+        }
+
+        ItemType(String display, Material material, int heal, String description, boolean curesStatus) {
             this.display = display;
             this.material = material;
             this.heal = heal;
             this.description = description;
+            this.curesStatus = curesStatus;
         }
 
         public boolean isPotion() { return heal != 0; }
@@ -179,6 +187,19 @@ public class UsableItems implements Listener {
             player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.8f, 1.6f);
             player.sendMessage(Component.text(p.displayName(species) + " recovered to "
                     + p.currentHp + "/" + max + " HP.", NamedTextColor.GREEN));
+            return true;
+        }
+        if (type.curesStatus) {
+            if (p.status == null) {
+                player.sendMessage(Component.text(p.displayName(species) + " has no status to cure.",
+                        NamedTextColor.RED));
+                return false;
+            }
+            p.status = null;
+            p.sleepTurns = 0;
+            player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 0.8f, 1.6f);
+            player.sendMessage(Component.text(p.displayName(species) + " was cured of all status!",
+                    NamedTextColor.GREEN));
             return true;
         }
         // evolution stone

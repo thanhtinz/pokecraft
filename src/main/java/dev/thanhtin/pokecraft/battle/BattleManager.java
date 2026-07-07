@@ -183,14 +183,21 @@ public class BattleManager implements Listener {
     public void useItemInBattle(Player player, dev.thanhtin.pokecraft.item.UsableItems.ItemType type) {
         Battle battle = battles.get(player.getUniqueId());
         if (battle == null || battle.finished || battle.awaitingSwitch) return;
-        if (type == null || !type.isPotion()) return;
+        if (type == null || (!type.isPotion() && !type.curesStatus)) return;
         PokemonSpecies mySpecies = plugin.species().getSpecies(battle.playerPokemon.speciesId);
         if (mySpecies == null) return;
 
         PokemonInstance mine = battle.playerPokemon;
         int max = mine.maxHp(mySpecies);
-        if (mine.currentHp >= max) {
+        // refuse a wasted turn if the item would do nothing
+        if (type.isPotion() && mine.currentHp >= max) {
             player.sendMessage(Component.text(mine.displayName(mySpecies) + " is already at full HP.",
+                    NamedTextColor.YELLOW));
+            plugin.battleUi().open(player, battle);
+            return;
+        }
+        if (type.curesStatus && mine.status == null) {
+            player.sendMessage(Component.text(mine.displayName(mySpecies) + " has no status to cure.",
                     NamedTextColor.YELLOW));
             plugin.battleUi().open(player, battle);
             return;
@@ -200,10 +207,17 @@ public class BattleManager implements Listener {
             plugin.battleUi().open(player, battle);
             return;
         }
-        int before = mine.currentHp;
-        mine.currentHp = type.heal < 0 ? max : Math.min(max, mine.currentHp + type.heal);
-        player.sendMessage(Component.text("Used " + type.display + " - restored "
-                + (mine.currentHp - before) + " HP.", NamedTextColor.GREEN));
+        if (type.isPotion()) {
+            int before = mine.currentHp;
+            mine.currentHp = type.heal < 0 ? max : Math.min(max, mine.currentHp + type.heal);
+            player.sendMessage(Component.text("Used " + type.display + " - restored "
+                    + (mine.currentHp - before) + " HP.", NamedTextColor.GREEN));
+        } else {
+            mine.status = null;
+            mine.sleepTurns = 0;
+            player.sendMessage(Component.text("Used " + type.display + " - cured all status!",
+                    NamedTextColor.GREEN));
+        }
 
         // spending a turn: the wild pokemon attacks
         MoveData wildMove = pickWildMove(battle.wildPokemon);

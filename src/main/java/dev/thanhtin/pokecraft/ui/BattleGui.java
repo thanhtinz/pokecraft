@@ -121,7 +121,7 @@ public class BattleGui implements Listener {
         for (ItemStack item : player.getInventory().getContents()) {
             if (item == null) continue;
             var type = plugin.items().read(item);
-            if (type != null && type.isPotion()) {
+            if (type != null && (type.isPotion() || type.curesStatus)) {
                 counts.merge(type, item.getAmount(), Integer::sum);
             }
         }
