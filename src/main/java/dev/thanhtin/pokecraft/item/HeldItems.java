@@ -38,7 +38,10 @@ public class HeldItems implements Listener {
         QUICK_CLAW("Quick Claw", Material.FLINT, "20% chance to move first"),
         LUCKY_EGG("Lucky Egg", Material.TURTLE_EGG, "+50% EXP from battles"),
         EVERSTONE("Everstone", Material.SMOOTH_STONE, "Prevents evolution"),
-        FOCUS_BAND("Focus Band", Material.LEAD, "10% chance to survive on 1 HP");
+        FOCUS_BAND("Focus Band", Material.LEAD, "10% chance to survive on 1 HP"),
+        ORAN_BERRY("Oran Berry (held)", Material.GLOW_BERRIES, "Eaten to heal 30 HP when below half (once)"),
+        SITRUS_BERRY("Sitrus Berry (held)", Material.SWEET_BERRIES, "Eaten to heal 1/4 HP when below half (once)"),
+        LUM_BERRY("Lum Berry (held)", Material.NETHER_WART, "Eaten to cure any status in battle (once)");
 
         public final String display;
         public final Material material;

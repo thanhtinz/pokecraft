@@ -81,6 +81,12 @@ public class ShopGui implements Listener {
                     pl -> pl.heldItems().create(HeldItems.HeldType.EVERSTONE, 1)),
             new Entry("focus-band", 3000, 1, "Focus Band",
                     pl -> pl.heldItems().create(HeldItems.HeldType.FOCUS_BAND, 1)),
+            new Entry("oran-berry-held", 200, 1, "Oran Berry (held)",
+                    pl -> pl.heldItems().create(HeldItems.HeldType.ORAN_BERRY, 1)),
+            new Entry("sitrus-berry-held", 500, 1, "Sitrus Berry (held)",
+                    pl -> pl.heldItems().create(HeldItems.HeldType.SITRUS_BERRY, 1)),
+            new Entry("lum-berry-held", 400, 1, "Lum Berry (held)",
+                    pl -> pl.heldItems().create(HeldItems.HeldType.LUM_BERRY, 1)),
             new Entry("berry-seed", 100, 3, "3x Berry Seed",
                     pl -> pl.farms().createSeed(3)));
 

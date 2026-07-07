@@ -92,6 +92,11 @@ fossils:
     Jaw Fossil: tyrunt
     Sail Fossil: amaura
 
+wild:
+  # chance a wild pokemon carries a held item (kept if you catch it)
+  held-item-chance: 0.05
+  held-items: [oran_berry, sitrus_berry, lum_berry, leftovers, focus_band]
+
 battle:
   exp-multiplier: 1.0
   shiny-rate: 4096           # 1 / N

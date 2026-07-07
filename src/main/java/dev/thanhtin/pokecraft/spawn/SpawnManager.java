@@ -69,6 +69,7 @@ public class SpawnManager {
                     species.spawn.minLevel, species.spawn.maxLevel + 1);
             int shinyRate = plugin.getConfig().getInt("battle.shiny-rate", 4096);
             PokemonInstance instance = PokemonInstance.generate(species, level, shinyRate);
+            rollWildHeldItem(instance);
             LivingEntity entity = plugin.entities().spawnWild(species, instance, loc);
             if (water && entity != null) {
                 // float at the surface instead of sinking, and stay put
@@ -76,6 +77,16 @@ public class SpawnManager {
                 if (entity instanceof Mob mob) mob.setAware(false);
             }
         }
+    }
+
+    /** Small chance for a wild pokemon to be carrying a held item (kept when caught). */
+    private void rollWildHeldItem(PokemonInstance instance) {
+        double chance = plugin.getConfig().getDouble("wild.held-item-chance", 0.05);
+        if (chance <= 0 || ThreadLocalRandom.current().nextDouble() >= chance) return;
+        java.util.List<String> items = plugin.getConfig().getStringList("wild.held-items");
+        if (items.isEmpty()) return;
+        instance.heldItem = items.get(ThreadLocalRandom.current().nextInt(items.size()))
+                .toLowerCase(java.util.Locale.ROOT);
     }
 
     /** A location on the surface of nearby water, or null if none was found. */

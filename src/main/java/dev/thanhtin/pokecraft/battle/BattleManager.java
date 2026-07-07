@@ -504,6 +504,9 @@ public class BattleManager implements Listener {
                 player.sendMessage(Component.text((playerSide ? "Your " : opponentPrefix(battle)) + species.name
                         + " restored " + heal + " HP with its Leftovers.", NamedTextColor.GRAY));
             }
+            if (p.currentHp > 0 && species != null) {
+                eatBattleBerry(player, battle, playerSide, p, species);
+            }
             if (p.currentHp > 0 && species != null
                     && "speedboost".equals(Abilities.norm(p.ability(species)))) {
                 int[] stages = playerSide ? battle.playerStages : battle.wildStages;
@@ -515,6 +518,32 @@ public class BattleManager implements Listener {
             }
         }
         return checkFaints(player, battle);
+    }
+
+    /** Held berries: eaten once when low HP (Oran/Sitrus heal) or statused (Lum cures). */
+    private void eatBattleBerry(Player player, Battle battle, boolean playerSide,
+                                PokemonInstance p, PokemonSpecies species) {
+        if (p.heldItem == null) return;
+        String prefix = playerSide ? "Your " : opponentPrefix(battle);
+        if (p.holds("lum_berry") && p.status != null) {
+            String tag = p.status.tag;
+            p.status = null;
+            p.heldItem = null;
+            player.sendMessage(Component.text(prefix + species.name
+                    + " ate its Lum Berry and cured its " + tag + "!", NamedTextColor.GREEN));
+            return;
+        }
+        int max = p.maxHp(species);
+        if (p.currentHp >= max / 2) return;
+        int heal = 0;
+        if (p.holds("oran_berry")) heal = 30;
+        else if (p.holds("sitrus_berry")) heal = Math.max(1, max / 4);
+        if (heal > 0) {
+            p.currentHp = Math.min(max, p.currentHp + heal);
+            p.heldItem = null;
+            player.sendMessage(Component.text(prefix + species.name
+                    + " ate its berry and restored " + heal + " HP!", NamedTextColor.GREEN));
+        }
     }
 
     /** @return true if the battle ended or is now waiting for a switch. */
