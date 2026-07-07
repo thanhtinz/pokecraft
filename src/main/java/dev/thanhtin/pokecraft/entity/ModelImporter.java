@@ -26,16 +26,15 @@ import java.util.UUID;
  * Turns Bedrock entity geometry ({@code .geo.json}, as shipped by many model
  * packs) into BlockBench {@code .bbmodel} blueprints at server start, so admins
  * can just drop model folders into {@code plugins/PokeCraft/models-import/} and
- * have them show up in ModelEngine with no manual BlockBench work.
+ * have them show up in BetterModel with no manual BlockBench work.
  *
  * <p>For each {@code <name>.geo.json} it looks (recursively, by matching name)
  * for a {@code <name>.png} texture and a {@code <name>.animation.json}, builds a
  * {@code .bbmodel} (bones -&gt; groups, cubes -&gt; elements, box/per-face UV,
  * inflate, rotation, embedded texture, animation keyframes) into
- * {@code plugins/ModelEngine/blueprints/pokecraft/}, then runs {@code /meg
- * reload}. Only the static mesh + keyframe animations are converted; molang is
- * carried through as-is. The plugin then binds species to blueprints by name as
- * usual.</p>
+ * {@code plugins/BetterModel/models/}, then runs {@code /bm reload}. Only the
+ * static mesh + keyframe animations are converted; molang is carried through
+ * as-is. The plugin then binds species to blueprints by name as usual.</p>
  */
 public class ModelImporter {
 
@@ -50,7 +49,7 @@ public class ModelImporter {
         this.plugin = plugin;
     }
 
-    /** Convert everything in the import folder and reload ModelEngine if anything changed. */
+    /** Convert everything in the import folder and reload BetterModel if anything changed. */
     public void run() {
         if (!plugin.getConfig().getBoolean("models.auto-import", true)) return;
         List<Integer> cfg = plugin.getConfig().getIntegerList("models.import-rotation-sign");
@@ -79,21 +78,14 @@ public class ModelImporter {
             return;
         }
         File pluginsDir = plugin.getDataFolder().getParentFile();
-        // Prefer ModelEngine; fall back to BetterModel (free, supports newer MC versions).
-        File meDir = new File(pluginsDir, "ModelEngine");
+        // BetterModel (free, open-source, supports current MC versions).
         File bmDir = new File(pluginsDir, "BetterModel");
-        File outDir;
-        String reloadCmd;
-        if (meDir.isDirectory()) {
-            outDir = new File(meDir, "blueprints/pokecraft");
-            reloadCmd = "meg reload";
-        } else if (bmDir.isDirectory()) {
-            outDir = new File(bmDir, "models");
-            reloadCmd = "bm reload"; // BetterModel's command is /bm
-        } else {
-            plugin.getLogger().info("[..] No model engine (ModelEngine/BetterModel) installed - skipping model import");
+        if (!bmDir.isDirectory()) {
+            plugin.getLogger().info("[..] BetterModel not installed - skipping model import");
             return;
         }
+        File outDir = new File(bmDir, "models");
+        String reloadCmd = "bm reload"; // BetterModel's command is /bm
         outDir.mkdirs();
 
         // Converting a full pack (~900 models, each embedding a base64 texture) must
@@ -507,16 +499,17 @@ public class ModelImporter {
     private void writeReadme(File dir) {
         File readme = new File(dir, "README.txt");
         try (FileWriter w = new FileWriter(readme)) {
-            w.write("Drop Bedrock model files here and restart the server (or /meg reload after).\n\n"
+            w.write("Drop Bedrock model files here and restart the server (or /bm reload after).\n\n"
                     + "For each pokemon put three same-named files (any subfolder is fine):\n"
                     + "  <species>.geo.json        (Bedrock geometry - the shape)\n"
                     + "  <species>.png             (the texture)\n"
                     + "  <species>.animation.json  (optional - animations)\n\n"
                     + "Example: pikachu.geo.json + pikachu.png + pikachu.animation.json\n\n"
                     + "On start, PokeCraft converts them to .bbmodel in\n"
-                    + "plugins/ModelEngine/blueprints/pokecraft/ and reloads ModelEngine.\n"
+                    + "plugins/BetterModel/models/ and reloads BetterModel.\n"
                     + "Name the files after the species id so they bind automatically.\n"
-                    + "Requires ModelEngine (and GeyserModelEngine for Bedrock/mobile).\n"
+                    + "Requires BetterModel installed. Note: custom 3D models render on the\n"
+                    + "Java client; Bedrock/mobile players see the mapped vanilla mob instead.\n"
                     + "If a model looks rotated wrong, set models.import-rotation-sign in config.yml.\n");
         } catch (Exception ignored) {
         }

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Convert Bedrock entity geometry (.geo.json) into BlockBench .bbmodel files so
-they can be dropped into ModelEngine (plugins/ModelEngine/blueprints/) and used
-by PokeCraft + GeyserModelEngine on PC and mobile.
+they can be dropped into BetterModel (plugins/BetterModel/models/) and used by
+PokeCraft on the Java client (Bedrock/mobile players see a mapped vanilla mob).
 
 This mirrors what BlockBench's "Import Bedrock Model" does: bones become groups,
 cubes become elements, UVs / inflate / rotation are carried over, and the
@@ -357,7 +357,7 @@ def main():
     else:
         total += convert_one(args.input, args.texture, args.animation, args.out, args.name)
     print(f"Done. Wrote {total} .bbmodel file(s) to {args.out}")
-    print("Next: upload them to plugins/ModelEngine/blueprints/ and run /meg reload")
+    print("Next: upload them to plugins/BetterModel/models/ and run /bm reload")
 
 
 if __name__ == "__main__":

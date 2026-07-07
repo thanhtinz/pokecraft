@@ -39,5 +39,5 @@ fan project. Do not use it for commercial purposes.
 ## Assets
 
 PokeCraft ships **no** Pokemon art, models, textures or sounds. 3D models (if
-any) must be supplied by the server owner via ModelEngine; do not rip assets
+any) must be supplied by the server owner via BetterModel; do not rip assets
 from official games or from other projects such as Cobblemon or Pixelmon.

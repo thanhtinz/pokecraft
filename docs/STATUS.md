@@ -77,21 +77,23 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 
 ## Rendering / Bedrock
 
-- [x] ModelEngine hook qua reflection (softdepend, không crash khi thiếu)
-- [x] Fallback vanilla base entity (HUSK, đổi được trong config) + nametag
+- [x] BetterModel hook qua reflection (softdepend, không crash khi thiếu) -
+      thay thế hoàn toàn ModelEngine, hỗ trợ MC đời mới
+- [x] Fallback vanilla mob theo species/type (mobs.by-species/by-type) + nametag;
+      Bedrock/mobile thấy vanilla mob vì custom model không render qua Geyser
 - [x] Wild entity không bốc cháy ban ngày, không tấn công/chase player,
       không nhận damage môi trường, luôn là zombie trưởng thành
 - [x] Floodgate detection qua reflection
 - [x] Native Bedrock SimpleForm (Cumulus) cho battle menu + switch menu (PP, status)
 - [x] Chest GUI fallback cho mọi client (Geyser tự dịch)
 - [x] Hệ thống quản lý model 3D: ModelManager map species -> blueprint
-      ModelEngine (auto theo tên hoặc override), panel OP xem coverage
+      BetterModel (auto theo tên hoặc override), panel OP xem coverage
       X/1016 + duyệt loài + click PREVIEW model ngay trong game; lệnh
       /poke model set|clear|preview|coverage; config models.enabled/scale.
       (Model .bbmodel vẫn do chủ server tự làm trong BlockBench - KHÔNG rip asset)
 - [ ] Bedrock custom item texture cho pokeball (Geyser custom item mappings)
 - [ ] Hitbox scale theo species
-- [ ] Animation state (idle/walk/faint) binding với ModelEngine
+- [ ] Animation state (idle/walk/faint) binding với BetterModel
 
 ## Capture
 
@@ -198,7 +200,7 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Pokemon hệ FLYING bay được (config ride.allow-fly)
 - [x] Sneak để xuống, tự dismount khi vào battle/quit
 - [x] Walking pokemon: bật/tắt ở menu (nút Walking Pokemon) - con đầu đội đi
-      theo người chơi (entity không AI, glide mỗi tick, dùng model ModelEngine
+      theo người chơi (entity không AI, glide mỗi tick, dùng model BetterModel
       nếu có); trạng thái lưu meta nên relog vẫn theo; chạy cả PC + mobile
 - [ ] Điều khiển WASD thật (cần saddle-entity hack), tốc độ theo chỉ số Speed
 
@@ -307,9 +309,9 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 
 ## Infrastructure
 
-- [x] Gradle build (Java 21, Paper 1.21.4 API, repos: PaperMC/Lumine/OpenCollab)
+- [x] Gradle build (Java 21, Paper 1.21.4 API, repos: PaperMC/OpenCollab)
 - [x] Gradle wrapper committed
-- [x] plugin.yml softdepend: ModelEngine, floodgate, Geyser-Spigot
+- [x] plugin.yml softdepend: BetterModel, floodgate, Geyser-Spigot
 - [x] Docs riêng: ARCHITECTURE / SETUP / ROADMAP / STATUS
 - [x] Unit tests (JUnit 5): DamageCalculator, ExperienceCurve, PokemonInstance,
       type chart, Breeding (27 tests)

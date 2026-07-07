@@ -72,7 +72,7 @@ public class NpcManager implements Listener {
         return entity.getPersistentDataContainer().has(keyNpc, PersistentDataType.BYTE);
     }
 
-    /** Apply the configured ModelEngine blueprint for this NPC type, if any. */
+    /** Apply the configured BetterModel blueprint for this NPC type, if any. */
     private void applyModel(LivingEntity entity, NpcType type) {
         String bp = plugin.getConfig().getString("models.npc-blueprints." + type.name());
         if (bp != null && !bp.isBlank()) plugin.entities().applyModel(entity, bp);

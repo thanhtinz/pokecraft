@@ -16,9 +16,9 @@ import java.lang.reflect.Method;
 import java.util.Locale;
 
 /**
- * Spawns wild pokemon as vanilla base entities and applies ModelEngine models
- * via reflection (soft-depend, works without ModelEngine installed).
- * Bedrock players see the models through the GeyserModelEngine extension.
+ * Spawns wild pokemon as vanilla base entities and applies BetterModel models
+ * via reflection (soft-depend, works without BetterModel installed).
+ * BetterModel replaces the old ModelEngine hook and supports current MC versions.
  */
 public class PokemonEntityManager {
     private final PokeCraftPlugin plugin;
@@ -27,13 +27,7 @@ public class PokemonEntityManager {
     public final NamespacedKey keyData;
     public final NamespacedKey keySpawnTime;
 
-    private boolean modelEngine;
-    private Method mCreateModeledEntity;
-    private Method mCreateActiveModel;
-    private Method mAddModel;
-    private Method mGetBlueprint;
-
-    // BetterModel (free alternative to ModelEngine, supports newer MC versions)
+    // BetterModel (free, open-source model engine; supports current MC versions)
     private boolean betterModel;
     private Method mBmModel;
 
@@ -42,8 +36,7 @@ public class PokemonEntityManager {
         this.keyWild = new NamespacedKey(plugin, "wild");
         this.keyData = new NamespacedKey(plugin, "data");
         this.keySpawnTime = new NamespacedKey(plugin, "spawn_time");
-        hookModelEngine();
-        if (!modelEngine) hookBetterModel();
+        hookBetterModel();
     }
 
     private void hookBetterModel() {
@@ -65,27 +58,6 @@ public class PokemonEntityManager {
         }
         betterModel = false;
         plugin.getLogger().info("[OK] No model engine found - wild pokemon use vanilla base entities");
-    }
-
-    private void hookModelEngine() {
-        try {
-            Class<?> api = Class.forName("com.ticxo.modelengine.api.ModelEngineAPI");
-            mCreateModeledEntity = api.getMethod("createModeledEntity", Entity.class);
-            mCreateActiveModel = api.getMethod("createActiveModel", String.class);
-            Class<?> modeledEntity = Class.forName("com.ticxo.modelengine.api.model.ModeledEntity");
-            Class<?> activeModel = Class.forName("com.ticxo.modelengine.api.model.ActiveModel");
-            mAddModel = modeledEntity.getMethod("addModel", activeModel, boolean.class);
-            try {
-                mGetBlueprint = api.getMethod("getBlueprint", String.class);
-            } catch (NoSuchMethodException ex) {
-                mGetBlueprint = null; // older/newer API: enumeration unavailable, models still apply
-            }
-            modelEngine = true;
-            plugin.getLogger().info("[OK] ModelEngine hooked - custom models enabled");
-        } catch (Exception e) {
-            modelEngine = false;
-            plugin.getLogger().info("[..] ModelEngine not found - trying BetterModel");
-        }
     }
 
     /**
@@ -137,16 +109,9 @@ public class PokemonEntityManager {
         return entity;
     }
 
-    /** True when a blueprint with this id is installed in the active model engine. */
+    /** True when a blueprint with this id is installed in BetterModel. */
     public boolean hasBlueprint(String id) {
         if (id == null || id.isEmpty()) return false;
-        if (modelEngine && mGetBlueprint != null) {
-            try {
-                return mGetBlueprint.invoke(null, id) != null;
-            } catch (Exception e) {
-                return false;
-            }
-        }
         if (betterModel && mBmModel != null) {
             try {
                 return unwrapOptional(mBmModel.invoke(null, id)) != null;
@@ -169,23 +134,7 @@ public class PokemonEntityManager {
 
     public void applyModel(Entity entity, String modelId) {
         if (modelId == null || modelId.isEmpty() || !plugin.models().enabled()) return;
-        if (modelEngine) { applyModelEngine(entity, modelId); return; }
         if (betterModel) { applyBetterModel(entity, modelId); }
-    }
-
-    private void applyModelEngine(Entity entity, String modelId) {
-        try {
-            Object activeModel = mCreateActiveModel.invoke(null, modelId);
-            if (activeModel == null) {
-                plugin.getLogger().warning("[WARN] ModelEngine model not found: " + modelId);
-                return;
-            }
-            Object modeledEntity = mCreateModeledEntity.invoke(null, entity);
-            mAddModel.invoke(modeledEntity, activeModel, true);
-            hideBaseAfterModel(entity);
-        } catch (Exception e) {
-            plugin.getLogger().warning("[WARN] Failed to apply model " + modelId + ": " + e.getMessage());
-        }
     }
 
     /**
@@ -283,6 +232,6 @@ public class PokemonEntityManager {
         entity.getPersistentDataContainer().set(keyData, PersistentDataType.STRING, gson.toJson(instance));
     }
 
-    /** True when any supported model engine (ModelEngine or BetterModel) is active. */
-    public boolean hasModelEngine() { return modelEngine || betterModel; }
+    /** True when BetterModel is installed and hooked. */
+    public boolean hasModelEngine() { return betterModel; }
 }

@@ -24,7 +24,7 @@ legendary:
   shiny-rate: 1024       # 1 / N (better odds than wild)
 
 capture:
-  # base entity used under ModelEngine models
+  # base entity used under BetterModel models
   base-entity: HUSK
 
 # When you are NOT using a 3D model engine (recommended on Bedrock/mobile, where
@@ -59,23 +59,26 @@ mobs:
   buddy-throw: true
 
 models:
-  # 3D pokemon models via ModelEngine (optional soft-depend). A species uses the
-  # ModelEngine blueprint whose id equals the species id (e.g. "pikachu"). Add
-  # your own .bbmodel in ModelEngine to give a species a model - no restart, no
-  # code. See docs/SETUP.md "Adding your own 3D models".
+  # 3D pokemon models via BetterModel (optional soft-depend, free & open-source,
+  # supports current MC versions). A species uses the BetterModel blueprint whose
+  # id equals the species id (e.g. "pikachu"). Add your own .bbmodel in
+  # BetterModel to give a species a model - no restart, no code. Note: custom 3D
+  # models render on the Java client; Bedrock/mobile players see the mapped
+  # vanilla mob (see the "mobs" section). See docs/SETUP.md "Adding your own 3D
+  # models".
   enabled: true
   default-scale: 1.0
   preview-seconds: 8
-  # keep a model engine (e.g. BetterModel) for PC while mobile still shows a mob:
-  # when true, the base entity is hidden only from Java players (who see the 3D
-  # model), so Bedrock/mobile players keep seeing the mapped vanilla mob instead
-  # of an invisible pokemon. Requires enabled: true and a model engine installed.
+  # keep BetterModel for PC while mobile still shows a mob: when true, the base
+  # entity is hidden only from Java players (who see the 3D model), so
+  # Bedrock/mobile players keep seeing the mapped vanilla mob instead of an
+  # invisible pokemon. Requires enabled: true and BetterModel installed.
   hide-base-java-only: false
   # bind a species to a blueprint with a different name (species: blueprint)
   overrides: {}
   # auto-convert Bedrock models dropped in plugins/PokeCraft/models-import/ into
-  # ModelEngine blueprints on startup (each <species>.geo.json + .png + optional
-  # .animation.json). Requires ModelEngine installed.
+  # BetterModel blueprints on startup (each <species>.geo.json + .png + optional
+  # .animation.json). Requires BetterModel installed.
   auto-import: true
   # only convert models whose file name matches a known species id (skips
   # berries, poke balls, particles, etc. from a full model pack). Set false to

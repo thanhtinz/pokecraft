@@ -8,8 +8,7 @@
 | Java | 21 | yes |
 | Geyser-Spigot | latest | for Bedrock players |
 | Floodgate | latest | for Bedrock auth + native forms |
-| ModelEngine | R4.0.8+ | for 3D models |
-| GeyserModelEngine | latest | shows ME models to Bedrock players |
+| BetterModel | latest | for 3D models on the Java client (free, open-source) |
 
 ## Build
 
@@ -25,10 +24,14 @@ from Maven Central / PaperMC / Lumine / OpenCollab repos.
 
 1. Drop Geyser-Spigot + Floodgate into plugins/, start once, configure Geyser
    (UDP port 19132 open for Bedrock).
-2. Drop ModelEngine, start once so it generates its resource pack.
-3. Install GeyserModelEngine as a **Geyser extension**
-   (plugins/Geyser-Spigot/extensions/).
-4. Drop PokeCraft-0.1.0.jar, restart.
+2. (Optional) Drop BetterModel into plugins/ if you want 3D models on the Java
+   client. Start once so it generates its resource pack.
+3. Drop PokeCraft-0.1.0.jar, restart.
+
+> **Bedrock/mobile note:** custom 3D models (BetterModel or any model engine)
+> render only on the Java client. Bedrock/mobile players see each pokemon as a
+> fitting **vanilla mob** instead (configured under `mobs:` in config.yml), so
+> the server still looks good on mobile even without any models installed.
 
 ## Adding your own 3D models
 
@@ -38,8 +41,11 @@ in-game. No code editing and no restart.
 
 1. Build (or obtain, originally) a `.bbmodel` in BlockBench. Do **not** rip
    assets from Pixelmon, Cobblemon or the official games.
-2. Import it into ModelEngine: put it in `plugins/ModelEngine/blueprints/` and
-   run `/meg reload`. It now exists as a **blueprint** with an id.
+2. Import it into BetterModel: put it in `plugins/BetterModel/models/` and
+   run `/bm reload`. It now exists as a **blueprint** with an id.
+   (Or just drop the Bedrock `.geo.json` + `.png` into
+   `plugins/PokeCraft/models-import/` and PokeCraft auto-converts + imports it
+   on startup.)
 3. **Auto-bind by name:** if the blueprint id equals the species id
    (e.g. a blueprint called `pikachu`), PokeCraft uses it automatically — no
    further setup.
@@ -53,7 +59,10 @@ in-game. No code editing and no restart.
      `X / 1016` species that have a blueprint, browse all species (green = has
      model), and click any pokemon to **spawn a live preview** of its model.
    - Or `/poke model coverage`, `/poke model preview <blueprint>`.
-6. GeyserModelEngine shows the models to Bedrock/mobile players automatically.
+6. Java players see the 3D model; Bedrock/mobile players see the mapped vanilla
+   mob (custom models can't render through Geyser). Use
+   `models.hide-base-java-only: true` to hide the base mob only from Java
+   players so both platforms look right.
 
 Species with no matching blueprint just fall back to a vanilla base entity
 (`capture.base-entity`), so the server works fine with zero models installed

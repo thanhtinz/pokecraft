@@ -270,7 +270,7 @@ public class PokeCommand implements TabExecutor {
             case "coverage" -> {
                 int[] c = plugin.models().coverage();
                 player.sendMessage(Component.text("Models installed: " + c[0] + "/" + c[1]
-                        + (plugin.entities().hasModelEngine() ? "" : " (ModelEngine not installed)"),
+                        + (plugin.entities().hasModelEngine() ? "" : " (BetterModel not installed)"),
                         NamedTextColor.YELLOW));
             }
             case "preview" -> {

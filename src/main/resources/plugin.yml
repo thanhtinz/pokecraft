@@ -3,9 +3,8 @@ version: '0.1.0'
 main: dev.thanhtin.pokecraft.PokeCraftPlugin
 api-version: '1.21'
 author: thanhtinz
-description: Server-side Pokemon plugin. Geyser/Bedrock compatible via ModelEngine + GeyserModelEngine.
+description: Server-side Pokemon plugin. Geyser/Bedrock compatible, 3D models via BetterModel.
 softdepend:
-  - ModelEngine
   - BetterModel
   - floodgate
   - Geyser-Spigot

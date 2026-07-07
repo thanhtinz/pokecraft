@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Lets a player's lead pokemon walk beside them. The follower is a cosmetic,
- * AI-less entity (with the species' ModelEngine model when installed) that is
+ * AI-less entity (with the species' BetterModel model when installed) that is
  * glided toward a point behind the player each tick, so it works the same on
  * PC and mobile. The toggle is persisted in the meta table, so the follower
  * comes back on relog.

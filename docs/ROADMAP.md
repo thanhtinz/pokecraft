@@ -2,7 +2,7 @@
 
 ## Phase 1 (done)
 - Species/moves data system, 18-type chart, stats/IV/nature/exp
-- Biome-weighted wild spawning with ModelEngine models
+- Biome-weighted wild spawning with BetterModel models (vanilla-mob mapping on Bedrock)
 - Pokeball capture with HP-scaled formula
 - Turn-based wild battles with GUI (Java) and native forms (Bedrock)
 - Level-up, learnset, evolution, SQLite/MySQL persistence

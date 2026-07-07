@@ -21,7 +21,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * OP panel for 3D models: shows how many species have a ModelEngine blueprint
+ * OP panel for 3D models: shows how many species have a BetterModel blueprint
  * installed and lets the owner browse every species and preview its model live.
  * Assigning a blueprint to a mismatched species is done with
  * {@code /poke model set <species> <blueprint>}.
@@ -73,11 +73,11 @@ public class ModelGui implements Listener {
                 ? Material.ARMOR_STAND : Material.BARRIER);
         ItemMeta infoMeta = info.getItemMeta();
         infoMeta.displayName(Component.text(plugin.entities().hasModelEngine()
-                ? "ModelEngine: hooked" : "ModelEngine: NOT installed",
+                ? "BetterModel: hooked" : "BetterModel: NOT installed",
                 plugin.entities().hasModelEngine() ? NamedTextColor.GREEN : NamedTextColor.RED));
         infoMeta.lore(List.of(
                 Component.text("Models with a blueprint: " + cov[0] + "/" + cov[1], NamedTextColor.GRAY),
-                Component.text("Add a .bbmodel in ModelEngine named like the", NamedTextColor.DARK_GRAY),
+                Component.text("Add a .bbmodel in BetterModel named like the", NamedTextColor.DARK_GRAY),
                 Component.text("species id; or /poke model set <species> <blueprint>", NamedTextColor.DARK_GRAY),
                 Component.text("Click a pokemon to preview its model", NamedTextColor.YELLOW)));
         info.setItemMeta(infoMeta);
@@ -165,7 +165,7 @@ public class ModelGui implements Listener {
 
         int[] cov = plugin.models().coverage();
         String content = (plugin.entities().hasModelEngine()
-                ? "ModelEngine: hooked" : "ModelEngine: NOT installed")
+                ? "BetterModel: hooked" : "BetterModel: NOT installed")
                 + "\nModels with a blueprint: " + cov[0] + "/" + cov[1]
                 + "\nShowing: " + (missingOnly ? "missing a model" : "all species")
                 + "\nPage " + (page + 1) + "/" + pages;

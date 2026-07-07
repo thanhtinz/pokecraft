@@ -14,11 +14,11 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Maps each pokemon species to a ModelEngine blueprint and lets a server owner
+ * Maps each pokemon species to a BetterModel blueprint and lets a server owner
  * add / preview 3D models without touching code.
  *
  * <p>How models are added: build a {@code .bbmodel} in BlockBench, import it
- * into ModelEngine (that becomes a "blueprint" with an id). PokeCraft binds a
+ * into BetterModel (that becomes a "blueprint" with an id). PokeCraft binds a
  * species to the blueprint whose id equals the species id (e.g. {@code pikachu}).
  * If your blueprint is named differently, set an override with
  * {@code /poke model set <species> <blueprint>} - stored in config, no restart.
@@ -52,7 +52,7 @@ public class ModelManager {
         return enabled() && plugin.entities().hasBlueprint(blueprintFor(species));
     }
 
-    /** @return {speciesWithModel, total}. Zero-with when ModelEngine is absent. */
+    /** @return {speciesWithModel, total}. Zero-with when BetterModel is absent. */
     public int[] coverage() {
         int with = 0, total = 0;
         for (PokemonSpecies s : plugin.species().all()) {
@@ -75,7 +75,7 @@ public class ModelManager {
     /** Spawn a temporary entity wearing a blueprint so the owner can eyeball it. */
     public void preview(Player player, String blueprintId) {
         if (!plugin.entities().hasModelEngine()) {
-            player.sendMessage(Component.text("ModelEngine is not installed - can't preview.",
+            player.sendMessage(Component.text("BetterModel is not installed - can't preview.",
                     NamedTextColor.RED));
             return;
         }
