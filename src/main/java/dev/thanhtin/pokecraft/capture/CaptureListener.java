@@ -73,6 +73,7 @@ public class CaptureListener implements Listener {
             plugin.storage().save(instance, slot);
             plugin.economy().addCaught(player.getUniqueId());
             plugin.storage().markCaught(player.getUniqueId(), instance.speciesId);
+            plugin.quests().progress(player, "catch", 1);
             player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1f, 1.4f);
             player.sendMessage(Component.text("Captured " + instance.displayName(species)
                             + " Lv." + instance.level + (slot < 0 ? " (sent to PC)" : "!"),

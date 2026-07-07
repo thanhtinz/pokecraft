@@ -71,6 +71,21 @@ public class StorageManager {
                     caught INTEGER NOT NULL DEFAULT 0,
                     PRIMARY KEY(owner, species)
                 )""");
+            st.executeUpdate("""
+                CREATE TABLE IF NOT EXISTS dailies (
+                    uuid TEXT PRIMARY KEY,
+                    last_day INTEGER NOT NULL DEFAULT 0,
+                    streak INTEGER NOT NULL DEFAULT 0
+                )""");
+            st.executeUpdate("""
+                CREATE TABLE IF NOT EXISTS quests (
+                    owner TEXT NOT NULL,
+                    quest_id TEXT NOT NULL,
+                    day INTEGER NOT NULL,
+                    progress INTEGER NOT NULL DEFAULT 0,
+                    claimed INTEGER NOT NULL DEFAULT 0,
+                    PRIMARY KEY(owner, quest_id)
+                )""");
         }
         plugin.getLogger().info("[OK] Storage initialized (" + type + ")");
     }
@@ -313,6 +328,94 @@ public class StorageManager {
             plugin.getLogger().severe("[ERR] pokedexOf failed: " + e.getMessage());
         }
         return out;
+    }
+
+    // ---------- daily check-in ----------
+
+    public record DailyRow(long lastDay, int streak) {}
+
+    public synchronized DailyRow getDaily(UUID uuid) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT last_day, streak FROM dailies WHERE uuid=?")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) return new DailyRow(rs.getLong(1), rs.getInt(2));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] getDaily failed: " + e.getMessage());
+        }
+        return new DailyRow(0, 0);
+    }
+
+    public synchronized void setDaily(UUID uuid, long day, int streak) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "INSERT INTO dailies(uuid, last_day, streak) VALUES(?,?,?) " +
+                        "ON CONFLICT(uuid) DO UPDATE SET last_day=excluded.last_day, streak=excluded.streak")) {
+            ps.setString(1, uuid.toString());
+            ps.setLong(2, day);
+            ps.setInt(3, streak);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] setDaily failed: " + e.getMessage());
+        }
+    }
+
+    // ---------- quests ----------
+
+    public record QuestRow(String questId, long day, int progress, boolean claimed) {}
+
+    public synchronized List<QuestRow> questsOf(UUID owner) {
+        List<QuestRow> out = new ArrayList<>();
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT quest_id, day, progress, claimed FROM quests WHERE owner=?")) {
+            ps.setString(1, owner.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    out.add(new QuestRow(rs.getString(1), rs.getLong(2),
+                            rs.getInt(3), rs.getInt(4) == 1));
+                }
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] questsOf failed: " + e.getMessage());
+        }
+        return out;
+    }
+
+    /** Insert a fresh quest for the day (progress 0, unclaimed), replacing any old row. */
+    public synchronized void resetQuest(UUID owner, String questId, long day) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "INSERT INTO quests(owner, quest_id, day, progress, claimed) VALUES(?,?,?,0,0) " +
+                        "ON CONFLICT(owner, quest_id) DO UPDATE SET day=excluded.day, progress=0, claimed=0")) {
+            ps.setString(1, owner.toString());
+            ps.setString(2, questId);
+            ps.setLong(3, day);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] resetQuest failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized void addQuestProgress(UUID owner, String questId, int delta) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "UPDATE quests SET progress = progress + ? WHERE owner=? AND quest_id=? AND claimed=0")) {
+            ps.setInt(1, delta);
+            ps.setString(2, owner.toString());
+            ps.setString(3, questId);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] addQuestProgress failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized void claimQuest(UUID owner, String questId) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "UPDATE quests SET claimed=1 WHERE owner=? AND quest_id=?")) {
+            ps.setString(1, owner.toString());
+            ps.setString(2, questId);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] claimQuest failed: " + e.getMessage());
+        }
     }
 
     // ---------- npcs ----------

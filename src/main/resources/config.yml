@@ -71,6 +71,17 @@ npc:
   trainer-reward-per-level: 10  # money = sum of team levels * this
   trainer-cooldown-minutes: 30
 
+daily:
+  base-reward: 200
+  streak-bonus: 100       # extra money per consecutive day
+  max-streak: 7
+
+fishing:
+  enabled: true
+  catch-chance: 0.5       # chance a reeled catch is a wild pokemon
+  min-level: 5
+  max-level: 25
+
 menu:
   # give every player a menu item in the hotbar (right-click/tap to open panel)
   give-item: true

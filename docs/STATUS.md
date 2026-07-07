@@ -186,6 +186,15 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] /poke (không tham số) và /poke menu cũng mở panel
 - [ ] Custom UI texture pack (hiện dùng icon vanilla item)
 
+## Activities (Daily / Quests / Fishing)
+
+- [x] Điểm danh hằng ngày: /poke menu -> Activities, thưởng tiền tăng theo
+      streak (config), mốc 7 ngày tặng 5 Ultra Ball
+- [x] Nhiệm vụ ngày: bắt 3 / thắng 5 wild / thắng 1 duel / câu 3 - tự reset
+      mỗi ngày, click nhận thưởng khi hoàn thành
+- [x] Câu cá: câu gần nước có tỉ lệ (config) móc trúng pokemon hệ Nước hoang
+      -> mở battle luôn (bắt/đánh như thường)
+
 ## Commands / Admin
 
 - [x] /poke party (mở GUI), /poke pc, /poke shop

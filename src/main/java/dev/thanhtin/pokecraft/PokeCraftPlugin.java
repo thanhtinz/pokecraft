@@ -1,5 +1,8 @@
 package dev.thanhtin.pokecraft;
 
+import dev.thanhtin.pokecraft.activity.DailyManager;
+import dev.thanhtin.pokecraft.activity.FishingManager;
+import dev.thanhtin.pokecraft.activity.QuestManager;
 import dev.thanhtin.pokecraft.battle.BattleManager;
 import dev.thanhtin.pokecraft.battle.pvp.PvpBattleManager;
 import dev.thanhtin.pokecraft.daycare.DaycareManager;
@@ -26,6 +29,7 @@ import dev.thanhtin.pokecraft.ui.BattleGui;
 import dev.thanhtin.pokecraft.ui.PartyGui;
 import dev.thanhtin.pokecraft.ui.DaycareGui;
 import dev.thanhtin.pokecraft.ui.LeaderboardGui;
+import dev.thanhtin.pokecraft.ui.ActivitiesGui;
 import dev.thanhtin.pokecraft.ui.MainMenuGui;
 import dev.thanhtin.pokecraft.ui.NicknameInput;
 import dev.thanhtin.pokecraft.ui.PayAmountGui;
@@ -62,6 +66,10 @@ public class PokeCraftPlugin extends JavaPlugin {
     private TradeGui tradeGui;
     private NicknameInput nicknameInput;
     private PayAmountGui payAmountGui;
+    private DailyManager dailyManager;
+    private QuestManager questManager;
+    private FishingManager fishingManager;
+    private ActivitiesGui activitiesGui;
     private PvpBattleManager pvpManager;
     private EconomyManager economyManager;
     private MarriageManager marriageManager;
@@ -109,6 +117,10 @@ public class PokeCraftPlugin extends JavaPlugin {
         tradeGui = new TradeGui(this);
         nicknameInput = new NicknameInput(this);
         payAmountGui = new PayAmountGui(this);
+        dailyManager = new DailyManager(this);
+        questManager = new QuestManager(this);
+        fishingManager = new FishingManager(this);
+        activitiesGui = new ActivitiesGui(this);
         pvpManager = new PvpBattleManager(this);
         economyManager = new EconomyManager(this);
         marriageManager = new MarriageManager(this);
@@ -140,6 +152,8 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(tradeGui, this);
         getServer().getPluginManager().registerEvents(nicknameInput, this);
         getServer().getPluginManager().registerEvents(payAmountGui, this);
+        getServer().getPluginManager().registerEvents(fishingManager, this);
+        getServer().getPluginManager().registerEvents(activitiesGui, this);
         getServer().getPluginManager().registerEvents(pvpManager, this);
         getServer().getPluginManager().registerEvents(economyManager, this);
         getServer().getPluginManager().registerEvents(usableItems, this);
@@ -190,6 +204,10 @@ public class PokeCraftPlugin extends JavaPlugin {
     public TradeGui tradeUi() { return tradeGui; }
     public NicknameInput nicknameInput() { return nicknameInput; }
     public PayAmountGui payUi() { return payAmountGui; }
+    public DailyManager daily() { return dailyManager; }
+    public QuestManager quests() { return questManager; }
+    public FishingManager fishing() { return fishingManager; }
+    public ActivitiesGui activitiesUi() { return activitiesGui; }
     public PvpBattleManager pvp() { return pvpManager; }
     public EconomyManager economy() { return economyManager; }
     public MarriageManager marriage() { return marriageManager; }

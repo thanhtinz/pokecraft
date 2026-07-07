@@ -41,6 +41,7 @@ public class MainMenuGui implements Listener {
     private static final int SLOT_MARRY = 22;
     private static final int SLOT_DEX = 21;
     private static final int SLOT_TRADE = 23;
+    private static final int SLOT_ACTIVITIES = 30;
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyMenuItem;
@@ -131,7 +132,7 @@ public class MainMenuGui implements Listener {
 
     public void open(Player player) {
         Holder holder = new Holder();
-        Inventory inv = plugin.getServer().createInventory(holder, 27,
+        Inventory inv = plugin.getServer().createInventory(holder, 36,
                 Component.text("PokeCraft Menu"));
         holder.inventory = inv;
 
@@ -194,6 +195,12 @@ public class MainMenuGui implements Listener {
         }
         inv.setItem(SLOT_MARRY, item(Material.POPPY, marryLabel, NamedTextColor.LIGHT_PURPLE, marryLore));
 
+        boolean daily = plugin.daily().canClaim(player);
+        inv.setItem(SLOT_ACTIVITIES, item(Material.CLOCK,
+                daily ? "Activities - daily reward ready!" : "Activities", NamedTextColor.YELLOW,
+                daily ? List.of("Daily check-in + quests", "Your daily reward is waiting!")
+                        : List.of("Daily check-in + quests", "Fish, catch and battle for rewards")));
+
         GuiFiller.fill(inv);
         player.openInventory(inv);
     }
@@ -252,6 +259,7 @@ public class MainMenuGui implements Listener {
                 }
                 case SLOT_TOP -> plugin.leaderboardUi().open(player);
                 case SLOT_DEX -> plugin.pokedexUi().open(player, 0);
+                case SLOT_ACTIVITIES -> plugin.activitiesUi().open(player);
                 case SLOT_TRADE -> {
                     if (blocked(player, inBattle)) return;
                     if (plugin.trades().pendingRequesterName(player) != null) {

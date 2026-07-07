@@ -109,6 +109,7 @@ public class PokeCommand implements TabExecutor {
                 if (!player.hasPermission("pokecraft.admin")) return noPerm(player);
                 plugin.reloadConfig();
                 plugin.species().load();
+                plugin.fishing().invalidate();
                 player.sendMessage(Component.text("PokeCraft reloaded.", NamedTextColor.GREEN));
             }
             default -> {

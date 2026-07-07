@@ -473,6 +473,7 @@ public class BattleManager implements Listener {
             money = plugin.economy().wildBattleReward(battle.wildPokemon.level);
             plugin.economy().deposit(player.getUniqueId(), money);
             plugin.economy().addWildWin(player.getUniqueId());
+            plugin.quests().progress(player, "wild", 1);
             player.sendMessage(Component.text("+" + plugin.economy().format(money),
                     NamedTextColor.GREEN));
         }
