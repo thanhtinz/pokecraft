@@ -44,6 +44,7 @@ public class CasinoGui implements Listener {
     }
 
     public void open(Player player) {
+        if (openForm(player)) return;
         Holder holder = new Holder();
         long balance = plugin.economy().balance(player.getUniqueId());
         Inventory inv = plugin.getServer().createInventory(holder, 27,
@@ -78,6 +79,29 @@ public class CasinoGui implements Listener {
 
         GuiFiller.fill(inv);
         player.openInventory(inv);
+    }
+
+    /** Native Bedrock casino: a button per coin-flip bet plus the slot machine. */
+    private boolean openForm(Player player) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        long balance = plugin.economy().balance(player.getUniqueId());
+        long spin = plugin.getConfig().getLong("casino.slot-cost", 500);
+        java.util.List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons =
+                new java.util.ArrayList<>();
+        for (long bet : BETS) {
+            final long b = bet;
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "Coin flip " + plugin.economy().format(bet),
+                    () -> { coinFlip(player, b); open(player); }));
+        }
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "Slot machine - " + plugin.economy().format(spin) + "/spin",
+                () -> { slots(player, spin); open(player); }));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+        return plugin.bedrock().openForm(player, "Casino",
+                "Balance: " + plugin.economy().format(balance)
+                        + "\n\nCoin flip: 50% to double your bet\nSlots: 3 match = x10, 2 match = x2",
+                buttons);
     }
 
     @EventHandler

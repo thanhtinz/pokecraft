@@ -86,6 +86,7 @@ public class BoardGameManager implements Listener {
     // ---------- Tic-Tac-Toe ----------
 
     private void openTtt(Player player, TttHolder holder) {
+        if (openTttForm(player, holder)) return;
         Inventory inv = plugin.getServer().createInventory(holder, 45,
                 Component.text("Tic-Tac-Toe (you = X)"));
         holder.inventory = inv;
@@ -154,6 +155,7 @@ public class BoardGameManager implements Listener {
     // ---------- Connect Four ----------
 
     private void openC4(Player player, C4Holder holder) {
+        if (openC4Form(player, holder)) return;
         Inventory inv = plugin.getServer().createInventory(holder, 54,
                 Component.text("Connect Four (you = blue)"));
         holder.inventory = inv;
@@ -238,6 +240,7 @@ public class BoardGameManager implements Listener {
     // ---------- Minesweeper ----------
 
     private void openMines(Player player, MinesHolder holder) {
+        if (openMinesForm(player, holder)) return;
         Inventory inv = plugin.getServer().createInventory(holder, 45,
                 Component.text("Minesweeper - clear all safe tiles"));
         holder.inventory = inv;
@@ -413,6 +416,102 @@ public class BoardGameManager implements Listener {
                     + plugin.economy().format(h.pot) + ".", NamedTextColor.RED));
             player.closeInventory();
         }
+    }
+
+    // ---------- native Bedrock forms for the grid games ----------
+    // The board is drawn as a text grid in the form content; each tappable
+    // cell/column is a button that reuses the same handle*/handler logic.
+
+    private boolean openTttForm(Player player, TttHolder holder) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        StringBuilder sb = new StringBuilder("You = §9X§r   AI = §cO§r\n\n");
+        for (int r = 0; r < 3; r++) {
+            for (int c = 0; c < 3; c++) {
+                int v = holder.board[r * 3 + c];
+                sb.append(v == 1 ? "§9X" : v == 2 ? "§cO" : "§7·").append("§r");
+                if (c < 2) sb.append("  |  ");
+            }
+            sb.append("\n");
+        }
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+        if (!holder.over) {
+            for (int i = 0; i < 9; i++) {
+                if (holder.board[i] != 0) continue;
+                final int slot = TTT_SLOTS[i];
+                int r = i / 3, c = i % 3;
+                buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                        "Row " + (r + 1) + ", Col " + (c + 1),
+                        () -> handleTtt(player, holder, slot)));
+            }
+        } else {
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "Play again", () -> play(player, "tictactoe")));
+        }
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+        return plugin.bedrock().openForm(player, "Tic-Tac-Toe", sb.toString(), buttons);
+    }
+
+    private boolean openC4Form(Player player, C4Holder holder) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        StringBuilder sb = new StringBuilder("You = §9O§r   AI = §cO§r\n\n");
+        for (int r = 0; r < 6; r++) {
+            for (int c = 0; c < 7; c++) {
+                int v = holder.board[r * 7 + c];
+                sb.append(v == 1 ? "§9O" : v == 2 ? "§cO" : "§7·").append("§r ");
+            }
+            sb.append("\n");
+        }
+        sb.append("§7 1  2  3  4  5  6  7");
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+        if (!holder.over) {
+            for (int c = 0; c < 7; c++) {
+                if (holder.board[c] != 0) continue; // top row filled = column full
+                final int col = c;
+                buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                        "Drop in column " + (c + 1),
+                        () -> handleC4(player, holder, col)));
+            }
+        } else {
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "Play again", () -> play(player, "connect4")));
+        }
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+        return plugin.bedrock().openForm(player, "Connect Four", sb.toString(), buttons);
+    }
+
+    private boolean openMinesForm(Player player, MinesHolder holder) {
+        if (!plugin.bedrock().isBedrock(player)) return false;
+        StringBuilder sb = new StringBuilder("Reveal every safe tile. Numbers = mines nearby.\n\n");
+        for (int r = 0; r < MINES_ROWS; r++) {
+            for (int c = 0; c < MINES_COLS; c++) {
+                int idx = r * MINES_COLS + c;
+                if (holder.over && holder.mine[idx]) sb.append("§c✱§r ");
+                else if (!holder.shown[idx]) sb.append("§7▨§r ");
+                else {
+                    int n = mineNeighbours(holder, idx);
+                    sb.append(n == 0 ? "§8·§r " : "§e" + n + "§r ");
+                }
+            }
+            sb.append("\n");
+        }
+        List<dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton> buttons = new ArrayList<>();
+        if (!holder.over) {
+            for (int r = 0; r < MINES_ROWS; r++) {
+                for (int c = 0; c < MINES_COLS; c++) {
+                    int idx = r * MINES_COLS + c;
+                    if (holder.shown[idx]) continue;
+                    final int slot = r * 9 + c;
+                    buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                            "Reveal R" + (r + 1) + " C" + (c + 1),
+                            () -> handleMines(player, holder, slot)));
+                }
+            }
+        } else {
+            buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                    "Play again", () -> play(player, "minesweeper")));
+        }
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton("Close", null));
+        return plugin.bedrock().openForm(player, "Minesweeper", sb.toString(), buttons);
     }
 
     // ---------- shared ----------
