@@ -67,6 +67,7 @@ public class BattleManager implements Listener {
         PokemonSpecies wildSpecies = plugin.species().getSpecies(wild.speciesId);
         Battle battle = new Battle(player.getUniqueId(), mine, wild, wildEntity);
         battles.put(player.getUniqueId(), battle);
+        plugin.storage().markSeen(player.getUniqueId(), wild.speciesId);
         player.sendMessage(Component.text("A wild " + wild.displayName(wildSpecies)
                 + " Lv." + wild.level + " appeared!", NamedTextColor.YELLOW));
         plugin.battleUi().open(player, battle);
@@ -103,6 +104,7 @@ public class BattleManager implements Listener {
         battle.npcName = trainerName;
         battle.npcReward = reward;
         battles.put(player.getUniqueId(), battle);
+        plugin.storage().markSeen(player.getUniqueId(), team.get(0).speciesId);
         PokemonSpecies first = plugin.species().getSpecies(team.get(0).speciesId);
         player.sendMessage(Component.text(trainerName + " challenges you with "
                 + team.size() + " pokemon! First up: " + team.get(0).displayName(first)
@@ -336,6 +338,7 @@ public class BattleManager implements Listener {
         battle.npcIndex++;
         battle.wildPokemon = battle.npcTeam.get(battle.npcIndex);
         battle.resetWildStages();
+        plugin.storage().markSeen(player.getUniqueId(), battle.wildPokemon.speciesId);
         PokemonSpecies next = plugin.species().getSpecies(battle.wildPokemon.speciesId);
         player.sendMessage(Component.text(battle.npcName + " sent out "
                 + battle.wildPokemon.displayName(next) + " Lv." + battle.wildPokemon.level + "!",

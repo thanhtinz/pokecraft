@@ -153,6 +153,7 @@ public class DaycareManager {
             baby.owner = player.getUniqueId();
             int slot = plugin.parties().get(player).add(baby);
             plugin.storage().save(baby, slot);
+            plugin.storage().markCaught(player.getUniqueId(), baby.speciesId);
             plugin.parties().saveParty(player.getUniqueId());
             player.sendMessage(Component.text("Surprise! The daycare found an egg - it hatched into "
                     + baby.displayName(babySpecies) + " Lv.1" + (slot < 0 ? " (sent to PC)" : "!"),

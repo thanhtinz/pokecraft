@@ -28,6 +28,7 @@ public class PartyManager implements Listener {
     private PlayerParty load(UUID owner) {
         PlayerParty party = new PlayerParty();
         for (StorageManager.StoredPokemon sp : plugin.storage().loadAll(owner)) {
+            plugin.storage().markCaught(owner, sp.pokemon().speciesId); // dex backfill
             if (sp.slot() == StorageManager.SLOT_DAYCARE) continue; // held by the daycare
             if (sp.slot() >= 0 && sp.slot() < PlayerParty.SIZE) party.set(sp.slot(), sp.pokemon());
             else party.pc().add(sp.pokemon());

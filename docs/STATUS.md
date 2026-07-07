@@ -142,12 +142,21 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Sneak để xuống, tự dismount khi vào battle/quit
 - [ ] Điều khiển WASD thật (cần saddle-entity hack), tốc độ theo chỉ số Speed
 
+## Pokedex
+
+- [x] Theo dõi seen/caught per player (bảng pokedex): gặp trong battle = seen,
+      bắt/lai tạo/tiến hóa/sở hữu = caught
+- [x] GUI phân trang theo số dex: caught hiện đủ stats/evolution/spawn biome,
+      seen hiện tên, chưa gặp hiện "???"
+- [x] /poke dex + nút trên menu panel, đếm tiến độ x/151
+- [ ] Phần thưởng hoàn thành dex (milestone rewards)
+
 ## In-game Menu (PC + Mobile)
 
 - [x] Item menu (Nether Star) phát khi join, right-click/tap để mở panel
       (không cần gõ lệnh; chest GUI nên Bedrock/Geyser dùng được luôn)
 - [x] Hub: Party / PC Box / Shop / Daycare / Ride / Duel / Leaderboard /
-      Marriage / Balance
+      Pokedex / Marriage / Balance
 - [x] GUI chọn người chơi cho Duel (lọc theo khoảng cách) và Marry
 - [x] GUI chọn pokemon để cưỡi; GUI daycare gửi/rút trực quan
 - [x] Leaderboard panel: top 10 của 4 hạng mục trong lore

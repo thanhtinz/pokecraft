@@ -60,6 +60,7 @@ public class PokeCommand implements TabExecutor {
                 plugin.shop().open(player);
             }
             case "top" -> top(player, args);
+            case "dex", "pokedex" -> plugin.pokedexUi().open(player, 0);
             case "duel" -> duel(player, args);
             case "marry" -> marry(player, args);
             case "divorce" -> plugin.marriage().divorce(player);
@@ -382,7 +383,7 @@ public class PokeCommand implements TabExecutor {
     public List<String> onTabComplete(CommandSender sender, Command cmd, String label, String[] args) {
         List<String> out = new ArrayList<>();
         if (args.length == 1) {
-            out.addAll(List.of("menu", "party", "pc", "shop", "balance", "pay", "top", "duel", "marry",
+            out.addAll(List.of("menu", "party", "pc", "dex", "shop", "balance", "pay", "top", "duel", "marry",
                     "divorce", "daycare", "ride", "nickname", "release", "give", "spawn", "heal", "reload", "npc"));
         } else if (args.length == 2 && args[0].equalsIgnoreCase("spawn")) {
             plugin.species().all().forEach(s -> out.add(s.id));

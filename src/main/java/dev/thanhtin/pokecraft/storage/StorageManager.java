@@ -8,6 +8,7 @@ import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 public class StorageManager {
@@ -62,6 +63,13 @@ public class StorageManager {
                     type TEXT NOT NULL,
                     name TEXT NOT NULL,
                     data TEXT NOT NULL DEFAULT ''
+                )""");
+            st.executeUpdate("""
+                CREATE TABLE IF NOT EXISTS pokedex (
+                    owner TEXT NOT NULL,
+                    species TEXT NOT NULL,
+                    caught INTEGER NOT NULL DEFAULT 0,
+                    PRIMARY KEY(owner, species)
                 )""");
         }
         plugin.getLogger().info("[OK] Storage initialized (" + type + ")");
@@ -265,6 +273,46 @@ public class StorageManager {
         } catch (SQLException e) {
             plugin.getLogger().severe("[ERR] removeDaycare failed: " + e.getMessage());
         }
+    }
+
+    // ---------- pokedex ----------
+
+    public synchronized void markSeen(UUID owner, String species) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "INSERT OR IGNORE INTO pokedex(owner, species, caught) VALUES(?,?,0)")) {
+            ps.setString(1, owner.toString());
+            ps.setString(2, species);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] markSeen failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized void markCaught(UUID owner, String species) {
+        try (PreparedStatement ps = connection.prepareStatement(
+                "INSERT INTO pokedex(owner, species, caught) VALUES(?,?,1) " +
+                        "ON CONFLICT(owner, species) DO UPDATE SET caught=1")) {
+            ps.setString(1, owner.toString());
+            ps.setString(2, species);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] markCaught failed: " + e.getMessage());
+        }
+    }
+
+    /** species id -> caught (true) or only seen (false) */
+    public synchronized Map<String, Boolean> pokedexOf(UUID owner) {
+        Map<String, Boolean> out = new java.util.HashMap<>();
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT species, caught FROM pokedex WHERE owner=?")) {
+            ps.setString(1, owner.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) out.put(rs.getString(1), rs.getInt(2) == 1);
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] pokedexOf failed: " + e.getMessage());
+        }
+        return out;
     }
 
     // ---------- npcs ----------

@@ -41,6 +41,7 @@ public class EvolutionService {
 
     private void apply(Player player, PokemonInstance p, PokemonSpecies from, PokemonSpecies to) {
         p.speciesId = to.id;
+        if (p.owner != null) plugin.storage().markCaught(p.owner, to.id);
         p.moves = PokemonInstance.latestMoves(to, p.level);
         p.currentHp = Math.min(p.currentHp, p.maxHp(to));
         player.sendMessage(Component.text("What? " + from.name + " is evolving... It became "

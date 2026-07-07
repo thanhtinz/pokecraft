@@ -39,6 +39,7 @@ public class MainMenuGui implements Listener {
     private static final int SLOT_TOP = 16;
     private static final int SLOT_BALANCE = 4;
     private static final int SLOT_MARRY = 22;
+    private static final int SLOT_DEX = 21;
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyMenuItem;
@@ -146,6 +147,9 @@ public class MainMenuGui implements Listener {
         inv.setItem(SLOT_TOP, item(Material.GOLD_BLOCK, "Leaderboards", NamedTextColor.GOLD,
                 List.of("Top catchers, richest,", "battle and duel winners")));
 
+        inv.setItem(SLOT_DEX, item(Material.BOOK, "Pokedex", NamedTextColor.RED,
+                List.of("Your seen/caught progress", "for all 151 pokemon")));
+
         String proposer = plugin.marriage().pendingProposerName(player);
         UUID spouse = plugin.marriage().spouseOf(player.getUniqueId());
         String marryLabel;
@@ -220,6 +224,7 @@ public class MainMenuGui implements Listener {
                     }
                 }
                 case SLOT_TOP -> plugin.leaderboardUi().open(player);
+                case SLOT_DEX -> plugin.pokedexUi().open(player, 0);
                 case SLOT_MARRY -> {
                     if (plugin.marriage().pendingProposerName(player) != null) {
                         player.closeInventory();
