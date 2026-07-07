@@ -69,8 +69,11 @@ public class HandheldItems implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
-        Player player = e.getPlayer();
-        // strip hand-held items no longer offered (e.g. the old Team bundle)
+        cleanupAndGive(e.getPlayer());
+    }
+
+    /** Strip retired hand-held items (e.g. the old Team bundle) and hand out the current ones. */
+    public void cleanupAndGive(Player player) {
         for (ItemStack item : player.getInventory().getContents()) {
             String id = idOf(item);
             if (id != null && ITEMS.stream().noneMatch(h -> h.id().equals(id))) {

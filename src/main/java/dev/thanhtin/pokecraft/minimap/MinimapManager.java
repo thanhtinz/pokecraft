@@ -134,8 +134,11 @@ public class MinimapManager implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
-        // clean up the old PokeNav compass - the minimap opens from the menu now
-        Player player = e.getPlayer();
+        cleanupLegacyItems(e.getPlayer());
+    }
+
+    /** Remove the old PokeNav compass - the minimap opens from the menu now. */
+    public void cleanupLegacyItems(Player player) {
         for (ItemStack item : player.getInventory().getContents()) {
             if (item != null && item.hasItemMeta()
                     && item.getItemMeta().getPersistentDataContainer().has(keyNav, PersistentDataType.BYTE)) {

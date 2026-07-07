@@ -262,6 +262,12 @@ public class PokeCraftPlugin extends JavaPlugin {
         rideManager.start();
         walkingManager.start();
         hookVault();
+        // clean retired feature items (Team bundle, PokeNav compass) from anyone
+        // already online, e.g. after a /reload - the join handlers do the rest
+        for (org.bukkit.entity.Player online : getServer().getOnlinePlayers()) {
+            handheldItems.cleanupAndGive(online);
+            minimapManager.cleanupLegacyItems(online);
+        }
         getLogger().info("[OK] PokeCraft enabled");
     }
 
