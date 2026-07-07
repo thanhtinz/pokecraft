@@ -196,7 +196,7 @@ public class BedrockSupport {
             addButton(builderClass, builder, actions, "Leaderboards",
                     () -> plugin.leaderboardUi().open(player));
             addButton(builderClass, builder, actions, "Get PokeMap",
-                    () -> plugin.minimap().give(player));
+                    () -> plugin.minimap().toggle(player));
             addButton(builderClass, builder, actions, "Minigames",
                     () -> plugin.minigamesUi().open(player));
             addButton(builderClass, builder, actions, "Activities",

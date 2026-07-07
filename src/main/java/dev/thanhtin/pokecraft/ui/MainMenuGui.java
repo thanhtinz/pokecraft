@@ -275,7 +275,7 @@ public class MainMenuGui implements Listener {
                 }
                 case SLOT_TOP -> plugin.leaderboardUi().open(player);
                 case SLOT_DEX -> plugin.pokedexUi().open(player, 0);
-                case SLOT_MAP -> { player.closeInventory(); plugin.minimap().give(player); }
+                case SLOT_MAP -> { player.closeInventory(); plugin.minimap().toggle(player); }
                 case SLOT_MINIGAMES -> plugin.minigamesUi().open(player);
                 case SLOT_ACTIVITIES -> plugin.activitiesUi().open(player);
                 case SLOT_GUILD -> plugin.guildUi().open(player);

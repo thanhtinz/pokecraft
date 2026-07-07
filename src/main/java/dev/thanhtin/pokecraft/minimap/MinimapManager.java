@@ -8,13 +8,9 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.MapMeta;
 import org.bukkit.map.MapRenderer;
 import org.bukkit.map.MapView;
@@ -27,18 +23,17 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * A filled-map "PokeMap" that follows the player and marks nearby wild pokemon
- * and players. Filled maps render on Bedrock via Geyser, and a map held in the
- * OFF-HAND shows as a small minimap in the screen corner on mobile - so the
- * PokeMap goes into the off-hand. A "PokeNav" compass toggles it on and off
- * (open the compass to pop the minimap up in the corner).
+ * The "PokeMap": opened from the main menu ("Get PokeMap"), not a separate
+ * carried item. On the Java client a filled map in the off-hand renders as a
+ * small corner minimap, so that's what Java players get (toggled from the
+ * menu). Bedrock/mobile can't show an off-hand map in the corner, so those
+ * players get a native radar popup instead (see BedrockSupport#tryOpenRadarForm).
  */
 public class MinimapManager implements Listener {
     private final PokeCraftPlugin plugin;
     private final Map<UUID, MapView> views = new ConcurrentHashMap<>();
     private final NamespacedKey keyMap;
-    private final NamespacedKey keyNav;
-    private BukkitRunnable task;
+    private final NamespacedKey keyNav; // legacy PokeNav compass tag, kept for cleanup
 
     public MinimapManager(PokeCraftPlugin plugin) {
         this.plugin = plugin;
@@ -53,31 +48,29 @@ public class MinimapManager implements Listener {
         task.runTaskTimer(plugin, 20L, 10L);
     }
 
+    private BukkitRunnable task;
+
     public void stop() {
         if (task != null) task.cancel();
     }
 
     /**
-     * Gives the player the PokeNav compass and pops the minimap into their
-     * off-hand so it shows in the corner. Called by the menu's "Get PokeMap".
+     * Menu action ("Get PokeMap"): open the radar popup on Bedrock, or show/hide
+     * the off-hand corner minimap on the Java client.
      */
-    public void give(Player player) {
-        if (!hasNav(player)) {
-            var leftover = player.getInventory().addItem(createNav());
-            leftover.values().forEach(i -> player.getWorld().dropItemNaturally(player.getLocation(), i));
-        }
-        // Bedrock/mobile can't show an off-hand map in the corner, so open the
-        // native radar popup instead of equipping a filled map.
+    public void toggle(Player player) {
         if (plugin.bedrock().isBedrock(player)) {
             plugin.bedrock().tryOpenRadarForm(player);
-            player.sendMessage(Component.text(
-                    "Tap the PokeNav compass anytime to open your radar.", NamedTextColor.GREEN));
             return;
         }
-        showMinimap(player);
-        player.sendMessage(Component.text(
-                "PokeMap is now in the corner. Use the PokeNav compass to hide/show it.",
-                NamedTextColor.GREEN));
+        if (hideMinimap(player)) {
+            player.sendMessage(Component.text("PokeMap hidden.", NamedTextColor.GRAY));
+        } else {
+            showMinimap(player);
+            player.sendMessage(Component.text(
+                    "PokeMap is in your off-hand - it shows as a minimap in the corner.",
+                    NamedTextColor.AQUA));
+        }
     }
 
     /** Build a fresh minimap for the player's world and put it in the off-hand. */
@@ -100,11 +93,10 @@ public class MinimapManager implements Listener {
         meta.displayName(Component.text("PokeMap", NamedTextColor.AQUA));
         meta.lore(List.of(
                 Component.text("Red = wild pokemon, blue = players", NamedTextColor.GRAY),
-                Component.text("Shows as a minimap in the corner on mobile", NamedTextColor.GRAY)));
+                Component.text("Shows as a minimap in the corner", NamedTextColor.GRAY)));
         meta.getPersistentDataContainer().set(keyMap, PersistentDataType.BYTE, (byte) 1);
         map.setItemMeta(meta);
 
-        // move whatever is in the off-hand into the inventory, then equip the map
         ItemStack current = player.getInventory().getItemInOffHand();
         if (current != null && current.getType() != Material.AIR && !isPokeMap(current)) {
             var leftover = player.getInventory().addItem(current);
@@ -124,59 +116,9 @@ public class MinimapManager implements Listener {
         return false;
     }
 
-    // ---------- the PokeNav compass ----------
-
-    public ItemStack createNav() {
-        ItemStack nav = new ItemStack(Material.COMPASS);
-        ItemMeta meta = nav.getItemMeta();
-        meta.displayName(Component.text("PokeNav", NamedTextColor.AQUA));
-        meta.lore(List.of(
-                Component.text("Right-click / tap to show or hide", NamedTextColor.GRAY),
-                Component.text("the minimap in the corner", NamedTextColor.GRAY)));
-        meta.getPersistentDataContainer().set(keyNav, PersistentDataType.BYTE, (byte) 1);
-        nav.setItemMeta(meta);
-        return nav;
-    }
-
-    public boolean isNav(ItemStack item) {
-        return item != null && item.hasItemMeta()
-                && item.getItemMeta().getPersistentDataContainer().has(keyNav, PersistentDataType.BYTE);
-    }
-
     public boolean isPokeMap(ItemStack item) {
         return item != null && item.hasItemMeta()
                 && item.getItemMeta().getPersistentDataContainer().has(keyMap, PersistentDataType.BYTE);
-    }
-
-    private boolean hasNav(Player player) {
-        for (ItemStack item : player.getInventory().getContents()) {
-            if (isNav(item)) return true;
-        }
-        return false;
-    }
-
-    /** Compass action: pop the minimap up if hidden, put it away if shown. */
-    public void toggle(Player player) {
-        // Bedrock/mobile: open the native radar popup each tap.
-        if (plugin.bedrock().isBedrock(player)) {
-            plugin.bedrock().tryOpenRadarForm(player);
-            return;
-        }
-        if (hideMinimap(player)) {
-            player.sendMessage(Component.text("Minimap hidden.", NamedTextColor.GRAY));
-        } else {
-            showMinimap(player);
-            player.sendMessage(Component.text("Minimap shown in the corner.", NamedTextColor.AQUA));
-        }
-    }
-
-    @EventHandler
-    public void onUse(PlayerInteractEvent e) {
-        if (e.getHand() != EquipmentSlot.HAND) return;
-        if (e.getAction() != Action.RIGHT_CLICK_AIR && e.getAction() != Action.RIGHT_CLICK_BLOCK) return;
-        if (!isNav(e.getItem())) return;
-        e.setCancelled(true);
-        toggle(e.getPlayer());
     }
 
     private void follow() {
@@ -192,11 +134,13 @@ public class MinimapManager implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
-        if (!plugin.getConfig().getBoolean("minimap.give-compass", true)) return;
+        // clean up the old PokeNav compass - the minimap opens from the menu now
         Player player = e.getPlayer();
-        if (!hasNav(player)) {
-            var leftover = player.getInventory().addItem(createNav());
-            leftover.values().forEach(i -> player.getWorld().dropItemNaturally(player.getLocation(), i));
+        for (ItemStack item : player.getInventory().getContents()) {
+            if (item != null && item.hasItemMeta()
+                    && item.getItemMeta().getPersistentDataContainer().has(keyNav, PersistentDataType.BYTE)) {
+                player.getInventory().remove(item);
+            }
         }
     }
 

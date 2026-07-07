@@ -119,10 +119,8 @@ trivia:
 
 minimap:
   radius: 100             # blocks scanned for pokemon/player markers
-  # give every player a PokeNav compass on join. Right-click it to pop the
-  # minimap into the off-hand, where Bedrock/mobile shows it in the screen
-  # corner. Right-click again to hide it.
-  give-compass: true
+  # The PokeMap opens from the main menu ("Get PokeMap"): a corner minimap on
+  # the Java client (off-hand map), or a native radar popup on Bedrock/mobile.
 
 farm:
   grow-seconds: 300       # time for a planted berry to ripen
@@ -164,11 +162,6 @@ menu:
   # give every player a menu item in the hotbar (right-click/tap to open panel)
   give-item: true
   item-slot: 8
-
-items:
-  # dedicated carryable items that open a single panel each (not the shared menu)
-  give-pokedex: true   # a Pokedex book - right-click/tap to open the Pokedex
-  # everything else (party, shop, etc.) lives in the main menu panel
 
 ride:
   speed: 0.45
