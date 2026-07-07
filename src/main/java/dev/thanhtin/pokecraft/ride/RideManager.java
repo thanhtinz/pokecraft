@@ -16,17 +16,21 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Ride your own pokemon: /poke ride <slot> mounts it, it walks (or flies,
- * for FLYING types) wherever you look. Sneak to dismount. Look straight
- * down to stop.
+ * Ride your own pokemon: walk up to your buddy (the pokemon following you)
+ * and tap it to hop on, or /poke ride &lt;slot&gt;. It walks (or flies, for
+ * FLYING types) wherever you look. Sneak to dismount. Look straight down to
+ * stop. When you dismount a buddy you climbed onto, it goes back to walking.
  */
 public class RideManager implements Listener {
     private final PokeCraftPlugin plugin;
     private final Map<UUID, Ride> rides = new ConcurrentHashMap<>();
+    /** riders who mounted their walking buddy - their buddy resumes walking on dismount */
+    private final Set<UUID> resumeWalk = ConcurrentHashMap.newKeySet();
     private BukkitRunnable task;
 
     private record Ride(LivingEntity mount, boolean flying) {}
@@ -83,6 +87,23 @@ public class RideManager implements Listener {
                 NamedTextColor.GREEN));
     }
 
+    /**
+     * Mount the pokemon that is currently walking beside the player (slot 0).
+     * The buddy is put away for the ride and comes back out when you dismount,
+     * so climbing on and off your pokemon is a natural in-world interaction.
+     */
+    public void rideFollower(Player player) {
+        if (plugin.battles().get(player) != null || plugin.pvp().get(player) != null) {
+            player.sendMessage(Component.text("You can't ride during a battle.", NamedTextColor.RED));
+            return;
+        }
+        if (isRiding(player)) { dismount(player); return; }
+        boolean wasWalking = plugin.walkers().isFollowing(player);
+        plugin.walkers().suspend(player);
+        ride(player, 0);
+        if (isRiding(player) && wasWalking) resumeWalk.add(player.getUniqueId());
+    }
+
     public void dismount(Player player) {
         Ride ride = rides.remove(player.getUniqueId());
         if (ride == null) return;
@@ -91,6 +112,7 @@ public class RideManager implements Listener {
             ride.mount().remove();
         }
         player.sendMessage(Component.text("Dismounted.", NamedTextColor.GRAY));
+        if (resumeWalk.remove(player.getUniqueId())) plugin.walkers().resume(player);
     }
 
     private void tick() {

@@ -100,6 +100,20 @@ public class WalkingPokemonManager implements Listener {
         if (e != null && !e.isDead()) e.remove();
     }
 
+    /**
+     * Temporarily put the walking pokemon away without turning the buddy off
+     * (the meta flag stays on). Used when the player climbs onto their buddy to
+     * ride it; {@link #resume(Player)} brings it back out afterwards.
+     */
+    public void suspend(Player player) {
+        despawn(player.getUniqueId());
+    }
+
+    /** Bring the walking pokemon back out after a ride, if it's still enabled. */
+    public void resume(Player player) {
+        if (isEnabled(player.getUniqueId()) && !isFollowing(player)) spawn(player);
+    }
+
     /** Refresh the follower species (e.g. after the lead changed). */
     public void refresh(Player player) {
         if (followers.containsKey(player.getUniqueId())) spawn(player);
@@ -138,6 +152,25 @@ public class WalkingPokemonManager implements Listener {
             Vector look = player.getLocation().toVector().subtract(next.toVector());
             if (look.lengthSquared() > 1e-6) next.setDirection(look);
             follower.teleport(next);
+        }
+    }
+
+    /**
+     * Tap your walking pokemon to hop on and ride it; sneak-tap to recall it.
+     * This makes riding a natural interaction with the pokemon in the world
+     * instead of a menu toggle.
+     */
+    @EventHandler
+    public void onInteract(org.bukkit.event.player.PlayerInteractEntityEvent e) {
+        if (e.getHand() != org.bukkit.inventory.EquipmentSlot.HAND) return;
+        Player player = e.getPlayer();
+        LivingEntity follower = followers.get(player.getUniqueId());
+        if (follower == null || !follower.equals(e.getRightClicked())) return;
+        e.setCancelled(true);
+        if (player.isSneaking()) {
+            toggle(player); // recall the buddy into its ball
+        } else {
+            plugin.rides().rideFollower(player);
         }
     }
 

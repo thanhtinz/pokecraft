@@ -154,9 +154,12 @@ public class MainMenuGui implements Listener {
         inv.setItem(SLOT_MINIGAMES, item(Material.OAK_SIGN, "Minigames", NamedTextColor.GOLD,
                 List.of("Casino, trivia, tic-tac-toe", "and connect four")));
         boolean walking = plugin.walkers().isFollowing(player);
-        inv.setItem(SLOT_WALK, item(Material.LEAD, "Walking Pokemon: " + (walking ? "ON" : "OFF"),
+        inv.setItem(SLOT_WALK, item(Material.LEAD,
+                walking ? "Buddy: out with you" : "Send out your Buddy",
                 walking ? NamedTextColor.GREEN : NamedTextColor.GRAY,
-                List.of("Your lead pokemon follows you", "Tap to toggle")));
+                walking ? List.of("Your lead pokemon walks beside you",
+                                "Tap it in-world to ride it", "Sneak-tap it to put it away")
+                        : List.of("Send your lead pokemon out to walk", "Then tap it to ride")));
 
         inv.setItem(SLOT_PARTY, item(Material.PLAYER_HEAD, "Party", NamedTextColor.AQUA,
                 List.of("View, reorder and manage", "your 6 party pokemon")));
@@ -167,8 +170,9 @@ public class MainMenuGui implements Listener {
         inv.setItem(SLOT_DAYCARE, item(Material.TURTLE_EGG, "Daycare", NamedTextColor.YELLOW,
                 List.of("Drop pokemon off to level up", "Two compatible ones may breed")));
         inv.setItem(SLOT_RIDE, item(Material.SADDLE,
-                plugin.rides().isRiding(player) ? "Dismount" : "Ride a Pokemon", NamedTextColor.AQUA,
-                List.of("Mount a party pokemon", "FLYING types can fly - sneak to dismount")));
+                plugin.rides().isRiding(player) ? "Dismount" : "Ride your Buddy", NamedTextColor.AQUA,
+                List.of("Tap your walking pokemon to ride it",
+                        "FLYING types can fly - sneak to dismount")));
 
         String challenger = plugin.pvp().pendingChallengerName(player);
         inv.setItem(SLOT_DUEL, item(Material.IRON_SWORD,
@@ -276,11 +280,15 @@ public class MainMenuGui implements Listener {
                 }
                 case SLOT_RIDE -> {
                     if (blocked(player, inBattle)) return;
+                    player.closeInventory();
                     if (plugin.rides().isRiding(player)) {
                         plugin.rides().dismount(player);
-                        player.closeInventory();
+                    } else if (plugin.walkers().isFollowing(player)) {
+                        plugin.rides().rideFollower(player);
                     } else {
-                        plugin.ridePickerUi().open(player);
+                        plugin.walkers().toggle(player); // send buddy out
+                        player.sendMessage(Component.text(
+                                "Tap your pokemon to hop on and ride it.", NamedTextColor.AQUA));
                     }
                 }
                 case SLOT_DUEL -> {
