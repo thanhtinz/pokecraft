@@ -42,7 +42,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class NpcManager implements Listener {
 
-    public enum NpcType { HEALER, VENDOR, TRAINER, GYM }
+    public enum NpcType { HEALER, VENDOR, TRAINER, GYM, DAYCARE, PC, TUTOR }
 
     /** Serialized trainer data stored in the npcs table. */
     public static class TrainerData {
@@ -108,6 +108,9 @@ public class NpcManager implements Listener {
             case VENDOR -> NamedTextColor.GREEN;
             case TRAINER -> NamedTextColor.RED;
             case GYM -> NamedTextColor.GOLD;
+            case DAYCARE -> NamedTextColor.YELLOW;
+            case PC -> NamedTextColor.AQUA;
+            case TUTOR -> NamedTextColor.BLUE;
         }));
         entity.setCustomNameVisible(true);
         entity.getPersistentDataContainer().set(keyNpc, PersistentDataType.BYTE, (byte) 1);
@@ -244,6 +247,18 @@ public class NpcManager implements Listener {
                 plugin.shop().open(player);
             }
             case TRAINER, GYM -> startTrainer(player, e.getRightClicked(), row);
+            case DAYCARE -> {
+                if (inBattle(player)) return;
+                plugin.daycareUi().open(player);
+            }
+            case PC -> {
+                if (inBattle(player)) return;
+                plugin.pcUi().open(player, 0);
+            }
+            case TUTOR -> {
+                if (inBattle(player)) return;
+                plugin.partyUi().open(player); // pick a pokemon -> its Move Tutor button
+            }
         }
     }
 

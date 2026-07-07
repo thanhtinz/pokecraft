@@ -351,6 +351,9 @@ public class PokeCommand implements TabExecutor {
                     case VENDOR -> "Shop Keeper";
                     case TRAINER -> "Trainer";
                     case GYM -> "Gym Leader";
+                    case DAYCARE -> "Day-Care Man";
+                    case PC -> "PC Attendant";
+                    case TUTOR -> "Move Tutor";
                 };
         plugin.npcs().create(player, type, name, level);
     }

@@ -66,6 +66,9 @@ models:
     VENDOR: ''
     TRAINER: ''
     GYM: ''
+    DAYCARE: ''
+    PC: ''
+    TUTOR: ''
 
 movetutor:
   cost: 500                  # PokeDollars to relearn one move
