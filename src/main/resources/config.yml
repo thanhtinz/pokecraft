@@ -72,7 +72,8 @@ npc:
   trainer-cooldown-minutes: 30
 
 minigame:
-  board-reward: 500       # money for beating the AI at a board game
+  board-reward: 500       # money for beating the AI (or a per-step stake in Higher/Lower)
+  board-pvp-reward: 1000  # money the winner of a 2-player board game receives
 
 casino:
   slot-cost: 500

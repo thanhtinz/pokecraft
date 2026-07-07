@@ -223,9 +223,14 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] PokeMap: item bản đồ (filled map) chạy CẢ mobile qua Geyser (overlay
       minimap mod client-only không hiện trên Bedrock), tự bám theo player,
       chấm đỏ = pokemon hoang, mũi tên = người chơi
-- [x] Minigame hub (menu -> Minigames): Casino (tung xu/slot máy), Trivia
-      (đố vui pokemon), Tic-Tac-Toe & Connect Four (đấu AI) - đều chest GUI
-      chạy PC + mobile, thắng được thưởng tiền
+- [x] Minigame hub (menu -> Minigames) - tất cả chest GUI chạy PC + mobile,
+      thắng được thưởng tiền:
+  - Solo: Casino (tung xu/slot máy), Trivia (đố vui pokemon), Tic-Tac-Toe &
+    Connect Four đấu AI, Minesweeper (dò mìn 5x5, reveal-only cho mobile),
+    Higher/Lower (đoán lá bài, giữ streak rồi cash out)
+  - PvP 2 người: Tic-Tac-Toe & Connect Four - mời người chơi khác (panel picker
+    -> confirm GUI), cả 2 mở CHUNG 1 bàn nên nước đi hiện realtime, winner
+    nhận thưởng (minigame.board-pvp-reward)
 
 ## OP Setup Panel
 

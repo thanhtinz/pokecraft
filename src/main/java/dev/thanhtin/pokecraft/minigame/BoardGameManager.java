@@ -44,13 +44,39 @@ public class BoardGameManager implements Listener {
         @Override public Inventory getInventory() { return inventory; }
     }
 
+    // Minesweeper: 5x5 grid, reveal-only (mobile-safe, no flagging)
+    private static final int MINES_COLS = 5, MINES_ROWS = 5, MINES_COUNT = 5;
+
+    private static class MinesHolder implements InventoryHolder {
+        final boolean[] mine = new boolean[MINES_COLS * MINES_ROWS];
+        final boolean[] shown = new boolean[MINES_COLS * MINES_ROWS];
+        boolean over;
+        boolean seeded;
+        Inventory inventory;
+        @Override public Inventory getInventory() { return inventory; }
+    }
+
+    private static class HlHolder implements InventoryHolder {
+        int current;   // 1..13 card value
+        int streak;
+        long pot;
+        boolean over;
+        Inventory inventory;
+        @Override public Inventory getInventory() { return inventory; }
+    }
+
     public BoardGameManager(PokeCraftPlugin plugin) {
         this.plugin = plugin;
     }
 
     public void play(Player player, String game) {
-        if ("tictactoe".equals(game)) openTtt(player, new TttHolder());
-        else if ("connect4".equals(game)) openC4(player, new C4Holder());
+        switch (game) {
+            case "tictactoe" -> openTtt(player, new TttHolder());
+            case "connect4" -> openC4(player, new C4Holder());
+            case "minesweeper" -> openMines(player, new MinesHolder());
+            case "higherlower" -> openHl(player, new HlHolder());
+            default -> {}
+        }
     }
 
     private long reward() {
@@ -209,6 +235,169 @@ public class BoardGameManager implements Listener {
         return true;
     }
 
+    // ---------- Minesweeper ----------
+
+    private void openMines(Player player, MinesHolder holder) {
+        Inventory inv = plugin.getServer().createInventory(holder, 45,
+                Component.text("Minesweeper - clear all safe tiles"));
+        holder.inventory = inv;
+        for (int r = 0; r < MINES_ROWS; r++) {
+            for (int c = 0; c < MINES_COLS; c++) {
+                inv.setItem(r * 9 + c, mineCell(holder, r * MINES_COLS + c));
+            }
+        }
+        GuiFiller.fill(inv);
+        player.openInventory(inv);
+    }
+
+    private ItemStack mineCell(MinesHolder h, int idx) {
+        if (!h.shown[idx]) {
+            ItemStack item = new ItemStack(h.over && h.mine[idx] ? Material.TNT : Material.LIGHT_GRAY_STAINED_GLASS_PANE);
+            ItemMeta meta = item.getItemMeta();
+            meta.displayName(Component.text(h.over && h.mine[idx] ? "Mine" : "Hidden",
+                    h.over && h.mine[idx] ? NamedTextColor.RED : NamedTextColor.GRAY));
+            item.setItemMeta(meta);
+            return item;
+        }
+        int n = mineNeighbours(h, idx);
+        ItemStack item = new ItemStack(n == 0 ? Material.LIME_STAINED_GLASS_PANE : Material.PAPER);
+        ItemMeta meta = item.getItemMeta();
+        if (n > 0) item.setAmount(n);
+        meta.displayName(Component.text(n == 0 ? "Clear" : (n + " nearby"),
+                NamedTextColor.WHITE));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    private int mineNeighbours(MinesHolder h, int idx) {
+        int r = idx / MINES_COLS, c = idx % MINES_COLS, n = 0;
+        for (int dr = -1; dr <= 1; dr++) for (int dc = -1; dc <= 1; dc++) {
+            if (dr == 0 && dc == 0) continue;
+            int nr = r + dr, nc = c + dc;
+            if (nr < 0 || nr >= MINES_ROWS || nc < 0 || nc >= MINES_COLS) continue;
+            if (h.mine[nr * MINES_COLS + nc]) n++;
+        }
+        return n;
+    }
+
+    private void handleMines(Player player, MinesHolder h, int rawSlot) {
+        if (h.over || rawSlot >= 45) return;
+        int r = rawSlot / 9, c = rawSlot % 9;
+        if (r >= MINES_ROWS || c >= MINES_COLS) return;
+        int idx = r * MINES_COLS + c;
+        if (h.shown[idx]) return;
+        if (!h.seeded) seedMines(h, idx); // first click is always safe
+        if (h.mine[idx]) {
+            h.over = true;
+            for (int i = 0; i < h.mine.length; i++) if (h.mine[i]) h.shown[i] = false;
+            openMines(player, h);
+            payout(player, false, "Boom! You hit a mine.");
+            return;
+        }
+        reveal(h, idx);
+        boolean win = true;
+        for (int i = 0; i < h.mine.length; i++) if (!h.mine[i] && !h.shown[i]) win = false;
+        if (win) {
+            h.over = true;
+            openMines(player, h);
+            payout(player, true, "Swept the field!");
+        } else {
+            openMines(player, h);
+        }
+    }
+
+    private void seedMines(MinesHolder h, int safeIdx) {
+        ThreadLocalRandom rnd = ThreadLocalRandom.current();
+        int placed = 0;
+        while (placed < MINES_COUNT) {
+            int i = rnd.nextInt(h.mine.length);
+            if (i == safeIdx || h.mine[i]) continue;
+            h.mine[i] = true;
+            placed++;
+        }
+        h.seeded = true;
+    }
+
+    /** Flood-reveal from a zero-neighbour tile. */
+    private void reveal(MinesHolder h, int idx) {
+        if (h.shown[idx] || h.mine[idx]) return;
+        h.shown[idx] = true;
+        if (mineNeighbours(h, idx) != 0) return;
+        int r = idx / MINES_COLS, c = idx % MINES_COLS;
+        for (int dr = -1; dr <= 1; dr++) for (int dc = -1; dc <= 1; dc++) {
+            int nr = r + dr, nc = c + dc;
+            if (nr < 0 || nr >= MINES_ROWS || nc < 0 || nc >= MINES_COLS) continue;
+            reveal(h, nr * MINES_COLS + nc);
+        }
+    }
+
+    // ---------- Higher or Lower ----------
+
+    private void openHl(Player player, HlHolder holder) {
+        if (holder.current == 0) holder.current = ThreadLocalRandom.current().nextInt(1, 14);
+        Inventory inv = plugin.getServer().createInventory(holder, 27,
+                Component.text("Higher or Lower - streak " + holder.streak));
+        holder.inventory = inv;
+
+        ItemStack card = new ItemStack(Material.PAPER);
+        card.setAmount(Math.max(1, holder.current));
+        ItemMeta cm = card.getItemMeta();
+        cm.displayName(Component.text("Card: " + holder.current + " (1-13)", NamedTextColor.YELLOW));
+        cm.lore(List.of(Component.text("Pot: " + plugin.economy().format(holder.pot), NamedTextColor.GRAY),
+                Component.text("Guess the next card", NamedTextColor.GRAY)));
+        card.setItemMeta(cm);
+        inv.setItem(4, card);
+
+        inv.setItem(10, hlButton(Material.LIME_WOOL, "Higher"));
+        inv.setItem(12, hlButton(Material.RED_WOOL, "Lower"));
+        inv.setItem(16, hlButton(Material.GOLD_INGOT, "Cash out"));
+        GuiFiller.fill(inv);
+        player.openInventory(inv);
+    }
+
+    private ItemStack hlButton(Material m, String name) {
+        ItemStack item = new ItemStack(m);
+        ItemMeta meta = item.getItemMeta();
+        meta.displayName(Component.text(name, NamedTextColor.AQUA));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    private void handleHl(Player player, HlHolder h, int slot) {
+        if (h.over) return;
+        long step = plugin.getConfig().getLong("minigame.board-reward", 500);
+        if (slot == 16) { // cash out
+            h.over = true;
+            if (h.pot > 0) {
+                plugin.economy().deposit(player.getUniqueId(), h.pot);
+                player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1f, 1.3f);
+                player.sendMessage(Component.text("Cashed out " + plugin.economy().format(h.pot)
+                        + " (streak " + h.streak + ")", NamedTextColor.GREEN));
+            }
+            player.closeInventory();
+            return;
+        }
+        if (slot != 10 && slot != 12) return;
+        boolean guessHigher = slot == 10;
+        int next = ThreadLocalRandom.current().nextInt(1, 14);
+        boolean correct = next == h.current
+                ? true // a tie is generously counted as a win
+                : (guessHigher ? next > h.current : next < h.current);
+        h.current = next;
+        if (correct) {
+            h.streak++;
+            h.pot += step;
+            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1f, 1.4f);
+            openHl(player, h);
+        } else {
+            h.over = true;
+            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 1f, 0.7f);
+            player.sendMessage(Component.text("Wrong! It was " + next + ". You lose the pot of "
+                    + plugin.economy().format(h.pot) + ".", NamedTextColor.RED));
+            player.closeInventory();
+        }
+    }
+
     // ---------- shared ----------
 
     private void payout(Player player, boolean won, String msg) {
@@ -231,6 +420,12 @@ public class BoardGameManager implements Listener {
         } else if (e.getInventory().getHolder() instanceof C4Holder h) {
             e.setCancelled(true);
             handleC4(player, h, e.getRawSlot());
+        } else if (e.getInventory().getHolder() instanceof MinesHolder h) {
+            e.setCancelled(true);
+            handleMines(player, h, e.getRawSlot());
+        } else if (e.getInventory().getHolder() instanceof HlHolder h) {
+            e.setCancelled(true);
+            handleHl(player, h, e.getRawSlot());
         }
     }
 }

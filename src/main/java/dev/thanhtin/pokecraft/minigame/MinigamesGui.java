@@ -35,17 +35,28 @@ public class MinigamesGui implements Listener {
 
     public void open(Player player) {
         Holder holder = new Holder();
-        Inventory inv = plugin.getServer().createInventory(holder, 27, Component.text("Minigames"));
+        Inventory inv = plugin.getServer().createInventory(holder, 45, Component.text("Minigames"));
         holder.inventory = inv;
 
+        // solo games
         inv.setItem(10, game("casino", Material.GOLD_INGOT, "Casino",
                 List.of("Coin flip and slot machine", "Bet your PokeDollars")));
-        inv.setItem(12, game("trivia", Material.BOOK, "Trivia Quiz",
+        inv.setItem(11, game("trivia", Material.BOOK, "Trivia Quiz",
                 List.of("Answer pokemon questions", "for a money reward")));
-        inv.setItem(14, game("tictactoe", Material.OAK_SIGN, "Tic-Tac-Toe",
+        inv.setItem(12, game("tictactoe", Material.OAK_SIGN, "Tic-Tac-Toe (vs AI)",
                 List.of("Beat the AI in a 3x3 grid", "for a small reward")));
-        inv.setItem(16, game("connect4", Material.BLUE_WOOL, "Connect Four",
+        inv.setItem(13, game("connect4", Material.BLUE_WOOL, "Connect Four (vs AI)",
                 List.of("Line up 4 vs the AI", "for a reward")));
+        inv.setItem(14, game("minesweeper", Material.TNT, "Minesweeper",
+                List.of("Clear every safe tile", "without hitting a mine")));
+        inv.setItem(15, game("higherlower", Material.PAPER, "Higher or Lower",
+                List.of("Guess the next card", "Build a streak, then cash out")));
+
+        // two-player games (invite another player)
+        inv.setItem(29, game("pvp_ttt", Material.CRIMSON_SIGN, "Tic-Tac-Toe (PvP)",
+                List.of("Challenge another player", "Winner takes the reward")));
+        inv.setItem(30, game("pvp_c4", Material.RED_WOOL, "Connect Four (PvP)",
+                List.of("Challenge another player", "Winner takes the reward")));
 
         GuiFiller.fill(inv);
         player.openInventory(inv);
@@ -77,7 +88,12 @@ public class MinigamesGui implements Listener {
             switch (game) {
                 case "casino" -> plugin.casinoUi().open(player);
                 case "trivia" -> plugin.triviaUi().open(player);
-                case "tictactoe", "connect4" -> plugin.boardGames().play(player, game);
+                case "tictactoe", "connect4", "minesweeper", "higherlower" ->
+                        plugin.boardGames().play(player, game);
+                case "pvp_ttt" -> plugin.playerPickerUi().open(player,
+                        dev.thanhtin.pokecraft.ui.PlayerPickerGui.Purpose.BOARD_TTT);
+                case "pvp_c4" -> plugin.playerPickerUi().open(player,
+                        dev.thanhtin.pokecraft.ui.PlayerPickerGui.Purpose.BOARD_C4);
                 default -> {}
             }
         });

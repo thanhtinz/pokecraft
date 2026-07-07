@@ -9,6 +9,7 @@ import dev.thanhtin.pokecraft.daycare.DaycareManager;
 import dev.thanhtin.pokecraft.dungeon.DungeonManager;
 import dev.thanhtin.pokecraft.economy.EconomyManager;
 import dev.thanhtin.pokecraft.minigame.BoardGameManager;
+import dev.thanhtin.pokecraft.minigame.BoardPvpManager;
 import dev.thanhtin.pokecraft.minigame.CasinoGui;
 import dev.thanhtin.pokecraft.minigame.MinigamesGui;
 import dev.thanhtin.pokecraft.minigame.TriviaGui;
@@ -95,6 +96,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private CasinoGui casinoGui;
     private TriviaGui triviaGui;
     private BoardGameManager boardGameManager;
+    private BoardPvpManager boardPvpManager;
     private MinigamesGui minigamesGui;
     private PvpBattleManager pvpManager;
     private EconomyManager economyManager;
@@ -159,6 +161,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         casinoGui = new CasinoGui(this);
         triviaGui = new TriviaGui(this);
         boardGameManager = new BoardGameManager(this);
+        boardPvpManager = new BoardPvpManager(this);
         minigamesGui = new MinigamesGui(this);
         pvpManager = new PvpBattleManager(this);
         economyManager = new EconomyManager(this);
@@ -203,6 +206,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(casinoGui, this);
         getServer().getPluginManager().registerEvents(triviaGui, this);
         getServer().getPluginManager().registerEvents(boardGameManager, this);
+        getServer().getPluginManager().registerEvents(boardPvpManager, this);
         getServer().getPluginManager().registerEvents(minigamesGui, this);
         getServer().getPluginManager().registerEvents(pvpManager, this);
         getServer().getPluginManager().registerEvents(economyManager, this);
@@ -275,6 +279,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public CasinoGui casinoUi() { return casinoGui; }
     public TriviaGui triviaUi() { return triviaGui; }
     public BoardGameManager boardGames() { return boardGameManager; }
+    public BoardPvpManager boardPvp() { return boardPvpManager; }
     public MinigamesGui minigamesUi() { return minigamesGui; }
     public PvpBattleManager pvp() { return pvpManager; }
     public EconomyManager economy() { return economyManager; }

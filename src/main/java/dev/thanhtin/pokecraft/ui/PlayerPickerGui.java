@@ -21,7 +21,7 @@ import java.util.List;
 /** Picks an online player as the target of a duel challenge or a proposal. */
 public class PlayerPickerGui implements Listener {
 
-    public enum Purpose { DUEL, MARRY, TRADE, PAY }
+    public enum Purpose { DUEL, MARRY, TRADE, PAY, BOARD_TTT, BOARD_C4 }
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyTarget;
@@ -46,6 +46,8 @@ public class PlayerPickerGui implements Listener {
                     case MARRY -> "Propose to whom?";
                     case TRADE -> "Trade with whom?";
                     case PAY -> "Pay whom?";
+                    case BOARD_TTT -> "Tic-Tac-Toe with whom?";
+                    case BOARD_C4 -> "Connect Four with whom?";
                 }));
         holder.inventory = inv;
 
@@ -67,6 +69,7 @@ public class PlayerPickerGui implements Listener {
                     case MARRY -> "Click to propose";
                     case TRADE -> "Click to request a trade";
                     case PAY -> "Click to send money";
+                    case BOARD_TTT, BOARD_C4 -> "Click to invite";
                 }, NamedTextColor.GRAY)));
             meta.getPersistentDataContainer().set(keyTarget, PersistentDataType.STRING, other.getName());
             head.setItemMeta(meta);
@@ -75,7 +78,9 @@ public class PlayerPickerGui implements Listener {
         if (slot == 0) {
             ItemStack none = new ItemStack(Material.BARRIER);
             ItemMeta meta = none.getItemMeta();
-            meta.displayName(Component.text(purpose == Purpose.MARRY
+            boolean anywhere = purpose == Purpose.MARRY || purpose == Purpose.PAY
+                    || purpose == Purpose.BOARD_TTT || purpose == Purpose.BOARD_C4;
+            meta.displayName(Component.text(anywhere
                     ? "No other players online" : "No players nearby", NamedTextColor.RED));
             none.setItemMeta(meta);
             inv.setItem(22, none);
@@ -105,6 +110,8 @@ public class PlayerPickerGui implements Listener {
                 case MARRY -> plugin.marriage().propose(player, target);
                 case TRADE -> plugin.trades().request(player, target);
                 case PAY -> plugin.payUi().open(player, target.getName());
+                case BOARD_TTT -> plugin.boardPvp().challenge(player, target, "tictactoe");
+                case BOARD_C4 -> plugin.boardPvp().challenge(player, target, "connect4");
             }
         });
     }
