@@ -43,7 +43,8 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 - [x] Abilities: mỗi pokemon có 1 đặc tính (từ data Cobblemon, 1/20 ra hidden),
       hiện ở Summary; ~20 đặc tính tác động sát thương đã hoạt động trong battle:
       Levitate/Flash Fire/Water-Volt Absorb/Sap Sipper (miễn nhiễm hệ),
-      Thick Fat/Heatproof/Multiscale/Filter-Solid Rock (giảm sát thương),
+      Thick Fat/Heatproof/Multiscale/Filter-Solid Rock/Fur Coat-Fluffy (giảm
+      physical)/Ice Scales (giảm special)/Wonder Guard (chỉ ăn chiêu khắc hệ),
       Huge Power/Pure Power/Hustle/Guts (tăng công), Sturdy (trụ 1 HP khi full),
       Rough Skin/Iron Barbs (phản 1/8), Speed Boost (+1 speed mỗi lượt),
       Overgrow/Blaze/Torrent/Swarm

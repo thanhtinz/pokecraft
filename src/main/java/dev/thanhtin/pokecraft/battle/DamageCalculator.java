@@ -79,6 +79,10 @@ public final class DamageCalculator {
         for (PokemonType t : defenderSpecies.types) {
             effectiveness *= move.type.effectivenessAgainst(t);
         }
+        // Wonder Guard: only a super-effective damaging move gets through
+        if (Abilities.wonderGuard(defenderAbility) && effectiveness <= 1.0) {
+            return new Result(0, effectiveness, false, false);
+        }
         double stab = attackerSpecies.types.contains(move.type) ? 1.5 : 1.0;
         double held = (physical && attacker.holds("muscle_band"))
                 || (!physical && attacker.holds("wise_glasses")) ? 1.1 : 1.0;
@@ -87,7 +91,7 @@ public final class DamageCalculator {
         double random = rnd.nextDouble(0.85, 1.0);
 
         boolean atFullHp = defender.currentHp >= defender.maxHp(defenderSpecies);
-        double abilityDef = Abilities.defenseMultiplier(defenderAbility, move.type, effectiveness, atFullHp);
+        double abilityDef = Abilities.defenseMultiplier(defenderAbility, move.type, effectiveness, atFullHp, physical);
 
         double base = ((2.0 * attacker.level / 5.0 + 2.0) * move.power * atk / Math.max(1.0, def)) / 50.0 + 2.0;
         int damage = (int) Math.max(effectiveness == 0 ? 0 : 1,

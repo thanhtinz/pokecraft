@@ -64,15 +64,22 @@ public final class Abilities {
 
     /** Multiplier applied to the damage the defender takes. */
     public static double defenseMultiplier(String defenderAbility, PokemonType moveType,
-                                           double effectiveness, boolean atFullHp) {
+                                           double effectiveness, boolean atFullHp, boolean physical) {
         String a = norm(defenderAbility);
         double m = 1.0;
         if (a.equals("thickfat") && (moveType == PokemonType.FIRE || moveType == PokemonType.ICE)) m *= 0.5;
         if (a.equals("heatproof") && moveType == PokemonType.FIRE) m *= 0.5;
         if (a.equals("multiscale") && atFullHp) m *= 0.5;
+        if ((a.equals("furcoat") || a.equals("fluffy")) && physical) m *= 0.5;
+        if (a.equals("icescales") && !physical) m *= 0.5;
         if ((a.equals("filter") || a.equals("solidrock") || a.equals("prismarmor")) && effectiveness > 1.0) {
             m *= 0.75;
         }
         return m;
+    }
+
+    /** Wonder Guard: only super-effective damaging moves land (Shedinja). */
+    public static boolean wonderGuard(String defenderAbility) {
+        return norm(defenderAbility).equals("wonderguard");
     }
 }

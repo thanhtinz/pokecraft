@@ -34,13 +34,24 @@ class AbilitiesTest {
 
     @Test
     void defensiveMultipliers() {
-        assertEquals(0.5, Abilities.defenseMultiplier("thick-fat", PokemonType.FIRE, 1.0, false));
-        assertEquals(0.5, Abilities.defenseMultiplier("thick-fat", PokemonType.ICE, 1.0, false));
-        assertEquals(1.0, Abilities.defenseMultiplier("thick-fat", PokemonType.WATER, 1.0, false));
-        assertEquals(0.5, Abilities.defenseMultiplier("multiscale", PokemonType.NORMAL, 1.0, true));
-        assertEquals(1.0, Abilities.defenseMultiplier("multiscale", PokemonType.NORMAL, 1.0, false));
-        assertEquals(0.75, Abilities.defenseMultiplier("filter", PokemonType.FIRE, 2.0, false));
-        assertEquals(1.0, Abilities.defenseMultiplier("filter", PokemonType.FIRE, 1.0, false));
+        assertEquals(0.5, Abilities.defenseMultiplier("thick-fat", PokemonType.FIRE, 1.0, false, true));
+        assertEquals(0.5, Abilities.defenseMultiplier("thick-fat", PokemonType.ICE, 1.0, false, false));
+        assertEquals(1.0, Abilities.defenseMultiplier("thick-fat", PokemonType.WATER, 1.0, false, true));
+        assertEquals(0.5, Abilities.defenseMultiplier("multiscale", PokemonType.NORMAL, 1.0, true, true));
+        assertEquals(1.0, Abilities.defenseMultiplier("multiscale", PokemonType.NORMAL, 1.0, false, true));
+        assertEquals(0.75, Abilities.defenseMultiplier("filter", PokemonType.FIRE, 2.0, false, false));
+        assertEquals(1.0, Abilities.defenseMultiplier("filter", PokemonType.FIRE, 1.0, false, false));
+        // Fur Coat halves physical only; Ice Scales halves special only
+        assertEquals(0.5, Abilities.defenseMultiplier("fur-coat", PokemonType.NORMAL, 1.0, false, true));
+        assertEquals(1.0, Abilities.defenseMultiplier("fur-coat", PokemonType.NORMAL, 1.0, false, false));
+        assertEquals(0.5, Abilities.defenseMultiplier("ice-scales", PokemonType.NORMAL, 1.0, false, false));
+        assertEquals(1.0, Abilities.defenseMultiplier("ice-scales", PokemonType.NORMAL, 1.0, false, true));
+    }
+
+    @Test
+    void wonderGuardRecognised() {
+        assertTrue(Abilities.wonderGuard("wonder-guard"));
+        assertFalse(Abilities.wonderGuard("levitate"));
     }
 
     @Test
