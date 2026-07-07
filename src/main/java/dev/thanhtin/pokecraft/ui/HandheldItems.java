@@ -11,9 +11,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -105,6 +107,19 @@ public class HandheldItems implements Listener {
     @EventHandler
     public void onDrop(PlayerDropItemEvent e) {
         if (idOf(e.getItemDrop().getItemStack()) != null) e.setCancelled(true);
+    }
+
+    /** Don't drop the Pokedex on death - it's re-given on respawn. */
+    @EventHandler
+    public void onDeath(PlayerDeathEvent e) {
+        e.getDrops().removeIf(item -> idOf(item) != null);
+    }
+
+    /** Hand the Pokedex back after respawning so death never loses it. */
+    @EventHandler
+    public void onRespawn(PlayerRespawnEvent e) {
+        Player player = e.getPlayer();
+        plugin.getServer().getScheduler().runTask(plugin, () -> cleanupAndGive(player));
     }
 
     @EventHandler

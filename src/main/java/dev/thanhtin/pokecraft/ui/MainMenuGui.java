@@ -10,9 +10,11 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
@@ -84,8 +86,12 @@ public class MainMenuGui implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
+        giveMenuItem(e.getPlayer());
+    }
+
+    /** Give the hotbar menu item if enabled and the player doesn't already have it. */
+    public void giveMenuItem(Player player) {
         if (!plugin.getConfig().getBoolean("menu.give-item", true)) return;
-        Player player = e.getPlayer();
         for (ItemStack item : player.getInventory().getContents()) {
             if (isMenuItem(item)) return;
         }
@@ -95,6 +101,19 @@ public class MainMenuGui implements Listener {
         } else {
             player.getInventory().addItem(createMenuItem());
         }
+    }
+
+    /** Don't drop the menu item on death - it's re-given on respawn. */
+    @EventHandler
+    public void onDeath(PlayerDeathEvent e) {
+        e.getDrops().removeIf(this::isMenuItem);
+    }
+
+    /** Hand the menu item back after respawning so death never loses it. */
+    @EventHandler
+    public void onRespawn(PlayerRespawnEvent e) {
+        Player player = e.getPlayer();
+        plugin.getServer().getScheduler().runTask(plugin, () -> giveMenuItem(player));
     }
 
     @EventHandler
