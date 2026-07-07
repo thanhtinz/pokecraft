@@ -119,6 +119,10 @@ trivia:
 
 minimap:
   radius: 100             # blocks scanned for pokemon/player markers
+  # give every player a PokeNav compass on join. Right-click it to pop the
+  # minimap into the off-hand, where Bedrock/mobile shows it in the screen
+  # corner. Right-click again to hide it.
+  give-compass: true
 
 farm:
   grow-seconds: 300       # time for a planted berry to ripen

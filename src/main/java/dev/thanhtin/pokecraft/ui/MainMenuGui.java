@@ -148,7 +148,7 @@ public class MainMenuGui implements Listener {
                 List.of("Win battles to earn PokeDollars", "Click to send money to a player")));
 
         inv.setItem(SLOT_MAP, item(Material.FILLED_MAP, "Get PokeMap", NamedTextColor.AQUA,
-                List.of("A minimap that works on mobile", "Shows wild pokemon + players")));
+                List.of("Shows a corner minimap on mobile", "Toggle it with the PokeNav compass")));
         inv.setItem(SLOT_MINIGAMES, item(Material.OAK_SIGN, "Minigames", NamedTextColor.GOLD,
                 List.of("Casino, trivia, tic-tac-toe", "and connect four")));
 
