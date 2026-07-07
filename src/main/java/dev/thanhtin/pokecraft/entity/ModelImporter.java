@@ -104,6 +104,16 @@ public class ModelImporter {
         return i >= 0 ? n.substring(0, i) : n;
     }
 
+    private File firstPngIn(File dir) {
+        if (dir == null) return null;
+        File[] files = dir.listFiles();
+        if (files == null) return null;
+        for (File f : files) {
+            if (f.isFile() && f.getName().toLowerCase(Locale.ROOT).endsWith(".png")) return f;
+        }
+        return null;
+    }
+
     private File findByStem(File root, String stem, String suffix) {
         File[] files = root.listFiles();
         if (files == null) return null;
@@ -128,6 +138,7 @@ public class ModelImporter {
         String name = stem(geoFile).toLowerCase(Locale.ROOT);
 
         File tex = findByStem(importRoot, stem(geoFile), ".png");
+        if (tex == null) tex = firstPngIn(geoFile.getParentFile()); // Cobblemon: texture beside the model
         String texB64 = null;
         if (tex != null) {
             texB64 = Base64.getEncoder().encodeToString(Files.readAllBytes(tex.toPath()));
