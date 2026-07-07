@@ -54,6 +54,9 @@ pvp:
   win-reward: 250
   max-distance: 50        # blocks between challenger and target
 
+trade:
+  max-distance: 50        # blocks between the two traders
+
 marriage:
   exp-bonus: 1.1          # battle exp multiplier while the spouse is online
 

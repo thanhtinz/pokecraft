@@ -40,6 +40,7 @@ public class MainMenuGui implements Listener {
     private static final int SLOT_BALANCE = 4;
     private static final int SLOT_MARRY = 22;
     private static final int SLOT_DEX = 21;
+    private static final int SLOT_TRADE = 23;
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyMenuItem;
@@ -150,6 +151,12 @@ public class MainMenuGui implements Listener {
         inv.setItem(SLOT_DEX, item(Material.BOOK, "Pokedex", NamedTextColor.RED,
                 List.of("Your seen/caught progress", "across the whole dex")));
 
+        String trader = plugin.trades().pendingRequesterName(player);
+        inv.setItem(SLOT_TRADE, item(Material.EMERALD, trader != null
+                        ? "Accept trade from " + trader : "Trade", NamedTextColor.GREEN,
+                trader != null ? List.of(trader + " wants to trade!", "Click to accept")
+                        : List.of("Swap pokemon with", "a nearby player")));
+
         String proposer = plugin.marriage().pendingProposerName(player);
         UUID spouse = plugin.marriage().spouseOf(player.getUniqueId());
         String marryLabel;
@@ -226,6 +233,15 @@ public class MainMenuGui implements Listener {
                 }
                 case SLOT_TOP -> plugin.leaderboardUi().open(player);
                 case SLOT_DEX -> plugin.pokedexUi().open(player, 0);
+                case SLOT_TRADE -> {
+                    if (blocked(player, inBattle)) return;
+                    if (plugin.trades().pendingRequesterName(player) != null) {
+                        player.closeInventory();
+                        plugin.trades().accept(player);
+                    } else {
+                        plugin.playerPickerUi().open(player, PlayerPickerGui.Purpose.TRADE);
+                    }
+                }
                 case SLOT_MARRY -> {
                     if (plugin.marriage().pendingProposerName(player) != null) {
                         player.closeInventory();

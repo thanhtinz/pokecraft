@@ -116,7 +116,9 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
       ô held item (click để tháo)
 - [x] PC box GUI phân trang (45/trang), click để rút về party
 - [x] /poke nickname, /poke release (xác nhận 2 lần trong 15s)
-- [ ] Trade giữa 2 player
+- [x] Trade giữa 2 player: /poke trade <player>, GUI 2 bên - mỗi người
+      offer 1 pokemon, đổi khi CẢ HAI xác nhận; đổi chủ sở hữu + cập nhật
+      Pokedex người nhận; đổi offer reset xác nhận; thoát/quit hủy trade
 
 ## Economy / Shop
 
@@ -167,7 +169,7 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
 
 - [x] Item menu (Nether Star) phát khi join, right-click/tap để mở panel
       (không cần gõ lệnh; chest GUI nên Bedrock/Geyser dùng được luôn)
-- [x] Hub: Party / PC Box / Shop / Daycare / Ride / Duel / Leaderboard /
+- [x] Hub: Party / PC Box / Shop / Daycare / Ride / Duel / Trade / Leaderboard /
       Pokedex / Marriage / Balance
 - [x] GUI chọn người chơi cho Duel (lọc theo khoảng cách) và Marry
 - [x] GUI chọn pokemon để cưỡi; GUI daycare gửi/rút trực quan

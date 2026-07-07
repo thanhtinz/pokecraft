@@ -21,7 +21,7 @@ import java.util.List;
 /** Picks an online player as the target of a duel challenge or a proposal. */
 public class PlayerPickerGui implements Listener {
 
-    public enum Purpose { DUEL, MARRY }
+    public enum Purpose { DUEL, MARRY, TRADE }
 
     private final PokeCraftPlugin plugin;
     private final NamespacedKey keyTarget;
@@ -41,7 +41,11 @@ public class PlayerPickerGui implements Listener {
     public void open(Player player, Purpose purpose) {
         Holder holder = new Holder(purpose);
         Inventory inv = plugin.getServer().createInventory(holder, 54,
-                Component.text(purpose == Purpose.DUEL ? "Duel who?" : "Propose to whom?"));
+                Component.text(switch (purpose) {
+                    case DUEL -> "Duel who?";
+                    case MARRY -> "Propose to whom?";
+                    case TRADE -> "Trade with whom?";
+                }));
         holder.inventory = inv;
 
         double maxDistance = plugin.getConfig().getDouble("pvp.max-distance", 50);
@@ -49,7 +53,7 @@ public class PlayerPickerGui implements Listener {
         for (Player other : plugin.getServer().getOnlinePlayers()) {
             if (slot >= 54) break;
             if (other.getUniqueId().equals(player.getUniqueId())) continue;
-            if (purpose == Purpose.DUEL) {
+            if (purpose == Purpose.DUEL || purpose == Purpose.TRADE) {
                 if (!other.getWorld().equals(player.getWorld())
                         || other.getLocation().distance(player.getLocation()) > maxDistance) continue;
             }
@@ -57,8 +61,11 @@ public class PlayerPickerGui implements Listener {
             SkullMeta meta = (SkullMeta) head.getItemMeta();
             meta.setOwningPlayer(other);
             meta.displayName(Component.text(other.getName(), NamedTextColor.AQUA));
-            meta.lore(List.of(Component.text(purpose == Purpose.DUEL
-                    ? "Click to challenge" : "Click to propose", NamedTextColor.GRAY)));
+            meta.lore(List.of(Component.text(switch (purpose) {
+                    case DUEL -> "Click to challenge";
+                    case MARRY -> "Click to propose";
+                    case TRADE -> "Click to request a trade";
+                }, NamedTextColor.GRAY)));
             meta.getPersistentDataContainer().set(keyTarget, PersistentDataType.STRING, other.getName());
             head.setItemMeta(meta);
             inv.setItem(slot++, head);
@@ -66,8 +73,8 @@ public class PlayerPickerGui implements Listener {
         if (slot == 0) {
             ItemStack none = new ItemStack(Material.BARRIER);
             ItemMeta meta = none.getItemMeta();
-            meta.displayName(Component.text(purpose == Purpose.DUEL
-                    ? "No players nearby" : "No other players online", NamedTextColor.RED));
+            meta.displayName(Component.text(purpose == Purpose.MARRY
+                    ? "No other players online" : "No players nearby", NamedTextColor.RED));
             none.setItemMeta(meta);
             inv.setItem(22, none);
         }
@@ -91,8 +98,11 @@ public class PlayerPickerGui implements Listener {
                 player.sendMessage(Component.text("Player is no longer online.", NamedTextColor.RED));
                 return;
             }
-            if (holder.purpose == Purpose.DUEL) plugin.pvp().challenge(player, target);
-            else plugin.marriage().propose(player, target);
+            switch (holder.purpose) {
+                case DUEL -> plugin.pvp().challenge(player, target);
+                case MARRY -> plugin.marriage().propose(player, target);
+                case TRADE -> plugin.trades().request(player, target);
+            }
         });
     }
 }

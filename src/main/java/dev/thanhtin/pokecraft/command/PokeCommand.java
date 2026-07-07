@@ -64,6 +64,7 @@ public class PokeCommand implements TabExecutor {
             case "duel" -> duel(player, args);
             case "marry" -> marry(player, args);
             case "divorce" -> plugin.marriage().divorce(player);
+            case "trade" -> trade(player, args);
             case "daycare" -> daycare(player, args);
             case "ride" -> ride(player, args);
             case "npc" -> npc(player, args);
@@ -290,6 +291,25 @@ public class PokeCommand implements TabExecutor {
         plugin.npcs().create(player, type, name, level);
     }
 
+    private void trade(Player player, String[] args) {
+        if (args.length < 2) {
+            player.sendMessage(Component.text("Usage: /poke trade <player|accept|deny>", NamedTextColor.RED));
+            return;
+        }
+        switch (args[1].toLowerCase(Locale.ROOT)) {
+            case "accept" -> plugin.trades().accept(player);
+            case "deny" -> plugin.trades().deny(player);
+            default -> {
+                Player target = plugin.getServer().getPlayerExact(args[1]);
+                if (target == null) {
+                    player.sendMessage(Component.text("Player not online: " + args[1], NamedTextColor.RED));
+                    return;
+                }
+                plugin.trades().request(player, target);
+            }
+        }
+    }
+
     private void ride(Player player, String[] args) {
         if (args.length < 2) {
             if (plugin.rides().isRiding(player)) {
@@ -363,7 +383,8 @@ public class PokeCommand implements TabExecutor {
     }
 
     private boolean inBattle(Player player) {
-        if (plugin.battles().get(player) != null || plugin.pvp().get(player) != null) {
+        if (plugin.battles().get(player) != null || plugin.pvp().get(player) != null
+                || plugin.trades().get(player) != null) {
             player.sendMessage(Component.text("Finish your battle first.", NamedTextColor.RED));
             return true;
         }
@@ -383,7 +404,7 @@ public class PokeCommand implements TabExecutor {
     public List<String> onTabComplete(CommandSender sender, Command cmd, String label, String[] args) {
         List<String> out = new ArrayList<>();
         if (args.length == 1) {
-            out.addAll(List.of("menu", "party", "pc", "dex", "shop", "balance", "pay", "top", "duel", "marry",
+            out.addAll(List.of("menu", "party", "pc", "dex", "shop", "balance", "pay", "top", "duel", "trade", "marry",
                     "divorce", "daycare", "ride", "nickname", "release", "give", "spawn", "heal", "reload", "npc"));
         } else if (args.length == 2 && args[0].equalsIgnoreCase("spawn")) {
             plugin.species().all().forEach(s -> out.add(s.id));
@@ -395,7 +416,8 @@ public class PokeCommand implements TabExecutor {
             out.addAll(List.of("1", "2", "3", "4", "5", "6"));
         } else if (args.length == 2 && args[0].equalsIgnoreCase("top")) {
             out.addAll(List.of("caught", "money", "wins", "pvp"));
-        } else if (args.length == 2 && (args[0].equalsIgnoreCase("duel") || args[0].equalsIgnoreCase("marry"))) {
+        } else if (args.length == 2 && (args[0].equalsIgnoreCase("duel") || args[0].equalsIgnoreCase("marry")
+                || args[0].equalsIgnoreCase("trade"))) {
             out.addAll(List.of("accept", "deny"));
             plugin.getServer().getOnlinePlayers().forEach(p -> out.add(p.getName()));
         } else if (args.length == 2 && args[0].equalsIgnoreCase("daycare")) {

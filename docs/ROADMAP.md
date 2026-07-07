@@ -26,7 +26,7 @@
 - [ ] Gym leaders + badges (dùng trainer NPC làm nền)
 - Egg items + hatching, day/night + weather spawn conditions
 - Legendary spawn events with server broadcasts
-- Trading GUI between players (Bedrock-safe)
+- [x] Trading GUI between players (Bedrock-safe)
 
 ## Phase 4
 - Next.js admin panel + REST API (species editor, player inspector)
