@@ -106,6 +106,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private RankGui rankGui;
     private DungeonManager dungeonManager;
     private FarmManager farmManager;
+    private dev.thanhtin.pokecraft.pokemon.FossilManager fossilManager;
     private AdminGui adminGui;
     private BadgeService badgeService;
     private BadgesGui badgesGui;
@@ -179,6 +180,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         rankGui = new RankGui(this);
         dungeonManager = new DungeonManager(this);
         farmManager = new FarmManager(this);
+        fossilManager = new dev.thanhtin.pokecraft.pokemon.FossilManager(this);
         adminGui = new AdminGui(this);
         badgeService = new BadgeService(this);
         badgesGui = new BadgesGui(this);
@@ -233,6 +235,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(rankGui, this);
         getServer().getPluginManager().registerEvents(dungeonManager, this);
         getServer().getPluginManager().registerEvents(farmManager, this);
+        getServer().getPluginManager().registerEvents(fossilManager, this);
         getServer().getPluginManager().registerEvents(adminGui, this);
         getServer().getPluginManager().registerEvents(badgesGui, this);
         getServer().getPluginManager().registerEvents(gymPickerGui, this);

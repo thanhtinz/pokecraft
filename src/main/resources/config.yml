@@ -70,6 +70,25 @@ models:
 movetutor:
   cost: 500                  # PokeDollars to relearn one move
 
+fossils:
+  enabled: true
+  drop-chance: 0.003         # per stone-type block mined at/below max-y
+  max-y: 0                   # only dig up fossils below this height
+  revive-level: 20
+  # fossil name -> species revived (only species that exist are used)
+  types:
+    Helix Fossil: omanyte
+    Dome Fossil: kabuto
+    Old Amber: aerodactyl
+    Root Fossil: lileep
+    Claw Fossil: anorith
+    Skull Fossil: cranidos
+    Armor Fossil: shieldon
+    Cover Fossil: tirtouga
+    Plume Fossil: archen
+    Jaw Fossil: tyrunt
+    Sail Fossil: amaura
+
 battle:
   exp-multiplier: 1.0
   shiny-rate: 4096           # 1 / N
