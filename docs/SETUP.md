@@ -9,6 +9,7 @@
 | Geyser-Spigot | latest | for Bedrock players |
 | Floodgate | latest | for Bedrock auth + native forms |
 | BetterModel | latest | for 3D models on the Java client (free, open-source) |
+| GeyserModelEngine | latest | optional: also render the models on Bedrock/mobile |
 
 ## Build
 
@@ -28,10 +29,50 @@ from Maven Central / PaperMC / Lumine / OpenCollab repos.
    client. Start once so it generates its resource pack.
 3. Drop PokeCraft-0.1.0.jar, restart.
 
-> **Bedrock/mobile note:** custom 3D models (BetterModel or any model engine)
-> render only on the Java client. Bedrock/mobile players see each pokemon as a
-> fitting **vanilla mob** instead (configured under `mobs:` in config.yml), so
-> the server still looks good on mobile even without any models installed.
+> **Bedrock/mobile note:** by default, custom 3D models (BetterModel) render
+> only on the Java client. Bedrock/mobile players see each pokemon as a fitting
+> **vanilla mob** instead (configured under `mobs:` in config.yml), so the
+> server still looks good on mobile even without any models installed. To make
+> the real 3D models show on Bedrock too, add **GeyserModelEngine** - see
+> "3D models on Bedrock too" below.
+
+## 3D models on Bedrock too (GeyserModelEngine)
+
+BetterModel renders on Java only because it is built on Java item-display
+packets that Geyser can't translate. **GeyserModelEngine** is a separate Geyser
+extension that converts BetterModel/ModelEngine models into real Bedrock
+entities, so mobile players see the actual 3D pokemon. PokeCraft already spawns
+the base entity and applies the BetterModel model - GeyserModelEngine just adds
+the Bedrock rendering on top. This is an optional, advanced, server-admin setup.
+
+Install (from the GeyserModelEngine project):
+1. Put **GeyserUtils** (Spigot build) and **GeyserModelEngine** in `plugins/`.
+2. Put **GeyserModelEngineExtension** and **geyserutils-geyser** in
+   `plugins/Geyser-Spigot/extensions/`.
+3. In Floodgate's `config.yml` set `send-floodgate-data: true` and copy its
+   `key.pem` to backend servers.
+4. Start once to generate config, then stop.
+5. For each model: open the `.bbmodel` in BlockBench, `File -> Export ->
+   Export GeyserModelEngine Model`, and unzip the result into the extension's
+   `input` folder (one folder per model). PokeCraft's `.bbmodel` files live in
+   `plugins/BetterModel/models/` (or are converted from
+   `plugins/PokeCraft/models-import/`).
+6. Restart or reload Geyser.
+
+Then set `models.hide-base-java-only: false` in PokeCraft's config so the base
+vanilla mob is hidden for **everyone** (both platforms now render the real
+model instead of the mob).
+
+Caveats:
+- The GeyserModelEngine input format is produced by that BlockBench exporter,
+  so each model is exported by hand there - PokeCraft cannot auto-generate it.
+  For a full 700+ dex this is a lot of manual export; do it for the species you
+  care about most.
+- Bedrock/MC version support depends on the GeyserModelEngine build, not on
+  PokeCraft. Confirm it targets your server's Minecraft version before relying
+  on it (check its releases / Discord).
+- Without GeyserModelEngine, everything still works; Bedrock just shows the
+  mapped vanilla mob.
 
 ## Adding your own 3D models
 
