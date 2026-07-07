@@ -4,6 +4,7 @@ import dev.thanhtin.pokecraft.PokeCraftPlugin;
 import dev.thanhtin.pokecraft.pokemon.PokemonInstance;
 import dev.thanhtin.pokecraft.pokemon.StatusCondition;
 import dev.thanhtin.pokecraft.species.PokemonSpecies;
+import dev.thanhtin.pokecraft.species.PokemonType;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Sound;
@@ -70,6 +71,8 @@ public class BattleManager implements Listener {
         plugin.storage().markSeen(player.getUniqueId(), wild.speciesId);
         player.sendMessage(Component.text("A wild " + wild.displayName(wildSpecies)
                 + " Lv." + wild.level + " appeared!", NamedTextColor.YELLOW));
+        onEnter(player, battle, false);
+        onEnter(player, battle, true);
         plugin.battleUi().open(player, battle);
     }
 
@@ -116,6 +119,8 @@ public class BattleManager implements Listener {
         player.sendMessage(Component.text(trainerName + " challenges you with "
                 + team.size() + " pokemon! First up: " + team.get(0).displayName(first)
                 + " Lv." + team.get(0).level, NamedTextColor.GOLD));
+        onEnter(player, battle, false);
+        onEnter(player, battle, true);
         plugin.battleUi().open(player, battle);
     }
 
@@ -293,6 +298,11 @@ public class BattleManager implements Listener {
             applyEffect(player, battle, byPlayer, move, attacker, defender, defenderSpecies);
         }
 
+        if (result.effectiveness() > 0 && move.category == MoveData.Category.PHYSICAL
+                && defender.currentHp > 0) {
+            contactStatus(player, battle, byPlayer, attacker, attackerSpecies, defender, defenderSpecies);
+        }
+
         if (STRUGGLE_ID.equals(move.id)) {
             int recoil = Math.max(1, attacker.maxHp(attackerSpecies) / 4);
             attacker.currentHp = Math.max(0, attacker.currentHp - recoil);
@@ -370,6 +380,55 @@ public class BattleManager implements Listener {
         }
     }
 
+    /**
+     * On-entry ability effects (Intimidate). Called when a pokemon takes the
+     * field: at battle start, on a switch, and when a trainer sends out its next.
+     */
+    private void onEnter(Player player, Battle battle, boolean playerSide) {
+        PokemonInstance entering = playerSide ? battle.playerPokemon : battle.wildPokemon;
+        PokemonSpecies species = plugin.species().getSpecies(entering.speciesId);
+        if (species == null) return;
+        if (!"intimidate".equals(Abilities.norm(entering.ability(species)))) return;
+
+        int[] oppStages = playerSide ? battle.wildStages : battle.playerStages;
+        PokemonInstance opp = playerSide ? battle.wildPokemon : battle.playerPokemon;
+        PokemonSpecies oppSpecies = plugin.species().getSpecies(opp.speciesId);
+        if (opp.currentHp <= 0 || oppSpecies == null || oppStages[1] <= -6) return;
+        oppStages[1] = Math.max(-6, oppStages[1] - 1);
+        player.sendMessage(Component.text((playerSide ? "Your " : opponentPrefix(battle))
+                + species.name + "'s Intimidate lowered "
+                + (playerSide ? opponentPrefix(battle) : "your ") + oppSpecies.name
+                + "'s Attack!", NamedTextColor.YELLOW));
+    }
+
+    /**
+     * On-hit contact abilities: when a physical move hits a pokemon with
+     * Static / Flame Body / Poison Point, it may inflict a status on the attacker.
+     */
+    private void contactStatus(Player player, Battle battle, boolean byPlayer,
+                               PokemonInstance attacker, PokemonSpecies attackerSpecies,
+                               PokemonInstance defender, PokemonSpecies defenderSpecies) {
+        if (attacker.status != null || attacker.currentHp <= 0) return;
+        StatusCondition inflict = switch (Abilities.norm(defender.ability(defenderSpecies))) {
+            case "static" -> StatusCondition.PARALYSIS;
+            case "flamebody" -> StatusCondition.BURN;
+            case "poisonpoint" -> StatusCondition.POISON;
+            default -> null;
+        };
+        if (inflict == null) return;
+        // respect type immunities to the inflicted status
+        if (attackerSpecies.types != null) {
+            if (inflict == StatusCondition.BURN && attackerSpecies.types.contains(PokemonType.FIRE)) return;
+            if (inflict == StatusCondition.POISON && (attackerSpecies.types.contains(PokemonType.POISON)
+                    || attackerSpecies.types.contains(PokemonType.STEEL))) return;
+        }
+        if (ThreadLocalRandom.current().nextInt(100) >= 30) return;
+        attacker.status = inflict;
+        player.sendMessage(Component.text((byPlayer ? "Your " : opponentPrefix(battle))
+                + attackerSpecies.name + " was " + inflict.verb + " by "
+                + defenderSpecies.name + "'s ability!", NamedTextColor.YELLOW));
+    }
+
     /** Residual burn/poison damage + Leftovers at the end of the round. @return true if the battle ended. */
     private boolean endOfTurn(Player player, Battle battle) {
         for (boolean playerSide : new boolean[]{true, false}) {
@@ -419,6 +478,7 @@ public class BattleManager implements Listener {
         player.sendMessage(Component.text(battle.npcName + " sent out "
                 + battle.wildPokemon.displayName(next) + " Lv." + battle.wildPokemon.level + "!",
                 NamedTextColor.GOLD));
+        onEnter(player, battle, false);
         plugin.parties().saveParty(player.getUniqueId());
         plugin.battleUi().open(player, battle);
     }
@@ -482,6 +542,7 @@ public class BattleManager implements Listener {
         battle.playerPokemon = target;
         PokemonSpecies species = plugin.species().getSpecies(target.speciesId);
         player.sendMessage(Component.text("Go, " + target.displayName(species) + "!", NamedTextColor.YELLOW));
+        onEnter(player, battle, true);
 
         if (!afterFaint) {
             MoveData wildMove = pickWildMove(battle.wildPokemon);

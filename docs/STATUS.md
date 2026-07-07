@@ -44,7 +44,9 @@ Last updated: 2026-07-07 (all-in-one: full Gen 1 dex, NPCs, menu panel)
       Levitate/Flash Fire/Water-Volt Absorb/Sap Sipper (miễn nhiễm hệ),
       Thick Fat/Heatproof/Multiscale/Filter-Solid Rock (giảm sát thương),
       Huge Power/Pure Power/Hustle/Guts (tăng công), Overgrow/Blaze/Torrent/Swarm
-      (pinch +50%). Đặc tính on-entry/on-hit (Intimidate/Static) chưa có.
+      (pinch +50%). ON-ENTRY: Intimidate (giảm Atk đối thủ khi ra trận/switch).
+      ON-HIT tiếp xúc: Static/Flame Body/Poison Point (30% gây par/burn/psn khi
+      bị đánh vật lý, tôn trọng miễn nhiễm hệ). PvP chưa áp dụng on-entry/on-hit.
 - [x] Held items: Leftovers (hồi 1/16/lượt), Muscle Band (+10% physical),
       Wise Glasses (+10% special), Quick Claw (20% đánh trước), Lucky Egg
       (+50% EXP), Everstone (chặn tiến hóa), Focus Band (10% trụ 1 HP) -
