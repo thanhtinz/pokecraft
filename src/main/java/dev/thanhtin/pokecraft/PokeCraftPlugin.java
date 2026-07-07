@@ -90,6 +90,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private LeaderboardGui leaderboardGui;
     private PokedexGui pokedexGui;
     private SummaryGui summaryGui;
+    private dev.thanhtin.pokecraft.ui.MoveTutorGui moveTutorGui;
     private TradeManager tradeManager;
     private TradeGui tradeGui;
     private NicknameInput nicknameInput;
@@ -162,6 +163,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         leaderboardGui = new LeaderboardGui(this);
         pokedexGui = new PokedexGui(this);
         summaryGui = new SummaryGui(this);
+        moveTutorGui = new dev.thanhtin.pokecraft.ui.MoveTutorGui(this);
         tradeManager = new TradeManager(this);
         tradeGui = new TradeGui(this);
         nicknameInput = new NicknameInput(this);
@@ -219,6 +221,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(leaderboardGui, this);
         getServer().getPluginManager().registerEvents(pokedexGui, this);
         getServer().getPluginManager().registerEvents(summaryGui, this);
+        getServer().getPluginManager().registerEvents(moveTutorGui, this);
         getServer().getPluginManager().registerEvents(tradeManager, this);
         getServer().getPluginManager().registerEvents(tradeGui, this);
         getServer().getPluginManager().registerEvents(nicknameInput, this);
@@ -321,6 +324,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public LeaderboardGui leaderboardUi() { return leaderboardGui; }
     public PokedexGui pokedexUi() { return pokedexGui; }
     public SummaryGui summaryUi() { return summaryGui; }
+    public dev.thanhtin.pokecraft.ui.MoveTutorGui moveTutorUi() { return moveTutorGui; }
     public TradeManager trades() { return tradeManager; }
     public TradeGui tradeUi() { return tradeGui; }
     public NicknameInput nicknameInput() { return nicknameInput; }

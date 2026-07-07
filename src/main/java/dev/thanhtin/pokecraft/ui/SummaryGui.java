@@ -30,6 +30,7 @@ public class SummaryGui implements Listener {
     private static final int[] MOVE_SLOTS = {10, 11, 12, 13};
     private static final int SLOT_STATS = 15;
     private static final int SLOT_EVOLVE = 16;
+    private static final int SLOT_TUTOR = 14;
     private static final int SLOT_HELD = 19;
     private static final int SLOT_RENAME = 25;
     private static final int SLOT_RELEASE = 26;
@@ -176,6 +177,16 @@ public class SummaryGui implements Listener {
         evolve.setItemMeta(evoMeta);
         inv.setItem(SLOT_EVOLVE, evolve);
 
+        // ---- move tutor ----
+        ItemStack tutor = new ItemStack(Material.ENCHANTED_BOOK);
+        ItemMeta tutorMeta = tutor.getItemMeta();
+        tutorMeta.displayName(Component.text("Move Tutor", NamedTextColor.AQUA));
+        tutorMeta.lore(List.of(
+                Component.text("Relearn any level-up move", NamedTextColor.GRAY),
+                Component.text("Click to teach a move", NamedTextColor.YELLOW)));
+        tutor.setItemMeta(tutorMeta);
+        inv.setItem(SLOT_TUTOR, tutor);
+
         // ---- held item ----
         var held = plugin.heldItems().byId(p.heldItem);
         ItemStack heldStack = new ItemStack(held != null ? held.material : Material.ITEM_FRAME);
@@ -280,6 +291,12 @@ public class SummaryGui implements Listener {
             if (busy) return;
             plugin.getServer().getScheduler().runTask(plugin,
                     () -> doHeldItem(player, holder.partySlot));
+            return;
+        }
+        if (raw == SLOT_TUTOR) {
+            if (busy) return;
+            plugin.getServer().getScheduler().runTask(plugin,
+                    () -> plugin.moveTutorUi().open(player, holder.partySlot));
             return;
         }
         if (raw == SLOT_RENAME) {
@@ -390,6 +407,8 @@ public class SummaryGui implements Listener {
         buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
                 held != null ? "Take back held item (" + held.display + ")" : "Give/Change held item",
                 () -> doHeldItem(player, partySlot)));
+        buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
+                "Move Tutor", () -> plugin.moveTutorUi().open(player, partySlot)));
         buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(
                 "Rename", () -> plugin.nicknameInput().open(player, partySlot)));
         buttons.add(new dev.thanhtin.pokecraft.bedrock.BedrockSupport.FormButton(

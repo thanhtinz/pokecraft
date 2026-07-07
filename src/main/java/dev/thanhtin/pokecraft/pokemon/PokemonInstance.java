@@ -58,6 +58,18 @@ public class PokemonInstance {
         return p;
     }
 
+    /** Every distinct move the species can learn by this level (for the move relearner). */
+    public static List<String> learnableMoves(PokemonSpecies species, int level) {
+        List<String> result = new ArrayList<>();
+        if (species.learnset == null) return result;
+        for (int l = 1; l <= level; l++) {
+            List<String> learned = species.learnset.get(String.valueOf(l));
+            if (learned == null) continue;
+            for (String m : learned) if (!result.contains(m)) result.add(m);
+        }
+        return result;
+    }
+
     /** Last 4 moves learnable at the given level. */
     public static List<String> latestMoves(PokemonSpecies species, int level) {
         List<String> result = new ArrayList<>();

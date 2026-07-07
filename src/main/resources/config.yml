@@ -67,6 +67,9 @@ models:
     TRAINER: ''
     GYM: ''
 
+movetutor:
+  cost: 500                  # PokeDollars to relearn one move
+
 battle:
   exp-multiplier: 1.0
   shiny-rate: 4096           # 1 / N

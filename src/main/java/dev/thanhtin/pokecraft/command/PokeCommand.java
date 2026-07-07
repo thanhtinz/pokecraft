@@ -50,6 +50,10 @@ public class PokeCommand implements TabExecutor {
                 plugin.pcUi().open(player, 0);
             }
             case "nickname" -> nickname(player, args);
+            case "movetutor", "relearn" -> {
+                if (inBattle(player)) return true;
+                plugin.moveTutorUi().open(player, parseInt(args.length > 1 ? args[1] : "1", 1) - 1);
+            }
             case "release" -> release(player, args);
             case "balance", "bal", "money" -> player.sendMessage(Component.text(
                     "Balance: " + plugin.economy().format(plugin.economy().balance(player.getUniqueId())),
