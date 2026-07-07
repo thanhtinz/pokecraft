@@ -7,6 +7,7 @@ import dev.thanhtin.pokecraft.battle.MoveData;
 import dev.thanhtin.pokecraft.party.PlayerParty;
 import dev.thanhtin.pokecraft.pokemon.PokemonInstance;
 import dev.thanhtin.pokecraft.species.PokemonSpecies;
+import dev.thanhtin.pokecraft.ui.PlayerPickerGui;
 import org.bukkit.entity.Player;
 
 import java.lang.reflect.Method;
@@ -143,6 +144,111 @@ public class BedrockSupport {
             plugin.getLogger().warning("[WARN] Bedrock switch form failed, falling back to chest GUI: " + e.getMessage());
             return false;
         }
+    }
+
+    /**
+     * Native Bedrock main menu (mirrors the chest hub in MainMenuGui). Renders as
+     * a SimpleForm button list on mobile instead of a translated chest GUI.
+     * @return true if a native form was sent (caller should skip the chest GUI)
+     */
+    public boolean tryOpenMenuForm(Player player) {
+        if (!formsEnabled(player)) return false;
+        try {
+            List<Runnable> actions = new ArrayList<>();
+            Class<?> simpleForm = Class.forName("org.geysermc.cumulus.form.SimpleForm");
+            Object builder = simpleForm.getMethod("builder").invoke(null);
+            Class<?> builderClass = builder.getClass();
+
+            long balance = plugin.economy().balance(player.getUniqueId());
+            invoke(builderClass, builder, "title", "PokeCraft Menu");
+            invoke(builderClass, builder, "content",
+                    "Balance: " + plugin.economy().format(balance));
+
+            addButton(builderClass, builder, actions, "Party",
+                    () -> plugin.partyUi().open(player));
+            addButton(builderClass, builder, actions, "PC Box",
+                    () -> { if (!menuBlocked(player)) plugin.pcUi().open(player, 0); });
+            addButton(builderClass, builder, actions, "Pokemart",
+                    () -> { if (!menuBlocked(player)) plugin.shop().open(player); });
+            addButton(builderClass, builder, actions, "Daycare",
+                    () -> { if (!menuBlocked(player)) plugin.daycareUi().open(player); });
+            addButton(builderClass, builder, actions,
+                    plugin.rides().isRiding(player) ? "Dismount" : "Ride a Pokemon",
+                    () -> {
+                        if (menuBlocked(player)) return;
+                        if (plugin.rides().isRiding(player)) plugin.rides().dismount(player);
+                        else plugin.ridePickerUi().open(player);
+                    });
+
+            String challenger = plugin.pvp().pendingChallengerName(player);
+            addButton(builderClass, builder, actions,
+                    challenger != null ? "Accept duel vs " + challenger : "PvP Duel",
+                    () -> {
+                        if (menuBlocked(player)) return;
+                        if (plugin.pvp().pendingChallengerName(player) != null) plugin.pvp().accept(player);
+                        else plugin.playerPickerUi().open(player, PlayerPickerGui.Purpose.DUEL);
+                    });
+
+            String trader = plugin.trades().pendingRequesterName(player);
+            addButton(builderClass, builder, actions,
+                    trader != null ? "Accept trade from " + trader : "Trade",
+                    () -> {
+                        if (menuBlocked(player)) return;
+                        if (plugin.trades().pendingRequesterName(player) != null) plugin.trades().accept(player);
+                        else plugin.playerPickerUi().open(player, PlayerPickerGui.Purpose.TRADE);
+                    });
+
+            addButton(builderClass, builder, actions, "Pokedex",
+                    () -> plugin.pokedexUi().open(player, 0));
+            addButton(builderClass, builder, actions, "Leaderboards",
+                    () -> plugin.leaderboardUi().open(player));
+            addButton(builderClass, builder, actions, "Get PokeMap",
+                    () -> plugin.minimap().give(player));
+            addButton(builderClass, builder, actions, "Minigames",
+                    () -> plugin.minigamesUi().open(player));
+            addButton(builderClass, builder, actions,
+                    "Walking Pokemon: " + (plugin.walkers().isFollowing(player) ? "ON" : "OFF"),
+                    () -> { plugin.walkers().toggle(player); tryOpenMenuForm(player); });
+            addButton(builderClass, builder, actions, "Activities",
+                    () -> plugin.activitiesUi().open(player));
+
+            var guild = plugin.guilds().guildOf(player);
+            addButton(builderClass, builder, actions,
+                    guild != null ? "Guild: " + guild.name() : "Guilds",
+                    () -> plugin.guildUi().open(player));
+            addButton(builderClass, builder, actions, "Rank",
+                    () -> plugin.rankUi().open(player));
+            addButton(builderClass, builder, actions, "Dungeon",
+                    () -> { if (!menuBlocked(player)) plugin.dungeons().start(player); });
+            addButton(builderClass, builder, actions, "Send Money",
+                    () -> { if (!menuBlocked(player)) plugin.playerPickerUi().open(player, PlayerPickerGui.Purpose.PAY); });
+
+            if (player.hasPermission("pokecraft.admin")) {
+                addButton(builderClass, builder, actions, "OP Setup",
+                        () -> plugin.adminUi().open(player));
+            }
+
+            sendForm(player, simpleForm, builder, builderClass, actions);
+            return true;
+        } catch (Exception e) {
+            plugin.getLogger().warning("[WARN] Bedrock menu form failed, falling back to chest GUI: " + e.getMessage());
+            return false;
+        }
+    }
+
+    private boolean menuBlocked(Player player) {
+        if (plugin.battles().get(player) != null || plugin.pvp().get(player) != null) {
+            player.sendMessage(net.kyori.adventure.text.Component.text(
+                    "Finish your battle first.", net.kyori.adventure.text.format.NamedTextColor.RED));
+            return true;
+        }
+        return false;
+    }
+
+    private void addButton(Class<?> builderClass, Object builder, List<Runnable> actions,
+                           String label, Runnable action) throws Exception {
+        invoke(builderClass, builder, "button", label);
+        actions.add(action);
     }
 
     private void sendForm(Player player, Class<?> simpleForm, Object builder,

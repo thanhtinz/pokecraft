@@ -138,6 +138,7 @@ public class MainMenuGui implements Listener {
     // ---------- the hub panel ----------
 
     public void open(Player player) {
+        if (plugin.bedrock().tryOpenMenuForm(player)) return;
         Holder holder = new Holder();
         Inventory inv = plugin.getServer().createInventory(holder, 36,
                 Component.text("PokeCraft Menu"));
