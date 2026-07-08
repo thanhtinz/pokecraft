@@ -1,0 +1,69 @@
+# .github/workflows/geyser-bedrock-input.yml
+# Build GeyserModelEnginePackGenerator input từ asset Bedrock gốc của Cobblemon.
+# Output: geyser-input.zip -> giải nén vào
+#   plugins/Geyser-Spigot/extensions/geysermodelenginepackgenerator/input/
+
+name: Build Geyser Bedrock Input
+
+on:
+  workflow_dispatch:
+    inputs:
+      cobblemon_version:
+        description: "Cobblemon version (để trống = mới nhất trên Modrinth)"
+        required: false
+        default: ""
+  schedule:
+    - cron: "0 3 * * 1" # thứ 2 hàng tuần, đồng bộ khi Cobblemon ra bản mới
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Cobblemon jar (Modrinth)
+        run: |
+          set -e
+          VER="${{ github.event.inputs.cobblemon_version }}"
+          API="https://api.modrinth.com/v2/project/cobblemon/version"
+          if [ -n "$VER" ]; then
+            URL=$(curl -s "$API" | jq -r --arg v "$VER" \
+              '[.[] | select(.version_number==$v)][0].files[0].url')
+          else
+            URL=$(curl -s "$API" | jq -r '.[0].files[0].url')
+          fi
+          echo "Downloading: $URL"
+          curl -L -o cobblemon.jar "$URL"
+          ls -la cobblemon.jar
+
+      - name: Generate input folders
+        run: |
+          EXTRA=""
+          [ -f tools/blueprint-list.txt ] && EXTRA="--match-list tools/blueprint-list.txt"
+          python3 tools/cobblemon2geyser.py \
+            --jar cobblemon.jar $EXTRA \
+            --out build/input \
+            --clean \
+            --sanitize-molang \
+            --zip build/geyser-input.zip
+          echo "Model folders: $(ls build/input | wc -l)"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: geyser-input
+          path: build/geyser-input.zip
+          retention-days: 30
+
+      - name: Update release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: geyser-input-latest
+          name: Geyser Bedrock Input (latest)
+          files: build/geyser-input.zip
+          body: |
+            Input folders cho GeyserModelEnginePackGenerator, generate tự động
+            từ asset Bedrock gốc của Cobblemon.
+            Giải nén vào: plugins/Geyser-Spigot/extensions/geysermodelenginepackgenerator/input/
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
