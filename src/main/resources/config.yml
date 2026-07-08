@@ -267,10 +267,13 @@ menu:
   # give every player a menu item in the hotbar (right-click/tap to open panel)
   give-item: true
   item-slot: 8
-  # hide these entries from the main menu (chest + Bedrock form) - handy once you
-  # place NPCs for them. Keys: party pc shop daycare duel top dex trade map
-  # minigames activities guild rank dungeon balance marry
-  hide: []
+  # hide these entries from the main menu (chest + Bedrock form). Keys: party pc
+  # shop daycare duel top dex trade map minigames activities guild rank dungeon
+  # balance marry
+  # Default hides everything now reachable in the world so the menu isn't a
+  # duplicate: shop/daycare have NPCs, duel/trade/marry are right-click-a-player,
+  # and dungeon is MythicMobs combat. Clear the list to bring them back.
+  hide: [shop, daycare, duel, trade, marry, dungeon]
 
 items:
   # the Pokedex is a carried book (right-click/tap to open); everything else

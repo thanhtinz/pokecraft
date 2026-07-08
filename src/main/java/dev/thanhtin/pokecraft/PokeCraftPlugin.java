@@ -58,6 +58,7 @@ import dev.thanhtin.pokecraft.ui.ModelGui;
 import dev.thanhtin.pokecraft.ui.NicknameInput;
 import dev.thanhtin.pokecraft.ui.PayAmountGui;
 import dev.thanhtin.pokecraft.ui.PcGui;
+import dev.thanhtin.pokecraft.ui.PlayerInteractMenu;
 import dev.thanhtin.pokecraft.ui.PlayerPickerGui;
 import dev.thanhtin.pokecraft.ui.PokedexGui;
 import dev.thanhtin.pokecraft.ui.SummaryGui;
@@ -86,6 +87,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private HandheldItems handheldItems;
     private ModelGui modelGui;
     private PlayerPickerGui playerPickerGui;
+    private PlayerInteractMenu playerInteractMenu;
     private RidePickerGui ridePickerGui;
     private DaycareGui daycareGui;
     private LeaderboardGui leaderboardGui;
@@ -162,6 +164,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         handheldItems = new HandheldItems(this);
         modelGui = new ModelGui(this);
         playerPickerGui = new PlayerPickerGui(this);
+        playerInteractMenu = new PlayerInteractMenu(this);
         ridePickerGui = new RidePickerGui(this);
         daycareGui = new DaycareGui(this);
         leaderboardGui = new LeaderboardGui(this);
@@ -223,6 +226,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(handheldItems, this);
         getServer().getPluginManager().registerEvents(modelGui, this);
         getServer().getPluginManager().registerEvents(playerPickerGui, this);
+        getServer().getPluginManager().registerEvents(playerInteractMenu, this);
         getServer().getPluginManager().registerEvents(ridePickerGui, this);
         getServer().getPluginManager().registerEvents(daycareGui, this);
         getServer().getPluginManager().registerEvents(leaderboardGui, this);
