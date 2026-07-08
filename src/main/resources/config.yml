@@ -84,6 +84,11 @@ models:
   # berries, poke balls, particles, etc. from a full model pack). Set false to
   # convert every .geo.json found.
   import-only-species: true
+  # include animations in imported models. With a big pack (hundreds of models
+  # animating at once) BetterModel's molang evaluation can spike CPU heavily;
+  # set false for static models (recommended on large servers - Bedrock doesn't
+  # render the animations through Geyser anyway).
+  import-animations: true
   # if imported models come out rotated wrong, try [1,1,1] or [-1,-1,-1]
   import-rotation-sign: [-1, -1, 1]
   # extra blueprint names to import even though they aren't species (e.g. balls)

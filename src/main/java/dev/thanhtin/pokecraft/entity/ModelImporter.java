@@ -42,6 +42,7 @@ public class ModelImporter {
     private final Gson gson = new GsonBuilder().create();
     private int[] rotSign = {-1, -1, 1};
     private boolean onlySpecies = true;
+    private boolean importAnimations = true;
     private final java.util.Set<String> extraNames = new java.util.HashSet<>();
     private int skipped = 0;
 
@@ -55,6 +56,7 @@ public class ModelImporter {
         List<Integer> cfg = plugin.getConfig().getIntegerList("models.import-rotation-sign");
         if (cfg.size() == 3) rotSign = new int[]{cfg.get(0), cfg.get(1), cfg.get(2)};
         onlySpecies = plugin.getConfig().getBoolean("models.import-only-species", true);
+        importAnimations = plugin.getConfig().getBoolean("models.import-animations", true);
         extraNames.clear();
         for (String n : plugin.getConfig().getStringList("models.import-extra")) {
             extraNames.add(n.toLowerCase(Locale.ROOT));
@@ -205,7 +207,7 @@ public class ModelImporter {
 
             Map<String, String> boneUuid = new HashMap<>();
             JsonObject model = buildModel(geo, modelName, texB64, resW, resH, boneUuid);
-            if (animData != null) {
+            if (importAnimations && animData != null) {
                 JsonArray anims = buildAnimations(animData, modelName, boneUuid);
                 if (anims.size() > 0) model.add("animations", anims);
             }

@@ -2,6 +2,11 @@ name: Build All Pokemon Blueprints
 
 on:
   workflow_dispatch:
+    inputs:
+      animations:
+        description: "Include animations? (true keeps molang; false = static, much lower CPU)"
+        required: false
+        default: "false"
 
 jobs:
   build:
@@ -29,7 +34,10 @@ jobs:
 
       - name: Convert to bbmodel blueprints
         run: |
-          python3 tools/geo2bbmodel_full.py pack -o blueprints
+          NOANIM="--no-anim"
+          [ "${{ github.event.inputs.animations }}" = "true" ] && NOANIM=""
+          echo "animations input: ${{ github.event.inputs.animations }} (NOANIM='$NOANIM')"
+          python3 tools/geo2bbmodel_full.py pack -o blueprints $NOANIM
           ls blueprints | wc -l
 
       - name: Zip blueprints

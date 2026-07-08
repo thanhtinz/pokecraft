@@ -38,6 +38,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("root")
     ap.add_argument("-o", "--out", default="bbmodels_full")
+    ap.add_argument("--no-anim", action="store_true",
+                    help="skip animations (static models) - avoids BetterModel "
+                         "molang evaluation, which spikes CPU on big packs")
     args = ap.parse_args()
 
     root = Path(args.root)
@@ -91,7 +94,7 @@ def main():
             try:
                 if geo_base not in geo_cache:
                     geo_cache[geo_base] = load_json(bases[geo_base])
-                apath = anims.get(geo_base) or primary_anim
+                apath = None if args.no_anim else (anims.get(geo_base) or primary_anim)
                 akey = str(apath)
                 if akey not in anim_cache:
                     anim_cache[akey] = load_json(apath) if apath else None
