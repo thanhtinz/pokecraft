@@ -354,11 +354,23 @@ public class PokeCraftPlugin extends JavaPlugin {
     /** Bind Citizens NPCs to PokeCraft roles when Citizens is installed. */
     private void hookCitizens() {
         if (getServer().getPluginManager().getPlugin("Citizens") == null) return;
+        // Citizens may be present but only half-loaded (e.g. it doesn't yet
+        // support this Minecraft version), leaving its API classes unloadable.
+        // Verify the event class resolves before we register the listener, so a
+        // broken Citizens install can't spam a scary error or break enable.
+        try {
+            Class.forName("net.citizensnpcs.api.event.NPCRightClickEvent");
+        } catch (Throwable t) {
+            getLogger().info("[..] Citizens present but its API isn't loadable "
+                    + "(likely a version/Minecraft mismatch) - Citizens binding disabled");
+            return;
+        }
         try {
             citizensHook = new dev.thanhtin.pokecraft.integration.CitizensHook(this);
             getServer().getPluginManager().registerEvents(citizensHook, this);
             getLogger().info("[OK] Citizens hooked - /poke npc citizens <role>");
         } catch (Throwable t) {
+            citizensHook = null;
             getLogger().warning("[WARN] Citizens hook failed: " + t.getMessage());
         }
     }
