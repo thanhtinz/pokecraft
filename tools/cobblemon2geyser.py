@@ -245,11 +245,47 @@ def parse_variant_name(name: str) -> tuple[str, str | None, bool]:
     return name, gender, shiny
 
 
-MODEL_CONFIG = {
-    "head_rotation": False,          # cobblemon bones aren't h_-prefixed
-    "disable_part_visibility": True, # 2k+ models -> avoid property spam
-    "material": "entity_alphatest_change_color_one_sided",
-}
+def geo_meta(geo_text: str):
+    """(texture_width, texture_height, [bone_names]) from the first geometry."""
+    try:
+        obj = json.loads(re.sub(r",\s*([}\]])", r"\1", geo_text))
+    except Exception:
+        return 64, 64, []
+    geos = obj.get("minecraft:geometry", [])
+    if not geos:
+        return 64, 64, []
+    g = geos[0]
+    desc = g.get("description", {})
+    tw = int(desc.get("texture_width", 64) or 64)
+    th = int(desc.get("texture_height", 64) or 64)
+    bones = [b.get("name") for b in g.get("bones", []) if b.get("name")]
+    return tw, th, bones
+
+
+def write_model_folder(vdir: Path, vid: str, geo_raw: str,
+                       merged_anim: dict | None, tex_bytes: bytes) -> None:
+    """Write a model folder in GeyserModelEnginePackGenerator's expected layout:
+    <vid>.geo.json, optional <vid>.animation.json, <vid>.png, and a config.json
+    carrying per_texture_uv_size + binding_bones (without which the generator
+    produces an empty pack)."""
+    vdir.mkdir(parents=True, exist_ok=True)
+    tw, th, bones = geo_meta(geo_raw)
+    (vdir / f"{vid}.geo.json").write_text(geo_raw, encoding="utf-8")
+    if merged_anim:
+        (vdir / f"{vid}.animation.json").write_text(
+            json.dumps(merged_anim, ensure_ascii=False), encoding="utf-8")
+    (vdir / f"{vid}.png").write_bytes(tex_bytes)
+    config = {
+        "head_rotation": True,
+        "material": "entity_alphatest_change_color_one_sided",
+        "blend_transition": True,
+        "per_texture_uv_size": {vid: [tw, th]},
+        "binding_bones": {vid: bones},
+        "anim_textures": {},
+    }
+    (vdir / "config.json").write_text(
+        json.dumps(config, indent=2), encoding="utf-8")
+
 
 def variant_id(species: str, gender: str | None, shiny: bool) -> str:
     vid = species
@@ -286,18 +322,11 @@ def generate(src: AssetSource, out_dir: Path, only: set[str] | None,
             return False
         anims = anim_files.get(species) or anim_files.get(geo_name) or []
         merged_anim = merge_animations(src, anims, do_sanitize)
-        vdir = out_dir / vid
-        vdir.mkdir(parents=True, exist_ok=True)
         geo_raw = src.read_bytes(geo_path).decode("utf-8-sig")
         if do_sanitize:
             geo_raw = sanitize_molang(geo_raw)
-        (vdir / f"{vid}.geo.json").write_text(geo_raw, encoding="utf-8")
-        if merged_anim:
-            (vdir / f"{vid}.animation.json").write_text(
-                json.dumps(merged_anim, ensure_ascii=False), encoding="utf-8")
-        (vdir / "texture.png").write_bytes(src.read_bytes(tex_path))
-        (vdir / "config.json").write_text(
-            json.dumps(MODEL_CONFIG, indent=2), encoding="utf-8")
+        write_model_folder(out_dir / vid, vid, geo_raw, merged_anim,
+                           src.read_bytes(tex_path))
         return True
 
     if match_list is not None:
@@ -397,21 +426,11 @@ def generate(src: AssetSource, out_dir: Path, only: set[str] | None,
             merged_anim = merge_animations(src, anims, do_sanitize)
 
             # ---- write folder
-            vdir = out_dir / vid
-            vdir.mkdir(parents=True, exist_ok=True)
-
             geo_raw = src.read_bytes(geo_path).decode("utf-8-sig")
             if do_sanitize:
                 geo_raw = sanitize_molang(geo_raw)
-            (vdir / f"{vid}.geo.json").write_text(geo_raw, encoding="utf-8")
-
-            if merged_anim:
-                (vdir / f"{vid}.animation.json").write_text(
-                    json.dumps(merged_anim, ensure_ascii=False), encoding="utf-8")
-
-            (vdir / "texture.png").write_bytes(src.read_bytes(tex_path))
-            (vdir / "config.json").write_text(
-                json.dumps(MODEL_CONFIG, indent=2), encoding="utf-8")
+            write_model_folder(out_dir / vid, vid, geo_raw, merged_anim,
+                               src.read_bytes(tex_path))
 
             seen_signatures[vid] = sig
             emitted += 1
