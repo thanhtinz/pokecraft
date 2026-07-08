@@ -10,6 +10,7 @@ softdepend:
   - PlaceholderAPI
   - WorldGuard
   - DecentHolograms
+  - Citizens
   - floodgate
   - Geyser-Spigot
   - Vault

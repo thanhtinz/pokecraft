@@ -239,14 +239,21 @@ public class NpcManager implements Listener {
         NpcType type;
         try { type = NpcType.valueOf(row.type()); }
         catch (IllegalArgumentException ex) { return; }
+        handle(player, type, e.getRightClicked(), row);
+    }
 
+    /**
+     * Runs an NPC type's action for a player. Used by the villager NPC listener
+     * and by the Citizens integration (which binds a Citizens NPC to a type).
+     */
+    public void handle(Player player, NpcType type, Entity entity, StorageManager.NpcRow row) {
         switch (type) {
             case HEALER -> heal(player, row.name());
             case VENDOR -> {
                 if (inBattle(player)) return;
                 plugin.shop().open(player);
             }
-            case TRAINER, GYM -> startTrainer(player, e.getRightClicked(), row);
+            case TRAINER, GYM -> startTrainer(player, entity, row);
             case DAYCARE -> {
                 if (inBattle(player)) return;
                 plugin.daycareUi().open(player);

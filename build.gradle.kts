@@ -15,6 +15,7 @@ repositories {
     maven("https://repo.opencollab.dev/main/")              // Floodgate / Geyser API
     maven("https://repo.extendedclip.com/releases/")        // PlaceholderAPI
     maven("https://maven.enginehub.org/repo/")              // WorldGuard / WorldEdit
+    maven("https://maven.citizensnpcs.co/repo")             // Citizens
     maven("https://jitpack.io")                             // Vault API
 }
 
@@ -25,6 +26,7 @@ dependencies {
     compileOnly("me.clip:placeholderapi:2.11.6")
     compileOnly("com.sk89q.worldguard:worldguard-bukkit:7.0.9")
     compileOnly("com.github.decentsoftware-eu:decentholograms:2.8.6") // via jitpack
+    compileOnly("net.citizensnpcs:citizens-main:2.0.35-SNAPSHOT") { isTransitive = false }
     compileOnly("com.github.MilkBowl:VaultAPI:1.7.1")
     // Gson + SQLite JDBC are bundled inside Paper at runtime (Gson) and shaded here for SQLite
     implementation("org.xerial:sqlite-jdbc:3.46.1.3")

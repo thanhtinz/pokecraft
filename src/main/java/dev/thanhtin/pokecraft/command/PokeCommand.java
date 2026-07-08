@@ -348,6 +348,22 @@ public class PokeCommand implements TabExecutor {
             plugin.npcs().removeNearest(player);
             return;
         }
+        if (args[1].equalsIgnoreCase("citizens")) {
+            if (plugin.citizens() == null) {
+                player.sendMessage(Component.text("Citizens is not installed.", NamedTextColor.RED));
+                return;
+            }
+            if (args.length > 2 && args[2].equalsIgnoreCase("remove")) {
+                plugin.citizens().unbindSelected(player);
+            } else if (args.length > 2) {
+                plugin.citizens().bindSelected(player, args[2]);
+            } else {
+                player.sendMessage(Component.text(
+                        "Usage: /poke npc citizens <healer|vendor|daycare|pc|tutor|remove> "
+                        + "(select the NPC with /npc select first)", NamedTextColor.YELLOW));
+            }
+            return;
+        }
         if (!args[1].equalsIgnoreCase("create") || args.length < 3) {
             player.sendMessage(Component.text(
                     "Usage: /poke npc create <healer|vendor|trainer> [level] [name...]",

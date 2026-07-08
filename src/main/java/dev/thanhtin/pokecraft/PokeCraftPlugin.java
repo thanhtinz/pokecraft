@@ -110,6 +110,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private DungeonManager dungeonManager;
     private MythicBattleManager mythicBattleManager;
     private dev.thanhtin.pokecraft.integration.HologramManager hologramManager;
+    private dev.thanhtin.pokecraft.integration.CitizensHook citizensHook;
     private FarmManager farmManager;
     private dev.thanhtin.pokecraft.pokemon.FossilManager fossilManager;
     private dev.thanhtin.pokecraft.pokemon.ChainManager chainManager;
@@ -301,6 +302,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         hookVault();
         hookPlaceholderApi();
         hookDecentHolograms();
+        hookCitizens();
         // clean retired feature items (Team bundle, PokeNav compass) from anyone
         // already online, e.g. after a /reload - the join handlers do the rest
         for (org.bukkit.entity.Player online : getServer().getOnlinePlayers()) {
@@ -348,6 +350,20 @@ public class PokeCraftPlugin extends JavaPlugin {
     }
 
     public dev.thanhtin.pokecraft.integration.HologramManager holograms() { return hologramManager; }
+
+    /** Bind Citizens NPCs to PokeCraft roles when Citizens is installed. */
+    private void hookCitizens() {
+        if (getServer().getPluginManager().getPlugin("Citizens") == null) return;
+        try {
+            citizensHook = new dev.thanhtin.pokecraft.integration.CitizensHook(this);
+            getServer().getPluginManager().registerEvents(citizensHook, this);
+            getLogger().info("[OK] Citizens hooked - /poke npc citizens <role>");
+        } catch (Throwable t) {
+            getLogger().warning("[WARN] Citizens hook failed: " + t.getMessage());
+        }
+    }
+
+    public dev.thanhtin.pokecraft.integration.CitizensHook citizens() { return citizensHook; }
 
     @Override
     public void onDisable() {
