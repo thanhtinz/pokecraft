@@ -156,6 +156,12 @@ public class PokemonEntityManager {
     }
 
     private void applyBetterModel(Entity entity, String modelId) {
+        // BetterModel spawns packet-based display entities; do it on the tick thread
+        if (!org.bukkit.Bukkit.isPrimaryThread()) {
+            plugin.getServer().getScheduler().runTask(plugin,
+                    () -> { if (entity.isValid()) applyBetterModel(entity, modelId); });
+            return;
+        }
         try {
             Object renderer = unwrapOptional(mBmModel.invoke(null, modelId));
             if (renderer == null) {
@@ -183,8 +189,13 @@ public class PokemonEntityManager {
             target.setAccessible(true);
             target.invoke(renderer, arg);
             hideBaseAfterModel(entity);
-        } catch (Exception e) {
-            plugin.getLogger().warning("[WARN] Failed to apply BetterModel " + modelId + ": " + e.getMessage());
+        } catch (Throwable e) {
+            Throwable root = e;
+            while (root.getCause() != null && root.getCause() != root) root = root.getCause();
+            StringBuilder sb = new StringBuilder(root.toString());
+            StackTraceElement[] st = root.getStackTrace();
+            for (int i = 0; i < Math.min(3, st.length); i++) sb.append(" <- ").append(st[i]);
+            plugin.getLogger().warning("[WARN] Failed to apply BetterModel " + modelId + ": " + sb);
         }
     }
 
