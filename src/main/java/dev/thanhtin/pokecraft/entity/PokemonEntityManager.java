@@ -105,7 +105,7 @@ public class PokemonEntityManager {
         entity.getPersistentDataContainer().set(keyData, PersistentDataType.STRING, gson.toJson(instance));
         entity.getPersistentDataContainer().set(keySpawnTime, PersistentDataType.LONG, System.currentTimeMillis());
 
-        applyModel(entity, plugin.models().blueprintFor(species));
+        applyModel(entity, plugin.models().blueprintFor(species, instance));
         return entity;
     }
 
@@ -211,7 +211,7 @@ public class PokemonEntityManager {
         entity.customName(net.kyori.adventure.text.Component.text(
                 instance.displayName(species) + " Lv." + instance.level));
         entity.setCustomNameVisible(true);
-        applyModel(entity, plugin.models().blueprintFor(species));
+        applyModel(entity, plugin.models().blueprintFor(species, instance));
         return entity;
     }
 

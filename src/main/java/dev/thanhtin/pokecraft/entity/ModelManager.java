@@ -1,6 +1,8 @@
 package dev.thanhtin.pokecraft.entity;
 
 import dev.thanhtin.pokecraft.PokeCraftPlugin;
+import dev.thanhtin.pokecraft.pokemon.Gender;
+import dev.thanhtin.pokecraft.pokemon.PokemonInstance;
 import dev.thanhtin.pokecraft.species.PokemonSpecies;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
@@ -46,6 +48,37 @@ public class ModelManager {
         String override = plugin.getConfig().getString("models.overrides." + species.id, null);
         if (override != null && !override.isBlank()) return override;
         return (species.modelId != null && !species.modelId.isBlank()) ? species.modelId : species.id;
+    }
+
+    /**
+     * Variant-aware blueprint lookup. Tries, in order, the most specific
+     * blueprint installed for this individual pokemon and falls back to the
+     * plain species blueprint:
+     * {@code base_<gender>_shiny > base_shiny_<gender> > base_shiny >
+     * base_<gender> > base}. Variant blueprints are optional - species whose
+     * pack only ships a base model behave exactly as before.
+     */
+    public String blueprintFor(PokemonSpecies species, PokemonInstance instance) {
+        String base = blueprintFor(species);
+        if (base == null || instance == null) return base;
+
+        String genderSuffix = null;
+        Gender g = instance.gender(species);
+        if (g == Gender.FEMALE) genderSuffix = "female";
+        else if (g == Gender.MALE) genderSuffix = "male";
+
+        List<String> candidates = new ArrayList<>();
+        if (instance.shiny && genderSuffix != null) {
+            candidates.add(base + "_" + genderSuffix + "_shiny");
+            candidates.add(base + "_shiny_" + genderSuffix);
+        }
+        if (instance.shiny) candidates.add(base + "_shiny");
+        if (genderSuffix != null) candidates.add(base + "_" + genderSuffix);
+
+        for (String c : candidates) {
+            if (plugin.entities().hasBlueprint(c)) return c;
+        }
+        return base;
     }
 
     public boolean hasModel(PokemonSpecies species) {
