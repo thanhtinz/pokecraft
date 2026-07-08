@@ -1,0 +1,43 @@
+name: Build Cobblemon Bedrock Pack
+
+on:
+  workflow_dispatch:
+    inputs:
+      loader:
+        description: "Mod loader (fabric / neoforge)"
+        required: true
+        default: "fabric"
+      game_version:
+        description: "Minecraft version (e.g. 1.21.1). Leave empty for latest."
+        required: false
+        default: ""
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download latest Cobblemon jar from Modrinth
+        run: |
+          LOADER="${{ github.event.inputs.loader }}"
+          GV="${{ github.event.inputs.game_version }}"
+          Q="loaders=%5B%22${LOADER}%22%5D"
+          if [ -n "$GV" ]; then
+            Q="$Q&game_versions=%5B%22${GV}%22%5D"
+          fi
+          echo "Query: $Q"
+          URL=$(curl -s "https://api.modrinth.com/v2/project/cobblemon/version?$Q" \
+            | python3 -c "import sys,json; vs=json.load(sys.stdin); f=[x for x in vs[0]['files'] if x.get('primary')] or vs[0]['files']; print(f[0]['url'])")
+          echo "Downloading: $URL"
+          curl -L -o cobblemon.jar "$URL"
+          ls -lh cobblemon.jar
+
+      - name: Convert to .mcpack
+        run: python3 tools/cobblemon2mcpack.py cobblemon.jar -o Cobblemon.mcpack -v
+
+      - name: Upload pack
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cobblemon-mcpack
+          path: Cobblemon.mcpack
