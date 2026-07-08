@@ -88,7 +88,7 @@ def convert_geometry(geo_json):
         }
         groups[name] = group
 
-        for cube in bone.get("cubes", []):
+        for ci, cube in enumerate(bone.get("cubes", [])):
             o = cube.get("origin", [0, 0, 0])
             s = cube.get("size", [0, 0, 0])
             cp = cube.get("pivot", [-(o[0] + s[0] / 2) * -1, 0, 0]
@@ -97,7 +97,10 @@ def convert_geometry(geo_json):
             frm = [-(o[0] + s[0]), o[1], o[2]]
             to = [frm[0] + s[0], frm[1] + s[1], frm[2] + s[2]]
             el = {
-                "name": name,
+                # unique per-cube name: BetterModel maps elements by name with
+                # toMap and throws on duplicates, so a bone's cubes can't share
+                # the bone's name (that caused "Duplicate key: head and head").
+                "name": f"{name}_c{ci}",
                 "box_uv": True,
                 "rescale": False,
                 "locked": False,

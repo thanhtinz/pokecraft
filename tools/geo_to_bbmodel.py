@@ -207,8 +207,10 @@ def build_model(geo, name, tex_b64, res_w, res_h):
         name_to_uuid[bone["name"]] = g["uuid"]
         if "poly_mesh" in bone:
             poly = True  # not supported by this simple converter
-        for cube in bone.get("cubes", []):
+        for ci, cube in enumerate(bone.get("cubes", [])):
             el = cube_element(cube, bone.get("pivot", [0, 0, 0]))
+            # unique element name so BetterModel's toMap doesn't hit duplicates
+            el["name"] = f"{bone['name']}_c{ci}"
             elements.append(el)
             g["children"].append(el["uuid"])
         groups[bone["name"]] = g

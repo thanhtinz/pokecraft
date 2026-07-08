@@ -245,8 +245,12 @@ public class ModelImporter {
 
             if (bone.has("cubes")) {
                 double[] bonePivot = arr3(bone, "pivot");
+                int ci = 0;
                 for (JsonElement ce : bone.getAsJsonArray("cubes")) {
                     JsonObject el = cubeElement(ce.getAsJsonObject(), bonePivot);
+                    // unique element name: BetterModel maps elements by name and
+                    // throws on duplicates, so cubes can't all be named "cube"
+                    el.addProperty("name", bname + "_c" + ci++);
                     elements.add(el);
                     children.add(el.get("uuid").getAsString());
                 }
