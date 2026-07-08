@@ -279,6 +279,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         rideManager.start();
         walkingManager.start();
         hookVault();
+        hookPlaceholderApi();
         // clean retired feature items (Team bundle, PokeNav compass) from anyone
         // already online, e.g. after a /reload - the join handlers do the rest
         for (org.bukkit.entity.Player online : getServer().getOnlinePlayers()) {
@@ -299,6 +300,17 @@ public class PokeCraftPlugin extends JavaPlugin {
             getLogger().info("[OK] Economy registered with Vault");
         } catch (Throwable t) {
             getLogger().warning("[WARN] Vault hook failed: " + t.getMessage());
+        }
+    }
+
+    /** Register PokeCraft placeholders when PlaceholderAPI is installed. */
+    private void hookPlaceholderApi() {
+        if (getServer().getPluginManager().getPlugin("PlaceholderAPI") == null) return;
+        try {
+            new dev.thanhtin.pokecraft.integration.PokeCraftPlaceholders(this).register();
+            getLogger().info("[OK] PlaceholderAPI expansion registered (%pokecraft_...%)");
+        } catch (Throwable t) {
+            getLogger().warning("[WARN] PlaceholderAPI hook failed: " + t.getMessage());
         }
     }
 

@@ -205,6 +205,21 @@ public class StorageManager {
         }
     }
 
+    /** Reads a stat column (balance/caught/wild_wins/pvp_wins) for one player. */
+    public synchronized long getStat(UUID uuid, String column) {
+        if (!STAT_COLUMNS.contains(column)) throw new IllegalArgumentException(column);
+        try (PreparedStatement ps = connection.prepareStatement(
+                "SELECT " + column + " FROM players WHERE uuid=?")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getLong(1) : 0;
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("[ERR] getStat failed: " + e.getMessage());
+            return 0;
+        }
+    }
+
     /** Adds delta to a stat column (balance/caught/wild_wins/pvp_wins). */
     public synchronized void addStat(UUID uuid, String column, long delta) {
         if (!STAT_COLUMNS.contains(column)) throw new IllegalArgumentException(column);
