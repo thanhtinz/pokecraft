@@ -96,12 +96,14 @@ def convert_geometry(geo_json):
             cr = cube.get("rotation", [0, 0, 0])
             frm = [-(o[0] + s[0]), o[1], o[2]]
             to = [frm[0] + s[0], frm[1] + s[1], frm[2] + s[2]]
+            uv = cube.get("uv")
+            box_uv = isinstance(uv, list)
             el = {
                 # unique per-cube name: BetterModel maps elements by name with
                 # toMap and throws on duplicates, so a bone's cubes can't share
                 # the bone's name (that caused "Duplicate key: head and head").
                 "name": f"{name}_c{ci}",
-                "box_uv": True,
+                "box_uv": box_uv,
                 "rescale": False,
                 "locked": False,
                 "from": frm,
@@ -113,15 +115,29 @@ def convert_geometry(geo_json):
                 "origin": ([-cube["pivot"][0], cube["pivot"][1],
                             cube["pivot"][2]] if "pivot" in cube
                            else group["origin"]),
-                "uv_offset": (cube.get("uv", [0, 0])
-                              if isinstance(cube.get("uv", [0, 0]), list)
-                              else [0, 0]),
-                "faces": {},
-                "mirror_uv": bool(cube.get("mirror",
-                                           bone.get("mirror", False))),
                 "type": "cube",
                 "uuid": u(),
             }
+            if box_uv:
+                el["uv_offset"] = uv[:2] if len(uv) >= 2 else [0, 0]
+                el["mirror_uv"] = bool(cube.get("mirror",
+                                                bone.get("mirror", False)))
+            else:
+                # per-face UV: BetterModel needs all 6 faces or it NPEs on a
+                # null face (Cannot invoke ModelUV.hasTexture() ... north null)
+                uvobj = uv if isinstance(uv, dict) else {}
+                faces = {}
+                for f in ("north", "east", "south", "west", "up", "down"):
+                    fd = uvobj.get(f)
+                    if isinstance(fd, dict) and "uv" in fd:
+                        u0, v0 = fd["uv"][0], fd["uv"][1]
+                        sz = fd.get("uv_size", [0, 0])
+                        uw = sz[0] if len(sz) > 0 else 0
+                        uh = sz[1] if len(sz) > 1 else 0
+                        faces[f] = {"uv": [u0, v0, u0 + uw, v0 + uh], "texture": 0}
+                    else:
+                        faces[f] = {"uv": [0, 0, 0, 0]}
+                el["faces"] = faces
             elements.append(el)
             group["children"].append(el["uuid"])
 
