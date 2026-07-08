@@ -167,11 +167,14 @@ public class PokemonEntityManager {
             // then match the overload whose parameter accepts that wrapper.
             Object arg = adaptEntity(entity);
             Method target = null;
-            for (Method m : renderer.getClass().getMethods()) {
-                if (m.getParameterCount() != 1) continue;
-                String n = m.getName();
-                if (!n.equals("getOrCreate") && !n.equals("create") && !n.equals("spawn")) continue;
-                if (m.getParameterTypes()[0].isInstance(arg)) { target = m; break; }
+            // prefer getOrCreate (idempotent) over create/spawn
+            for (String want : new String[]{"getOrCreate", "create", "spawn"}) {
+                for (Method m : renderer.getClass().getMethods()) {
+                    if (m.getParameterCount() != 1) continue;
+                    if (!m.getName().equals(want)) continue;
+                    if (m.getParameterTypes()[0].isInstance(arg)) { target = m; break; }
+                }
+                if (target != null) break;
             }
             if (target == null) {
                 plugin.getLogger().warning("[WARN] BetterModel: no usable getOrCreate for " + modelId);
@@ -193,18 +196,21 @@ public class PokemonEntityManager {
     private Object adaptEntity(Entity entity) {
         if (!bmAdaptResolved) {
             bmAdaptResolved = true;
-            for (String cn : new String[]{"kr.toxicity.model.api.util.BukkitAdapter",
+            for (String cn : new String[]{
+                    "kr.toxicity.model.api.bukkit.platform.BukkitAdapter", // BetterModel 3.x (verified 3.2.0)
+                    "kr.toxicity.model.api.util.BukkitAdapter",
                     "kr.toxicity.model.util.BukkitAdapter",
                     "kr.toxicity.model.api.BukkitAdapter"}) {
                 try {
                     Class<?> adapter = Class.forName(cn);
+                    Method generic = null, fallback = null;
                     for (Method m : adapter.getMethods()) {
-                        if (m.getName().equals("adapt") && m.getParameterCount() == 1
-                                && m.getParameterTypes()[0].isInstance(entity)) {
-                            mBmAdapt = m;
-                            break;
-                        }
+                        if (!m.getName().equals("adapt") || m.getParameterCount() != 1) continue;
+                        Class<?> p = m.getParameterTypes()[0];
+                        if (p == Entity.class) { generic = m; break; }   // works for every entity
+                        if (fallback == null && p.isInstance(entity)) fallback = m;
                     }
+                    mBmAdapt = (generic != null) ? generic : fallback;
                     if (mBmAdapt != null) break;
                 } catch (Throwable ignored) {
                 }
