@@ -30,6 +30,8 @@ public class PokemonEntityManager {
     // BetterModel (free, open-source model engine; supports current MC versions)
     private boolean betterModel;
     private Method mBmModel;
+    private Method mBmAdapt;      // BukkitAdapter.adapt(Entity) -> BetterModel entity wrapper
+    private boolean bmAdaptResolved;
 
     public PokemonEntityManager(PokeCraftPlugin plugin) {
         this.plugin = plugin;
@@ -160,30 +162,61 @@ public class PokemonEntityManager {
                 // normal for a species that simply has no model - stay quiet
                 return;
             }
-            // BetterModel exposes several 1-arg getOrCreate/create overloads
-            // (Entity, UUID, int...). Pick the one whose parameter actually
-            // accepts our Bukkit entity, otherwise reflection throws
-            // "argument type mismatch".
+            // BetterModel's getOrCreate takes an *adapted* entity
+            // (BukkitAdapter.adapt(entity)), not a raw Bukkit Entity. Adapt first,
+            // then match the overload whose parameter accepts that wrapper.
+            Object arg = adaptEntity(entity);
             Method target = null;
             for (Method m : renderer.getClass().getMethods()) {
                 if (m.getParameterCount() != 1) continue;
                 String n = m.getName();
                 if (!n.equals("getOrCreate") && !n.equals("create") && !n.equals("spawn")) continue;
-                Class<?> pt = m.getParameterTypes()[0];
-                // must be an Entity-typed parameter that accepts this entity
-                // (skip UUID/int/Object overloads that cause the type mismatch)
-                if (Entity.class.isAssignableFrom(pt) && pt.isInstance(entity)) { target = m; break; }
+                if (m.getParameterTypes()[0].isInstance(arg)) { target = m; break; }
             }
             if (target == null) {
-                plugin.getLogger().warning("[WARN] BetterModel: no getOrCreate(Entity) for " + modelId);
+                plugin.getLogger().warning("[WARN] BetterModel: no usable getOrCreate for " + modelId);
                 return;
             }
             target.setAccessible(true);
-            target.invoke(renderer, entity);
+            target.invoke(renderer, arg);
             hideBaseAfterModel(entity);
         } catch (Exception e) {
             plugin.getLogger().warning("[WARN] Failed to apply BetterModel " + modelId + ": " + e.getMessage());
         }
+    }
+
+    /**
+     * Wrap a Bukkit entity the way BetterModel expects. Modern BetterModel takes
+     * a {@code BukkitAdapter.adapt(entity)} wrapper; if that adapter isn't found
+     * (older API), the raw entity is returned so an Entity-typed overload matches.
+     */
+    private Object adaptEntity(Entity entity) {
+        if (!bmAdaptResolved) {
+            bmAdaptResolved = true;
+            for (String cn : new String[]{"kr.toxicity.model.api.util.BukkitAdapter",
+                    "kr.toxicity.model.util.BukkitAdapter",
+                    "kr.toxicity.model.api.BukkitAdapter"}) {
+                try {
+                    Class<?> adapter = Class.forName(cn);
+                    for (Method m : adapter.getMethods()) {
+                        if (m.getName().equals("adapt") && m.getParameterCount() == 1
+                                && m.getParameterTypes()[0].isInstance(entity)) {
+                            mBmAdapt = m;
+                            break;
+                        }
+                    }
+                    if (mBmAdapt != null) break;
+                } catch (Throwable ignored) {
+                }
+            }
+        }
+        if (mBmAdapt != null) {
+            try {
+                return mBmAdapt.invoke(null, entity);
+            } catch (Throwable ignored) {
+            }
+        }
+        return entity; // older API accepts the raw entity
     }
 
     /** If o is an Optional, return its value (or null); otherwise return o. */
