@@ -107,6 +107,18 @@ GENDER_ASPECTS = ("male", "female")
 def strip_ns(ref: str) -> str:
     return ref.split(":", 1)[1] if ":" in ref else ref
 
+def as_ref(v):
+    """Coerce a Cobblemon model/texture reference to a string, or None.
+    Some variations give a list (layered textures) or an object instead of a
+    plain string ref - take the first string of a list, otherwise skip."""
+    if isinstance(v, str):
+        return v
+    if isinstance(v, list):
+        for item in v:
+            if isinstance(item, str):
+                return item
+    return None
+
 def build_indexes(src: AssetSource):
     """Index geometry files, animation folders, textures, resolvers."""
     files = src.list_files()
@@ -259,8 +271,8 @@ def generate(src: AssetSource, out_dir: Path, only: set[str] | None,
     def emit(vid: str, species: str, aspects: set[str],
              variations: list[dict]) -> bool:
         resolved = resolve_variation(variations, aspects)
-        model_ref = resolved.get("model")
-        texture_ref = resolved.get("texture")
+        model_ref = as_ref(resolved.get("model"))
+        texture_ref = as_ref(resolved.get("texture"))
         if not model_ref or not texture_ref:
             return False
         geo_name = strip_ns(model_ref).removesuffix(".geo")
@@ -338,8 +350,8 @@ def generate(src: AssetSource, out_dir: Path, only: set[str] | None,
             if shiny:
                 aspects.add("shiny")
             resolved = resolve_variation(variations, aspects)
-            model_ref = resolved.get("model")
-            texture_ref = resolved.get("texture")
+            model_ref = as_ref(resolved.get("model"))
+            texture_ref = as_ref(resolved.get("texture"))
             if not model_ref or not texture_ref:
                 continue
 
