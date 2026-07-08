@@ -109,6 +109,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private RankGui rankGui;
     private DungeonManager dungeonManager;
     private MythicBattleManager mythicBattleManager;
+    private dev.thanhtin.pokecraft.integration.HologramManager hologramManager;
     private FarmManager farmManager;
     private dev.thanhtin.pokecraft.pokemon.FossilManager fossilManager;
     private dev.thanhtin.pokecraft.pokemon.ChainManager chainManager;
@@ -299,6 +300,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         walkingManager.start();
         hookVault();
         hookPlaceholderApi();
+        hookDecentHolograms();
         // clean retired feature items (Team bundle, PokeNav compass) from anyone
         // already online, e.g. after a /reload - the join handlers do the rest
         for (org.bukkit.entity.Player online : getServer().getOnlinePlayers()) {
@@ -332,6 +334,20 @@ public class PokeCraftPlugin extends JavaPlugin {
             getLogger().warning("[WARN] PlaceholderAPI hook failed: " + t.getMessage());
         }
     }
+
+    /** Set up leaderboard holograms when DecentHolograms is installed. */
+    private void hookDecentHolograms() {
+        if (getServer().getPluginManager().getPlugin("DecentHolograms") == null) return;
+        try {
+            hologramManager = new dev.thanhtin.pokecraft.integration.HologramManager(this);
+            hologramManager.start();
+            getLogger().info("[OK] DecentHolograms hooked - /poke hologram add <money|caught|wins>");
+        } catch (Throwable t) {
+            getLogger().warning("[WARN] DecentHolograms hook failed: " + t.getMessage());
+        }
+    }
+
+    public dev.thanhtin.pokecraft.integration.HologramManager holograms() { return hologramManager; }
 
     @Override
     public void onDisable() {

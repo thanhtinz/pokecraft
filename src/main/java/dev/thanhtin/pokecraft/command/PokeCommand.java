@@ -128,6 +128,10 @@ public class PokeCommand implements TabExecutor {
                 if (!player.hasPermission("pokecraft.admin")) return noPerm(player);
                 model(player, args);
             }
+            case "hologram", "holo" -> {
+                if (!player.hasPermission("pokecraft.admin")) return noPerm(player);
+                hologram(player, args);
+            }
             default -> {
                 player.sendMessage(Component.text(
                         "Tip: everything is in the menu item (right-click / tap the star). "
@@ -260,6 +264,26 @@ public class PokeCommand implements TabExecutor {
                 plugin.daycare().withdraw(player, parseInt(args[2], 0) - 1);
             }
             default -> plugin.daycare().status(player);
+        }
+    }
+
+    private void hologram(Player player, String[] args) {
+        if (plugin.holograms() == null) {
+            player.sendMessage(Component.text("DecentHolograms is not installed.", NamedTextColor.RED));
+            return;
+        }
+        String sub = args.length > 1 ? args[1].toLowerCase(Locale.ROOT) : "help";
+        switch (sub) {
+            case "add", "create" -> {
+                String type = args.length > 2 ? args[2] : "caught";
+                String title = args.length > 3
+                        ? String.join(" ", java.util.Arrays.copyOfRange(args, 3, args.length)) : null;
+                plugin.holograms().add(player, type, title);
+            }
+            case "remove", "delete" -> plugin.holograms().removeNearest(player);
+            default -> player.sendMessage(Component.text(
+                    "/poke hologram add <money|caught|wins> [title]  |  /poke hologram remove",
+                    NamedTextColor.YELLOW));
         }
     }
 
