@@ -52,6 +52,12 @@ public class PvpBattleManager implements Listener {
             return;
         }
         if (!canFight(from, from) || !canFight(to, from)) return;
+        if (plugin.worldGuardActive()
+                && (!dev.thanhtin.pokecraft.integration.WorldGuardHook.allowsBattle(from.getLocation())
+                    || !dev.thanhtin.pokecraft.integration.WorldGuardHook.allowsBattle(to.getLocation()))) {
+            from.sendMessage(Component.text("Duels aren't allowed in this area.", NamedTextColor.RED));
+            return;
+        }
         double maxDistance = plugin.getConfig().getDouble("pvp.max-distance", 50);
         if (!from.getWorld().equals(to.getWorld())
                 || from.getLocation().distance(to.getLocation()) > maxDistance) {

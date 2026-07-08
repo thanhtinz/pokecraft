@@ -14,6 +14,7 @@ repositories {
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://repo.opencollab.dev/main/")              // Floodgate / Geyser API
     maven("https://repo.extendedclip.com/releases/")        // PlaceholderAPI
+    maven("https://maven.enginehub.org/repo/")              // WorldGuard / WorldEdit
     maven("https://jitpack.io")                             // Vault API
 }
 
@@ -22,6 +23,7 @@ dependencies {
     // BetterModel is accessed purely via reflection (soft-depend), so no compile dependency is needed.
     compileOnly("org.geysermc.floodgate:api:2.2.4-SNAPSHOT")
     compileOnly("me.clip:placeholderapi:2.11.6")
+    compileOnly("com.sk89q.worldguard:worldguard-bukkit:7.0.9")
     compileOnly("com.github.MilkBowl:VaultAPI:1.7.1")
     // Gson + SQLite JDBC are bundled inside Paper at runtime (Gson) and shaded here for SQLite
     implementation("org.xerial:sqlite-jdbc:3.46.1.3")

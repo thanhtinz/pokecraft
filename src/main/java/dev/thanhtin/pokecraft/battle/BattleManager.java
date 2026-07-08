@@ -55,6 +55,11 @@ public class BattleManager implements Listener {
             player.sendMessage(Component.text("That pokemon is already battling someone else.", NamedTextColor.RED));
             return;
         }
+        if (plugin.worldGuardActive()
+                && !dev.thanhtin.pokecraft.integration.WorldGuardHook.allowsBattle(player.getLocation())) {
+            player.sendMessage(Component.text("You can't battle in this area.", NamedTextColor.RED));
+            return;
+        }
         if (plugin.rides().isRiding(player)) plugin.rides().dismount(player);
         PokemonInstance wild = plugin.entities().readData(wildEntity);
         if (wild == null) return;

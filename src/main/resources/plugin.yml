@@ -8,6 +8,7 @@ softdepend:
   - BetterModel
   - MythicMobs
   - PlaceholderAPI
+  - WorldGuard
   - floodgate
   - Geyser-Spigot
   - Vault

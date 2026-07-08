@@ -134,6 +134,25 @@ public class PokeCraftPlugin extends JavaPlugin {
     private RideManager rideManager;
     private NpcManager npcManager;
 
+    private boolean worldGuardActive;
+
+    @Override
+    public void onLoad() {
+        // WorldGuard custom flags must be registered before regions load
+        if (getServer().getPluginManager().getPlugin("WorldGuard") != null) {
+            try {
+                dev.thanhtin.pokecraft.integration.WorldGuardHook.registerFlags();
+                worldGuardActive = true;
+                getLogger().info("[OK] WorldGuard flags registered (pokecraft-spawns, pokecraft-battles)");
+            } catch (Throwable t) {
+                getLogger().warning("[WARN] WorldGuard flag registration failed: " + t.getMessage());
+            }
+        }
+    }
+
+    /** True when WorldGuard is installed and its flags registered. */
+    public boolean worldGuardActive() { return worldGuardActive; }
+
     @Override
     public void onEnable() {
         saveDefaultConfig();

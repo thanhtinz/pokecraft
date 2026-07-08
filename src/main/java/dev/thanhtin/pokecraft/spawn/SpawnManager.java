@@ -61,6 +61,8 @@ public class SpawnManager {
             Location loc = water ? pickWaterLocation(player, rMin, rMax)
                                  : pickLocation(player, rMin, rMax);
             if (loc == null) continue;
+            if (plugin.worldGuardActive()
+                    && !dev.thanhtin.pokecraft.integration.WorldGuardHook.allowsSpawn(loc)) continue;
 
             PokemonSpecies species = water ? pickWaterSpecies() : pickSpecies(loc);
             if (species == null) continue;
