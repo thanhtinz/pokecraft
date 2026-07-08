@@ -223,6 +223,15 @@ farm:
   harvest-money: 150
 
 dungeon:
+  # MythicMobs integration (soft-depend). Build the dungeon with
+  # MythicMobs/MythicDungeons; map a mob's internal name to a pokemon here. When
+  # a player attacks that mob, a pokemon battle opens instead of a melee fight,
+  # and winning kills the mob (its normal death fires, so loot/room progression
+  # works). Value is "species" or "species:level".
+  mythic:
+    enabled: true
+    default-level: 25
+    battles: {}          # e.g.  DungeonZombie: gengar   |   BossGolem: "steelix:45"
   waves: 3                # trainer waves before the boss
   base-level: 15
   level-step: 5           # each wave is this much stronger

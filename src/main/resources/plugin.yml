@@ -6,6 +6,7 @@ author: thanhtinz
 description: Server-side Pokemon plugin. Geyser/Bedrock compatible, 3D models via BetterModel.
 softdepend:
   - BetterModel
+  - MythicMobs
   - floodgate
   - Geyser-Spigot
   - Vault

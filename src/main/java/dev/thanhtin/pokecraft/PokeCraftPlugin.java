@@ -7,6 +7,7 @@ import dev.thanhtin.pokecraft.battle.BattleManager;
 import dev.thanhtin.pokecraft.battle.pvp.PvpBattleManager;
 import dev.thanhtin.pokecraft.daycare.DaycareManager;
 import dev.thanhtin.pokecraft.dungeon.DungeonManager;
+import dev.thanhtin.pokecraft.dungeon.MythicBattleManager;
 import dev.thanhtin.pokecraft.economy.EconomyManager;
 import dev.thanhtin.pokecraft.minigame.BoardGameManager;
 import dev.thanhtin.pokecraft.minigame.BoardPvpManager;
@@ -105,6 +106,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     private GuildNameInput guildNameInput;
     private RankGui rankGui;
     private DungeonManager dungeonManager;
+    private MythicBattleManager mythicBattleManager;
     private FarmManager farmManager;
     private dev.thanhtin.pokecraft.pokemon.FossilManager fossilManager;
     private dev.thanhtin.pokecraft.pokemon.ChainManager chainManager;
@@ -180,6 +182,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         guildNameInput = new GuildNameInput(this);
         rankGui = new RankGui(this);
         dungeonManager = new DungeonManager(this);
+        mythicBattleManager = new MythicBattleManager(this);
         farmManager = new FarmManager(this);
         fossilManager = new dev.thanhtin.pokecraft.pokemon.FossilManager(this);
         chainManager = new dev.thanhtin.pokecraft.pokemon.ChainManager(this);
@@ -236,6 +239,7 @@ public class PokeCraftPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(guildNameInput, this);
         getServer().getPluginManager().registerEvents(rankGui, this);
         getServer().getPluginManager().registerEvents(dungeonManager, this);
+        getServer().getPluginManager().registerEvents(mythicBattleManager, this);
         getServer().getPluginManager().registerEvents(farmManager, this);
         getServer().getPluginManager().registerEvents(fossilManager, this);
         getServer().getPluginManager().registerEvents(adminGui, this);
@@ -344,6 +348,7 @@ public class PokeCraftPlugin extends JavaPlugin {
     public GuildNameInput guildNameInput() { return guildNameInput; }
     public RankGui rankUi() { return rankGui; }
     public DungeonManager dungeons() { return dungeonManager; }
+    public MythicBattleManager mythicDungeon() { return mythicBattleManager; }
     public FarmManager farms() { return farmManager; }
     public dev.thanhtin.pokecraft.pokemon.ChainManager chains() { return chainManager; }
     public AdminGui adminUi() { return adminGui; }

@@ -615,6 +615,7 @@ public class BattleManager implements Listener {
         plugin.parties().saveParty(player.getUniqueId());
         player.closeInventory();
         plugin.dungeons().onBattleLost(player);
+        plugin.mythicDungeon().onResolved(player, false);
         return true;
     }
 
@@ -699,6 +700,7 @@ public class BattleManager implements Listener {
         plugin.parties().saveParty(player.getUniqueId());
         player.closeInventory();
         plugin.dungeons().onBattleWon(player);
+        plugin.mythicDungeon().onResolved(player, true);
     }
 
     public void flee(Player player) {
@@ -708,6 +710,7 @@ public class BattleManager implements Listener {
             plugin.parties().saveParty(player.getUniqueId());
             player.closeInventory();
             plugin.dungeons().onBattleLost(player);
+            plugin.mythicDungeon().onResolved(player, false);
         }
     }
 
@@ -719,6 +722,7 @@ public class BattleManager implements Listener {
             plugin.parties().saveParty(player.getUniqueId());
             player.closeInventory();
         }
+        plugin.mythicDungeon().onResolved(player, true); // capturing it clears the mythic encounter
     }
 
     @EventHandler
