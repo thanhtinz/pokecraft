@@ -132,6 +132,9 @@ commands:
     description: Open the SurvivalCore admin settings panel
     aliases: [survivalcore, scadmin]
     permission: survivalcore.admin
+  menu:
+    description: Open the menu hub (also on your compass)
+    aliases: [hub]
 permissions:
   survivalcore.admin:
     description: Admin commands

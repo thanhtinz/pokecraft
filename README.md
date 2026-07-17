@@ -24,6 +24,15 @@ translates for Bedrock.
 | **Chat / Scoreboard / Tab** | Rank-aware chat format, live sidebar, tab header/footer — all configurable. |
 | **PlaceholderAPI** | `%survivalcore_balance%`, `_rank`, `_bounty`, `_claims`, `_jobs` (when PlaceholderAPI is installed). |
 
+## The menu
+
+Every player carries a **Menu compass** (last hotbar slot). It can't be dropped,
+moved, or lost on death, and reappears if it ever goes missing. Right-click it
+(or `/menu`) to open the hub: balance, market, daily reward, vote, homes, spawn,
+and rank. Admins also see an **Admin Panel** button that opens the settings menu
+(`/sc`). Roleplay systems (kits, jobs, crates, vaults) are not in the hub — those
+stay out in the world.
+
 ## Admin setup — the settings panel
 
 Setup is a **menu**, not typed commands. Run `/sc` to open the SurvivalCore

@@ -79,6 +79,7 @@ public class Commands implements CommandExecutor, TabCompleter {
             case "vote" -> vote(p, a);
             case "bounty" -> bounty(p, a);
             case "npc" -> npc(p, a);
+            case "menu", "hub" -> plugin.hub().open(p);
             case "sc" -> {
                 if (!p.hasPermission("survivalcore.admin")) { Msg.error(p, "No permission."); return true; }
                 plugin.adminPanel().open(p);

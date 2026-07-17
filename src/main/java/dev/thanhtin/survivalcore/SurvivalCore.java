@@ -11,6 +11,7 @@ import dev.thanhtin.survivalcore.crate.CrateManager;
 import dev.thanhtin.survivalcore.crate.KeyItem;
 import dev.thanhtin.survivalcore.economy.EconomyManager;
 import dev.thanhtin.survivalcore.economy.VaultBridge;
+import dev.thanhtin.survivalcore.hub.PlayerHub;
 import dev.thanhtin.survivalcore.job.JobListener;
 import dev.thanhtin.survivalcore.job.JobManager;
 import dev.thanhtin.survivalcore.kit.KitManager;
@@ -63,6 +64,7 @@ public class SurvivalCore extends JavaPlugin {
     private BountyManager bounties;
     private ScoreboardService scoreboards;
     private AdminPanel adminPanel;
+    private PlayerHub hub;
 
     @Override
     public void onEnable() {
@@ -102,6 +104,7 @@ public class SurvivalCore extends JavaPlugin {
         bounties = new BountyManager(this);
         scoreboards = new ScoreboardService(this);
         adminPanel = new AdminPanel(this);
+        hub = new PlayerHub(this);
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
@@ -115,11 +118,14 @@ public class SurvivalCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new ChatListener(this), this);
         getServer().getPluginManager().registerEvents(new NpcListener(this), this);
         getServer().getPluginManager().registerEvents(adminPanel, this);
+        getServer().getPluginManager().registerEvents(hub, this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         scoreboards.start();
         npcs.spawnAll();
         hookPlaceholders();
+        // give the menu item to anyone already online (e.g. after a reload)
+        getServer().getOnlinePlayers().forEach(hub::ensureItem);
 
         Commands commands = new Commands(this);
         for (String c : new String[]{"balance", "pay", "baltop", "eco",
@@ -129,7 +135,7 @@ public class SurvivalCore extends JavaPlugin {
                 "claim", "unclaim", "trust", "untrust", "claiminfo", "claims",
                 "ah", "sell", "crate", "key",
                 "pv", "vault", "pvault", "kit", "kits", "rankup", "rank",
-                "jobs", "job", "daily", "vote", "svote", "bounty", "npc", "sc"}) {
+                "jobs", "job", "daily", "vote", "svote", "bounty", "npc", "sc", "menu"}) {
             PluginCommand pc = getCommand(c);
             if (pc != null) {
                 pc.setExecutor(commands);
@@ -190,4 +196,5 @@ public class SurvivalCore extends JavaPlugin {
     public BountyManager bounties() { return bounties; }
     public ScoreboardService scoreboards() { return scoreboards; }
     public AdminPanel adminPanel() { return adminPanel; }
+    public PlayerHub hub() { return hub; }
 }
