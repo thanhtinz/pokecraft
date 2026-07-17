@@ -219,6 +219,13 @@ vote:
 bounty:
   min-amount: 100.0
 
+giftcode:
+  # default reward for codes generated from the admin panel
+  default-money: 1000.0
+  default-crate: vote
+  default-keys: 1
+  default-max-uses: 0   # 0 = unlimited total redemptions (still once per player)
+
 chat:
   enabled: true
   # tokens: {rank} {name} {message} ; &-codes and PlaceholderAPI supported in the prefix

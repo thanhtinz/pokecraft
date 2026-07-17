@@ -11,6 +11,7 @@ import dev.thanhtin.survivalcore.crate.CrateManager;
 import dev.thanhtin.survivalcore.crate.KeyItem;
 import dev.thanhtin.survivalcore.economy.EconomyManager;
 import dev.thanhtin.survivalcore.economy.VaultBridge;
+import dev.thanhtin.survivalcore.giftcode.GiftcodeManager;
 import dev.thanhtin.survivalcore.hub.PlayerHub;
 import dev.thanhtin.survivalcore.job.JobListener;
 import dev.thanhtin.survivalcore.job.JobManager;
@@ -71,6 +72,7 @@ public class SurvivalCore extends JavaPlugin {
     private ShopManager shop;
     private ShopGui shopGui;
     private BankerGui bankerGui;
+    private GiftcodeManager giftcodes;
 
     @Override
     public void onEnable() {
@@ -115,6 +117,7 @@ public class SurvivalCore extends JavaPlugin {
         shop.load();
         shopGui = new ShopGui(this);
         bankerGui = new BankerGui(this);
+        giftcodes = new GiftcodeManager(this);
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
@@ -147,7 +150,8 @@ public class SurvivalCore extends JavaPlugin {
                 "claim", "unclaim", "trust", "untrust", "claiminfo", "claims",
                 "ah", "sell", "crate", "key",
                 "pv", "vault", "pvault", "kit", "kits", "rankup", "rank",
-                "jobs", "job", "daily", "vote", "svote", "bounty", "npc", "sc", "menu", "shop"}) {
+                "jobs", "job", "daily", "vote", "svote", "bounty", "npc", "sc", "menu", "shop",
+                "redeem"}) {
             PluginCommand pc = getCommand(c);
             if (pc != null) {
                 pc.setExecutor(commands);
@@ -212,4 +216,5 @@ public class SurvivalCore extends JavaPlugin {
     public ShopManager shop() { return shop; }
     public ShopGui shopGui() { return shopGui; }
     public BankerGui bankerGui() { return bankerGui; }
+    public GiftcodeManager giftcodes() { return giftcodes; }
 }

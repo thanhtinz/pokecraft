@@ -96,6 +96,11 @@ public class AdminPanel implements Listener {
                     "crate:" + crate.id()));
         }
 
+        // Giftcode generator
+        inv.setItem(40, action(Material.NAME_TAG, "&dCreate Giftcode",
+                List.of("&7Generates a code with the default", "&7reward. Share it; players /redeem."),
+                "giftcode"));
+
         // Feature toggles
         inv.setItem(45, toggle("Scoreboard", "scoreboard.enabled"));
         inv.setItem(46, toggle("Chat format", "chat.enabled"));
@@ -144,6 +149,12 @@ public class AdminPanel implements Listener {
             plugin.saveConfig();
             Msg.ok(p, path + " = " + (now ? "ON" : "OFF"));
             open(p); // refresh
+            return;
+        }
+        if (act.equals("giftcode")) {
+            String code = plugin.giftcodes().createDefault();
+            Msg.ok(p, "Created giftcode: " + code);
+            Msg.info(p, "Share it - players claim with /redeem " + code);
             return;
         }
         switch (act) {

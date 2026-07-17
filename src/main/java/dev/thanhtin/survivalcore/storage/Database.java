@@ -76,7 +76,75 @@ public class Database {
             st.execute("CREATE TABLE IF NOT EXISTS vault_blocks(" +
                     "world TEXT, x INTEGER, y INTEGER, z INTEGER, " +
                     "PRIMARY KEY(world, x, y, z))");
+            st.execute("CREATE TABLE IF NOT EXISTS giftcodes(" +
+                    "code TEXT PRIMARY KEY, money REAL NOT NULL DEFAULT 0, crate TEXT, " +
+                    "keys INTEGER NOT NULL DEFAULT 0, max_uses INTEGER NOT NULL DEFAULT 0, " +
+                    "uses INTEGER NOT NULL DEFAULT 0)");
+            st.execute("CREATE TABLE IF NOT EXISTS giftcode_redeemed(" +
+                    "code TEXT, uuid TEXT, PRIMARY KEY(code, uuid))");
         }
+    }
+
+    // ---------- giftcodes ----------
+
+    public record Giftcode(String code, double money, String crate, int keys, int maxUses, int uses) {}
+
+    public synchronized void createGiftcode(String code, double money, String crate, int keys, int maxUses) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT OR IGNORE INTO giftcodes(code,money,crate,keys,max_uses,uses) VALUES(?,?,?,?,?,0)")) {
+            ps.setString(1, code);
+            ps.setDouble(2, money);
+            ps.setString(3, crate);
+            ps.setInt(4, keys);
+            ps.setInt(5, maxUses);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("createGiftcode failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized Giftcode getGiftcode(String code) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT code,money,crate,keys,max_uses,uses FROM giftcodes WHERE code=?")) {
+            ps.setString(1, code);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? new Giftcode(rs.getString(1), rs.getDouble(2), rs.getString(3),
+                        rs.getInt(4), rs.getInt(5), rs.getInt(6)) : null;
+            }
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public synchronized boolean hasRedeemed(String code, UUID uuid) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT 1 FROM giftcode_redeemed WHERE code=? AND uuid=?")) {
+            ps.setString(1, code);
+            ps.setString(2, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+        } catch (SQLException e) {
+            return true; // fail safe: treat as redeemed so we don't double-grant on error
+        }
+    }
+
+    /** Atomically mark a code redeemed by a player and bump its use count; false if already redeemed. */
+    public synchronized boolean redeemGiftcode(String code, UUID uuid) {
+        try (PreparedStatement ins = conn.prepareStatement(
+                "INSERT OR IGNORE INTO giftcode_redeemed(code,uuid) VALUES(?,?)")) {
+            ins.setString(1, code);
+            ins.setString(2, uuid.toString());
+            if (ins.executeUpdate() == 0) return false; // already redeemed
+        } catch (SQLException e) {
+            return false;
+        }
+        try (PreparedStatement up = conn.prepareStatement(
+                "UPDATE giftcodes SET uses=uses+1 WHERE code=?")) {
+            up.setString(1, code);
+            up.executeUpdate();
+        } catch (SQLException ignored) {}
+        return true;
     }
 
     // ---------- crate blocks ----------

@@ -137,6 +137,10 @@ commands:
     aliases: [hub]
   shop:
     description: Open the server shop (buy/sell)
+  redeem:
+    description: Redeem a giftcode
+    usage: /redeem <code>
+    aliases: [giftcode, code]
 permissions:
   survivalcore.admin:
     description: Admin commands
