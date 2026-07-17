@@ -1,9 +1,0 @@
-{
-  "resource_pack_name": "pokecraft",
-  "texture_name": "atlas.items",
-  "texture_data": {
-    "pokedex": {
-      "textures": "textures/items/pokedex"
-    }
-  }
-}

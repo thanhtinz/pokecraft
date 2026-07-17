@@ -1,0 +1,290 @@
+package dev.thanhtin.survivalcore.storage;
+
+import dev.thanhtin.survivalcore.SurvivalCore;
+import org.bukkit.Location;
+import org.bukkit.World;
+
+import java.io.File;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+/**
+ * SQLite storage for all SurvivalCore data. One file, created on first run.
+ * Every access is synchronized on the single connection - fine for the volumes
+ * a survival server sees, and keeps the code simple and safe.
+ */
+public class Database {
+
+    private final SurvivalCore plugin;
+    private Connection conn;
+
+    public Database(SurvivalCore plugin) {
+        this.plugin = plugin;
+    }
+
+    public void open() throws SQLException {
+        File file = new File(plugin.getDataFolder(), "survivalcore.db");
+        file.getParentFile().mkdirs();
+        conn = DriverManager.getConnection("jdbc:sqlite:" + file.getAbsolutePath());
+        try (Statement st = conn.createStatement()) {
+            st.execute("PRAGMA journal_mode=WAL");
+            st.execute("CREATE TABLE IF NOT EXISTS players(" +
+                    "uuid TEXT PRIMARY KEY, name TEXT, balance REAL NOT NULL DEFAULT 0)");
+            st.execute("CREATE TABLE IF NOT EXISTS homes(" +
+                    "uuid TEXT, name TEXT, world TEXT, x REAL, y REAL, z REAL, yaw REAL, pitch REAL, " +
+                    "PRIMARY KEY(uuid, name))");
+            st.execute("CREATE TABLE IF NOT EXISTS warps(" +
+                    "name TEXT PRIMARY KEY, world TEXT, x REAL, y REAL, z REAL, yaw REAL, pitch REAL)");
+            st.execute("CREATE TABLE IF NOT EXISTS meta(k TEXT PRIMARY KEY, v TEXT)");
+        }
+    }
+
+    public void close() {
+        try { if (conn != null) conn.close(); } catch (SQLException ignored) {}
+    }
+
+    // ---------- players / economy ----------
+
+    public synchronized void ensurePlayer(UUID uuid, String name, double startBalance) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO players(uuid, name, balance) VALUES(?,?,?) " +
+                        "ON CONFLICT(uuid) DO UPDATE SET name=excluded.name")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, name);
+            ps.setDouble(3, startBalance);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("ensurePlayer failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized double getBalance(UUID uuid) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT balance FROM players WHERE uuid=?")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getDouble(1) : 0;
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("getBalance failed: " + e.getMessage());
+            return 0;
+        }
+    }
+
+    public synchronized void setBalance(UUID uuid, double amount) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "UPDATE players SET balance=? WHERE uuid=?")) {
+            ps.setDouble(1, amount);
+            ps.setString(2, uuid.toString());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("setBalance failed: " + e.getMessage());
+        }
+    }
+
+    public record TopEntry(String name, double balance) {}
+
+    public synchronized List<TopEntry> topBalances(int limit) {
+        List<TopEntry> out = new ArrayList<>();
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT name, balance FROM players ORDER BY balance DESC LIMIT ?")) {
+            ps.setInt(1, limit);
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) out.add(new TopEntry(rs.getString(1), rs.getDouble(2)));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("topBalances failed: " + e.getMessage());
+        }
+        return out;
+    }
+
+    public synchronized UUID uuidByName(String name) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT uuid FROM players WHERE lower(name)=lower(?)")) {
+            ps.setString(1, name);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? UUID.fromString(rs.getString(1)) : null;
+            }
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    // ---------- homes ----------
+
+    public synchronized void setHome(UUID uuid, String name, Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO homes(uuid,name,world,x,y,z,yaw,pitch) VALUES(?,?,?,?,?,?,?,?) " +
+                        "ON CONFLICT(uuid,name) DO UPDATE SET world=excluded.world, x=excluded.x, " +
+                        "y=excluded.y, z=excluded.z, yaw=excluded.yaw, pitch=excluded.pitch")) {
+            bindLoc(ps, 3, loc);
+            ps.setString(1, uuid.toString());
+            ps.setString(2, name.toLowerCase());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("setHome failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized boolean deleteHome(UUID uuid, String name) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "DELETE FROM homes WHERE uuid=? AND name=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, name.toLowerCase());
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized Location getHome(UUID uuid, String name) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT world,x,y,z,yaw,pitch FROM homes WHERE uuid=? AND name=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, name.toLowerCase());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? readLoc(rs) : null;
+            }
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public synchronized List<String> homeNames(UUID uuid) {
+        List<String> out = new ArrayList<>();
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT name FROM homes WHERE uuid=? ORDER BY name")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) out.add(rs.getString(1));
+            }
+        } catch (SQLException ignored) {}
+        return out;
+    }
+
+    public synchronized int homeCount(UUID uuid) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT COUNT(*) FROM homes WHERE uuid=?")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getInt(1) : 0;
+            }
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    // ---------- warps ----------
+
+    public synchronized void setWarp(String name, Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO warps(name,world,x,y,z,yaw,pitch) VALUES(?,?,?,?,?,?,?) " +
+                        "ON CONFLICT(name) DO UPDATE SET world=excluded.world, x=excluded.x, " +
+                        "y=excluded.y, z=excluded.z, yaw=excluded.yaw, pitch=excluded.pitch")) {
+            bindLoc(ps, 2, loc);
+            ps.setString(1, name.toLowerCase());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("setWarp failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized boolean deleteWarp(String name) {
+        try (PreparedStatement ps = conn.prepareStatement("DELETE FROM warps WHERE name=?")) {
+            ps.setString(1, name.toLowerCase());
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized Location getWarp(String name) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT world,x,y,z,yaw,pitch FROM warps WHERE name=?")) {
+            ps.setString(1, name.toLowerCase());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? readLoc(rs) : null;
+            }
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public synchronized List<String> warpNames() {
+        List<String> out = new ArrayList<>();
+        try (Statement st = conn.createStatement();
+             ResultSet rs = st.executeQuery("SELECT name FROM warps ORDER BY name")) {
+            while (rs.next()) out.add(rs.getString(1));
+        } catch (SQLException ignored) {}
+        return out;
+    }
+
+    // ---------- meta (spawn etc.) ----------
+
+    public synchronized void setMeta(String key, String value) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO meta(k,v) VALUES(?,?) ON CONFLICT(k) DO UPDATE SET v=excluded.v")) {
+            ps.setString(1, key);
+            ps.setString(2, value);
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+    }
+
+    public synchronized String getMeta(String key) {
+        try (PreparedStatement ps = conn.prepareStatement("SELECT v FROM meta WHERE k=?")) {
+            ps.setString(1, key);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getString(1) : null;
+            }
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public void setSpawn(Location loc) {
+        setMeta("spawn", serializeLoc(loc));
+    }
+
+    public Location getSpawn() {
+        String s = getMeta("spawn");
+        return s == null ? null : deserializeLoc(s);
+    }
+
+    // ---------- location helpers ----------
+
+    private void bindLoc(PreparedStatement ps, int from, Location loc) throws SQLException {
+        ps.setString(from, loc.getWorld().getName());
+        ps.setDouble(from + 1, loc.getX());
+        ps.setDouble(from + 2, loc.getY());
+        ps.setDouble(from + 3, loc.getZ());
+        ps.setDouble(from + 4, loc.getYaw());
+        ps.setDouble(from + 5, loc.getPitch());
+    }
+
+    private Location readLoc(ResultSet rs) throws SQLException {
+        World world = plugin.getServer().getWorld(rs.getString(1));
+        if (world == null) return null;
+        return new Location(world, rs.getDouble(2), rs.getDouble(3), rs.getDouble(4),
+                (float) rs.getDouble(5), (float) rs.getDouble(6));
+    }
+
+    private String serializeLoc(Location loc) {
+        return loc.getWorld().getName() + "," + loc.getX() + "," + loc.getY() + "," + loc.getZ()
+                + "," + loc.getYaw() + "," + loc.getPitch();
+    }
+
+    private Location deserializeLoc(String s) {
+        String[] p = s.split(",");
+        World world = plugin.getServer().getWorld(p[0]);
+        if (world == null || p.length < 6) return null;
+        return new Location(world, Double.parseDouble(p[1]), Double.parseDouble(p[2]),
+                Double.parseDouble(p[3]), Float.parseFloat(p[4]), Float.parseFloat(p[5]));
+    }
+}

@@ -32,7 +32,7 @@ jobs:
       - name: Rename jar
         run: |
           mkdir -p out
-          cp build/libs/*.jar out/PokeCraft.jar
+          cp build/libs/*.jar out/SurvivalCore.jar
 
       - name: Publish latest release
         uses: softprops/action-gh-release@v2
@@ -40,7 +40,7 @@ jobs:
           tag_name: latest
           name: Latest build
           body: |
-            Auto-built PokeCraft plugin jar from the latest `main`.
-            Drop `PokeCraft.jar` into your Paper 1.21.4 server's `plugins/` folder.
-          files: out/PokeCraft.jar
+            Auto-built SurvivalCore plugin jar from the latest `main`.
+            Drop `SurvivalCore.jar` into your Paper server's `plugins/` folder.
+          files: out/SurvivalCore.jar
           make_latest: true

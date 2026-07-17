@@ -1,24 +1,79 @@
-name: PokeCraft
+name: SurvivalCore
 version: '0.1.0'
-main: dev.thanhtin.pokecraft.PokeCraftPlugin
+main: dev.thanhtin.survivalcore.SurvivalCore
 api-version: '1.21'
 author: thanhtinz
-description: Server-side Pokemon plugin. Geyser/Bedrock compatible, 3D models via BetterModel.
+description: All-in-one survival core - economy, homes/warps, land claim, shops, crates and more. Geyser/Bedrock friendly.
 softdepend:
-  - BetterModel
-  - MythicMobs
+  - Vault
   - PlaceholderAPI
-  - WorldGuard
-  - DecentHolograms
-  - Citizens
   - floodgate
   - Geyser-Spigot
-  - Vault
 commands:
-  poke:
-    description: PokeCraft main command
-    usage: /poke <party|pc|shop|balance|pay|top|duel|marry|daycare|ride|nickname|release>
-    aliases: [pokemon, pc]
+  balance:
+    description: Show your (or another player's) balance
+    usage: /balance [player]
+    aliases: [bal, money]
+  pay:
+    description: Send money to a player
+    usage: /pay <player> <amount>
+  baltop:
+    description: Richest players
+    aliases: [baltop]
+  eco:
+    description: Admin economy management
+    usage: /eco <give|take|set> <player> <amount>
+    permission: survivalcore.admin
+  sethome:
+    description: Save a home at your location
+    usage: /sethome [name]
+  home:
+    description: Teleport to a home
+    usage: /home [name]
+  delhome:
+    description: Delete a home
+    usage: /delhome [name]
+  homes:
+    description: List your homes
+  setwarp:
+    description: Create a public warp
+    usage: /setwarp <name>
+    permission: survivalcore.admin
+  delwarp:
+    description: Delete a warp
+    usage: /delwarp <name>
+    permission: survivalcore.admin
+  warp:
+    description: Teleport to a warp (no args = list)
+    usage: /warp [name]
+  warps:
+    description: List warps
+  spawn:
+    description: Teleport to spawn
+  setspawn:
+    description: Set the server spawn
+    permission: survivalcore.admin
+  tpa:
+    description: Request to teleport to a player
+    usage: /tpa <player>
+  tpahere:
+    description: Request a player to teleport to you
+    usage: /tpahere <player>
+  tpaccept:
+    description: Accept a teleport request
+    aliases: [tpyes]
+  tpdeny:
+    description: Deny a teleport request
+    aliases: [tpno]
+  back:
+    description: Return to your last location
+  rtp:
+    description: Random teleport into the wild
+    aliases: [wild]
 permissions:
-  pokecraft.admin:
+  survivalcore.admin:
+    description: Admin commands
     default: op
+  survivalcore.homes.limit.5:
+    description: Allow up to 5 homes
+    default: true
