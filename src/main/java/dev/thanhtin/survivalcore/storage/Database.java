@@ -48,7 +48,99 @@ public class Database {
                     "PRIMARY KEY(world, cx, cz))");
             st.execute("CREATE TABLE IF NOT EXISTS claim_trust(" +
                     "owner TEXT, trusted TEXT, PRIMARY KEY(owner, trusted))");
+            st.execute("CREATE TABLE IF NOT EXISTS auctions(" +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT, seller TEXT, seller_name TEXT, " +
+                    "item TEXT, price REAL, listed_at INTEGER)");
         }
+    }
+
+    // ---------- auction house ----------
+
+    public record Auction(long id, UUID seller, String sellerName, String itemBase64,
+                          double price, long listedAt) {}
+
+    public synchronized long addAuction(UUID seller, String sellerName, String itemBase64, double price) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO auctions(seller,seller_name,item,price,listed_at) VALUES(?,?,?,?,?)",
+                Statement.RETURN_GENERATED_KEYS)) {
+            ps.setString(1, seller.toString());
+            ps.setString(2, sellerName);
+            ps.setString(3, itemBase64);
+            ps.setDouble(4, price);
+            ps.setLong(5, System.currentTimeMillis());
+            ps.executeUpdate();
+            try (ResultSet keys = ps.getGeneratedKeys()) {
+                return keys.next() ? keys.getLong(1) : -1;
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("addAuction failed: " + e.getMessage());
+            return -1;
+        }
+    }
+
+    public synchronized List<Auction> listAuctions(int limit, int offset) {
+        List<Auction> out = new ArrayList<>();
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT id,seller,seller_name,item,price,listed_at FROM auctions " +
+                        "ORDER BY listed_at DESC LIMIT ? OFFSET ?")) {
+            ps.setInt(1, limit);
+            ps.setInt(2, offset);
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) out.add(readAuction(rs));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("listAuctions failed: " + e.getMessage());
+        }
+        return out;
+    }
+
+    public synchronized List<Auction> auctionsBySeller(UUID seller) {
+        List<Auction> out = new ArrayList<>();
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT id,seller,seller_name,item,price,listed_at FROM auctions " +
+                        "WHERE seller=? ORDER BY listed_at DESC")) {
+            ps.setString(1, seller.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) out.add(readAuction(rs));
+            }
+        } catch (SQLException ignored) {}
+        return out;
+    }
+
+    public synchronized Auction getAuction(long id) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT id,seller,seller_name,item,price,listed_at FROM auctions WHERE id=?")) {
+            ps.setLong(1, id);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? readAuction(rs) : null;
+            }
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    /** Delete a listing; returns true only if it still existed (guards double-buy). */
+    public synchronized boolean removeAuction(long id) {
+        try (PreparedStatement ps = conn.prepareStatement("DELETE FROM auctions WHERE id=?")) {
+            ps.setLong(1, id);
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized int auctionCount() {
+        try (Statement st = conn.createStatement();
+             ResultSet rs = st.executeQuery("SELECT COUNT(*) FROM auctions")) {
+            return rs.next() ? rs.getInt(1) : 0;
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    private Auction readAuction(ResultSet rs) throws SQLException {
+        return new Auction(rs.getLong(1), UUID.fromString(rs.getString(2)), rs.getString(3),
+                rs.getString(4), rs.getDouble(5), rs.getLong(6));
     }
 
     // ---------- land claims (chunk based) ----------

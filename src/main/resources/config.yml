@@ -30,3 +30,8 @@ spawn:
 claims:
   # chunks a player may claim; override per rank with survivalcore.claims.max.<n>
   default-max: 8
+
+auction:
+  min-price: 1.0
+  max-price: 1000000000.0
+  max-listings-per-player: 10

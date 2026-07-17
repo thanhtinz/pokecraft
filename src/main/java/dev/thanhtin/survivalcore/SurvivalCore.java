@@ -1,5 +1,7 @@
 package dev.thanhtin.survivalcore;
 
+import dev.thanhtin.survivalcore.auction.AuctionGui;
+import dev.thanhtin.survivalcore.auction.AuctionManager;
 import dev.thanhtin.survivalcore.claim.ClaimListener;
 import dev.thanhtin.survivalcore.claim.ClaimManager;
 import dev.thanhtin.survivalcore.command.Commands;
@@ -27,6 +29,8 @@ public class SurvivalCore extends JavaPlugin {
     private TpaManager tpa;
     private RtpManager rtp;
     private ClaimManager claims;
+    private AuctionManager auctions;
+    private AuctionGui auctionGui;
 
     @Override
     public void onEnable() {
@@ -47,10 +51,13 @@ public class SurvivalCore extends JavaPlugin {
         tpa = new TpaManager(this);
         rtp = new RtpManager(this);
         claims = new ClaimManager(this);
+        auctions = new AuctionManager(this);
+        auctionGui = new AuctionGui(this);
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
         getServer().getPluginManager().registerEvents(new ClaimListener(this), this);
+        getServer().getPluginManager().registerEvents(auctionGui, this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         Commands commands = new Commands(this);
@@ -58,7 +65,8 @@ public class SurvivalCore extends JavaPlugin {
                 "sethome", "home", "delhome", "homes",
                 "setwarp", "delwarp", "warp", "warps", "spawn", "setspawn",
                 "tpa", "tpahere", "tpaccept", "tpdeny", "back", "rtp",
-                "claim", "unclaim", "trust", "untrust", "claiminfo", "claims"}) {
+                "claim", "unclaim", "trust", "untrust", "claiminfo", "claims",
+                "ah", "sell"}) {
             PluginCommand pc = getCommand(c);
             if (pc != null) {
                 pc.setExecutor(commands);
@@ -92,4 +100,6 @@ public class SurvivalCore extends JavaPlugin {
     public TpaManager tpa() { return tpa; }
     public RtpManager rtp() { return rtp; }
     public ClaimManager claims() { return claims; }
+    public AuctionManager auctions() { return auctions; }
+    public AuctionGui auctionGui() { return auctionGui; }
 }

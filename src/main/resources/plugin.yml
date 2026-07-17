@@ -84,6 +84,13 @@ commands:
     description: Who owns this chunk
   claims:
     description: Your claim count and trusted players
+  ah:
+    description: Open the auction house (or /ah sell <price>, /ah mine)
+    usage: /ah [sell <price>|mine]
+    aliases: [auction, market]
+  sell:
+    description: List the held item on the auction house
+    usage: /sell <price>
 permissions:
   survivalcore.admin:
     description: Admin commands

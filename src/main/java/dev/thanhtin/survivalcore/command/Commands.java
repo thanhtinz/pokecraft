@@ -63,6 +63,8 @@ public class Commands implements CommandExecutor, TabCompleter {
             case "untrust" -> untrust(p, a);
             case "claiminfo" -> claimInfo(p);
             case "claims" -> claimsList(p);
+            case "ah" -> ah(p, a);
+            case "sell" -> sell(p, a);
             default -> { return false; }
         }
         return true;
@@ -267,6 +269,25 @@ public class Commands implements CommandExecutor, TabCompleter {
         Msg.info(p, "Your claims: " + plugin.db().claimCount(p.getUniqueId())
                 + "/" + plugin.claims().maxClaims(p)
                 + " | Trusted: " + (trusted.isEmpty() ? "none" : String.join(", ", trusted)));
+    }
+
+    // ---------- auction house ----------
+
+    private void ah(Player p, String[] a) {
+        if (a.length >= 1 && a[0].equalsIgnoreCase("sell")) {
+            sell(p, java.util.Arrays.copyOfRange(a, 1, a.length));
+            return;
+        }
+        if (a.length >= 1 && (a[0].equalsIgnoreCase("mine") || a[0].equalsIgnoreCase("me"))) {
+            plugin.auctionGui().open(p, 0, true);
+            return;
+        }
+        plugin.auctionGui().open(p, 0, false);
+    }
+
+    private void sell(Player p, String[] a) {
+        if (a.length < 1) { Msg.error(p, "Usage: /sell <price> (holding the item)"); return; }
+        plugin.auctions().sell(p, parseAmount(a[0]));
     }
 
     private void tpa(Player p, String[] a, boolean here) {
