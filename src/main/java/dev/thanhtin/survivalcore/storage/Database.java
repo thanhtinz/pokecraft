@@ -51,6 +51,498 @@ public class Database {
             st.execute("CREATE TABLE IF NOT EXISTS auctions(" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT, seller TEXT, seller_name TEXT, " +
                     "item TEXT, price REAL, listed_at INTEGER)");
+            st.execute("CREATE TABLE IF NOT EXISTS keys(" +
+                    "uuid TEXT, crate TEXT, amount INTEGER NOT NULL DEFAULT 0, " +
+                    "PRIMARY KEY(uuid, crate))");
+            st.execute("CREATE TABLE IF NOT EXISTS vaults(" +
+                    "uuid TEXT, page INTEGER, data TEXT, PRIMARY KEY(uuid, page))");
+            st.execute("CREATE TABLE IF NOT EXISTS kit_cooldowns(" +
+                    "uuid TEXT, kit TEXT, next_time INTEGER NOT NULL DEFAULT 0, " +
+                    "PRIMARY KEY(uuid, kit))");
+            st.execute("CREATE TABLE IF NOT EXISTS job_data(" +
+                    "uuid TEXT, job TEXT, xp REAL NOT NULL DEFAULT 0, " +
+                    "PRIMARY KEY(uuid, job))");
+            st.execute("CREATE TABLE IF NOT EXISTS daily(" +
+                    "uuid TEXT PRIMARY KEY, last_claim INTEGER NOT NULL DEFAULT 0, " +
+                    "streak INTEGER NOT NULL DEFAULT 0)");
+            st.execute("CREATE TABLE IF NOT EXISTS bounties(" +
+                    "target TEXT PRIMARY KEY, target_name TEXT, amount REAL NOT NULL DEFAULT 0)");
+            st.execute("CREATE TABLE IF NOT EXISTS npcs(" +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT, role TEXT, name TEXT, " +
+                    "world TEXT, x REAL, y REAL, z REAL, yaw REAL, pitch REAL)");
+            st.execute("CREATE TABLE IF NOT EXISTS crate_blocks(" +
+                    "world TEXT, x INTEGER, y INTEGER, z INTEGER, crate TEXT, " +
+                    "PRIMARY KEY(world, x, y, z))");
+            st.execute("CREATE TABLE IF NOT EXISTS vault_blocks(" +
+                    "world TEXT, x INTEGER, y INTEGER, z INTEGER, " +
+                    "PRIMARY KEY(world, x, y, z))");
+            st.execute("CREATE TABLE IF NOT EXISTS giftcodes(" +
+                    "code TEXT PRIMARY KEY, money REAL NOT NULL DEFAULT 0, crate TEXT, " +
+                    "keys INTEGER NOT NULL DEFAULT 0, max_uses INTEGER NOT NULL DEFAULT 0, " +
+                    "uses INTEGER NOT NULL DEFAULT 0)");
+            st.execute("CREATE TABLE IF NOT EXISTS giftcode_redeemed(" +
+                    "code TEXT, uuid TEXT, PRIMARY KEY(code, uuid))");
+        }
+    }
+
+    // ---------- giftcodes ----------
+
+    public record Giftcode(String code, double money, String crate, int keys, int maxUses, int uses) {}
+
+    public synchronized void createGiftcode(String code, double money, String crate, int keys, int maxUses) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT OR IGNORE INTO giftcodes(code,money,crate,keys,max_uses,uses) VALUES(?,?,?,?,?,0)")) {
+            ps.setString(1, code);
+            ps.setDouble(2, money);
+            ps.setString(3, crate);
+            ps.setInt(4, keys);
+            ps.setInt(5, maxUses);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("createGiftcode failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized Giftcode getGiftcode(String code) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT code,money,crate,keys,max_uses,uses FROM giftcodes WHERE code=?")) {
+            ps.setString(1, code);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? new Giftcode(rs.getString(1), rs.getDouble(2), rs.getString(3),
+                        rs.getInt(4), rs.getInt(5), rs.getInt(6)) : null;
+            }
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public synchronized boolean hasRedeemed(String code, UUID uuid) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT 1 FROM giftcode_redeemed WHERE code=? AND uuid=?")) {
+            ps.setString(1, code);
+            ps.setString(2, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+        } catch (SQLException e) {
+            return true; // fail safe: treat as redeemed so we don't double-grant on error
+        }
+    }
+
+    /** Atomically mark a code redeemed by a player and bump its use count; false if already redeemed. */
+    public synchronized boolean redeemGiftcode(String code, UUID uuid) {
+        try (PreparedStatement ins = conn.prepareStatement(
+                "INSERT OR IGNORE INTO giftcode_redeemed(code,uuid) VALUES(?,?)")) {
+            ins.setString(1, code);
+            ins.setString(2, uuid.toString());
+            if (ins.executeUpdate() == 0) return false; // already redeemed
+        } catch (SQLException e) {
+            return false;
+        }
+        try (PreparedStatement up = conn.prepareStatement(
+                "UPDATE giftcodes SET uses=uses+1 WHERE code=?")) {
+            up.setString(1, code);
+            up.executeUpdate();
+        } catch (SQLException ignored) {}
+        return true;
+    }
+
+    // ---------- crate blocks ----------
+
+    public synchronized void setCrateBlock(Location loc, String crate) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO crate_blocks(world,x,y,z,crate) VALUES(?,?,?,?,?) " +
+                        "ON CONFLICT(world,x,y,z) DO UPDATE SET crate=excluded.crate")) {
+            ps.setString(1, loc.getWorld().getName());
+            ps.setInt(2, loc.getBlockX());
+            ps.setInt(3, loc.getBlockY());
+            ps.setInt(4, loc.getBlockZ());
+            ps.setString(5, crate);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("setCrateBlock failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized String getCrateBlock(Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT crate FROM crate_blocks WHERE world=? AND x=? AND y=? AND z=?")) {
+            ps.setString(1, loc.getWorld().getName());
+            ps.setInt(2, loc.getBlockX());
+            ps.setInt(3, loc.getBlockY());
+            ps.setInt(4, loc.getBlockZ());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getString(1) : null;
+            }
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public synchronized boolean removeCrateBlock(Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "DELETE FROM crate_blocks WHERE world=? AND x=? AND y=? AND z=?")) {
+            ps.setString(1, loc.getWorld().getName());
+            ps.setInt(2, loc.getBlockX());
+            ps.setInt(3, loc.getBlockY());
+            ps.setInt(4, loc.getBlockZ());
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    // ---------- vault blocks ----------
+
+    public synchronized void addVaultBlock(Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT OR IGNORE INTO vault_blocks(world,x,y,z) VALUES(?,?,?,?)")) {
+            ps.setString(1, loc.getWorld().getName());
+            ps.setInt(2, loc.getBlockX());
+            ps.setInt(3, loc.getBlockY());
+            ps.setInt(4, loc.getBlockZ());
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+    }
+
+    public synchronized boolean isVaultBlock(Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT 1 FROM vault_blocks WHERE world=? AND x=? AND y=? AND z=?")) {
+            ps.setString(1, loc.getWorld().getName());
+            ps.setInt(2, loc.getBlockX());
+            ps.setInt(3, loc.getBlockY());
+            ps.setInt(4, loc.getBlockZ());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized boolean removeVaultBlock(Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "DELETE FROM vault_blocks WHERE world=? AND x=? AND y=? AND z=?")) {
+            ps.setString(1, loc.getWorld().getName());
+            ps.setInt(2, loc.getBlockX());
+            ps.setInt(3, loc.getBlockY());
+            ps.setInt(4, loc.getBlockZ());
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    // ---------- NPCs ----------
+
+    public record Npc(long id, String role, String name, Location location) {}
+
+    public synchronized long addNpc(String role, String name, Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO npcs(role,name,world,x,y,z,yaw,pitch) VALUES(?,?,?,?,?,?,?,?)",
+                Statement.RETURN_GENERATED_KEYS)) {
+            ps.setString(1, role);
+            ps.setString(2, name);
+            bindLoc(ps, 3, loc);
+            ps.executeUpdate();
+            try (ResultSet keys = ps.getGeneratedKeys()) {
+                return keys.next() ? keys.getLong(1) : -1;
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("addNpc failed: " + e.getMessage());
+            return -1;
+        }
+    }
+
+    public synchronized boolean removeNpc(long id) {
+        try (PreparedStatement ps = conn.prepareStatement("DELETE FROM npcs WHERE id=?")) {
+            ps.setLong(1, id);
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized List<Npc> allNpcs() {
+        List<Npc> out = new ArrayList<>();
+        try (Statement st = conn.createStatement();
+             ResultSet rs = st.executeQuery(
+                     "SELECT id,role,name,world,x,y,z,yaw,pitch FROM npcs")) {
+            while (rs.next()) {
+                Location loc = readLoc(rs.getString(4), rs.getDouble(5), rs.getDouble(6),
+                        rs.getDouble(7), (float) rs.getDouble(8), (float) rs.getDouble(9));
+                if (loc != null) out.add(new Npc(rs.getLong(1), rs.getString(2), rs.getString(3), loc));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("allNpcs failed: " + e.getMessage());
+        }
+        return out;
+    }
+
+    // ---------- daily reward ----------
+
+    public record Daily(long lastClaim, int streak) {}
+
+    public synchronized Daily getDaily(UUID uuid) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT last_claim, streak FROM daily WHERE uuid=?")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? new Daily(rs.getLong(1), rs.getInt(2)) : new Daily(0, 0);
+            }
+        } catch (SQLException e) {
+            return new Daily(0, 0);
+        }
+    }
+
+    public synchronized void setDaily(UUID uuid, long lastClaim, int streak) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO daily(uuid,last_claim,streak) VALUES(?,?,?) " +
+                        "ON CONFLICT(uuid) DO UPDATE SET last_claim=excluded.last_claim, streak=excluded.streak")) {
+            ps.setString(1, uuid.toString());
+            ps.setLong(2, lastClaim);
+            ps.setInt(3, streak);
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+    }
+
+    // ---------- bounties ----------
+
+    public record Bounty(UUID target, String targetName, double amount) {}
+
+    public synchronized void addBounty(UUID target, String targetName, double amount) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO bounties(target,target_name,amount) VALUES(?,?,?) " +
+                        "ON CONFLICT(target) DO UPDATE SET amount=amount+excluded.amount, " +
+                        "target_name=excluded.target_name")) {
+            ps.setString(1, target.toString());
+            ps.setString(2, targetName);
+            ps.setDouble(3, amount);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("addBounty failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized double getBounty(UUID target) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT amount FROM bounties WHERE target=?")) {
+            ps.setString(1, target.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getDouble(1) : 0;
+            }
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    /** Remove a bounty and return the amount that was on it (0 if none). */
+    public synchronized double clearBounty(UUID target) {
+        double amount = getBounty(target);
+        if (amount <= 0) return 0;
+        try (PreparedStatement ps = conn.prepareStatement("DELETE FROM bounties WHERE target=?")) {
+            ps.setString(1, target.toString());
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+        return amount;
+    }
+
+    public synchronized List<Bounty> topBounties(int limit) {
+        List<Bounty> out = new ArrayList<>();
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT target, target_name, amount FROM bounties ORDER BY amount DESC LIMIT ?")) {
+            ps.setInt(1, limit);
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    out.add(new Bounty(UUID.fromString(rs.getString(1)), rs.getString(2), rs.getDouble(3)));
+                }
+            }
+        } catch (SQLException ignored) {}
+        return out;
+    }
+
+    // ---------- jobs ----------
+
+    public synchronized boolean hasJob(UUID uuid, String job) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT 1 FROM job_data WHERE uuid=? AND job=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, job);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized void joinJob(UUID uuid, String job) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT OR IGNORE INTO job_data(uuid,job,xp) VALUES(?,?,0)")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, job);
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+    }
+
+    public synchronized void leaveJob(UUID uuid, String job) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "DELETE FROM job_data WHERE uuid=? AND job=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, job);
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+    }
+
+    public synchronized List<String> joinedJobs(UUID uuid) {
+        List<String> out = new ArrayList<>();
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT job FROM job_data WHERE uuid=? ORDER BY job")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) out.add(rs.getString(1));
+            }
+        } catch (SQLException ignored) {}
+        return out;
+    }
+
+    public synchronized int jobCount(UUID uuid) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT COUNT(*) FROM job_data WHERE uuid=?")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getInt(1) : 0;
+            }
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    public synchronized double getJobXp(UUID uuid, String job) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT xp FROM job_data WHERE uuid=? AND job=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, job);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getDouble(1) : 0;
+            }
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    /** Add XP to a joined job and return the new total (0 if not joined). */
+    public synchronized double addJobXp(UUID uuid, String job, double xp) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "UPDATE job_data SET xp=xp+? WHERE uuid=? AND job=?")) {
+            ps.setDouble(1, xp);
+            ps.setString(2, uuid.toString());
+            ps.setString(3, job);
+            if (ps.executeUpdate() == 0) return 0;
+        } catch (SQLException e) {
+            return 0;
+        }
+        return getJobXp(uuid, job);
+    }
+
+    // ---------- player vaults ----------
+
+    public synchronized String getVault(UUID uuid, int page) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT data FROM vaults WHERE uuid=? AND page=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setInt(2, page);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getString(1) : null;
+            }
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public synchronized void setVault(UUID uuid, int page, String data) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO vaults(uuid,page,data) VALUES(?,?,?) " +
+                        "ON CONFLICT(uuid,page) DO UPDATE SET data=excluded.data")) {
+            ps.setString(1, uuid.toString());
+            ps.setInt(2, page);
+            ps.setString(3, data);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("setVault failed: " + e.getMessage());
+        }
+    }
+
+    // ---------- kit cooldowns ----------
+
+    public synchronized long getKitCooldown(UUID uuid, String kit) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT next_time FROM kit_cooldowns WHERE uuid=? AND kit=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, kit);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getLong(1) : 0;
+            }
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    public synchronized void setKitCooldown(UUID uuid, String kit, long nextTime) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO kit_cooldowns(uuid,kit,next_time) VALUES(?,?,?) " +
+                        "ON CONFLICT(uuid,kit) DO UPDATE SET next_time=excluded.next_time")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, kit);
+            ps.setLong(3, nextTime);
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+    }
+
+    // ---------- ranks (ladder) ----------
+
+    public String getRank(UUID uuid) { return getMeta("rank:" + uuid); }
+
+    public void setRank(UUID uuid, String rank) { setMeta("rank:" + uuid, rank); }
+
+    // ---------- crate keys (virtual) ----------
+
+    public synchronized int getKeys(UUID uuid, String crate) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT amount FROM keys WHERE uuid=? AND crate=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, crate);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getInt(1) : 0;
+            }
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    public synchronized void addKeys(UUID uuid, String crate, int amount) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO keys(uuid,crate,amount) VALUES(?,?,?) " +
+                        "ON CONFLICT(uuid,crate) DO UPDATE SET amount=amount+excluded.amount")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, crate);
+            ps.setInt(3, amount);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("addKeys failed: " + e.getMessage());
+        }
+    }
+
+    /** Atomically consume one key; false when the player has none. */
+    public synchronized boolean takeKey(UUID uuid, String crate) {
+        if (getKeys(uuid, crate) <= 0) return false;
+        try (PreparedStatement ps = conn.prepareStatement(
+                "UPDATE keys SET amount=amount-1 WHERE uuid=? AND crate=? AND amount>0")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, crate);
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
         }
     }
 
@@ -480,6 +972,12 @@ public class Database {
         if (world == null) return null;
         return new Location(world, rs.getDouble(2), rs.getDouble(3), rs.getDouble(4),
                 (float) rs.getDouble(5), (float) rs.getDouble(6));
+    }
+
+    private Location readLoc(String worldName, double x, double y, double z, float yaw, float pitch) {
+        World world = plugin.getServer().getWorld(worldName);
+        if (world == null) return null;
+        return new Location(world, x, y, z, yaw, pitch);
     }
 
     private String serializeLoc(Location loc) {

@@ -3,6 +3,7 @@ package dev.thanhtin.survivalcore.util;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextColor;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.command.CommandSender;
 
 /** Small helpers for colored chat messages with a consistent plugin prefix. */
@@ -31,5 +32,10 @@ public final class Msg {
 
     public static void plain(CommandSender to, String text, NamedTextColor color) {
         to.sendMessage(Component.text(text, color));
+    }
+
+    /** Translate a legacy &-code string (e.g. "&aHello") into a Component. */
+    public static Component legacy(String text) {
+        return LegacyComponentSerializer.legacyAmpersand().deserialize(text == null ? "" : text);
     }
 }

@@ -91,6 +91,56 @@ commands:
   sell:
     description: List the held item on the auction house
     usage: /sell <price>
+  crate:
+    description: Crate info; admins bind crate blocks and give keys
+    usage: /crate [givekey <player> <crate> <amount>|setblock <crate>|delblock]
+  key:
+    description: Crate/key info (alias of /crate)
+  pv:
+    description: Vault info; admins bind vault blocks (right-click a block to open)
+    usage: /pv (or /vault setblock|delblock for admins)
+    aliases: [vault, pvault]
+  kit:
+    description: Claim a kit (no args opens the kit menu)
+    usage: /kit [name]
+  kits:
+    description: Open the kit menu
+  rankup:
+    description: Advance to the next rank on the ladder
+  rank:
+    description: Show your current rank and the next one
+  jobs:
+    description: Join jobs and earn money for your work
+    usage: /jobs [join <job>|leave <job>|stats]
+    aliases: [job]
+  daily:
+    description: Claim your daily login reward
+  vote:
+    description: Show vote links (or /vote test for admins)
+  svote:
+    description: Grant a vote reward (used by vote listeners/console)
+    usage: /svote <player>
+    permission: survivalcore.admin
+  bounty:
+    description: Place a bounty on a player, or list active bounties
+    usage: /bounty <player> <amount> | /bounty list
+  npc:
+    description: Manage roleplay NPCs (admin)
+    usage: /npc create <role> [name] | /npc remove | /npc list
+    permission: survivalcore.admin
+  sc:
+    description: Open the SurvivalCore admin settings panel
+    aliases: [survivalcore, scadmin]
+    permission: survivalcore.admin
+  menu:
+    description: Open the menu hub (also on your compass)
+    aliases: [hub]
+  shop:
+    description: Open the server shop (buy/sell)
+  redeem:
+    description: Redeem a giftcode
+    usage: /redeem <code>
+    aliases: [giftcode, code]
 permissions:
   survivalcore.admin:
     description: Admin commands

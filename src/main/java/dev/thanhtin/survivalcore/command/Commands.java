@@ -7,10 +7,12 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Location;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -34,6 +36,7 @@ public class Commands implements CommandExecutor, TabCompleter {
             case "balance" -> { return balance(sender, a); }
             case "baltop" -> { return baltop(sender); }
             case "eco" -> { return eco(sender, a); }
+            case "svote" -> { return svote(sender, a); }
         }
         if (!(sender instanceof Player p)) {
             Msg.error(sender, "Players only.");
@@ -65,6 +68,24 @@ public class Commands implements CommandExecutor, TabCompleter {
             case "claims" -> claimsList(p);
             case "ah" -> ah(p, a);
             case "sell" -> sell(p, a);
+            case "crate", "key" -> crate(p, a);
+            case "pv", "vault", "pvault" -> pvault(p, a);
+            case "kit" -> kit(p, a);
+            case "kits" -> plugin.kits().openDialogue(p);
+            case "rankup" -> plugin.ranks().rankup(p);
+            case "rank" -> rank(p);
+            case "jobs", "job" -> jobs(p, a);
+            case "daily" -> plugin.rewards().claimDaily(p);
+            case "vote" -> vote(p, a);
+            case "bounty" -> bounty(p, a);
+            case "npc" -> npc(p, a);
+            case "menu", "hub" -> plugin.hub().open(p);
+            case "shop" -> plugin.shopGui().open(p, 0);
+            case "redeem" -> plugin.giftcodes().redeem(p, a.length > 0 ? a[0] : null);
+            case "sc" -> {
+                if (!p.hasPermission("survivalcore.admin")) { Msg.error(p, "No permission."); return true; }
+                plugin.adminPanel().open(p);
+            }
             default -> { return false; }
         }
         return true;
@@ -269,6 +290,257 @@ public class Commands implements CommandExecutor, TabCompleter {
         Msg.info(p, "Your claims: " + plugin.db().claimCount(p.getUniqueId())
                 + "/" + plugin.claims().maxClaims(p)
                 + " | Trusted: " + (trusted.isEmpty() ? "none" : String.join(", ", trusted)));
+    }
+
+    // ---------- crates ----------
+
+    private void crate(Player p, String[] a) {
+        if (a.length == 0) {
+            List<String> names = new ArrayList<>();
+            plugin.crates().all().forEach(c -> names.add(c.id()));
+            Msg.info(p, names.isEmpty() ? "No crates configured."
+                    : "Crates: " + String.join(", ", names)
+                      + ". Hold a key and right-click the matching crate to open it.");
+            if (p.hasPermission("survivalcore.admin")) {
+                Msg.info(p, "Admin: /crate givekey <player> <crate> <amount>, "
+                        + "/crate setblock <crate>, /crate delblock");
+            }
+            return;
+        }
+        switch (a[0].toLowerCase()) {
+            case "givekey" -> {
+                if (!p.hasPermission("survivalcore.admin")) { Msg.error(p, "No permission."); return; }
+                if (a.length < 4) { Msg.error(p, "Usage: /crate givekey <player> <crate> <amount>"); return; }
+                Player target = plugin.getServer().getPlayerExact(a[1]);
+                if (target == null) { Msg.error(p, "Player not online."); return; }
+                if (plugin.crates().get(a[2]) == null) { Msg.error(p, "No crate '" + a[2] + "'."); return; }
+                int n = Math.max(1, (int) parseAmount(a[3]));
+                plugin.crates().giveKeys(target, a[2].toLowerCase(), n);
+                Msg.ok(p, "Gave " + n + " " + a[2].toLowerCase() + " key(s) to " + target.getName() + ".");
+                Msg.ok(target, "You received " + n + " " + a[2].toLowerCase() + " key(s)!");
+            }
+            case "setblock" -> {
+                if (!p.hasPermission("survivalcore.admin")) { Msg.error(p, "No permission."); return; }
+                if (a.length < 2) { Msg.error(p, "Usage: /crate setblock <crate>"); return; }
+                if (plugin.crates().get(a[1]) == null) { Msg.error(p, "No crate '" + a[1] + "'."); return; }
+                Block target = p.getTargetBlockExact(6);
+                if (target == null) { Msg.error(p, "Look at the block to bind."); return; }
+                plugin.db().setCrateBlock(target.getLocation(), a[1].toLowerCase());
+                Msg.ok(p, "Bound this block as the " + a[1].toLowerCase() + " crate.");
+            }
+            case "delblock" -> {
+                if (!p.hasPermission("survivalcore.admin")) { Msg.error(p, "No permission."); return; }
+                Block target = p.getTargetBlockExact(6);
+                if (target == null || plugin.db().getCrateBlock(target.getLocation()) == null) {
+                    Msg.error(p, "Look at a crate block."); return;
+                }
+                plugin.db().removeCrateBlock(target.getLocation());
+                Msg.ok(p, "Unbound this crate block.");
+            }
+            default -> Msg.info(p, "Hold a key and right-click the matching crate block to open it.");
+        }
+    }
+
+    // ---------- player vaults (physical blocks) ----------
+
+    private void pvault(Player p, String[] a) {
+        if (a.length >= 1 && p.hasPermission("survivalcore.admin")) {
+            switch (a[0].toLowerCase()) {
+                case "setblock" -> {
+                    Block target = p.getTargetBlockExact(6);
+                    if (target == null) { Msg.error(p, "Look at the block to bind."); return; }
+                    plugin.db().addVaultBlock(target.getLocation());
+                    Msg.ok(p, "Bound this block as a vault. Players right-click it to open storage.");
+                    return;
+                }
+                case "delblock" -> {
+                    Block target = p.getTargetBlockExact(6);
+                    if (target == null || !plugin.db().isVaultBlock(target.getLocation())) {
+                        Msg.error(p, "Look at a vault block."); return;
+                    }
+                    plugin.db().removeVaultBlock(target.getLocation());
+                    Msg.ok(p, "Unbound this vault block.");
+                    return;
+                }
+                default -> { /* fall through to hint */ }
+            }
+        }
+        Msg.info(p, "Right-click a vault block to open your storage.");
+        if (p.hasPermission("survivalcore.admin")) {
+            Msg.info(p, "Admin: /vault setblock, /vault delblock (look at a block).");
+        }
+    }
+
+    // ---------- kits ----------
+
+    private void kit(Player p, String[] a) {
+        if (a.length == 0) { plugin.kits().openDialogue(p); return; }
+        var kit = plugin.kits().get(a[0]);
+        if (kit == null) { Msg.error(p, "No kit named '" + a[0].toLowerCase() + "'."); return; }
+        plugin.kits().give(p, kit);
+    }
+
+    // ---------- rank ladder ----------
+
+    private void rank(Player p) {
+        if (plugin.ranks().isEmpty()) { Msg.info(p, "No ranks are configured."); return; }
+        var cur = plugin.ranks().current(p.getUniqueId());
+        var next = plugin.ranks().next(p.getUniqueId());
+        Msg.info(p, "Rank: " + (cur == null ? "none" : strip(cur.display())));
+        if (next == null) {
+            Msg.info(p, "You're at the highest rank.");
+        } else {
+            Msg.info(p, "Next: " + strip(next.display()) + " for "
+                    + plugin.economy().format(next.cost()) + " (/rankup).");
+        }
+    }
+
+    private String strip(String s) { return s.replaceAll("&[0-9a-fk-or]", ""); }
+
+    // ---------- jobs ----------
+
+    private void jobs(Player p, String[] a) {
+        if (a.length == 0) { plugin.jobs().openDialogue(p); return; }
+        switch (a[0].toLowerCase()) {
+            case "join" -> {
+                if (a.length < 2) { Msg.error(p, "Usage: /jobs join <job>"); return; }
+                var job = plugin.jobs().get(a[1]);
+                if (job == null) { Msg.error(p, "No job named '" + a[1].toLowerCase() + "'."); return; }
+                plugin.jobs().join(p, job);
+            }
+            case "leave" -> {
+                if (a.length < 2) { Msg.error(p, "Usage: /jobs leave <job>"); return; }
+                var job = plugin.jobs().get(a[1]);
+                if (job == null) { Msg.error(p, "No job named '" + a[1].toLowerCase() + "'."); return; }
+                plugin.jobs().leave(p, job);
+            }
+            case "stats", "info" -> jobStats(p);
+            case "list" -> plugin.jobs().openDialogue(p);
+            default -> plugin.jobs().openDialogue(p);
+        }
+    }
+
+    // ---------- NPCs (admin) ----------
+
+    private static final java.util.Set<String> NPC_ROLES =
+            java.util.Set.of("kit_master", "job_board", "banker", "shop");
+
+    private void npc(Player p, String[] a) {
+        if (!p.hasPermission("survivalcore.admin")) { Msg.error(p, "No permission."); return; }
+        if (a.length == 0) {
+            Msg.info(p, "/npc create <role> [name] | /npc remove | /npc list");
+            Msg.info(p, "Roles: " + String.join(", ", NPC_ROLES));
+            return;
+        }
+        switch (a[0].toLowerCase()) {
+            case "create" -> {
+                if (a.length < 2) { Msg.error(p, "Usage: /npc create <role> [name]"); return; }
+                String role = a[1].toLowerCase();
+                if (!NPC_ROLES.contains(role)) {
+                    Msg.error(p, "Unknown role. Options: " + String.join(", ", NPC_ROLES));
+                    return;
+                }
+                String name;
+                if (a.length > 2) {
+                    name = String.join(" ", java.util.Arrays.copyOfRange(a, 2, a.length));
+                } else {
+                    name = defaultNpcName(role);
+                }
+                long id = plugin.npcs().create(role, name, p.getLocation());
+                if (id > 0) Msg.ok(p, "Created " + role + " NPC (#" + id + ").");
+                else Msg.error(p, "Could not create the NPC.");
+            }
+            case "remove" -> {
+                Entity looked = nearestNpc(p);
+                if (looked == null) { Msg.error(p, "Stand near the NPC you want to remove."); return; }
+                Long id = plugin.npcs().idOf(looked);
+                if (id != null && plugin.npcs().remove(id)) Msg.ok(p, "Removed NPC #" + id + ".");
+                else Msg.error(p, "Could not remove that NPC.");
+            }
+            case "list" -> {
+                var npcs = plugin.db().allNpcs();
+                if (npcs.isEmpty()) { Msg.info(p, "No NPCs placed."); return; }
+                Msg.info(p, "NPCs:");
+                for (var n : npcs) {
+                    Msg.plain(p, "  #" + n.id() + " " + n.role() + " @ "
+                            + n.location().getWorld().getName() + " "
+                            + n.location().getBlockX() + "," + n.location().getBlockY()
+                            + "," + n.location().getBlockZ(), NamedTextColor.GRAY);
+                }
+            }
+            default -> Msg.error(p, "/npc create|remove|list");
+        }
+    }
+
+    private String defaultNpcName(String role) {
+        return switch (role) {
+            case "kit_master" -> "&b&lKit Master";
+            case "job_board" -> "&6&lJob Board";
+            case "banker" -> "&a&lBanker";
+            case "shop" -> "&2&lShopkeeper";
+            default -> role;
+        };
+    }
+
+    private Entity nearestNpc(Player p) {
+        Entity best = null;
+        double bestDist = Double.MAX_VALUE;
+        for (Entity e : p.getNearbyEntities(4, 4, 4)) {
+            if (!plugin.npcs().isNpc(e)) continue;
+            double d = e.getLocation().distanceSquared(p.getLocation());
+            if (d < bestDist) { bestDist = d; best = e; }
+        }
+        return best;
+    }
+
+    // ---------- vote / bounty ----------
+
+    /** Console- or admin-triggered vote reward: svote <player>. Vote plugins call this. */
+    private boolean svote(CommandSender sender, String[] a) {
+        boolean allowed = !(sender instanceof Player) || sender.hasPermission("survivalcore.admin");
+        if (!allowed) { Msg.error(sender, "No permission."); return true; }
+        if (a.length < 1) { Msg.error(sender, "Usage: /svote <player>"); return true; }
+        Player target = plugin.getServer().getPlayerExact(a[0]);
+        if (target == null) { Msg.warn(sender, "Player " + a[0] + " is not online."); return true; }
+        plugin.votes().reward(target);
+        return true;
+    }
+
+    private void vote(Player p, String[] a) {
+        if (a.length >= 1 && a[0].equalsIgnoreCase("test") && p.hasPermission("survivalcore.admin")) {
+            plugin.votes().reward(p);
+            return;
+        }
+        plugin.votes().showLinks(p);
+    }
+
+    private void bounty(Player p, String[] a) {
+        if (a.length == 0 || a[0].equalsIgnoreCase("list") || a[0].equalsIgnoreCase("top")) {
+            plugin.bounties().list(p);
+            return;
+        }
+        if (a.length < 2) { Msg.error(p, "Usage: /bounty <player> <amount> (or /bounty list)"); return; }
+        double amount = parseAmount(a[1]);
+        if (amount <= 0) { Msg.error(p, "Enter a positive amount."); return; }
+        plugin.bounties().place(p, a[0], amount);
+    }
+
+    private void jobStats(Player p) {
+        List<String> joined = plugin.db().joinedJobs(p.getUniqueId());
+        if (joined.isEmpty()) { Msg.info(p, "You have no jobs. Use /jobs to join one."); return; }
+        Msg.info(p, "Your jobs:");
+        for (String jobId : joined) {
+            var job = plugin.jobs().get(jobId);
+            if (job == null) continue;
+            double xp = plugin.db().getJobXp(p.getUniqueId(), jobId);
+            int lvl = dev.thanhtin.survivalcore.job.JobManager.levelFor(xp);
+            double into = dev.thanhtin.survivalcore.job.JobManager.xpInto(xp);
+            double need = dev.thanhtin.survivalcore.job.JobManager.xpForNext(lvl);
+            int bonus = (int) Math.round((plugin.jobs().multiplier(lvl) - 1) * 100);
+            Msg.plain(p, "  " + strip(job.display()) + " - Lv " + lvl
+                    + " (" + (int) into + "/" + (int) need + " XP, +" + bonus + "% pay)",
+                    NamedTextColor.GRAY);
+        }
     }
 
     // ---------- auction house ----------
