@@ -248,3 +248,10 @@ tab:
     - ""
     - "&7Online: &f{online}"
     - ""
+
+hub:
+  # The unlosable menu item every player carries. Any material works,
+  # e.g. NETHER_STAR, CLOCK, ENDER_EYE, HEART_OF_THE_SEA, BOOK, NAUTILUS_SHELL.
+  item: NETHER_STAR
+  name: "&b&lᴍᴇɴᴜ"
+  glow: true

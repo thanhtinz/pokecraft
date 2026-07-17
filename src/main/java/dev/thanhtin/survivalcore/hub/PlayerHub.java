@@ -53,14 +53,29 @@ public class PlayerHub implements Listener {
     // ---------- the menu item ----------
 
     public ItemStack menuItem() {
-        ItemStack item = new ItemStack(Material.COMPASS);
+        Material mat = matOr(plugin.getConfig().getString("hub.item", "NETHER_STAR"), Material.NETHER_STAR);
+        String name = plugin.getConfig().getString("hub.name", "&b&lᴍᴇɴᴜ");
+        ItemStack item = new ItemStack(mat);
         ItemMeta meta = item.getItemMeta();
-        meta.displayName(Msg.legacy("&a&lMenu").decoration(TextDecoration.ITALIC, false));
+        meta.displayName(Msg.legacy(name).decoration(TextDecoration.ITALIC, false));
         meta.lore(List.of(
                 Msg.legacy("&7Right-click to open the menu").decoration(TextDecoration.ITALIC, false)));
+        if (plugin.getConfig().getBoolean("hub.glow", true)) {
+            meta.addEnchant(org.bukkit.enchantments.Enchantment.UNBREAKING, 1, true);
+            meta.addItemFlags(org.bukkit.inventory.ItemFlag.HIDE_ENCHANTS);
+        }
         meta.getPersistentDataContainer().set(keyItem, PersistentDataType.STRING, "1");
         item.setItemMeta(meta);
         return item;
+    }
+
+    private Material matOr(String name, Material fallback) {
+        if (name == null) return fallback;
+        try {
+            return Material.valueOf(name.toUpperCase());
+        } catch (IllegalArgumentException e) {
+            return fallback;
+        }
     }
 
     public boolean isMenuItem(ItemStack item) {
@@ -77,11 +92,14 @@ public class PlayerHub implements Listener {
         }
         ItemStack pinned = player.getInventory().getItem(SLOT);
         if (!isMenuItem(pinned)) {
-            // don't destroy whatever is there - shift it into the inventory, then place the compass
+            // don't destroy whatever is there - shift it into the inventory, then place the item
             if (pinned != null && !pinned.getType().isAir()) {
                 player.getInventory().addItem(pinned).values()
                         .forEach(rem -> player.getWorld().dropItemNaturally(player.getLocation(), rem));
             }
+            player.getInventory().setItem(SLOT, menuItem());
+        } else {
+            // refresh so config changes to the icon/name take effect
             player.getInventory().setItem(SLOT, menuItem());
         }
     }
