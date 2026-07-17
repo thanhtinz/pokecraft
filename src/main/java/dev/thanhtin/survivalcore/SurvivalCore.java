@@ -1,5 +1,6 @@
 package dev.thanhtin.survivalcore;
 
+import dev.thanhtin.survivalcore.admin.AdminPanel;
 import dev.thanhtin.survivalcore.auction.AuctionGui;
 import dev.thanhtin.survivalcore.auction.AuctionManager;
 import dev.thanhtin.survivalcore.claim.ClaimListener;
@@ -61,6 +62,7 @@ public class SurvivalCore extends JavaPlugin {
     private VoteManager votes;
     private BountyManager bounties;
     private ScoreboardService scoreboards;
+    private AdminPanel adminPanel;
 
     @Override
     public void onEnable() {
@@ -99,6 +101,7 @@ public class SurvivalCore extends JavaPlugin {
         votes = new VoteManager(this);
         bounties = new BountyManager(this);
         scoreboards = new ScoreboardService(this);
+        adminPanel = new AdminPanel(this);
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
@@ -111,6 +114,7 @@ public class SurvivalCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BountyListener(this), this);
         getServer().getPluginManager().registerEvents(new ChatListener(this), this);
         getServer().getPluginManager().registerEvents(new NpcListener(this), this);
+        getServer().getPluginManager().registerEvents(adminPanel, this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         scoreboards.start();
@@ -125,7 +129,7 @@ public class SurvivalCore extends JavaPlugin {
                 "claim", "unclaim", "trust", "untrust", "claiminfo", "claims",
                 "ah", "sell", "crate", "key",
                 "pv", "vault", "pvault", "kit", "kits", "rankup", "rank",
-                "jobs", "job", "daily", "vote", "svote", "bounty", "npc"}) {
+                "jobs", "job", "daily", "vote", "svote", "bounty", "npc", "sc"}) {
             PluginCommand pc = getCommand(c);
             if (pc != null) {
                 pc.setExecutor(commands);
@@ -185,4 +189,5 @@ public class SurvivalCore extends JavaPlugin {
     public VoteManager votes() { return votes; }
     public BountyManager bounties() { return bounties; }
     public ScoreboardService scoreboards() { return scoreboards; }
+    public AdminPanel adminPanel() { return adminPanel; }
 }

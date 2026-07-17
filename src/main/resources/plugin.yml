@@ -128,6 +128,10 @@ commands:
     description: Manage roleplay NPCs (admin)
     usage: /npc create <role> [name] | /npc remove | /npc list
     permission: survivalcore.admin
+  sc:
+    description: Open the SurvivalCore admin settings panel
+    aliases: [survivalcore, scadmin]
+    permission: survivalcore.admin
 permissions:
   survivalcore.admin:
     description: Admin commands

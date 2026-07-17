@@ -24,19 +24,22 @@ translates for Bedrock.
 | **Chat / Scoreboard / Tab** | Rank-aware chat format, live sidebar, tab header/footer — all configurable. |
 | **PlaceholderAPI** | `%survivalcore_balance%`, `_rank`, `_bounty`, `_claims`, `_jobs` (when PlaceholderAPI is installed). |
 
-## Admin setup for the roleplay systems
+## Admin setup — the settings panel
 
-These use in-world objects instead of menus, so an admin places them once:
+Setup is a **menu**, not typed commands. Run `/sc` to open the SurvivalCore
+Admin panel and click:
 
-- **NPCs** — stand where you want it and run `/npc create <role> [name]`.
-  Roles: `kit_master`, `job_board`, `banker`. Remove with `/npc remove` (stand
-  next to it), list with `/npc list`. NPCs are frozen, invulnerable villagers
-  re-spawned from the database on every start.
-- **Crate blocks** — look at a block and run `/crate setblock <crate>`. Give
-  players keys with `/crate givekey <player> <crate> <amount>`. Unbind with
-  `/crate delblock`.
-- **Vault blocks** — look at a block and run `/vault setblock`. Unbind with
-  `/vault delblock`.
+- **Place NPCs** — Kit Master / Job Board / Banker spawn where you stand.
+  "Remove NPC" then right-click the NPC to delete it.
+- **Bind crate blocks** — click a crate icon, the menu closes, then right-click
+  the block. Right-click the crate icon instead to give yourself a key.
+- **Bind vault blocks** — click "Bind Vault Block", then right-click the block.
+- **Unbind** — click "Unbind Block", then right-click a crate/vault block.
+- **Toggles** — flip the scoreboard, chat format, and tab list on/off.
+
+NPCs are frozen, invulnerable villagers re-spawned from the database on every
+start. (Equivalent commands still exist — `/npc`, `/crate setblock`,
+`/vault setblock` — but the panel is the intended way in.)
 
 ## Voting
 
