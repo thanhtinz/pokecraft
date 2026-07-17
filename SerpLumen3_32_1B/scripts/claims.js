@@ -10,6 +10,7 @@ import { world, system, ItemStack } from "@minecraft/server";
 import { ModalFormData } from "@minecraft/server-ui";
 import { actionMenu, confirmForm, isAdmin } from "./forms.js";
 import { isLow } from "./perf.js";
+import { t } from "./i18n.js";
 
 const PROP = "sl:claims"; // [{id, owner, ownerName, dim, x1,z1,x2,z2, members:[{id,name}]}]
 const CFG = {
@@ -60,21 +61,21 @@ function sizeOf(c) { return (c.x2 - c.x1 + 1) + "x" + (c.z2 - c.z1 + 1); }
 const BLOCKED_INTERACT = ["chest", "barrel", "furnace", "smoker", "hopper", "dropper", "dispenser", "shulker", "button", "lever", "anvil", "grindstone", "brewing", "beacon", "crafter", "smithing", "lectern", "jukebox", "decorated_pot"];
 
 function deny(player, c) {
-  try { player.onScreenDisplay.setActionBar("\u00a7c\u26d4 " + c.ownerName + "'s land"); } catch {}
+  try { player.onScreenDisplay.setActionBar(t(player, "claims.deny", { name: c.ownerName })); } catch {}
 }
 
 // ---------- player UI ----------
 export async function openClaims(player) {
   const mine = all().filter((c) => c.owner === player.id);
   const buttons = mine.map((c) => ({
-    label: "Claim " + sizeOf(c) + "\n\u00a78(" + c.x1 + "," + c.z1 + ") to (" + c.x2 + "," + c.z2 + ") | " + c.members.length + " members",
+    label: t(player, "claims.mine.btn", { size: sizeOf(c), x1: c.x1, z1: c.z1, x2: c.x2, z2: c.z2, n: c.members.length }),
     icon: "textures/blocks/grass_side_carried",
   }));
-  buttons.push({ label: "\u00a7aClaim land HERE\n\u00a78Square around where you stand", icon: "textures/items/map_empty" });
-  buttons.push({ label: "Pokemon Guards\n\u00a78Deploy PC Pokemon to defend your land", icon: "textures/items/carrot_on_a_stick" });
-  buttons.push({ label: "Pokemon Workshop\n\u00a78Put your Pokemon to work", icon: "textures/items/iron_pickaxe" });
-  const sel = await actionMenu(player, "Land Claims",
-    "Yours: " + mine.length + "/" + CFG.maxClaims + ". Outsiders can't build or open containers on your land. Explosions can't touch it either.",
+  buttons.push({ label: t(player, "claims.here.btn"), icon: "textures/items/map_empty" });
+  buttons.push({ label: t(player, "claims.guards.btn"), icon: "textures/items/carrot_on_a_stick" });
+  buttons.push({ label: t(player, "claims.workshop.btn"), icon: "textures/items/iron_pickaxe" });
+  const sel = await actionMenu(player, t(player, "claims.title"),
+    t(player, "claims.body", { n: mine.length, max: CFG.maxClaims }),
     buttons, "pokedex_light_blue");
   if (sel < 0) return;
   if (sel === mine.length) return createClaim(player);
@@ -85,10 +86,10 @@ export async function openClaims(player) {
 
 async function createClaim(player) {
   const mine = all().filter((c) => c.owner === player.id);
-  if (mine.length >= CFG.maxClaims) return player.sendMessage("\u00a7c[Claims] You already have " + CFG.maxClaims + " claims - delete one first.");
-  if (player.dimension.id !== "minecraft:overworld") return player.sendMessage("\u00a7c[Claims] Only in the overworld.");
-  const mf = new ModalFormData().title("Claim land here");
-  mf.slider("Radius (blocks from where you stand)", CFG.minRadius, limitOf(player), { valueStep: 1, defaultValue: Math.min(16, limitOf(player)) });
+  if (mine.length >= CFG.maxClaims) return player.sendMessage(t(player, "claims.max", { max: CFG.maxClaims }));
+  if (player.dimension.id !== "minecraft:overworld") return player.sendMessage(t(player, "claims.overworld"));
+  const mf = new ModalFormData().title(t(player, "claims.create.title"));
+  mf.slider(t(player, "claims.create.radius"), CFG.minRadius, limitOf(player), { valueStep: 1, defaultValue: Math.min(16, limitOf(player)) });
   let res;
   try { res = await mf.show(player); } catch { return; }
   if (res.canceled) return;
@@ -99,27 +100,27 @@ async function createClaim(player) {
   let s = { x: 0, z: 0 };
   try { const w = world.getDefaultSpawnLocation(); s = { x: w.x, z: w.z }; } catch {}
   if (x1 - CFG.spawnGuard <= s.x && x2 + CFG.spawnGuard >= s.x && z1 - CFG.spawnGuard <= s.z && z2 + CFG.spawnGuard >= s.z)
-    return player.sendMessage("\u00a7c[Claims] Too close to world spawn (" + CFG.spawnGuard + " block guard).");
+    return player.sendMessage(t(player, "claims.spawnguard", { guard: CFG.spawnGuard }));
   if (overlaps("minecraft:overworld", x1, z1, x2, z2))
-    return player.sendMessage("\u00a7c[Claims] Overlaps someone's existing claim.");
+    return player.sendMessage(t(player, "claims.overlap"));
   const a = all();
   a.push({ id: "c" + Date.now(), owner: player.id, ownerName: player.name, dim: "minecraft:overworld", x1, z1, x2, z2, y: Math.round(player.location.y), members: [] });
   save(a);
-  player.sendMessage("\u00a7a[Claims] Claimed \u00a7l" + (r * 2 + 1) + "x" + (r * 2 + 1) + "\u00a7r\u00a7a around you. Your land is protected!");
+  player.sendMessage(t(player, "claims.claimed", { size: (r * 2 + 1) + "x" + (r * 2 + 1) }));
   try { player.playSound("random.levelup"); } catch {}
 }
 
 async function manageClaim(player, c) {
-  const sel = await actionMenu(player, "Your claim " + sizeOf(c),
-    "Corner (" + c.x1 + "," + c.z1 + ") to (" + c.x2 + "," + c.z2 + ")\nMembers: " + (c.members.length ? c.members.map((m) => m.name).join(", ") : "\u00a78none"),
+  const sel = await actionMenu(player, t(player, "claims.manage.title", { size: sizeOf(c) }),
+    t(player, "claims.manage.body", { x1: c.x1, z1: c.z1, x2: c.x2, z2: c.z2, members: (c.members.length ? c.members.map((m) => m.name).join(", ") : t(player, "claims.nomembers")) }),
     [
-      { label: "Add member\n\u00a78They can build here", icon: "textures/items/name_tag" },
-      { label: "Remove member", icon: "textures/ui/buttons/bubble_no" },
-      { label: (c.lockDoors ? "\u00a7aDoors: LOCKED" : "Doors: open") + "\n\u00a78Outsiders " + (c.lockDoors ? "can't" : "can") + " open doors/gates", icon: "textures/items/iron_door" },
-      { label: (c.noMobs ? "\u00a7aNo-mob zone: ON" : "No-mob zone: off") + "\n\u00a78Push wild Pokemon & mobs out", icon: "textures/blocks/barrier" },
-      { label: "\u00a7aExpand / resize\n\u00a78Up to " + (limitOf(player) * 2 + 1) + "x" + (limitOf(player) * 2 + 1) + " for you", icon: "textures/items/map_empty" },
-      { label: "\u00a7bShow borders\n\u00a78Outline the land for 12 s", icon: "textures/items/blaze_powder" },
-      { label: "\u00a7cDelete this claim", icon: "textures/blocks/barrier" },
+      { label: t(player, "claims.addmember.btn"), icon: "textures/items/name_tag" },
+      { label: t(player, "claims.removemember.btn"), icon: "textures/ui/buttons/bubble_no" },
+      { label: (c.lockDoors ? t(player, "claims.doors.locked.btn") : t(player, "claims.doors.open.btn")), icon: "textures/items/iron_door" },
+      { label: (c.noMobs ? t(player, "claims.nomob.on.btn") : t(player, "claims.nomob.off.btn")), icon: "textures/blocks/barrier" },
+      { label: t(player, "claims.expand.btn", { size: (limitOf(player) * 2 + 1) + "x" + (limitOf(player) * 2 + 1) }), icon: "textures/items/map_empty" },
+      { label: t(player, "claims.border.btn"), icon: "textures/items/blaze_powder" },
+      { label: t(player, "claims.delete.btn"), icon: "textures/blocks/barrier" },
     ], "pokedex_light_blue");
   if (sel < 0) return;
   const a = all();
@@ -127,72 +128,72 @@ async function manageClaim(player, c) {
   if (!live) return;
   if (sel === 0) {
     const others = world.getAllPlayers().filter((p) => p.id !== player.id && !live.members.some((m) => m.id === p.id));
-    if (others.length === 0) return player.sendMessage("\u00a7e[Claims] Nobody online to add.");
-    const ps = await actionMenu(player, "Add member", "", others.map((p) => ({ label: p.name })), "pokedex_light_blue");
+    if (others.length === 0) return player.sendMessage(t(player, "claims.noadd"));
+    const ps = await actionMenu(player, t(player, "claims.addmember.title"), "", others.map((p) => ({ label: p.name })), "pokedex_light_blue");
     if (ps < 0) return;
     live.members.push({ id: others[ps].id, name: others[ps].name });
     save(a);
-    player.sendMessage("\u00a7a[Claims] " + others[ps].name + " can now build on your land.");
-    others[ps].sendMessage("\u00a7a[Claims] " + player.name + " added you to their land!");
+    player.sendMessage(t(player, "claims.added", { name: others[ps].name }));
+    others[ps].sendMessage(t(others[ps], "claims.added.recv", { name: player.name }));
   } else if (sel === 2) {
     live.lockDoors = !live.lockDoors;
     save(a);
-    player.sendMessage(live.lockDoors ? "\u00a7a[Claims] Doors locked - only you & members can open them." : "\u00a7e[Claims] Doors are open to everyone again.");
+    player.sendMessage(live.lockDoors ? t(player, "claims.doors.locked.msg") : t(player, "claims.doors.open.msg"));
     return manageClaim(player, live);
   } else if (sel === 3) {
     live.noMobs = !live.noMobs;
     save(a);
-    player.sendMessage(live.noMobs ? "\u00a7a[Claims] No-mob zone ON - wild Pokemon & mobs get pushed out." : "\u00a7e[Claims] No-mob zone off.");
+    player.sendMessage(live.noMobs ? t(player, "claims.nomob.on.msg") : t(player, "claims.nomob.off.msg"));
     return manageClaim(player, live);
   } else if (sel === 1) {
-    if (live.members.length === 0) return player.sendMessage("\u00a7e[Claims] No members to remove.");
-    const ms = await actionMenu(player, "Remove member", "", live.members.map((m) => ({ label: m.name })), "pokedex_light_blue");
+    if (live.members.length === 0) return player.sendMessage(t(player, "claims.noremove"));
+    const ms = await actionMenu(player, t(player, "claims.removemember.title"), "", live.members.map((m) => ({ label: m.name })), "pokedex_light_blue");
     if (ms < 0) return;
     const gone = live.members.splice(ms, 1)[0];
     save(a);
-    player.sendMessage("\u00a7e[Claims] Removed " + gone.name + ".");
+    player.sendMessage(t(player, "claims.removed", { name: gone.name }));
   } else if (sel === 4) {
     return expandClaim(player, live, a);
   } else if (sel === 5) {
     showBorder(player, { x1: live.x1, z1: live.z1, x2: live.x2, z2: live.z2 }, "minecraft:villager_happy");
     return;
   } else if (sel === 6) {
-    if (!(await confirmForm(player, "Delete this claim? Your land loses ALL protection."))) return;
+    if (!(await confirmForm(player, t(player, "claims.delete.confirm")))) return;
     save(a.filter((x) => x.id !== c.id));
-    player.sendMessage("\u00a7e[Claims] Claim deleted.");
+    player.sendMessage(t(player, "claims.deleted"));
   }
 }
 
 async function expandClaim(player, c, a) {
   const cx = Math.floor((c.x1 + c.x2) / 2), cz = Math.floor((c.z1 + c.z2) / 2);
   const curR = Math.floor((c.x2 - c.x1) / 2);
-  const mf = new ModalFormData().title("Expand your land");
+  const mf = new ModalFormData().title(t(player, "claims.expand.title"));
   const lim = limitOf(player);
-  mf.slider("New radius from the centre (" + cx + ", " + cz + ")", CFG.minRadius, lim, { valueStep: 1, defaultValue: Math.max(Math.min(curR, lim), CFG.minRadius) });
+  mf.slider(t(player, "claims.expand.radius", { cx, cz }), CFG.minRadius, lim, { valueStep: 1, defaultValue: Math.max(Math.min(curR, lim), CFG.minRadius) });
   let res;
   try { res = await mf.show(player); } catch { return; }
   if (res.canceled) return;
   const r = Math.min(Number(res.formValues[0]), lim);
-  if (r === curR) return player.sendMessage("\u00a7e[Claims] Same size - nothing changed.");
+  if (r === curR) return player.sendMessage(t(player, "claims.samesize"));
   const x1 = cx - r, z1 = cz - r, x2 = cx + r, z2 = cz + r;
 
   // spawn guard
   let s = { x: 0, z: 0 };
   try { const w = world.getDefaultSpawnLocation(); s = { x: w.x, z: w.z }; } catch {}
   if (x1 - CFG.spawnGuard <= s.x && x2 + CFG.spawnGuard >= s.x && z1 - CFG.spawnGuard <= s.z && z2 + CFG.spawnGuard >= s.z)
-    return player.sendMessage("\u00a7c[Claims] That size would reach the world spawn guard (" + CFG.spawnGuard + " blocks).");
+    return player.sendMessage(t(player, "claims.expand.spawnguard", { guard: CFG.spawnGuard }));
 
   // must not overlap ANY other claim (its own old area is fine)
   const clash = a.find((o) => o.id !== c.id && o.dim === c.dim && x1 <= o.x2 && x2 >= o.x1 && z1 <= o.z2 && z2 >= o.z1);
-  if (clash) return player.sendMessage("\u00a7c[Claims] That size would overlap " + clash.ownerName + "'s claim - try a smaller radius.");
+  if (clash) return player.sendMessage(t(player, "claims.expand.overlap", { name: clash.ownerName }));
 
   // shrinking: warn if it would cut things loose
   if (r < curR && !(await confirmForm(player,
-      "Shrink from " + (curR * 2 + 1) + "x" + (curR * 2 + 1) + " to " + (r * 2 + 1) + "x" + (r * 2 + 1) + "?\n\n\u00a7cAnything outside the new border loses protection\u00a7r (chests, builds, roaming Pokemon)."))) return;
+      t(player, "claims.shrink.confirm", { old: (curR * 2 + 1) + "x" + (curR * 2 + 1), new: (r * 2 + 1) + "x" + (r * 2 + 1) })))) return;
 
   c.x1 = x1; c.z1 = z1; c.x2 = x2; c.z2 = z2;
   save(a);
-  player.sendMessage((r > curR ? "\u00a7a[Claims] Expanded to " : "\u00a7e[Claims] Resized to ") + (r * 2 + 1) + "x" + (r * 2 + 1) + " blocks!");
+  player.sendMessage(r > curR ? t(player, "claims.expanded", { size: (r * 2 + 1) + "x" + (r * 2 + 1) }) : t(player, "claims.resized", { size: (r * 2 + 1) + "x" + (r * 2 + 1) }));
   showBorder(player, { x1, z1, x2, z2 }, "minecraft:villager_happy");
   try { player.playSound("random.levelup"); } catch {}
 }
@@ -207,21 +208,21 @@ export async function openMachinePurge(admin) {
       if (MACHINE_IDS.includes(e.typeId)) found.push(e);
     }
   } catch {}
-  const sel = await actionMenu(admin, "Purge machines",
+  const sel = await actionMenu(admin, t(admin, "claims.purge.title"),
     found.length
-      ? "\u00a7e" + found.length + "\u00a7r SERP machine(s) within 24 blocks:\n" + found.slice(0, 8).map((e) => "\u00a78- " + e.typeId.replace("serp:", "") + " (" + Math.floor(e.location.x) + ", " + Math.floor(e.location.z) + ")").join("\n")
-      : "No SERP machines within 24 blocks of you.",
+      ? t(admin, "claims.purge.body", { n: found.length, list: found.slice(0, 8).map((e) => "§8- " + e.typeId.replace("serp:", "") + " (" + Math.floor(e.location.x) + ", " + Math.floor(e.location.z) + ")").join("\n") })
+      : t(admin, "claims.purge.none"),
     [
-      { label: found.length ? "\u00a7cDelete all " + found.length + " nearby machines" : "\u00a78(nothing nearby)", icon: "textures/blocks/barrier" },
-      { label: "\u00a74Delete EVERY machine in loaded chunks\n\u00a78Server-wide cleanup", icon: "textures/blocks/tnt_side" },
+      { label: found.length ? t(admin, "claims.purge.deletenear", { n: found.length }) : t(admin, "claims.purge.nonebtn"), icon: "textures/blocks/barrier" },
+      { label: t(admin, "claims.purge.deleteall"), icon: "textures/blocks/tnt_side" },
     ], "pokedex_black");
   if (sel === 0) {
     if (!found.length) return;
     for (const e of found) { try { e.remove(); } catch {} }
-    return admin.sendMessage("\u00a7a[Admin] Removed " + found.length + " machine(s).");
+    return admin.sendMessage(t(admin, "claims.purge.removed", { n: found.length }));
   }
   if (sel === 1) {
-    if (!(await confirmForm(admin, "Delete \u00a7lEVERY\u00a7r SERP machine in all loaded chunks?\n\n\u00a7cThis includes machines players crafted and placed themselves.\u00a7r"))) return;
+    if (!(await confirmForm(admin, t(admin, "claims.purge.confirmall")))) return;
     let n = 0;
     for (const dimId of ["overworld", "nether", "the_end"]) {
       try {
@@ -230,56 +231,56 @@ export async function openMachinePurge(admin) {
         }
       } catch {}
     }
-    admin.sendMessage("\u00a7a[Admin] Removed " + n + " machine(s) from loaded chunks.");
+    admin.sendMessage(t(admin, "claims.purge.removedall", { n }));
   }
 }
 
 export async function openGuardCapAdmin(admin) {
   const { guardLimits, setMaxGuards } = await import("./guards.js");
   const lim = guardLimits();
-  const mf = new ModalFormData().title("Guard limit");
-  mf.slider("Max guards per player", 1, lim.hard, { valueStep: 1, defaultValue: lim.cur });
+  const mf = new ModalFormData().title(t(admin, "claims.guardcap.title"));
+  mf.slider(t(admin, "claims.guardcap.slider"), 1, lim.hard, { valueStep: 1, defaultValue: lim.cur });
   let res;
   try { res = await mf.show(admin); } catch { return; }
   if (res.canceled) return;
   const n = Number(res.formValues[0]);
   setMaxGuards(n);
-  admin.sendMessage("\u00a7a[Admin] Guard limit set to " + n + " per player." +
-    (n > 8 ? " \u00a7e(Heads-up: Pokemon share Minecraft's monster mob cap - many guards means fewer wild spawns.)" : ""));
+  admin.sendMessage(t(admin, "claims.guardcap.set", { n }) + (n > 8 ? t(admin, "claims.guardcap.warn") : ""));
 }
 
 export async function openClaimsAdmin(admin) {
   const a = all();
-  if (a.length === 0) return admin.sendMessage("\u00a7e[Claims] No claims exist yet.");
-  const sel = await actionMenu(admin, "All claims (" + a.length + ")", "Tap to manage:",
-    a.map((c) => ({ label: c.ownerName + " - " + sizeOf(c) + "\n\u00a78(" + c.x1 + "," + c.z1 + ") " + c.dim.replace("minecraft:", ""), icon: "textures/blocks/grass_side_carried" })),
+  if (a.length === 0) return admin.sendMessage(t(admin, "claims.admin.none"));
+  const sel = await actionMenu(admin, t(admin, "claims.admin.title", { n: a.length }), t(admin, "claims.admin.body"),
+    a.map((c) => ({ label: c.ownerName + " - " + sizeOf(c) + "\n§8(" + c.x1 + "," + c.z1 + ") " + c.dim.replace("minecraft:", ""), icon: "textures/blocks/grass_side_carried" })),
     "pokedex_black");
   if (sel < 0) return;
   const c = a[sel];
-  const act = await actionMenu(admin, c.ownerName + "'s claim", sizeOf(c) + " at (" + c.x1 + "," + c.z1 + ")-(" + c.x2 + "," + c.z2 + ")\nSize limit: " + (limitOf({ id: c.owner }) * 2 + 1) + "x" + (limitOf({ id: c.owner }) * 2 + 1) + "\nMembers: " + (c.members.map((m) => m.name).join(", ") || "none"),
+  const act = await actionMenu(admin, t(admin, "claims.admin.claim.title", { owner: c.ownerName }),
+    t(admin, "claims.admin.claim.body", { size: sizeOf(c), x1: c.x1, z1: c.z1, x2: c.x2, z2: c.z2, lim: (limitOf({ id: c.owner }) * 2 + 1) + "x" + (limitOf({ id: c.owner }) * 2 + 1), members: (c.members.map((m) => m.name).join(", ") || t(admin, "claims.admin.nomembers")) }),
     [
-      { label: "Teleport to it", icon: "textures/items/ender_pearl" },
-      { label: "\u00a7cDelete claim", icon: "textures/blocks/barrier" },
-      { label: "\u00a7eGrant a bigger size limit\n\u00a78Let this player expand further", icon: "textures/items/map_empty" },
-      { label: "\u00a76Resize it now (admin)\n\u00a78Force any size up to " + (CFG.hardMaxRadius * 2 + 1), icon: "textures/items/diamond_pickaxe" },
+      { label: t(admin, "claims.admin.tp"), icon: "textures/items/ender_pearl" },
+      { label: t(admin, "claims.admin.delete"), icon: "textures/blocks/barrier" },
+      { label: t(admin, "claims.admin.grant"), icon: "textures/items/map_empty" },
+      { label: t(admin, "claims.admin.resize", { max: (CFG.hardMaxRadius * 2 + 1) }), icon: "textures/items/diamond_pickaxe" },
     ], "pokedex_black");
   if (act === 2) {
-    const mf = new ModalFormData().title("Size limit for " + c.ownerName);
-    mf.slider("Max radius this player may claim", CFG.playerMaxRadius, CFG.hardMaxRadius, { valueStep: 1, defaultValue: limitOf({ id: c.owner }) });
+    const mf = new ModalFormData().title(t(admin, "claims.admin.limit.title", { owner: c.ownerName }));
+    mf.slider(t(admin, "claims.admin.limit.slider"), CFG.playerMaxRadius, CFG.hardMaxRadius, { valueStep: 1, defaultValue: limitOf({ id: c.owner }) });
     let r2;
     try { r2 = await mf.show(admin); } catch { return; }
     if (r2.canceled) return;
     const nr = Number(r2.formValues[0]);
     setLimit(c.owner, nr);
-    admin.sendMessage("\u00a7a[Admin] " + c.ownerName + " can now claim up to " + (nr * 2 + 1) + "x" + (nr * 2 + 1) + ".");
+    admin.sendMessage(t(admin, "claims.admin.limit.set", { owner: c.ownerName, size: (nr * 2 + 1) + "x" + (nr * 2 + 1) }));
     for (const p of world.getAllPlayers()) {
-      if (p.id === c.owner) p.sendMessage("\u00a7a[Claims] An admin raised your land limit to \u00a7l" + (nr * 2 + 1) + "x" + (nr * 2 + 1) + "\u00a7r\u00a7a - expand it in Hub -> Land Claims!");
+      if (p.id === c.owner) p.sendMessage(t(p, "claims.admin.limit.recv", { size: (nr * 2 + 1) + "x" + (nr * 2 + 1) }));
     }
     return;
   }
   if (act === 3) {
-    const mf = new ModalFormData().title("Resize " + c.ownerName + "'s claim");
-    mf.slider("Radius", CFG.minRadius, CFG.hardMaxRadius, { valueStep: 1, defaultValue: Math.floor((c.x2 - c.x1) / 2) });
+    const mf = new ModalFormData().title(t(admin, "claims.admin.resize.title", { owner: c.ownerName }));
+    mf.slider(t(admin, "claims.admin.resize.slider"), CFG.minRadius, CFG.hardMaxRadius, { valueStep: 1, defaultValue: Math.floor((c.x2 - c.x1) / 2) });
     let r3;
     try { r3 = await mf.show(admin); } catch { return; }
     if (r3.canceled) return;
@@ -287,20 +288,20 @@ export async function openClaimsAdmin(admin) {
     const cx2 = Math.floor((c.x1 + c.x2) / 2), cz2 = Math.floor((c.z1 + c.z2) / 2);
     const nx1 = cx2 - rr, nz1 = cz2 - rr, nx2 = cx2 + rr, nz2 = cz2 + rr;
     const clash = all().find((o) => o.id !== c.id && o.dim === c.dim && nx1 <= o.x2 && nx2 >= o.x1 && nz1 <= o.z2 && nz2 >= o.z1);
-    if (clash) return admin.sendMessage("\u00a7c[Admin] That overlaps " + clash.ownerName + "'s claim.");
+    if (clash) return admin.sendMessage(t(admin, "claims.admin.resize.overlap", { name: clash.ownerName }));
     const arr = all();
     const live2 = arr.find((x) => x.id === c.id);
     live2.x1 = nx1; live2.z1 = nz1; live2.x2 = nx2; live2.z2 = nz2;
     save(arr);
-    admin.sendMessage("\u00a7a[Admin] Resized to " + (rr * 2 + 1) + "x" + (rr * 2 + 1) + ".");
+    admin.sendMessage(t(admin, "claims.admin.resize.done", { size: (rr * 2 + 1) + "x" + (rr * 2 + 1) }));
     return;
   }
   if (act === 0) {
     try { admin.teleport({ x: (c.x1 + c.x2) / 2, y: 100, z: (c.z1 + c.z2) / 2 }, { dimension: world.getDimension("overworld") }); } catch {}
   } else if (act === 1) {
-    if (!(await confirmForm(admin, "Delete " + c.ownerName + "'s claim?"))) return;
+    if (!(await confirmForm(admin, t(admin, "claims.admin.delete.confirm", { owner: c.ownerName })))) return;
     save(all().filter((x) => x.id !== c.id));
-    admin.sendMessage("\u00a7e[Claims] Deleted.");
+    admin.sendMessage(t(admin, "claims.admin.deleted"));
   }
 }
 
@@ -309,7 +310,7 @@ const showing = new Map(); // playerId -> { until, box }
 
 export function showBorder(player, box, color) {
   showing.set(player.id, { until: Date.now() + 12000, box, color: color ?? "minecraft:endrod" });
-  player.sendMessage("\u00a7b[Border] Showing the outline for 12 seconds.");
+  player.sendMessage(t(player, "claims.border.msg"));
 }
 
 function drawBorders() {
@@ -434,8 +435,8 @@ export function initClaims() {
         const cur = c ? c.id : null;
         if (inClaim.get(p.id) === cur) continue;
         inClaim.set(p.id, cur);
-        if (c) p.onScreenDisplay.setActionBar(canBuild(p, c) ? "\u00a7a\u2691 " + (c.owner === p.id ? "Your land" : c.ownerName + "'s land (member)") : "\u00a7e\u2691 " + c.ownerName + "'s land");
-        else p.onScreenDisplay.setActionBar("\u00a77\u2691 Wilderness");
+        if (c) p.onScreenDisplay.setActionBar(canBuild(p, c) ? (c.owner === p.id ? t(p, "claims.ab.yours") : t(p, "claims.ab.member", { name: c.ownerName })) : t(p, "claims.ab.other", { name: c.ownerName }));
+        else p.onScreenDisplay.setActionBar(t(p, "claims.ab.wild"));
       } catch {}
     }
   }, 20);
