@@ -14,8 +14,12 @@ import dev.thanhtin.survivalcore.job.JobListener;
 import dev.thanhtin.survivalcore.job.JobManager;
 import dev.thanhtin.survivalcore.kit.KitGui;
 import dev.thanhtin.survivalcore.kit.KitManager;
+import dev.thanhtin.survivalcore.bounty.BountyListener;
+import dev.thanhtin.survivalcore.bounty.BountyManager;
 import dev.thanhtin.survivalcore.listener.PlayerListener;
 import dev.thanhtin.survivalcore.rank.RankManager;
+import dev.thanhtin.survivalcore.reward.RewardManager;
+import dev.thanhtin.survivalcore.reward.VoteManager;
 import dev.thanhtin.survivalcore.storage.Database;
 import dev.thanhtin.survivalcore.teleport.RtpManager;
 import dev.thanhtin.survivalcore.teleport.TeleportManager;
@@ -50,6 +54,9 @@ public class SurvivalCore extends JavaPlugin {
     private RankManager ranks;
     private JobManager jobs;
     private JobGui jobGui;
+    private RewardManager rewards;
+    private VoteManager votes;
+    private BountyManager bounties;
 
     @Override
     public void onEnable() {
@@ -85,6 +92,9 @@ public class SurvivalCore extends JavaPlugin {
         jobs = new JobManager(this);
         jobs.load();
         jobGui = new JobGui(this);
+        rewards = new RewardManager(this);
+        votes = new VoteManager(this);
+        bounties = new BountyManager(this);
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
@@ -95,6 +105,7 @@ public class SurvivalCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(kitGui, this);
         getServer().getPluginManager().registerEvents(jobGui, this);
         getServer().getPluginManager().registerEvents(new JobListener(this), this);
+        getServer().getPluginManager().registerEvents(new BountyListener(this), this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         Commands commands = new Commands(this);
@@ -105,7 +116,7 @@ public class SurvivalCore extends JavaPlugin {
                 "claim", "unclaim", "trust", "untrust", "claiminfo", "claims",
                 "ah", "sell", "crate", "key",
                 "pv", "vault", "pvault", "kit", "kits", "rankup", "rank",
-                "jobs", "job"}) {
+                "jobs", "job", "daily", "vote", "svote", "bounty"}) {
             PluginCommand pc = getCommand(c);
             if (pc != null) {
                 pc.setExecutor(commands);
@@ -150,4 +161,7 @@ public class SurvivalCore extends JavaPlugin {
     public RankManager ranks() { return ranks; }
     public JobManager jobs() { return jobs; }
     public JobGui jobGui() { return jobGui; }
+    public RewardManager rewards() { return rewards; }
+    public VoteManager votes() { return votes; }
+    public BountyManager bounties() { return bounties; }
 }

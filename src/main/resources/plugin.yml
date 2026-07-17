@@ -113,6 +113,17 @@ commands:
     description: Join jobs and earn money for your work
     usage: /jobs [join <job>|leave <job>|stats]
     aliases: [job]
+  daily:
+    description: Claim your daily login reward
+  vote:
+    description: Show vote links (or /vote test for admins)
+  svote:
+    description: Grant a vote reward (used by vote listeners/console)
+    usage: /svote <player>
+    permission: survivalcore.admin
+  bounty:
+    description: Place a bounty on a player, or list active bounties
+    usage: /bounty <player> <amount> | /bounty list
 permissions:
   survivalcore.admin:
     description: Admin commands

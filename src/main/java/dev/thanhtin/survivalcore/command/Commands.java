@@ -34,6 +34,7 @@ public class Commands implements CommandExecutor, TabCompleter {
             case "balance" -> { return balance(sender, a); }
             case "baltop" -> { return baltop(sender); }
             case "eco" -> { return eco(sender, a); }
+            case "svote" -> { return svote(sender, a); }
         }
         if (!(sender instanceof Player p)) {
             Msg.error(sender, "Players only.");
@@ -72,6 +73,9 @@ public class Commands implements CommandExecutor, TabCompleter {
             case "rankup" -> plugin.ranks().rankup(p);
             case "rank" -> rank(p);
             case "jobs", "job" -> jobs(p, a);
+            case "daily" -> plugin.rewards().claimDaily(p);
+            case "vote" -> vote(p, a);
+            case "bounty" -> bounty(p, a);
             default -> { return false; }
         }
         return true;
@@ -386,6 +390,38 @@ public class Commands implements CommandExecutor, TabCompleter {
             case "list" -> plugin.jobGui().open(p);
             default -> plugin.jobGui().open(p);
         }
+    }
+
+    // ---------- vote / bounty ----------
+
+    /** Console- or admin-triggered vote reward: svote <player>. Vote plugins call this. */
+    private boolean svote(CommandSender sender, String[] a) {
+        boolean allowed = !(sender instanceof Player) || sender.hasPermission("survivalcore.admin");
+        if (!allowed) { Msg.error(sender, "No permission."); return true; }
+        if (a.length < 1) { Msg.error(sender, "Usage: /svote <player>"); return true; }
+        Player target = plugin.getServer().getPlayerExact(a[0]);
+        if (target == null) { Msg.warn(sender, "Player " + a[0] + " is not online."); return true; }
+        plugin.votes().reward(target);
+        return true;
+    }
+
+    private void vote(Player p, String[] a) {
+        if (a.length >= 1 && a[0].equalsIgnoreCase("test") && p.hasPermission("survivalcore.admin")) {
+            plugin.votes().reward(p);
+            return;
+        }
+        plugin.votes().showLinks(p);
+    }
+
+    private void bounty(Player p, String[] a) {
+        if (a.length == 0 || a[0].equalsIgnoreCase("list") || a[0].equalsIgnoreCase("top")) {
+            plugin.bounties().list(p);
+            return;
+        }
+        if (a.length < 2) { Msg.error(p, "Usage: /bounty <player> <amount> (or /bounty list)"); return; }
+        double amount = parseAmount(a[1]);
+        if (amount <= 0) { Msg.error(p, "Enter a positive amount."); return; }
+        plugin.bounties().place(p, a[0], amount);
     }
 
     private void jobStats(Player p) {

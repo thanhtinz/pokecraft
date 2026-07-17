@@ -62,7 +62,94 @@ public class Database {
             st.execute("CREATE TABLE IF NOT EXISTS job_data(" +
                     "uuid TEXT, job TEXT, xp REAL NOT NULL DEFAULT 0, " +
                     "PRIMARY KEY(uuid, job))");
+            st.execute("CREATE TABLE IF NOT EXISTS daily(" +
+                    "uuid TEXT PRIMARY KEY, last_claim INTEGER NOT NULL DEFAULT 0, " +
+                    "streak INTEGER NOT NULL DEFAULT 0)");
+            st.execute("CREATE TABLE IF NOT EXISTS bounties(" +
+                    "target TEXT PRIMARY KEY, target_name TEXT, amount REAL NOT NULL DEFAULT 0)");
         }
+    }
+
+    // ---------- daily reward ----------
+
+    public record Daily(long lastClaim, int streak) {}
+
+    public synchronized Daily getDaily(UUID uuid) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT last_claim, streak FROM daily WHERE uuid=?")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? new Daily(rs.getLong(1), rs.getInt(2)) : new Daily(0, 0);
+            }
+        } catch (SQLException e) {
+            return new Daily(0, 0);
+        }
+    }
+
+    public synchronized void setDaily(UUID uuid, long lastClaim, int streak) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO daily(uuid,last_claim,streak) VALUES(?,?,?) " +
+                        "ON CONFLICT(uuid) DO UPDATE SET last_claim=excluded.last_claim, streak=excluded.streak")) {
+            ps.setString(1, uuid.toString());
+            ps.setLong(2, lastClaim);
+            ps.setInt(3, streak);
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+    }
+
+    // ---------- bounties ----------
+
+    public record Bounty(UUID target, String targetName, double amount) {}
+
+    public synchronized void addBounty(UUID target, String targetName, double amount) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO bounties(target,target_name,amount) VALUES(?,?,?) " +
+                        "ON CONFLICT(target) DO UPDATE SET amount=amount+excluded.amount, " +
+                        "target_name=excluded.target_name")) {
+            ps.setString(1, target.toString());
+            ps.setString(2, targetName);
+            ps.setDouble(3, amount);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("addBounty failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized double getBounty(UUID target) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT amount FROM bounties WHERE target=?")) {
+            ps.setString(1, target.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getDouble(1) : 0;
+            }
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    /** Remove a bounty and return the amount that was on it (0 if none). */
+    public synchronized double clearBounty(UUID target) {
+        double amount = getBounty(target);
+        if (amount <= 0) return 0;
+        try (PreparedStatement ps = conn.prepareStatement("DELETE FROM bounties WHERE target=?")) {
+            ps.setString(1, target.toString());
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+        return amount;
+    }
+
+    public synchronized List<Bounty> topBounties(int limit) {
+        List<Bounty> out = new ArrayList<>();
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT target, target_name, amount FROM bounties ORDER BY amount DESC LIMIT ?")) {
+            ps.setInt(1, limit);
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    out.add(new Bounty(UUID.fromString(rs.getString(1)), rs.getString(2), rs.getDouble(3)));
+                }
+            }
+        } catch (SQLException ignored) {}
+        return out;
     }
 
     // ---------- jobs ----------

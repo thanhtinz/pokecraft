@@ -194,3 +194,27 @@ jobs:
       display: "&bFisher"
       icon: FISHING_ROD
       fish: { money: 10.0, xp: 8.0 }
+
+daily:
+  base-money: 200.0
+  per-streak-bonus: 50.0     # extra money per consecutive day
+  max-streak: 30
+  streak-key:
+    every: 7                 # award a crate key every N days (0 = never)
+    crate: vote
+    amount: 1
+
+vote:
+  money: 500.0
+  crate: vote                # crate key awarded per vote
+  keys: 1
+  broadcast: true
+  # extra console commands to run on a vote (%player% is replaced)
+  commands: []
+  # shown by /vote
+  links:
+    - "https://your-server-list-1.example/vote"
+    - "https://your-server-list-2.example/vote"
+
+bounty:
+  min-amount: 100.0
