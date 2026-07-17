@@ -51,6 +51,50 @@ public class Database {
             st.execute("CREATE TABLE IF NOT EXISTS auctions(" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT, seller TEXT, seller_name TEXT, " +
                     "item TEXT, price REAL, listed_at INTEGER)");
+            st.execute("CREATE TABLE IF NOT EXISTS keys(" +
+                    "uuid TEXT, crate TEXT, amount INTEGER NOT NULL DEFAULT 0, " +
+                    "PRIMARY KEY(uuid, crate))");
+        }
+    }
+
+    // ---------- crate keys (virtual) ----------
+
+    public synchronized int getKeys(UUID uuid, String crate) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT amount FROM keys WHERE uuid=? AND crate=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, crate);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getInt(1) : 0;
+            }
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    public synchronized void addKeys(UUID uuid, String crate, int amount) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO keys(uuid,crate,amount) VALUES(?,?,?) " +
+                        "ON CONFLICT(uuid,crate) DO UPDATE SET amount=amount+excluded.amount")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, crate);
+            ps.setInt(3, amount);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("addKeys failed: " + e.getMessage());
+        }
+    }
+
+    /** Atomically consume one key; false when the player has none. */
+    public synchronized boolean takeKey(UUID uuid, String crate) {
+        if (getKeys(uuid, crate) <= 0) return false;
+        try (PreparedStatement ps = conn.prepareStatement(
+                "UPDATE keys SET amount=amount-1 WHERE uuid=? AND crate=? AND amount>0")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, crate);
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
         }
     }
 

@@ -91,6 +91,11 @@ commands:
   sell:
     description: List the held item on the auction house
     usage: /sell <price>
+  crate:
+    description: Open a crate, check keys, or givekey (admin)
+    usage: /crate [open <name>|keys|givekey <player> <crate> <amount>]
+  key:
+    description: Check or open crates (alias of /crate)
 permissions:
   survivalcore.admin:
     description: Admin commands

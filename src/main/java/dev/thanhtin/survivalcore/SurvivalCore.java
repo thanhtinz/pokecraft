@@ -5,6 +5,8 @@ import dev.thanhtin.survivalcore.auction.AuctionManager;
 import dev.thanhtin.survivalcore.claim.ClaimListener;
 import dev.thanhtin.survivalcore.claim.ClaimManager;
 import dev.thanhtin.survivalcore.command.Commands;
+import dev.thanhtin.survivalcore.crate.CrateGui;
+import dev.thanhtin.survivalcore.crate.CrateManager;
 import dev.thanhtin.survivalcore.economy.EconomyManager;
 import dev.thanhtin.survivalcore.economy.VaultBridge;
 import dev.thanhtin.survivalcore.listener.PlayerListener;
@@ -31,6 +33,8 @@ public class SurvivalCore extends JavaPlugin {
     private ClaimManager claims;
     private AuctionManager auctions;
     private AuctionGui auctionGui;
+    private CrateManager crates;
+    private CrateGui crateGui;
 
     @Override
     public void onEnable() {
@@ -53,11 +57,15 @@ public class SurvivalCore extends JavaPlugin {
         claims = new ClaimManager(this);
         auctions = new AuctionManager(this);
         auctionGui = new AuctionGui(this);
+        crates = new CrateManager(this);
+        crates.load();
+        crateGui = new CrateGui(this);
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
         getServer().getPluginManager().registerEvents(new ClaimListener(this), this);
         getServer().getPluginManager().registerEvents(auctionGui, this);
+        getServer().getPluginManager().registerEvents(crateGui, this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         Commands commands = new Commands(this);
@@ -66,7 +74,7 @@ public class SurvivalCore extends JavaPlugin {
                 "setwarp", "delwarp", "warp", "warps", "spawn", "setspawn",
                 "tpa", "tpahere", "tpaccept", "tpdeny", "back", "rtp",
                 "claim", "unclaim", "trust", "untrust", "claiminfo", "claims",
-                "ah", "sell"}) {
+                "ah", "sell", "crate", "key"}) {
             PluginCommand pc = getCommand(c);
             if (pc != null) {
                 pc.setExecutor(commands);
@@ -102,4 +110,6 @@ public class SurvivalCore extends JavaPlugin {
     public ClaimManager claims() { return claims; }
     public AuctionManager auctions() { return auctions; }
     public AuctionGui auctionGui() { return auctionGui; }
+    public CrateManager crates() { return crates; }
+    public CrateGui crateGui() { return crateGui; }
 }

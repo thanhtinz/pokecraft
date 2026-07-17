@@ -65,6 +65,7 @@ public class Commands implements CommandExecutor, TabCompleter {
             case "claims" -> claimsList(p);
             case "ah" -> ah(p, a);
             case "sell" -> sell(p, a);
+            case "crate", "key" -> crate(p, a);
             default -> { return false; }
         }
         return true;
@@ -269,6 +270,55 @@ public class Commands implements CommandExecutor, TabCompleter {
         Msg.info(p, "Your claims: " + plugin.db().claimCount(p.getUniqueId())
                 + "/" + plugin.claims().maxClaims(p)
                 + " | Trusted: " + (trusted.isEmpty() ? "none" : String.join(", ", trusted)));
+    }
+
+    // ---------- crates ----------
+
+    private void crate(Player p, String[] a) {
+        if (a.length == 0) {
+            List<String> names = new ArrayList<>();
+            plugin.crates().all().forEach(c -> names.add(c.id()
+                    + " (" + plugin.db().getKeys(p.getUniqueId(), c.id()) + " keys)"));
+            Msg.info(p, names.isEmpty() ? "No crates configured."
+                    : "Crates: " + String.join(", ", names)
+                      + " | /crate open <name>, /crate givekey ... (admin)");
+            return;
+        }
+        String sub = a[0].toLowerCase();
+        switch (sub) {
+            case "givekey" -> {
+                if (!p.hasPermission("survivalcore.admin")) { Msg.error(p, "No permission."); return; }
+                if (a.length < 4) { Msg.error(p, "Usage: /crate givekey <player> <crate> <amount>"); return; }
+                Player target = plugin.getServer().getPlayerExact(a[1]);
+                if (target == null) { Msg.error(p, "Player not online."); return; }
+                if (plugin.crates().get(a[2]) == null) { Msg.error(p, "No crate '" + a[2] + "'."); return; }
+                int n = (int) parseAmount(a[3]);
+                plugin.db().addKeys(target.getUniqueId(), a[2].toLowerCase(), Math.max(1, n));
+                Msg.ok(p, "Gave " + n + " " + a[2].toLowerCase() + " key(s) to " + target.getName() + ".");
+                Msg.ok(target, "You received " + n + " " + a[2].toLowerCase() + " key(s)!");
+            }
+            case "keys" -> {
+                List<String> names = new ArrayList<>();
+                plugin.crates().all().forEach(c -> names.add(c.id() + ": "
+                        + plugin.db().getKeys(p.getUniqueId(), c.id())));
+                Msg.info(p, "Your keys - " + String.join(", ", names));
+            }
+            case "open" -> {
+                if (a.length < 2) { Msg.error(p, "Usage: /crate open <name>"); return; }
+                openCrate(p, a[1]);
+            }
+            default -> openCrate(p, a[0]); // /crate <name> shortcut
+        }
+    }
+
+    private void openCrate(Player p, String id) {
+        var crate = plugin.crates().get(id);
+        if (crate == null) { Msg.error(p, "No crate named '" + id.toLowerCase() + "'."); return; }
+        if (!plugin.db().takeKey(p.getUniqueId(), crate.id())) {
+            Msg.error(p, "You have no " + crate.id() + " key. Vote or buy one!");
+            return;
+        }
+        plugin.crateGui().spin(p, crate);
     }
 
     // ---------- auction house ----------

@@ -35,3 +35,48 @@ auction:
   min-price: 1.0
   max-price: 1000000000.0
   max-listings-per-player: 10
+
+crates:
+  # Each crate is opened with a virtual key (see /crate givekey).
+  # A reward's "chance" is a weight - higher = more likely. Weights are relative,
+  # they do not need to add up to 100. Reward types: item, money, or command.
+  vote:
+    display: "Vote Crate"
+    rewards:
+      - chance: 40
+        item: DIAMOND
+        amount: 3
+        name: "&b3 Diamonds"
+      - chance: 30
+        money: 500.0
+        name: "&a$500"
+      - chance: 20
+        item: EXPERIENCE_BOTTLE
+        amount: 16
+        name: "&aXP Bottles"
+      - chance: 9
+        item: DIAMOND_BLOCK
+        amount: 2
+        name: "&bDiamond Blocks"
+      - chance: 1
+        item: NETHERITE_INGOT
+        amount: 1
+        name: "&5Netherite Ingot"
+  legendary:
+    display: "Legendary Crate"
+    rewards:
+      - chance: 50
+        money: 2000.0
+        name: "&a$2000"
+      - chance: 30
+        item: NETHERITE_INGOT
+        amount: 2
+        name: "&52 Netherite Ingots"
+      - chance: 15
+        item: ENCHANTED_GOLDEN_APPLE
+        amount: 2
+        name: "&6God Apples"
+      - chance: 5
+        item: NETHERITE_BLOCK
+        amount: 1
+        name: "&5Netherite Block"
