@@ -175,8 +175,10 @@ public class PlayerHub implements Listener {
         inv.setItem(10, button(Material.EMERALD, "&aBalance",
                 List.of("&7You have " + plugin.economy().format(
                         plugin.economy().balance(player.getUniqueId()))), "balance"));
-        inv.setItem(11, button(Material.CHEST, "&6Market",
-                List.of("&7Browse the auction house"), "market"));
+        inv.setItem(11, button(Material.EMERALD_BLOCK, "&2Shop",
+                List.of("&7Buy and sell items"), "shop"));
+        inv.setItem(9, button(Material.CHEST, "&6Market",
+                List.of("&7Player auction house"), "market"));
         inv.setItem(12, button(Material.CLOCK, "&eDaily Reward",
                 List.of("&7Claim your daily reward"), "daily"));
         inv.setItem(13, button(Material.PAPER, "&bVote",
@@ -209,6 +211,7 @@ public class PlayerHub implements Listener {
         switch (act) {
             case "balance" -> Msg.info(p, "Balance: "
                     + plugin.economy().format(plugin.economy().balance(p.getUniqueId())));
+            case "shop" -> plugin.shopGui().open(p, 0);
             case "market" -> plugin.auctionGui().open(p, 0, false);
             case "daily" -> plugin.rewards().claimDaily(p);
             case "vote" -> plugin.votes().showLinks(p);

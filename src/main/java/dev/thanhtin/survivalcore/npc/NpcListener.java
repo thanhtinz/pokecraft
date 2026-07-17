@@ -46,6 +46,7 @@ public class NpcListener implements Listener {
         switch (role.toLowerCase()) {
             case "kit_master" -> plugin.kits().openDialogue(p);
             case "job_board" -> plugin.jobs().openDialogue(p);
+            case "shop" -> plugin.shopGui().open(p, 0);
             case "banker" -> Msg.info(p, "Balance: "
                     + plugin.economy().format(plugin.economy().balance(p.getUniqueId())));
             default -> Msg.info(p, "This villager has nothing to say.");

@@ -255,3 +255,24 @@ hub:
   item: NETHER_STAR
   name: "&b&lᴍᴇɴᴜ"
   glow: true
+
+shop:
+  title: "&2&lServer Shop"
+  # buy = price to buy `amount`; sell = money for selling `amount`. 0/omitted disables that side.
+  items:
+    - { item: OAK_LOG, amount: 16, buy: 60.0, sell: 24.0 }
+    - { item: COBBLESTONE, amount: 64, buy: 40.0, sell: 12.0 }
+    - { item: STONE, amount: 64, buy: 80.0, sell: 24.0 }
+    - { item: COAL, amount: 16, buy: 80.0, sell: 32.0 }
+    - { item: IRON_INGOT, amount: 8, buy: 200.0, sell: 80.0 }
+    - { item: GOLD_INGOT, amount: 8, buy: 240.0, sell: 96.0 }
+    - { item: DIAMOND, amount: 4, buy: 600.0, sell: 240.0 }
+    - { item: EMERALD, amount: 4, buy: 500.0, sell: 200.0 }
+    - { item: WHEAT, amount: 32, buy: 60.0, sell: 24.0 }
+    - { item: BREAD, amount: 16, buy: 80.0, sell: 20.0 }
+    - { item: COOKED_BEEF, amount: 16, buy: 120.0, sell: 40.0 }
+    - { item: TORCH, amount: 32, buy: 40.0, sell: 8.0 }
+    - { item: OAK_PLANKS, amount: 32, buy: 40.0, sell: 12.0 }
+    - { item: GLASS, amount: 16, buy: 80.0, sell: 24.0 }
+    - { item: ENDER_PEARL, amount: 1, buy: 250.0, sell: 80.0 }
+    - { item: EXPERIENCE_BOTTLE, amount: 8, buy: 300.0, sell: 0.0 }

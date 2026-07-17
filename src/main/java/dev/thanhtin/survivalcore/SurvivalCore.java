@@ -22,6 +22,8 @@ import dev.thanhtin.survivalcore.npc.NpcListener;
 import dev.thanhtin.survivalcore.npc.NpcManager;
 import dev.thanhtin.survivalcore.listener.PlayerListener;
 import dev.thanhtin.survivalcore.scoreboard.ScoreboardService;
+import dev.thanhtin.survivalcore.shop.ShopGui;
+import dev.thanhtin.survivalcore.shop.ShopManager;
 import dev.thanhtin.survivalcore.rank.RankManager;
 import dev.thanhtin.survivalcore.reward.RewardManager;
 import dev.thanhtin.survivalcore.reward.VoteManager;
@@ -65,6 +67,8 @@ public class SurvivalCore extends JavaPlugin {
     private ScoreboardService scoreboards;
     private AdminPanel adminPanel;
     private PlayerHub hub;
+    private ShopManager shop;
+    private ShopGui shopGui;
 
     @Override
     public void onEnable() {
@@ -105,6 +109,9 @@ public class SurvivalCore extends JavaPlugin {
         scoreboards = new ScoreboardService(this);
         adminPanel = new AdminPanel(this);
         hub = new PlayerHub(this);
+        shop = new ShopManager(this);
+        shop.load();
+        shopGui = new ShopGui(this);
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
@@ -119,6 +126,7 @@ public class SurvivalCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new NpcListener(this), this);
         getServer().getPluginManager().registerEvents(adminPanel, this);
         getServer().getPluginManager().registerEvents(hub, this);
+        getServer().getPluginManager().registerEvents(shopGui, this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         scoreboards.start();
@@ -135,7 +143,7 @@ public class SurvivalCore extends JavaPlugin {
                 "claim", "unclaim", "trust", "untrust", "claiminfo", "claims",
                 "ah", "sell", "crate", "key",
                 "pv", "vault", "pvault", "kit", "kits", "rankup", "rank",
-                "jobs", "job", "daily", "vote", "svote", "bounty", "npc", "sc", "menu"}) {
+                "jobs", "job", "daily", "vote", "svote", "bounty", "npc", "sc", "menu", "shop"}) {
             PluginCommand pc = getCommand(c);
             if (pc != null) {
                 pc.setExecutor(commands);
@@ -197,4 +205,6 @@ public class SurvivalCore extends JavaPlugin {
     public ScoreboardService scoreboards() { return scoreboards; }
     public AdminPanel adminPanel() { return adminPanel; }
     public PlayerHub hub() { return hub; }
+    public ShopManager shop() { return shop; }
+    public ShopGui shopGui() { return shopGui; }
 }

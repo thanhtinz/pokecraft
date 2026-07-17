@@ -75,7 +75,9 @@ public class AdminPanel implements Listener {
                 List.of("&7Spawns a Job Board NPC here."), "npc:job_board"));
         inv.setItem(12, action(Material.GOLD_INGOT, "&aPlace Banker",
                 List.of("&7Spawns a Banker NPC here."), "npc:banker"));
-        inv.setItem(13, action(Material.BARRIER, "&cRemove NPC",
+        inv.setItem(13, action(Material.EMERALD, "&2Place Shopkeeper",
+                List.of("&7Spawns a Shop NPC here."), "npc:shop"));
+        inv.setItem(14, action(Material.BARRIER, "&cRemove NPC",
                 List.of("&7Then right-click the NPC to remove."), "removenpc"));
 
         // Vault + remove-binding tools
@@ -247,6 +249,7 @@ public class AdminPanel implements Listener {
             case "kit_master" -> "&b&lKit Master";
             case "job_board" -> "&6&lJob Board";
             case "banker" -> "&a&lBanker";
+            case "shop" -> "&2&lShopkeeper";
             default -> role;
         };
     }

@@ -135,6 +135,8 @@ commands:
   menu:
     description: Open the menu hub (also on your compass)
     aliases: [hub]
+  shop:
+    description: Open the server shop (buy/sell)
 permissions:
   survivalcore.admin:
     description: Admin commands
