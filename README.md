@@ -15,6 +15,9 @@ translates for Bedrock.
 | **Teleport** | `/tpa`, `/tpahere`, `/tpaccept`, `/tpdeny`, `/back`, `/rtp` (random wild). Warmup + cooldown, cancelled on move/damage. |
 | **Land claims** | `/claim`, `/unclaim`, `/trust`, `/untrust`, `/claiminfo`, `/claims`. Chunk-based — claim the chunk you stand in. |
 | **Auction house** | `/ah` (chest menu — it's a shop), `/sell <price>`, `/ah mine`. |
+| **Server shop** | Buy/sell items via a **Shopkeeper NPC**, the hub Shop button, or `/shop`. Config-driven prices. |
+| **Banker** | A **Banker NPC** menu: balance, top richest, and send money to a player by clicking (no typing). |
+| **Giftcodes** | Admins generate codes from the panel; players claim with `/redeem <code>`. |
 | **Crates** | *Physical.* Hold a key and right-click a bound crate block. Fireworks + reward drop, no menu. |
 | **Vaults** | *Physical.* Right-click a bound vault block to open your personal storage. |
 | **Kits** | *NPC.* Right-click a **Kit Master** NPC (or `/kit`, `/kit <name>`). Clickable chat, cooldowns, permissions. |
@@ -28,8 +31,8 @@ translates for Bedrock.
 
 Every player carries a **Menu compass** (last hotbar slot). It can't be dropped,
 moved, or lost on death, and reappears if it ever goes missing. Right-click it
-(or `/menu`) to open the hub: balance, market, daily reward, vote, homes, spawn,
-and rank. Admins also see an **Admin Panel** button that opens the settings menu
+(or `/menu`) to open the hub: balance, shop, market, daily reward, vote, homes,
+spawn, and rank. Admins also see an **Admin Panel** button that opens the settings menu
 (`/sc`). Roleplay systems (kits, jobs, crates, vaults) are not in the hub — those
 stay out in the world.
 
@@ -38,7 +41,7 @@ stay out in the world.
 Setup is a **menu**, not typed commands. Run `/sc` to open the SurvivalCore
 Admin panel and click:
 
-- **Place NPCs** — Kit Master / Job Board / Banker spawn where you stand.
+- **Place NPCs** — Kit Master / Job Board / Shopkeeper / Banker spawn where you stand.
   "Remove NPC" then right-click the NPC to delete it.
 - **Bind crate blocks** — click a crate icon, the menu closes, then right-click
   the block. Right-click the crate icon instead to give yourself a key.
