@@ -14,6 +14,8 @@ import { setTitlesModule } from "./sunnyscan.js";
 import { getCoins, fmt } from "./economy.js";
 import { dailyStatus } from "./daily.js";
 import { maxJobLevel } from "./jobs.js";
+// i18n imported as T so it doesn't clash with the `t` title-object variable used throughout
+import { t as T } from "./i18n.js";
 
 const TITLES = "sl:titles";       // world: [{id,text,color,grad,style,sym,brk,cond}]
 const GRANTQ = "sl:titlegrants";  // world: { playerName: [titleId,...] } offline queue
@@ -27,7 +29,7 @@ export function allTitles() { return jget(TITLES, "[]"); }
 // ---------- decoration ----------
 const COLORS = [["White","f"],["Yellow","e"],["Gold","6"],["Red","c"],["Dark Red","4"],["Pink","d"],["Purple","u"],["Blue","9"],["Aqua","b"],["Cyan","3"],["Green","a"],["Dark Green","2"],["Gray","7"],["Black-ish","8"],["Minecoin Gold","g"]];
 const GRADS = [["(no gradient)", null],["Fire (red-gold-yellow)", ["4","c","6","e"]],["Ocean (blue-aqua)", ["1","9","b","3"]],["Nature (green-lime)", ["2","a","e"]],["Royal (purple-pink)", ["5","u","d"]],["Sunset (pink-gold)", ["d","c","6","e"]],["Ice (aqua-white)", ["3","b","f"]]];
-const STYLES = [["Normal",""],["Bold","\u00a7l"],["Italic","\u00a7o"],["Bold Italic","\u00a7l\u00a7o"]];
+const STYLES = [["Normal",""],["Bold","§l"],["Italic","§o"],["Bold Italic","§l§o"]];
 const SYMS = [
   ["(none)",""],
   // text symbols
@@ -38,7 +40,7 @@ const SYMS = [
   ["\uE200 Crown","\uE200"],["\uE201 Trophy","\uE201"],["\uE202 Sword","\uE202"],["\uE203 Shield","\uE203"],["\uE204 Lightning","\uE204"],["\uE205 Flame","\uE205"],["\uE206 Water drop","\uE206"],["\uE207 Leaf","\uE207"],["\uE208 Skull","\uE208"],["\uE209 Gem","\uE209"],["\uE20A Wing","\uE20A"],["\uE20B Medal","\uE20B"],
   ["\u00a7k sparkle","SPARK"],
 ];
-const BRKS = [["[ ]","[","]"],["\u00ab \u00bb","\u00ab","\u00bb"],["( )","(",")"],["- -","-","-"],["(none)","",""]];
+const BRKS = [["[ ]","[","]"],["« »","«","»"],["( )","(",")"],["- -","-","-"],["(none)","",""]];
 
 const CONDS = [
   ["Manual only (admin gives it)", null],
@@ -56,23 +58,24 @@ export function renderTitle(t) {
   const [, o, c] = BRKS[t.brk] ?? BRKS[0];
   let sym = SYMS[t.sym]?.[1] ?? "";
   let symL = sym, symR = sym;
-  if (sym === "SPARK") { symL = "\u00a7k\u258c\u00a7r"; symR = "\u00a7k\u258c\u00a7r"; }
+  if (sym === "SPARK") { symL = "§k▌§r"; symR = "§k▌§r"; }
   const grad = GRADS[t.grad]?.[1];
   let core;
   if (grad) {
     const chars = [...t.text];
-    core = chars.map((ch, i) => "\u00a7" + grad[Math.floor((i / Math.max(1, chars.length - 1)) * (grad.length - 1))] + style + ch).join("");
+    core = chars.map((ch, i) => "§" + grad[Math.floor((i / Math.max(1, chars.length - 1)) * (grad.length - 1))] + style + ch).join("");
   } else {
-    core = "\u00a7" + (t.color ?? "e") + style + t.text;
+    core = "§" + (t.color ?? "e") + style + t.text;
   }
-  const col = grad ? "\u00a7" + grad[0] : "\u00a7" + (t.color ?? "e");
-  return col + o + "\u00a7r" + (symL ? col + symL + "\u00a7r" : "") + core + "\u00a7r" + (symR ? col + symR + "\u00a7r" : "") + col + c + "\u00a7r";
+  const col = grad ? "§" + grad[0] : "§" + (t.color ?? "e");
+  return col + o + "§r" + (symL ? col + symL + "§r" : "") + core + "§r" + (symR ? col + symR + "§r" : "") + col + c + "§r";
 }
 
-function condLabel(cond) {
-  if (!cond) return "manual";
-  const c = CONDS.find(([, k]) => k === cond.type);
-  return cond.type === "top1" ? "season #1" : (c?.[0] ?? cond.type) + " " + cond.n;
+// human-readable condition label in the viewer's language
+function condLabel(viewer, cond) {
+  if (!cond) return T(viewer, "title.cond.manual");
+  if (cond.type === "top1") return T(viewer, "title.cond.top1");
+  return T(viewer, "title.cond." + cond.type, { n: cond.n });
 }
 
 // ---------- ownership / equip ----------
@@ -87,9 +90,9 @@ function grantTo(p, t, silent) {
   mine.push(t.id);
   setMyTitles(p, mine);
   if (!silent) {
-    world.sendMessage("\u00a7d[TITLE] \u00a7l" + p.name + "\u00a7r\u00a7d earned the title " + renderTitle(t) + "\u00a7d!");
+    for (const pl of world.getAllPlayers()) pl.sendMessage(T(pl, "title.earned", { name: p.name, title: renderTitle(t) }));
     try { p.playSound("random.levelup"); } catch {}
-    p.sendMessage("\u00a7d[TITLE] \u00a7fEquip it in Hub -> Titles!");
+    p.sendMessage(T(p, "title.equip.hint"));
   }
   return true;
 }
@@ -103,7 +106,7 @@ export function grantById(player, titleId, silent) {
 
 export function condProgress(p, cond) {
   if (!cond) return null;
-  if (cond.type === "top1") return "Win any weekly season board";
+  if (cond.type === "top1") return T(p, "title.cond.top1.progress");
   const n = cond.n ?? 0;
   let cur = 0;
   if (cond.type === "dex") cur = dexSet(p).size;
@@ -148,7 +151,7 @@ export function titlePrefix(p) {
 function applyName(p) {
   const id = equipped(p);
   const t = id ? allTitles().find((x) => x.id === id) : null;
-  const want = t ? renderTitle(t) + " \u00a7f" + p.name : p.name;
+  const want = t ? renderTitle(t) + " §f" + p.name : p.name;
   try { if (p.nameTag !== want) p.nameTag = want; } catch {}
 }
 
@@ -175,29 +178,31 @@ export async function openTitles(player) {
   const owned = all.filter((t) => mineIds.includes(t.id));
   const locked = all.filter((t) => !mineIds.includes(t.id));
   const buttons = [];
-  for (const t of owned) buttons.push({ label: (t.id === cur ? "\u00a7a[ON] \u00a7r" : "") + renderTitle(t), icon: "textures/items/name_tag" });
-  for (const t of locked) buttons.push({ label: "\u00a78[LOCKED] \u00a7r" + renderTitle(t), icon: "textures/ui/buttons/bubble_no" });
-  buttons.push({ label: "\u00a77Wear no title (plain name)", icon: "textures/ui/buttons/bubble_no" });
+  for (const t of owned) buttons.push({ label: (t.id === cur ? T(player, "title.on") : "") + renderTitle(t), icon: "textures/items/name_tag" });
+  for (const t of locked) buttons.push({ label: T(player, "title.locked") + renderTitle(t), icon: "textures/ui/buttons/bubble_no" });
+  buttons.push({ label: T(player, "title.none.btn"), icon: "textures/ui/buttons/bubble_no" });
   const curT = cur ? all.find((x) => x.id === cur) : null;
-  if (curT) buttons.push({ label: "\u00a7dShow off in chat!\n\u00a78Broadcast your title (5 min cooldown)", icon: "textures/items/firework_rocket" });
-  const sel = await actionMenu(player, "Titles",
-    "Owned: \u00a7a" + owned.length + "\u00a7r / " + all.length + (cur ? "" : "  \u00a78(none equipped)") + "\nTap a title for details.",
+  if (curT) buttons.push({ label: T(player, "title.flex.btn"), icon: "textures/items/firework_rocket" });
+  const sel = await actionMenu(player, T(player, "title.title"),
+    T(player, "title.body", { owned: owned.length, all: all.length, none: cur ? "" : T(player, "title.none.suffix") }),
     buttons, "pokedex_purple");
   if (sel < 0) return;
   if (sel === owned.length + locked.length) {
     setEquipped(player, null);
     applyName(player);
-    player.sendMessage("\u00a7e[SunHub] Title removed - plain name.");
+    player.sendMessage(T(player, "title.removed.plain"));
     return;
   }
   if (curT && sel === owned.length + locked.length + 1) {
     const last = Number(player.getDynamicProperty("sl:flex") ?? 0);
     if (Date.now() - last < 5 * 60000) {
-      return player.sendMessage("\u00a7e[SunHub] Flex cooldown: " + Math.ceil((5 * 60000 - (Date.now() - last)) / 60000) + " min left.");
+      return player.sendMessage(T(player, "title.flex.cd", { m: Math.ceil((5 * 60000 - (Date.now() - last)) / 60000) }));
     }
     player.setDynamicProperty("sl:flex", Date.now());
-    world.sendMessage(renderTitle(curT) + " \u00a7f" + player.name + " \u00a7dis showing off their title! \u00a7k\u258c");
-    for (const p of world.getAllPlayers()) { try { p.playSound("random.levelup"); } catch {} }
+    for (const p of world.getAllPlayers()) {
+      p.sendMessage(T(p, "title.flex.broadcast", { title: renderTitle(curT), name: player.name }));
+      try { p.playSound("random.levelup"); } catch {}
+    }
     return;
   }
   const t = sel < owned.length ? owned[sel] : locked[sel - owned.length];
@@ -208,22 +213,23 @@ async function openTitleInfo(player, t, own) {
   const cur = equipped(player);
   const isOn = cur === t.id;
   const prog = condProgress(player, t.cond);
+  const status = own ? (isOn ? T(player, "title.status.on") : T(player, "title.status.owned")) : T(player, "title.status.locked");
   const body =
-    "Preview: " + renderTitle(t) + " \u00a7f" + player.name + "\u00a7r\n\n" +
-    "How to get: \u00a7e" + condLabel(t.cond) + "\u00a7r\n" +
-    (t.cond && t.cond.type !== "top1" && !own ? "Your progress: \u00a7b" + prog + "\u00a7r\n" : "") +
-    "Status: " + (own ? (isOn ? "\u00a7aOWNED - currently ON" : "\u00a7aOWNED") : "\u00a78LOCKED") + "\u00a7r";
+    T(player, "title.info.preview", { title: renderTitle(t), name: player.name }) + "\n\n" +
+    T(player, "title.info.howto", { cond: condLabel(player, t.cond) }) + "\n" +
+    (t.cond && t.cond.type !== "top1" && !own ? T(player, "title.info.progress", { prog }) + "\n" : "") +
+    T(player, "title.info.status", { status });
   const buttons = [];
   if (own) buttons.push(isOn
-    ? { label: "\u00a7cTake it off", icon: "textures/ui/buttons/bubble_no" }
-    : { label: "\u00a7aWear this title", icon: "textures/items/name_tag" });
-  buttons.push({ label: "Back", icon: "textures/ui/buttons/bubble_no" });
-  const sel = await actionMenu(player, "Title info", body, buttons, "pokedex_purple");
+    ? { label: T(player, "title.takeoff"), icon: "textures/ui/buttons/bubble_no" }
+    : { label: T(player, "title.wear"), icon: "textures/items/name_tag" });
+  buttons.push({ label: T(player, "common.back"), icon: "textures/ui/buttons/bubble_no" });
+  const sel = await actionMenu(player, T(player, "title.info.title"), body, buttons, "pokedex_purple");
   if (sel < 0) return;
   if (own && sel === 0) {
     setEquipped(player, isOn ? null : t.id);
     applyName(player);
-    player.sendMessage(isOn ? "\u00a7e[SunHub] Title removed." : "\u00a7a[SunHub] Now wearing: " + renderTitle(t));
+    player.sendMessage(isOn ? T(player, "title.removed") : T(player, "title.nowwearing", { title: renderTitle(t) }));
     return;
   }
   return openTitles(player);
@@ -231,22 +237,22 @@ async function openTitleInfo(player, t, own) {
 
 // ---------- admin UI ----------
 async function createTitle(admin) {
-  const mf = new ModalFormData().title("Create Title");
-  mf.textField("Title text:", "e.g. Champion");
-  mf.dropdown("Color (ignored if gradient):", COLORS.map(([n]) => n), { defaultValueIndex: 1 });
-  mf.dropdown("Gradient:", GRADS.map(([n]) => n), { defaultValueIndex: 0 });
-  mf.dropdown("Style:", STYLES.map(([n]) => n), { defaultValueIndex: 1 });
-  mf.dropdown("Symbol:", SYMS.map(([n]) => n), { defaultValueIndex: 1 });
-  mf.dropdown("Brackets:", BRKS.map(([n]) => n), { defaultValueIndex: 0 });
-  mf.dropdown("Auto-grant when:", CONDS.map(([n]) => n), { defaultValueIndex: 0 });
-  mf.textField("Threshold N (for >= rules):", "e.g. 100", { defaultValue: "0" });
+  const mf = new ModalFormData().title(T(admin, "title.create.title"));
+  mf.textField(T(admin, "title.create.text.label"), T(admin, "title.create.text.ph"));
+  mf.dropdown(T(admin, "title.create.color"), COLORS.map(([n]) => n), { defaultValueIndex: 1 });
+  mf.dropdown(T(admin, "title.create.grad"), GRADS.map(([n]) => n), { defaultValueIndex: 0 });
+  mf.dropdown(T(admin, "title.create.style"), STYLES.map(([n]) => n), { defaultValueIndex: 1 });
+  mf.dropdown(T(admin, "title.create.sym"), SYMS.map(([n]) => n), { defaultValueIndex: 1 });
+  mf.dropdown(T(admin, "title.create.brk"), BRKS.map(([n]) => n), { defaultValueIndex: 0 });
+  mf.dropdown(T(admin, "title.create.cond"), CONDS.map(([n]) => n), { defaultValueIndex: 0 });
+  mf.textField(T(admin, "title.create.n.label"), T(admin, "title.create.n.ph"), { defaultValue: "0" });
   let res;
   try { res = await mf.show(admin); } catch { return; }
   if (res.canceled) return;
   const [text, color, grad, style, sym, brk, condI, nRaw] = res.formValues;
-  if (!String(text).trim()) return admin.sendMessage("\u00a7c[SunHub] Title text can't be empty.");
+  if (!String(text).trim()) return admin.sendMessage(T(admin, "title.create.empty"));
   const all = allTitles();
-  if (all.length >= 30) return admin.sendMessage("\u00a7c[SunHub] Max 30 titles.");
+  if (all.length >= 30) return admin.sendMessage(T(admin, "title.create.max"));
   const condType = CONDS[Number(condI)][1];
   const t = {
     id: "t" + Date.now(),
@@ -257,32 +263,32 @@ async function createTitle(admin) {
   };
   all.push(t);
   jset(TITLES, all);
-  admin.sendMessage("\u00a7a[SunHub] Created: " + renderTitle(t) + " \u00a77(" + condLabel(t.cond) + ")");
-  world.sendMessage("\u00a7d[TITLE] \u00a7fNew title available: " + renderTitle(t) + " \u00a77- " + condLabel(t.cond));
+  admin.sendMessage(T(admin, "title.created", { title: renderTitle(t), cond: condLabel(admin, t.cond) }));
+  for (const pl of world.getAllPlayers()) pl.sendMessage(T(pl, "title.new", { title: renderTitle(t), cond: condLabel(pl, t.cond) }));
 }
 
 async function manageTitle(admin, t) {
-  const sel = await actionMenu(admin, "Title", renderTitle(t) + "\n\u00a77Rule: " + condLabel(t.cond), [
-    { label: "Give to a player", icon: "textures/items/name_tag" },
-    { label: "\u00a7cDelete title", icon: "textures/ui/buttons/bubble_no" },
+  const sel = await actionMenu(admin, T(admin, "title.manage.title"), T(admin, "title.manage.body", { title: renderTitle(t), cond: condLabel(admin, t.cond) }), [
+    { label: T(admin, "title.give"), icon: "textures/items/name_tag" },
+    { label: T(admin, "title.delete"), icon: "textures/ui/buttons/bubble_no" },
   ], "pokedex_purple");
   if (sel === 0) {
     const others = world.getAllPlayers();
-    const ps = await actionMenu(admin, "Give to whom?", "", others.map((p) => ({ label: p.name })), "pokedex_purple");
+    const ps = await actionMenu(admin, T(admin, "title.give.who"), "", others.map((p) => ({ label: p.name })), "pokedex_purple");
     if (ps < 0) return;
     grantTo(others[ps], t);
   } else if (sel === 1) {
-    if (!(await confirmForm(admin, "Delete title \"" + t.text + "\"? Players wearing it lose it."))) return;
+    if (!(await confirmForm(admin, T(admin, "title.delete.confirm", { text: t.text })))) return;
     jset(TITLES, allTitles().filter((x) => x.id !== t.id));
-    admin.sendMessage("\u00a7e[SunHub] Title deleted.");
+    admin.sendMessage(T(admin, "title.deleted"));
   }
 }
 
 export async function openTitlesAdmin(admin) {
   const all = allTitles();
-  const buttons = [{ label: "\u00a7aCreate new title", icon: "textures/items/experience_bottle" }];
-  for (const t of all) buttons.push({ label: renderTitle(t) + "\n\u00a78" + condLabel(t.cond), icon: "textures/items/name_tag" });
-  const sel = await actionMenu(admin, "Titles (" + all.length + "/30)", "Tap to manage:", buttons, "pokedex_purple");
+  const buttons = [{ label: T(admin, "title.createnew"), icon: "textures/items/experience_bottle" }];
+  for (const t of all) buttons.push({ label: renderTitle(t) + "\n§8" + condLabel(admin, t.cond), icon: "textures/items/name_tag" });
+  const sel = await actionMenu(admin, T(admin, "title.admin.title", { n: all.length }), T(admin, "title.admin.body"), buttons, "pokedex_purple");
   if (sel < 0) return;
   if (sel === 0) return createTitle(admin);
   return manageTitle(admin, all[sel - 1]);
@@ -298,7 +304,9 @@ export function initTitles() {
       if (!ev.initialSpawn) return;
       const p = ev.player;
       const pre = titlePrefix(p);
-      if (pre) world.sendMessage(pre + "\u00a7f" + p.name + " \u00a77joined the game");
+      if (pre) {
+        for (const pl of world.getAllPlayers()) pl.sendMessage(pre + T(pl, "title.joined", { name: p.name }));
+      }
     } catch {}
   });
   // apply nameTags + deliver queued grants + auto-grant checks
