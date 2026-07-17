@@ -15,6 +15,7 @@ import dev.thanhtin.survivalcore.hub.PlayerHub;
 import dev.thanhtin.survivalcore.job.JobListener;
 import dev.thanhtin.survivalcore.job.JobManager;
 import dev.thanhtin.survivalcore.kit.KitManager;
+import dev.thanhtin.survivalcore.bank.BankerGui;
 import dev.thanhtin.survivalcore.bounty.BountyListener;
 import dev.thanhtin.survivalcore.bounty.BountyManager;
 import dev.thanhtin.survivalcore.chat.ChatListener;
@@ -69,6 +70,7 @@ public class SurvivalCore extends JavaPlugin {
     private PlayerHub hub;
     private ShopManager shop;
     private ShopGui shopGui;
+    private BankerGui bankerGui;
 
     @Override
     public void onEnable() {
@@ -112,6 +114,7 @@ public class SurvivalCore extends JavaPlugin {
         shop = new ShopManager(this);
         shop.load();
         shopGui = new ShopGui(this);
+        bankerGui = new BankerGui(this);
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
@@ -127,6 +130,7 @@ public class SurvivalCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(adminPanel, this);
         getServer().getPluginManager().registerEvents(hub, this);
         getServer().getPluginManager().registerEvents(shopGui, this);
+        getServer().getPluginManager().registerEvents(bankerGui, this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         scoreboards.start();
@@ -207,4 +211,5 @@ public class SurvivalCore extends JavaPlugin {
     public PlayerHub hub() { return hub; }
     public ShopManager shop() { return shop; }
     public ShopGui shopGui() { return shopGui; }
+    public BankerGui bankerGui() { return bankerGui; }
 }
