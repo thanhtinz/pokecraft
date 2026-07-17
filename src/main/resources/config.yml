@@ -218,3 +218,33 @@ vote:
 
 bounty:
   min-amount: 100.0
+
+chat:
+  enabled: true
+  # tokens: {rank} {name} {message} ; &-codes and PlaceholderAPI supported in the prefix
+  format: "{rank} &f{name}&7: &f{message}"
+
+scoreboard:
+  enabled: true
+  update-ticks: 40
+  title: "&b&lSURVIVAL&f&lCORE"
+  # tokens: {name} {rank} {balance} {online} {world} {bounty} ; PlaceholderAPI supported
+  lines:
+    - "&7&m----------------"
+    - "&fPlayer: &a{name}"
+    - "&fRank: {rank}"
+    - "&fBalance: &e{balance}"
+    - "&fOnline: &b{online}"
+    - "&7&m----------------"
+
+tab:
+  enabled: true
+  header:
+    - ""
+    - "&b&lSurvivalCore"
+    - "&7Welcome, &f{name}"
+    - ""
+  footer:
+    - ""
+    - "&7Online: &f{online}"
+    - ""

@@ -16,7 +16,9 @@ import dev.thanhtin.survivalcore.kit.KitGui;
 import dev.thanhtin.survivalcore.kit.KitManager;
 import dev.thanhtin.survivalcore.bounty.BountyListener;
 import dev.thanhtin.survivalcore.bounty.BountyManager;
+import dev.thanhtin.survivalcore.chat.ChatListener;
 import dev.thanhtin.survivalcore.listener.PlayerListener;
+import dev.thanhtin.survivalcore.scoreboard.ScoreboardService;
 import dev.thanhtin.survivalcore.rank.RankManager;
 import dev.thanhtin.survivalcore.reward.RewardManager;
 import dev.thanhtin.survivalcore.reward.VoteManager;
@@ -57,6 +59,7 @@ public class SurvivalCore extends JavaPlugin {
     private RewardManager rewards;
     private VoteManager votes;
     private BountyManager bounties;
+    private ScoreboardService scoreboards;
 
     @Override
     public void onEnable() {
@@ -95,6 +98,7 @@ public class SurvivalCore extends JavaPlugin {
         rewards = new RewardManager(this);
         votes = new VoteManager(this);
         bounties = new BountyManager(this);
+        scoreboards = new ScoreboardService(this);
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
@@ -106,7 +110,11 @@ public class SurvivalCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(jobGui, this);
         getServer().getPluginManager().registerEvents(new JobListener(this), this);
         getServer().getPluginManager().registerEvents(new BountyListener(this), this);
+        getServer().getPluginManager().registerEvents(new ChatListener(this), this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
+
+        scoreboards.start();
+        hookPlaceholders();
 
         Commands commands = new Commands(this);
         for (String c : new String[]{"balance", "pay", "baltop", "eco",
@@ -130,7 +138,18 @@ public class SurvivalCore extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        if (scoreboards != null) scoreboards.stop();
         if (db != null) db.close();
+    }
+
+    private void hookPlaceholders() {
+        if (getServer().getPluginManager().getPlugin("PlaceholderAPI") == null) return;
+        try {
+            new dev.thanhtin.survivalcore.placeholder.SurvivalPlaceholders(this).register();
+            getLogger().info("[OK] PlaceholderAPI expansion registered");
+        } catch (Throwable t) {
+            getLogger().warning("PlaceholderAPI hook failed: " + t.getMessage());
+        }
     }
 
     private void hookVault() {
@@ -164,4 +183,5 @@ public class SurvivalCore extends JavaPlugin {
     public RewardManager rewards() { return rewards; }
     public VoteManager votes() { return votes; }
     public BountyManager bounties() { return bounties; }
+    public ScoreboardService scoreboards() { return scoreboards; }
 }

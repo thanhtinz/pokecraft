@@ -27,6 +27,9 @@ public class PlayerListener implements Listener {
             if (spawn != null) plugin.getServer().getScheduler().runTask(plugin,
                     () -> e.getPlayer().teleport(spawn));
         }
+
+        plugin.getServer().getScheduler().runTask(plugin,
+                () -> plugin.scoreboards().update(e.getPlayer()));
     }
 
     @EventHandler
