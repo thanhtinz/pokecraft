@@ -70,6 +70,20 @@ commands:
   rtp:
     description: Random teleport into the wild
     aliases: [wild]
+  claim:
+    description: Claim the chunk you're standing in
+  unclaim:
+    description: Unclaim the chunk you're standing in
+  trust:
+    description: Let a player build in your claims
+    usage: /trust <player>
+  untrust:
+    description: Revoke a player's build access
+    usage: /untrust <player>
+  claiminfo:
+    description: Who owns this chunk
+  claims:
+    description: Your claim count and trusted players
 permissions:
   survivalcore.admin:
     description: Admin commands

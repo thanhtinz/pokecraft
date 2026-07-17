@@ -57,6 +57,12 @@ public class Commands implements CommandExecutor, TabCompleter {
             case "tpdeny" -> plugin.tpa().deny(p);
             case "back" -> back(p);
             case "rtp" -> plugin.rtp().rtp(p);
+            case "claim" -> claim(p);
+            case "unclaim" -> unclaim(p);
+            case "trust" -> trust(p, a);
+            case "untrust" -> untrust(p, a);
+            case "claiminfo" -> claimInfo(p);
+            case "claims" -> claimsList(p);
             default -> { return false; }
         }
         return true;
@@ -213,6 +219,56 @@ public class Commands implements CommandExecutor, TabCompleter {
         plugin.teleports().teleport(p, loc, "your last location");
     }
 
+    // ---------- claims ----------
+
+    private void claim(Player p) {
+        if (plugin.claims().ownerAt(p.getLocation()) != null) {
+            Msg.error(p, "This chunk is already claimed."); return;
+        }
+        if (plugin.claims().claim(p)) {
+            Msg.ok(p, "Chunk claimed. Claims: " + plugin.db().claimCount(p.getUniqueId())
+                    + "/" + plugin.claims().maxClaims(p));
+        } else {
+            Msg.error(p, "Claim limit reached (" + plugin.claims().maxClaims(p) + ").");
+        }
+    }
+
+    private void unclaim(Player p) {
+        Msg.ok(p, plugin.claims().unclaim(p)
+                ? "Chunk unclaimed." : "You don't own this chunk.");
+    }
+
+    private void trust(Player p, String[] a) {
+        if (a.length < 1) { Msg.error(p, "Usage: /trust <player>"); return; }
+        UUID target = plugin.db().uuidByName(a[0]);
+        if (target == null) { Msg.error(p, "Unknown player (must have joined before)."); return; }
+        plugin.db().addTrust(p.getUniqueId(), target);
+        Msg.ok(p, a[0] + " can now build in all your claims.");
+    }
+
+    private void untrust(Player p, String[] a) {
+        if (a.length < 1) { Msg.error(p, "Usage: /untrust <player>"); return; }
+        UUID target = plugin.db().uuidByName(a[0]);
+        if (target == null) { Msg.error(p, "Unknown player."); return; }
+        Msg.ok(p, plugin.db().removeTrust(p.getUniqueId(), target)
+                ? a[0] + " is no longer trusted." : a[0] + " wasn't trusted.");
+    }
+
+    private void claimInfo(Player p) {
+        UUID owner = plugin.claims().ownerAt(p.getLocation());
+        if (owner == null) { Msg.info(p, "This chunk is unclaimed."); return; }
+        String name = plugin.db().nameByUuid(owner);
+        Msg.info(p, "Owned by " + (name == null ? "someone" : name)
+                + (owner.equals(p.getUniqueId()) ? " (you)" : "") + ".");
+    }
+
+    private void claimsList(Player p) {
+        List<String> trusted = plugin.db().trustedNames(p.getUniqueId());
+        Msg.info(p, "Your claims: " + plugin.db().claimCount(p.getUniqueId())
+                + "/" + plugin.claims().maxClaims(p)
+                + " | Trusted: " + (trusted.isEmpty() ? "none" : String.join(", ", trusted)));
+    }
+
     private void tpa(Player p, String[] a, boolean here) {
         if (a.length < 1) { Msg.error(p, "Usage: /" + (here ? "tpahere" : "tpa") + " <player>"); return; }
         Player target = plugin.getServer().getPlayerExact(a[0]);
@@ -236,7 +292,8 @@ public class Commands implements CommandExecutor, TabCompleter {
                 if (sender instanceof Player p) out.addAll(plugin.db().homeNames(p.getUniqueId()));
             } else if (name.equals("warp") || name.equals("delwarp")) {
                 out.addAll(plugin.db().warpNames());
-            } else if (name.equals("pay") || name.equals("tpa") || name.equals("tpahere")) {
+            } else if (name.equals("pay") || name.equals("tpa") || name.equals("tpahere")
+                    || name.equals("trust") || name.equals("untrust")) {
                 for (Player pl : plugin.getServer().getOnlinePlayers()) out.add(pl.getName());
             } else if (name.equals("eco")) {
                 out.addAll(List.of("give", "take", "set"));

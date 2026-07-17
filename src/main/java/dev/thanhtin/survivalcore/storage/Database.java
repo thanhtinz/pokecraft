@@ -43,6 +43,121 @@ public class Database {
             st.execute("CREATE TABLE IF NOT EXISTS warps(" +
                     "name TEXT PRIMARY KEY, world TEXT, x REAL, y REAL, z REAL, yaw REAL, pitch REAL)");
             st.execute("CREATE TABLE IF NOT EXISTS meta(k TEXT PRIMARY KEY, v TEXT)");
+            st.execute("CREATE TABLE IF NOT EXISTS claims(" +
+                    "world TEXT, cx INTEGER, cz INTEGER, owner TEXT, " +
+                    "PRIMARY KEY(world, cx, cz))");
+            st.execute("CREATE TABLE IF NOT EXISTS claim_trust(" +
+                    "owner TEXT, trusted TEXT, PRIMARY KEY(owner, trusted))");
+        }
+    }
+
+    // ---------- land claims (chunk based) ----------
+
+    public synchronized UUID claimOwner(String world, int cx, int cz) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT owner FROM claims WHERE world=? AND cx=? AND cz=?")) {
+            ps.setString(1, world);
+            ps.setInt(2, cx);
+            ps.setInt(3, cz);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? UUID.fromString(rs.getString(1)) : null;
+            }
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public synchronized boolean addClaim(String world, int cx, int cz, UUID owner) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT OR IGNORE INTO claims(world,cx,cz,owner) VALUES(?,?,?,?)")) {
+            ps.setString(1, world);
+            ps.setInt(2, cx);
+            ps.setInt(3, cz);
+            ps.setString(4, owner.toString());
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized boolean removeClaim(String world, int cx, int cz) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "DELETE FROM claims WHERE world=? AND cx=? AND cz=?")) {
+            ps.setString(1, world);
+            ps.setInt(2, cx);
+            ps.setInt(3, cz);
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized int claimCount(UUID owner) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT COUNT(*) FROM claims WHERE owner=?")) {
+            ps.setString(1, owner.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getInt(1) : 0;
+            }
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    public synchronized void addTrust(UUID owner, UUID trusted) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT OR IGNORE INTO claim_trust(owner,trusted) VALUES(?,?)")) {
+            ps.setString(1, owner.toString());
+            ps.setString(2, trusted.toString());
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+    }
+
+    public synchronized boolean removeTrust(UUID owner, UUID trusted) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "DELETE FROM claim_trust WHERE owner=? AND trusted=?")) {
+            ps.setString(1, owner.toString());
+            ps.setString(2, trusted.toString());
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized boolean isTrusted(UUID owner, UUID trusted) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT 1 FROM claim_trust WHERE owner=? AND trusted=?")) {
+            ps.setString(1, owner.toString());
+            ps.setString(2, trusted.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized List<String> trustedNames(UUID owner) {
+        List<String> out = new ArrayList<>();
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT p.name FROM claim_trust t JOIN players p ON p.uuid=t.trusted WHERE t.owner=?")) {
+            ps.setString(1, owner.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) out.add(rs.getString(1));
+            }
+        } catch (SQLException ignored) {}
+        return out;
+    }
+
+    public synchronized String nameByUuid(UUID uuid) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT name FROM players WHERE uuid=?")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getString(1) : null;
+            }
+        } catch (SQLException e) {
+            return null;
         }
     }
 

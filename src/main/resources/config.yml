@@ -26,3 +26,7 @@ rtp:
 spawn:
   teleport-on-first-join: true
   teleport-on-respawn: false
+
+claims:
+  # chunks a player may claim; override per rank with survivalcore.claims.max.<n>
+  default-max: 8

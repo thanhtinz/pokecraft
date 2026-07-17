@@ -1,5 +1,7 @@
 package dev.thanhtin.survivalcore;
 
+import dev.thanhtin.survivalcore.claim.ClaimListener;
+import dev.thanhtin.survivalcore.claim.ClaimManager;
 import dev.thanhtin.survivalcore.command.Commands;
 import dev.thanhtin.survivalcore.economy.EconomyManager;
 import dev.thanhtin.survivalcore.economy.VaultBridge;
@@ -24,6 +26,7 @@ public class SurvivalCore extends JavaPlugin {
     private TeleportManager teleports;
     private TpaManager tpa;
     private RtpManager rtp;
+    private ClaimManager claims;
 
     @Override
     public void onEnable() {
@@ -43,16 +46,19 @@ public class SurvivalCore extends JavaPlugin {
         teleports = new TeleportManager(this);
         tpa = new TpaManager(this);
         rtp = new RtpManager(this);
+        claims = new ClaimManager(this);
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
+        getServer().getPluginManager().registerEvents(new ClaimListener(this), this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         Commands commands = new Commands(this);
         for (String c : new String[]{"balance", "pay", "baltop", "eco",
                 "sethome", "home", "delhome", "homes",
                 "setwarp", "delwarp", "warp", "warps", "spawn", "setspawn",
-                "tpa", "tpahere", "tpaccept", "tpdeny", "back", "rtp"}) {
+                "tpa", "tpahere", "tpaccept", "tpdeny", "back", "rtp",
+                "claim", "unclaim", "trust", "untrust", "claiminfo", "claims"}) {
             PluginCommand pc = getCommand(c);
             if (pc != null) {
                 pc.setExecutor(commands);
@@ -85,4 +91,5 @@ public class SurvivalCore extends JavaPlugin {
     public TeleportManager teleports() { return teleports; }
     public TpaManager tpa() { return tpa; }
     public RtpManager rtp() { return rtp; }
+    public ClaimManager claims() { return claims; }
 }
