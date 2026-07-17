@@ -124,6 +124,10 @@ commands:
   bounty:
     description: Place a bounty on a player, or list active bounties
     usage: /bounty <player> <amount> | /bounty list
+  npc:
+    description: Manage roleplay NPCs (admin)
+    usage: /npc create <role> [name] | /npc remove | /npc list
+    permission: survivalcore.admin
 permissions:
   survivalcore.admin:
     description: Admin commands

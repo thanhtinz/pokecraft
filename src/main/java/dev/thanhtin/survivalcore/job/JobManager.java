@@ -2,6 +2,10 @@ package dev.thanhtin.survivalcore.job;
 
 import dev.thanhtin.survivalcore.SurvivalCore;
 import dev.thanhtin.survivalcore.util.Msg;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.event.ClickEvent;
+import net.kyori.adventure.text.event.HoverEvent;
+import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
@@ -147,6 +151,32 @@ public class JobManager {
         plugin.db().joinJob(id, job.id());
         Msg.ok(player, "You joined the " + job.id() + " job!");
         return true;
+    }
+
+    /** Roleplay dialogue: the Job Board lists jobs as clickable chat lines. */
+    public void openDialogue(Player player) {
+        player.sendMessage(Msg.legacy("&8&m--------&r &6&lJob Board &8&m--------"));
+        player.sendMessage(Msg.legacy("&7You hold &f" + plugin.db().jobCount(player.getUniqueId())
+                + "&7/&f" + maxJoined + " &7jobs."));
+        for (Job job : all()) {
+            boolean joined = plugin.db().hasJob(player.getUniqueId(), job.id());
+            Component line = Component.text(" » ", NamedTextColor.DARK_GRAY)
+                    .append(Msg.legacy(job.display()));
+            if (joined) {
+                int lvl = level(player.getUniqueId(), job.id());
+                line = line.append(Component.text(" Lv" + lvl, NamedTextColor.AQUA))
+                        .append(Component.text("  [Leave]", NamedTextColor.RED)
+                                .clickEvent(ClickEvent.runCommand("/jobs leave " + job.id()))
+                                .hoverEvent(HoverEvent.showText(
+                                        Component.text("Click to leave " + job.id()))));
+            } else {
+                line = line.append(Component.text("  [Join]", NamedTextColor.GREEN)
+                        .clickEvent(ClickEvent.runCommand("/jobs join " + job.id()))
+                        .hoverEvent(HoverEvent.showText(
+                                Component.text("Click to join " + job.id()))));
+            }
+            player.sendMessage(line);
+        }
     }
 
     public void leave(Player player, Job job) {

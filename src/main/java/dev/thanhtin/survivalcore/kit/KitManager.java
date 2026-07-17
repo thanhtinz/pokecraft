@@ -3,6 +3,8 @@ package dev.thanhtin.survivalcore.kit;
 import dev.thanhtin.survivalcore.SurvivalCore;
 import dev.thanhtin.survivalcore.util.Msg;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.event.ClickEvent;
+import net.kyori.adventure.text.event.HoverEvent;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
@@ -106,6 +108,31 @@ public class KitManager {
                     System.currentTimeMillis() + kit.cooldownSeconds() * 1000L);
         }
         Msg.ok(player, "You claimed the " + kit.id() + " kit!");
+    }
+
+    /** Roleplay dialogue: the Kit Master offers kits as clickable chat lines. */
+    public void openDialogue(Player player) {
+        player.sendMessage(Msg.legacy("&8&m--------&r &b&lKit Master &8&m--------"));
+        player.sendMessage(Msg.legacy("&7\"Take what you need, traveller.\""));
+        boolean any = false;
+        for (Kit kit : all()) {
+            if (!canUse(player, kit)) continue;
+            any = true;
+            Component line = Component.text(" » ", NamedTextColor.DARK_GRAY)
+                    .append(Msg.legacy(kit.display()));
+            long left = cooldownLeft(player, kit);
+            if (left > 0) {
+                line = line.append(Component.text("  (ready in " + formatTime(left) + ")",
+                        NamedTextColor.GRAY));
+            } else {
+                line = line.append(Component.text("  [Claim]", NamedTextColor.GREEN)
+                        .clickEvent(ClickEvent.runCommand("/kit " + kit.id()))
+                        .hoverEvent(HoverEvent.showText(
+                                Component.text("Click to claim the " + kit.id() + " kit"))));
+            }
+            player.sendMessage(line);
+        }
+        if (!any) player.sendMessage(Msg.legacy("&7There are no kits available to you."));
     }
 
     public static String formatTime(long seconds) {

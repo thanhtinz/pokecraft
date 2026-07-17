@@ -67,7 +67,56 @@ public class Database {
                     "streak INTEGER NOT NULL DEFAULT 0)");
             st.execute("CREATE TABLE IF NOT EXISTS bounties(" +
                     "target TEXT PRIMARY KEY, target_name TEXT, amount REAL NOT NULL DEFAULT 0)");
+            st.execute("CREATE TABLE IF NOT EXISTS npcs(" +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT, role TEXT, name TEXT, " +
+                    "world TEXT, x REAL, y REAL, z REAL, yaw REAL, pitch REAL)");
         }
+    }
+
+    // ---------- NPCs ----------
+
+    public record Npc(long id, String role, String name, Location location) {}
+
+    public synchronized long addNpc(String role, String name, Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO npcs(role,name,world,x,y,z,yaw,pitch) VALUES(?,?,?,?,?,?,?,?)",
+                Statement.RETURN_GENERATED_KEYS)) {
+            ps.setString(1, role);
+            ps.setString(2, name);
+            bindLoc(ps, 3, loc);
+            ps.executeUpdate();
+            try (ResultSet keys = ps.getGeneratedKeys()) {
+                return keys.next() ? keys.getLong(1) : -1;
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("addNpc failed: " + e.getMessage());
+            return -1;
+        }
+    }
+
+    public synchronized boolean removeNpc(long id) {
+        try (PreparedStatement ps = conn.prepareStatement("DELETE FROM npcs WHERE id=?")) {
+            ps.setLong(1, id);
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized List<Npc> allNpcs() {
+        List<Npc> out = new ArrayList<>();
+        try (Statement st = conn.createStatement();
+             ResultSet rs = st.executeQuery(
+                     "SELECT id,role,name,world,x,y,z,yaw,pitch FROM npcs")) {
+            while (rs.next()) {
+                Location loc = readLoc(rs.getString(4), rs.getDouble(5), rs.getDouble(6),
+                        rs.getDouble(7), (float) rs.getDouble(8), (float) rs.getDouble(9));
+                if (loc != null) out.add(new Npc(rs.getLong(1), rs.getString(2), rs.getString(3), loc));
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().severe("allNpcs failed: " + e.getMessage());
+        }
+        return out;
     }
 
     // ---------- daily reward ----------
@@ -763,6 +812,12 @@ public class Database {
         if (world == null) return null;
         return new Location(world, rs.getDouble(2), rs.getDouble(3), rs.getDouble(4),
                 (float) rs.getDouble(5), (float) rs.getDouble(6));
+    }
+
+    private Location readLoc(String worldName, double x, double y, double z, float yaw, float pitch) {
+        World world = plugin.getServer().getWorld(worldName);
+        if (world == null) return null;
+        return new Location(world, x, y, z, yaw, pitch);
     }
 
     private String serializeLoc(Location loc) {

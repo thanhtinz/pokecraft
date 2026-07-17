@@ -11,6 +11,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -69,13 +70,14 @@ public class Commands implements CommandExecutor, TabCompleter {
             case "crate", "key" -> crate(p, a);
             case "pv", "vault", "pvault" -> pvault(p, a);
             case "kit" -> kit(p, a);
-            case "kits" -> plugin.kitGui().open(p);
+            case "kits" -> plugin.kits().openDialogue(p);
             case "rankup" -> plugin.ranks().rankup(p);
             case "rank" -> rank(p);
             case "jobs", "job" -> jobs(p, a);
             case "daily" -> plugin.rewards().claimDaily(p);
             case "vote" -> vote(p, a);
             case "bounty" -> bounty(p, a);
+            case "npc" -> npc(p, a);
             default -> { return false; }
         }
         return true;
@@ -346,7 +348,7 @@ public class Commands implements CommandExecutor, TabCompleter {
     // ---------- kits ----------
 
     private void kit(Player p, String[] a) {
-        if (a.length == 0) { plugin.kitGui().open(p); return; }
+        if (a.length == 0) { plugin.kits().openDialogue(p); return; }
         var kit = plugin.kits().get(a[0]);
         if (kit == null) { Msg.error(p, "No kit named '" + a[0].toLowerCase() + "'."); return; }
         plugin.kits().give(p, kit);
@@ -372,7 +374,7 @@ public class Commands implements CommandExecutor, TabCompleter {
     // ---------- jobs ----------
 
     private void jobs(Player p, String[] a) {
-        if (a.length == 0) { plugin.jobGui().open(p); return; }
+        if (a.length == 0) { plugin.jobs().openDialogue(p); return; }
         switch (a[0].toLowerCase()) {
             case "join" -> {
                 if (a.length < 2) { Msg.error(p, "Usage: /jobs join <job>"); return; }
@@ -387,9 +389,81 @@ public class Commands implements CommandExecutor, TabCompleter {
                 plugin.jobs().leave(p, job);
             }
             case "stats", "info" -> jobStats(p);
-            case "list" -> plugin.jobGui().open(p);
-            default -> plugin.jobGui().open(p);
+            case "list" -> plugin.jobs().openDialogue(p);
+            default -> plugin.jobs().openDialogue(p);
         }
+    }
+
+    // ---------- NPCs (admin) ----------
+
+    private static final java.util.Set<String> NPC_ROLES =
+            java.util.Set.of("kit_master", "job_board", "banker");
+
+    private void npc(Player p, String[] a) {
+        if (!p.hasPermission("survivalcore.admin")) { Msg.error(p, "No permission."); return; }
+        if (a.length == 0) {
+            Msg.info(p, "/npc create <role> [name] | /npc remove | /npc list");
+            Msg.info(p, "Roles: " + String.join(", ", NPC_ROLES));
+            return;
+        }
+        switch (a[0].toLowerCase()) {
+            case "create" -> {
+                if (a.length < 2) { Msg.error(p, "Usage: /npc create <role> [name]"); return; }
+                String role = a[1].toLowerCase();
+                if (!NPC_ROLES.contains(role)) {
+                    Msg.error(p, "Unknown role. Options: " + String.join(", ", NPC_ROLES));
+                    return;
+                }
+                String name;
+                if (a.length > 2) {
+                    name = String.join(" ", java.util.Arrays.copyOfRange(a, 2, a.length));
+                } else {
+                    name = defaultNpcName(role);
+                }
+                long id = plugin.npcs().create(role, name, p.getLocation());
+                if (id > 0) Msg.ok(p, "Created " + role + " NPC (#" + id + ").");
+                else Msg.error(p, "Could not create the NPC.");
+            }
+            case "remove" -> {
+                Entity looked = nearestNpc(p);
+                if (looked == null) { Msg.error(p, "Stand near the NPC you want to remove."); return; }
+                Long id = plugin.npcs().idOf(looked);
+                if (id != null && plugin.npcs().remove(id)) Msg.ok(p, "Removed NPC #" + id + ".");
+                else Msg.error(p, "Could not remove that NPC.");
+            }
+            case "list" -> {
+                var npcs = plugin.db().allNpcs();
+                if (npcs.isEmpty()) { Msg.info(p, "No NPCs placed."); return; }
+                Msg.info(p, "NPCs:");
+                for (var n : npcs) {
+                    Msg.plain(p, "  #" + n.id() + " " + n.role() + " @ "
+                            + n.location().getWorld().getName() + " "
+                            + n.location().getBlockX() + "," + n.location().getBlockY()
+                            + "," + n.location().getBlockZ(), NamedTextColor.GRAY);
+                }
+            }
+            default -> Msg.error(p, "/npc create|remove|list");
+        }
+    }
+
+    private String defaultNpcName(String role) {
+        return switch (role) {
+            case "kit_master" -> "&b&lKit Master";
+            case "job_board" -> "&6&lJob Board";
+            case "banker" -> "&a&lBanker";
+            default -> role;
+        };
+    }
+
+    private Entity nearestNpc(Player p) {
+        Entity best = null;
+        double bestDist = Double.MAX_VALUE;
+        for (Entity e : p.getNearbyEntities(4, 4, 4)) {
+            if (!plugin.npcs().isNpc(e)) continue;
+            double d = e.getLocation().distanceSquared(p.getLocation());
+            if (d < bestDist) { bestDist = d; best = e; }
+        }
+        return best;
     }
 
     // ---------- vote / bounty ----------

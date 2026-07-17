@@ -9,14 +9,14 @@ import dev.thanhtin.survivalcore.crate.CrateGui;
 import dev.thanhtin.survivalcore.crate.CrateManager;
 import dev.thanhtin.survivalcore.economy.EconomyManager;
 import dev.thanhtin.survivalcore.economy.VaultBridge;
-import dev.thanhtin.survivalcore.job.JobGui;
 import dev.thanhtin.survivalcore.job.JobListener;
 import dev.thanhtin.survivalcore.job.JobManager;
-import dev.thanhtin.survivalcore.kit.KitGui;
 import dev.thanhtin.survivalcore.kit.KitManager;
 import dev.thanhtin.survivalcore.bounty.BountyListener;
 import dev.thanhtin.survivalcore.bounty.BountyManager;
 import dev.thanhtin.survivalcore.chat.ChatListener;
+import dev.thanhtin.survivalcore.npc.NpcListener;
+import dev.thanhtin.survivalcore.npc.NpcManager;
 import dev.thanhtin.survivalcore.listener.PlayerListener;
 import dev.thanhtin.survivalcore.scoreboard.ScoreboardService;
 import dev.thanhtin.survivalcore.rank.RankManager;
@@ -52,10 +52,9 @@ public class SurvivalCore extends JavaPlugin {
     private VaultManager vaults;
     private VaultGui vaultGui;
     private KitManager kits;
-    private KitGui kitGui;
     private RankManager ranks;
     private JobManager jobs;
-    private JobGui jobGui;
+    private NpcManager npcs;
     private RewardManager rewards;
     private VoteManager votes;
     private BountyManager bounties;
@@ -89,12 +88,11 @@ public class SurvivalCore extends JavaPlugin {
         vaultGui = new VaultGui(this);
         kits = new KitManager(this);
         kits.load();
-        kitGui = new KitGui(this);
         ranks = new RankManager(this);
         ranks.load();
         jobs = new JobManager(this);
         jobs.load();
-        jobGui = new JobGui(this);
+        npcs = new NpcManager(this);
         rewards = new RewardManager(this);
         votes = new VoteManager(this);
         bounties = new BountyManager(this);
@@ -106,14 +104,14 @@ public class SurvivalCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(auctionGui, this);
         getServer().getPluginManager().registerEvents(crateGui, this);
         getServer().getPluginManager().registerEvents(vaultGui, this);
-        getServer().getPluginManager().registerEvents(kitGui, this);
-        getServer().getPluginManager().registerEvents(jobGui, this);
         getServer().getPluginManager().registerEvents(new JobListener(this), this);
         getServer().getPluginManager().registerEvents(new BountyListener(this), this);
         getServer().getPluginManager().registerEvents(new ChatListener(this), this);
+        getServer().getPluginManager().registerEvents(new NpcListener(this), this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         scoreboards.start();
+        npcs.spawnAll();
         hookPlaceholders();
 
         Commands commands = new Commands(this);
@@ -124,7 +122,7 @@ public class SurvivalCore extends JavaPlugin {
                 "claim", "unclaim", "trust", "untrust", "claiminfo", "claims",
                 "ah", "sell", "crate", "key",
                 "pv", "vault", "pvault", "kit", "kits", "rankup", "rank",
-                "jobs", "job", "daily", "vote", "svote", "bounty"}) {
+                "jobs", "job", "daily", "vote", "svote", "bounty", "npc"}) {
             PluginCommand pc = getCommand(c);
             if (pc != null) {
                 pc.setExecutor(commands);
@@ -139,6 +137,7 @@ public class SurvivalCore extends JavaPlugin {
     @Override
     public void onDisable() {
         if (scoreboards != null) scoreboards.stop();
+        if (npcs != null) npcs.despawnAll();
         if (db != null) db.close();
     }
 
@@ -176,10 +175,9 @@ public class SurvivalCore extends JavaPlugin {
     public VaultManager vaults() { return vaults; }
     public VaultGui vaultGui() { return vaultGui; }
     public KitManager kits() { return kits; }
-    public KitGui kitGui() { return kitGui; }
     public RankManager ranks() { return ranks; }
     public JobManager jobs() { return jobs; }
-    public JobGui jobGui() { return jobGui; }
+    public NpcManager npcs() { return npcs; }
     public RewardManager rewards() { return rewards; }
     public VoteManager votes() { return votes; }
     public BountyManager bounties() { return bounties; }
