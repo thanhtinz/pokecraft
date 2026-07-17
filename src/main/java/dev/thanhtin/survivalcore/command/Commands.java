@@ -71,6 +71,7 @@ public class Commands implements CommandExecutor, TabCompleter {
             case "kits" -> plugin.kitGui().open(p);
             case "rankup" -> plugin.ranks().rankup(p);
             case "rank" -> rank(p);
+            case "jobs", "job" -> jobs(p, a);
             default -> { return false; }
         }
         return true;
@@ -363,6 +364,47 @@ public class Commands implements CommandExecutor, TabCompleter {
     }
 
     private String strip(String s) { return s.replaceAll("&[0-9a-fk-or]", ""); }
+
+    // ---------- jobs ----------
+
+    private void jobs(Player p, String[] a) {
+        if (a.length == 0) { plugin.jobGui().open(p); return; }
+        switch (a[0].toLowerCase()) {
+            case "join" -> {
+                if (a.length < 2) { Msg.error(p, "Usage: /jobs join <job>"); return; }
+                var job = plugin.jobs().get(a[1]);
+                if (job == null) { Msg.error(p, "No job named '" + a[1].toLowerCase() + "'."); return; }
+                plugin.jobs().join(p, job);
+            }
+            case "leave" -> {
+                if (a.length < 2) { Msg.error(p, "Usage: /jobs leave <job>"); return; }
+                var job = plugin.jobs().get(a[1]);
+                if (job == null) { Msg.error(p, "No job named '" + a[1].toLowerCase() + "'."); return; }
+                plugin.jobs().leave(p, job);
+            }
+            case "stats", "info" -> jobStats(p);
+            case "list" -> plugin.jobGui().open(p);
+            default -> plugin.jobGui().open(p);
+        }
+    }
+
+    private void jobStats(Player p) {
+        List<String> joined = plugin.db().joinedJobs(p.getUniqueId());
+        if (joined.isEmpty()) { Msg.info(p, "You have no jobs. Use /jobs to join one."); return; }
+        Msg.info(p, "Your jobs:");
+        for (String jobId : joined) {
+            var job = plugin.jobs().get(jobId);
+            if (job == null) continue;
+            double xp = plugin.db().getJobXp(p.getUniqueId(), jobId);
+            int lvl = dev.thanhtin.survivalcore.job.JobManager.levelFor(xp);
+            double into = dev.thanhtin.survivalcore.job.JobManager.xpInto(xp);
+            double need = dev.thanhtin.survivalcore.job.JobManager.xpForNext(lvl);
+            int bonus = (int) Math.round((plugin.jobs().multiplier(lvl) - 1) * 100);
+            Msg.plain(p, "  " + strip(job.display()) + " - Lv " + lvl
+                    + " (" + (int) into + "/" + (int) need + " XP, +" + bonus + "% pay)",
+                    NamedTextColor.GRAY);
+        }
+    }
 
     // ---------- auction house ----------
 

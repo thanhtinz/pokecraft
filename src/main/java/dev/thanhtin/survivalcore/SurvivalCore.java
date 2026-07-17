@@ -9,6 +9,9 @@ import dev.thanhtin.survivalcore.crate.CrateGui;
 import dev.thanhtin.survivalcore.crate.CrateManager;
 import dev.thanhtin.survivalcore.economy.EconomyManager;
 import dev.thanhtin.survivalcore.economy.VaultBridge;
+import dev.thanhtin.survivalcore.job.JobGui;
+import dev.thanhtin.survivalcore.job.JobListener;
+import dev.thanhtin.survivalcore.job.JobManager;
 import dev.thanhtin.survivalcore.kit.KitGui;
 import dev.thanhtin.survivalcore.kit.KitManager;
 import dev.thanhtin.survivalcore.listener.PlayerListener;
@@ -45,6 +48,8 @@ public class SurvivalCore extends JavaPlugin {
     private KitManager kits;
     private KitGui kitGui;
     private RankManager ranks;
+    private JobManager jobs;
+    private JobGui jobGui;
 
     @Override
     public void onEnable() {
@@ -77,6 +82,9 @@ public class SurvivalCore extends JavaPlugin {
         kitGui = new KitGui(this);
         ranks = new RankManager(this);
         ranks.load();
+        jobs = new JobManager(this);
+        jobs.load();
+        jobGui = new JobGui(this);
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
@@ -85,6 +93,8 @@ public class SurvivalCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(crateGui, this);
         getServer().getPluginManager().registerEvents(vaultGui, this);
         getServer().getPluginManager().registerEvents(kitGui, this);
+        getServer().getPluginManager().registerEvents(jobGui, this);
+        getServer().getPluginManager().registerEvents(new JobListener(this), this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         Commands commands = new Commands(this);
@@ -94,7 +104,8 @@ public class SurvivalCore extends JavaPlugin {
                 "tpa", "tpahere", "tpaccept", "tpdeny", "back", "rtp",
                 "claim", "unclaim", "trust", "untrust", "claiminfo", "claims",
                 "ah", "sell", "crate", "key",
-                "pv", "vault", "pvault", "kit", "kits", "rankup", "rank"}) {
+                "pv", "vault", "pvault", "kit", "kits", "rankup", "rank",
+                "jobs", "job"}) {
             PluginCommand pc = getCommand(c);
             if (pc != null) {
                 pc.setExecutor(commands);
@@ -137,4 +148,6 @@ public class SurvivalCore extends JavaPlugin {
     public KitManager kits() { return kits; }
     public KitGui kitGui() { return kitGui; }
     public RankManager ranks() { return ranks; }
+    public JobManager jobs() { return jobs; }
+    public JobGui jobGui() { return jobGui; }
 }

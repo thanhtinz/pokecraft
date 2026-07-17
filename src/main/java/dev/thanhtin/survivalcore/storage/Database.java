@@ -59,7 +59,94 @@ public class Database {
             st.execute("CREATE TABLE IF NOT EXISTS kit_cooldowns(" +
                     "uuid TEXT, kit TEXT, next_time INTEGER NOT NULL DEFAULT 0, " +
                     "PRIMARY KEY(uuid, kit))");
+            st.execute("CREATE TABLE IF NOT EXISTS job_data(" +
+                    "uuid TEXT, job TEXT, xp REAL NOT NULL DEFAULT 0, " +
+                    "PRIMARY KEY(uuid, job))");
         }
+    }
+
+    // ---------- jobs ----------
+
+    public synchronized boolean hasJob(UUID uuid, String job) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT 1 FROM job_data WHERE uuid=? AND job=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, job);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized void joinJob(UUID uuid, String job) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT OR IGNORE INTO job_data(uuid,job,xp) VALUES(?,?,0)")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, job);
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+    }
+
+    public synchronized void leaveJob(UUID uuid, String job) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "DELETE FROM job_data WHERE uuid=? AND job=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, job);
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+    }
+
+    public synchronized List<String> joinedJobs(UUID uuid) {
+        List<String> out = new ArrayList<>();
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT job FROM job_data WHERE uuid=? ORDER BY job")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) out.add(rs.getString(1));
+            }
+        } catch (SQLException ignored) {}
+        return out;
+    }
+
+    public synchronized int jobCount(UUID uuid) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT COUNT(*) FROM job_data WHERE uuid=?")) {
+            ps.setString(1, uuid.toString());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getInt(1) : 0;
+            }
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    public synchronized double getJobXp(UUID uuid, String job) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT xp FROM job_data WHERE uuid=? AND job=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, job);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getDouble(1) : 0;
+            }
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    /** Add XP to a joined job and return the new total (0 if not joined). */
+    public synchronized double addJobXp(UUID uuid, String job, double xp) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "UPDATE job_data SET xp=xp+? WHERE uuid=? AND job=?")) {
+            ps.setDouble(1, xp);
+            ps.setString(2, uuid.toString());
+            ps.setString(3, job);
+            if (ps.executeUpdate() == 0) return 0;
+        } catch (SQLException e) {
+            return 0;
+        }
+        return getJobXp(uuid, job);
     }
 
     // ---------- player vaults ----------

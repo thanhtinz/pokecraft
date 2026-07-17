@@ -138,3 +138,59 @@ ranks:
   king:
     display: "&5[King]"
     cost: 500000.0
+
+jobs:
+  max-joined: 3
+  list:
+    miner:
+      display: "&7Miner"
+      icon: IRON_PICKAXE
+      break:
+        COAL_ORE: { money: 4.0, xp: 4.0 }
+        DEEPSLATE_COAL_ORE: { money: 4.0, xp: 4.0 }
+        IRON_ORE: { money: 8.0, xp: 6.0 }
+        DEEPSLATE_IRON_ORE: { money: 8.0, xp: 6.0 }
+        GOLD_ORE: { money: 12.0, xp: 8.0 }
+        DEEPSLATE_GOLD_ORE: { money: 12.0, xp: 8.0 }
+        DIAMOND_ORE: { money: 40.0, xp: 25.0 }
+        DEEPSLATE_DIAMOND_ORE: { money: 40.0, xp: 25.0 }
+        EMERALD_ORE: { money: 50.0, xp: 30.0 }
+        ANCIENT_DEBRIS: { money: 120.0, xp: 60.0 }
+    farmer:
+      display: "&aFarmer"
+      icon: IRON_HOE
+      break:
+        WHEAT: { money: 3.0, xp: 3.0 }
+        CARROTS: { money: 3.0, xp: 3.0 }
+        POTATOES: { money: 3.0, xp: 3.0 }
+        BEETROOTS: { money: 3.0, xp: 3.0 }
+        NETHER_WART: { money: 4.0, xp: 4.0 }
+        PUMPKIN: { money: 5.0, xp: 4.0 }
+        MELON: { money: 5.0, xp: 4.0 }
+        SUGAR_CANE: { money: 2.0, xp: 2.0 }
+    woodcutter:
+      display: "&6Woodcutter"
+      icon: IRON_AXE
+      break:
+        OAK_LOG: { money: 3.0, xp: 3.0 }
+        BIRCH_LOG: { money: 3.0, xp: 3.0 }
+        SPRUCE_LOG: { money: 3.0, xp: 3.0 }
+        JUNGLE_LOG: { money: 4.0, xp: 4.0 }
+        ACACIA_LOG: { money: 4.0, xp: 4.0 }
+        DARK_OAK_LOG: { money: 4.0, xp: 4.0 }
+        CHERRY_LOG: { money: 5.0, xp: 4.0 }
+    hunter:
+      display: "&cHunter"
+      icon: IRON_SWORD
+      kill:
+        ZOMBIE: { money: 5.0, xp: 5.0 }
+        SKELETON: { money: 5.0, xp: 5.0 }
+        SPIDER: { money: 5.0, xp: 5.0 }
+        CREEPER: { money: 8.0, xp: 7.0 }
+        ENDERMAN: { money: 12.0, xp: 10.0 }
+        WITHER_SKELETON: { money: 20.0, xp: 15.0 }
+        BLAZE: { money: 15.0, xp: 12.0 }
+    fisher:
+      display: "&bFisher"
+      icon: FISHING_ROD
+      fish: { money: 10.0, xp: 8.0 }

@@ -109,6 +109,10 @@ commands:
     description: Advance to the next rank on the ladder
   rank:
     description: Show your current rank and the next one
+  jobs:
+    description: Join jobs and earn money for your work
+    usage: /jobs [join <job>|leave <job>|stats]
+    aliases: [job]
 permissions:
   survivalcore.admin:
     description: Admin commands
