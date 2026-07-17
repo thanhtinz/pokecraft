@@ -189,6 +189,8 @@ public class PlayerHub implements Listener {
                 List.of("&7Warp to spawn"), "spawn"));
         inv.setItem(16, button(Material.DIAMOND, "&bRank",
                 List.of("&7Your rank and how to rank up"), "rank"));
+        inv.setItem(17, button(Material.NAME_TAG, "&dRedeem Code",
+                List.of("&7Enter a giftcode"), "redeem"));
 
         if (player.hasPermission("survivalcore.admin")) {
             inv.setItem(22, button(Material.COMMAND_BLOCK, "&c&lAdmin Panel",
@@ -212,6 +214,7 @@ public class PlayerHub implements Listener {
             case "balance" -> Msg.info(p, "Balance: "
                     + plugin.economy().format(plugin.economy().balance(p.getUniqueId())));
             case "shop" -> plugin.shopGui().open(p, 0);
+            case "redeem" -> plugin.redeemPrompt().prompt(p);
             case "market" -> plugin.auctionGui().open(p, 0, false);
             case "daily" -> plugin.rewards().claimDaily(p);
             case "vote" -> plugin.votes().showLinks(p);

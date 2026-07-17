@@ -12,6 +12,7 @@ import dev.thanhtin.survivalcore.crate.KeyItem;
 import dev.thanhtin.survivalcore.economy.EconomyManager;
 import dev.thanhtin.survivalcore.economy.VaultBridge;
 import dev.thanhtin.survivalcore.giftcode.GiftcodeManager;
+import dev.thanhtin.survivalcore.giftcode.RedeemPrompt;
 import dev.thanhtin.survivalcore.hub.PlayerHub;
 import dev.thanhtin.survivalcore.job.JobListener;
 import dev.thanhtin.survivalcore.job.JobManager;
@@ -73,6 +74,7 @@ public class SurvivalCore extends JavaPlugin {
     private ShopGui shopGui;
     private BankerGui bankerGui;
     private GiftcodeManager giftcodes;
+    private RedeemPrompt redeemPrompt;
 
     @Override
     public void onEnable() {
@@ -118,6 +120,7 @@ public class SurvivalCore extends JavaPlugin {
         shopGui = new ShopGui(this);
         bankerGui = new BankerGui(this);
         giftcodes = new GiftcodeManager(this);
+        redeemPrompt = new RedeemPrompt(this);
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
@@ -134,6 +137,7 @@ public class SurvivalCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(hub, this);
         getServer().getPluginManager().registerEvents(shopGui, this);
         getServer().getPluginManager().registerEvents(bankerGui, this);
+        getServer().getPluginManager().registerEvents(redeemPrompt, this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         scoreboards.start();
@@ -217,4 +221,5 @@ public class SurvivalCore extends JavaPlugin {
     public ShopGui shopGui() { return shopGui; }
     public BankerGui bankerGui() { return bankerGui; }
     public GiftcodeManager giftcodes() { return giftcodes; }
+    public RedeemPrompt redeemPrompt() { return redeemPrompt; }
 }
