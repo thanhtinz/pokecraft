@@ -1,0 +1,71 @@
+{
+ "format_version": "1.17.0",
+ "minecraft:spawn_rules": {
+  "description": {
+   "identifier": "pokemon:p54",
+   "population_control": "water_animal"
+  },
+  "conditions": [
+   {
+    "minecraft:spawns_underwater": {},
+    "minecraft:density_limit": {
+     "surface": 5,
+     "underground": 5
+    },
+    "minecraft:brightness_filter": {
+     "min": 7,
+     "max": 15
+    },
+    "minecraft:permute_type": [
+     {
+      "weight": 94
+     },
+     {
+      "weight": 6,
+      "entity_type": "pokemon:p55"
+     }
+    ],
+    "minecraft:weight": {
+     "default": 50
+    },
+    "minecraft:biome_filter": {
+     "test": "has_biome_tag",
+     "value": "river"
+    }
+   },
+   {
+    "minecraft:spawns_on_surface": {},
+    "minecraft:density_limit": {
+     "surface": 5,
+     "underground": 5
+    },
+    "minecraft:brightness_filter": {
+     "min": 7,
+     "max": 15
+    },
+    "minecraft:permute_type": [
+     {
+      "weight": 94
+     },
+     {
+      "weight": 6,
+      "entity_type": "pokemon:p55"
+     }
+    ],
+    "minecraft:weight": {
+     "default": 12
+    },
+    "minecraft:biome_filter": {
+     "test": "has_biome_tag",
+     "value": "river"
+    },
+    "minecraft:spawns_on_block_filter": [
+     "minecraft:sand",
+     "minecraft:gravel",
+     "minecraft:clay",
+     "minecraft:grass_block"
+    ]
+   }
+  ]
+ }
+}

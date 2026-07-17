@@ -1,0 +1,15 @@
+{
+  "resource_pack_name": "SunnyX R",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "sunnyx_egg": {
+      "textures": "textures/items/sunnyx_egg"
+    },
+    "sunnyx_radar": {
+      "textures": "textures/items/sunnyx_radar"
+    },
+    "sunhub_menu": {
+      "textures": "textures/items/sunhub_menu"
+    }
+  }
+}

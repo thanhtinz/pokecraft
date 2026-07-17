@@ -1,0 +1,46 @@
+{
+ "format_version": "1.21.0",
+ "minecraft:entity": {
+  "description": {
+   "identifier": "sl:text",
+   "is_spawnable": false,
+   "is_summonable": true,
+   "is_experimental": false
+  },
+  "components": {
+   "minecraft:nameable": {
+    "always_show": true,
+    "allow_name_tag_renaming": false
+   },
+   "minecraft:collision_box": {
+    "width": 0.05,
+    "height": 0.05
+   },
+   "minecraft:physics": {
+    "has_gravity": false,
+    "has_collision": false
+   },
+   "minecraft:pushable": {
+    "is_pushable": false,
+    "is_pushable_by_piston": false
+   },
+   "minecraft:damage_sensor": {
+    "triggers": [
+     {
+      "deals_damage": "no"
+     }
+    ]
+   },
+   "minecraft:knockback_resistance": {
+    "value": 1.0
+   },
+   "minecraft:persistent": {},
+   "minecraft:fire_immune": {},
+   "minecraft:type_family": {
+    "family": [
+     "sl_text"
+    ]
+   }
+  }
+ }
+}

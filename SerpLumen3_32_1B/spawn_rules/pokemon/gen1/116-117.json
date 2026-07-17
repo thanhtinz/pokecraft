@@ -1,0 +1,163 @@
+{
+ "format_version": "1.17.0",
+ "minecraft:spawn_rules": {
+  "description": {
+   "identifier": "pokemon:p116",
+   "population_control": "monster"
+  },
+  "conditions": [
+   {
+    "minecraft:spawns_underwater": {},
+    "minecraft:herd": {
+     "min_size": 1,
+     "max_size": 3
+    },
+    "minecraft:permute_type": [
+     {
+      "weight": 99
+     },
+     {
+      "weight": 1,
+      "entity_type": "pokemon:p117"
+     }
+    ],
+    "minecraft:weight": {
+     "default": 80
+    },
+    "minecraft:biome_filter": {
+     "any_of": [
+      {
+       "test": "has_biome_tag",
+       "value": "ocean"
+      },
+      {
+       "test": "has_biome_tag",
+       "value": "river"
+      }
+     ]
+    }
+   },
+   {
+    "minecraft:spawns_on_surface": {},
+    "minecraft:permute_type": [
+     {
+      "weight": 99
+     },
+     {
+      "weight": 1,
+      "entity_type": "pokemon:p117"
+     }
+    ],
+    "minecraft:weight": {
+     "default": 20
+    },
+    "minecraft:biome_filter": {
+     "any_of": [
+      {
+       "test": "has_biome_tag",
+       "value": "ocean"
+      },
+      {
+       "test": "has_biome_tag",
+       "value": "river"
+      }
+     ]
+    },
+    "minecraft:spawns_on_block_filter": [
+     "minecraft:sand",
+     "minecraft:gravel",
+     "minecraft:clay",
+     "minecraft:grass_block"
+    ]
+   },
+   {
+    "minecraft:spawns_underground": {},
+    "minecraft:spawns_underwater": {},
+    "minecraft:herd": {
+     "min_size": 1,
+     "max_size": 3
+    },
+    "minecraft:permute_type": [
+     {
+      "weight": 99
+     },
+     {
+      "weight": 1,
+      "entity_type": "pokemon:p117"
+     }
+    ],
+    "minecraft:weight": {
+     "default": 80
+    },
+    "minecraft:biome_filter": {
+     "any_of": [
+      {
+       "test": "has_biome_tag",
+       "value": "ocean"
+      },
+      {
+       "test": "has_biome_tag",
+       "value": "river"
+      }
+     ]
+    }
+   },
+   {
+    "minecraft:spawns_underwater": {},
+    "minecraft:density_limit": {
+     "surface": 5,
+     "underground": 5
+    },
+    "minecraft:herd": {
+     "min_size": 3,
+     "max_size": 5
+    },
+    "minecraft:permute_type": [
+     {
+      "weight": 95
+     },
+     {
+      "weight": 5,
+      "entity_type": "pokemon:p117"
+     }
+    ],
+    "minecraft:weight": {
+     "default": 10
+    },
+    "minecraft:biome_filter": {
+     "test": "has_biome_tag",
+     "value": "ocean"
+    }
+   },
+   {
+    "minecraft:spawns_on_surface": {},
+    "minecraft:density_limit": {
+     "surface": 5,
+     "underground": 5
+    },
+    "minecraft:permute_type": [
+     {
+      "weight": 95
+     },
+     {
+      "weight": 5,
+      "entity_type": "pokemon:p117"
+     }
+    ],
+    "minecraft:weight": {
+     "default": 10
+    },
+    "minecraft:biome_filter": {
+     "test": "has_biome_tag",
+     "value": "ocean"
+    },
+    "minecraft:spawns_on_block_filter": [
+     "minecraft:sand",
+     "minecraft:gravel",
+     "minecraft:clay",
+     "minecraft:grass_block"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "format_version": "1.17.0",
+ "minecraft:spawn_rules": {
+  "description": {
+   "identifier": "pokemon:p129",
+   "population_control": "monster"
+  },
+  "conditions": [
+   {
+    "minecraft:spawns_underwater": {},
+    "minecraft:herd": {
+     "min_size": 1,
+     "max_size": 5
+    },
+    "minecraft:weight": {
+     "default": 200
+    },
+    "minecraft:biome_filter": {
+     "any_of": [
+      {
+       "test": "has_biome_tag",
+       "value": "ocean"
+      },
+      {
+       "test": "has_biome_tag",
+       "value": "river"
+      }
+     ]
+    }
+   },
+   {
+    "minecraft:spawns_underground": {},
+    "minecraft:spawns_underwater": {},
+    "minecraft:herd": {
+     "min_size": 1,
+     "max_size": 5
+    },
+    "minecraft:weight": {
+     "default": 200
+    },
+    "minecraft:biome_filter": {
+     "any_of": [
+      {
+       "test": "has_biome_tag",
+       "value": "ocean"
+      },
+      {
+       "test": "has_biome_tag",
+       "value": "river"
+      }
+     ]
+    }
+   },
+   {
+    "minecraft:spawns_underwater": {},
+    "minecraft:permute_type": [
+     {
+      "weight": 99
+     },
+     {
+      "weight": 1,
+      "entity_type": "pokemon:p130"
+     }
+    ],
+    "minecraft:weight": {
+     "default": 200
+    },
+    "minecraft:biome_filter": {
+     "test": "has_biome_tag",
+     "value": "ocean"
+    }
+   }
+  ]
+ }
+}

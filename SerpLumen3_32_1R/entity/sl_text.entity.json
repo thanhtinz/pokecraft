@@ -1,0 +1,20 @@
+{
+ "format_version": "1.10.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "sl:text",
+   "materials": {
+    "default": "entity_alphatest"
+   },
+   "textures": {
+    "default": "textures/entity/sl_blank"
+   },
+   "geometry": {
+    "default": "geometry.sl_empty"
+   },
+   "render_controllers": [
+    "controller.render.default"
+   ]
+  }
+ }
+}
