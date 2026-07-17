@@ -3,6 +3,7 @@ import { world } from "@minecraft/server";
 import { ModalFormData } from "@minecraft/server-ui";
 import { getCoins, addCoins, spendCoins, fmt } from "./economy.js";
 import { actionMenu, dayNumber } from "./forms.js";
+import { t } from "./i18n.js";
 
 const BANK = "se:bank";
 const BANKDAY = "se:bankday";
@@ -42,7 +43,7 @@ function applyInterest(player) {
 
 async function askAmount(player, title, max) {
     const form = await new ModalFormData().title(title)
-        .textField("Amount (max " + fmt(max) + ")", "e.g. 500").show(player);
+        .textField(t(player, "bank.amount.label", { max: fmt(max) }), t(player, "bank.amount.ph")).show(player);
     if (form.canceled || !form.formValues) return 0;
     const n = parseInt(String(form.formValues[0]).trim(), 10);
     return (isNaN(n) || n <= 0 || n > max) ? 0 : n;
@@ -50,49 +51,48 @@ async function askAmount(player, title, max) {
 
 export async function openBank(player) {
     const gain = applyInterest(player);
-    if (gain > 0) player.sendMessage("§6[SunHub] Bank interest: §f+" + fmt(gain));
+    if (gain > 0) player.sendMessage(t(player, "bank.interest", { n: fmt(gain) }));
 
-    const sel = await actionMenu(player, "Sunny Bank",
-        "Wallet: §6" + fmt(getCoins(player)) + "§r | Bank: §b" + fmt(getBank(player)) +
-        "\n§7Interest 1%/day (max " + fmt(INTEREST_CAP) + "/day)",
+    const sel = await actionMenu(player, t(player, "bank.title"),
+        t(player, "bank.body", { wallet: fmt(getCoins(player)), bank: fmt(getBank(player)), cap: fmt(INTEREST_CAP) }),
         [
-            { label: "Deposit to Bank", icon: "textures/items/emerald" },
-            { label: "Withdraw to Wallet", icon: "textures/items/gold_ingot" },
-            { label: "Transfer money to player", icon: "textures/items/paper" }
+            { label: t(player, "bank.deposit"), icon: "textures/items/emerald" },
+            { label: t(player, "bank.withdraw"), icon: "textures/items/gold_ingot" },
+            { label: t(player, "bank.transfer"), icon: "textures/items/paper" }
         ], "pokedex_yellow");
     switch (sel) {
         case 0: {
-            const n = await askAmount(player, "Deposit", getCoins(player));
+            const n = await askAmount(player, t(player, "bank.deposit.title"), getCoins(player));
             if (!n) return;
             if (spendCoins(player, n)) {
                 setBank(player, getBank(player) + n);
-                player.sendMessage("§a[SunHub] Sent §6" + fmt(n) + "§a. Bank: §b" + fmt(getBank(player)));
+                player.sendMessage(t(player, "bank.deposit.ok", { n: fmt(n), bank: fmt(getBank(player)) }));
             }
             break;
         }
         case 1: {
-            const n = await askAmount(player, "Withdraw", getBank(player));
+            const n = await askAmount(player, t(player, "bank.withdraw.title"), getBank(player));
             if (!n) return;
             setBank(player, getBank(player) - n);
             addCoins(player, n);
-            player.sendMessage("§a[SunHub] Withdrew §6" + fmt(n) + "§a. Wallet: §6" + fmt(getCoins(player)));
+            player.sendMessage(t(player, "bank.withdraw.ok", { n: fmt(n), wallet: fmt(getCoins(player)) }));
             break;
         }
         case 2: {
             const others = world.getAllPlayers().filter((p) => p.id !== player.id);
             if (others.length === 0) {
-                player.sendMessage("§e[SunHub] Nobody else online.");
+                player.sendMessage(t(player, "bank.none"));
                 return;
             }
-            const psel = await actionMenu(player, "Transfer to whom?", "", others.map((p) => ({ label: p.name })));
+            const psel = await actionMenu(player, t(player, "bank.transfer.who"), "", others.map((p) => ({ label: p.name })));
             if (psel < 0) return;
             const target = others[psel];
-            const n = await askAmount(player, "Transfer to " + target.name, getCoins(player));
+            const n = await askAmount(player, t(player, "bank.transfer.title", { name: target.name }), getCoins(player));
             if (!n) return;
             if (spendCoins(player, n)) {
                 addCoins(target, n);
-                player.sendMessage("§a[SunHub] Transferred §6" + fmt(n) + "§a to §f" + target.name);
-                target.sendMessage("§6[SunHub] §f" + player.name + "§6 transferred to you §f" + fmt(n));
+                player.sendMessage(t(player, "bank.transfer.ok", { n: fmt(n), name: target.name }));
+                target.sendMessage(t(target, "bank.transfer.recv", { name: player.name, n: fmt(n) }));
                 target.playSound("random.orb");
             }
             break;

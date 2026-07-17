@@ -9,6 +9,7 @@ import { world, system, ItemStack } from "@minecraft/server";
 import { actionMenu, confirmForm, dayNumber, strHash } from "./forms.js";
 import { addCoins, fmt } from "./economy.js";
 import { boostMult } from "./events.js";
+import { t } from "./i18n.js";
 
 const PROP = "sl:job"; // { cur, xp: {miner,farmer,lumber}, c: {d, list:[{i,need,done,claimed}]} }
 const MAXLVL = 25;
@@ -54,6 +55,9 @@ const JOBS = {
   },
 };
 const TIER_PAY = [0, 2, 4, 7, 12]; // base coins per tier
+
+// display name of a job in the player's language
+function jobName(player, key) { return t(player, "job.name." + key); }
 
 // ---------- state ----------
 function getJ(p) {
@@ -156,7 +160,7 @@ function onBreak(ev) {
     // deepslate/variants count toward the base ore contract
     if (!e.claimed && e.done < e.need && (typeId === e.block || typeId === e.block.replace("minecraft:", "minecraft:deepslate_"))) {
       e.done++;
-      if (e.done === e.need) { p.sendMessage("\u00a76[JOB] Contract complete! Claim it in Hub -> Jobs."); try { p.playSound("random.orb"); } catch {} }
+      if (e.done === e.need) { p.sendMessage(t(p, "job.contract.complete")); try { p.playSound("random.orb"); } catch {} }
     }
   }
 
@@ -170,25 +174,25 @@ function onBreak(ev) {
   }
 
   if (lvlAfter > lvlBefore) {
-    p.sendMessage("\u00a76[JOB] \u00a7l" + job.name + " level " + lvlAfter + "!\u00a7r" + perkNote(lvlAfter));
+    p.sendMessage(t(p, "job.levelup", { job: jobName(p, st.cur), lvl: lvlAfter, perk: perkNote(p, lvlAfter) }));
     try { p.playSound("random.levelup"); } catch {}
-    if (lvlAfter >= MAXLVL) world.sendMessage("\u00a76[JOB] \u00a7l" + p.name + "\u00a7r\u00a76 is now a \u00a7lMASTER " + job.name.toUpperCase() + "\u00a7r\u00a76! (+50% pay)");
+    if (lvlAfter >= MAXLVL) {
+      for (const pl of world.getAllPlayers()) {
+        pl.sendMessage(t(pl, "job.master", { name: p.name, job: jobName(pl, st.cur).toUpperCase() }));
+      }
+    }
   }
-  try { p.onScreenDisplay.setActionBar("\u00a76+" + fmt(pay) + " \u00a77| " + job.name + " +\u00a7b" + xpGain + "xp"); } catch {}
+  try { p.onScreenDisplay.setActionBar(t(p, "job.actionbar", { pay: fmt(pay), job: jobName(p, st.cur), xp: xpGain })); } catch {}
   setJ(p, st);
 }
 
-function perkNote(l) {
-  if (l === 5) return " \u00a7a+15% pay unlocked!";
-  if (l === 10) return " \u00a7a10% double-drop unlocked!";
-  if (l === 15) return " \u00a7awork buff procs unlocked!";
-  if (l === 20) return " \u00a7a3rd daily contract unlocked!";
-  if (l === 25) return " \u00a76MASTER: +50% pay!";
+function perkNote(player, l) {
+  if (l === 5 || l === 10 || l === 15 || l === 20 || l === 25) return t(player, "job.perk." + l);
   return "";
 }
 
 // ---------- UI ----------
-const PERKS = [[5, "+15% pay"], [10, "10% double-drop"], [15, "Work buff procs (Haste/Speed)"], [20, "3rd daily contract"], [25, "MASTER: +50% pay + title rules"]];
+const PERKS = [[5, "job.perkdesc.5"], [10, "job.perkdesc.10"], [15, "job.perkdesc.15"], [20, "job.perkdesc.20"], [25, "job.perkdesc.25"]];
 
 export async function openJobs(player) {
   const st = getJ(player);
@@ -200,44 +204,44 @@ export async function openJobs(player) {
   const buttons = [];
   for (const e of c.list) {
     const r = contractReward(st.cur, e);
-    const status = e.claimed ? "\u00a78[Claimed]" : e.done >= e.need ? "\u00a7a[CLAIM!]" : "\u00a7e[" + e.done + "/" + e.need + "]";
-    buttons.push({ label: "Contract: " + e.block.replace("minecraft:", "").replace(/_/g, " ") + " x" + e.need + "\n" + status + " \u00a7r| \u00a76" + fmt(r.coins) + " \u00a7b+" + r.xp + "xp", icon: "textures/items/map_filled" });
+    const status = e.claimed ? t(player, "job.claimed") : e.done >= e.need ? t(player, "job.claim") : t(player, "job.progress", { done: e.done, need: e.need });
+    buttons.push({ label: t(player, "job.contract.btn", { block: e.block.replace("minecraft:", "").replace(/_/g, " "), need: e.need, status, coins: fmt(r.coins), xp: r.xp }), icon: "textures/items/map_filled" });
   }
-  buttons.push({ label: "Perks & pay info", icon: "textures/items/book_normal" });
-  buttons.push({ label: "Change job\n\u00a78Levels are kept per job", icon: "textures/ui/refresh" });
-  const sel = await actionMenu(player, job.name + "  Lv." + lvl + (lvl >= MAXLVL ? " \u00a76MASTER" : ""),
-    "XP: \u00a7b" + into + "/" + need + "\u00a7r" + (lvl >= MAXLVL ? " (max)" : "") + "  Pay: \u00a76x" + payMult(lvl).toFixed(2) + "\u00a7r\nDaily contracts (reset every day):",
+  buttons.push({ label: t(player, "job.perks.btn"), icon: "textures/items/book_normal" });
+  buttons.push({ label: t(player, "job.change.btn"), icon: "textures/ui/refresh" });
+  const sel = await actionMenu(player, t(player, "job.title", { job: jobName(player, st.cur), lvl, master: lvl >= MAXLVL ? t(player, "job.master.suffix") : "" }),
+    t(player, "job.body", { into, need, max: lvl >= MAXLVL ? t(player, "job.max") : "", mult: payMult(lvl).toFixed(2) }),
     buttons, "pokedex_green");
   if (sel < 0) return;
   if (sel < c.list.length) {
     const e = c.list[sel];
-    if (e.claimed) player.sendMessage("\u00a7e[JOB] Already claimed.");
-    else if (e.done < e.need) player.sendMessage("\u00a7e[JOB] Not done yet: " + e.done + "/" + e.need);
+    if (e.claimed) player.sendMessage(t(player, "job.already"));
+    else if (e.done < e.need) player.sendMessage(t(player, "job.notdone", { done: e.done, need: e.need }));
     else {
       const r = contractReward(st.cur, e);
       e.claimed = true;
       addCoins(player, r.coins * boostMult("quests"));
       st.xp[st.cur] += r.xp;
       setJ(player, st);
-      player.sendMessage("\u00a7a[JOB] Contract paid: \u00a76+" + fmt(r.coins * boostMult("quests")) + " \u00a7b+" + r.xp + "xp");
+      player.sendMessage(t(player, "job.paid", { coins: fmt(r.coins * boostMult("quests")), xp: r.xp }));
       try { player.playSound("random.levelup"); } catch {}
     }
     return openJobs(player);
   }
   if (sel === c.list.length) {
-    const lines = PERKS.map(([l, t]) => (lvl >= l ? "\u00a7a[Lv" + l + "] " : "\u00a78[Lv" + l + "] ") + t).join("\n");
-    await actionMenu(player, job.name + " perks",
-      lines + "\n\n\u00a77Base pay/block by rarity, contracts pay the big money. Blocks you placed yourself pay \u00a7cnothing\u00a77; crops must be fully grown.",
-      [{ label: "Back", icon: "textures/ui/buttons/bubble_no" }], "pokedex_green");
+    const lines = PERKS.map(([l, desc]) => (lvl >= l ? "§a[Lv" + l + "] " : "§8[Lv" + l + "] ") + t(player, desc)).join("\n");
+    await actionMenu(player, t(player, "job.perks.title", { job: jobName(player, st.cur) }),
+      lines + "\n\n" + t(player, "job.perks.body"),
+      [{ label: t(player, "common.back"), icon: "textures/ui/buttons/bubble_no" }], "pokedex_green");
     return openJobs(player);
   }
   return pickJob(player, st);
 }
 
 async function pickJob(player, st) {
-  const sel = await actionMenu(player, "Pick your job", "One active job. XP and levels are saved per job - switch any time.",
+  const sel = await actionMenu(player, t(player, "job.pick.title"), t(player, "job.pick.body"),
     Object.entries(JOBS).map(([k, j]) => ({
-      label: j.name + "  \u00a7bLv." + levelOf(st.xp[k] ?? 0) + (st.cur === k ? " \u00a7a(current)" : ""), icon: j.icon,
+      label: t(player, "job.pick.label", { job: jobName(player, k), lvl: levelOf(st.xp[k] ?? 0), cur: st.cur === k ? t(player, "job.pick.current") : "" }), icon: j.icon,
     })), "pokedex_green");
   if (sel < 0) return;
   const k = Object.keys(JOBS)[sel];
@@ -245,7 +249,7 @@ async function pickJob(player, st) {
   st.cur = k;
   st.c = null; // fresh contracts for the new job
   setJ(player, st);
-  player.sendMessage("\u00a7a[JOB] You are now a \u00a7l" + JOBS[k].name + "\u00a7r\u00a7a (Lv." + levelOf(st.xp[k] ?? 0) + ")");
+  player.sendMessage(t(player, "job.switched", { job: jobName(player, k), lvl: levelOf(st.xp[k] ?? 0) }));
   return openJobs(player);
 }
 
