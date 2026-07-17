@@ -54,8 +54,73 @@ public class Database {
             st.execute("CREATE TABLE IF NOT EXISTS keys(" +
                     "uuid TEXT, crate TEXT, amount INTEGER NOT NULL DEFAULT 0, " +
                     "PRIMARY KEY(uuid, crate))");
+            st.execute("CREATE TABLE IF NOT EXISTS vaults(" +
+                    "uuid TEXT, page INTEGER, data TEXT, PRIMARY KEY(uuid, page))");
+            st.execute("CREATE TABLE IF NOT EXISTS kit_cooldowns(" +
+                    "uuid TEXT, kit TEXT, next_time INTEGER NOT NULL DEFAULT 0, " +
+                    "PRIMARY KEY(uuid, kit))");
         }
     }
+
+    // ---------- player vaults ----------
+
+    public synchronized String getVault(UUID uuid, int page) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT data FROM vaults WHERE uuid=? AND page=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setInt(2, page);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getString(1) : null;
+            }
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public synchronized void setVault(UUID uuid, int page, String data) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO vaults(uuid,page,data) VALUES(?,?,?) " +
+                        "ON CONFLICT(uuid,page) DO UPDATE SET data=excluded.data")) {
+            ps.setString(1, uuid.toString());
+            ps.setInt(2, page);
+            ps.setString(3, data);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("setVault failed: " + e.getMessage());
+        }
+    }
+
+    // ---------- kit cooldowns ----------
+
+    public synchronized long getKitCooldown(UUID uuid, String kit) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT next_time FROM kit_cooldowns WHERE uuid=? AND kit=?")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, kit);
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getLong(1) : 0;
+            }
+        } catch (SQLException e) {
+            return 0;
+        }
+    }
+
+    public synchronized void setKitCooldown(UUID uuid, String kit, long nextTime) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO kit_cooldowns(uuid,kit,next_time) VALUES(?,?,?) " +
+                        "ON CONFLICT(uuid,kit) DO UPDATE SET next_time=excluded.next_time")) {
+            ps.setString(1, uuid.toString());
+            ps.setString(2, kit);
+            ps.setLong(3, nextTime);
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+    }
+
+    // ---------- ranks (ladder) ----------
+
+    public String getRank(UUID uuid) { return getMeta("rank:" + uuid); }
+
+    public void setRank(UUID uuid, String rank) { setMeta("rank:" + uuid, rank); }
 
     // ---------- crate keys (virtual) ----------
 

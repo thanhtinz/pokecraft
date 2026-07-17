@@ -96,6 +96,19 @@ commands:
     usage: /crate [open <name>|keys|givekey <player> <crate> <amount>]
   key:
     description: Check or open crates (alias of /crate)
+  pv:
+    description: Open your personal vault
+    usage: /pv [page]
+    aliases: [vault, pvault]
+  kit:
+    description: Claim a kit (no args opens the kit menu)
+    usage: /kit [name]
+  kits:
+    description: Open the kit menu
+  rankup:
+    description: Advance to the next rank on the ladder
+  rank:
+    description: Show your current rank and the next one
 permissions:
   survivalcore.admin:
     description: Admin commands

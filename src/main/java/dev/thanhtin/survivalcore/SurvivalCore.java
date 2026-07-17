@@ -9,11 +9,16 @@ import dev.thanhtin.survivalcore.crate.CrateGui;
 import dev.thanhtin.survivalcore.crate.CrateManager;
 import dev.thanhtin.survivalcore.economy.EconomyManager;
 import dev.thanhtin.survivalcore.economy.VaultBridge;
+import dev.thanhtin.survivalcore.kit.KitGui;
+import dev.thanhtin.survivalcore.kit.KitManager;
 import dev.thanhtin.survivalcore.listener.PlayerListener;
+import dev.thanhtin.survivalcore.rank.RankManager;
 import dev.thanhtin.survivalcore.storage.Database;
 import dev.thanhtin.survivalcore.teleport.RtpManager;
 import dev.thanhtin.survivalcore.teleport.TeleportManager;
 import dev.thanhtin.survivalcore.teleport.TpaManager;
+import dev.thanhtin.survivalcore.vault.VaultGui;
+import dev.thanhtin.survivalcore.vault.VaultManager;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -35,6 +40,11 @@ public class SurvivalCore extends JavaPlugin {
     private AuctionGui auctionGui;
     private CrateManager crates;
     private CrateGui crateGui;
+    private VaultManager vaults;
+    private VaultGui vaultGui;
+    private KitManager kits;
+    private KitGui kitGui;
+    private RankManager ranks;
 
     @Override
     public void onEnable() {
@@ -60,12 +70,21 @@ public class SurvivalCore extends JavaPlugin {
         crates = new CrateManager(this);
         crates.load();
         crateGui = new CrateGui(this);
+        vaults = new VaultManager(this);
+        vaultGui = new VaultGui(this);
+        kits = new KitManager(this);
+        kits.load();
+        kitGui = new KitGui(this);
+        ranks = new RankManager(this);
+        ranks.load();
 
         getServer().getPluginManager().registerEvents(teleports, this);
         getServer().getPluginManager().registerEvents(tpa, this);
         getServer().getPluginManager().registerEvents(new ClaimListener(this), this);
         getServer().getPluginManager().registerEvents(auctionGui, this);
         getServer().getPluginManager().registerEvents(crateGui, this);
+        getServer().getPluginManager().registerEvents(vaultGui, this);
+        getServer().getPluginManager().registerEvents(kitGui, this);
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         Commands commands = new Commands(this);
@@ -74,7 +93,8 @@ public class SurvivalCore extends JavaPlugin {
                 "setwarp", "delwarp", "warp", "warps", "spawn", "setspawn",
                 "tpa", "tpahere", "tpaccept", "tpdeny", "back", "rtp",
                 "claim", "unclaim", "trust", "untrust", "claiminfo", "claims",
-                "ah", "sell", "crate", "key"}) {
+                "ah", "sell", "crate", "key",
+                "pv", "vault", "pvault", "kit", "kits", "rankup", "rank"}) {
             PluginCommand pc = getCommand(c);
             if (pc != null) {
                 pc.setExecutor(commands);
@@ -112,4 +132,9 @@ public class SurvivalCore extends JavaPlugin {
     public AuctionGui auctionGui() { return auctionGui; }
     public CrateManager crates() { return crates; }
     public CrateGui crateGui() { return crateGui; }
+    public VaultManager vaults() { return vaults; }
+    public VaultGui vaultGui() { return vaultGui; }
+    public KitManager kits() { return kits; }
+    public KitGui kitGui() { return kitGui; }
+    public RankManager ranks() { return ranks; }
 }

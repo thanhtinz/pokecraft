@@ -66,6 +66,11 @@ public class Commands implements CommandExecutor, TabCompleter {
             case "ah" -> ah(p, a);
             case "sell" -> sell(p, a);
             case "crate", "key" -> crate(p, a);
+            case "pv", "vault", "pvault" -> pvault(p, a);
+            case "kit" -> kit(p, a);
+            case "kits" -> plugin.kitGui().open(p);
+            case "rankup" -> plugin.ranks().rankup(p);
+            case "rank" -> rank(p);
             default -> { return false; }
         }
         return true;
@@ -320,6 +325,44 @@ public class Commands implements CommandExecutor, TabCompleter {
         }
         plugin.crateGui().spin(p, crate);
     }
+
+    // ---------- player vaults ----------
+
+    private void pvault(Player p, String[] a) {
+        int page = 1;
+        if (a.length >= 1) {
+            try { page = Integer.parseInt(a[0]); } catch (NumberFormatException e) {
+                Msg.error(p, "Usage: /pv [page]"); return;
+            }
+        }
+        plugin.vaultGui().open(p, page);
+    }
+
+    // ---------- kits ----------
+
+    private void kit(Player p, String[] a) {
+        if (a.length == 0) { plugin.kitGui().open(p); return; }
+        var kit = plugin.kits().get(a[0]);
+        if (kit == null) { Msg.error(p, "No kit named '" + a[0].toLowerCase() + "'."); return; }
+        plugin.kits().give(p, kit);
+    }
+
+    // ---------- rank ladder ----------
+
+    private void rank(Player p) {
+        if (plugin.ranks().isEmpty()) { Msg.info(p, "No ranks are configured."); return; }
+        var cur = plugin.ranks().current(p.getUniqueId());
+        var next = plugin.ranks().next(p.getUniqueId());
+        Msg.info(p, "Rank: " + (cur == null ? "none" : strip(cur.display())));
+        if (next == null) {
+            Msg.info(p, "You're at the highest rank.");
+        } else {
+            Msg.info(p, "Next: " + strip(next.display()) + " for "
+                    + plugin.economy().format(next.cost()) + " (/rankup).");
+        }
+    }
+
+    private String strip(String s) { return s.replaceAll("&[0-9a-fk-or]", ""); }
 
     // ---------- auction house ----------
 
