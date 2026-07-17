@@ -7,6 +7,7 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Location;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -289,60 +290,78 @@ public class Commands implements CommandExecutor, TabCompleter {
     private void crate(Player p, String[] a) {
         if (a.length == 0) {
             List<String> names = new ArrayList<>();
-            plugin.crates().all().forEach(c -> names.add(c.id()
-                    + " (" + plugin.db().getKeys(p.getUniqueId(), c.id()) + " keys)"));
+            plugin.crates().all().forEach(c -> names.add(c.id()));
             Msg.info(p, names.isEmpty() ? "No crates configured."
                     : "Crates: " + String.join(", ", names)
-                      + " | /crate open <name>, /crate givekey ... (admin)");
+                      + ". Hold a key and right-click the matching crate to open it.");
+            if (p.hasPermission("survivalcore.admin")) {
+                Msg.info(p, "Admin: /crate givekey <player> <crate> <amount>, "
+                        + "/crate setblock <crate>, /crate delblock");
+            }
             return;
         }
-        String sub = a[0].toLowerCase();
-        switch (sub) {
+        switch (a[0].toLowerCase()) {
             case "givekey" -> {
                 if (!p.hasPermission("survivalcore.admin")) { Msg.error(p, "No permission."); return; }
                 if (a.length < 4) { Msg.error(p, "Usage: /crate givekey <player> <crate> <amount>"); return; }
                 Player target = plugin.getServer().getPlayerExact(a[1]);
                 if (target == null) { Msg.error(p, "Player not online."); return; }
                 if (plugin.crates().get(a[2]) == null) { Msg.error(p, "No crate '" + a[2] + "'."); return; }
-                int n = (int) parseAmount(a[3]);
-                plugin.db().addKeys(target.getUniqueId(), a[2].toLowerCase(), Math.max(1, n));
+                int n = Math.max(1, (int) parseAmount(a[3]));
+                plugin.crates().giveKeys(target, a[2].toLowerCase(), n);
                 Msg.ok(p, "Gave " + n + " " + a[2].toLowerCase() + " key(s) to " + target.getName() + ".");
                 Msg.ok(target, "You received " + n + " " + a[2].toLowerCase() + " key(s)!");
             }
-            case "keys" -> {
-                List<String> names = new ArrayList<>();
-                plugin.crates().all().forEach(c -> names.add(c.id() + ": "
-                        + plugin.db().getKeys(p.getUniqueId(), c.id())));
-                Msg.info(p, "Your keys - " + String.join(", ", names));
+            case "setblock" -> {
+                if (!p.hasPermission("survivalcore.admin")) { Msg.error(p, "No permission."); return; }
+                if (a.length < 2) { Msg.error(p, "Usage: /crate setblock <crate>"); return; }
+                if (plugin.crates().get(a[1]) == null) { Msg.error(p, "No crate '" + a[1] + "'."); return; }
+                Block target = p.getTargetBlockExact(6);
+                if (target == null) { Msg.error(p, "Look at the block to bind."); return; }
+                plugin.db().setCrateBlock(target.getLocation(), a[1].toLowerCase());
+                Msg.ok(p, "Bound this block as the " + a[1].toLowerCase() + " crate.");
             }
-            case "open" -> {
-                if (a.length < 2) { Msg.error(p, "Usage: /crate open <name>"); return; }
-                openCrate(p, a[1]);
+            case "delblock" -> {
+                if (!p.hasPermission("survivalcore.admin")) { Msg.error(p, "No permission."); return; }
+                Block target = p.getTargetBlockExact(6);
+                if (target == null || plugin.db().getCrateBlock(target.getLocation()) == null) {
+                    Msg.error(p, "Look at a crate block."); return;
+                }
+                plugin.db().removeCrateBlock(target.getLocation());
+                Msg.ok(p, "Unbound this crate block.");
             }
-            default -> openCrate(p, a[0]); // /crate <name> shortcut
+            default -> Msg.info(p, "Hold a key and right-click the matching crate block to open it.");
         }
     }
 
-    private void openCrate(Player p, String id) {
-        var crate = plugin.crates().get(id);
-        if (crate == null) { Msg.error(p, "No crate named '" + id.toLowerCase() + "'."); return; }
-        if (!plugin.db().takeKey(p.getUniqueId(), crate.id())) {
-            Msg.error(p, "You have no " + crate.id() + " key. Vote or buy one!");
-            return;
-        }
-        plugin.crateGui().spin(p, crate);
-    }
-
-    // ---------- player vaults ----------
+    // ---------- player vaults (physical blocks) ----------
 
     private void pvault(Player p, String[] a) {
-        int page = 1;
-        if (a.length >= 1) {
-            try { page = Integer.parseInt(a[0]); } catch (NumberFormatException e) {
-                Msg.error(p, "Usage: /pv [page]"); return;
+        if (a.length >= 1 && p.hasPermission("survivalcore.admin")) {
+            switch (a[0].toLowerCase()) {
+                case "setblock" -> {
+                    Block target = p.getTargetBlockExact(6);
+                    if (target == null) { Msg.error(p, "Look at the block to bind."); return; }
+                    plugin.db().addVaultBlock(target.getLocation());
+                    Msg.ok(p, "Bound this block as a vault. Players right-click it to open storage.");
+                    return;
+                }
+                case "delblock" -> {
+                    Block target = p.getTargetBlockExact(6);
+                    if (target == null || !plugin.db().isVaultBlock(target.getLocation())) {
+                        Msg.error(p, "Look at a vault block."); return;
+                    }
+                    plugin.db().removeVaultBlock(target.getLocation());
+                    Msg.ok(p, "Unbound this vault block.");
+                    return;
+                }
+                default -> { /* fall through to hint */ }
             }
         }
-        plugin.vaultGui().open(p, page);
+        Msg.info(p, "Right-click a vault block to open your storage.");
+        if (p.hasPermission("survivalcore.admin")) {
+            Msg.info(p, "Admin: /vault setblock, /vault delblock (look at a block).");
+        }
     }
 
     // ---------- kits ----------

@@ -92,13 +92,13 @@ commands:
     description: List the held item on the auction house
     usage: /sell <price>
   crate:
-    description: Open a crate, check keys, or givekey (admin)
-    usage: /crate [open <name>|keys|givekey <player> <crate> <amount>]
+    description: Crate info; admins bind crate blocks and give keys
+    usage: /crate [givekey <player> <crate> <amount>|setblock <crate>|delblock]
   key:
-    description: Check or open crates (alias of /crate)
+    description: Crate/key info (alias of /crate)
   pv:
-    description: Open your personal vault
-    usage: /pv [page]
+    description: Vault info; admins bind vault blocks (right-click a block to open)
+    usage: /pv (or /vault setblock|delblock for admins)
     aliases: [vault, pvault]
   kit:
     description: Claim a kit (no args opens the kit menu)

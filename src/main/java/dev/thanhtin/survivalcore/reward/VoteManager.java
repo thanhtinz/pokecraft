@@ -27,8 +27,7 @@ public class VoteManager {
         String crate = plugin.getConfig().getString("vote.crate", "vote");
         int amount = plugin.getConfig().getInt("vote.keys", 1);
         StringBuilder msg = new StringBuilder("Thanks for voting! " + plugin.economy().format(money));
-        if (crate != null && amount > 0) {
-            plugin.db().addKeys(player.getUniqueId(), crate.toLowerCase(), amount);
+        if (crate != null && amount > 0 && plugin.crates().giveKeys(player, crate.toLowerCase(), amount)) {
             msg.append(" + ").append(amount).append(" ").append(crate).append(" key");
         }
         Msg.ok(player, msg.toString());

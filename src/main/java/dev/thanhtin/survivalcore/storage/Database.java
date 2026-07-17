@@ -70,6 +70,98 @@ public class Database {
             st.execute("CREATE TABLE IF NOT EXISTS npcs(" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT, role TEXT, name TEXT, " +
                     "world TEXT, x REAL, y REAL, z REAL, yaw REAL, pitch REAL)");
+            st.execute("CREATE TABLE IF NOT EXISTS crate_blocks(" +
+                    "world TEXT, x INTEGER, y INTEGER, z INTEGER, crate TEXT, " +
+                    "PRIMARY KEY(world, x, y, z))");
+            st.execute("CREATE TABLE IF NOT EXISTS vault_blocks(" +
+                    "world TEXT, x INTEGER, y INTEGER, z INTEGER, " +
+                    "PRIMARY KEY(world, x, y, z))");
+        }
+    }
+
+    // ---------- crate blocks ----------
+
+    public synchronized void setCrateBlock(Location loc, String crate) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT INTO crate_blocks(world,x,y,z,crate) VALUES(?,?,?,?,?) " +
+                        "ON CONFLICT(world,x,y,z) DO UPDATE SET crate=excluded.crate")) {
+            ps.setString(1, loc.getWorld().getName());
+            ps.setInt(2, loc.getBlockX());
+            ps.setInt(3, loc.getBlockY());
+            ps.setInt(4, loc.getBlockZ());
+            ps.setString(5, crate);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            plugin.getLogger().severe("setCrateBlock failed: " + e.getMessage());
+        }
+    }
+
+    public synchronized String getCrateBlock(Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT crate FROM crate_blocks WHERE world=? AND x=? AND y=? AND z=?")) {
+            ps.setString(1, loc.getWorld().getName());
+            ps.setInt(2, loc.getBlockX());
+            ps.setInt(3, loc.getBlockY());
+            ps.setInt(4, loc.getBlockZ());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next() ? rs.getString(1) : null;
+            }
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public synchronized boolean removeCrateBlock(Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "DELETE FROM crate_blocks WHERE world=? AND x=? AND y=? AND z=?")) {
+            ps.setString(1, loc.getWorld().getName());
+            ps.setInt(2, loc.getBlockX());
+            ps.setInt(3, loc.getBlockY());
+            ps.setInt(4, loc.getBlockZ());
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    // ---------- vault blocks ----------
+
+    public synchronized void addVaultBlock(Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "INSERT OR IGNORE INTO vault_blocks(world,x,y,z) VALUES(?,?,?,?)")) {
+            ps.setString(1, loc.getWorld().getName());
+            ps.setInt(2, loc.getBlockX());
+            ps.setInt(3, loc.getBlockY());
+            ps.setInt(4, loc.getBlockZ());
+            ps.executeUpdate();
+        } catch (SQLException ignored) {}
+    }
+
+    public synchronized boolean isVaultBlock(Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "SELECT 1 FROM vault_blocks WHERE world=? AND x=? AND y=? AND z=?")) {
+            ps.setString(1, loc.getWorld().getName());
+            ps.setInt(2, loc.getBlockX());
+            ps.setInt(3, loc.getBlockY());
+            ps.setInt(4, loc.getBlockZ());
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public synchronized boolean removeVaultBlock(Location loc) {
+        try (PreparedStatement ps = conn.prepareStatement(
+                "DELETE FROM vault_blocks WHERE world=? AND x=? AND y=? AND z=?")) {
+            ps.setString(1, loc.getWorld().getName());
+            ps.setInt(2, loc.getBlockX());
+            ps.setInt(3, loc.getBlockY());
+            ps.setInt(4, loc.getBlockZ());
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
         }
     }
 

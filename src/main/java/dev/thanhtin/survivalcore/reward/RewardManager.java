@@ -53,8 +53,9 @@ public class RewardManager {
         if (every > 0 && streak % every == 0) {
             String crate = plugin.getConfig().getString("daily.streak-key.crate", "vote");
             int amount = plugin.getConfig().getInt("daily.streak-key.amount", 1);
-            plugin.db().addKeys(player.getUniqueId(), crate.toLowerCase(), amount);
-            msg.append(" + ").append(amount).append(" ").append(crate).append(" key");
+            if (plugin.crates().giveKeys(player, crate.toLowerCase(), amount)) {
+                msg.append(" + ").append(amount).append(" ").append(crate).append(" key");
+            }
         }
 
         plugin.db().setDaily(player.getUniqueId(), now, streak);

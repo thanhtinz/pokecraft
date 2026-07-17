@@ -5,8 +5,9 @@ import dev.thanhtin.survivalcore.auction.AuctionManager;
 import dev.thanhtin.survivalcore.claim.ClaimListener;
 import dev.thanhtin.survivalcore.claim.ClaimManager;
 import dev.thanhtin.survivalcore.command.Commands;
-import dev.thanhtin.survivalcore.crate.CrateGui;
+import dev.thanhtin.survivalcore.crate.CrateListener;
 import dev.thanhtin.survivalcore.crate.CrateManager;
+import dev.thanhtin.survivalcore.crate.KeyItem;
 import dev.thanhtin.survivalcore.economy.EconomyManager;
 import dev.thanhtin.survivalcore.economy.VaultBridge;
 import dev.thanhtin.survivalcore.job.JobListener;
@@ -26,6 +27,7 @@ import dev.thanhtin.survivalcore.storage.Database;
 import dev.thanhtin.survivalcore.teleport.RtpManager;
 import dev.thanhtin.survivalcore.teleport.TeleportManager;
 import dev.thanhtin.survivalcore.teleport.TpaManager;
+import dev.thanhtin.survivalcore.vault.VaultBlockListener;
 import dev.thanhtin.survivalcore.vault.VaultGui;
 import dev.thanhtin.survivalcore.vault.VaultManager;
 import org.bukkit.command.PluginCommand;
@@ -48,7 +50,7 @@ public class SurvivalCore extends JavaPlugin {
     private AuctionManager auctions;
     private AuctionGui auctionGui;
     private CrateManager crates;
-    private CrateGui crateGui;
+    private KeyItem keyItem;
     private VaultManager vaults;
     private VaultGui vaultGui;
     private KitManager kits;
@@ -83,7 +85,7 @@ public class SurvivalCore extends JavaPlugin {
         auctionGui = new AuctionGui(this);
         crates = new CrateManager(this);
         crates.load();
-        crateGui = new CrateGui(this);
+        keyItem = new KeyItem(this);
         vaults = new VaultManager(this);
         vaultGui = new VaultGui(this);
         kits = new KitManager(this);
@@ -102,8 +104,9 @@ public class SurvivalCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(tpa, this);
         getServer().getPluginManager().registerEvents(new ClaimListener(this), this);
         getServer().getPluginManager().registerEvents(auctionGui, this);
-        getServer().getPluginManager().registerEvents(crateGui, this);
         getServer().getPluginManager().registerEvents(vaultGui, this);
+        getServer().getPluginManager().registerEvents(new CrateListener(this), this);
+        getServer().getPluginManager().registerEvents(new VaultBlockListener(this), this);
         getServer().getPluginManager().registerEvents(new JobListener(this), this);
         getServer().getPluginManager().registerEvents(new BountyListener(this), this);
         getServer().getPluginManager().registerEvents(new ChatListener(this), this);
@@ -171,7 +174,7 @@ public class SurvivalCore extends JavaPlugin {
     public AuctionManager auctions() { return auctions; }
     public AuctionGui auctionGui() { return auctionGui; }
     public CrateManager crates() { return crates; }
-    public CrateGui crateGui() { return crateGui; }
+    public KeyItem keyItem() { return keyItem; }
     public VaultManager vaults() { return vaults; }
     public VaultGui vaultGui() { return vaultGui; }
     public KitManager kits() { return kits; }

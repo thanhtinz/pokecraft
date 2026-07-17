@@ -4,10 +4,18 @@ import dev.thanhtin.survivalcore.SurvivalCore;
 import dev.thanhtin.survivalcore.util.Msg;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
+import org.bukkit.Color;
+import org.bukkit.FireworkEffect;
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Particle;
+import org.bukkit.Sound;
+import org.bukkit.World;
 import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.FireworkMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
@@ -94,6 +102,52 @@ public class CrateManager {
             item = new ItemStack(Material.BARRIER);
         }
         return item;
+    }
+
+    /** Give physical crate keys to a player (drops any that don't fit). Returns true if the crate exists. */
+    public boolean giveKeys(Player player, String crateId, int amount) {
+        Crate crate = get(crateId);
+        if (crate == null) return false;
+        ItemStack key = plugin.keyItem().create(crate, Math.max(1, amount));
+        player.getInventory().addItem(key).values()
+                .forEach(rem -> player.getWorld().dropItemNaturally(player.getLocation(), rem));
+        return true;
+    }
+
+    /** Open a physical crate: play effects at the block, then grant a rolled reward. */
+    public void open(Player player, Crate crate, Location block) {
+        Reward reward = roll(crate);
+        World world = block.getWorld();
+        Location center = block.clone().add(0.5, 1.1, 0.5);
+        world.spawnParticle(Particle.FIREWORK, center, 50, 0.4, 0.5, 0.4, 0.08);
+        world.playSound(center, Sound.BLOCK_ENDER_CHEST_OPEN, 1f, 1f);
+        world.playSound(center, Sound.ENTITY_PLAYER_LEVELUP, 0.7f, 1.3f);
+        launchFirework(center);
+
+        plugin.getServer().getScheduler().runTaskLater(plugin, () -> {
+            grant(player, reward);
+            world.playSound(center, Sound.UI_TOAST_CHALLENGE_COMPLETE, 1f, 1f);
+            // announce genuinely rare wins (<= 5% of the crate's weight)
+            if (reward.weight() * 20 <= crate.totalWeight()) {
+                plugin.getServer().broadcast(Component.text(player.getName()
+                        + " won a rare reward from the " + crate.id() + " crate!",
+                        NamedTextColor.GOLD));
+            }
+        }, 20L);
+    }
+
+    private void launchFirework(Location loc) {
+        Firework fw = loc.getWorld().spawn(loc, Firework.class);
+        FireworkMeta meta = fw.getFireworkMeta();
+        meta.addEffect(FireworkEffect.builder()
+                .withColor(Color.AQUA, Color.YELLOW)
+                .withFade(Color.WHITE)
+                .with(FireworkEffect.Type.BALL_LARGE)
+                .flicker(true)
+                .build());
+        meta.setPower(0);
+        fw.setFireworkMeta(meta);
+        plugin.getServer().getScheduler().runTaskLater(plugin, fw::detonate, 2L);
     }
 
     public void grant(Player player, Reward reward) {
