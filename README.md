@@ -84,5 +84,9 @@
 3. Đóng gói: mỗi pack giữ thư mục lồng `SerpLumen<ver>B/` · `SerpLumen<ver>R/` bên trong zip con, rồi gộp 2 zip thành `.mcaddon`.
 4. Khi cài: đặt **SerpLumen RP trên SERP RP** trong danh sách resource pack (pack trên ghi đè pack dưới).
 
+**Build cục bộ:** chạy `bash build.sh` → tạo `dist/SerpLumen_v<ver>.mcaddon` (đọc version từ tên thư mục pack, `node --check` mọi script trước khi đóng gói).
+
+**Tự động release:** mỗi khi push lên `main` mà đổi pack/script, GitHub Actions (`.github/workflows/release.yml`) build lại `.mcaddon` và tạo **GitHub Release** tag `v<ver>` kèm file. Bump version (đổi tên thư mục + manifest) rồi push là có release mới; push lại cùng version thì chỉ cập nhật file đính kèm.
+
 ---
 *Cập nhật ở phiên bản v3.33.0.*

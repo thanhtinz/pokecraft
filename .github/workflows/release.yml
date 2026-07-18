@@ -1,0 +1,54 @@
+name: Release mcaddon
+
+# Builds the .mcaddon and publishes it as a GitHub Release automatically.
+# The tag/version is read from the behavior-pack folder name (SerpLumen<ver>B),
+# so bumping the version and pushing to main creates a new release; pushing
+# again at the same version just refreshes the attached file.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "SerpLumen*B/**"
+      - "SerpLumen*R/**"
+      - "build.sh"
+      - ".github/workflows/release.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build .mcaddon
+        run: bash build.sh
+
+      - name: Read version from pack folder
+        id: v
+        run: |
+          VER=$(ls -d SerpLumen*B | head -1 | sed -E 's/^SerpLumen([0-9_]+)B$/\1/' | tr '_' '.')
+          echo "ver=$VER" >> "$GITHUB_OUTPUT"
+          echo "file=$(ls dist/*.mcaddon | head -1)" >> "$GITHUB_OUTPUT"
+
+      - name: Create or update release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="v${{ steps.v.outputs.ver }}"
+          FILE="${{ steps.v.outputs.file }}"
+          echo "Releasing $TAG with $FILE"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$FILE" --clobber
+          else
+            gh release create "$TAG" "$FILE" \
+              --title "SerpLumen $TAG" \
+              --notes "Automated build of \`$FILE\` from ${{ github.sha }}. Install: put SerpLumen RP above SERP RP in the resource-pack list."
+          fi
