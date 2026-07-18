@@ -39,6 +39,7 @@ import { openBuddy } from "./buddy.js";
 import { openVehAdmin } from "./vehicles.js";
 import { openMachineAnchors, machineCount } from "./machines.js";
 import { openStructures } from "./structures.js";
+import { openNpcs } from "./npcs.js";
 
 registerEarning();
 registerQuestTracking();
@@ -99,7 +100,8 @@ async function openAdmin(admin) {
         { label: "Guard limit\n§8Fewer guards = more wild Pokemon", icon: "textures/items/carrot_on_a_stick" },
         { label: "Reset Vehicles\n§8Fix a player whose rides disappeared", icon: "textures/items/boat_oak" },
         { label: "Restore Machines\n§8Anchor PC/heal/etc - auto-respawn if lost", icon: "textures/items/repeater" },
-        { label: "Structures / Công trình\n§8Save, place & clear builds (2-corner select)", icon: "textures/items/structure_void" }
+        { label: "Structures / Công trình\n§8Save, place & clear builds (2-corner select)", icon: "textures/items/structure_void" },
+        { label: "NPCs / Nhân vật\n§8Đặt y tá, tiến sĩ... đứng yên, không mất", icon: "textures/items/villager_spawn_egg" }
     ], "pokedex_black");
     switch (sel) {
         case 0: await openSerpAdmin(admin); break;
@@ -116,6 +118,7 @@ async function openAdmin(admin) {
         case 11: await openVehAdmin(admin); break;
         case 12: await openMachineAnchors(admin); break;
         case 13: await openStructures(admin); break;
+        case 14: await openNpcs(admin); break;
     }
 }
 

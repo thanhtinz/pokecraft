@@ -18,6 +18,7 @@ import { initVehicles } from "./vehicles.js";
 import { initPalBase } from "./palbase.js";
 import { initBuddy } from "./buddy.js";
 import { initMachines } from "./machines.js";
+import { initNpcs } from "./npcs.js";
 import { world, system as _sys } from "@minecraft/server";
 
 // One-time cleanup of the removed Ranch feature: wipe its data and delete any
@@ -40,6 +41,6 @@ function cleanupLegacy() {
 }
 
 setHubOpener(openHub);
-for (const [name, init] of [["SunnyScan", initSunnyScan], ["Tracker", initTracker], ["GTS", initGts], ["Events", initEvents], ["Roam", initRoam], ["Season", initSeason], ["Titles", initTitles], ["Jobs", initJobs], ["Claims", initClaims], ["Guards", initGuards], ["Waypoints", initWaypoints], ["Nameplates", initNameplates], ["Vehicles", initVehicles], ["PalBase", initPalBase], ["Buddy", initBuddy], ["Machines", initMachines], ["CleanupLegacy", cleanupLegacy]]) {
+for (const [name, init] of [["SunnyScan", initSunnyScan], ["Tracker", initTracker], ["GTS", initGts], ["Events", initEvents], ["Roam", initRoam], ["Season", initSeason], ["Titles", initTitles], ["Jobs", initJobs], ["Claims", initClaims], ["Guards", initGuards], ["Waypoints", initWaypoints], ["Nameplates", initNameplates], ["Vehicles", initVehicles], ["PalBase", initPalBase], ["Buddy", initBuddy], ["Machines", initMachines], ["NPCs", initNpcs], ["CleanupLegacy", cleanupLegacy]]) {
   try { init(); } catch (e) { console.warn(name + " init failed: " + (e && e.message)); }
 }
