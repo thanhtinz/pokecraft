@@ -9,6 +9,7 @@ import * as S from "./serpdata.js";
 import { POKENAMES } from "./pokenames.js";
 import { suppressCatch } from "./tracker.js";
 import { ModalFormData } from "@minecraft/server-ui";
+import { t } from "./i18n.js";
 
 const MACHINE = "serp:trade_machine";
 const WONDER_CAP = 20;
@@ -21,7 +22,7 @@ const wonderPool = () => jget("sl:wonder", "[]");
 const gtsList = () => jget("sl:gts", "[]");
 const owed = () => jget("sl:owed", "{}");
 
-function msg(p, t) { try { p.sendMessage("\u00a7e[Trade Machine]\u00a7r " + t); } catch {} }
+function msg(p, text) { try { p.sendMessage("§e[Trade Machine]§r " + text); } catch {} }
 function nameOf(dex) { return POKENAMES[String(dex)] ?? ("#" + dex); }
 
 function pokeLabel(fields) {
@@ -33,7 +34,7 @@ function deliver(ownerId, ownerName, fields) {
   for (const p of world.getAllPlayers()) {
     if (p.id === ownerId) {
       suppressCatch(p.id);
-      if (S.givePokemon(p, fields)) { msg(p, "You received \u00a7l" + pokeLabel(fields) + "\u00a7r!"); try { p.playSound("random.levelup"); } catch {} return; }
+      if (S.givePokemon(p, fields)) { msg(p, t(p, "gts.received", { label: pokeLabel(fields) })); try { p.playSound("random.levelup"); } catch {} return; }
     }
   }
   const o = owed();
@@ -43,10 +44,10 @@ function deliver(ownerId, ownerName, fields) {
 
 function pickFromParty(player, title, note, filter) {
   const party = S.getParty(player).filter((p) => !filter || filter(p.fields));
-  if (party.length === 0) { msg(player, "No eligible Pokemon in your team."); return Promise.resolve(null); }
-  const form = themedRaw("serp.main.trade").body("\u00a7l" + title + "\u00a7r" + (note ? "\n" + note : ""));
+  if (party.length === 0) { msg(player, t(player, "gts.noeligible")); return Promise.resolve(null); }
+  const form = themedRaw("serp.main.trade").body("§l" + title + "§r" + (note ? "\n" + note : ""));
   for (const p of party) form.button(pokeLabel(p.fields), "pokedrock/pokedex/" + p.fields[2]);
-  form.button("Cancel", "textures/ui/buttons/bubble_no");
+  form.button(t(player, "common.cancel"), "textures/ui/buttons/bubble_no");
   return form.show(player).then((res) =>
     res.canceled || res.selection >= party.length ? null : party[res.selection]
   ).catch(() => null);
@@ -56,12 +57,12 @@ function pickFromParty(player, title, note, filter) {
 async function openWonder(player) {
   const pool = wonderPool();
   const mine = pool.filter((e) => e.id === player.id).length;
-  const pick = await pickFromParty(player, "WONDER TRADE",
-    "Send one Pokemon, get a random one\nfrom another trainer. No take-backs!\n\u00a77Waiting in pool: " + pool.length + (mine ? " (yours: " + mine + ")" : "") + "\u00a7r");
+  const pick = await pickFromParty(player, t(player, "gts.wonder.title"),
+    t(player, "gts.wonder.note", { n: pool.length, mine: mine ? t(player, "gts.wonder.yours", { m: mine }) : "" }));
   if (!pick) return;
-  if (!(await confirm(player, "serp.main.trade", "\u00a7lWonder Trade\u00a7r\n\nSend away \u00a7l" + pokeLabel(pick.fields) + "\u00a7r?\nYou can't choose what comes back."))) return;
+  if (!(await confirm(player, "serp.main.trade", t(player, "gts.wonder.confirm", { label: pokeLabel(pick.fields) })))) return;
   const fields = S.takePokemon(player, pick.tag);
-  if (!fields) return msg(player, "That Pokemon just moved - try again.");
+  if (!fields) return msg(player, t(player, "gts.moved"));
   suppressCatch(player.id);
   const p2 = wonderPool(); // re-read: someone may have deposited meanwhile
   const idx = p2.findIndex((e) => e.id !== player.id);
@@ -69,33 +70,33 @@ async function openWonder(player) {
     const other = p2.splice(idx, 1)[0];
     jset("sl:wonder", p2);
     deliver(other.id, other.n, fields);
-    if (S.givePokemon(player, other.f)) msg(player, "Matched with \u00a7l" + other.n + "\u00a7r! You got \u00a7l" + pokeLabel(other.f) + "\u00a7r!");
-    else { deliver(player.id, player.name, other.f); msg(player, "Matched! Your Pokemon arrives once you have space."); }
+    if (S.givePokemon(player, other.f)) msg(player, t(player, "gts.wonder.matched", { name: other.n, label: pokeLabel(other.f) }));
+    else { deliver(player.id, player.name, other.f); msg(player, t(player, "gts.wonder.matched.pc")); }
     try { player.playSound("random.levelup"); } catch {}
   } else {
-    if (p2.length >= WONDER_CAP) { S.givePokemon(player, fields); return msg(player, "Pool is full right now - try later."); }
+    if (p2.length >= WONDER_CAP) { S.givePokemon(player, fields); return msg(player, t(player, "gts.wonder.poolfull")); }
     p2.push({ f: fields, id: player.id, n: player.name, at: Date.now() });
     jset("sl:wonder", p2);
-    msg(player, "\u00a7l" + pokeLabel(fields) + "\u00a7r is in the pool. You'll get a Pokemon when someone else deposits!");
+    msg(player, t(player, "gts.wonder.deposited", { label: pokeLabel(fields) }));
   }
 }
 
 // ---------- GTS ----------
-function wantLabel(w) {
-  return nameOf(w.dex) + (w.lvl > 1 ? " Lv." + w.lvl + "+" : "") + (w.sh ? " " + SH + " shiny" : "");
+function wantLabel(viewer, w) {
+  return nameOf(w.dex) + (w.lvl > 1 ? " Lv." + w.lvl + "+" : "") + (w.sh ? " " + SH + " " + t(viewer, "gts.shiny") : "");
 }
 function matches(fields, w) {
   return Number(fields[2]) === w.dex && S.level(fields) >= (w.lvl ?? 1) && (!w.sh || S.isShiny(fields));
 }
 
 async function gtsCreate(player) {
-  const pick = await pickFromParty(player, "LIST ON GTS", "Pick the Pokemon you offer.");
+  const pick = await pickFromParty(player, t(player, "gts.list.title"), t(player, "gts.list.note"));
   if (!pick) return;
   // wanted species via text search (input needs a vanilla modal - Bedrock limit)
-  const mf = new ModalFormData().title("GTS - what do you want?");
-  mf.textField("Species name (e.g. Gengar):", "type a name...");
-  mf.slider("Minimum level", 1, 100, { valueStep: 1, defaultValue: 1 });
-  mf.toggle("Shiny only", { defaultValue: false });
+  const mf = new ModalFormData().title(t(player, "gts.want.title"));
+  mf.textField(t(player, "gts.want.species"), t(player, "gts.want.species.ph"));
+  mf.slider(t(player, "gts.want.minlvl"), 1, 100, { valueStep: 1, defaultValue: 1 });
+  mf.toggle(t(player, "gts.want.shinyonly"), { defaultValue: false });
   let res;
   try { res = await mf.show(player); } catch { return; }
   if (res.canceled) return;
@@ -103,80 +104,80 @@ async function gtsCreate(player) {
   const q = String(nameQ).trim().toLowerCase();
   const hit = Object.entries(POKENAMES).find(([, n]) => n.toLowerCase() === q) ??
               Object.entries(POKENAMES).find(([, n]) => n.toLowerCase().startsWith(q));
-  if (!q || !hit) return msg(player, "Unknown species name: " + nameQ);
+  if (!q || !hit) return msg(player, t(player, "gts.unknownspecies", { name: nameQ }));
   const want = { dex: Number(hit[0]), lvl: Number(lvl), sh: !!sh };
   const list = gtsList();
-  if (list.filter((e) => e.id === player.id).length >= 3) return msg(player, "Max 3 active listings per player.");
-  if (list.length >= GTS_CAP) return msg(player, "GTS is full - try later.");
-  if (!(await confirm(player, "serp.main.trade", "\u00a7lGTS Listing\u00a7r\n\nOffer: \u00a7l" + pokeLabel(pick.fields) + "\u00a7r\nWant: \u00a7l" + wantLabel(want) + "\u00a7r\n\nList it?"))) return;
+  if (list.filter((e) => e.id === player.id).length >= 3) return msg(player, t(player, "gts.max"));
+  if (list.length >= GTS_CAP) return msg(player, t(player, "gts.full"));
+  if (!(await confirm(player, "serp.main.trade", t(player, "gts.list.confirm", { offer: pokeLabel(pick.fields), want: wantLabel(player, want) })))) return;
   const fields = S.takePokemon(player, pick.tag);
-  if (!fields) return msg(player, "That Pokemon just moved - try again.");
+  if (!fields) return msg(player, t(player, "gts.moved"));
   suppressCatch(player.id);
   list.push({ f: fields, id: player.id, n: player.name, want, at: Date.now() });
   jset("sl:gts", list);
-  msg(player, "Listed! You'll receive the trade even while offline.");
+  msg(player, t(player, "gts.listed"));
 }
 
 async function gtsBrowse(player) {
   const list = gtsList();
   const others = list.filter((e) => e.id !== player.id);
-  if (others.length === 0) return msg(player, "No listings from other trainers right now.");
-  const form = themedRaw("serp.main.trade").body("\u00a7lGTS - " + others.length + " listings\u00a7r\nTap one you can fulfill:");
+  if (others.length === 0) return msg(player, t(player, "gts.nolistings"));
+  const form = themedRaw("serp.main.trade").body(t(player, "gts.browse.body", { n: others.length }));
   for (const e of others)
-    form.button(pokeLabel(e.f) + "\n\u00a77wants: " + wantLabel(e.want) + " \u00a78(" + e.n + ")", "pokedrock/pokedex/" + e.f[2]);
-  form.button("Back", "textures/ui/buttons/bubble_no");
+    form.button(t(player, "gts.browse.btn", { label: pokeLabel(e.f), want: wantLabel(player, e.want), name: e.n }), "pokedrock/pokedex/" + e.f[2]);
+  form.button(t(player, "common.back"), "textures/ui/buttons/bubble_no");
   const res = await form.show(player).catch(() => null);
   if (!res || res.canceled || res.selection >= others.length) return;
   const entry = others[res.selection];
-  const pick = await pickFromParty(player, "FULFILL LISTING",
-    "They want: \u00a7l" + wantLabel(entry.want) + "\u00a7r\nPick a matching Pokemon to give:",
+  const pick = await pickFromParty(player, t(player, "gts.fulfill.title"),
+    t(player, "gts.fulfill.note", { want: wantLabel(player, entry.want) }),
     (f) => matches(f, entry.want));
   if (!pick) return;
-  if (!(await confirm(player, "serp.main.trade", "\u00a7lGTS Trade\u00a7r\n\nGive: \u00a7l" + pokeLabel(pick.fields) + "\u00a7r\nGet:  \u00a7l" + pokeLabel(entry.f) + "\u00a7r\n\nConfirm?"))) return;
+  if (!(await confirm(player, "serp.main.trade", t(player, "gts.trade.confirm", { give: pokeLabel(pick.fields), get: pokeLabel(entry.f) })))) return;
   const cur = gtsList(); // re-validate against live data
   const li = cur.findIndex((e) => e.id === entry.id && e.at === entry.at);
-  if (li < 0) return msg(player, "That listing was just taken.");
+  if (li < 0) return msg(player, t(player, "gts.taken"));
   const fields = S.takePokemon(player, pick.tag);
-  if (!fields) return msg(player, "That Pokemon just moved - try again.");
-  if (!matches(fields, entry.want)) { S.givePokemon(player, fields); return msg(player, "It no longer matches the request."); }
+  if (!fields) return msg(player, t(player, "gts.moved"));
+  if (!matches(fields, entry.want)) { S.givePokemon(player, fields); return msg(player, t(player, "gts.nomatch")); }
   suppressCatch(player.id);
   cur.splice(li, 1);
   jset("sl:gts", cur);
   deliver(entry.id, entry.n, fields);
-  if (S.givePokemon(player, entry.f)) msg(player, "Trade done! You got \u00a7l" + pokeLabel(entry.f) + "\u00a7r from " + entry.n + "!");
-  else { deliver(player.id, player.name, entry.f); msg(player, "Trade done! It arrives once you have space."); }
+  if (S.givePokemon(player, entry.f)) msg(player, t(player, "gts.trade.done", { label: pokeLabel(entry.f), name: entry.n }));
+  else { deliver(player.id, player.name, entry.f); msg(player, t(player, "gts.trade.donepc")); }
   try { player.playSound("random.levelup"); } catch {}
 }
 
 async function gtsMine(player) {
   const list = gtsList();
   const mine = list.filter((e) => e.id === player.id);
-  if (mine.length === 0) return msg(player, "You have no active listings.");
-  const form = themedRaw("serp.main.trade").body("\u00a7lMY LISTINGS\u00a7r\nTap to cancel and take back:");
-  for (const e of mine) form.button(pokeLabel(e.f) + "\n\u00a77wants: " + wantLabel(e.want), "pokedrock/pokedex/" + e.f[2]);
-  form.button("Back", "textures/ui/buttons/bubble_no");
+  if (mine.length === 0) return msg(player, t(player, "gts.nomine"));
+  const form = themedRaw("serp.main.trade").body(t(player, "gts.mine.body"));
+  for (const e of mine) form.button(t(player, "gts.mine.btn", { label: pokeLabel(e.f), want: wantLabel(player, e.want) }), "pokedrock/pokedex/" + e.f[2]);
+  form.button(t(player, "common.back"), "textures/ui/buttons/bubble_no");
   const res = await form.show(player).catch(() => null);
   if (!res || res.canceled || res.selection >= mine.length) return;
   const entry = mine[res.selection];
   const cur = gtsList();
   const li = cur.findIndex((e) => e.id === entry.id && e.at === entry.at);
-  if (li < 0) return msg(player, "That listing already completed - check your team/PC!");
+  if (li < 0) return msg(player, t(player, "gts.mine.completed"));
   cur.splice(li, 1);
   jset("sl:gts", cur);
   suppressCatch(player.id);
   if (!S.givePokemon(player, entry.f)) deliver(player.id, player.name, entry.f);
-  msg(player, "Listing cancelled, \u00a7l" + pokeLabel(entry.f) + "\u00a7r returned.");
+  msg(player, t(player, "gts.mine.cancelled", { label: pokeLabel(entry.f) }));
 }
 
 async function openMachine(player) {
   const o = owed()[player.id]?.length ?? 0;
   const form = themedRaw("serp.main.trade")
-    .body("\u00a7lTRADE MACHINE+\u00a7r\n\u00a77(tap without sneaking for SERP's own trade)\u00a7r" + (o ? "\n\u00a7a" + o + " Pokemon waiting for you!\u00a7r" : ""))
-    .button("Wonder Trade\n\u00a78Send one, get a surprise", "pokedrock/items/poke_ball")
-    .button("GTS - Browse listings\n\u00a78Fulfill someone's request", "pokedrock/items/great_ball")
-    .button("GTS - List a Pokemon\n\u00a78Set what you want back", "pokedrock/items/ultra_ball")
-    .button("GTS - My listings\n\u00a78Cancel / take back", "pokedrock/items/premier_ball");
-  form.button("Close", "textures/ui/buttons/bubble_no");
+    .body(t(player, "gts.machine.body", { owed: o ? t(player, "gts.machine.owed", { n: o }) : "" }))
+    .button(t(player, "gts.machine.wonder"), "pokedrock/items/poke_ball")
+    .button(t(player, "gts.machine.browse"), "pokedrock/items/great_ball")
+    .button(t(player, "gts.machine.list"), "pokedrock/items/ultra_ball")
+    .button(t(player, "gts.machine.mine"), "pokedrock/items/premier_ball");
+  form.button(t(player, "common.close"), "textures/ui/buttons/bubble_no");
   const res = await form.show(player).catch(() => null);
   if (!res || res.canceled) return;
   if (res.selection === 0) return openWonder(player);
@@ -205,7 +206,7 @@ export function initGts() {
       while (q.length > 0) {
         suppressCatch(p.id);
         if (!S.givePokemon(p, q[0])) break; // team+PC full, retry later
-        msg(p, "Delivery: \u00a7l" + pokeLabel(q.shift()) + "\u00a7r arrived from a trade!");
+        msg(p, t(p, "gts.delivery", { label: pokeLabel(q.shift()) }));
         try { p.playSound("random.levelup"); } catch {}
         changed = true;
       }
