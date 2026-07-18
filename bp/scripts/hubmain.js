@@ -160,24 +160,29 @@ async function openLeaderboards(player) {
     const prizeLine = (hasPrize(cfg.r1) || hasPrize(cfg.r2) || hasPrize(cfg.r3))
         ? t(player, "season.hub.prizeline", { r1: rankLabel(player, cfg.r1), r2: rankLabel(player, cfg.r2), r3: rankLabel(player, cfg.r3) })
         : t(player, "season.hub.noprize");
-    while (true) {
-        const sel = await actionMenu(player, t(player, "season.hub.title", { w: weekNum() }),
-            t(player, "season.hub.body", { d: daysLeft(), prize: prizeLine }),
-            CATS.map(([, key]) => ({ label: t(player, "season.cat." + key), icon: "textures/items/gold_ingot" })), "pokedex_yellow");
-        if (sel < 0) return;
-        const [, key] = CATS[sel];
-        const lb = seasonScores();
+    const medals = ["§6#1", "§7#2", "§c#3"];
+    const lb = seasonScores();
+    // One scrollable list: every category with its top 5, laid out as text rows
+    // (no per-category buttons - the whole board reads top to bottom).
+    const sections = [];
+    for (const [, key] of CATS) {
         const rows = Object.entries(lb)
             .map(([name, v]) => [name, v[key] ?? 0])
             .sort((a, b) => b[1] - a[1])
-            .slice(0, 10);
-        const medals = ["§6#1", "§7#2", "§c#3"];
-        const body = rows.length === 0 || rows[0][1] === 0 ? t(player, "season.hub.noscores") :
-            rows.map(([n, v], i) => t(player, "season.hub.row", { medal: (medals[i] ?? "§f#" + (i + 1)), name: n, score: v, unit: t(player, "season.unit." + key), you: (n === player.name ? t(player, "season.hub.you") : "") })).join("\n");
-        const back = await actionMenu(player, t(player, "season.cat." + key), body,
-            [{ label: t(player, "common.back"), icon: "textures/items/gold_ingot" }], "pokedex_yellow");
-        if (back < 0) return;
+            .slice(0, 5)
+            .filter(([, v]) => v > 0);
+        const lines = rows.length === 0
+            ? "  " + t(player, "season.hub.noscores")
+            : rows.map(([n, v], i) => t(player, "season.hub.row", {
+                medal: (medals[i] ?? "§f#" + (i + 1)), name: n, score: v,
+                unit: t(player, "season.unit." + key),
+                you: (n === player.name ? t(player, "season.hub.you") : "")
+            })).join("\n");
+        sections.push(t(player, "season.cattitle", { title: t(player, "season.cat." + key) }) + "\n" + lines);
     }
+    const body = t(player, "season.hub.body", { d: daysLeft(), prize: prizeLine }) + "\n\n" + sections.join("\n\n");
+    await actionMenu(player, t(player, "season.hub.title", { w: weekNum() }), body,
+        [{ label: t(player, "common.close"), icon: "textures/ui/buttons/bubble_no" }], "pokedex_yellow");
 }
 
 async function openGuide(player) {
