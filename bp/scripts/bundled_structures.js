@@ -3,5 +3,9 @@ export const BUNDLED = [
   {
     "id": "serplumen:casa_cereijeira",
     "name": "casa cereijeira"
+  },
+  {
+    "id": "serplumen:modern_survival_base",
+    "name": "modern survival base"
   }
 ];
