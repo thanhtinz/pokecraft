@@ -72,6 +72,7 @@ export const STRINGS = {
     // --- language switch itself ---
     "lang.button":      { en: "Language: §aEnglish\n§8Tap to switch to Vietnamese", vi: "Ngôn ngữ: §aTiếng Việt\n§8Bấm để chuyển sang English" },
     "lang.switched":    { en: "§a[SunHub] Language set to English.", vi: "§a[SunHub] Đã chuyển sang Tiếng Việt." },
+    "lang.compact":     { en: "§9§lEN §r§8» Language", vi: "§9§lVI §r§8» Ngôn ngữ" },
 
     // --- hub header ---
     "hub.title":        { en: "MENU - {server}", vi: "MENU - {server}" },
