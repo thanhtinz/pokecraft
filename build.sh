@@ -2,9 +2,12 @@
 # Build the SerpLumen .mcaddon from the bp/ (behavior) and rp/ (resource) packs.
 #
 # Version comes from bp/manifest.json (header.version). At package time each
-# pack is copied into a versioned folder (SerpLumen<ver>B / SerpLumen<ver>R),
-# each is zipped on its own, then the two zips are combined into the .mcaddon -
-# the exact structure the project ships.
+# pack is copied into a versioned folder (SerpLumen<ver>B / SerpLumen<ver>R) and
+# the two folders are zipped DIRECTLY into the .mcaddon. Minecraft (especially
+# iOS/Bedrock) only recurses into folders and .mcpack files when importing a
+# .mcaddon - it does NOT open inner .zip files, so a nested a.zip/b.zip layout
+# imports as "Unknown Pack". Keeping the pack folders at the archive root is the
+# universally-importable structure.
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -31,9 +34,7 @@ cp -r "$BP" "$TMP/SerpLumen${VERUS}B"
 cp -r "$RP" "$TMP/SerpLumen${VERUS}R"
 (
   cd "$TMP"
-  zip -r -X -q a.zip "SerpLumen${VERUS}B"
-  zip -r -X -q b.zip "SerpLumen${VERUS}R"
-  zip -X -q addon.mcaddon a.zip b.zip
+  zip -r -X -q addon.mcaddon "SerpLumen${VERUS}B" "SerpLumen${VERUS}R"
 )
 mkdir -p dist
 rm -f "$OUT"
