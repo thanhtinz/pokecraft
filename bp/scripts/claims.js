@@ -298,7 +298,10 @@ export async function openClaimsAdmin(admin) {
     return;
   }
   if (act === 0) {
-    try { admin.teleport({ x: (c.x1 + c.x2) / 2, y: 100, z: (c.z1 + c.z2) / 2 }, { dimension: world.getDimension("overworld") }); } catch {}
+    // land at the stored ground height when known; slow-fall so the drop is safe
+    const ty = (c.y ?? 100) + 1;
+    try { admin.addEffect("minecraft:slow_falling", 300, { amplifier: 0, showParticles: false }); } catch {}
+    try { admin.teleport({ x: (c.x1 + c.x2) / 2, y: ty, z: (c.z1 + c.z2) / 2 }, { dimension: world.getDimension("overworld") }); } catch {}
   } else if (act === 1) {
     if (!(await confirmForm(admin, t(admin, "claims.admin.delete.confirm", { owner: c.ownerName })))) return;
     save(all().filter((x) => x.id !== c.id));

@@ -70,7 +70,11 @@ async function homesMenu(player) {
     if (sel < lands.length) {
         const cl = lands[sel];
         const dest = { x: Math.floor((cl.x1 + cl.x2) / 2) + 0.5, y: (cl.y ?? 100) + 1, z: Math.floor((cl.z1 + cl.z2) / 2) + 0.5 };
-        if (cl.y === undefined) { try { player.addEffect("minecraft:slow_falling", 300, { amplifier: 0 }); } catch {} }
+        // The claim center can sit well below the spot where the owner claimed
+        // (edge/hill), and old claims fall back to y=100 - either way the player
+        // can drop from a height. Always give slow-falling so the landing is
+        // safe no matter how far the drop, and clear any leftover fall distance.
+        try { player.addEffect("minecraft:slow_falling", 300, { amplifier: 0, showParticles: false }); } catch {}
         tpTo(player, dest, cl.dim);
         return;
     }
