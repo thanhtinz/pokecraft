@@ -9,8 +9,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "SerpLumen*B/**"
-      - "SerpLumen*R/**"
+      - "bp/**"
+      - "rp/**"
       - "build.sh"
       - ".github/workflows/release.yml"
   workflow_dispatch: {}
@@ -31,10 +31,10 @@ jobs:
       - name: Build .mcaddon
         run: bash build.sh
 
-      - name: Read version from pack folder
+      - name: Read version from bp/manifest.json
         id: v
         run: |
-          VER=$(ls -d SerpLumen*B | head -1 | sed -E 's/^SerpLumen([0-9_]+)B$/\1/' | tr '_' '.')
+          VER=$(node -e "console.log(JSON.parse(require('fs').readFileSync('bp/manifest.json','utf8')).header.version.join('.'))")
           echo "ver=$VER" >> "$GITHUB_OUTPUT"
           echo "file=$(ls dist/*.mcaddon | head -1)" >> "$GITHUB_OUTPUT"
 

@@ -1,22 +1,23 @@
 #!/usr/bin/env bash
-# Build the SerpLumen .mcaddon from the two pack folders.
+# Build the SerpLumen .mcaddon from the bp/ (behavior) and rp/ (resource) packs.
 #
-# Reproduces the project's packaging exactly: each pack is zipped on its own
-# (keeping its nested SerpLumen<ver>B / SerpLumen<ver>R folder), then the two
-# zips are combined into the .mcaddon. Version is read from the BP manifest.
+# Version comes from bp/manifest.json (header.version). At package time each
+# pack is copied into a versioned folder (SerpLumen<ver>B / SerpLumen<ver>R),
+# each is zipped on its own, then the two zips are combined into the .mcaddon -
+# the exact structure the project ships.
 set -euo pipefail
 cd "$(dirname "$0")"
 
-BP=$(ls -d SerpLumen*B | head -1)
-RP=$(ls -d SerpLumen*R | head -1)
+BP=bp
+RP=rp
 
-# version string like 3_33_0 from the BP folder name
-VER=$(echo "$BP" | sed -E 's/^SerpLumen([0-9_]+)B$/\1/')
-OUT="dist/SerpLumen_v${VER}.mcaddon"
+VERDOT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('$BP/manifest.json','utf8')).header.version.join('.'))")
+VERUS=${VERDOT//./_}
+OUT="dist/SerpLumen_v${VERUS}.mcaddon"
 
-echo "BP=$BP  RP=$RP  ->  $OUT"
+echo "version=$VERDOT  ->  $OUT"
 
-# sanity: both manifests must parse
+# both manifests must parse
 for m in "$BP/manifest.json" "$RP/manifest.json"; do
   node -e "JSON.parse(require('fs').readFileSync('$m','utf8'))" || { echo "bad manifest: $m"; exit 1; }
 done
@@ -25,11 +26,18 @@ done
 for f in "$BP"/scripts/*.js; do node --check "$f"; done
 echo "all scripts pass node --check"
 
+TMP=$(mktemp -d)
+cp -r "$BP" "$TMP/SerpLumen${VERUS}B"
+cp -r "$RP" "$TMP/SerpLumen${VERUS}R"
+(
+  cd "$TMP"
+  zip -r -X -q a.zip "SerpLumen${VERUS}B"
+  zip -r -X -q b.zip "SerpLumen${VERUS}R"
+  zip -X -q addon.mcaddon a.zip b.zip
+)
 mkdir -p dist
-rm -f a.zip b.zip "$OUT"
-zip -r -X -q a.zip "$BP"
-zip -r -X -q b.zip "$RP"
-zip -X -q "$OUT" a.zip b.zip
-rm -f a.zip b.zip
+rm -f "$OUT"
+mv "$TMP/addon.mcaddon" "$OUT"
+rm -rf "$TMP"
 
 echo "built $OUT ($(du -h "$OUT" | cut -f1))"
