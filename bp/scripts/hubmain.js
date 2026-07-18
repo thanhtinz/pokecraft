@@ -271,27 +271,35 @@ async function openGuide(player) {
     }
 }
 
+// open a category submenu; Back (or cancel) returns to the hub
+async function openGroup(player, group) {
+    const items = [...group.items, { label: t(player, "common.back"), icon: "textures/ui/buttons/bubble_no", run: () => openHub(player) }];
+    const sel = await actionMenu(player, group.label.split("\n")[0], t(player, "group.pick"),
+        items.map((i) => ({ label: i.label, icon: i.icon })), "sunhub");
+    if (sel < 0) return openHub(player);
+    await items[sel].run();
+}
+
 export async function openHub(player) {
     const daily = dailyStatus(player);
     const admin = isAdmin(player);
     const unread = hasUnread(player);
-    // Order-independent: each entry carries its own handler. The language
-    // toggle is a small one-line button pinned to the top.
-    const items = [
-        { label: t(player, "lang.compact"), icon: "textures/items/compass", run: async () => {
+
+    // leaf actions - each carries its own handler (order-independent)
+    const A = {
+        lang: { label: t(player, "lang.compact"), icon: "textures/items/compass", run: async () => {
             toggleLang(player);
             player.sendMessage(t(player, "lang.switched"));
             await openHub(player); // redraw the whole menu in the new language
         } },
-        { label: (unread ? "§e(!) " : "") + t(player, "hub.announces") + (unread ? t(player, "hub.announces.new") : ""), icon: "textures/items/paper", run: () => openAnnounces(player) },
-        { label: t(player, "hub.bank"), icon: "textures/items/emerald", run: () => openBank(player) },
-        { label: daily.claimedToday ? t(player, "hub.daily.done") : t(player, "hub.daily.ready"), icon: "textures/items/clock_item", run: () => {
+        announces: { label: (unread ? "§e(!) " : "") + t(player, "hub.announces") + (unread ? t(player, "hub.announces.new") : ""), icon: "textures/items/paper", run: () => openAnnounces(player) },
+        bank: { label: t(player, "hub.bank"), icon: "textures/items/emerald", run: () => openBank(player) },
+        daily: { label: daily.claimedToday ? t(player, "hub.daily.done") : t(player, "hub.daily.ready"), icon: "textures/items/clock_item", run: () => {
             const r = claimDaily(player);
             player.sendMessage((r.ok ? "§a" : "§e") + "[SunHub] " + r.msg);
         } },
-        { label: t(player, "hub.quests"), icon: "textures/items/book_written", run: () => openQuests(player) },
-        { label: t(player, "hub.packs"), icon: "textures/items/minecart_chest", run: () => openKits(player) },
-        { label: (activeGift() ? t(player, "hub.gifts.live") : t(player, "hub.gifts.code")), icon: "textures/items/cake", run: async () => {
+        packs: { label: t(player, "hub.packs"), icon: "textures/items/minecart_chest", run: () => openKits(player) },
+        gifts: { label: (activeGift() ? t(player, "hub.gifts.live") : t(player, "hub.gifts.code")), icon: "textures/items/cake", run: async () => {
             const g = activeGift();
             if (g && !giftClaimed(player, g)) {
                 const s2 = await actionMenu(player, t(player, "hub.gifts.title"), t(player, "hub.gifts.body"), [
@@ -302,26 +310,37 @@ export async function openHub(player) {
                 else if (s2 === 1) await redeemGift(player);
             } else await redeemGift(player);
         } },
-        { label: t(player, "hub.travel"), icon: "textures/items/ender_pearl", run: () => openNavigator(player) },
-        { label: t(player, "hub.heal"), icon: "textures/items/potion_bottle_heal", run: () => doHealParty(player) },
-        { label: seasonEnabled() ? t(player, "hub.leaderboards.on", { w: weekNum() }) : t(player, "hub.leaderboards.off"), icon: "textures/items/gold_ingot", run: () => openLeaderboards(player) },
-        { label: t(player, "hub.jobs"), icon: "textures/items/iron_pickaxe", run: () => openJobs(player) },
-        { label: t(player, "hub.buddy"), icon: "textures/items/carrot_on_a_stick", run: () => openBuddy(player) },
-        { label: t(player, "hub.titles"), icon: "textures/items/name_tag", run: () => openTitles(player) },
-        { label: t(player, "hub.claims"), icon: "textures/blocks/grass_side_carried", run: () => openClaims(player) },
-        { label: platesOn(player) ? t(player, "hub.plates.on") : t(player, "hub.plates.off"), icon: "textures/items/name_tag", run: () => {
+        jobs: { label: t(player, "hub.jobs"), icon: "textures/items/iron_pickaxe", run: () => openJobs(player) },
+        travel: { label: t(player, "hub.travel"), icon: "textures/items/ender_pearl", run: () => openNavigator(player) },
+        heal: { label: t(player, "hub.heal"), icon: "textures/items/potion_bottle_heal", run: () => doHealParty(player) },
+        claims: { label: t(player, "hub.claims"), icon: "textures/blocks/grass_side_carried", run: () => openClaims(player) },
+        quests: { label: t(player, "hub.quests"), icon: "textures/items/book_written", run: () => openQuests(player) },
+        leaderboards: { label: seasonEnabled() ? t(player, "hub.leaderboards.on", { w: weekNum() }) : t(player, "hub.leaderboards.off"), icon: "textures/items/gold_ingot", run: () => openLeaderboards(player) },
+        titles: { label: t(player, "hub.titles"), icon: "textures/items/name_tag", run: () => openTitles(player) },
+        buddy: { label: t(player, "hub.buddy"), icon: "textures/items/carrot_on_a_stick", run: () => openBuddy(player) },
+        plates: { label: platesOn(player) ? t(player, "hub.plates.on") : t(player, "hub.plates.off"), icon: "textures/items/name_tag", run: () => {
             const on = !platesOn(player);
             setPlates(player, on);
             player.sendMessage(on ? t(player, "msg.plates.on") : t(player, "msg.plates.off"));
         } },
-        { label: isLow(player) ? t(player, "hub.battery.on") : t(player, "hub.battery.off"), icon: "textures/items/redstone_dust", run: () => {
+        battery: { label: isLow(player) ? t(player, "hub.battery.on") : t(player, "hub.battery.off"), icon: "textures/items/redstone_dust", run: () => {
             const low = !isLow(player);
             setLow(player, low);
             player.sendMessage(low ? t(player, "msg.battery.on") : t(player, "msg.battery.off"));
         } },
-        { label: t(player, "hub.guide"), icon: "textures/items/book_normal", run: () => openGuide(player) },
+        guide: { label: t(player, "hub.guide"), icon: "textures/items/book_normal", run: () => openGuide(player) },
+    };
+
+    const groups = [
+        { label: t(player, "group.economy"), icon: "textures/items/emerald", items: [A.bank, A.daily, A.packs, A.gifts, A.jobs] },
+        { label: t(player, "group.travel"), icon: "textures/items/ender_pearl", items: [A.travel, A.heal, A.claims] },
+        { label: t(player, "group.achieve"), icon: "textures/items/gold_ingot", items: [A.quests, A.leaderboards, A.titles, A.buddy] },
+        { label: t(player, "group.settings"), icon: "textures/items/redstone_dust", items: [A.plates, A.battery, A.guide] },
     ];
-    if (admin) items.push({ label: t(player, "hub.admin"), icon: "textures/items/netherite_pickaxe", run: () => openAdmin(player) });
+
+    // top level: small language toggle, announcements, then the category groups
+    const top = [A.lang, A.announces, ...groups.map((g) => ({ label: g.label, icon: g.icon, run: () => openGroup(player, g) }))];
+    if (admin) top.push(A.admin = { label: t(player, "hub.admin"), icon: "textures/items/netherite_pickaxe", run: () => openAdmin(player) });
 
     const jobLv = (() => { try { return maxJobLevel(player); } catch { return 1; } })();
     const badge = (() => { try { return titlePrefix(player).trim(); } catch { return ""; } })();
@@ -334,9 +353,9 @@ export async function openHub(player) {
 
     const sel = await actionMenu(player, t(player, "hub.title", { server: (SERVER_NAME || "SUNHUB").toUpperCase() }),
         header,
-        items.map((i) => ({ label: i.label, icon: i.icon })), "sunhub");
+        top.map((i) => ({ label: i.label, icon: i.icon })), "sunhub");
     if (sel < 0) return;
-    await items[sel].run();
+    await top[sel].run();
 }
 
 // The Hub is opened from the Pokedex menu's "Hub" button only - no separate Hub

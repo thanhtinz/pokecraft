@@ -74,6 +74,13 @@ export const STRINGS = {
     "lang.switched":    { en: "§a[SunHub] Language set to English.", vi: "§a[SunHub] Đã chuyển sang Tiếng Việt." },
     "lang.compact":     { en: "§9§lEN §r§8» Language", vi: "§9§lVI §r§8» Ngôn ngữ" },
 
+    // --- hub groups (submenus) ---
+    "group.pick":       { en: "Choose an option:", vi: "Chọn một mục:" },
+    "group.economy":    { en: "§aEconomy\n§8Bank · Jobs · Daily · Gifts", vi: "§aKinh tế\n§8Ngân hàng · Nghề · Điểm danh · Quà" },
+    "group.travel":     { en: "§bTravel\n§8Homes · TPA · Heal · Claims", vi: "§bDi chuyển\n§8Nhà · TPA · Hồi máu · Đất" },
+    "group.achieve":    { en: "§6Progress\n§8Quests · Season · Titles · Buddy", vi: "§6Thành tích\n§8Nhiệm vụ · Mùa · Danh hiệu · Đồng hành" },
+    "group.settings":   { en: "§7Settings\n§8Nameplates · Battery · Guide", vi: "§7Cài đặt\n§8Bảng tên · Tiết kiệm pin · Hướng dẫn" },
+
     // --- hub header ---
     "hub.title":        { en: "MENU - {server}", vi: "MENU - {server}" },
     "hub.header.bal":   { en: "§f{name}{rank}§r  §aBalance: §6{coins}", vi: "§f{name}{rank}§r  §aSố dư: §6{coins}" },
