@@ -10,6 +10,7 @@
 import { world, BlockVolume, StructureSaveMode } from "@minecraft/server";
 import { ModalFormData } from "@minecraft/server-ui";
 import { actionMenu, confirmForm } from "./forms.js";
+import { BUNDLED } from "./bundled_structures.js"; // .mcstructure files shipped in the pack
 
 const REG = "sl:structreg";          // ["sl:house", ...] saved ids
 const AXIS_CAP = 64;                 // max blocks per axis (structure block limit)
@@ -95,15 +96,20 @@ async function saveSelection(admin) {
   }
 }
 
-// ---------- place a saved structure ----------
+// ---------- place a structure (pack-bundled .mcstructure + admin-saved) ----------
 async function placeStructure(admin) {
-  const list = reg().filter((id) => { try { return !!world.structureManager.get(id); } catch { return false; } });
-  saveReg(list); // prune any that no longer exist
-  if (list.length === 0) return admin.sendMessage("§e[Structures] Chưa có công trình nào được lưu.");
+  const saved = reg().filter((id) => { try { return !!world.structureManager.get(id); } catch { return false; } });
+  saveReg(saved); // prune saved ones that no longer exist
+  // pack .mcstructure files are loaded lazily - list them as-is, don't probe
+  const items = [
+    ...BUNDLED.map((b) => ({ id: b.id, label: "§d" + b.name + "\n§8[pack] " + b.id })),
+    ...saved.map((id) => ({ id, label: pretty(id) + "\n§8[đã lưu]" })),
+  ];
+  if (items.length === 0) return admin.sendMessage("§e[Structures] Chưa có công trình nào (chưa có file .mcstructure trong pack, chưa lưu vùng nào).");
   const sel = await actionMenu(admin, "Đặt công trình", "§7Đặt từ vị trí bạn đứng (góc thấp nhất).\nChọn công trình:",
-    list.map((id) => ({ label: pretty(id), icon: "textures/blocks/grass_side_carried" })), "pokedex_black");
+    items.map((it) => ({ label: it.label, icon: "textures/blocks/grass_side_carried" })), "pokedex_black");
   if (sel < 0) return;
-  const id = list[sel];
+  const id = items[sel].id;
   const at = floorLoc(admin.location);
   try {
     world.structureManager.place(id, admin.dimension, at, { includeEntities: false, includeBlocks: true });
