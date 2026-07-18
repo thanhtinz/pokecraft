@@ -12,6 +12,7 @@ import { POKENAMES } from "./pokenames.js";
 import { givePokemon } from "./dxgive.js";
 import { suppressCatch } from "./tracker.js";
 import { grantByName, top1Titles } from "./titles.js";
+import { t } from "./i18n.js";
 
 const SEASON = "sl:season";     // { w }
 const BASE = "sl:lb_base";      // snapshot of sl:lb at week start
@@ -19,6 +20,7 @@ const REWARDS = "sl:searewards";// { r1: {coins,item?,poke?}, r2, r3 } per rank,
 const ENABLED = "sl:seaon";     // "0" = leaderboards & payouts off
 const OWED = "sl:owedprize";    // { playerName: {coins, items:[{id,name,qty}], pokes:[{dex,lvl,shiny}]} }
 
+// category label key + score key + unit key (all resolved via i18n at display)
 export const CATS = [
   ["Pokedex completion", "d", "species"],
   ["Shiny caught", "s", "shiny"],
@@ -35,9 +37,9 @@ export function setSeasonEnabled(on) {
   if (on) { // fresh restart: new baseline, current week, no back-payout for the off period
     jset(BASE, lbData());
     jset(SEASON, { w: weekNum() });
-    world.sendMessage("\u00a7d[SEASON] \u00a7fLeaderboards are \u00a7aON\u00a7f - new race starts now!");
+    for (const p of world.getAllPlayers()) p.sendMessage(t(p, "season.on"));
   } else {
-    world.sendMessage("\u00a7d[SEASON] \u00a7fLeaderboards are \u00a7cOFF\u00a7f - no weekly race for now.");
+    for (const p of world.getAllPlayers()) p.sendMessage(t(p, "season.off"));
   }
 }
 
@@ -52,12 +54,12 @@ export function rewardsCfg() {
   return { r1: normRank(r.r1), r2: normRank(r.r2), r3: normRank(r.r3) };
 }
 export function setRewardsCfg(r) { jset(REWARDS, r); }
-export function rankLabel(rk) {
+export function rankLabel(viewer, rk) {
   const parts = [];
   if (rk.coins > 0) parts.push(fmt(rk.coins));
   if (rk.item) parts.push(rk.item.qty + "x " + rk.item.name);
   if (rk.poke) parts.push((POKENAMES[String(rk.poke.dex)] ?? ("#" + rk.poke.dex)) + " Lv." + rk.poke.lvl + (rk.poke.shiny ? " \uE132" : ""));
-  return parts.length ? parts.join(" + ") : "none";
+  return parts.length ? parts.join(" + ") : t(viewer, "season.rank.none");
 }
 
 // weekly score = lifetime - baseline (level stays "current highest")
@@ -101,29 +103,40 @@ function finalizeWeek(oldWeek) {
   const cfg = rewardsCfg();
   const pot = [cfg.r1, cfg.r2, cfg.r3];
   const scores = seasonScores();
-  const lines = [];
-  for (const [title, key, unit] of CATS) {
+  // compute winners + run payouts ONCE, collect a structure to render per language
+  const cats = [];
+  for (const [, key] of CATS) {
     const rows = Object.entries(scores)
       .map(([n, v]) => [n, v[key] ?? 0])
       .filter(([, v]) => v > 0)
       .sort((a, b) => b[1] - a[1])
       .slice(0, 3);
     if (rows.length === 0) continue;
-    const medals = ["\u00a76#1", "\u00a77#2", "\u00a7c#3"];
-    lines.push("\u00a7l" + title + "\u00a7r");
-    rows.forEach(([n, v], i) => {
-      if (i === 0) for (const t of top1Titles()) grantByName(n, t.id); // weekly #1 titles
+    const entries = rows.map(([n, v], i) => {
+      if (i === 0) for (const tt of top1Titles()) grantByName(n, tt.id); // weekly #1 titles
       const rk = pot[i] ?? { coins: 0 };
       const has = (rk.coins > 0) || rk.item || rk.poke;
       if (has) payPrize(n, rk);
-      lines.push(medals[i] + " \u00a7f" + n + " \u00a78- \u00a7b" + v + " " + unit + (has ? " \u00a76+" + rankLabel(rk) : ""));
+      return { name: n, score: v, i, rk, has };
     });
+    cats.push({ key, entries });
   }
-  if (lines.length > 0) {
-    world.sendMessage("\u00a7d\u00a7l=== SEASON WEEK " + oldWeek + " RESULTS ===\u00a7r\n" + lines.join("\n") + "\n\u00a7dNew season starts NOW - boards are reset. Good luck!");
-    for (const p of world.getAllPlayers()) { try { p.playSound("random.levelup"); } catch {} }
+  const medals = ["§6#1", "§7#2", "§c#3"];
+  if (cats.length > 0) {
+    for (const pl of world.getAllPlayers()) {
+      const lines = [];
+      for (const c of cats) {
+        lines.push(t(pl, "season.cattitle", { title: t(pl, "season.cat." + c.key) }));
+        for (const e of c.entries) {
+          const reward = e.has ? " §6+" + rankLabel(pl, e.rk) : "";
+          lines.push(t(pl, "season.results.line", { medal: medals[e.i], name: e.name, score: e.score, unit: t(pl, "season.unit." + c.key), reward }));
+        }
+      }
+      pl.sendMessage(t(pl, "season.results.header", { w: oldWeek }) + "\n" + lines.join("\n") + "\n" + t(pl, "season.results.footer"));
+      try { pl.playSound("random.levelup"); } catch {}
+    }
   } else {
-    world.sendMessage("\u00a7d[SEASON] New week - leaderboards reset!");
+    for (const pl of world.getAllPlayers()) pl.sendMessage(t(pl, "season.newweek"));
   }
 }
 
@@ -150,7 +163,8 @@ export function initSeason() {
         if (q.coins > 0) addCoins(p, q.coins);
         for (const it of q.items ?? []) giveItem(p, it.id, it.qty);
         for (const pk of q.pokes ?? []) { suppressCatch(p.id); givePokemon(p, pk.dex, pk.lvl, { shiny: !!pk.shiny }); }
-        p.sendMessage("\u00a7d[SEASON] \u00a7fYour prize from last week arrived: \u00a76" + rankLabel({ coins: q.coins, item: null, poke: null }) + ((q.items?.length || q.pokes?.length) ? " \u00a7f+ items/Pokemon (check inventory & team)!" : "\u00a7f!"));
+        const extra = (q.items?.length || q.pokes?.length) ? t(p, "season.owed.extra") : t(p, "season.owed.only");
+        p.sendMessage(t(p, "season.owed", { coins: rankLabel(p, { coins: q.coins, item: null, poke: null }), extra }));
         try { p.playSound("random.levelup"); } catch {}
         delete o[p.name];
         changed = true;

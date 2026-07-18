@@ -152,30 +152,30 @@ async function openGrantAdmin(admin) {
 
 async function openLeaderboards(player) {
     if (!seasonEnabled()) {
-        player.sendMessage("§e[SunHub] Season leaderboards are currently turned off.");
+        player.sendMessage(t(player, "season.hub.off"));
         return;
     }
     const cfg = rewardsCfg();
     const hasPrize = (rk) => rk && (rk.coins > 0 || rk.item || rk.poke);
     const prizeLine = (hasPrize(cfg.r1) || hasPrize(cfg.r2) || hasPrize(cfg.r3))
-        ? "\n§6#1: " + rankLabel(cfg.r1) + "\n§7#2: " + rankLabel(cfg.r2) + "\n§c#3: " + rankLabel(cfg.r3)
-        : "\n§8(weekly prizes not set yet)";
+        ? t(player, "season.hub.prizeline", { r1: rankLabel(player, cfg.r1), r2: rankLabel(player, cfg.r2), r3: rankLabel(player, cfg.r3) })
+        : t(player, "season.hub.noprize");
     while (true) {
-        const sel = await actionMenu(player, "Season - Week " + weekNum(),
-            "This week's race - resets in §b" + daysLeft() + "d§r. Top 3 of each board win!" + prizeLine,
-            CATS.map(([label]) => ({ label, icon: "textures/items/gold_ingot" })), "pokedex_yellow");
+        const sel = await actionMenu(player, t(player, "season.hub.title", { w: weekNum() }),
+            t(player, "season.hub.body", { d: daysLeft(), prize: prizeLine }),
+            CATS.map(([, key]) => ({ label: t(player, "season.cat." + key), icon: "textures/items/gold_ingot" })), "pokedex_yellow");
         if (sel < 0) return;
-        const [title, key, unit] = CATS[sel];
+        const [, key] = CATS[sel];
         const lb = seasonScores();
         const rows = Object.entries(lb)
             .map(([name, v]) => [name, v[key] ?? 0])
             .sort((a, b) => b[1] - a[1])
             .slice(0, 10);
         const medals = ["§6#1", "§7#2", "§c#3"];
-        const body = rows.length === 0 || rows[0][1] === 0 ? "§7No scores yet this week - go catch something!" :
-            rows.map(([n, v], i) => (medals[i] ?? "§f#" + (i + 1)) + " §r" + n + " §8- §b" + v + " " + unit + (n === player.name ? " §a(you)" : "")).join("\n");
-        const back = await actionMenu(player, title, body,
-            [{ label: "Back", icon: "textures/items/gold_ingot" }], "pokedex_yellow");
+        const body = rows.length === 0 || rows[0][1] === 0 ? t(player, "season.hub.noscores") :
+            rows.map(([n, v], i) => t(player, "season.hub.row", { medal: (medals[i] ?? "§f#" + (i + 1)), name: n, score: v, unit: t(player, "season.unit." + key), you: (n === player.name ? t(player, "season.hub.you") : "") })).join("\n");
+        const back = await actionMenu(player, t(player, "season.cat." + key), body,
+            [{ label: t(player, "common.back"), icon: "textures/items/gold_ingot" }], "pokedex_yellow");
         if (back < 0) return;
     }
 }

@@ -166,8 +166,8 @@ async function configRank(admin, cfg, rankKey, rankName) {
   }
   cfg[rankKey] = rk;
   setRewardsCfg(cfg);
-  admin.sendMessage("\u00a7a[SunHub] " + rankName + " prize set: " + rankLabel(rk) + " \u00a77(paid on weekly reset - " + daysLeft() + "d left)");
-  world.sendMessage("\u00a7d[SEASON] \u00a7fWeekly prize updated - \u00a76" + rankName + ": " + rankLabel(rk) + "\u00a7f per board. Race is on!");
+  admin.sendMessage("\u00a7a[SunHub] " + rankName + " prize set: " + rankLabel(admin, rk) + " \u00a77(paid on weekly reset - " + daysLeft() + "d left)");
+  world.sendMessage("\u00a7d[SEASON] \u00a7fWeekly prize updated - \u00a76" + rankName + ": " + rankLabel(admin, rk) + "\u00a7f per board. Race is on!");
 }
 
 async function configMilestone(admin, cfg, key, name) {
@@ -211,9 +211,9 @@ async function openSeasonAdmin(admin) {
   const sel = await actionMenu(admin, "Season Rewards",
     (on ? "\u00a7aLeaderboards: ON\u00a7r" : "\u00a7cLeaderboards: OFF\u00a7r") + " - per board, paid every Monday.", [
     { label: on ? "\u00a7cTurn leaderboards OFF\n\u00a78Pause race, resets & payouts" : "\u00a7aTurn leaderboards ON\n\u00a78Fresh race starts immediately", icon: "textures/items/redstone_dust" },
-    { label: "\u00a76#1 prize\n\u00a78" + rankLabel(cfg.r1), icon: "textures/items/gold_ingot" },
-    { label: "\u00a77#2 prize\n\u00a78" + rankLabel(cfg.r2), icon: "textures/items/iron_ingot" },
-    { label: "\u00a7c#3 prize\n\u00a78" + rankLabel(cfg.r3), icon: "textures/items/brick" },
+    { label: "\u00a76#1 prize\n\u00a78" + rankLabel(admin, cfg.r1), icon: "textures/items/gold_ingot" },
+    { label: "\u00a77#2 prize\n\u00a78" + rankLabel(admin, cfg.r2), icon: "textures/items/iron_ingot" },
+    { label: "\u00a7c#3 prize\n\u00a78" + rankLabel(admin, cfg.r3), icon: "textures/items/brick" },
   ], "pokedex_orange");
   if (sel < 0) return;
   if (sel === 0) return setSeasonEnabled(!on);
@@ -227,7 +227,7 @@ export async function openEventsAdmin(admin) {
   const sel = await actionMenu(admin, "Events & Gifts", b ? "§ax2 event running (" + b.mins + " min left)" : "Run something fun:", [
     { label: "x2 Events\n§8Double coins or quest rewards", icon: "textures/items/emerald" },
     { label: "Mystery Gift\n§8Free Pokemon for everyone", icon: "textures/items/cake" },
-    { label: "Season Rewards\n§8#1: " + rankLabel(cfg.r1), icon: "textures/items/gold_ingot" },
+    { label: "Season Rewards\n§8#1: " + rankLabel(admin, cfg.r1), icon: "textures/items/gold_ingot" },
     { label: "Streak Rewards\n§8Check-in milestone Pokemon", icon: "textures/items/clock_item" },
   ], "pokedex_orange");
   if (sel === 0) return openBoostAdmin(admin);
