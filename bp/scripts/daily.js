@@ -4,6 +4,7 @@ import { giveItem, dayNumber } from "./forms.js";
 import { givePokemon } from "./dxgive.js";
 import { suppressCatch } from "./tracker.js";
 import { POKENAMES } from "./pokenames.js";
+import { t } from "./i18n.js";
 
 // Streak milestone Pokemon - configured by admins (Events & Gifts -> Streak
 // Rewards). m7 fires at streak 7, m14 at 14, m30 at every multiple of 30.
@@ -19,9 +20,9 @@ export function milestoneLabel(mk) {
 
 function milestoneFor(streak) {
   const cfg = milestoneCfg();
-  if (streak === 7 && cfg.m7) return { mk: cfg.m7, name: "7-day" };
-  if (streak === 14 && cfg.m14) return { mk: cfg.m14, name: "14-day" };
-  if (streak > 0 && streak % 30 === 0 && cfg.m30) return { mk: cfg.m30, name: streak + "-day" };
+  if (streak === 7 && cfg.m7) return { mk: cfg.m7, days: 7 };
+  if (streak === 14 && cfg.m14) return { mk: cfg.m14, days: 14 };
+  if (streak > 0 && streak % 30 === 0 && cfg.m30) return { mk: cfg.m30, days: streak };
   return null;
 }
 
@@ -63,17 +64,17 @@ export function dailyStatus(player) {
 export function claimDaily(player) {
     const st = getState(player);
     const today = dayNumber();
-    if (st.last === today) return { ok: false, msg: "You already checked in today - come back tomorrow!" };
+    if (st.last === today) return { ok: false, msg: t(player, "daily.already") };
 
     // Bo lo 1 day tro len -> reset streak
     if (st.last !== today - 1) st.streak = 0;
 
     const reward = REWARDS[st.streak % 7];
     addCoins(player, reward.coins);
-    let msg = "Check-in day " + (st.streak % 7 + 1) + "/7: +" + fmt(reward.coins);
+    let msg = t(player, "daily.checkin", { d: st.streak % 7 + 1, coins: fmt(reward.coins) });
     if (reward.item) {
         giveItem(player, reward.item.id, reward.item.qty);
-        msg += " va " + reward.item.qty + "x " + reward.item.name;
+        msg += t(player, "daily.item", { qty: reward.item.qty, name: reward.item.name });
     }
 
     st.streak += 1;
@@ -87,10 +88,13 @@ export function claimDaily(player) {
         suppressCatch(player.id);
         const r = givePokemon(player, mile.mk.dex, mile.mk.lvl, { shiny: !!mile.mk.shiny });
         if (r.ok) {
-            msg += " §d+ " + mile.name + " streak gift: §l" + milestoneLabel(mile.mk) + "§r§d (" + (r.where === "team" ? "team" : "PC") + ")!";
-            world.sendMessage("§d[STREAK] §l" + player.name + "§r§d hit a " + mile.name + " check-in streak and earned §l" + milestoneLabel(mile.mk) + "§r§d!");
+            const where = r.where === "team" ? t(player, "daily.loc.team") : t(player, "daily.loc.pc");
+            msg += t(player, "daily.milestone.self", { streak: t(player, "daily.streakname", { n: mile.days }), label: milestoneLabel(mile.mk), where });
+            for (const pl of world.getAllPlayers()) {
+                pl.sendMessage(t(pl, "daily.milestone.broadcast", { name: player.name, streak: t(pl, "daily.streakname", { n: mile.days }), label: milestoneLabel(mile.mk) }));
+            }
         } else {
-            msg += " §c(streak gift skipped - team & PC full!)";
+            msg += t(player, "daily.milestone.full");
         }
     }
     return { ok: true, msg };

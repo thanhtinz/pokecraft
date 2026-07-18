@@ -1,6 +1,7 @@
 // Kits: bo qua nhan theo cooldown, item thuong max 5
 import { addCoins, fmt } from "./economy.js";
 import { actionMenu, giveItem, dayNumber } from "./forms.js";
+import { t } from "./i18n.js";
 
 const PROP = "se:kits";
 
@@ -31,20 +32,20 @@ export async function openKits(player) {
     const view = KITS.map((k) => {
         const last = st[k.id];
         let status;
-        if (last === undefined) status = "§a[RECEIVED]";
-        else if (k.cooldownDays < 0) status = "§8[Claimed]";
-        else if (today - last >= k.cooldownDays) status = "§a[RECEIVED]";
-        else status = "§e[" + (k.cooldownDays - (today - last)) + " days left]";
+        if (last === undefined) status = t(player, "kits.received");
+        else if (k.cooldownDays < 0) status = t(player, "kits.claimed");
+        else if (today - last >= k.cooldownDays) status = t(player, "kits.received");
+        else status = t(player, "kits.cooldown", { n: k.cooldownDays - (today - last) });
         const rw = [fmt(k.coins), ...k.items.map((i) => i.qty + "x " + i.name)].join(" + ");
-        return { kit: k, status, rw, ready: status.includes("RECEIVED") };
+        return { kit: k, status, rw, name: t(player, "kits.name." + k.id), ready: last === undefined || (k.cooldownDays >= 0 && today - last >= k.cooldownDays) };
     });
 
-    const sel = await actionMenu(player, "Kits", "Periodic packs:",
-        view.map((v) => ({ label: v.kit.name + " " + v.status + "\n§7" + v.rw })), "pokedex_purple");
+    const sel = await actionMenu(player, t(player, "kits.title"), t(player, "kits.body"),
+        view.map((v) => ({ label: t(player, "kits.item.btn", { name: v.name, status: v.status, rw: v.rw }) })), "pokedex_purple");
     if (sel < 0) return;
     const v = view[sel];
     if (!v.ready) {
-        player.sendMessage("§e[SunHub] This kit isn't ready yet.");
+        player.sendMessage(t(player, "kits.notready"));
         return;
     }
     st[v.kit.id] = today;
@@ -52,5 +53,5 @@ export async function openKits(player) {
     addCoins(player, v.kit.coins);
     for (const it of v.kit.items) giveItem(player, it.id, it.qty);
     player.playSound("random.levelup");
-    player.sendMessage("§a[SunHub] Claimed " + v.kit.name + ": " + v.rw);
+    player.sendMessage(t(player, "kits.claimedmsg", { name: v.name, rw: v.rw }));
 }

@@ -8,6 +8,8 @@ import { givePokemon } from "./dxgive.js";
 import { POKENAMES } from "./pokenames.js";
 import { pickPokemonSearch } from "./pokepick.js";
 import { allTitles, renderTitle, grantById } from "./titles.js";
+// i18n imported as T so it doesn't clash with the `t` title-object variable
+import { t as T } from "./i18n.js";
 
 const PROP = "se:gcodes";
 const REDEEMED = "se:redeemed";
@@ -26,7 +28,7 @@ function setCodes(c) { world.setDynamicProperty(PROP, JSON.stringify(c)); }
 function pkDex(p) { return typeof p === "object" && p ? p.dex : Number(p); }
 function pkLevel(p) { return typeof p === "object" && p && p.level ? p.level : 5; }
 
-function rewardText(g) {
+function rewardText(viewer, g) {
     const parts = [];
     if (g.coins > 0) parts.push(fmt(g.coins));
     if (g.itemId) parts.push(g.qty + "x " + g.itemName);
@@ -36,15 +38,15 @@ function rewardText(g) {
     }
     if (g.titleId) {
         const t = allTitles().find((x) => x.id === g.titleId);
-        parts.push(t ? "title " + renderTitle(t) + "§r" : "a title");
+        parts.push(t ? T(viewer, "gift.reward.title", { title: renderTitle(t) }) : T(viewer, "gift.reward.atitle"));
     }
     return parts.join(" + ");
 }
 
 // ---------- Player redeems a code ----------
 export async function redeemGift(player) {
-    const form = await new ModalFormData().title("Gift Code")
-        .textField("Enter code", "e.g. SUNNY2026").show(player);
+    const form = await new ModalFormData().title(T(player, "gift.redeem.title"))
+        .textField(T(player, "gift.redeem.field"), T(player, "gift.redeem.ph")).show(player);
     if (form.canceled || !form.formValues) return;
     const code = String(form.formValues[0]).trim().toUpperCase();
     if (!code) return;
@@ -52,7 +54,7 @@ export async function redeemGift(player) {
     const codes = getCodes();
     const gift = codes[code];
     if (!gift || gift.uses <= 0) {
-        player.sendMessage("§c[SunHub] Code invalid or used up.");
+        player.sendMessage(T(player, "gift.invalid"));
         return;
     }
     let redeemed = [];
@@ -61,7 +63,7 @@ export async function redeemGift(player) {
         if (typeof raw === "string") redeemed = JSON.parse(raw);
     } catch { /* ignore */ }
     if (redeemed.includes(code)) {
-        player.sendMessage("§e[SunHub] You already redeemed this code.");
+        player.sendMessage(T(player, "gift.already"));
         return;
     }
     gift.uses -= 1;
@@ -73,20 +75,20 @@ export async function redeemGift(player) {
     if (gift.itemId) giveItem(player, gift.itemId, gift.qty);
     if (gift.pokemon) {
         const r = givePokemon(player, pkDex(gift.pokemon), pkLevel(gift.pokemon));
-        if (!r.ok) player.sendMessage("§c[SunHub] Could not grant Pokemon: " + (r.reason || "error"));
-        else if (r.where === "pc") player.sendMessage("§e[SunHub] Team full - the Pokemon went to your PC.");
+        if (!r.ok) player.sendMessage(T(player, "gift.poke.fail", { reason: r.reason || "error" }));
+        else if (r.where === "pc") player.sendMessage(T(player, "gift.poke.pc"));
     }
     if (gift.titleId) grantById(player, gift.titleId, true);
     player.playSound("random.levelup");
-    player.sendMessage("§d[SunHub] Gift Code! You received: §f" + rewardText(gift));
-    if (gift.titleId) player.sendMessage("§d[SunHub] Equip your new title in Hub -> Titles!");
+    player.sendMessage(T(player, "gift.received", { reward: rewardText(player, gift) }));
+    if (gift.titleId) player.sendMessage(T(player, "gift.title.hint"));
 }
 
 // ---------- Admin create/delete codes ----------
 async function pickItemBySearch(admin) {
-    const form = await new ModalFormData().title("Attach an item")
-        .textField("Search (name or id)", "e.g. pokeball, candy, stone...")
-        .slider("Quantity", 1, 64, { defaultValue: 1 })
+    const form = await new ModalFormData().title(T(admin, "gift.item.title"))
+        .textField(T(admin, "gift.item.search"), T(admin, "gift.item.search.ph"))
+        .slider(T(admin, "gift.item.qty"), 1, 64, { defaultValue: 1 })
         .show(admin);
     if (form.canceled || !form.formValues) return null;
     const kw = String(form.formValues[0]).trim().toLowerCase();
@@ -96,10 +98,10 @@ async function pickItemBySearch(admin) {
         .filter((it) => it.name.toLowerCase().includes(kw) || it.id.includes(kw))
         .slice(0, MAX_RESULTS);
     if (results.length === 0) {
-        admin.sendMessage("§c[SunHub] No matching item: " + kw);
+        admin.sendMessage(T(admin, "gift.item.nomatch", { kw }));
         return pickItemBySearch(admin);
     }
-    const sel = await actionMenu(admin, "Results: " + kw, "Select item:",
+    const sel = await actionMenu(admin, T(admin, "gift.item.results", { kw }), T(admin, "gift.item.select"),
         results.map((it) => ({ label: it.name + "\n§8" + it.id })));
     if (sel < 0) return null;
     return { id: results[sel].id, name: results[sel].name, qty };
@@ -108,26 +110,26 @@ async function pickItemBySearch(admin) {
 export async function adminGifts(admin) {
     const codes = getCodes();
     const keys = Object.keys(codes);
-    const sel = await actionMenu(admin, "Manage Gift Codes",
-        keys.length ? keys.length + " active codes:" : "No codes yet.",
+    const sel = await actionMenu(admin, T(admin, "gift.admin.title"),
+        keys.length ? T(admin, "gift.admin.body", { n: keys.length }) : T(admin, "gift.admin.none"),
         [
-            { label: "§aCreate new code", icon: "textures/items/paper" },
+            { label: T(admin, "gift.create.btn"), icon: "textures/items/paper" },
             ...keys.map((k) => ({
-                label: k + "\n§7" + rewardText(codes[k]) + " | " + codes[k].uses + " uses left (tap to delete)"
+                label: T(admin, "gift.admin.item", { code: k, reward: rewardText(admin, codes[k]), uses: codes[k].uses })
             }))
         ]);
     if (sel < 0) return;
 
     if (sel === 0) {
-        const form = await new ModalFormData().title("Create Gift Code")
-            .textField("Code (your choice)", "e.g. SUNNY2026")
-            .slider("Coin reward", 0, 5000, { valueStep: 50, defaultValue: 200 })
-            .dropdown("Extra reward", ["Nothing extra", "Item (search)", "Pokemon (search + level)", "Item + Pokemon", "Title", "Item + Pokemon + Title"])
-            .slider("Number of uses", 1, 500, { defaultValue: 20 })
+        const form = await new ModalFormData().title(T(admin, "gift.create.title"))
+            .textField(T(admin, "gift.create.field"), T(admin, "gift.create.ph"))
+            .slider(T(admin, "gift.create.coins"), 0, 5000, { valueStep: 50, defaultValue: 200 })
+            .dropdown(T(admin, "gift.create.extra"), [T(admin, "gift.extra.0"), T(admin, "gift.extra.1"), T(admin, "gift.extra.2"), T(admin, "gift.extra.3"), T(admin, "gift.extra.4"), T(admin, "gift.extra.5")])
+            .slider(T(admin, "gift.create.uses"), 1, 500, { defaultValue: 20 })
             .show(admin);
         if (form.canceled || !form.formValues) return;
         const code = String(form.formValues[0]).trim().toUpperCase();
-        if (!code) { admin.sendMessage("§c[SunHub] Code is empty."); return; }
+        if (!code) { admin.sendMessage(T(admin, "gift.create.empty")); return; }
         const coins = Math.floor(Number(form.formValues[1]));
         const extra = Number(form.formValues[2]);
         const uses = Math.floor(Number(form.formValues[3]));
@@ -138,21 +140,21 @@ export async function adminGifts(admin) {
             if (!item && extra === 1 && coins <= 0) return;
         }
         if (extra === 2 || extra === 3 || extra === 5) {
-            pokemon = await pickPokemonSearch(admin, "Pokemon for this code");
+            pokemon = await pickPokemonSearch(admin, T(admin, "gift.create.pokemon"));
             if (!pokemon && extra === 2 && coins <= 0) return;
         }
         if (extra === 4 || extra === 5) {
             const ts = allTitles();
-            if (ts.length === 0) admin.sendMessage("§e[SunHub] No titles exist yet - create some in Server admin -> Titles.");
+            if (ts.length === 0) admin.sendMessage(T(admin, "gift.notitles"));
             else {
-                const tsel = await actionMenu(admin, "Attach a title", "Pick the title this code grants:",
+                const tsel = await actionMenu(admin, T(admin, "gift.title.attach"), T(admin, "gift.title.pick"),
                     ts.map((t) => ({ label: renderTitle(t), icon: "textures/items/name_tag" })), "pokedex_purple");
                 if (tsel >= 0) titleId = ts[tsel].id;
             }
             if (!titleId && extra === 4 && coins <= 0) return;
         }
         if (coins <= 0 && !item && !pokemon && !titleId) {
-            admin.sendMessage("§c[SunHub] A code must give at least one reward.");
+            admin.sendMessage(T(admin, "gift.create.noreward"));
             return;
         }
         codes[code] = {
@@ -161,13 +163,13 @@ export async function adminGifts(admin) {
             pokemon, titleId, uses
         };
         setCodes(codes);
-        admin.sendMessage("§a[SunHub] Created code §f" + code + "§a: " + rewardText(codes[code]) + " (" + uses + " uses)");
+        admin.sendMessage(T(admin, "gift.created", { code, reward: rewardText(admin, codes[code]), uses }));
     } else {
         const key = keys[sel - 1];
-        const ok = await confirmForm(admin, "Delete code §c" + key + "§r?\n§7" + rewardText(codes[key]));
+        const ok = await confirmForm(admin, T(admin, "gift.delete.confirm", { key, reward: rewardText(admin, codes[key]) }));
         if (!ok) return;
         delete codes[key];
         setCodes(codes);
-        admin.sendMessage("§a[SunHub] Deleted code " + key);
+        admin.sendMessage(T(admin, "gift.deleted", { key }));
     }
 }
