@@ -40,21 +40,31 @@ function slug(name) {
 }
 function pretty(id) { return id.replace(/^sl:/, ""); }
 
-// fill a box in engine-safe chunks (fillBlocks caps how many blocks per call)
+// fill a box in small 3D sub-boxes so no single fillBlocks call can exceed the
+// engine cap (which would otherwise throw and leave part of the region unfilled)
 function fillBox(dim, min, max, block) {
-  const dx = max.x - min.x + 1, dz = max.z - min.z + 1;
-  const per = Math.max(1, Math.floor(FILL_CHUNK / (dx * dz))); // Y-slabs that stay under the cap
+  const STEP = 16; // 16^3 = 4096 blocks per call, well under any limit
   let done = 0;
-  for (let y = min.y; y <= max.y; y += per) {
-    const y2 = Math.min(max.y, y + per - 1);
-    try {
-      const vol = new BlockVolume({ x: min.x, y, z: min.z }, { x: max.x, y: y2, z: max.z });
-      dim.fillBlocks(vol, block);
-      done += dx * dz * (y2 - y + 1);
-    } catch { /* unloaded chunk / out of bounds - skip that slab */ }
+  for (let x = min.x; x <= max.x; x += STEP) {
+    const x2 = Math.min(max.x, x + STEP - 1);
+    for (let y = min.y; y <= max.y; y += STEP) {
+      const y2 = Math.min(max.y, y + STEP - 1);
+      for (let z = min.z; z <= max.z; z += STEP) {
+        const z2 = Math.min(max.z, z + STEP - 1);
+        try {
+          dim.fillBlocks(new BlockVolume({ x, y, z }, { x: x2, y: y2, z: z2 }), block);
+          done += (x2 - x + 1) * (y2 - y + 1) * (z2 - z + 1);
+        } catch { /* unloaded chunk / out of bounds - skip that cell */ }
+      }
+    }
   }
   return done;
 }
+
+// remember the bounding box of the last structure this admin placed, so it can
+// be cleared in one tap regardless of how the 2-corner selection was set
+function getLast(admin) { try { return JSON.parse(admin.getDynamicProperty("sl:struct_last") ?? "null"); } catch { return null; } }
+function setLast(admin, b) { try { admin.setDynamicProperty("sl:struct_last", b ? JSON.stringify(b) : undefined); } catch {} }
 
 function selText(admin) {
   const sel = getSel(admin);
@@ -113,11 +123,27 @@ async function placeStructure(admin) {
   const at = floorLoc(admin.location);
   try {
     world.structureManager.place(id, admin.dimension, at, { includeEntities: false, includeBlocks: true });
-    admin.sendMessage(`§a[Structures] Đã đặt §l${pretty(id)}§r§a tại (${at.x}, ${at.y}, ${at.z}).`);
+    // record the exact footprint (anchor -> anchor+size-1) so "clear last" removes it whole
+    let size = null; try { size = world.structureManager.get(id)?.size; } catch {}
+    if (size) setLast(admin, {
+      min: at, max: { x: at.x + size.x - 1, y: at.y + size.y - 1, z: at.z + size.z - 1 }, dim: admin.dimension.id,
+    });
+    admin.sendMessage(`§a[Structures] Đã đặt §l${pretty(id)}§r§a tại (${at.x}, ${at.y}, ${at.z})` + (size ? ` §8(${size.x}×${size.y}×${size.z}).` : "."));
     try { admin.playSound("random.levelup"); } catch {}
   } catch (e) {
     admin.sendMessage("§c[Structures] Đặt thất bại (vùng chưa tải?): §7" + e);
   }
+}
+
+// clear the whole last-placed structure (bypasses the 64-axis selection cap)
+async function clearLast(admin) {
+  const b = getLast(admin);
+  if (!b) return admin.sendMessage("§e[Structures] Chưa đặt công trình nào trong phiên này.");
+  const dx = b.max.x - b.min.x + 1, dy = b.max.y - b.min.y + 1, dz = b.max.z - b.min.z + 1;
+  if (!(await confirmForm(admin, `Xoá sạch công trình vừa đặt §f${dx}×${dy}×${dz}§r?\n§cKhông thể hoàn tác.`))) return;
+  const n = fillBox(admin.dimension, b.min, b.max, "minecraft:air");
+  setLast(admin, null);
+  admin.sendMessage(`§a[Structures] Đã xoá §f${n}§a khối (toàn bộ công trình vừa đặt).`);
 }
 
 // ---------- delete a saved structure ----------
@@ -139,8 +165,9 @@ async function clearSelection(admin, block, verb) {
   const sel = getSel(admin);
   if (!sel || !sel.a || !sel.b) return admin.sendMessage("§c[Structures] Hãy chọn vùng (Điểm 1 + Điểm 2) trước.");
   const { dx, dy, dz, min, max } = dims(sel);
-  if (dx > AXIS_CAP || dy > AXIS_CAP || dz > AXIS_CAP)
-    return admin.sendMessage(`§c[Structures] Vùng quá lớn (tối đa ${AXIS_CAP}/trục).`);
+  const CLEAR_CAP = 256; // fillBox chunks the work, so clearing can be much larger than a save
+  if (dx > CLEAR_CAP || dy > CLEAR_CAP || dz > CLEAR_CAP)
+    return admin.sendMessage(`§c[Structures] Vùng quá lớn (tối đa ${CLEAR_CAP}/trục).`);
   if (!(await confirmForm(admin, `${verb} vùng §f${dx}×${dy}×${dz}§r (${dx * dy * dz} khối)?\n§cKhông thể hoàn tác.`))) return;
   const n = fillBox(admin.dimension, min, max, block);
   admin.sendMessage(`§a[Structures] Đã ${verb.toLowerCase()} §f${n}§a khối.`);
@@ -149,22 +176,27 @@ async function clearSelection(admin, block, verb) {
 // ---------- main menu ----------
 export async function openStructures(admin) {
   while (true) {
-    const sel = await actionMenu(admin, "Công trình / Structures", selText(admin), [
-      { label: "§aĐặt Điểm 1 tại đây\n§8Góc thứ nhất của vùng", icon: "textures/blocks/wool_colored_lime" },
-      { label: "§bĐặt Điểm 2 tại đây\n§8Góc thứ hai của vùng", icon: "textures/blocks/wool_colored_light_blue" },
-      { label: "§eLưu vùng thành công trình\n§8Ghi lại các khối trong vùng", icon: "textures/items/structure_void" },
-      { label: "§dĐặt công trình có sẵn\n§8Dán một công trình đã lưu vào đây", icon: "textures/blocks/grass_side_carried" },
-      { label: "§cXoá công trình (làm trống vùng)\n§8Điền không khí vào vùng chọn", icon: "textures/ui/trash" },
-      { label: "§6Điền đá vào vùng\n§8Lấp phẳng nền", icon: "textures/blocks/stone" },
-      { label: "§7Xoá công trình đã lưu\n§8Xoá bản lưu (không đụng thế giới)", icon: "textures/ui/trash_light" },
-    ], "pokedex_black");
+    const items = [
+      { label: "§aĐặt Điểm 1 tại đây\n§8Góc thứ nhất của vùng", icon: "textures/blocks/wool_colored_lime",
+        run: () => { const s = getSel(admin) ?? {}; s.a = floorLoc(admin.location); s.dim = admin.dimension.id; setSel(admin, s); admin.sendMessage(`§a[Structures] Điểm 1 = (${s.a.x}, ${s.a.y}, ${s.a.z}).`); } },
+      { label: "§bĐặt Điểm 2 tại đây\n§8Góc thứ hai của vùng", icon: "textures/blocks/wool_colored_light_blue",
+        run: () => { const s = getSel(admin) ?? {}; s.b = floorLoc(admin.location); s.dim = admin.dimension.id; setSel(admin, s); admin.sendMessage(`§b[Structures] Điểm 2 = (${s.b.x}, ${s.b.y}, ${s.b.z}).`); } },
+      { label: "§eLưu vùng thành công trình\n§8Ghi lại các khối trong vùng", icon: "textures/items/structure_void", run: () => saveSelection(admin) },
+      { label: "§dĐặt công trình có sẵn\n§8Dán một công trình vào chỗ bạn đứng", icon: "textures/blocks/grass_side_carried", run: () => placeStructure(admin) },
+    ];
+    if (getLast(admin)) {
+      const b = getLast(admin);
+      const d = `${b.max.x - b.min.x + 1}×${b.max.y - b.min.y + 1}×${b.max.z - b.min.z + 1}`;
+      items.push({ label: `§c↩ Xoá công trình vừa đặt\n§8Xoá sạch cả nhà (${d})`, icon: "textures/ui/trash", run: () => clearLast(admin) });
+    }
+    items.push(
+      { label: "§cLàm trống vùng chọn\n§8Điền không khí vào vùng 2 điểm", icon: "textures/ui/trash", run: () => clearSelection(admin, "minecraft:air", "Làm trống") },
+      { label: "§6Điền đá vào vùng\n§8Lấp phẳng nền", icon: "textures/blocks/stone", run: () => clearSelection(admin, "minecraft:stone", "Điền đá") },
+      { label: "§7Xoá công trình đã lưu\n§8Xoá bản lưu (không đụng thế giới)", icon: "textures/ui/trash_light", run: () => deleteSaved(admin) },
+    );
+    const sel = await actionMenu(admin, "Công trình / Structures", selText(admin),
+      items.map((i) => ({ label: i.label, icon: i.icon })), "pokedex_black");
     if (sel < 0) return;
-    if (sel === 0) { const s = getSel(admin) ?? {}; s.a = floorLoc(admin.location); s.dim = admin.dimension.id; setSel(admin, s); admin.sendMessage(`§a[Structures] Điểm 1 = (${s.a.x}, ${s.a.y}, ${s.a.z}).`); }
-    else if (sel === 1) { const s = getSel(admin) ?? {}; s.b = floorLoc(admin.location); s.dim = admin.dimension.id; setSel(admin, s); admin.sendMessage(`§b[Structures] Điểm 2 = (${s.b.x}, ${s.b.y}, ${s.b.z}).`); }
-    else if (sel === 2) await saveSelection(admin);
-    else if (sel === 3) await placeStructure(admin);
-    else if (sel === 4) await clearSelection(admin, "minecraft:air", "Làm trống");
-    else if (sel === 5) await clearSelection(admin, "minecraft:stone", "Điền đá");
-    else if (sel === 6) await deleteSaved(admin);
+    await items[sel].run();
   }
 }
