@@ -1,6 +1,6 @@
 # SerpLumen — Nhật ký công việc & Việc cần làm
 
-**Phiên bản hiện tại:** v3.32.1
+**Phiên bản hiện tại:** v3.33.0
 **Nền tảng:** SERP Pokedrock (addon phủ lên) · Minecraft Bedrock · chạy trên Realm
 **Ràng buộc kỹ thuật cốt lõi:** chỉ dùng `@minecraft/server` 2.6.0 (API stable), **không Beta Script API**, hạn chế tối đa `runCommand` (ưu tiên Script API: events, ActionForm, tags, dynamic properties).
 
@@ -39,11 +39,11 @@
 |---|---:|:---:|---|
 | `hubmain.js` | 127 | ✅ | Đã xong (mẫu tham chiếu) |
 | `i18n.js` | — | ✅ | Từ điển trung tâm |
-| `bank.js` | 19 | ⬜ | **Ưu tiên cao** — người chơi dùng nhiều |
-| `jobs.js` | 20 | ⬜ | **Ưu tiên cao** |
-| `nav.js` | 61 | ⬜ | **Ưu tiên cao** — di chuyển nhanh |
-| `titles.js` | 52 | ⬜ | Ưu tiên cao |
-| `claims.js` | 81 | ⬜ | Ưu tiên cao — bảo vệ đất |
+| `bank.js` | 19 | ✅ | Đã xong (v3.33.0) |
+| `jobs.js` | 20 | ✅ | Đã xong (v3.33.0) — gồm tên nghề song ngữ |
+| `nav.js` | 61 | ✅ | Đã xong (v3.33.0) |
+| `titles.js` | 52 | ✅ | Đã xong (v3.33.0) — import i18n as T |
+| `claims.js` | 81 | ✅ | Đã xong (v3.33.0) — cả UI admin |
 | `buddy.js` | 38 | ⬜ | Trung bình |
 | `gift.js` | 37 | ⬜ | Trung bình — giftcode |
 | `announce.js` | 23 | ⬜ | Trung bình |
@@ -59,7 +59,7 @@
 | `events.js` | 79 | ⬜ | Rà kỹ, nhiều thông báo hệ thống |
 | Các file còn lại (<15 chuỗi) | ~120 | ⬜ | Gộp làm cùng lượt cuối |
 
-**Tổng ước lượng còn lại:** ~1,700 chuỗi trên ~50 file.
+**Tổng ước lượng còn lại:** ~1,470 chuỗi trên ~45 file (đã xong nhóm ưu tiên 1: bank, jobs, nav, titles, claims — ~230 chuỗi).
 
 **Lộ trình đề xuất theo buổi:**
 1. Nhóm người-chơi-dùng-nhiều: `bank`, `jobs`, `nav`, `titles`, `claims` (~230 chuỗi).
@@ -85,4 +85,4 @@
 4. Khi cài: đặt **SerpLumen RP trên SERP RP** trong danh sách resource pack (pack trên ghi đè pack dưới).
 
 ---
-*Cập nhật ở phiên bản v3.32.1.*
+*Cập nhật ở phiên bản v3.33.0.*
