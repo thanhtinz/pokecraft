@@ -1,13 +1,13 @@
 {
   "format_version": 2,
   "header": {
-    "name": "SerpLumen 3.32.1 BP",
+    "name": "SerpLumen 3.33.0 BP",
     "description": "Hub + Radar + perks for SERP (no DX species)",
     "uuid": "fc4899c5-b262-4180-80c4-f9b8c80299af",
     "version": [
       3,
-      32,
-      1
+      33,
+      0
     ],
     "min_engine_version": [
       1,
@@ -21,7 +21,7 @@
       "uuid": "8565c670-3092-44c1-8f6d-696cf5eccda8",
       "version": [
         3,
-        31,
+        33,
         0
       ]
     },
@@ -31,7 +31,7 @@
       "uuid": "e6d7b98e-4ba6-4dda-85d4-b9e20ca7282d",
       "version": [
         3,
-        31,
+        33,
         0
       ],
       "entry": "scripts/index.js"
@@ -42,8 +42,8 @@
       "uuid": "025d1c49-289b-44d5-a94c-6fe15c0d2b40",
       "version": [
         3,
-        32,
-        1
+        33,
+        0
       ]
     },
     {
