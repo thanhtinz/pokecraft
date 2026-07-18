@@ -10,6 +10,7 @@ import { world, system, ItemStack } from "@minecraft/server";
 import { ModalFormData } from "@minecraft/server-ui";
 import { actionMenu, confirmForm, isAdmin } from "./forms.js";
 import { isLow } from "./perf.js";
+import { isWild } from "./poke.js";
 import { t } from "./i18n.js";
 
 const PROP = "sl:claims"; // [{id, owner, ownerName, dim, x1,z1,x2,z2, members:[{id,name}]}]
@@ -406,6 +407,12 @@ export function initClaims() {
             const { x, z } = e.location;
             if (x < cl.x1 || x > cl.x2 + 1 || z < cl.z1 || z > cl.z2 + 1) continue; // outside
             if (e.getTags().includes("sl_guard")) continue;                            // guards stay
+            if (!isWild(e)) continue;                                                  // owned/tamed Pokemon & mounts stay - only WILD mobs get pushed
+            // anything a player is riding (mount) stays put
+            try {
+              const rc = e.getComponent("minecraft:rideable");
+              if (rc && rc.getRiders && rc.getRiders().some((r) => r?.typeId === "minecraft:player")) continue;
+            } catch {}
             // nearest edge, 3 blocks past it
             const dW = x - cl.x1, dE = cl.x2 + 1 - x, dN = z - cl.z1, dS = cl.z2 + 1 - z;
             const m = Math.min(dW, dE, dN, dS);
