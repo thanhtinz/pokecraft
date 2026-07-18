@@ -38,6 +38,13 @@ jobs:
           echo "ver=$VER" >> "$GITHUB_OUTPUT"
           echo "file=$(ls dist/*.mcaddon | head -1)" >> "$GITHUB_OUTPUT"
 
+      - name: Remove stale non-versioned release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # one-time cleanup of the old SurvivalCore-era 'latest' release; no-op once gone
+          gh release delete latest --yes --cleanup-tag 2>/dev/null || true
+
       - name: Create or update release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

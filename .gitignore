@@ -1,0 +1,6 @@
+# build output (published via GitHub Releases)
+dist/
+
+# local tooling
+.gradle/
+.claude/
