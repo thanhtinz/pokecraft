@@ -1,0 +1,91 @@
+{
+  "namespace": "server_form",
+  "main_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "serp_server_form_factory": {
+              "type": "panel",
+              "factory": {
+                "name": "server_form_factory",
+                "control_ids": {
+                  "long_form": "@server_form.advanced"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "long_form": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_back",
+        "value": [
+          { "binding_name": "#title_text" },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#title_text=(#title_text-'serp.'))",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  },
+  "advanced": {
+    "type": "panel",
+    "bindings": [
+      { "binding_name": "#title_text" }
+    ],
+    "controls": [
+      {
+        "main@pokesv.main": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(not((#title_text-'serp.main')=#title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "team@pokesv.team": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(not(#title_text=(#title_text-'serp.team')))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "slhub@slhub.main": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(not((#title_text-'slhub.main')=#title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "close@common_dialogs.common_close_button_holder": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$show_close_button": true,
+          "$use_compact_close_button": false
+        }
+      }
+    ]
+  }
+}

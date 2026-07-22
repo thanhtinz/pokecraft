@@ -50,6 +50,22 @@ registerInteract();
 registerAdminMode();
 registerVillage();
 
+// ---- Hub UI mode: "grid" = custom 3-column coloured grid (ui/slhub.json),
+// otherwise the classic SERP-framed list. Colour markers are appended to a
+// button's label and stripped by the JSON UI.
+const HUB_MK = { orange: "", green: "", blue: "", red: "" };
+export function hubGrid() { try { return world.getDynamicProperty("sl:hubui") === "grid"; } catch { return false; } }
+export function setHubGrid(on) { try { world.setDynamicProperty("sl:hubui", on ? "grid" : "classic"); } catch {} }
+// Escape hatch / command: /scriptevent sl:hubui grid|classic|toggle - lets an
+// admin switch back to the classic hub from chat even if the grid UI misbehaves.
+system.afterEvents.scriptEventReceive.subscribe((ev) => {
+    if (ev.id !== "sl:hubui") return;
+    const v = (ev.message || "").trim().toLowerCase();
+    const on = v === "toggle" ? !hubGrid() : v === "grid";
+    setHubGrid(on);
+    try { ev.sourceEntity?.sendMessage("§e[Hub] Giao diện: " + (on ? "§aLưới mới" : "§7Cổ điển")); } catch {}
+}, { namespaces: ["sl"] });
+
 function doHealParty(player) {
     const left = healCooldownLeft(player);
     if (left > 0) {
@@ -101,7 +117,8 @@ async function openAdmin(admin) {
         { label: "Reset Vehicles\n§8Fix a player whose rides disappeared", icon: "textures/items/boat_oak" },
         { label: "Restore Machines\n§8Anchor PC/heal/etc - auto-respawn if lost", icon: "textures/items/repeater" },
         { label: "Structures / Công trình\n§8Save, place & clear builds (2-corner select)", icon: "textures/items/structure_void" },
-        { label: "NPCs / Nhân vật\n§8Đặt y tá, tiến sĩ... đứng yên, không mất", icon: "textures/items/villager_spawn_egg" }
+        { label: "NPCs / Nhân vật\n§8Đặt y tá, tiến sĩ... đứng yên, không mất", icon: "textures/items/villager_spawn_egg" },
+        { label: "Giao diện Hub: " + (hubGrid() ? "§aLưới mới" : "§7Cổ điển") + "\n§8Đổi giữa lưới 3 cột và kiểu cổ điển", icon: "textures/items/map_filled" }
     ], "pokedex_black");
     switch (sel) {
         case 0: await openSerpAdmin(admin); break;
@@ -119,6 +136,12 @@ async function openAdmin(admin) {
         case 12: await openMachineAnchors(admin); break;
         case 13: await openStructures(admin); break;
         case 14: await openNpcs(admin); break;
+        case 15: {
+            const on = !hubGrid();
+            setHubGrid(on);
+            admin.sendMessage("§e[Hub] Giao diện: " + (on ? "§aLưới mới (3 cột)" : "§7Cổ điển") + "§e. Mở lại Hub để thấy.\n§8Nếu lỗi, gõ lệnh: §f/scriptevent sl:hubui classic");
+            break;
+        }
     }
 }
 
@@ -349,9 +372,16 @@ export async function openHub(player) {
         { label: t(player, "group.settings"), icon: "textures/items/redstone_dust", items: [A.plates, A.battery, A.guide] },
     ];
 
-    // top level: small language toggle, announcements, then the category groups
-    const top = [A.lang, A.announces, ...groups.map((g) => ({ label: g.label, icon: g.icon, run: () => openGroup(player, g) }))];
-    if (admin) top.push(A.admin = { label: t(player, "hub.admin"), icon: "textures/items/netherite_pickaxe", run: () => openAdmin(player) });
+    // top level: small language toggle, announcements, then the category groups.
+    // In grid mode each button carries a colour marker (stripped by the UI).
+    const grid = hubGrid();
+    const groupColors = ["orange", "green", "blue", "red"];
+    const top = [
+        { label: A.lang.label, icon: A.lang.icon, run: A.lang.run, color: null },
+        { label: A.announces.label, icon: A.announces.icon, run: A.announces.run, color: "blue" },
+        ...groups.map((g, i) => ({ label: g.label, icon: g.icon, run: () => openGroup(player, g), color: groupColors[i] })),
+    ];
+    if (admin) top.push({ label: t(player, "hub.admin"), icon: "textures/items/netherite_pickaxe", run: () => openAdmin(player), color: "red" });
 
     const jobLv = (() => { try { return maxJobLevel(player); } catch { return 1; } })();
     const badge = (() => { try { return titlePrefix(player).trim(); } catch { return ""; } })();
@@ -364,7 +394,8 @@ export async function openHub(player) {
 
     const sel = await actionMenu(player, t(player, "hub.title", { server: (SERVER_NAME || "SUNHUB").toUpperCase() }),
         header,
-        top.map((i) => ({ label: i.label, icon: i.icon })), "sunhub");
+        top.map((i) => ({ label: grid && i.color ? i.label + HUB_MK[i.color] : i.label, icon: i.icon })),
+        grid ? "slhub" : "sunhub");
     if (sel < 0) return;
     await top[sel].run();
 }

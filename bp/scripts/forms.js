@@ -64,7 +64,10 @@ export function giveItem(player, id, qty) {
 // so the title moves into the body's first bold line.
 const DEFAULT_ICON = "pokedrock/items/pokeball";
 export async function actionMenu(player, title, body, buttons, skin) {
-    const form = new ActionFormData().title("serp.main." + (skin || "sunhub"));
+    // skin "slhub" routes to our custom 3-column grid UI (ui/slhub.json); every
+    // other skin uses SERP's framed panel via "serp.main.<skin>".
+    const formTitle = skin === "slhub" ? "slhub.main" : "serp.main." + (skin || "sunhub");
+    const form = new ActionFormData().title(formTitle);
     const head = title ? "\u00a7l" + title + "\u00a7r" : "";
     if (typeof body === "string" || !body) form.body(head + (body ? "\n" + body : ""));
     else if (body && body.rawtext) form.body({ rawtext: [{ text: head + "\n" }, ...body.rawtext] });

@@ -1,0 +1,7 @@
+{
+  "ui_defs": [
+    "ui/pokesv.json",
+    "ui/pokebt.json",
+    "ui/slhub.json"
+  ]
+}
